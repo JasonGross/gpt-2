@@ -1,0 +1,70 @@
+======== SAMPLE 1 ========
+
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                     eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+                unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                 deduce t t' = Some u ->
+                 forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  a : Term'
+  b : Annot
+  ============================
+   ((eval_clause env (if_clause a (a :: nil) /\ eval_clause env (if_clause b (a :: nil)) <->
+    make_conj (eval_clause env)
+       (fold_left
+          (fun (acc : list clause) (e : clause) =>
+           match or_clause (p :: t) e with
+           | Some cl => cl :: acc
+           | None => acc
+           end) f nil) ->
+    make_conj (eval_clause env) nil ->
+    make_conj (eval_clause env)
+       (fold_left
+          (fun (acc : list clause) (e : clause) =>
+           match or_clause (p :: t) e with
+           | Some cl => cl :: acc
+           | None => acc
+           end) f nil)
+  ============================
+   ((eval_clause env (if_clause a (a :: nil)) /\ eval_clause env (if_clause b (a :: nil)) <->
+    make_conj (eval_clause env) nil ->
+    make_conj (eval_clause env)
+       (fold_left
+          (fun (acc : list clause) (e : clause) =>
+           match or_clause (p :: t) e with
+           | Some cl => cl :: acc
+           | None => acc
+           end) f nil)
+  H3 : eval_clause env (p :: t)
+  H0 : make_conj (eval_clause env) nil ->
+       make_conj (eval_clause env)
+        (fold_left
+           (fun (acc : list clause) (e : clause) =>
+            match or_clause (p :: t) e with
+            | Some cl => cl :: acc
+            | None => acc
+            end) f nil)
+  ============================
+   ((eval_clause env (p :: t) \/ make_conj (eval_clause env) f) /\ True)
+
+
+Debug: Going to execute:
+exact (id0 id1)
+
+
+TcDebug (2) > 
+Debug: Evaluated term: (eval_clause env)
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' ->

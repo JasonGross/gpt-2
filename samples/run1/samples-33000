@@ -1,0 +1,157 @@
+======== SAMPLE 1 ========
+ x l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  a : t
+  b : t
+  H : a mod b == 0
+  H0 : a mod b == 0
+  H2 : b == 0
+  H3 : a mod b == 0
+  H4 : a mod b == 0
+  H5 : a mod b == 0
+  ============================
+   (a mod b == 0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  a : t
+  b : t
+  H : a mod b == 0
+  H0 : a mod b == 0
+  H2 : b == 0
+  H3 : a mod b == 0
+  H4 : a mod b == 0
+  H5 : a mod b == 0
+  ============================
+   (a mod b == 0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  a : t
+  b : t
+  H : a mod b == 0
+  H0 : a mod b == 0
+  H2 : b == 0
+  H3 : a mod b == 0
+  H4 : a mod b == 0
+  H5 : a mod b == 0
+  ============================
+   (a mod b == 0)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  a : t
+  b : t
+  H : a mod b == 0
+  H0 : a mod b == 0
+  H2 : b == 0
+  H3 : a mod b == 0
+  H4 : a mod b == 0
+  H5 : a mod b == 0
+  ============================
+   (a mod b == 0)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  a : t
+  b : t
+  H : a mod b == 0
+  H0 : a mod b == 0
+  H2 : b == 0
+  H3 : a mod b == 0
+  H4 : a mod b == 0
+  H5 : a mod b == 0
+  ============================
+   (a mod b == 0)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  a : t
+  b : t
+  H : a mod b == 0
+  H0 : a mod b == 0
+  H2 : b == 0
+  H3 : a mod b == 0
+  H4 : a mod b == 0
+  H5 : a mod b == 0
+  ============================
+   (a mod b == 0)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  a : t
+  b : t
+  H : a mod b == 0
+  H0 : a mod b == 0
+  H2 : b == 0
+  H3 : a mod b == 0
+  H4 : a mod b == 0
+  H5 : a mod b == 0
+  ============================
+   (a mod b == 0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  a : t
+  b : t
+  H : a mod b == 0
+  H0 : a mod b == 0
+  H2 : b == 0
+  H3 : a mod b ==

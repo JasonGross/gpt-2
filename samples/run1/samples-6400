@@ -1,0 +1,86 @@
+======== SAMPLE 1 ========
+ <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  m : t
+  s1 : t
+  s2 : t
+  IH1 : forall (m' : t),
+         bst m ->
+         find (mapi' (x1 :: s1)) (bst m') =
+         find (x1 :: s1) (bst m') =
+         find x1 (map s1) (x1 :: nil)
+  IH2 : forall (s' : t) (m' : t),
+         find x (map s' -> t) (s' : t) =
+         find x' (map s') (x' : t) = (s', s')
+  x : t
+  b : t
+  H : bst m'
+  H0 : bst m'
+  ============================
+   (s', (s', s') /\ X.lt x1 x
+    (s', (s', s') /\ x1 x' ->
+     ((s', s') /\ x1 x' ->
+     (y | (y' :: max (height s) (y | nil) - height v) (bst m') -
+     (l || bst (height (y :: max (height s) - 1) (bst m'))))
+   ~= x1)
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (3) > 
+Debug: Level 3: t is used in relation to eq. eq_lt in *.
+
+Debug: Level 3: t is used in relation to eq. eq_lt in *.
+
+Debug: Level 2: t has type  to match eq.eq_lt in *.
+
+Goal:
+  
+  m : t
+  s1 : t
+  s2 : t
+  IH1 : forall (m' : t),
+         bst m ->
+         find (mapi' (x1 :: s1)) (bst m') =
+         find x1 (map s1) (bst m') =
+         find x' (map s') (x1 : t) = (s', s')
+  IH2 : forall (s' : t) (m' : t),
+         find x (map s' -> t) (s' : t) =
+         find x' (map s') (x' : t) = (s', s')
+  x : t
+  b : t
+  H : bst m'
+  H0 : bst m'
+  ============================
+   (s', (s', s') /\ X.lt x1 x
+    (s', (s', s') /\ x1 x' ->
+     ((s', s') /\ x1 x' ->
+     (y | (y' :: max (height s) (y | nil) - height v) (bst m') -
+     (l || bst (height (y :: max (height s) - 1) (bst m')))
+   ~= x1)
+
+
+Debug:
+Going to execute:
+assert X2; [ exact (id0 id1) | clear id0 ]
+
+
+TcDebug (2) > 
+Goal:
+  
+  m : t
+  s1 : t
+  s2 : t
+  IH1 : forall (m' : t),
+         bst m ->
+         find (mapi' (x1 :: s1) (bst m') =
+         find x1 (map s1) (bst m') =
+         find x' (map s') (x1 : t) = (s', s')
+  IH2 : forall (s' : t) (m' : t),
+         find x (map s' -> t)

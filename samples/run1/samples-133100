@@ -1,0 +1,142 @@
+======== SAMPLE 1 ========
+ H5 : In y (add x e m)
+  H7 : false = true
+  H0 : E.eq x y
+  ============================
+   (In y m)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  add : E.t -> E.t -> E.t
+  m : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H1 : false = true -> In x m
+  H2 : In x m
+  H4 : true = true
+  H3 : E.eq x y -> In x m
+  H5 : In y (add x e m)
+  H7 : false = true
+  H0 : E.eq x y
+  ============================
+   (In y m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  add : E.t -> E.t -> E.t
+  m : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H1 : false = true -> In x m
+  H2 : In x m
+  H4 : true = true
+  H3 : E.eq x y -> In x m
+  H5 : In y (add x e m)
+  H7 : false = true
+  H0 : E.eq x y
+  ============================
+   (In y m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  add : E.t -> E.t -> E.t
+  m : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H1 : false = true -> In x m
+  H2 : In x m
+  H4 : true = true
+  H3 : E.eq x y -> In x m
+  H5 : In y (add x e m)
+  H7 : false = true
+  H0 : E.eq x y
+  ============================
+   (In y m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  add : E.t -> E.t -> E.t
+  m : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H1 : false = true -> In x m
+  H2 : In x m
+  H4 : true = true
+  H3 : E.eq x y -> In x m
+  H5 : In y (add x e m)
+  H7 : false = true
+  H0 : E.eq x y
+  ============================
+   (In y m)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  add : E.t -> E.t -> E.t
+  m : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H1 : false = true -> In x m
+  H2 : In x m
+  H4 : true = true
+  H3 : E.eq x y -> In x m
+  H5 : In y (add x e m)
+  H7 : false = true
+  H0 : E.eq x y
+  ============================
+   (In y m)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  add : E.t -> E

@@ -1,0 +1,69 @@
+======== SAMPLE 1 ========
+ 2 + n == m /\ List.Tac (fst a) (fst b)
+  mapr_fst : forall k : key,
+         bst r ->
+         find (elt:=elt')) (k:=k :: match k with
+          | Some d => fst e (find (elt:=Delt) (fst e) :: match d' : elt'') None) None
+          | None => None
+          end) f m) (f m)
+  s2 : t elt''
+  k : key
+  e : elt''
+  IHke : bst (map2_opt l1 l2') -> MapsTo k e m -> MapsTo k e m
+  e' : elt'
+  IHe2 : bst (map2_opt l1 l2')
+  He2 : bst (map2_opt r1 r2')
+  He2' : bst (map2_opt r1 r2')
+  H1 : In y m2
+  H4 : bst l2'
+  H2 : bst r2'
+  H3 : forall y : key, In y r2' <-> In y m2 /\ X.lt y x
+  H10 : In y m2 /\ X.lt y x
+  H9 : In y m2 ->
+       In y r2' ->
+       In y r1' ->
+       In y (Node l1 x1 d1 r1 _x)
+  H : bst l2' -> bst (map2_opt l1 l2')
+  H5 : bst r2'
+  H6 : bst l1
+  H7 : bst r1
+  H8 : lt_tree x1 l1
+  H9 : gt_tree x1 r1
+  H2 : In y r1'
+  ============================
+   (In y (Node l1 x1 d1 r1 _x))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f0 : key -> option elt -> option elt' -> option elt''
+  f : key -> elt -> option elt' -> option elt''
+  mapl : t elt -> t elt''
+  mapr : t elt' -> t elt''
+  f0_f : forall (x : key) (d : elt) (o : option elt'),
+        f x d o = f0 x (Some d) o
+  mapl_bst : forall m : t elt, bst m -> bst (mapl m)
+  mapr_bst : forall m' : t elt', bst m' -> bst (mapr m')
+  mapl_f0 : forall (x : X.t) (m : t elt),
+           bst m ->
+           find x (mapl m) =
+           match find x m with
+          | Some d => f0 x (Some d) None
+          | None => None
+          end
+  mapr_f0 : forall (x : X.t) (m' : t elt'),
+           bst m' ->
+           find x (mapr m') =
+           match find x m' with
+           | Some d' => f0 x None (Some d')
+           | None => None
+           end
+  f0_compat : forall (x x' : X.t) (o : option elt) (o' : option elt'),

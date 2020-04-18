@@ -1,0 +1,141 @@
+======== SAMPLE 1 ========
+ r1 := [a] * b
+  LE : lh <= lh
+  H1 : a <= 0
+  H2 : a <= q1
+  H3 : b <> o
+  H4 : a < p1
+  H5 : b < p2
+  H7 : q1 < q2
+  ============================
+   q1 < q2
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  p1 : Prop
+  p2 : Prop
+  q1 : Prop
+  q2 : Prop
+  H5 : b <> o
+  H6 : b ==> b
+  H3 : b <> o
+  H4 : a <= 0
+  H2 : a <= q1
+  H3 : b <> o
+  H4 : a < p1
+  H5 : b <> o
+  H6 : b ==> b
+  H3 : b <> o
+  H4 : a < p1
+  H5 : b <> o
+  H6 : b ==> b
+  H3 : b <> o
+  H4 : a < p1
+  H5 : b <> o
+  ============================
+   q1 < q2
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  p1 : Prop
+  p2 : Prop
+  q1 : Prop
+  q2 : Prop
+  H5 : b <> o
+  H6 : b ==> b
+  H3 : b <> o
+  H4 : a <= 0
+  H2 : a <= q1
+  H3 : b <> o
+  H4 : a < p1
+  H5 : b <> o
+  H6 : b ==> b
+  H3 : b <> o
+  H4 : a < p1
+  H5 : b <> o
+  H6 : b ==> b
+  H3 : b <> o
+  H4 : a < p1
+  H5 : b <> o
+  H6 : b ==> b
+  H3 : b <> o
+  H4 : a < p1
+  H5 : b <> o
+  H6 : b ==> b
+  H3 : b <> o
+  H4 : a < p1
+  H5 : b <> o
+  H6 : b ==> b
+  H3 : b <> o
+  H4 : a < p1
+  H5 : b <> o
+  H6 : b ==> b
+  H3 : b <> o
+  H4 : a < p1
+  H5 : b <> o
+  H6 : b ==> b
+  H3 : b <> o
+  H4 : a < p1
+  H5 : b <> o
+  H6 : b ==> b
+  H3 : b <> o
+  ============================
+   q1 < q2
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  p1 : Prop
+  p2 : Prop
+  q1 : Prop
+  q2 : Prop
+  H5 : b <> o
+  H6 : b ==> b
+  H3 : b <> o
+  H4 : a <= 0
+  H2 : a <= q1
+  H3 : b <> o
+  H4 : a < p1
+  H5 : b <> o
+  H6 : b ==> b
+  H3 : b <> o
+  H4 : a < p1
+  H5 : b <> o
+  H6 : b ==> b
+  H3 : b <> o
+  ============================
+   q1 < q2
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  p1 : Prop
+  p2 : Prop
+ 

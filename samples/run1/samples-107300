@@ -1,0 +1,86 @@
+======== SAMPLE 1 ========
+t_tree x1 r2'
+  H10 : bst l2'
+  H11 : bst r2'
+  H12 : bst (map2_opt l1 l2')
+  H : bst (map2_opt r1 r2')
+  ============================
+   (X.lt y x1)
+
+
+Debug:
+Going to execute:
+change_no_check (tree_eq_gen b y cmp) in H ||
+  change_no_check (tree_eq_gen b y cmp) in H || clear H || fail 1
+
+
+TcDebug (6) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f0 : key -> option elt -> option elt' -> option elt''
+  f : key -> elt -> option elt' -> option elt''
+  mapl : t elt -> t elt''
+  mapr : t elt' -> t elt''
+  f0_f : forall (x : key) (d : elt) (o : option elt'),
+         f x d o = f0 x (Some d) o
+  mapl_bst : forall m : t elt, bst m -> bst (mapl m)
+  mapr_bst : forall m' : t elt', bst m' -> bst (mapr m')
+  mapl_f0 : forall (x : X.t) (m : t elt),
+            bst m ->
+            find x (mapl m) =
+            match find x m with
+            | Some d => f0 x (Some d) None
+            | None => None
+            end
+  mapr_f0 : forall (x : X.t) (m' : t elt'),
+            bst m' ->
+            find x (mapr m') =
+            match find x m' with
+            | Some d' => f0 x None (Some d')
+            | None => None
+            end
+  f0_compat : forall (x x' : X.t) (o : option elt) (o' : option elt'),
+              X.eq x x' -> f0 x o o' = f0 x' o o'
+  l1 : t elt
+  x1 : key
+  d1 : elt
+  r1 : t elt
+  _x : int
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x0 : int
+  l' : t elt'
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall h : int, bst (Node ll lx ld lr h) -> gt_tree m#1 l'
+  h : int
+  H1 : bst r
+  H2 : lt_tree x (Node ll lx ld lr h)
+  H3 : gt_tree x r
+  H4 : bst ll
+  H5 : bst lr
+  H6 : lt_tree lx lr
+  y : key
+  H : In y (Node ll lx ld lr y)
+  ============================
+   (X.lt y rx)
+
+
+Debug: Going to execute:
+change_no_check (tree_eq_gen b y cmp) in H
+
+
+TcDebug (6) > 
+Debug: Evaluated term: (tree_eq_gen b rl)
+
+Debug: Evaluated term: (tree_eq_gen b rl)
+
+Goal:
+  
+  elt : Type
+  elt

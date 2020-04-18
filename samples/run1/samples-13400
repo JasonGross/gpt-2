@@ -1,0 +1,89 @@
+======== SAMPLE 1 ========
+ma) x : T, In y s1
+  H3 : X.eq y x \/ In y s1
+  H0 : In y s1
+  ============================
+   (In y (Node (Node l1 x1 d1 r1 _x) \/ Leaf) (Node l2 x2 d2 r2 _x) \/ In y s1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  s1 : t
+  s2 : t
+  Leaf : In x s2
+  rhs : Ok Leaf
+  r2 : Ok Leaf
+  n : Leaf
+  _x : int
+  y : X.t
+  e1 : X.compare x y = LT _x
+  e2 : X.compare y x = LT _y
+  H1 : In y (Node (Node l1 x1 d1 r1 _x) \/ Leaf) (Node l2 x2 d2 r2 _x) -> In y s2
+  H2 : In y (Node (Node l1 x1 d1 r1 _x) \/ Leaf) (Node l2 x2 d2 r2 _x)
+  H6 : In y s2
+  H5 : In y r2
+  H4 : In y (Node (Node l1 x1 d1 r1 _x) \/ Leaf) (Node l2 x2 d2 r2 _x)
+  ============================
+   (In y (Node (Node l1 x1 d1 r1 _x) \/ Leaf) (Node l2 x2 d2 r2 _x) \/ In y s1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  s1 : t
+  s2 : t
+  Leaf : In x s2
+  rhs : Ok Leaf
+  r2 : Ok Leaf
+  n : Leaf
+  _x : int
+  y : X.t
+  e1 : X.compare x y = LT _x
+  e2 : X.compare y x = LT _y
+  H1 : In y (Node (Node l1 x1 d1 r1 _x) \/ Leaf) (Node l2 x2 d2 r2 _x) -> In y s2
+  H2 : In y (Node (Node l1 x1 d1 r1 _x) \/ Leaf) (Node l2 x2 d2 r2 _x)
+  H6 : In y s2
+  H5 : In y r2
+  H4 : In y (Node (Node l1 x1 d1 r1 _x) \/ Leaf) (Node l2 x2 d2 r2 _x)
+  H6 : In y s2
+  H5 : In y r2
+  H4 : In y (Node (Node l1 x1 d1 r1 _x) \/ Leaf) (Node l2 x2 d2 r2 _x)
+  ============================
+   (In y (Node (Node l1 x1 d1 r1 _x) \/ Leaf) (Node l2 x2 d2 r2 _x) \/ In y s1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s1 : t
+  s2 : t
+  Leaf : In x s2
+  rhs : Ok Leaf
+  r2 : Ok Leaf
+  n : Leaf
+  _x : int
+  y : X.t
+  e1 : X.compare x y = LT _x
+  e2 : X.compare y x = LT _y
+  H1 : In y (Node (Node l1 x1 d1 r1 _x) \/ Leaf) (Node l2 x2 d2 r2 _x) -> In y s2
+  H2 : In y (Node (Node l1 x1 d1 r1 _x) \/ Leaf) (Node l2 x2 d2 r2 _x)
+  H6 : In y s2
+  H5 : In y r2
+  H4 : In y (Node (

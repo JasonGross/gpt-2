@@ -1,0 +1,100 @@
+======== SAMPLE 1 ========
+  H6 : ~ In x s2
+  ============================
+   (In x s2)
+
+
+Debug: Going to execute:
+destruct x; destruct lea; assumption
+
+
+TcDebug (4) > 
+Goal:
+  
+  s1 : tree
+  s2 : tree
+  x : X.t
+  a : X.t
+  l : list X.t
+  H : InA X.eq x l \/ InA X.eq x a -> False
+  H0 : InA X.eq x l
+  H1 : True
+  H2 : InA X.eq x (elements_aux nil s2)
+  H3 : InT x (elements_aux nil s2)
+  H5 : InA X.eq x (elements_aux nil s2)
+  H6 : ~ In x s2
+  ============================
+   (In x s2)
+
+
+Debug: Going to execute:
+destruct x
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s1 : tree
+  s2 : tree
+  x : X.t
+  a : X.t
+  l : list X.t
+  H : InA X.eq x l \/ InA X.eq x a -> False
+  H0 : InA X.eq x l
+  H1 : True
+  H2 : InA X.eq x (elements_aux nil s2)
+  H3 : InT x (elements_aux nil s2)
+  H5 : InA X.eq x (elements_aux nil s2)
+  H6 : ~ In x s2
+  ============================
+   (In x s2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.simplif> flags;
+ <Coq.Init.Tauto.axioms> flags ||
+   match reverse goal with
+   | id:(?X1 -> ?X2) -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (X1 -> X2);
+             [ exact
+             id
+             | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear
+                id; (solve [ t_tauto_intuit ]) ] ]
+   | id:~ ?X1 -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (~ X1);
+             [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+   | |- ?X1 =>
+         <Coq.Init.Tauto.is_disj> flags X1; (solve
+          [ left; t_tauto_intuit | right; t_tauto_intuit ])
+   end ||
+     match goal with
+     | |- _ -> _ => intro; t_tauto_intuit
+     | |- _ => t_reduce; t_solver
+     end || t_solver
+
+
+TcDebug (3) > 
+Goal:
+  
+  s1 : tree
+  s2 : tree
+  x : X.t
+  a : X.t
+  l : list X.t
+  H : InA X.eq x l \/ InA X.eq x a -> False
+  H0 : InA X.eq x l
+  H1 : True
+  H2 : InA X.eq x (elements_aux nil s2)
+  H3 : InT x (elements_aux nil s2)
+  H5 : InA X.

@@ -1,0 +1,67 @@
+======== SAMPLE 1 ========
+: ' + ' + IHolder = lr - 1; IHolder . xPos2 = lr / 3; IHolder _xPos2 = lr / 3; IHolder _xPos = true; (intro) _xPos0;
+
+In the last example, IHolder's relation to the integer IHolder0 will be 1; so IHolder = lr + 1;
+
+In this example, IHolder xPos2 is a relation from lxPos2 to xPos2; IHolder0 is a relation from lxPos2 to lxPos2;
+
+In this example, IHolder xPos1 is a relation
+IHolder _xPos2 = true;
+
+In this example, IHolder -1 = true;
+
+In this example, IHolder xPos2 = 0.15;
+
+In this example, IHolder : H
+= IHolder0
+;
+
+In this example,
+
+IHolder xPos2 = (flt xPos2 + 1) / 3 * 3;
+
+In this example,
+IHolder _xPos2 = true;
+
+In this example,
+IHolder xPos1 = flt xPos2 + 1;
+
+In this example,
+IHolder _xPos1 = true;
+
+In this example,
+IHolder xPos2 = (flt yPos2 + 1) / 3 * 3;
+
+In this example,
+IHolder _yPos2 = flt yPos2 + 1;
+
+In this example,
+IHolder _yPos2 = flt yPos2 + 1;
+
+In this example,
+IHolder _yPos2 = true;
+
+In this example,
+IHolder yPos2;
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; intro; clear id; clear id
+
+
+
+TcDebug (1) > 
+Goal:
+  
+  Evaluate x: lr; Evaluate y: lr; Evaluate kt : ln; Evaluate ll : lr; <Coq.Init.Tauto.is_conj> flags X1;
+  
+  Evaluate x: lr; Evaluate y: lr; Evaluate kt : ln;
+      ln (1 + 2); Evaluate ll (2 + 2); Evaluate ll (2 + 2);
+                                             
+                                           
+                                              
+                                        
+                                          
+        (x + y) / (y + ll) * 2;            
+                                  (x + y) / (y + ll) * 2;                                        
+                                                                                                                       

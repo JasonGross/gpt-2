@@ -1,0 +1,94 @@
+======== SAMPLE 1 ========
+
+  H0 : false = true
+  H2 : exists x0 : E.t, List.In x0 (elements s) /\ eqb x (fst x0) = true
+  H3 : (exists x0 : E.t, List.In x0 (elements s) /\ eqb x (fst x0) = true) ->
+       List.In x0 (elements s) ->
+       exists x0 : E.t, List.In x0 (elements s) /\ eqb x (fst x0) = true
+  H4 : (exists x0 : E.t, List.In x0 (elements s) /\ eqb x (fst x0) = true) ->
+       List.In x0 (elements s)
+  ============================
+   (List.In a (x, e) :: eqb x (fst x0) = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  a : E.t
+  Ha1 : List.In a (elements s)
+  Ha2 : eqb x a = true
+  H1 : In x s
+  H4 : true = true
+  H5 : List.In a (elements s)
+  H : In x s /\ eqb x a = true
+  H6 : false = true
+  H0 : false = true
+  H2 : exists x0 : E.t, List.In x0 (elements s) /\ eqb x (fst x0) = true
+  H3 : (exists x0 : E.t, List.In x0 (elements s) /\ eqb x (fst x0) = true) ->
+       List.In x0 (elements s)
+  ============================
+   (List.In a (x, e) :: eqb x (fst x0) = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  a : E.t
+  Ha1 : List.In a (elements s)
+  Ha2 : eqb x a = true
+  H1 : In x s
+  H4 : true = true
+  H5 : List.In a (elements s)
+  H : In x s /\ eqb x a = true
+  H6 : false = true
+  H0 : false = true
+  H2 : exists x0 : E.t, List.In x0 (elements s) /\ eqb x a = true
+  H3 : (exists x0 : E.t, List.In x0 (elements s) /\ eqb x (fst x0) = true) ->
+       List.In x0 (elements s)
+  ============================
+   (List.In a (x, e) :: eqb x (fst x0) = true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  a : E.t
+  Ha1 : List.In a (elements s)
+  Ha2 : eqb x a = true
+  H1 : In x s
+  H4 : true = true
+  H5 : List.In a (elements s)
+  H : In x s /\ eqb x a = true
+  H6 : false = true
+  H0 : false = true
+  H2 : exists x0 : E.t, List.In x0 (elements s) /\ eqb x a =

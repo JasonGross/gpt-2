@@ -1,0 +1,139 @@
+======== SAMPLE 1 ========
+ : X.t
+  _x : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  e : (height (Node _x rl rx rr) + 2 <? height l) = false
+  e2 : (height rr <=? height rll) = true
+  y : elt
+  H : InT y l
+  ============================
+   (InT y l)
+
+
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  e : (height (Node _x rl rx rr) + 2 <? height l) = false
+  e2 : (height rr <=? height rll) = true
+  y : elt
+  H : InT y l
+  ============================
+   (InT y l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  e : (height (Node _x rl rx rr) + 2 <? height l) = false
+  e2 : (height rr <=? height rll) = true
+  y : elt
+  H : InT y l
+  ============================
+   (InT y l)
+
+
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  e : (height (Node _x rl rx rr) + 2 <? height l) = false
+  e2 : (height rr <=? height rll) = true
+  y : elt
+  H : InT y l
+  ============================
+   (InT y l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  e : (height (Node _x rl rx rr) + 2 <? height l) = false
+  e2 : (height rr <=? height rll) = true
+  y : elt
+  H : InT y l
+  ============================
+   (InT y l)
+
+
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  e : (height (Node _x rl rx rr) + 2 <? height l) = false
+  e2 : (height rr <=? height rll) = true
+  y : elt
+  H : InT y l
+  ============================
+   (InT y l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  e : (height (Node _x rl rx rr) + 2 <? height l) = false
+  e2 : (height rr <=? height rll) = true
+  y : elt
+  H : InT y l
+  ============================
+   (InT y l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rl : tree
+  rx : X.t
+  rr

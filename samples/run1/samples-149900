@@ -1,0 +1,49 @@
+======== SAMPLE 1 ========
+ positive'
+  c2' : linear
+  H : false = true'
+  H0 :  c1' = true'
+  H4 :  H' : forall x2 : ?X674@{__:=cplus; __:=csor; __:=ops; __:=radd; __:=rmul; __:=rsub; __:=ropp;
+               __:=req; __:=Rsth; __:=Reqe; __:=ARth; __:=Cring_theory; __:=rIHl;
+              __:=cadd; __:=cmul; __:=csor; __:=op; __:=radd; __:=rmul; __:=rsub; __:=ropp;
+              __:=req; __:=Rsth; __:=Reqe; __:=ARth; __:=Cring_theory; __:=rIHl;
+              __:=c0; __:=P; __:=c1; __:=h; __:=IH1; (P:=Gt) ->
+          (P2 : Pol) -> Env R
+          (PX P2 : Pol) -> Prop
+  P' : Pol
+  H1 : forall a : positive,
+         mkPX (P2 ?X674@{__:=cplus; __:=csor; __:=ops; __:=radd; __:=rmul; __:=rsub; __:=ropp;
+              __:=req; __:=Rsth; __:=Reqe; __:=ARth; __:=Cring_theory; __:=rIHl;
+             __:=c1' = true'} -> P2 \/ P
+  IHl : forall (P : Pol) (x : positive) (m : Z),
+        mkPX (Ppow_pos (mul x P2) x P3) -> P2
+  ============================
+   [
+   ]
+     (~ cI (PX P2) ~= 0)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  cI : C
+  cadd : C -> C -> C
+  cmul : C -> C -> C
+  csub : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  phi : C -> R
+  CRmorph : ring_morph 0 1 radd rmul rsub ropp req 0%coef 1%coef cadd cmul
+              csub copp ceqb phi
+             (phi powphi (cadd (PX P2 ?X674@{__:=cplus; __:=csor; __:=ops; __:=radd; __:=rmul; __:=rsub; __:=ropp;
+               __:=req; __:=Rsth; __:=Reqe; __:=ARth; __:=Cring_theory; __:=rIHl;
+               Cring_theory; __:=rIHl; __:=c1; __:=h; __:=IH1; (P:=Gt) ->
+          (P2 : Pol) -> Env R
+  P' : Pol
+  H1 : forall a : positive,
+         mkPX (P2 ?X674@{__:=cplus; __:=csor; __

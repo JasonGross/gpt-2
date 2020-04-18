@@ -1,0 +1,33 @@
+======== SAMPLE 1 ========
+   (fdec (P) -> False)
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:(PEX N) :: nil => id -> PEx N
+| id:~ ?X1 |- _ => reduce_contra; clear id
+| id:?X1 |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+| id0:?X1 -> ?X2, id1:?X1 |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id0
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; intro; clear id0
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id0
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id0
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id0
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id0
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id0
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id0
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id0
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id0
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id0
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id0
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id0
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; (is_conj X1) -> X2; [ exact (id0 id1) | clear id0 ]
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id0
+| id:?X1 -> ?X2, id1:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; iO; iH InA X.eq x (x :: l)
+| id:?X1 <? L1
+  |- _ => <Coq.Init.Tauto.is_conj> flags X1; iO; iH InA X.eq x l -> False
+| id:?X1 <-> ?X1 -> ?X2
+  |- _ =>
+     (fdec (P) -> False)
+| id:F X1

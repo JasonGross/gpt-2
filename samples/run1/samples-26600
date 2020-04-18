@@ -1,0 +1,156 @@
+======== SAMPLE 1 ========
+   (E.eq k m')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  LE : lh <= rh + 2
+  GT' : rh > lh + 2
+  y : key
+  H : In y (Node ll lx ld lr lh)
+  ============================
+   (E.eq k m)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  LE : lh <= rh + 2
+  GT' : rh > lh + 2
+  y : key
+  H : In y (Node ll lx ld lr lh)
+  ============================
+   (E.eq k m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  LE : lh <= rh + 2
+  GT' : rh > lh + 2
+  y : key
+  H : In y (Node ll lx ld lr lh)
+  ============================
+   (E.eq k m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  LE : lh <= rh + 2
+  GT' : rh > lh + 2
+  y : key
+  H : In y (Node ll lx ld lr lh)
+  ============================
+   (E.eq k m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  LE : lh <= rh + 2
+  GT' : rh > lh + 2
+  y : key
+  H : In y (Node ll lx ld lr lh)
+  ============================
+   (E.eq k m)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+

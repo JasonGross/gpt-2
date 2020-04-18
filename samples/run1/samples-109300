@@ -1,0 +1,155 @@
+======== SAMPLE 1 ========
+ y x
+  l : X.lt x y
+  l0 : X.eq y xz
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  w : X.t
+  x : X.t
+  y : elt
+  z : X.t
+  r : tree
+  H0 : InT y l
+  H1 : X.eq y x
+  H2 : InT y r -> False
+  H3 : InT y r
+  H4 : X.eq y x
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  w : X.t
+  x : X.t
+  y : elt
+  z : X.t
+  r : tree
+  H0 : InT y l
+  H1 : X.eq y x
+  H2 : InT y r -> False
+  H3 : InT y r
+  H4 : X.eq y x
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  w : X.t
+  x : X.t
+  y : elt
+  z : X.t
+  r : tree
+  H0 : InT y l
+  H1 : X.eq y x
+  H2 : InT y r -> False
+  H3 : InT y r
+  H4 : X.eq y x
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  w : X.t
+  x : X.t
+  y : elt
+  z : X.t
+  r : tree
+  H0 : InT y l
+  H1 : X.eq y x
+  H2 : InT y r -> False
+  H3 : InT y r
+  H4 : X.eq y x
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  w : X.t
+  x : X.t
+  y : elt
+  z : X.t
+  r : tree
+  H0 : InT y l
+  H1 : X.eq y x
+  H2 : InT y r -> False
+  H3 : InT y r
+  H4 : X.eq y x
+  ============================
+   (X.eq y x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  w : X.t
+  x : X.t
+  y : elt
+  z : X.t
+  r : tree
+  H0 : InT y l
+  H1 : X.eq y x
+  H2 : InT y r -> False
+  H3 : InT y r
+  H4 : X.eq y x
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  w : X.t
+  x : X.t
+  y : elt
+  z : X.t
+  r : tree
+  H0 : InT y l
+  H1 : X.eq y x
+  H2 : InT y r -> False
+  H

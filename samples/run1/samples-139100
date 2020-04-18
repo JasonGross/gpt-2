@@ -1,0 +1,167 @@
+======== SAMPLE 1 ========
+Goal:
+    y : byte
+  ============================
+   (of_nat $1 = Some y -> to_nat y = $1)
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+    y : byte
+  ============================
+   (of_nat $1 = Some y -> to_nat y = $1)
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+    y : byte
+  ============================
+   (of_nat $1 = Some y -> to_nat y = $1)
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+    y : byte
+  ============================
+   (of_nat $1 = Some y -> to_nat y = $1)
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+    y : byte
+  ============================
+   (of_nat $1 = Some y -> to_nat y = $1)
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+    y : byte
+  ============================
+   (of_nat $1 = Some y -> to_nat y = $1)
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+    y : byte
+  ============================
+   (of_nat $1 = Some y -> to_nat y = $1)
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+    y : byte
+  ============================
+   (of_nat $1 = Some y -> to_nat y = $1)
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+    y : byte
+  ============================
+   (of_nat $1 = Some y -> to_nat y = $1)
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 0 = Some y -> to_nat y = 0)
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 1 = Some y -> to_nat y = 1)
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 2 = Some y -> to_nat y = 2)
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+  
+  ============================
+   (of_nat True = Some y -> to_nat y = True)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat False = Some y ->

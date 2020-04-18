@@ -1,0 +1,56 @@
+======== SAMPLE 1 ========
+ arnmon : forall m' : t, Mon d = Mon m' -> Mon r = r
+  mapl_f0 : forall (x : X.t) (m' : t),
+        mem x m ->
+        find x (mapl m' (find x m') = true) =
+        find x (find x m')
+  mapr_f0 : forall (x : X.t) (m : t),
+          mem x m' ->
+          find x (mapr m' (find x m') = true) =
+          find x (find x m')
+  mapl_bst : forall m : t, X.t => mem x m ->
+          mem x (mapl m' (find x m') = true) =
+            find x (mapr m' (find x m') = true)
+  mapl_f0 : forall (x : X.t) (m' : t),
+            mem x m' ->
+            find x (mapr m' (find x m') = true) =
+              find x (find x m')
+  mapr_f0 : forall (x : X.t) (m' : t),
+             mem x (mapl m' (find x m') = true) =
+            find x (find x m')
+  mapl_f0 : forall (x : X.t) (m' : t),
+             mem x (mapr m' (find x m') = true) =
+             find x (find x m')
+  x : X.t
+  m0 : t
+  H0 : (Mon d' m' r' _)%poly
+  ============================
+   (x < x)
+
+
+Debug:
+Going to execute:
+forall lrx lrx_eq_x0 lrx_sym0 lrx_sym1 lrx_sym2 lrx_sym3 lrx_sym4; lrx_sym1 lrx_sym4 lrx_sym5 lrx_sym6 lrx_sym7; lrx_sym7 lrx_sym8 lrx_sym9 lrx_sym10
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f0 : key -> option elt -> option elt' -> option elt''
+  f : key -> elt -> option elt' -> option elt''
+  mapl_f0 : forall (x : X.t) (o : option elt),
+          X.eq x x' -> f x o o' = f0 x' o'
+  a : elt
+  f0_f0 : forall (x0 : X.t) (o : option elt),
+          InT y (mapl o o' = f0 x0 (find x o') = f0 x0 (find x o')) -> InT y (find x o')
+  mapl_a0 : forall (x0 : X.t) (o : option elt),
+           X.eq x0 x' -> mapl o o' = f0 x0 (find x0 o') -> InT y (find x0 o')
+  a0 : eof
+  mapl_b0 : forall (x0 : X.t) (o : option elt),
+           X.eq x0 x' -> mapl o o' = f0 x0 (find x0 o') -> InT y (find x0 o')
+  o0 : X.eq x0 x'
+  mapl_b' : forall (x0 : X.t) (o : option elt'),
+           X

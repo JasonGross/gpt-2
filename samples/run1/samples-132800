@@ -1,0 +1,97 @@
+======== SAMPLE 1 ========
+ (eval_tt env) cl -> False
+  H4 : eval_tt env t /\ make_conj (eval_tt env) cl -> False
+  H3 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : (Term' * Annot)%type
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  c : clause
+  H : deduce (fst t) (fst a) = None
+  H4 : eval_tt env t /\ make_conj (eval_tt env) cl -> False
+  H4 : eval_tt env a /\ make_conj (eval_tt env) c -> False
+  H3 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (4) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                   eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : (Term' * Annot)%type
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  c : clause
+  H : deduce (fst t) (fst a) = None
+  H4 : eval_tt env t /\ make_conj (eval_tt env) cl -> False
+  H4 : eval_tt env a /\ make_conj (eval_tt env) c -> False
+  H3 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (4) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term'

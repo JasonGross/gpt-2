@@ -1,0 +1,82 @@
+======== SAMPLE 1 ========
+_r; 
+        (Sorted (E.lt (k, e) :: l)%byte (k, e)) =
+         Sorted (E.lt (k, e) :: l)%byte x
+  H2 : X.eq k x
+  H3 : False
+  ============================
+   (False -> False)
+
+
+Debug: Going to execute:
+<ltac_plugin::elimtype@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  elt : Type
+  k : key
+  e : elt
+  m : list (key * elt)
+  IHm : Sorted (ltk (elt:=elt)) m ->
+        forall m' : list (key * elt),
+        Sorted (ltk (elt:=elt')) m' ->
+        forall x : key,
+        find (elt:=oee') x (combine m m') =
+        at_least_one (find (elt:=elt) x m) (find (elt:=elt') x m')
+  Hm : Sorted (ltk (elt:=elt)) ((k, e) :: m)
+  m' : list (key * elt)
+  x : key
+  H1 : Sorted (ltk (elt:=elt)) m
+  H2 : HdRel (ltk (elt:=elt)) (k, e) m'
+  H5 : Sorted (ltk (elt:=elt')) m'
+  H6 : HdRel (ltk (elt:=elt')) (k', e') m'
+  H7 : HdRel (ltk (elt:=elt')) (k', e'') m'
+  l : TO.lt k' k
+  l0 : TO.lt k x
+  H : TO.lt k' x
+  H0 : TO.lt k x
+  ============================
+   (None = at_least_one (find (elt:=elt) x m))
+
+
+Debug: Going to execute:
+OrderTac.order_loop
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  k : key
+  e : elt
+  m : list (key * elt)
+  IHm : Sorted (ltk (elt:=elt)) m ->
+         forall m' : list (key * elt),
+         Sorted (ltk (elt:=elt')) m' ->
+         forall x : key,
+         find (elt:=oee') x (combine m m') =
+         at_least_one (find (elt:=elt) x m) (find (elt:=elt') x m')
+  Hm : Sorted (ltk (elt:=elt)) ((k, e) :: m)
+  m' : list (key * elt)
+  x : key
+  H1 : Sorted (ltk (elt:=elt)) m
+  H2 : HdRel (ltk (elt:=elt)) (k, e) m'
+  H5 : Sorted (ltk (elt:=elt')) m'
+  H6 : HdRel (ltk (elt:=elt')) (k', e') m'
+  H7 : HdRel (ltk (elt:=elt')) (k', e'') m'
+  H8 : HdRel (ltk (elt:=elt')) (k', e'') m'
+  H9 : HdRel (ltk (elt:=elt')) (k', e'') m'
+  H10 : HdRel (ltk (elt:=elt')) (k', e'') m'
+  ============================
+   (None = at_least_one (find (elt:=elt) x m))
+
+
+Goal:
+  
+  elt : Type
+  k : key
+  e : elt
+  m : list (key * elt)
+  IHm : Sorted (ltk (elt:

@@ -1,0 +1,122 @@
+======== SAMPLE 1 ========
+ize d =
+    of_lu (rev d) + 1 * 10 ^ usize d + n * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+fun n l =>
+  match l with
+  | nil => fail 100 "anomaly: Find_at"
+  | a :: _ => eval compute in n
+  | _ :: ?l => find (Pos.succ n) l
+  end
+
+
+TcDebug (18) > 
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = of_lu (rev d) + n * 10 ^ usize d
+  n : nat
+  ============================
+   (of_lu (rev d) + n * (10 * 10 ^ usize d + n * (10 * 10 ^ usize d)) * n =
+    of_lu (rev d) + 1 * 10 ^ usize d + n * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+fun n l =>
+  match l with
+  | nil => fail 100 "anomaly: Find_at"
+  | a :: _ => eval compute in n
+  | _ :: ?l => find (Pos.succ n) l
+  end
+
+
+TcDebug (19) > 
+Debug: Evaluated term: N
+
+Debug: Evaluated term: N
+
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = of_lu (rev d) + n * 10 ^ usize d
+  n : nat
+  ============================
+   (of_lu (rev d) + n * (10 * 10 ^ usize d + n * (10 * 10 ^ usize d)) * n =
+    of_lu (rev d) + 1 * 10 ^ usize d + n * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+match l with
+| nil => fail 100 "anomaly: Find_at"
+| a :: _ => eval compute in n
+| _ :: ?l => find (Pos.succ n) l
+end
+
+
+TcDebug (18) > 
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = of_lu (rev d) + n * 10 ^ usize d
+  n : nat
+  ============================
+   (of_lu (rev d) + n * (10 * 10 ^ usize d + n * (10 * 10 ^ usize d)) * n =
+    of_lu (rev d) + 1 * 10 ^ usize d + n * (10 * 10 ^ usize d))
+
+
+Debug: Going to execute:
+l
+
+
+TcDebug (19) > 
+Debug: Level 19: l
+ has value 
+(10 ^ usize d :: nil)%list
+
+
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = of_lu (rev d) + n * 10 ^ usize d
+  n : nat
+  ============================
+   (of_lu (rev d) + n * (10 * 10 ^ usize d + n * (10 * 10 ^ usize d)) * n =
+    of_lu (rev d) + 1 * 10 ^ usize d + n * (10 * 10 ^ usize d))
+
+
+Debug: Going to execute:
+eval compute in n
+
+
+TcDebug (19) > 
+Debug: Evaluated term: (Pos.succ n)
+
+Debug: Evaluated term: (Pos.succ n)
+
+Debug: Level 18: evaluation returns
+(Pos.succ n)
+
+
+Debug: Level 16: evaluation returns
+(Pos.succ n)
+
+
+Debug: Level 14: evaluation returns
+(Pos.succ n)
+
+
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = of_lu (rev d) + n * 10 ^ usize d
+  n

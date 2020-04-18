@@ -1,0 +1,122 @@
+======== SAMPLE 1 ========
+AR2 :: H4 :: H7 :: h3
+  H3 : true = true
+  ============================
+   (true = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  h : I.t
+  l : tree
+  x0 : X.t
+  r : tree
+  Hl : forall (x : elt) (f : elt -> bool), InT x (filter f l) -> InT x l
+  Hr : forall (x : elt) (f : elt -> bool), InT x (filter f r) -> InT x r
+  x : elt
+  f : elt -> bool
+  H : InT x l
+  H1 : InT x (filter f l)
+  ============================
+   (true = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  h : I.t
+  l : tree
+  x0 : X.t
+  r : tree
+  Hl : forall (x : elt) (f : elt -> bool), InT x (filter f l) -> InT x l
+  Hr : forall (x : elt) (f : elt -> bool), InT x (filter f r) -> InT x r
+  x : elt
+  f : elt -> bool
+  H : InT x l
+  H1 : InT x (filter f l)
+  ============================
+   (true = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  h : I.t
+  l : tree
+  x0 : X.t
+  r : tree
+  Hl : forall (x : elt) (f : elt -> bool), InT x (filter f l) -> InT x l
+  Hr : forall (x : elt) (f : elt -> bool), InT x (filter f r) -> InT x r
+  x : elt
+  f : elt -> bool
+  H : InT x l
+  H1 : InT x (filter f l)
+  ============================
+   (true = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  h : I.t
+  l : tree
+  x0 : X.t
+  r : tree
+  Hl : forall (x : elt) (f : elt -> bool), InT x (filter f l) -> InT x l
+  Hr : forall (x : elt) (f : elt -> bool), InT x (filter f r) -> InT x r
+  x : elt
+  f : elt -> bool
+  H : InT x l
+  H1 : InT x (filter f l)
+  ============================
+   (true = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  h : I.t
+  l : tree
+  x0 : X.t
+  r : tree
+  Hl : forall (x : elt) (f : elt -> bool), InT x (filter f l) -> InT x l
+  Hr : forall (x : elt) (f : elt -> bool), InT x (filter f r) -> InT x r
+  x : elt
+  f : elt -> bool
+  H : InT x l
+  H1 : InT x (filter f l)
+  ============================
+   (true = true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+

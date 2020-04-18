@@ -1,0 +1,7 @@
+Goal:
+    U : Type  P : U -> Type
+  ============================
+   (forall (p q : U) (x : P p) (y : P q), eq_dep p x q y -> eq_dep q y p x)
+
+
+Debug: Going to execute:

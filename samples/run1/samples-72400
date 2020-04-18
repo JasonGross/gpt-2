@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+rev l r) -> X.lt y x
+  H1 : X.eq y x -> InT y (Node i l x' r)
+  H2 : InT y l
+  ============================
+   (InT y (Node i l x' r))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  H0 : X.lt x' x
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H1 : X.eq y x -> InT y (Node i l x' r)
+  H2 : InT y l
+  ============================
+   (InT y (Node i l x' r))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  H0 : X.lt x' x
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H1 : X.eq y x -> InT y (Node i l x' r)
+  H2 : InT y l
+  ============================
+   (InT y (Node i l x' r))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  H0 : X.lt x' x
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H1 : X.eq y x -> InT y (Node i l x' r)
+  H2 : InT y l
+  ============================
+   (InT y (Node i l x' r))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool

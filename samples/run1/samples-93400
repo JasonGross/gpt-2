@@ -1,0 +1,92 @@
+======== SAMPLE 1 ========
+uated destruct ll as [c]
+| ?c => fail 1
+| _ =>
+    change_no_check (MX.OrderTac.OTF.lt x y) in H ||
+      change_no_check (MX.OrderTac.OTF.le x y) in H || clear H || fail 1;
+     MX.OrderTac.order_prepare
+end
+
+
+TcDebug (8) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  Hlr : forall (x : X.t) (d : elt) (r : t elt) (y : X.t),
+        bst lr ->
+        bst r ->
+        lt_tree x lr ->
+        gt_tree x r -> find y (join lr x d r) = find y (create lr x d r)
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  Hrl : forall y : X.t,
+        bst (Node ll lx ld lr lh) ->
+        bst rl ->
+        lt_tree x (Node ll lx ld lr lh) ->
+        gt_tree x rl ->
+        find y (join (Node ll lx ld lr lh) x d rl) =
+        find y (create (Node ll lx ld lr lh) x d rl)
+  GT : lh > rh + 2
+  y : X.t
+  H1 : lt_tree x (Node ll lx ld lr lh)
+  H2 : gt_tree x (Node rl rx rd rr rh)
+  H3 : bst rl
+  H4 : bst rr
+  H : MX.TO.lt lx x
+  H10 : MX.TO.lt x rx
+  e : MX.TO.eq y rx
+  l : MX.TO.lt y x
+  l0 : MX.TO.lt x y
+  r : MX.TO.lt x e
+  l : MX.TO.lt x d
+  ============================
+   (Some d = find y rr)
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (9) > 
+Debug: Level 9: R
+ has value 
+MX.TO.eq
+
+
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  Hlr : forall (x : X.t) (d : elt) (r : t elt) (y : X.t),
+        bst lr ->
+        bst r ->
+        lt_tree x lr ->
+        gt_tree x r -> find y (join lr x d r) = find y (create lr x d r)
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  Hrl : forall y : X.t,
+        bst (Node ll lx ld lr lh) ->
+        bst rl ->
+        lt_tree x (Node ll lx ld lr lh) ->
+        gt_tree x rl ->
+        find y (join (Node ll lx ld lr lh) x d rl) =
+        find y (create (Node ll lx ld l

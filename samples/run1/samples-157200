@@ -1,0 +1,67 @@
+======== SAMPLE 1 ========
+ * y
+  ropp_add := ARopp_add ARth : forall x y : R, - (x + y) == - x + - y
+  rsub_def := ARsub_def ARth : forall x y : R, x - y == x + - y
+  radd_0_r := ARadd_0_r Rsth ARth : forall x : R, x + 0 == x
+  rmul_0_r := ARmul_0_r Rsth ARth : forall x : R, x * 0 == 0
+  rmul_1_r := ARmul_1_r Rsth ARth : forall x : R, x * 1 == x
+  ropp_0 := ARopp_zero Rsth Reqe ARth : - 0 == 0
+  rdistr_r := ARdistr_r Rsth Reqe ARth
+           : forall x y z : R, z * (x + y) == z * x + z * y
+  C : Type
+  cO : C
+  cI : C
+  cadd : C -> C -> C
+  cmul : C -> C -> C
+  csub : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  phi : C -> R
+  CRmorph : ring_morph 0 1 radd rmul rsub ropp req 0%coef 1%coef cadd cmul
+              csub copp ceqb phi
+  phi_0 := morph0 CRmorph : [0] == 0
+  phi_1 := morph1 CRmorph : [1] == 1
+  Cpow : Type
+  Cp_phi : N -> Cpow
+  rpow : R -> Cpow -> R
+  pow_th : power_theory 1 rmul req Cp_phi rpow
+  get_sign : C -> option C
+  get_sign_spec : sign_theory copp ceqb get_sign
+  cdiv : C -> C -> C * C
+  cdiv_th : div_theory req cadd cmul phi cdiv
+  rpow_pow := rpow_pow_N pow_th
+           : forall (r : R) (n : N), rpow r (Cp_phi n) == pow_N 1 rmul r n
+  e1 : PExpr C
+  e2_1 : PExpr C
+  e2_2 : PExpr C
+  p1 : positive
+  p2 : positive
+  e : PExpr C
+  IH1 : (e2_1 ^ N.pos p2 === e1 ^ ZtoN (Z.pos p1 - NtoZ n) * e)%poly
+  GT1 : (Z.pos p1 > NtoZ n)%Z
+  e' : PExpr C
+  IH2 : (e2_2 ^ N.pos p2 === e1 ^ ZtoN (Z.pos p - NtoZ 0) * e)%poly
+  GT2 : (Z.pos p > NtoZ 0)%Z
+  l : list R
+  ============================
+   (rpow (e1 @ l) (Cp_phi (N.pos (p1 - p))) * e @ l *
+    (rpow (e1 @ l) (Cp_phi (N.pos p)) * e' @ l) ==
+    rpow (e1 @ l) (Cp_phi (N.pos p)) *
+    rpow (e1 @ l) (Cp_phi (N.pos (p1 - p))) * (rpow (e1 @ l) (Cp_phi (N.pos (p - p))) * e @ l))
+
+
+Debug:
+Going to execute:
+proj cst_tac pow_tac pre post R req r0 r1 add mul sub opp C Cpow powphi pow
+ lemma1 lemma2
+
+
+TcDebug (6) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R ->

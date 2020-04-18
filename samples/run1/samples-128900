@@ -1,0 +1,91 @@
+======== SAMPLE 1 ========
+ : X.eq x a
+  H : In a s'
+  ============================
+   (X.eq x a \/ In a s \/ In a s')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IHs : forall acc : list elt,
+        Ok acc ->
+        forall (x : elt) (s' : t),
+        Ok s ->
+        Ok s' ->
+        In x
+          (fold_left
+             (fun (x0 : t) (y : elt) => if mem y s' then add y x0 else x0) s
+             acc) <-> In x s /\ In x s' \/ In x acc
+  acc : list elt
+  Hacc : Ok acc
+  x : elt
+  s' : t
+  Hs' : Ok s'
+  H : In a s'
+  ============================
+   (X.eq x a \/ In a s \/ In a s')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IHs : forall acc : list elt,
+        Ok acc ->
+        forall (x : elt) (s' : t),
+        Ok s ->
+        Ok s' ->
+        In x
+          (fold_left
+             (fun (x0 : t) (y : elt) => if mem y s' then add y x0 else x0) s
+             acc) <-> In x s /\ In x s' \/ In x acc
+  acc : list elt
+  Hacc : Ok acc
+  x : elt
+  s' : t
+  Hs' : Ok s'
+  H : In a s'
+  ============================
+   (X.eq x a \/ In a s \/ In a s')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IHs : forall acc : list elt,
+        Ok acc ->
+        forall (x : elt) (s' : t),
+        Ok s ->
+        Ok s' ->
+        In x
+          (fold_left
+             (fun (x0 : t) (y : elt) => if mem y s' then add y x0 else x0) s
+             acc) <-> In x s /\ In x s' \/ In x acc
+  acc : list el

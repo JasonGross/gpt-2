@@ -1,0 +1,75 @@
+======== SAMPLE 1 ========
+ e2
+  H3 : In x s2 ->
+         true = false
+  H4 : In x s3 ->
+         true = true || true
+  H6 : In x s2 -> In x s3
+  ============================
+   (false || true || false)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s1 : tree
+  s2 : tree
+  IHs1 : forall (x : elt) (x0 : X.t),
+         Ok s1 -> Ok s2 -> In x (union s1 s2) <-> In x s1 /\ s2 \/ In x s1
+  IHs2 : forall (x : elt) (x0 : X.t),
+         Ok (x :: m) ->
+         In x (union s1 s2) <-> In x (x :: m) \/ In x s2 \/ In x s2
+  s1 : tree
+  s2 : tree
+  IHs1 : forall (x : elt) (x0 : X.t),
+         Ok s1 -> Ok s2 -> In x (union s1 s2) <-> In x s1 /\ s2 \/ In x s1
+  IHs2 : forall (x : elt) (x0 : X.t),
+         Ok (x :: m) ->
+         In x (union s1 s2) <-> In x (x :: m) \/ In x s2 \/ In x s2
+  s1 : tree
+  s2 : tree
+  IHs1 : forall (x : elt) (x0 : X.t),
+         Ok s1 -> Ok s2 -> In x (union s1 s2) <-> In x s1 /\ s2 \/ In x s1
+  s1 : tree
+  s2 : tree
+  IHs1 : forall (x : elt) (x0 : X.t),
+         Ok s1 -> Ok s2 -> In x (union s1 s2) <-> In x (x :: m) \/ In x s2 \/ In x s1
+  l1 : tree
+  x : X.t
+  e1 : X.compare x x0 = true
+  Hn : Sort l1
+  H2 : cmp e1 e2 = equal cmp l1
+  H3 : In x s2 ->
+         true = false
+  H4 : In x s3 ->
+         true = true || false
+  H6 : In x s2 -> In x s3
+  ============================
+   (false || true || false)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s1 : tree
+  s2 : tree
+  IHs1 : forall (x : elt) (x0 : X.t),
+         Ok s1 -> Ok s2 -> In x (union s1 s2) <-> In x s1 /\ s2 \/ In x s1
+  IHs2 : forall (x : elt) (x0 : X.t),
+         Ok (x :: m) ->
+         In x (union s1 s2) <-> In x (x :: m) \/ In x s2 \/ In x s2
+  s1 : tree
+  s2 : tree
+  IHs1 : forall (x : elt) (x0 : X.t),
+         Ok s1 -> Ok s2 -> In x (union s1 s2) <-> In x s1 /\ s2 \/ In x s1
+  IHs2 : forall

@@ -1,0 +1,104 @@
+======== SAMPLE 1 ========
+')
+  H0 : In x s' -> true = true
+  H8 : true = true -> In x s'
+  H1 : In x (inter s s') -> In x s \/ In x s'
+  H2 : In x s -> In x s' -> In x (inter s s')
+  H3 : In x (inter s s') -> In x s \/ In x s'
+  H5 : In x s
+  ============================
+   (false = true \/ In x s')
+
+
+Debug: Going to execute:
+intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s -> false = true
+  H6 : false = true -> In x s'
+  H7 : In x s \/ In x s' -> In x (inter s s')
+  H2 : In x s
+  H5 : true = true \/ In x s'
+  H8 : In x s' -> In x (inter s s')
+  H1 : In x (inter s s') -> In x s \/ In x s'
+  H2 : In x s -> In x s \/ In x s' -> In x (inter s s')
+  H3 : In x (inter s s') -> In x s \/ In x s'
+  H5 : In x s
+  ============================
+   (true = true \/ In x s')
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@0>
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s -> false = true
+  H6 : false = true -> In x s'
+  H7 : In x s \/ In x s' -> In x (inter s s')
+  H2 : In x s
+  H5 : true = true \/ In x s'
+  H8 : In x s' -> In x (inter s s')
+  H1 : In x (inter s s') -> In x s \/ In x s'
+  H2 : In x s -> In x s \/ In x s' -> In x (inter s s')
+  H3 : In x (inter s s') -> In x s \/ In x s'
+  H5 : true = true \/ In x s'
+  H8 : In x s' -> In x (inter s s')
+  H1 : In x s \/ In x s' -> In x s \/ In x s
+  H4 : true = true \/ In x s
+  ============================
+   ((false = true \/ In x s) \/ In x s \/ In x s')
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s -> false = true
+  H6 : false = true -> In x s'
+  H7 : In x s \/ In x s' -> In x (inter s s')
+  H2 : In x s
+  H5 : true = true \/ In x s'
+  H8 : In x s' -> In x (inter s s')
+  H3 : In x (inter s s') -> In x s \/ In x s'
+  H5 : true = true \/ In x s
+  H8 : In x s' -> In x (inter s s')
+  H1 : In x (inter s s') -> In x s \/ In x s'
+  H2 : In x s -> In x s \/ In x s' -> In x (inter s s')
+  ============================
+   (true = true \/ In x s')
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s -> false = true
+  H6 : false = true -> In x s'
+  H7 : In x s \/ In x s' -> In x (inter s s')
+ 

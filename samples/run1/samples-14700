@@ -1,0 +1,77 @@
+======== SAMPLE 1 ========
+
+> match type of R with
+| RB => intro
+| EQ => after
+| Gt =>
+  deduce_prop : R -> R -> Prop
+| Gt =>
+       exact R
+| GT =>
+     exact (id0 id1)
+| Gt =>
+     exact (rev (Rd (Rd i))) ->
+       make_conj Gt (fold_right F fr0 (Rd i) f)
+| GTd =>
+     exact (rev l)
+| Gt =>
+     exact (rev (Rd i)))
+end
+
+
+TcDebug (20) > 
+Goal:
+    ih : int  il : int  Hih : ih <= 0
+  Hbin : ∀ s : t  a : t  b : t  Hb : 0 < a  Hc : 0 < b
+  Hdf : 0 < 0
+  Hb : 0 < 0
+  ============================
+   (∀ s : t)
+
+
+Debug:
+Going to execute:
+fun t =>
+  let f :=
+   match Cst t with
+   | NotConstant =>
+       match t with
+       | rO => fun _ => Ring_polynom.PEO
+       | rI => fun _ => Ring_polynom.PEI
+       | radd ?t1 ?t2 =>
+           fun _ =>
+             let e1 := mkP t1 in
+             let e2 := mkP t2 in
+             Ring_polynom.PEadd e1 e2
+       | rmul ?t1 ?t2 =>
+           fun _ =>
+             let e1 := mkP t1 in
+             let e2 := mkP t2 in
+             Ring_polynom.PEmul e1 e2
+       | rsub ?t1 ?t2 =>
+           fun _ =>
+             let e1 := mkP t1 in
+             let e2 := mkP t2 in
+             Ring_polynom.PEsub e1 e2
+       | ropp ?t1 =>
+            fun _ => let e1 := mkP t1 in
+                       Ring_polynom.PEopp e1
+       | rpow ?t1 ?n =>
+            match CstPow n with
+            | NotConstant =>
+                     Ring_polynom.PEX C p
+            | _ => 
+                                 Ring_polynom.PEX C p (Ring_polynom.PEX N 2)
+            end
+       | _ =>                    Ring_polynom.PEX N 3
+       end
+   | _ =>                          end
+  end
+  in
+  f ltac:(fun t => idtac)
+
+
+TcDebug (21) > 
+Goal:
+    ih : int  il : int  Hih : ih <= 0
+  Hbin : ∀ s : t  a : t  b : t  Hb : 0 < a  H

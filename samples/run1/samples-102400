@@ -1,0 +1,138 @@
+======== SAMPLE 1 ========
+j> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+    x : Q  y : Q  H : x <-> y  y0 : Q  H0 : x >= 0
+  ============================
+   (x = y0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+    x : Q  y : Q  H : x <-> y  y0 : Q  H0 : x >= 0
+  ============================
+   (x = y0)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+    x : Q  y : Q  H : x <-> y  y0 : Q  H0 : x >= 0
+  ============================
+   (x = y0)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+    x : Q  y : Q  H : x <-> y  y0 : Q  H0 : x >= 0
+  ============================
+   (x = y0)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+    x : Q  y : Q  H : x <-> y  y0 : Q  H0 : x >= 0
+  ============================
+   (x = y0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+    x : Q  y : Q  H : x <-> y  y0 : Q  H0 : x >= 0
+  ============================
+   (x = y0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+    x : Q  y : Q  H : x <-> y  y0 : Q  H0 : x >= 0
+  ============================
+   (x = y0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+    x : Q  y : Q  H : x <-> y  y0 : Q  H0 : x >= 0
+  ============================
+   (x = y0)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+    x : Q  y : Q  H : x <-> y  y0 : Q  H0 : x >= 0
+  ============================
+   (x = y0)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+    x : Q  y : Q  H : x <-> y  y0 : Q  H0 : x >= 0
+  ============================
+   (x = y0)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+    x : Q  y : Q  H : x <-> y  y0 : Q  H0 : x >= 0
+  ============================
+   (x = y0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+   

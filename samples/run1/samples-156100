@@ -1,0 +1,139 @@
+======== SAMPLE 1 ========
+ eq A
+  y : A
+  ============================
+   ((EIsub (EIraw (height l) (eIraw (height rr))) + 1))
+      (eIraw (height (add x e r)) + 1)) ==
+    (eIraw (height rr) + 1)) + 1))
+
+
+Debug: Going to execute:
+rewrite rIraw
+
+
+TcDebug (3) > 
+Debug: Evaluated term: rIraw
+
+Debug: Evaluated term: rIraw
+
+Debug: Evaluated term: rIraw
+
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.eq x y
+  e1 : X.compare x y = EQ _x
+  IHb : Sort l -> Sort l -> equal cmp l lhs = f0 x lhs
+  Hm : Sort ((x, e) :: l)
+  Hm' : Sort ((x', e') :: l')
+  H : cmp e e' = true
+  ============================
+   (forall l : list (A * A) -> l = (e' :: l')
+    EQ _x == - (e' :: l')
+     MapsTo x e' l >>
+     (equal cmp l l' = true)
+
+
+Debug: Going to execute:
+simpl
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.eq x y
+  e1 : X.compare x y = TO.eq x y
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.eq x y
+  e1 : X.compare x y = TO.eq x y
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.eq x x'
+  e2 : TO.eq x y
+  e : elt
+  y' : key
+  H : cmp e1 e' && equal cmp l l' = true
+  ============================
+   (to_eq l x')
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.eq x y
+  e0 : X.compare x y = EQ _x
+  l
+  ============================
+   (lt_list l l')
+
+
+Debug: Going to execute:
+simpl
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.eq x y
+  e1 : X.compare x y = TO.eq x y
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.eq x y
+  e1 : X.compare x y = TO.eq x y
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.eq x y
+  e : elt
+  y' : key
+  H : cmp e1 e' && equal cmp r r' = true
+  ============================
+   (forall (l : list (A * A) -> l = (e' :: l') :: l')
+    EQ _x = - (y', e') :: l')
+
+
+Debug: Going to execute:
+intro
+

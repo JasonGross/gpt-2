@@ -1,0 +1,128 @@
+======== SAMPLE 1 ========
+ x0 l \/ InA X.eq x acc -> InT x0
+  H3 : InT x0 (a :: l)
+  H1 : InA X.eq x0 acc
+  ============================
+   (InA X.eq x0 (x :: l))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : X.t
+  x' : X.t
+  l : list X.t
+  l' : list X.t
+  H : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H2 : X.eq x x'
+  H9 : False
+  H4 : InT x l
+  H3 : InT x0 l \/ InA X.eq x0 (x :: l)
+  ============================
+   (InA X.eq x0 (x :: l))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : X.t
+  x' : X.t
+  l : list X.t
+  l' : list X.t
+  H : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H2 : X.eq x x'
+  H9 : False
+  H4 : InT x l
+  H3 : InT x0 l \/ InA X.eq x0 (x :: l)
+  ============================
+   (InA X.eq x0 (x :: l))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : X.t
+  x' : X.t
+  l : list X.t
+  l' : list X.t
+  H : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H2 : X.eq x x'
+  H9 : False
+  H4 : InT x l
+  H3 : InT x0 l \/ InA X.eq x0 (x :: l)
+  ============================
+   (InA X.eq x0 (x :: l))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : X.t
+  x' : X.t
+  l : list X.t
+  l' : list X.t
+  H : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H2 : X.eq x x'
+  H9 : False
+  H4 : InT x l
+  H3 : InT x0 l \/ InA X.eq x0 (x :: l)
+  ============================
+   (InA X.eq x0 (x :: l))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  x' : X.t
+  l : list X.t
+  l' : list X.t
+  H : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H2 : X.eq x x'
+  H9 : False
+  H4 : InT x l
+  H3 :

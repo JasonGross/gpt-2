@@ -1,0 +1,87 @@
+======== SAMPLE 1 ========
+
+
+TcDebug (0) > 
+Goal:
+  
+  d : uint
+  u : uint
+  E : nztail d = D8 u
+  IHd : forall d' : uint,
+        D8 u <> Nil -> nzhead (revapp d d') = revapp (D8 u) d'
+  d' : uint
+  H : D7 (D8 u) <> Nil
+  ============================
+   ((N8 u * (D8 u * D7 d') + 0) + - N8 u * (D7 d' * D')) <->
+    (nzhead (revapp (D8 u) (D7 d')) (D7 d')))
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (1) > 
+Debug: Level 1: t
+ has value 
+((0 < n) :: 0)%Z
+
+
+Goal:
+  
+  d : uint
+  u : uint
+  E : nztail d = D8 u
+  IHd : forall d' : uint,
+        D8 u <> Nil -> nzhead (revapp d d') = revapp (D8 u) d'
+  d' : uint
+  H : D7 (D8 u) <> Nil
+  ============================
+   ((0 < n) :: 0)%Z
+
+
+Debug:
+Going to execute:
+let f :=
+ match Cst t with
+ | NotConstant =>
+     match t with
+     | rO => fun _ => PEO
+     | rI => fun _ => PEI
+     | radd ?t1 ?t2 =>
+         fun _ => let e1 := mkP t1 in
+                let e2 := mkP t2 in
+                (e1 + e2)%poly
+     | rmul ?t1 ?t2 =>
+         fun _ => let e1 := mkP t1 in
+                let e2 := mkP t2 in
+                (e1 * e2)%poly
+     | rsub ?t1 ?t2 =>
+         fun _ => let e1 := mkP t1 in
+                let e2 := mkP t2 in
+                (e1 - e2)%poly
+     | ropp ?t1 => fun _ => let e1 := mkP t1 in
+                            (- e1)%poly
+     | rpow ?t1 ?n =>
+         match CstPow n with
+         | NotConstant => fun _ => let p := Find_at t fv in
+                                             PEX C p
+         | ?c => fun _ => let e1 := mkP t1 in
+                         (e1 ^ c)%poly
+         end
+     | _ => fun _ => let p := Find_at t fv in
+                      PEX C p
+     end
+ | ?c => fun _ => PEc c
+ end
+in
+f ltac:(())
+
+
+TcDebug (1) > 
+Goal:
+  
+  d : uint
+  u : uint
+  E : nztail d = D8 u
+  IHd : forall d' : uint,
+        D8

@@ -1,0 +1,96 @@
+======== SAMPLE 1 ========
+ t = true
+Unable to unify "true" with "false".
+
+Debug:
+Level 2: In environment
+s := Strict_In environment : Ensemble U, CompOpp Eq := fv_in (P :: l) l2 : t
+eq : PExpr U
+eq1 : PExpr U
+eq2 : PExpr U
+p0 : positive
+The term "lt" has type "Type" while it is expected to have type "EqDec (P :: l)".
+
+Debug:
+Level 2: In environment
+s := Strict_In environment : Ensemble U, CompOpp Eq := fv_in (P :: l) l2 : t
+eq : PExpr U
+eq1 : PExpr U
+eq2 : PExpr U
+p0 : positive
+The term "lt" has type "Type" while it is expected to have type "EqDec (P :: l)".
+
+Debug:
+Level 2: In environment
+s := Strict_In environment : Ensemble U, CompOpp Eq := fv_in (P :: l) l2 : t
+eq : PExpr U
+eq1 : PExpr U
+eq2 : PExpr U
+p0 : positive
+The term "lt" has type "Type" while it is expected to have type "EqDec (P :: l)".
+
+Debug:
+Level 2: In environment
+s := Strict_In environment : Ensemble U, CompOpp Eq := fv_in (P :: l) l2 : t
+eq : PExpr U
+eq1 : PExpr U
+eq2 : PExpr U
+p0 : positive
+The term "lt" has type "Type" while it is expected to have type "EqDec (P :: l)".
+
+Debug:
+Level 3: In environment
+s := Strict_In environment : Ensemble U, CompOpp Eq := fv_in (P :: l) l2 : t
+eq : PExpr U
+eq1 : PExpr U
+eq2 : PExpr U
+p0 : positive
+The term "lt" has type "Type" while it is expected to have type "EqDec (P :: l)".
+
+Debug:
+Level 3: In environment
+s := Strict_In environment : Ensemble U, CompOpp Eq := fv_in (P :: l) l2 : t
+eq : PExpr U
+eq1 : PExpr U
+eq2 : PExpr U
+p0 : positive
+The term "lt" has type "Type" while it is expected to have type "EqDec (P :: l)".
+
+Debug:
+Level 2: In environment
+s := Strict_In environment : Ensemble U, CompOpp Eq := fv_in (P :: l) l2 : t
+eq : PExpr U
+eq1 : PExpr U
+eq2 : PExpr U
+p0 : positive
+The term "lt" has type "Type" while it is expected to have type "EqDec (P :: l)".
+
+Debug:
+Level 2: In environment
+s := Strict_In environment : Ensemble U, CompOpp Eq := fv_in (P :: l) l2 : t
+eq : PExpr U
+eq1 : PExpr U
+eq2 : PExpr U
+p0 : positive
+The term "lt" has type "Type" while it is expected to have type "EqDec (P :: l)".
+
+Debug:
+Level 2: In environment
+s := Strict_In environment : Ensemble U, CompOpp Eq := fv_in (P :: l) l2 : t
+eq : PExpr U
+eq1 : PExpr U
+eq2 : PExpr U
+p0 : positive
+The term "lt" has type "Type" while it is expected to have type "EqDec (P :: l)".
+
+Debug:
+Level 2: In environment
+s := Strict_In environment : Ensemble U, CompOpp Eq := fv_in (P :: l) l2 : t
+eq : PExpr U
+eq1 : PExpr U
+eq2 : PExpr U
+p0 : positive
+The term "lt" has type "Type" while it is expected to have type "EqDec (P :: l)".
+
+Debug:
+Level 2:

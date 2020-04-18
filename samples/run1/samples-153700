@@ -1,0 +1,98 @@
+======== SAMPLE 1 ========
+   (forall e1 e2 : E.eq x2 e1 -> False)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) + 2
+  _x2 : height rr < height (Node rll rlx rld rlr _x3)
+  y : key
+  e' : elt
+  H0 : MapsTo y e' rlr
+  ============================
+   (MapsTo y e'
+      (Node (Node l x d rll (max (height l) (height rll) + 1))) rlx rld
+         (Node rlr rx rd rr (max (height rlr) (height rr) + 1))
+         (max (height (Node l x d rll (max (height l) (height rll) + 1)))
+            (height (Node rlr rx rd rr (max (height rlr) (height rr) + 1))) +
+          1)))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) + 2
+  _x2 : height rr < height (Node rll rlx rld rlr _x3)
+  y : key
+  e' : elt
+  H0 : MapsTo y e' rlr
+  ============================
+   (MapsTo y e'
+      (Node (Node l x d rll (max (height l) (height rll) + 1))) rlx rld
+         (Node rlr rx rd rr (max (height rlr) (height rr) + 1))
+         (max (height (Node l x d rll (max (height l) (height rll) + 1)))
+            (height (Node rlr rx rd rr (max (height rlr) (height rr) + 1))) +
+          1)))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 :

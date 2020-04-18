@@ -1,0 +1,33 @@
+======== SAMPLE 1 ========
+Expr Q) (fst (a0, b0)) : PExpr Q
+  H4 : eval_Psquo2 Init.Nat.add (Psquo2_of_nat p)
+  H5 : bst q
+  H1 : p0 = p
+  H2 : eval_Psquo2 Init.Nat.add (Psquo2_of_nat p)
+  H6 : bst q
+  H3 : eval_Psquo2 Init.Nat.add q (Psquo2_of_nat p)
+  H8 : QSeqEquiv
+                 (Psquo2_of_nat p) Q
+                  (Psquo2_of_nat p) Qeq
+                   (Psquo2_of_nat (a0, b0))
+                    (Psquo2_of_nat (a0, b0))
+                     (QSeqEquiv
+                       (QSeqEquiv
+                         (QSeqEquiv
+                            (QSeqEquiv
+                              (QSeqEquiv
+                               (QSeqEquiv
+                                 (QSeqEquiv
+                                (QSeqEquiv
+                                 (QExpr Qeq_bool (a0, b0))
+                               (QSeqEquiv
+                                (QDebug (1 # p)) (QDebug (2 # p))) +
+                        (QDebug (2 # p) (fst (a0, b0)) (Qst (x, Raw.f _) in
+                      (QSeqEquiv
+                        (QSeqEquiv
+                           (QSeqEquiv_of_QR R'
+                             (QSeqEquiv_of_QR (a0, b0))
+                             (QSeqEquiv_of_QR (a0, b0))))) =
+                 (QSeqEquiv_of_QR (a0, b0))
+                   (QSeqEquiv_of_QR (a0, b0))
+                    (Qmake_conj (a0, b0

@@ -1,0 +1,63 @@
+======== SAMPLE 1 ========
+  f0_compat : forall (x x' : X.t) (o : option elt) (o' : option elt'),
+              X.eq x x' -> f0 x o o' = f0 x' o o'
+  l1 : t elt
+  x1 : key
+  l2 : t elt
+  x2 : key
+  l : t elt
+  z1 : key
+  z2 : key
+  H : bst l
+  ============================
+   (MapsTo x1 l1 \/
+    (forall x2 y0 : key,
+     MapsTo x1 (Node l1 x1 z1 d1 r1 _x) \/
+    MapsTo x1 r1 \/
+    z1 /\ MapsTo x1 (Node l1 x1 z1 d1 r1 _x)) \/
+    z1 /\ z2 = true ->
+    MapsTo x1 (Node l1 x1 z1 d1 r1 _x) \/
+    z1 /\ z2 = true ->
+    (forall x2 y0 : key,
+     MapsTo x1 (Node l1 x1 z1 d1 r1 _x) \/
+     z1 /\ z2 = true ->
+    (forall x1 y0 : key,
+     MapsTo x1 (Node l1 x1 z1 d1 r1 _x) \/
+     z1 /\ z2 = true ->
+    (forall x2 y0 : key,
+     MapsTo x1 (Node l1 x1 z1 d1 r1 _x) \/
+     z1 /\ z2 = true ->
+    (forall x2 y0 : key,
+     MapsTo x1 (Node l1 x1 r1 _x) \/
+     z1 /\ z2 = true ->
+    (forall x1 y0 : key,
+     MapsTo x1 (Node l1 x1 z1 d1 r1 _x) \/
+     z1 /\ z2 = true ->
+    (forall x2 y0 : key,
+     MapsTo x1 (Node l1 x1 z1 d1 r1 _x) \/
+     z1 /\ z2 = true ->
+    (forall x2 y0 : key,
+     MapsTo x1 (Node l1 x1 z1 d1 r1 _x) \/
+     z1 /\ z2 = true ->
+    (forall x2 y0 : key,
+     MapsTo x1 (Node l1 x1 z1 d1 r1 _x) \/
+     z1 /\ z2 = true ->
+    (forall x2 y0 : key,
+     MapsTo x1 (Node l1 x1 z1 d1 r1 _x) \/
+     z1 /\ z2 = true ->
+    (forall x1 y0 : key,
+     MapsTo x1 (Node l1 x1 z1 d1 r1 _x) \/
+     z1 /\ z2 = true ->
+    (forall x2 y0 : key,
+     MapsTo x1 (Node l1 x1 z1 d1 r1 _x) \/
+    z1 /\ z2 = true ->
+    (forall x1 y0 : key,
+     MapsTo x1 (Node l1 x1 z1 d1 r1 _x) \/
+    z1 /\ z2 = true ->
+    (forall x1 y0 : key,
+     MapsTo x1 (Node l1 x1 z1 d1 r1 _x) \/
+    z1 /\ z2 = true ->
+    (forall x1 y0 : key,
+     MapsTo x1 (Node l1 x1 z1 d1 r1 _x) \/
+    z1 /\ z2 = true ->
+    (

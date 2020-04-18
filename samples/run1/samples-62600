@@ -1,0 +1,123 @@
+======== SAMPLE 1 ========
+ rl
+  H3 : InT x rl -> InT x (append lr rl)
+  H : InT x lr
+  ============================
+   (InT x lr)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (6) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  Hr : notred lr
+  H1 : InT x (append lr rl) -> InT x lr \/ InT x rl
+  H2 : InT x rl -> InT x (append lr rl)
+  H0 : InT x (append lr rl)
+  H5 : InT x ll \/ X.eq x lx \/ InT x lr
+  ============================
+   (InT x ll)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (6) > 
+Debug: Level 6: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  Hr : notred lr
+  H1 : InT x (append lr rl) -> InT x lr \/ InT x rl
+  H2 : InT x rl -> InT x (append lr rl)
+  H0 : InT x (append lr rl)
+  H5 : InT x ll \/ X.eq x lx \/ InT x lr
+  ============================
+   (InT x ll)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (5) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  Hr : notred lr
+  H1 : InT x (append lr rl) -> InT x lr \/ InT x rl
+  H2 : InT x rl -> InT x (append lr rl)
+  H0 : InT x (append lr rl)
+  H5 : InT x ll \/ X.eq x lx \/ InT x lr
+  ============================
+   (InT x ll)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (5) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  Hr : notred lr
+  H1 : InT x (append lr rl) -> InT x lr \/ InT x rl
+  H2 : InT x rl -> InT x (append lr rl)
+  H0 : InT x (append lr rl)
+  H5 : InT x ll \/ X.eq x lx \/ InT x lr
+  ============================
+   (InT x ll)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (5) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  Hr : notred lr
+  H1 : InT x (append lr rl) -> InT x lr \/ InT x rl
+  H2 : InT x rl -> InT x (append lr rl)
+  H0 : In

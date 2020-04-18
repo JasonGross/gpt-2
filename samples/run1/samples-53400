@@ -1,0 +1,107 @@
+======== SAMPLE 1 ========
+ Type
+  s1 : t
+  s2 : t
+  x1 : O1.t
+  x2 : O2.t
+  a : O1.eq x1 a
+  H0 : O1.eq x1 x2 \/ O2.eq x2 a
+  H1 : O1.eq x2 a
+  H2 : O2.eq x2 x1 \/ O2.eq x2 a
+  ============================
+   (O1.eq x1 a \/ O1.eq x1 x2 \/ O2.eq x2 x1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x1 : O1.t
+  x2 : O2.t
+  a : O1.eq x1 a
+  H0 : O1.eq x1 x2 \/ O2.eq x2 a
+  H1 : O1.eq x2 a
+  H2 : O2.eq x2 x1 \/ O2.eq x2 a
+  ============================
+   (O1.eq x1 a \/ O1.eq x1 x2 \/ O2.eq x2 x1)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x1 : O1.t
+  x2 : O2.t
+  a : O1.eq x1 a
+  H0 : O1.eq x1 x2 \/ O2.eq x2 a
+  H1 : O1.eq x2 a
+  H2 : O2.eq x2 x1 \/ O2.eq x2 a
+  ============================
+   (O1.eq x1 a \/ O1.eq x1 x2 \/ O2.eq x2 x1)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x1 : O1.t
+  x2 : O2.t
+  a : O1.eq x1 a
+  H0 : O1.eq x1 x2 \/ O2.eq x2 a
+  H1 : O1.eq x2 a
+  H2 : O2.eq x2 x1 \/ O2.eq x2 a
+  ============================
+   (O1.eq x1 a \/ O1.eq x1 x2 \/ O2.eq x2 x1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x1 : O1.t
+  x2 : O2.t
+  a : O1.eq x1 a
+  H0 : O1.eq x1 x2 \/ O2.eq x2 a
+  H1 : O1.eq x2 a
+  H2 : O2.eq x2 x1 \/ O2.eq x2 a
+  ============================
+   (O1.eq x1 a \/ O1.eq x1 x2 \/ O2.eq x2 x1)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcTac.no_clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  x1 : O1.t
+  x2 : O2.t
+  a : O1.eq x1 a
+  H0 : O1.eq x1 x2 \/ O2.eq x2 a
+  H1 : O1.eq x2 a
+  H2 : O2.eq x2 x1 \/ O2.eq x2 a
+  ============================
+   (O1.eq x1 a \/ O

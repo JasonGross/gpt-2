@@ -1,0 +1,105 @@
+======== SAMPLE 1 ========
+ l : list elt
+  Hrec' : forall x0 : elt,
+          Ok (x :: l) ->
+          Ok l' -> In x0 (diff (x :: l) l') <-> In x0 (x :: l) /\ ~ In x0 l'
+  H : X.eq x x'
+  x0 : elt
+  H0 : Sorted X.lt l'
+  H1 : Inf x' l'
+  H2 : Sorted X.lt l
+  H3 : Inf x l
+  H5 : MX.OrderTac.interp_ord OrdersTac.OEQ x0 y
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+fun H t => match H with
+         | H' => fail 2
+         | _ => unify X Y; clear H' || clear H
+         end
+
+
+TcDebug (18) > 
+Goal:
+  
+  s : t
+  x : elt
+  l : list elt
+  Hrec : forall (s' : t) (x : elt),
+         Ok l -> Ok s' -> In x (diff l s') <-> In x l /\ ~ In x s'
+  s' : t
+  x' : elt
+  l' : list elt
+  Hrec' : forall x0 : elt,
+          Ok (x :: l) ->
+          Ok l' -> In x0 (diff (x :: l) l') <-> In x0 (x :: l) /\ ~ In x0 l'
+  H : X.eq x x'
+  x0 : elt
+  H0 : Sorted X.lt l'
+  H1 : Inf x' l'
+  H2 : Sorted X.lt l
+  H3 : Inf x l
+  H5 : MX.OrderTac.interp_ord OrdersTac.OEQ x0 y
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match H with
+| H' => fail 2
+| _ => unify X Y; clear H' || clear H
+end
+
+
+TcDebug (18) > 
+Goal:
+  
+  s : t
+  x : elt
+  l : list elt
+  Hrec : forall (s' : t) (x : elt),
+         Ok l -> Ok s' -> In x (diff l s') <-> In x l /\ ~ In x s'
+  s' : t
+  x' : elt
+  l' : list elt
+  Hrec' : forall x0 : elt,
+          Ok (x :: l) ->
+          Ok l' -> In x0 (diff (x :: l) l') <-> In x0 (x :: l) /\ ~ In x0 l'
+  H : X.eq x x'
+  x0 : elt
+  H0 : Sorted X.lt l'
+  H1 : Inf x' l'
+  H2 : Sorted X.lt l
+  H3 : Inf x l
+  H5 : MX.OrderTac.interp_ord OrdersTac.OEQ x0 y
+  ============================
+   False
+
+
+Debug: Going to execute:
+H
+
+
+TcDebug (19) > 
+Debug: Level 19: h
+ has value 
+H
+
+
+Goal:
+  
+  s : t
+  x : elt
+  l : list elt
+  Hrec : forall (s' : t) (x : elt),
+         Ok l -> Ok s' -> In x (diff l s') <-> In x l /\ ~ In x s'
+  s' : t
+  x' : elt
+  l' : list elt
+  Hrec' : forall x0 : elt,
+          Ok (x :: l) ->
+          Ok l' -> In x0 (diff (x :: l) l') <-> In x

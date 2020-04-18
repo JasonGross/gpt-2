@@ -1,0 +1,126 @@
+======== SAMPLE 1 ========
+disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall h : int, bst (Node ll lx ld lr h) -> gt_tree m#1 l'
+  h : int
+  H1 : bst r
+  H2 : lt_tree x (Node ll lx ld lr _x)
+  H3 : gt_tree x r
+  H : bst ll
+  H4 : bst lr
+  H5 : lt_tree lx ll
+  H6 : gt_tree lx lr
+  y : key
+  H0 : X.eq y x
+  ============================
+   (X.eq y lx)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall h : int, bst (Node ll lx ld lr h) -> gt_tree m#1 l'
+  h : int
+  H1 : bst r
+  H2 : lt_tree x (Node ll lx ld lr _x)
+  H3 : gt_tree x r
+  H : bst ll
+  H4 : bst lr
+  H5 : lt_tree lx ll
+  H6 : gt_tree lx lr
+  y : key
+  H0 : X.eq y x
+  ============================
+   (X.eq y lx)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall h : int, bst (Node ll lx ld lr h) -> gt_tree m#1 l'
+  h : int
+  H1 : bst r
+  H2 : lt_tree x (Node ll lx ld lr _x)
+  H3 : gt_tree x r
+  H : bst ll
+  H4 : bst lr
+  H5 : lt_tree lx ll
+  H6 : gt_tree lx lr
+  y : key
+  H0 : X.eq y x
+  ============================
+   (X.eq y lx)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e

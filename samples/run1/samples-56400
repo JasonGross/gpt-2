@@ -1,0 +1,100 @@
+======== SAMPLE 1 ========
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok (Bk ll lx lr) ->
+        InT y (del x (Bk ll lx lr)) <-> InT y (Bk ll lx lr) /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (del x r) <-> InT y r /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok (Bk ll lx lr)
+  H6 : Ok r
+  H7 : lt_tree x' (Bk ll lx lr)
+  H8 : gt_tree x' r
+  H2 : X.eq y x -> False
+  H1 : InT y r
+  ============================
+   (InT y r)
+
+
+Debug: Going to execute:
+exact (id0 id1)
+
+
+TcDebug (2) > 
+Debug: Evaluated term: (mapr r)
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok (Bk ll lx lr) ->
+        InT y (del x (Bk ll lx lr)) <-> InT y (Bk ll lx lr) /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (del x r) <-> InT y r /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok (Bk ll lx lr)
+  H6 : Ok r
+  H7 : lt_tree x' (Bk ll lx lr)
+  H8 : gt_tree x' r
+  H2 : X.eq y x -> False
+  H1 : InT y r
+  ============================
+   (InT y r)
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok (Bk ll lx lr) ->
+        InT y (del x (Bk ll lx lr)) <-> InT y (Bk ll lx lr) /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (del x r) <-> InT y r /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok (Bk ll lx lr)
+  H6 : Ok r
+  H7 : lt_tree x' (Bk ll lx lr)
+  H8 : gt_tree x' r
+  H2 : X.eq y x -> False
+  H1 : InT y r
+  ============================
+   (~ X.eq y x)
+
+
+Debug: Going to execute:
+clear id0
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : el

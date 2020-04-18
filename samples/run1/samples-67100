@@ -1,0 +1,167 @@
+======== SAMPLE 1 ========
+; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  rl1 : tree
+  t0 : X.t
+  rl2 : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H0 : InT y rl1
+  ============================
+   (InT y rl1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  rl1 : tree
+  t0 : X.t
+  rl2 : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H0 : InT y rl1
+  ============================
+   (InT y rl1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : X.t
+  rl1 : tree
+  t0 : X.t
+  rl2 : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H0 : InT y rl1
+  ============================
+   (InT y rl1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  rl1 : tree
+  t0 : X.t
+  rl2 : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H0 : InT y rl1
+  ============================
+   (InT y rl1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  rl1 : tree
+  t0 : X.t
+  rl2 : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H0 : InT y rl1
+  ============================
+   (InT y rl1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  rl1 : tree
+  t0 : X.t
+  rl2 : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H0 : InT y rl1
+  ============================
+   (InT y rl1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  rl1 : tree
+  t0 : X.t
+  rl2 : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H0 : InT y rl1
+  ============================
+   (InT y rl1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  rl1 : tree
+  t0 : X.t
+  rl2 : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H0 : InT y rl1
+  ============================
+   (InT y rl1)
+
+
+Debug: Going to execute:
+fun tauto

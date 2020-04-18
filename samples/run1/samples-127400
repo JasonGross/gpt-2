@@ -1,0 +1,131 @@
+======== SAMPLE 1 ========
+_tree x2 (Node l2 x2 d2 r2 _x4)
+  H7 : Ok l2
+  H8 : Ok d2
+  H9 : lt_tree x2 l2
+  H10 : gt_tree x2 d2 r2
+  H1 : X.eq x1 x2
+  ============================
+   (In x4 s2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l2 : t elt
+  x2 : key
+  d2 : elt
+  r2 : t elt
+  _x4 : int
+  s2' : t elt
+  x : key
+  d : elt
+  e1 : remove_min l2 x2 d2 r2 = (s2', (x, d))
+  y : key
+  e : elt
+  e1 : elt
+  l : list (key * elt)
+  H : bst l2
+  H0 : bst r2
+  H1 : X.eq x1 y
+  H2 : dintuition
+  H0 : bst (Node l2 x2 d2 r2 _x4)
+  H7 : Ok l2
+  H8 : Ok d2
+  H9 : lt_tree x2 l2
+  H10 : gt_tree x2 d2 r2
+  H1 : X.eq x1 x2
+  ============================
+   (In x4 s2)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  l2 : t elt
+  x2 : key
+  d2 : elt
+  r2 : t elt
+  _x4 : int
+  s2' : t elt
+  x : key
+  d : elt
+  e1 : remove_min l2 x2 d2 r2 = (s2', (x, d))
+  y : key
+  e : elt
+  e1 : elt
+  l : list (key * elt)
+  H : bst l2
+  H0 : bst r2
+  H1 : X.eq x1 y
+  H2 : dintuition
+  H0 : bst (Node l2 x2 d2 r2 _x4)
+  H7 : Ok l2
+  H8 : Ok d2
+  H9 : lt_tree x2 l2
+  H10 : gt_tree x2 d2 r2
+  H1 : X.eq x1 x2
+  ============================
+   (In x4 s2)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l2 : t elt
+  x2 : key
+  d2 : elt
+  r2 : t elt
+  _x4 : int
+  s2' : t elt
+  x : key
+  d : elt
+  e1 : remove_min l2 x2 d2 r2 = (s2', (x, d))
+  y : key
+  e : elt
+  e1 : elt
+  l : list (key * elt)
+  H : bst l2
+  H0 : bst r2
+  H1 : X.eq x1 x2
+  ============================
+   (In x4 s2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l2 : t elt
+  x2 : key
+  d2 : elt
+  r2 : t elt
+  _x4 : int
+  s2' : t elt
+  x : key
+  d : elt
+  e1 : remove_min l2 x2 d2 r2 = (s

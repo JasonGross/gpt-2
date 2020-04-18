@@ -1,0 +1,80 @@
+======== SAMPLE 1 ========
+; rewrite <- isok@0; inversion_clear H; invlist Comp;
+       [ do 2 intro; apply filter; find_equiv; do 2 intro; apply match; do 2 inversion; clear id
+| id:~ _
+  |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+| id:~ _
+  |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; intro; clear id
+| id:~ _
+  |- _ => split
+| |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+| id:?X1 <-> ?X2 -> ?X3
+  |- _ =>
+      assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+       (do 2 intro; apply filter; split; assumption); clear id
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+| |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+| |- _ <-> _ => split
+| |- ~ _ => red
+end; <Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (0) > 
+Goal:
+  
+  l : t
+  x : X.t
+  e : (height Leaf + 2 <? height l) = false
+  y : elt
+  H : X.lt x x
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H2 : X.eq y x -> False
+  H1 : X.eq y x'
+  ============================
+   (InT y l)
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:?X1
+  |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+| id:_ <-> _ |- _ => elim id; do 2 intro; clear id
+| id:~ _ |- _ => red in id
+| id:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+| id0:?X1 -> ?X2, id1:?X1 |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+| id:?X1 -> ?X2
+  |- _ =>
+     <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+      [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+| id:?X1 <-> ?X2 -> ?X3
+  |- _ =>
+     assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+      (do 2 intro; apply id; split; assumption); clear id
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+| |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+| |- _ <-> _ => split
+| |- ~ _ => red
+end
+
+
+TcDebug (0) > 
+Goal:
+  
+  l : t
+  x : X.t
+  e : (height Leaf + 2 <? height l) = false
+  y : elt
+  H : X.lt x x
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H2

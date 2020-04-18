@@ -1,0 +1,29 @@
+======== SAMPLE 1 ========
+ key *
+                 Ring_polynom.PEc 0%Z;
+                   Ring_polynom.PEX 1%Z |} tt) None
+                (Tauto.D
+                    (Tauto.Cj
+                        (Tauto.A
+                              (Tauto.Cj0
+                                  (Tauto.Cj0)))
+                              (Tauto.A
+                                (Tauto.Cj0
+                                 (Tauto.Cj0
+                                     (Tauto.Aeq_refl (Bk3 * n)%poly)
+                                      (Bk0 * n))) None))))))
+                 (Tauto.Cj0
+                    (Tauto.A
+                       (Tauto.Cj0
+                           (Tauto.PosZ
+                              (fold_right
+                                  (fun (k, e) => Nat.max 2 k ^ n :: nil)
+                                 (fun (k, e) => Nat.max 2 k ^ p0 :: nil)
+                                (fun (k, e) => Nat.max 2 k ^ p :: nil)
+                                (Nat.max (P2_hyp0 p0)
+                                        :: 0%positive
+                                        :: nil)
+                                   (Ring_polynom.norm_subst 0%positive
+                                      (fold_right
+                                    (fun (k, e) => Nat.max 2 k ^ p0 :: nil)
+        

@@ -1,0 +1,87 @@
+======== SAMPLE 1 ========
+0 : InT y r1
+  H3 : InT y r2
+  ============================
+   (X.eq y x1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (8) > 
+Goal:
+  
+  x : X.t
+  c1 : Info.t
+  l1 : tree
+  y : X.t
+  r1 : tree
+  IHl1 : forall (x : X.t) (y : elt),
+        Ok (Rd rl rx rr) ->
+        InT y (del x (Rd rl rx rr)) <->
+        InT y (Rd rl rx rr) /\ (X.eq y x -> False)
+  IHr1 : forall (x : X.t) (y : elt),
+        Ok (Rd rl rx rr) ->
+        InT y (del x (Rd rl rx rr)) <->
+        InT y (Rd rl rx rr) /\ (X.eq y x -> False)
+  x : X.t
+  c1 : Info.t
+  l1 : tree
+  y : X.t
+  r1 : tree
+  IHr1 : forall (x : X.t) (y : elt),
+        Ok (Rd rl rx rr) ->
+        InT y (del x (Rd rl rx rr)) <->
+        InT y (Rd rl rx rr) /\ (X.eq y x -> False)
+  x : X.t
+  c1 : Info.t
+  l1 : tree
+  y : X.t
+  r1 : tree
+  IHr1 : forall (x : X.t) (y : elt),
+        Ok (Rd rl rx rr) ->
+        InT y (del x (Rd rl rx rr)) <->
+        InT y (Rd rl rx rr) /\ (X.eq y x -> False)
+  x : X.t
+  c1 : Info.t
+  l1 : tree
+  y : X.t
+  r1 : tree
+  IHr1 : forall (x : X.t) (y : elt),
+        Ok (Rd rl rx rr) ->
+        InT y (del x (Rd rl rx rr)) <->
+        InT y (Rd rl rx rr) /\ (X.eq y x -> False)
+  x : X.t
+  c1 : Info.t
+  r1 : tree
+  y : X.t
+  r1 : tree
+  ============================
+   (X.eq y x1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (8) > 
+Goal:
+  
+  x : X.t
+  c1 : Info.t
+  l1 : tree
+  y : X.t
+  r1 : tree
+  IHr1 : forall (x : X.t) (y : elt),
+        Ok (Rd rl rx rr) ->
+        InT y (del x (Rd rl rx rr)) <->
+        InT y (Rd rl rx rr) /\ (X.eq y x -> False)
+  x : X.t
+  c1 : Info.t
+  l1 : tree
+  y : X.t
+  r1 : tree
+  IHr1 : forall (x : X.t) (y : elt),
+        Ok (Rd rl rx

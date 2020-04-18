@@ -1,0 +1,96 @@
+======== SAMPLE 1 ========
+ IHl : forall (x : X.t) (y : elt), InT y (add x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (add x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x x'
+  H0 : InT y (Node i l x' r)
+  ============================
+   (InT y l \/ X.eq y x \/ InT y r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (add x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (add x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x x'
+  H0 : InT y (Node i l x' r)
+  ============================
+   (InT y l \/ X.eq y x \/ InT y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (add x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (add x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x x'
+  H0 : InT y (Node i l x' r)
+  ============================
+   (InT y l \/ X.eq y x \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (add x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (add x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x x'
+  H0 : InT y (Node i l x' r)
+  ============================
+   (InT y l \/ X.eq y x \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (add x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (add x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x x'
+  H0 : InT y (Node i l x'

@@ -1,0 +1,77 @@
+======== SAMPLE 1 ========
+       eq {| this := m1; sorted := Hm1 |} m2
+  x' : X.t
+  e' : D.t
+  m2 : list (X.t * D.t)
+  Hm2 : Sorted (Raw.PX.ltk (elt:=D.t)) ((x', e') :: m2)
+  x'' : X.t
+  e'' : D.t
+  m3 : list (X.t * D.t)
+  Hm3 : Sorted (Raw.PX.ltk (elt:=D.t)) ((x'', e'') :: m3)
+  Hlt : X.lt x' x
+  Hlt' : X.lt x' x''
+  H : X.eq x x''
+  H0 : True
+  H1 : False
+  ============================
+   (D.eq e e'' /\ eq_list m1 m3)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  e : D.t
+  m1 : list (X.t * D.t)
+  Hm1 : Sorted (Raw.PX.ltk (elt:=D.t)) ((x, e) :: m1)
+  IHm1 : forall (Hm1 : Sorted (Raw.PX.ltk (elt:=D.t)) m1) (m2 m3 : t),
+         eq {| this := m1; sorted := Hm1 |} m2 ->
+         eq m2 m3 -> eq {| this := m1; sorted := Hm1 |} m3
+  x' : X.t
+  e' : D.t
+  m2 : list (X.t * D.t)
+  Hm2 : Sorted (Raw.PX.ltk (elt:=D.t)) ((x', e') :: m2)
+  x'' : X.t
+  e'' : D.t
+  m3 : list (X.t * D.t)
+  Hm3 : Sorted (Raw.PX.ltk (elt:=D.t)) ((x'', e'') :: m3)
+  Hlt : X.lt x' x
+  Hlt' : X.lt x' x''
+  H : X.eq x x''
+  H0 : True
+  H1 : False
+  ============================
+   (D.eq e e'' /\ eq_list m1 m3)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  e : D.t
+  m1 : list (X.t * D.t)
+  Hm1 : Sorted (Raw.PX.ltk (elt:=D.t)) ((x, e) :: m1)
+  IHm1 : forall (Hm1 : Sorted (Raw.PX.ltk (elt:=D.t)) m1) (m2 m3 : t),
+         eq {| this := m1; sorted := Hm1 |} m2 ->
+         eq m2 m3 -> eq {| this := m1; sorted := Hm1 |} m3
+  x' : X.t
+  e' : D.t
+  m2 : list (X.t * D.t)
+  Hm2 : Sorted (Raw.PX.ltk (elt:=D.t)) ((x', e') :: m2)
+  x'' : X.t
+  e'' : D.t
+  m3 : list (X.t * D.t)
+  Hm3 : Sorted (Raw.PX.ltk (elt:=D.t)) ((x'', e'') :: m3)
+  Hlt : X.lt x' x
+  Hlt' : X.lt x' x''
+  H : X.eq x x''
+  H0 : True
+  H1 :

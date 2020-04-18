@@ -1,0 +1,80 @@
+======== SAMPLE 1 ========
+
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  eval : Env -> Term -> Prop
+  normalise_correct : forall (env : Env) (t : Term) (tg : Annot),
+                       eval_cnf env (normalise t tg) -> eval env t
+  negate_correct : forall (env : Env) (t : Term) (tg : Annot),
+                    eval_cnf env (negate t tg) -> ~ eval env t
+  ============================
+   (True <-> ~ False)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                     eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  eval : Env -> Term -> Prop
+  normalise_correct : forall (env : Env) (t : Term) (tg : Annot),
+                       eval_cnf env (normalise t tg) -> eval env t
+  negate_correct : forall (env : Env) (t : Term) (tg : Annot),
+                    eval_cnf env (negate t tg) -> ~ eval env t
+  ============================
+   (True <-> ~ False)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_

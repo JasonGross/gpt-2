@@ -1,0 +1,105 @@
+======== SAMPLE 1 ========
+ id
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  IHt1 : Ok r1 -> Ok (split x1 s2)#r -> Ok (union r1 (split x1 s2)#r)
+  B2 : Ok s2
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  y : elt
+  H : MapsTo y e1
+  H0 : InT y l1
+  ============================
+   (X.lt y x1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.axioms> flags ||
+  match reverse goal with
+  | id:(?X1 -> ?X2) -> ?X3
+    |- _ =>
+        cut X3;
+         [ intro; clear id; t_tauto_intuit
+         | cut (X1 -> X2);
+            [ exact
+            id
+            | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear
+               id; (solve [ t_tauto_intuit ]) ] ]
+  | id:~ ?X1 -> ?X3
+    |- _ =>
+        cut X3;
+         [ intro; clear id; t_tauto_intuit
+         | cut (~ X1);
+            [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+  | |- ?X1 =>
+        <Coq.Init.Tauto.is_disj> flags X1; (solve
+         [ left; t_tauto_intuit | right; t_tauto_intuit ])
+  end ||
+    match goal with
+    | |- _ -> _ => intro; t_tauto_intuit
+    | |- _ => t_reduce; t_solver
+    end || t_solver
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  IHt1 : Ok r1 -> Ok (split x1 s2)#r -> Ok (union r1 (split x1 s2)#r)
+  B2 : Ok s2
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  y : elt
+  H : MapsTo y e1
+  H0 : InT y l1
+  ============================
+   (X.lt y x1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.axioms> flags
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  IHt1 : Ok r1 -> Ok (split x1 s2)#r -> Ok (union r1 (split x1 s2)#r)
+  B2 : Ok s2
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  y : elt
+  H : MapsTo y e1
+  H0 : InT y l1
+  ============================
+   (X.lt y x1)
+
+
+Debug:
+Going to execute:
+fun flags =>
+  match reverse goal with
+  | |- ?X1

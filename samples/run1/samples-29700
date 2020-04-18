@@ -1,0 +1,113 @@
+======== SAMPLE 1 ========
+
+Goal:
+  
+  i : Q
+  j : Q
+  i' : Q
+  H : i * QArithProof
+  QEquiv : Equivalence R
+  EquivalenceRel
+  EquivalenceReflexivePredicates
+  EquivalenceReflexivePredicates
+  EquivalenceTransitivePredicates
+  EquivalenceTransitivePredicates
+  EquivalenceTransitivePredicates
+  ============================
+   (inter s <> t)
+
+
+Debug:
+Going to execute:
+let rec use_hyp H :=
+ match type of H with
+ | _ /\ _ => exact H || destruct_hyp H
+ | _ => try (solve [ inversion H ])
+ end
+with do_intro := let H := fresh in
+                 intro; use_hyps; repeat
+                repeat (destruct_hyp H; use_hyps; t_tauto_intuit); clear H
+with do_intro := let H := fresh in
+                  intro; use_hyps; repeat
+                  repeat (destruct_hyp H; use_hyps; t_tauto_intuit); clear H
+with do_intro := let H := fresh in
+                  intro; use_hyps; repeat
+                  repeat (destruct_hyp H; use_hyps; t_tauto_intuit); clear H
+with do_revert := let H := fresh in
+                  change_no_check T in H || rewrite (t_tauto_intuit); clear H
+with id; do_intro; use_hyps; t_tauto_intuit
+in
+let rec use_hyp H :=
+ match type of H with
+ | _ /\ _ => exact H || (destruct_hyp H; use_hyps; t_tauto_intuit)
+ | _ => try (solve [ inversion H ])
+ end
+in
+let do_ccl :=
+ try do_atom; repeat (do_intro; try do_atom); (solve [ split; do_ccl ])
+in
+(solve [ do_atom | use_hyps; do_ccl ]) || fail "Cannot solve this goal"
+
+
+TcDebug (4) > 
+Goal:
+  
+  i : Q
+  j : Q
+  i' : Q
+  H : i * QArithProof
+  QEquiv : Equivalence R
+  EquivalenceRel
+  EquivalenceReflexivePredicates
+  EquivalenceReflexivePredicates
+  EquivalenceTransitivePredicates
+  EquivalenceTransitivePredicates
+  ============================
+   (inter s <> t)
+
+
+Debug: Going to execute:
+solve
+[ MAIN_tac id
+ | apply MSet_False_true; try MSet_true; try MSet_false_true ]
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : Q
+  j : Q
+  i' : Q
+  H : i * QArithProof
+  QEquiv : Equivalence R
+  EquivalenceRel
+  EquivalenceReflexivePredicates
+  EquivalenceReflexivePredicates
+  EquivalenceTransitivePredicates
+  EquivalenceTransitivePredicates
+  EquivalenceTransitivePredicates
+  EquivalenceTransitivePredicates
+  ============================
+   (inter s <> t)
+
+
+Debug:
+Going to execute:
+apply MSet_False_true; try MSet_true; try MSet_false_true
+
+
+TcDebug (4) > 
+Goal:
+  
+  i : Q
+  j : Q
+  i' : Q
+  H : i * QArithProof
+  QEquiv : Equivalence R
+  EquivalenceRel
+  EquivalenceReflexivePredicates
+  EquivalenceReflexivePredicates
+  EquivalenceTransitivePredicates
+  EquivalenceTransitivePredicates
+  EquivalenceTransitivePredicates
+  EquivalenceTrans

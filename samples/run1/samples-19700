@@ -1,0 +1,109 @@
+======== SAMPLE 1 ========
+) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x (inter s s')
+  H4 : true = true
+  H1 : In x s
+  H5 : false = true
+  H : false = true
+  H7 : In x s
+  H6 : false = true
+  ============================
+   (true = true || false)
+
+
+Debug:
+Going to execute:
+(generalize (let [| x, y|z|_|])
+     (fun _ => match x with y | y => x) by
+      (fun _ => Add x s q r s' -> Sub x s q'' s'' -> List (fun _ : nat => n) (n *
+          x)
+         (fun _ =>
+           (fun _ => negb (elements s) (n * e * x) e x) x s)
+            (fun _ => Add x s q r s' -> Sub x s q'' s'' -> List (fun _ : nat => n) (n *
+           x)
+            (fun _ => Add x s q r s' -> Sub x s q'' s'' -> List (fun _ : nat => n) (n * (s * e)%positive e x)
+               (fun _ => eq (env (x, e) :: nil) nil)
+                 (fun _ => f ltac:(()) ltac:(())
+                 (mapr (x', e') :: nil)
+                  (fun _ => Add x (env (x', e) :: nil) e)
+                  (f ltac:(()) ltac:(())
+                   (fun _ => Add x (env (x', e) :: nil) e) nil)%byte
+                   (F x e)
+   ============================
+   (false = true || true)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x (inter s s')
+  H4 : true = true
+  H1 : In x s
+  H5 : false = true
+  H : false = true
+  H7 : In x s
+  H6 : false = true
+  ============================
+   (false = true || false)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Debug: Level 1: No matching clauses for match.
+
+Debug: Level 1: No matching clauses for match.
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x (inter s s')
+  H4 : true = true
+  H1 : In x s
+  H5 : false = true
+  H : false = true
+  H7 : In x s
+  H6 : false = true
+  ============================
+   (false = true || false)
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:(?X1 -> ?X2) -> ?X3
+ 

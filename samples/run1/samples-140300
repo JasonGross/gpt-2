@@ -1,0 +1,148 @@
+======== SAMPLE 1 ========
+1 : InT x lr
+  ============================
+   (InT x (Node rh rl rx rr))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = true
+  y : elt
+  H0 : X.eq y lx
+  ============================
+   (InT x (Node rh rl rx rr))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = true
+  y : elt
+  H0 : X.eq y lx
+  ============================
+   (InT x (Node rh rl rx rr))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = true
+  y : elt
+  H0 : X.eq y lx
+  ============================
+   (InT x (Node rh rl rx rr))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = true
+  y : elt
+  H0 : X.eq y lx
+  ============================
+   (InT x (Node rh rl rx rr))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = true
+  y : elt
+  H0 : X.eq y lx
+  ============================
+   (InT x (Node rh rl rx rr))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+ [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+
+
+TcDebug (2) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = true
+  y : elt
+  H0 : X.eq y lx
+  ============================
+   (InT x (Node rh

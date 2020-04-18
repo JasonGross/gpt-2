@@ -1,0 +1,143 @@
+======== SAMPLE 1 ========
+  n : t, t)  y : A  H0 : eq x y
+  ============================
+   (eq y x \/ y0 <> eq y0 \/
+    (In y0 l \/ In y0 r /\ ~ X.eq y x)
+
+
+Debug:
+Going to execute:
+fun y eqn =>
+  match x with
+  | y => clear eqn
+  | _ =>
+      let eqn := _ implicitly in the
+       H; clearhs fv l
+  end
+
+
+TcDebug (4) > 
+Goal:
+  
+  A : Type
+  eq1 : A -> A -> Prop
+  eq2 : A -> A -> Prop
+  eq3 : A -> B -> Prop
+  eq4 : A -> B -> Prop
+  X1 : eq4 x
+  X2 : eq4 y
+  X1' : eq4 x'
+  y : A
+  H0 : eq x y
+  ============================
+   (eq y x \/ y0 <> eq y0 \/
+    (In y0 l \/ In y0 r /\ ~ X.eq y x)
+
+
+Debug:
+Going to execute:
+match x with
+| y => clear eqn
+| _ =>
+    let eqn := _ implicitly in the
+     H; clearhs fv l
+end
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  eq1 : A -> A -> Prop
+  eq2 : A -> A -> Prop
+  eq3 : A -> B -> Prop
+  eq4 : A -> B -> Prop
+  X1 : eq4 x
+  X2 : eq4 y
+  X1' : eq4 x'
+  y : A
+  H0 : eq x y
+  ============================
+   (eq y x \/ y0 <> eq y0 \/
+    (In y0 l \/ In y0 r /\ ~ X.eq y x)
+
+
+Debug: Going to execute:
+x
+
+
+TcDebug (4) > 
+Debug: Level 4: x
+ has value 
+x
+
+
+Goal:
+  
+  A : Type
+  eq1 : A -> A -> Prop
+  eq2 : A -> A -> Prop
+  eq3 : A -> B -> Prop
+  eq4 : A -> B -> Prop
+  X1 : eq4 x
+  X2 : eq4 y
+  X1' : eq4 x'
+  y : A
+  H0 : eq x y
+  ============================
+   (eq y x \/ y0 <> eq y0 \/
+    (In y0 l \/ In y0 r /\ ~ X.eq y x)
+
+
+Debug: Going to execute:
+X1
+
+
+TcDebug (4) > 
+Debug: Evaluated term: (In y0 r)
+
+Debug: Level 4: evaluation returns
+X1 :: eq1
+
+
+Debug: Level 4: evaluation returns
+X1 :: eq1
+
+
+Goal:
+  
+  A : Type
+  eq1 : A -> A -> Prop
+  eq2 : A -> A -> Prop
+  eq3 : A -> B -> Prop
+  eq4 : A -> B -> Prop
+  X1 : eq4 x
+  X2 : eq4 y
+  X1' : eq4 x'
+  y : A
+  H0 : eq x y
+  ============================
+   (eq y x \/ y0 <> eq y0 \/
+    (In y0 l \/ In y0 r /\ ~ X.eq y x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  A : Type
+  eq1 : A -> A -> Prop
+  eq2 : A -> A -> Prop
+  eq3 : A -> B -> Prop
+  eq4 : A -> B -> Prop
+  X1 : eq4 x
+  X2 : eq4 y
+  X1' : eq4 x'
+  y : A
+  H0 : eq x y
+  ============================
+   (eq y x \/ y0 <> eq y0 \/
+    (In y0 l \/ In y

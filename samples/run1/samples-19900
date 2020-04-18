@@ -1,0 +1,72 @@
+======== SAMPLE 1 ========
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  t : tree
+  H0 : X.eq y x
+  ============================
+   ((X.eq y x \/ InT y l \/ InT y (Node l y0 r _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 -> False) /\
+    (X.eq y x \/ InT y l \/ (InT y c -> False)%Q
+     (X.eq y x \/ InT y l \/ InT y (Node l y0 r _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 -> False) /\
+    (X.eq y x \/ InT y l \/ InT y (Node l y0 r _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 -> False))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  t : tree
+  H0 : X.eq y x
+  ============================
+   ((X.eq y x \/ InT y l \/ InT y (Node l y0 r _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 -> False) /\
+    (X.eq y x \/ InT y l \/ (InT y c -> False)%Q
+     (X.eq y x \/ InT y l \/ (InT y (Node l y0 r _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 -> False) /\
+    (X.eq y x \/ InT y l \/ InT y (Node l y0 r _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 -> False))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  t : tree
+  H0 : X.eq y x
+  ============================
+   ((X.eq y x \/ InT y l \/ InT y (Node l y0 r _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 -> False) /\
+    (X.eq y x \/ InT y l \/ InT y (Node l y0 r _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 -> False))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  t : tree
+  H0 : X.eq y x
+  ============================
+   ((X.eq y x \/ InT y l \/ InT y (Node l y0 r _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 -> False) /\
+    (X.eq y x \/ InT y l \/ (InT y (Node l y0 r _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 _x0 -> False) /\
+    (X.eq y x \/ InT y l \/ (InT y (Node l y0 r

@@ -1,0 +1,157 @@
+======== SAMPLE 1 ========
+  tgt y0 y
+  ============================
+   ((InT y e0 \/ X.eq y x0 -> False) \/ X.eq y x \/ InT y r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l : t
+  x : X.t
+  e : (height Leaf + 2 <? height l) = false
+  y : elt
+  H : InT y l
+  H1 : X.eq y x
+  ============================
+   ((InT y e0 \/ X.eq y x0 -> False) \/ X.eq y x \/ InT y r)
+
+
+Debug: Going to execute:
+assert X2; [ exact (id0 id1) | clear id0 ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : t
+  x : X.t
+  e : (height Leaf + 2 <? height l) = false
+  y : elt
+  H : InT y l
+  H1 : X.eq y x
+  ============================
+   ((InT y e0 \/ X.eq y x0 -> False) \/ X.eq y x \/ InT y r)
+
+
+Debug: Going to execute:
+assert X2
+
+
+TcDebug (1) > 
+Debug: Evaluated term: bool
+
+Goal:
+  
+  l : t
+  x : X.t
+  e : (height Leaf + 2 <? height l) = false
+  y : elt
+  H : InT y l
+  H1 : X.eq y x
+  ============================
+   bool
+
+
+Debug: Going to execute:
+exact (id0 id1)
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (f y)
+
+Goal:
+  
+  l : t
+  x : X.t
+  e : (height Leaf + 2 <? height l) = false
+  y : elt
+  H : InT y l
+  H1 : X.eq y x
+  ============================
+   bool
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : t
+  x : X.t
+  e : (height Leaf + 2 <? height l) = false
+  y : elt
+  H : InT y l
+  H1 : X.eq y x
+  LE : l + (y + 1) <= 1
+  x0 : elt
+  y0 : elt
+  H0 : MapsTo x x0
+  ============================
+   (f y = true)
+
+
+Debug: Going to execute:
+clear id0
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : t
+  x : X.t
+  e : (height Leaf + 2 <? height l) = false
+  y : elt
+  H : InT y l
+  H1 : X.eq y x
+  LE : l + (y + 1) <= 1
+  x0 : elt
+  y0 : elt
+  H0 : MapsTo x x0
+  ============================
+   (f y = true)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : t
+  x : X.t
+  e : (height Leaf) + 2
+  y : elt
+  H : InT y l
+  H1 : X.eq y x
+  LE : l + (y + 1) <= 1
+  x0 : elt
+  y0 : elt
+  H0 : MapsTo x x0
+  ============================
+   (InT y l \/ InT y (f y))
+
+
+Debug: Going to execute:
+cut X1; [ exact
+ id | constructor 1; fail ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : t
+  x : X.t
+  e : (height Leaf) + 2
+  y : elt

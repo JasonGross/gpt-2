@@ -1,0 +1,130 @@
+======== SAMPLE 1 ========
+
+  l : tree
+  x' : X.t
+  r : tree
+  H : InT x (Rd (Rd (Rd (Rd (Rd (Rd (Rd (Rd (Rd (Rd (Min (Rd (Rd 1)))) x1)) x))
+  d : uint
+  ============================
+   (InT x b)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (6) > 
+Goal:
+    id : uint
+  l : tree
+  x' : X.t
+  r : tree
+  H : InT x (Rd (Rd (Rd (Rd (Rd (Rd (Rd (Rd (Rd (Min (Rd (Rd 1)))) x1)) x))
+  d : uint
+  ============================
+   (InT x b)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (6) > 
+Goal:
+    id : uint
+  l : tree
+  x' : X.t
+  r : tree
+  H : InT x (Rd (Rd (Rd (Rd (Rd (Rd (Rd (Min (Rd (Rd 1)))) x1)) x))
+  d : uint
+  ============================
+   (InT x b)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (7) > 
+Goal:
+    id : uint
+  l : tree
+  x' : X.t
+  r : tree
+  H : InT x (Rd (Rd (Rd (Rd (Rd (Rd (Rd (Min (Rd (Rd 1)))) x1)) x))
+  d : uint
+  ============================
+   (InT x b)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (7) > 
+Debug: Level 7: evaluation returns
+<tactic closure>
+
+
+Goal:
+    id : uint
+  l : tree
+  x' : X.t
+  r : tree
+  H : InT x (Rd (Rd (Rd (Rd (Rd (Rd (Min (Rd (Rd 1)))) x1)) x))
+  d : uint
+  ============================
+   (InT x b)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (6) > 
+Goal:
+    id : uint
+  l : tree
+  x' : X.t
+  r : tree
+  H : InT x (Rd (Rd (Rd (Rd (Rd (Rd (Min (Rd max)) x))))
+  d : uint
+  ============================
+   (InT x b)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (6) > 
+Goal:
+    id : uint
+  l : tree
+  x' : X.t
+  r : tree
+  H : InT x (Rd (Rd (Rd (Rd (Rd (Rd (Min (Rd (Rd 1)))) x1)) x))
+  d : uint
+  ============================
+   (InT x b)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (6) > 
+Goal:
+    id : uint
+  l : tree
+  x' : X.t
+  r : tree
+  H : InT x (Rd (Rd (Rd (Rd (Rd (Rd (Min (Rd (Rd max)) x)))))
+  d : uint
+  ============================
+   (InT x b)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::

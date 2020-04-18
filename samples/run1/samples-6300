@@ -1,0 +1,113 @@
+======== SAMPLE 1 ========
+           find y (map2_opt r1 r2') = f0 y (find y r1) (find y r2')
+  f0 : Sorted X.lt (rev l1)
+  H2 : f0 x (find y l1) = find y (map2_opt l1 l2')
+  H3 : f0 x (find y r1) = find y r2'
+  ============================
+   (f0 x (find y l1) = find y l2')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  l' : t elt
+  m : (key * elt)%type
+  e1 : remove_min ll lx ld l'
+  e2 : f x o = find_accent e2 (fld (max (height ll) (height l') + 1))
+  IHb : bst r -> bst (map2_opt r1 r2')
+  IHeq : bst m -> bst (map2_opt r1 r2')
+  H0 : bst m
+  ============================
+   (find y (map2_opt r1 r2') = f0 y (find y r1) (find y r2')
+ 
+)
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  l' : t elt
+  m : (key * elt)%type
+  e1 : remove_min ll lx ld l'
+  e2 : f x o = find_accent e2 (fld (max (height ll) (height l') + 1))
+  IHb : bst r -> bst (map2_opt r1 r2')
+  IHeq : bst m -> bst (map2_opt r1 r2')
+  H0 : bst m
+  ============================
+   (find y (map2_opt r1 r2') = f0 y (find y r1) (find y r2')
+ 
+)
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  l' : t elt
+  m : (key * elt)%type
+  e1 : remove_min ll lx ld l'
+  e2 : f x o = find_accent e2 (fld (max (height ll) (height l') + 1))
+  IHb : bst r -> bst (map2_opt r1 r2')
+  IHeq : bst m -> bst (map2_opt r1 r2')
+  H0 : bst m
+  ============================
+   (find y (map2_opt r1 r2') = f0 y (find y r1) (find y r2')
+ 
+)
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  l' : t elt
+  m : (key * elt)%type
+

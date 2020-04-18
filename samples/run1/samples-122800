@@ -1,0 +1,158 @@
+======== SAMPLE 1 ========
+ : 
+   b : t
+  c : t
+  q1 : t
+  q2 : t
+  r1 : t
+  r2 : t
+  H : c = r1 /\ (q1 < r2)
+  H0 : r2 < b
+  H4 : q1 <= r2
+  H5 : q2 < b
+  ============================
+   (b ~= r2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  b : t
+  c : t
+  q1 : t
+  q2 : t
+  r1 : t
+  r2 : t
+  H : c = r1 /\ (q1 < r2)
+  H0 : r2 < b
+  H4 : q1 <= r2
+  H5 : q2 < b
+  ============================
+   (b ~= r2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  b : t
+  c : t
+  q1 : t
+  q2 : t
+  r1 : t
+  r2 : t
+  H : c = r1 /\ (q1 < r2)
+  H0 : r2 < b
+  H4 : q1 <= r2
+  H5 : q2 < b
+  ============================
+   (b ~= r2)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  b : t
+  c : t
+  q1 : t
+  q2 : t
+  r1 : t
+  r2 : t
+  H : c = r1 /\ (q1 < r2)
+  H0 : r2 < b
+  H4 : q1 <= r2
+  H5 : q2 < b
+  ============================
+   (b ~= r2)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  b : t
+  c : t
+  q1 : t
+  q2 : t
+  r1 : t
+  r2 : t
+  H : c = r1 /\ (q1 < r2)
+  H0 : r2 < b
+  H4 : q1 <= r2
+  H5 : q2 < b
+  ============================
+   (b ~= r2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  b : t
+  c : t
+  q1 : t
+  q2 : t
+  r1 : t
+  r2 : t
+  H : c = r1 /\ (q1 < r2)
+  H0 : r2 < b
+  H4 : q1 <= r2
+  H5 : q2 < b
+  ============================
+   (b ~= r2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  b : t
+  c : t
+  q1 : t
+  q2 : t
+  r1 : t
+  r2 : t
+  H : c = r1 /\ (q1 < r2)
+  H0 : r2 < b
+  H4 : q1 <= r2
+  H5 : q2 < b
+  ============================
+   (b ~= r2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  b : t
+  c : t
+  q1 : t
+  q

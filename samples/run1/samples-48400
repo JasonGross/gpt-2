@@ -1,0 +1,105 @@
+======== SAMPLE 1 ========
+Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+| _:?X1 |- ?X1 => assumption
+end
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : eqA x y
+  H1 : NoDupA (l1 ++ y :: l2)
+  H2 : equivlistA (x :: l) (l1 ++ y :: l2)
+  a : A
+  H3 : ~ InA x l
+  H4 : NoDupA l
+  H5 : NoDupA (l1 ++ l2)
+  H6 : InA a l1
+  H7 : InA y l1 -> False
+  H10 : InA y l2 -> False
+  H0 : eqA a x -> InA a l1 \/ eqA a y \/ InA a l2
+  H8 : InA a l
+  H11 : InA a l1 \/ eqA a y \/ InA a l2
+  H9 : eqA a y -> eqA a x \/ InA a l
+  H13 : InA a l
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : eqA x y
+  H1 : NoDupA (l1 ++ y :: l2)
+  H2 : equivlistA (x :: l) (l1 ++ y :: l2)
+  a : A
+  H3 : ~ InA x l
+  H4 : NoDupA l
+  H5 : NoDupA (l1 ++ l2)
+  H6 : InA a l1
+  H7 : InA y l1 -> False
+  H10 : InA y l2 -> False
+  H0 : eqA a x -> InA a l1 \/ eqA a y \/ InA a l2
+  H8 : InA a l
+  H11 : InA a l1 \/ eqA a y \/ InA a l2
+  H9 : eqA a y -> eqA a x \/ InA a l
+  H13 : InA a l
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : eqA x y
+  H1 : NoDupA (l1 ++ y :: l2)
+  H2 : equivlistA (x :: l) (l1 ++ y :: l2)
+  a : A
+  H3 : ~ InA x l
+  H4 : NoDupA l
+  H5 : NoDupA (l1 ++ l2)
+  H6 : InA a l1
+  H7 : InA y l1 -> False
+  H10 : InA y l2 -> False
+  H0 : eqA a x -> InA a l1 \/ eqA a y \/ InA a l2
+  H8 : InA a l
+  H11 : InA a l1 \/ eqA a y \/ InA a l2
+  H9 : eqA a y -> eqA a x \/ InA a l
+  H13 : InA a l
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug: Going to execute

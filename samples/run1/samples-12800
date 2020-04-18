@@ -1,0 +1,80 @@
+======== SAMPLE 1 ========
+A : transpose t' t0
+  H2 : ~ make_conj (eval_clause env) f
+  H0 : ~ make_conj (eval_clause env)
+       | _:='t', _:=t ->
+           ~ _:~ t
+               (t' : t)
+                (fun cl : clause => ~ make_conj (eval_tt env) cl) f
+  H3 : ~ (eval_tt env a /\ make_conj (eval_clause env) cl)
+       | make_conj (eval_tt env) cl => f
+  H4 : eval_tt env a
+       | _:=t
+          ~ make_conj (eval_clause env)
+        end
+ | _:=t3
+end
+
+
+TcDebug (9) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  IHcl : forall (cl' : clause) (env : Env),
+         eval_opt_clause env (or_clause cl cl') <->
+         ~ make_conj (eval_tt env) cl \/ ~ make_conj (eval_clause env) cl'
+  cl' : clause
+  env : Env
+  c : clause
+  H2 : eval_tt env a
+       ~ make_conj (eval_tt env) c -> False
+  H1 : eval_tt env a
+        ~ make_conj (eval_tt env) cl'
+  H5 : make_conj (eval_tt env) cl
+  H7 : eval_tt env a
+  H8 : make_conj (eval_tt env) cl'
+  H9 : make_conj (eval_tt env) cl'
+  ============================
+   (~ (eval_tt env a /\ make_conj (eval_tt env) cl)
+
+
+Debug: Going to execute:
+change_no_check (eval_tt env) in H ||
+  change_no_check (eval_tt env) in H in H1
+
+
+TcDebug (10) > 
+Debug: Evaluated term: (Term' ^ Spec)
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+  

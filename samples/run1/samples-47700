@@ -1,0 +1,103 @@
+======== SAMPLE 1 ========
+  (0 < n * - (3) <= height l - n)%n
+
+
+Debug:
+Going to execute:
+fun l =>
+  match t with
+  | 0 => false
+  | 1 => true
+  | 2 => true
+  | 3 => true
+  | ?x + ?y => let ex := i2ei x with ey := i2ei y in
+                EImax ex ey
+  | ?x - ?y => let ex := i2ei x with ey := i2ei y in
+                EImax ex ey
+  | ?x * ?y => let ex := i2ei x with ey := i2ei y in
+                EImax ex ey
+  | - ?x => let ex := i2ei x in
+           EIopp ex
+  | ?x => EIraw x
+  end
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : I.t
+  _x0 : X.lt y x
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x r = << rl, o, rr >>
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H : forall y : key, In y rr <-> In y r /\ X.lt x y
+  H6 : X.lt x y0
+  H4 : In y0 l
+  ============================
+   (0 < n * - (3) <= height l - n)%n
+
+
+Debug:
+Going to execute:
+match t with
+| 0 => false
+| 1 => true
+| 2 => true
+| 3 => true
+| ?x + ?y => let ex := i2ei x with ey := i2ei y in
+             EImax ex ey
+| ?x - ?y => let ex := i2ei x with ey := i2ei y in
+              EImax ex ey
+| ?x * ?y => let ex := i2ei x with ey := i2ei y in
+              EImax ex ey
+| ?x - ?y => let ex := i2ei x with ey := i2ei y in
+              EImax ex ey
+| ?x - ?y => let ex := i2ei x with ey := i2ei y in
+               EImax ex ey
+| max ?x ?y => let ex := i2ei x with ey := i2ei y in
+                EImax ex ey
+| - ?x => let ex := i2ei x in
+          EIopp ex
+| ?x => EIraw x
+end
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : I.t
+  _x0 : X.lt y x
+  l0 : t elt
+  o0 : option elt
+  r0 : t elt
+  e1 : split x r = << rl, o, rr >>
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H : forall y : key, In y rr <-> In y r /\ X.lt x y
+  H6 : X.lt x y0
+  H4 : In y0 l
+  ============================
+   (0 < n * -

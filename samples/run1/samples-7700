@@ -1,0 +1,34 @@
+======== SAMPLE 1 ========
+ =>
+          Ring
+  res0 : Ring * R
+  Ring_polynom.PEeval 0 1 Z.add Z.mul Z.sub Z.opp 0
+              Z.quotrem ring_subst_niter list_hyp_norm pe =
+           Ring_polynom.PEeval 0 1 Z.add Z.mul Z.sub Z.opp 0
+               (IDphi (R:=Z)) Z.of_N Z.pow
+               (x 1 /\ Qpower_num -> pow_pos Binomial 0 1 Ax) (x 1 /\ Prop
+                 ((Z.pos Qpower_num x) :: Qpower_num x2) pow_pos Binomial
+                (z 1 /\ Z.pos Qpower_num z2 Ax)
+                 (k 1 /\ Z.pos Qpower_num k2 Ax) ->
+            find x k of *
+             match find x k with
+             | NotConstant =>
+               (fdec (Ring_polynom.Peqphi_0_0 255)
+                 (Ring_polynom.PEmul
+                     (Ring_polynom.Micromega_Ring 0))
+                         ndec (Ring_polynom.PEmul
+                       (Ring_polynom.Micromega_Ring 1))
+                           (Ring_polynom.Peqphi_dec 5) ndec
+                          (Ring_polynom.Pol Z
+                          ndec
+                                ndec pow_pos 
+                              ((ndec 0 :: ndec 1))%coef 1
+                          (Ring_polynom.PEmul ndec
+                         ndec pow_pos 
+                          ndec pow_hyp nil)
+                       (Ring_polynom.norm_subst 0 1 Z.add Z.mul Z.sub Z.opp Zeq_bool
+                         ndec (Ring_polynom.PEmul 
+                          ndec (Ring_polynom.PEmul 
+                            ndec (Ring_polynom.PEmul 
+                             ndec (Ring_polynom.PEmul 
+                    

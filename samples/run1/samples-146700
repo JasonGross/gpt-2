@@ -1,0 +1,142 @@
+======== SAMPLE 1 ========
+
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt x y
+  e1 : X.compare x y = LT _x
+  H1 : X.eq y x -> InT y (add x e l)
+  H0 : InT y l
+  H3 : InT y (add x e l)
+  H : InT y l
+  ============================
+   (X.eq y x \/ InT y l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt x y
+  e1 : X.compare x y = LT _x
+  H1 : X.eq y x -> InT y (add x e l)
+  H0 : InT y l
+  H3 : InT y (add x e l)
+  H : InT y l
+  ============================
+   (X.eq y x \/ InT y l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt x y
+  e1 : X.compare x y = LT _x
+  H1 : X.eq y x -> InT y (add x e l)
+  H0 : InT y l
+  H3 : InT y (add x e l)
+  H : InT y l
+  ============================
+   (X.eq y x \/ InT y l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt x y
+  e1 : X.compare x y = LT _x
+  H1 : X.eq y x -> InT y (add x e l)
+  H0 : InT y l
+  H3 : InT y (add x e l)
+  H : InT y l
+  ============================
+   (X.eq y x \/ InT y l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt x y
+  e1 : X.compare x y = LT _x
+  H1 : X.eq y x -> InT y (add x e l)
+  H0 : InT y l
+  H3 : InT y (add x e l)
+  H : InT y l
+  ============================
+   (X.eq y x \/ InT y l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+

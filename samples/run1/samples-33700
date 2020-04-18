@@ -1,0 +1,150 @@
+======== SAMPLE 1 ========
+ s -> InT y (del x (Bk l x0 r))
+  ============================
+   (false = true <-> false = true /\ false = true <> false)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  tl : tree
+  H : X.lt x y
+  H5 : InT y l
+  H6 : InT y r
+  H2 : InT y r
+  ============================
+   (false = true <-> false = true /\ false = true <> false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  tl : tree
+  H : X.lt x y
+  H5 : InT y l
+  H6 : InT y r
+  H2 : InT y r
+  ============================
+   (false = true <-> false = true /\ false = true <> false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  tl : tree
+  H : X.lt x y
+  H5 : InT y l
+  H6 : InT y r
+  H2 : InT y r
+  ============================
+   (false = true <-> false = true /\ false = true <> false)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  tl : tree
+  H : X.lt x y
+  H5 : InT y l
+  H6 : InT y r
+  H2 : InT y r
+  ============================
+   (false = true <-> false = true /\ false = true <> false)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  tl : tree
+  H : X.lt x y
+  H5 : InT y l
+  H6 : InT y r
+  H2 : InT y r
+  ============================
+   (false = true <-> false = true /\ false = true <> false)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  tl : tree
+  H : X.lt x y
+  H5 : InT y l
+  H6 : InT y r
+  H2 : InT y r
+  ============================
+   (false = true <-> false = true /\ false = true <> false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  tl : tree
+  H : X.lt x y
+  H5 : InT y l
+  H6 : InT y r
+  H2 : InT y r
+  ============================
+   (false = true <-> false = true /\ false = true

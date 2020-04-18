@@ -1,0 +1,114 @@
+======== SAMPLE 1 ========
+   InT x (Seq_eq x s1) /\ <-> X.eq x (Seq_eq s1)
+  _x : X.eq x x
+  x' : X.gen y x'
+  H : X.eq x x'
+  ============================
+   (X.eq x x' \/ X.eq x x' \/ InT x s1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+   x : X.t  x'' : X.t  _x : X.lt x x'' : X.t  x'' : X.t  H : X.eq x x x''
+  ============================
+   (X.eq x x')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+   x : X.t  x'' : X.t  _x : X.lt x x'' : X.t  x'' : X.t  H : X.eq x x x''
+  ============================
+   (X.eq x x')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+   x : X.t  x'' : X.t  _x : X.lt x x'' : X.t  x'' : X.t  H : X.eq x x x''
+  ============================
+   (X.eq x x')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+   x : X.t  x'' : X.t  _x : X.lt x x'' : X.t  x'' : X.t  H : X.eq x x x''
+  ============================
+   (X.eq x x')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+   x : X.t  x'' : X.t  _x : X.lt x x'' : X.t  x'' : X.t  H : X.eq x x x''
+  ============================
+   (X.eq x x')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+   x : X.t  x'' : X.t  _x : X.lt x x'' : X.t  x'' : X.t  H : X.eq x x x''
+  ============================
+   (X.eq x x')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+   x : X.t  x'' : X.t  _x : X.lt x x'' : X.t  x'' : X.t  H : X.eq x x x''
+  ============================
+   (X.eq x x')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+   x : X.t  x = y
+
+  x' : X.gen y x'
+  x'' : X.gen y x'
+  x'' : X.gen y x'
+  H : (X.eq x x x'') x x'
+  ============================
+   (X.eq x x'')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+ 

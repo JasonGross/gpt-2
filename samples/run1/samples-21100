@@ -1,0 +1,161 @@
+======== SAMPLE 1 ========
+) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : E.t
+  o : option elt
+  H0 : X.eq x m -> False
+  H1 : ~ In x s
+  ============================
+   (In x (tree m))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : E.t
+  o : option elt
+  H0 : X.eq x m -> False
+  H1 : ~ In x s
+  ============================
+   (In x (tree m))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : E.t
+  o : option elt
+  H0 : X.eq x m -> False
+  H1 : ~ In x s
+  ============================
+   (In x (tree m))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : E.t
+  o : option elt
+  H0 : X.eq x m -> False
+  H1 : ~ In x s
+  ============================
+   (In x (tree m))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : E.t
+  o : option elt
+  H0 : X.eq x m -> False
+  H1 : ~ In x s
+  ============================
+   (In x (tree m))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : E.t
+  o : option elt
+  H0 : X.eq x m -> False
+  H1 : ~ In x s
+  ============================
+   (In x (tree m))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : E.t
+  o : option elt
+  H0 : X.eq x m -> False
+  H1 : ~ In x s
+  ============================
+   (In x (tree m))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : E.t
+  o : option elt
+  H0 : X.eq x m -> False
+  H1 : ~ In x s
+  ============================
+   (In x (tree m))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : E.t
+  o : option elt
+  H0 : X.eq x m -> False
+  H1 : ~ In x s
+  =================

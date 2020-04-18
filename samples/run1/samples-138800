@@ -1,0 +1,86 @@
+======== SAMPLE 1 ========
+ rlt : R -> R -> Prop
+  Ro : Ring_ops
+  Rr : Ring
+  Rh0 : Bracket C R
+  Rh : Ring_morphism
+  phiCR_comm : forall (c : C) (x : R), x * [c] == [c] * x
+  Ceqb : C -> C -> bool
+  Ceqb_eq : forall x y : C, Ceqb x y = true -> x == y
+  Cpow : Set
+  Cp_phi : N -> Cpow
+  rpow : R -> Cpow -> R
+  pow_th : power_theory Cp_phi rpow
+  subst_l := fun P : Pol => P : Pol -> Pol
+  Pmul_subst := fun P1 P2 : Pol => subst_l (P1 ** P2) : Pol -> Pol -> Pol
+  Ppow_subst := Ppow_N subst_l : Pol -> N -> Pol
+  l : list R
+  ============================
+   (Ppow (elements_aux (elements m1)) (elements m2))
+
+
+Debug:
+Going to execute:
+match goal with
+| H:?A -> False |- _ => change_no_check (~ A) in H; OrderTac.order_prepare
+| H:~ ?R ?x ?y
+  |- _ =>
+      match R with
+      | TO.eq => fail 1
+      | _ =>
+          change_no_check (~ TO.eq x y) in H ||
+           apply OrderTac.not_gt_le in H ||
+             apply OrderTac.not_ge_lt in H || clear H || fail 1;
+          OrderTac.order_prepare
+      end
+| H:?R ?x ?y
+  |- _ =>
+      match R with
+      | TO.eq => fail 1
+      | TO.lt => fail 1
+      | TO.le => fail 1
+      | _ =>
+          change_no_check (TO.eq x y) in H ||
+           apply TO.eq x y in H ||
+             apply TO.lt x y in H ||
+              apply TO.le x y in H || clear H || fail 1;
+          OrderTac.order_prepare
+      end
+| |- ~ _ => intro; OrderTac.order_prepare
+| |- _ ?x ?x =>
+      exact (OrderTac.eq_refl x) ||
+        exact (OrderTac.le_refl x) || exfalso
+| _ =>
+    (apply OrderTac.not_neq_eq; intro) ||
+      (apply OrderTac.not_ge_lt; intro) ||
+        (apply OrderTac.not_gt_le; intro) || exfalso
+end
+
+
+TcDebug (6) > 
+Goal:
+  
+  C : Type
+  R : Type
+  ring0 : C
+  ring1 : C
+  add : C -> C -> C
+  mul : C -> C -> C
+  sub : C -> C -> C
+  opp : C -> C
+  ring_eq : C -> C -> Prop
+  Ro : Ring_ops
+  Cr : Ring
+  ring2 : R
+  ring3 : R
+  add0 : R -> R -> R
+  mul0 : R -> R -> R
+  sub0 : R -> R -> R
+  opp0 : R -> R
+  ring_eq0 : R -> R -> Prop
+  Ro0 : Ring_ops
+  Rr : Ring
+  Rh0 : Bracket C R
+  Rh : Ring_morphism
+  phiCR_comm : forall (c : C) (x : R), x * [c] == [c] * x
+  Ceqb :

@@ -1,0 +1,146 @@
+======== SAMPLE 1 ========
+disj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H5 : InT x b
+  H4 : InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  H3 : X.eq x y
+  ============================
+   (InT x lr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H5 : InT x b
+  H4 : InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  H3 : X.eq x y
+  ============================
+   (InT x lr)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H5 : InT x b
+  H4 : InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  H3 : X.eq x y
+  ============================
+   (InT x lr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H5 : InT x b
+  H4 : InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  H3 : X.eq x y
+  ============================
+   (InT x lr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+ [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H5 : InT x b
+  H4 : InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  H3 : X.eq x y
+  ============================
+   (InT x lr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2
+
+
+TcDebug (

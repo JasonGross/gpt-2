@@ -1,0 +1,184 @@
+======== SAMPLE 1 ========
+ x
+  l : list A
+  H0 : a <> x~0
+  H : In a l
+  ============================
+   (In a l \/ In a l')
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 26) =
+    of_nat 26)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 27) =
+    of_nat 27)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 28) =
+    of_nat 28)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 29) =
+    of_nat 29)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 30) =
+    of_nat 30)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 31) =
+    of_nat 31)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 32) =
+    of_nat 32)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 33) =
+    of_nat 33)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 34) =
+    of_nat 34)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 35) =
+    of_nat 35)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 36) =
+    of_nat 36)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 37) =
+    of_nat 37)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 38) =
+    of_nat 38)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 39) =
+    of_nat 39)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 40) =
+    of_nat 40)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 41) =
+    of_nat 41)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 42) =
+    of_nat 42)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 43) =
+    of_nat 43)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 44) =
+    of_nat 44)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 45) =
+    of_nat 45)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 46) =
+    of_nat 46)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 47) =
+    of_nat 47)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 48) =
+    of_nat 48)
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 49) =
+    of_nat 49)
+
+

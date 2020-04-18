@@ -1,0 +1,49 @@
+======== SAMPLE 1 ========
+  Cpow : Type
+  Cp_phi : N -> Cpow
+  rpow : R -> Cpow -> R
+  pow_th : power_theory 1 rmul req Cp_phi rpow
+  get_sign : C -> option C
+  get_sign_spec : sign_theory copp ceqb get_sign
+  cdiv : C -> C -> C * C
+  cdiv_th : div_theory req cadd cmul phi cdiv
+  rpow_pow := rpow_pow_N pow_th
+           : forall (r : R) (n : N), rpow r (Cp_phi n) == pow_N 1 rmul r n
+  Cp_phi_pow_N : (C -> R) -> bool
+  Crneg : C -> C -> R
+  rpow_pow_N : forall (r : R) (n : N), rpow r (Cp_phi n) == pow_N 1 rmul r n
+  c : C
+  e0_ : C
+  ============================
+   (rpow (e + e0_) (C -> R))
+
+
+Debug: Going to execute:
+let f :=
+ match Cst t with
+ | NotConstant =>
+     match t with
+     | C:C -> C
+     | _ =>
+         change_no_check (C:C) in c ||
+           change_no_check (C:C) in c ||
+              change_no_check (C:C) in c ||
+                change_no_check (C:C) in c ||
+                 change_no_check (C:C) in c ||
+                  change_no_check (C:C) in c ||
+                   change_no_check (C:C) in c ||
+                    change_no_check (C:C) in c ||
+                    change_no_check (C:C) in c ||
+                   change_no_check (C:C) in c ||
+                    change_no_check (C:C) in c ||
+                   change_no_check (C:C) in c ||
+                   change_no_check (C:C) in c ||
+                      change_no_check (C:C) in c ||
+                     change_no_check (C:C) in c ||
+                      change_no_check (C:C) in c ||
+                       change_no_check (C:C) in c ||
+                       change_no_check (C:C) in c ||
+                       change_no_check (C:C) in c ||
+                       change_no_check (C:C) in c ||
+                        change_no_check (C:C) in c ||
+          

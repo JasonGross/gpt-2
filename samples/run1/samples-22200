@@ -1,0 +1,37 @@
+======== SAMPLE 1 ========
+pos
+                 (Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp
+                       Qeq_bool (triv_div 0 1 Qeq_bool) ring_subst_niter lmp
+                        (Ring_polynom.PEX Q 1),
+                      Ring_polynom.PEX Q 2);
+          denum := Ring_polynom.pred_N (Ring_polynom.PEX Q 1);
+         denum := denum_interp_norm (Ring_polynom.PEX Q 2);
+         denum := denum_interp_norm_add 
+                  (Ring_polynom.PEX Q 1);
+          denum := denum_interp_norm_add 
+                     (Ring_polynom.PEX Q 2);
+         denum := denum_interp_norm_add 
+                      (Ring_polynom.PEX Q 3);
+         denum := denum_interp_norm_add 
+                       (Ring_polynom.PEX Q 3),
+        denum := denum_interp_norm_add 
+                        (Ring_polynom.PEX Q 5));
+ progress res_eq; fail 1; intros denum; simpl; ring_subst_niter lmp;
+          denum := denum_interp_neq; denum := denum_intros denum;
+          denum := denum_intros denum;
+          denum := denum_neq 
+                  denum := denum_nonduit
+                    (denum := denum_nonduit) denum';
+         denum := denum_interp_neq; denum := denum_intros denum;
+          denum := denum_neq 
+                 denum := denum_nonduit
+                    denum := denum_neq 
+                    denum := denum_neq );
+        denum := denum_interp_neq; denum := denum_intros denum; intro
+                  denum := denum_nonduit
+                    denum := denum_nonduit
+                       (denum := denum_interp_neq) 
+                            (denum := denum_interp_neq) denum';
+        denum := denum_interp_neq 
+                        denum := denum_nonduit
+                 

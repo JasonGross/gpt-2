@@ -1,0 +1,116 @@
+======== SAMPLE 1 ========
+mer, In a s
+  ============================
+   (forall x : E.t, Some a = Some x -> None = Some x ->
+    (None = Some x ->
+     (None = Some x ->
+      (None = Some x -> EmptyMorph false true) ->
+     (None = Some x -> EmptyMorph false false true) /\
+    (None = Some x -> EmptyMorph false false true))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : Type
+  A : Type
+  P : A -> Prop
+  H : forall x : A, exists y : Y, P x
+  x : A
+  P : E.t -> False
+  H1 : In x s
+  H2 : P x
+  ============================
+   (forall x : E.t, Some a = Some x -> None = Some x ->
+    (None = Some x ->
+     (None = Some x ->
+      (None = Some x ->
+       (None = Some x -> EmptyMorph false true) ->
+     (None = Some x -> EmptyMorph false true) /\
+    (None = Some x -> EmptyMorph false false true))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : Type
+  A : Type
+  P : A -> Prop
+  H : forall x : A, exists y : Y, P x
+  x : A
+  P : E.t -> False
+  H1 : In x s
+  H2 : P x
+  ============================
+   (forall x : E.t, Some a = Some x -> None = Some x ->
+    (None = Some x ->
+      (None = Some x ->
+       (None = Some x -> EmptyMorph false true) ->
+     (None = Some x -> EmptyMorph false true) /\
+    (None = Some x -> EmptyMorph false true))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : Type
+  A : Type
+  P : A -> Prop
+  H : forall x : A, exists y : Y, P x
+  x : A
+  P : E.t -> False
+  H1 : In x s
+  H2 : P x
+  ============================
+   (forall x : E.t, Some a = Some x -> None = Some x ->
+    (None = Some x ->
+      (None = Some x ->
+       (None = Some x ->
+        (None = Some x ->
+         (None = Some x -> EmptyMorph false true) ->
+     (None = Some x -> EmptyMorph false true))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : Type
+  A : Type
+  P : A -> Prop
+  H : forall x : A, exists y : Y, P x
+  x : A
+  P : E.t -> False
+  H1 : In x s
+  H2 : P x
+  ============================
+   (forall x : E.t, Some a = Some x -> None = Some x ->
+    (None = Some x ->
+      (None = Some x ->
+       (None = Some x ->
+        (None = Some x -> EmptyMorph false true) ->
+     (None = Some x -> EmptyMorph false true) /\
+    (None = Some x -> EmptyMorph false true))
+
+
+Debug

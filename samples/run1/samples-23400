@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+auto.is_empty> (Ok l)
+
+
+TcDebug (4) > 
+Goal:
+  
+  Ok : forall x : elt, Ok (x :: l) -> Ok Leaf -> Leaf -> bool
+  Ok l' : Ok (x :: l)
+  x' : elt
+  l' : list (elements e l')
+  _x : int
+  l'0 : height l' (elements m)
+  H : Ok l -> False
+  H0 : Ok Leaf
+  ============================
+   (Ok Leaf /\ Ok Leaf' = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  Ok : forall x : elt, Ok Leaf -> Ok Leaf -> bool
+  Ok l' : Ok (x :: l)
+  x' : elt
+  l'0 : height l' (elements m)
+  H : Ok l -> False
+  H0 : Ok Leaf
+  ============================
+   (Ok Leaf /\ Ok Leaf' = true)
+
+
+Debug: Going to execute:
+assumption
+
+
+TcDebug (3) > 
+Goal:
+  
+  Ok : forall x : elt, Ok Leaf -> Ok Leaf -> bool
+  Ok l' : Ok (x :: l)
+  x' : elt
+  l'0 : height l' (elements m)
+  H : Ok l -> False
+  H0 : Ok Leaf
+  ============================
+   (Ok Leaf /\ Ok Leaf' = true)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::assumption@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  Some e : Some e0 = false
+  A : E.eq x y
+  H2 : InA eqke (x, e) (a :: l) -> InA eqke (x, e) (a :: l)
+  H : eqk (x, e) (a :: l) -> False
+  H0 : NoDup l' -> eqk (x, e) (a :: l)
+  H3 : NoDup l'0 ->
+       (forall a : elt, InA eqke (x, e) l -> False) ->
+       (forall a2 : elt, InA eqke (x, e) l' -> eqk (x, e)) l'0
+  ============================
+   (InA eqke (x, e) l'0) (eq_list (y :: l) (e :: l))
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  m'' : t elt
+  x : E.t
+  e : elt
+  l : list (elements m)
+  H0 : E.eq x a
+  H1 : MapsTo x e m
+  H3 : NoDup l'0 ->
+        InA eqke (x, e) l' -> False
+  H4 : forall l' : list (elements m),
+        InA eqke (x, e) (a :: l) ->
+        InA eqke (x, e) (a :: l') -> InA eqke (x, e) l'0
+  ============================
+   (E.eq (x, e) (a :: l) ->
+     False)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.axioms> flags
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  m'' : t elt
+  x : E.t
+  e : elt
+  l : list (elements m)
+  H0 : E.eq x a
+  H1 : MapsTo x e m
+  H3 : NoDup l'0 ->
+        InA eqke (x, e) l' -> False
+  H4 : forall l' : list (elements m),
+     

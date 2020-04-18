@@ -1,0 +1,83 @@
+======== SAMPLE 1 ========
+          | Some cl => cl :: acc
+             | None => acc
+             end) f nil)
+  ============================
+   (eval_clause env (p :: t) \/ make_conj (eval_clause env) f)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  p : (Term' * Annot)%type
+  t : list (Term' * Annot)
+  f : cnf
+  X1 : list clause
+  H4 : True
+  H : make_conj (eval_clause env) f
+  H2 : make_conj (eval_clause env)
+         (fold_left
+            (fun (acc : list clause) (e : clause) =>
+             match or_clause (p :: t) e with
+             | Some cl => cl :: acc
+             | None => acc
+             end) f nil)
+  H5 : make_conj (eval_clause env) nil
+  H3 : eval_clause env (p :: t)
+  ============================
+   (eval_clause env (p :: t) \/ make_conj (eval_clause env) f)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  p : (Term' * Annot)%type
+  t : list (Term' * Annot)
+  f : cnf
+  X1 :

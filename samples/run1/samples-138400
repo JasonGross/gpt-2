@@ -1,0 +1,94 @@
+======== SAMPLE 1 ========
+ ?X1 |- ?X1 => assumption
+  end
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : E.t
+  q : (exists x : E.t, q * f x = f x)
+  s : t
+  s' : t
+  x0 : E.t
+  H : In x s /\ (In x s' -> f x = f x0 d)
+  a : E.t
+  H1 : In a s' /\ In a (add x s)
+  ============================
+   (In x s' -> f x = f x0 d)
+
+
+Debug:
+Going to execute:
+match goal with
+| H:context [ True -> False ] |- _ => rewrite Decidable.not_true_iff in H
+| H:context [ False -> False ] |- _ => rewrite Decidable.not_false_iff in H
+| H:context [ (?P -> False) -> False ]
+  |- _ => rewrite (Decidable.not_not_iff P) in H by dec
+| H:context [ (?P -> False) -> ?Q -> False ]
+  |- _ => rewrite (Decidable.contrapositive P Q) in H by dec
+| H:context [ (?P -> False) \/ ?Q ]
+  |- _ => MSetLogicalFacts.or_not_l_iff_in P Q H dec
+| H:context [ ?P \/ (?Q -> False) ]
+  |- _ => MSetLogicalFacts.or_not_r_iff_in P Q H dec
+| H:context [ (?P -> False) -> ?Q ]
+  |- _ => rewrite (Decidable.imp_not_l P Q) in H by dec
+| H:context [ ?P \/ ?Q -> False ]
+  |- _ => rewrite (Decidable.not_or_iff P Q) in H
+| H:context [ ?P /\ ?Q -> False ]
+  |- _ => rewrite (Decidable.not_and_iff P Q) in H
+| H:context [ (?P -> ?Q) -> False ]
+  |- _ => rewrite (Decidable.not_imp_iff P Q) in H by dec
+end
+
+
+TcDebug (1) > 
+Debug: Level 1: No matching clauses for match.
+
+Goal:
+  
+  x : E.t
+  q : (exists x : E.t, q * f x = f x)
+  s : t
+  s' : t
+  x0 : E.t
+  H : In x s /\ (In x s' -> f x = f x0 d)
+  a : E.t
+  H1 : In a s' /\ In a (add x s)
+  ============================
+   (In x s' -> f x = f x0 d)
+
+
+Debug: Going to execute:
+fold any not
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : E.t
+  q : (exists x : E.t, q * f x = f x)
+  s : t
+  s' : t
+  x0 : E.t
+  H : In x s /\ (In x s' -> f x = f x0 d)
+  a : E.t
+  H1 : In a s' /\ In a (add x s)
+  ============================
+   (In x s' -> f x = f x0 d)
+
+
+Debug:
+Going to execute:
+repeat
+ match goal with
+ | H:context [ True -> False ] |- _ => rewrite Decidable.not_true_iff in H
+ | H:context [ False -> False ] |- _ => rewrite Decidable.not_false_iff in H
+ | H:context [ (?P -> False) -> False ]
+  |- _ => rewrite (Decidable.not_not_iff P) in H by dec
+ | H:context [ (?P -> False) -> ?Q -> False ]
+  |- _ => rewrite (Decidable.not_not_iff P) in H by dec
+ | H:context [ (?Q -> False) -> ?Q ]
+  |- _ => rewrite (Decidable.not_or_iff P Q) in H by dec
+ | H:context [ (?Q -> False) -> ?Q ]
+  |- _ => rewrite

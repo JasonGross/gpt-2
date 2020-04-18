@@ -1,0 +1,119 @@
+======== SAMPLE 1 ========
+:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  k : key
+  e2 : elt
+  acc : t elt
+  m1 : t elt
+  m2 : t elt
+  Hke : MapsTo k e2 m
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m1)
+  k' : key
+  e' : elt
+  Hfke : f k e = false
+  X : t elt
+  H1 : f k' e' = true
+  H0 : E.eq k k'
+  H2 : f k' e' = true
+  ============================
+   (E.eq k k' /\ e = e' \/ ~ E.eq k k' /\ MapsTo k' e' m1 /\ f k' e' = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  k : key
+  e2 : elt
+  acc : t elt
+  m1 : t elt
+  m2 : t elt
+  Hke : MapsTo k e2 m
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m1)
+  k' : key
+  e' : elt
+  Hfke : f k e = false
+  X : t elt
+  H1 : f k' e' = true
+  H0 : E.eq k k'
+  H2 : f k' e' = true
+  ============================
+   (E.eq k k' /\ e = e' \/ ~ E.eq k k' /\ MapsTo k' e' m1 /\ f k' e' = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  k : key
+  e2 : elt
+  acc : t elt
+  m1 : t elt
+  m2 : t elt
+  Hke : MapsTo k e2 m
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m1)
+  k' : key
+  e' : elt
+  Hfke : f k e = false
+  X : t elt
+  H1 : f k' e' = true
+  H0 : E.eq k k'
+  H2 : f k' e' = true
+  ============================
+   (E.eq k k' /\ e = e' \/ ~ E.eq k k' /\ MapsTo k' e' m1 /\ f k' e' = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  k : key
+  e2 : elt
+  acc : t elt
+  m1 : t elt
+  m2 : t elt
+  Hke : MapsTo k e2 m
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m1)
+  k' : key
+  e' : elt
+  Hfke : f k e

@@ -1,0 +1,148 @@
+======== SAMPLE 1 ========
+ env t m2
+  a : key
+  b : elt
+  ============================
+   (EnvRing.MX.TO.le e' e'')
+
+
+Debug:
+Going to execute:
+match goal with
+| (?p~1)%positive => isPcst p~0
+| (?p~0)%positive => isPcst p~1
+| _ => false
+end
+
+
+TcDebug (24) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m1 : t elt
+  m2 : t elt
+  H : forall k : key, In k m1 <-> In k m2
+  H1 : forall (k : key) (e e' : elt),
+       MapsTo k e m -> MapsTo k e' m1
+  e : elt
+  H0 : MapsTo k e m2
+  ============================
+   (EnvRing.MX.TO.le e' e'')
+
+
+Debug: Going to execute:
+e inversion H0
+
+
+TcDebug (25) > 
+Debug: Level 25: e inversion H0
+ has value 
+e
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  m1 : t elt
+  m2 : t elt
+  H : forall k : key, In k m1 <-> In k m2
+  H1 : forall (k : key) (e e' : elt),
+       MapsTo k e m -> MapsTo k e' m1
+  e : elt
+  H0 : MapsTo k e m2
+  ============================
+   (EnvRing.MX.TO.le e' e'')
+
+
+Debug: Going to execute:
+e inversion H0
+
+
+TcDebug (25) > 
+Debug: Level 25: e inversion H0
+ has value 
+e
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  m1 : t elt
+  m2 : t elt
+  H : forall k : key, In k m1 <-> In k m2
+  H1 : forall (k : key) (e e' : elt),
+       MapsTo k e m -> MapsTo k e' m1
+  e : elt
+  H0 : MapsTo k e m2
+  ============================
+   (EnvRing.MX.TO.le e' e'')
+
+
+Debug: Going to execute:
+e inversion H0
+
+
+TcDebug (25) > 
+Debug: Level 25: t
+ has value 
+e
+
+
+Debug: Level 26: t
+ has value 
+e
+
+
+Debug: Level 25: t
+ has value 
+EqDec (0 <= k)
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  m1 : t elt
+  m2 : t elt
+  H : forall k : key, In k m1 <-> In k m2
+  H1 : forall (k : key) (e e' : elt),
+       MapsTo k e m -> MapsTo k e' m1
+  e : elt
+  H0 : MapsTo k e m2
+  ============================
+   (EnvRing.MX.TO.le e' e'')
+
+
+Debug: Going to execute:
+e inversion (ARopp_zero Rsth Reqe ARth)
+
+
+TcDebug (25) > 
+Debug: Level 25: e inversion
+ has value 
+e
+
+
+Debug: Level 25: has value 
+e
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  m1 : t elt
+  m2 : t elt
+  H : forall k : key, In k m1 <-> In k m2
+  H1 : forall (k : key) (e e' : elt),
+       MapsTo k e m -> MapsTo k e' m1
+  e : elt
+  H0 : MapsTo k e m2
+  ============================
+   (EnvRing.MX.TO.le e' e'')
+
+
+Debug: Going to execute

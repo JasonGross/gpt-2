@@ -1,0 +1,101 @@
+======== SAMPLE 1 ========
+ > H
+ end
+in
+match goal with
+| |- _ -> _ => intro; t_tauto_intuit
+| |- _ => t_reduce; t_solver
+end
+
+
+TcDebug (1) > 
+Goal:
+    x : X.t  rl : tree  rx : X.t  rr : tree  LT : notred rl
+  ============================
+   (forall (l : tree) (o : option elt),
+    InT x (append l rl) <-> InT x (append (LTk (assert_false rl) (Bk (TcO (Bk x rl))) rr)
+
+
+Debug: Going to execute:
+t_reduce; t_solver
+
+
+TcDebug (2) > 
+Goal:
+    x : X.t  rl : tree  rx : X.t  rr : tree  LT : notred rl
+  ============================
+   (forall (l : tree) (o : option elt),
+    InT x (append l rl) <-> InT x (append (LTk (assert_false rl) (Bk (TcO (Bk x rl))) rr)
+
+
+Debug: Going to execute:
+t_reduce
+
+
+TcDebug (2) > 
+Goal:
+    x : X.t  rl : tree  rx : X.t  rr : tree  LT : notred rl
+  ============================
+   (forall (l : tree) (o : option elt),
+    InT x (append l rl) <-> InT x (append (LTk (assert_false rl) (Bk (TcO (Bk x rl))) rr)
+
+
+Debug: Going to execute:
+unfold not in *
+
+
+TcDebug (2) > 
+Goal:
+    x : X.t  rl : tree  rx : X.t  rr : tree  LT : notred rl
+  ============================
+   (forall (l : tree) (o : option elt),
+    InT x (append l rl) <-> InT x (append (LTk (assert_false rl) (Bk (TcO (Bk x rl))) rr)
+
+
+Debug: Going to execute:
+t_solver
+
+
+TcDebug (2) > 
+Goal:
+    x : X.t  rl : tree  rx : X.t  rr : tree  LT : notred rl
+  ============================
+   (forall (l : tree) (o : option elt),
+    InT x (append l rl) <-> InT x \/ InT x (append l rl)
+
+
+Debug: Going to execute:
+t_solver
+
+
+TcDebug (2) > 
+Goal:
+    x : X.t  rl : tree  rx : X.t  rr : tree  LT : notred rl
+  ============================
+   (forall (l : tree) (o : option elt),
+    InT x rl <-> InT x (append rl)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.reduction_not_iff> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+    x : X.t  rl : tree  rx : X.t  rr : tree  LT : notred rl
+  ============================
+   (forall (l : tree) (o : option elt),
+    InT x (append l rl) <-> InT x (append (LTk (assert_false rl) (Bk (TcO (Bk x rl))) rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.reduction_not_iff> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+    x : X.t  rl : tree  rx : X.t  rr : tree  LT : notred rl
+  ============================
+ 

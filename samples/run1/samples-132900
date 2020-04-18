@@ -1,0 +1,104 @@
+======== SAMPLE 1 ========
+ x
+  H0 : avl r
+  H1 : avl ll
+  IH : avl lr
+  ============================
+   (avl ll)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  r : tree
+  Hr : notred r
+  H3 : rbt n ll
+  H4 : rbt n lr
+  IH : forall r : tree,
+       0 <= r < x ->
+       0 <= r + (exists j : t elt, t elt' : t elt'),
+        MapsTo x (Node ll lx lr) <->
+        equal cmp (j, t elt') (bal ll lx lr) with
+         | Some cl => cl :: acc
+         | None => acc
+         end : list elt -> list elt'
+  IH0 : avl r
+  H1 : avl ll
+  IH : forall r : tree,
+       0 <= r < x ->
+       0 <= r + (exists j : t elt', t elt' : t elt'),
+         MapsTo x (Node ll lx lr) <->
+         equal cmp (j, t elt') (bal ll lx lr) with
+         | Some cl => cl :: acc
+         | None => acc
+         end : list elt -> list elt'
+  IH0 : avl r
+  H1 : avl ll
+  IH : forall r : tree,
+       0 <= r < x ->
+       0 <= r + (exists j : t elt', t elt' : t elt'),
+         MapsTo x (Node ll lx lr) <->
+         equal cmp (j, t elt') (bal ll lx lr) with
+          | Some cl => cl :: acc
+          | None => acc
+          end : list elt -> list elt'
+  IH0 : avl r
+  H1 : avl ll
+  IH : forall r : tree,
+       0 <= r < x ->
+       0 <= r + (exists j : t elt', t elt')
+  H2 : avl r
+  H3 : rbt n r
+  ============================
+   (avl ll)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  r : tree
+  Hr : notred r
+  H3 : rbt n ll
+  H4 : rbt n lr
+  IH : forall r : tree,
+       0 <= r < x ->
+       0 <= r + (exists j : t elt', t elt')
+  H2 : avl r
+  H3 : rbt n r
+  ============================
+   (avl ll)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  r : tree
+  Hr : notred r
+  H3 : rbt n ll
+  H4 : rbt n lr
+  IH : forall r : tree,
+   

@@ -1,0 +1,118 @@
+======== SAMPLE 1 ========
+t
+  rr : tree
+  LT : (rh + 2 <? lh) = true
+  lt_tree0 : lt_tree x (Node lh ll lx lr)
+  gt_tree0 : gt_tree x (Node rh rl rx rr)
+  H5 : Ok rl
+  H6 : Ok rr
+  H7 : lt_tree rx rl
+  H8 : gt_tree rx rr
+  H4 : Ok ll
+  H9 : Ok lr
+  H10 : lt_tree lx ll
+  H11 : gt_tree lx lr
+  y : elt
+  H0 : avl lr
+  H12 : avl rl
+  H13 : rx rr
+  ============================
+   (X.lt lx y)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = true
+  lt_tree0 : lt_tree x (Node lh ll lx lr)
+  gt_tree0 : gt_tree x (Node rh rl rx rr)
+  H5 : Ok rl
+  H6 : Ok rr
+  H7 : lt_tree rx rl
+  H8 : gt_tree rx rr
+  H4 : Ok ll
+  H9 : Ok lr
+  H10 : lt_tree lx ll
+  H11 : gt_tree lx lr
+  y : elt
+  H0 : avl lr
+  H12 : avl rl
+  H13 : rx rr
+  ============================
+   (X.lt lx y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = true
+  lt_tree0 : lt_tree x (Node lh ll lx lr)
+  gt_tree0 : gt_tree x (Node rh rl rx rr)
+  H5 : Ok rl
+  H6 : Ok rr
+  H7 : lt_tree rx rl
+  H8 : gt_tree rx rr
+  H4 : Ok ll
+  H9 : Ok lr
+  H10 : lt_tree lx ll
+  H11 : gt_tree lx lr
+  y : elt
+  H0 : avl lr
+  H12 : avl rl
+  H13 : rx rr
+  ============================
+   (X.lt lx y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = true
+  lt_tree0 : lt_tree x (Node lh ll lx lr)
+  gt_tree0 : gt_tree x (Node rh rl rx rr)
+  H5 : Ok rl
+  H6 : Ok rr
+  H7 : lt_tree rx rl
+  H8 : gt_tree rx rr
+  H4 : Ok ll
+  H9 :

@@ -1,0 +1,131 @@
+======== SAMPLE 1 ========
+ H : 0 < (0 -> True) -> MapsTo k e2 f f
+  s14 : t elt
+  ============================
+   (MapsTo k e2 f (elt:=f rd) (lt:=f rr))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; constructor 1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  H : 0 < (0 -> True) -> MapsTo k e2 f
+  s14 : t elt
+  ============================
+   (MapsTo k e2 f (elt:=f rr) (lt:=f rr))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  H : 0 < (0 -> True) -> MapsTo k e2 f
+  s14 : t elt
+  ============================
+   (MapsTo k e2 f (elt:=f rr) (lt:=f rr))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  H : 0 < (0 -> True) -> MapsTo k e2 f
+  s14 : t elt
+  ============================
+   (MapsTo k e2 f (elt:=f rr) (lt:=f rr))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  H : 0 < (0 -> True) -> MapsTo k e2 f
+  s14 : t elt
+  ============================
+   (MapsTo k e2 f (elt:=f rr) (lt:=f rr))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  H : 0 < (0 -> True) -> MapsTo k e2 f
+  s14 : t elt
+  ============================
+   (MapsTo k e2 f (elt:=f rr) (lt:=f rr))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  H : 0 < (0 -> True) -> MapsTo k e2 f
+  s14 : t elt
+  ============================
+   (MapsTo k e2 f (elt:=f rr) (lt:=f rr))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  H : 0 < (0 -> True) -> MapsTo k e2 f
+  s14 : t elt
+  ============================
+   (MapsTo k e2 f (elt:=f rr) (lt:=f rr))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  H : 0 < (0 -> True) -> MapsTo k e2 f
+  s14 : t elt
+  ============================
+   (MapsTo k e2 f (elt:

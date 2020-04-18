@@ -1,0 +1,138 @@
+======== SAMPLE 1 ========
+1%Z2
+  end
+
+
+TcDebug (32) > 
+Debug: Evaluated term: Z2
+
+Goal:
+     e0 : Z1 == 0 -> Z2 == 0 -> Z
+  ============================
+   (forall Z2 : Z, Z1 < 0 {| pred := Zinterfun x : Z1 } <-> 
+   Z1 <= 0 < Z2 -> Z1 > 0)
+
+
+Debug: Going to execute:
+<ltac_plugin::uniform_eq@0> $1 $2 $3 $4
+
+
+TcDebug (3) > 
+Goal:
+    e0 : Z1 == 0 -> Z2 == 0 -> Z
+  ============================
+   (forall Z2 : Z, Z1 < 0 {| pred := Zinterfun x : Z1 } <-> 
+   Z1 <= 0 < Z2 -> Z1 > 0)
+
+
+Debug: Going to execute:
+unify X Y
+
+
+TcDebug (2) > 
+Debug: Evaluated term: Z2
+
+Goal:
+    e0 : Z1 == 0 -> Z2 == 0 -> Z
+  ============================
+   (0 < Z2 -> Z2 > 0 -> Z2<0 <> 0)
+
+
+Debug: Going to execute:
+<ltac_plugin::uniform_eq@0> $1 $2 $3
+
+
+TcDebug (2) > 
+Debug: Evaluated term: (Z2 <= 0)
+
+Goal:
+    e0 : Z1 == 0 -> Z2 == 0 -> Z
+  ============================
+   (0 < Z2 -> Z2 > 0 -> Z2<0 <> 0)
+
+
+Debug: Going to execute:
+<ltac_plugin::uniform_eq@0> $1 $2 $3
+
+
+TcDebug (2) > 
+Debug: Evaluated term: Z2
+
+Debug:
+Level 2: In environment
+e0 : Z
+H1 : 0 <= 0
+Z1 : Z
+E0 : 0 < Z2 == 0
+Z2Z1 : 0 <= Z2 < Z
+e0 : 0 < Z2 < Z2 <> 0
+e0_eq : 0 <= 0
+Z1 <= Z2 <= Z
+E1 : Z < Z
+E2 : E1 <= Z2
+Z1 = Z2 < Z
+Unable to unify "Z1 <= 0" with "Z2 <= 0".
+
+Debug:
+Level 2: In environment
+e0 : Z
+H1 : 0 <= 0
+Z1 : Z
+E0 : 0 < Z2 == 0
+Z2Z1 : 0 <= Z2 < Z
+e0_eq : 0 <= 0
+Z1 <= Z2 <= Z
+E1: Z < Z
+E2 : E1 <= Z2
+Z1 = Z2 < Z
+Unable to unify "Z1 <= 0" with "Z2 <= 0".
+
+Debug:
+Level 2: In environment
+e0 : Z
+H1 : 0 <= 0
+Z1 : Z
+E0 : 0 < Z2 == 0
+ Z2Z1 : 0 <= Z2 < Z
+e0_eq : 0 <= 0
+Z1 <= Z2 <= Z
+E1 : Z < Z
+E2 : E1 <= Z2
+Z1 = Z2 < Z
+Unable to unify "Z1 <= 0" with "Z2 <= 0".
+
+Goal:
+    e0 : Z1 == 0 -> Z2 == 0 -> Z
+  ============================
+   (0 < Z2 -> Z2 > 0 -> Z2<0 <> 0)
+
+
+Debug:
+Going to execute:
+match H with
+| H' => fail 2
+| _ => unify X Y; clear H' || clear H
+end
+
+
+TcDebug (2) > 
+Goal:
+    e0 : Z1 == 0 -> Z2 == 0 -> Z
+  ============================
+   (0 < Z2 -> Z2 > 0 -> Z2<0 <> 0)
+
+
+Debug: Going to execute:
+H
+
+
+TcDebug (2) > 
+Debug: Level 2: H
+ has value 
+Z2
+
+
+Goal:
+    e0 : Z1 == 0 -> Z2 == 0 -> Z
+  ============================
+   (0 < Z2 -> Z2 > 0 -> Z2<0 <> 0)

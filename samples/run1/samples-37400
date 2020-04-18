@@ -1,0 +1,143 @@
+======== SAMPLE 1 ========
+ l1 * p2 * q2 = Some e2
+  k : key
+  e1 : elt
+  H1 : MapsTo k e1 k m2
+  H : Ring_polynom.PExpr E
+  ============================
+   (MapsTo k e1 m2)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  k : key
+  e : elt
+  m0 : t elt
+  m1 : t elt
+  m2 : t elt
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m1)
+  k' : key
+  e' : elt
+  H : MapsTo k' e' m
+  H0 : NoDupA m
+  H1 : NoDupA m
+  m' : t elt
+  k' : key
+  e' : elt
+  H6 : E.eq k k' -> False
+  H2 : NoDupA m
+  H7 : InA m'
+  ============================
+   (MapsTo k' e)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  k : key
+  e : elt
+  m0 : t elt
+  m1 : t elt
+  m2 : t elt
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m1)
+  k' : key
+  e' : elt
+  H : MapsTo k' e' m
+  H0 : NoDupA m
+  H1 : NoDupA m
+  m' : t elt
+  k' : key
+  e' : elt
+  H6 : E.eq k k' -> False
+  H2 : NoDupA m
+  H7 : InA m'
+  ============================
+   (MapsTo k' e)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  k : key
+  e : elt
+  m0 : t elt
+  m1 : t elt
+  m2 : t elt
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m1)
+  k' : key
+  e' : elt
+  H6 : E.eq k k' -> False
+  H2 : NoDupA m
+  H7 : InA m'
+  ============================
+   (MapsTo k' e)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  k : key
+  e : elt
+  m0 : t elt
+  m1 : t elt
+  m2 : t elt
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m1)
+  k' : key
+  e' : elt
+  H6 : E.eq k k' -> False
+  H2 : NoDupA m
+  H7 : InA m'
+  ============================
+   (MapsTo k' e)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  k : key
+  e : elt

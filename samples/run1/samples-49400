@@ -1,0 +1,129 @@
+======== SAMPLE 1 ========
+ cut
+| |- context [ (?P -> False) -> ?Q -> False ] => rewrite ring_opp_zero
+| |- context [ ?P -> ?Q -> False ] => rewrite ring_zero_eq
+| |- context [ ?P /\ ?Q ] => rewrite ring_zero_opp_zero
+| |- context [ (?P -> False) ? -> ?Q ]
+| _ => idtac
+end
+
+
+TcDebug (10) > 
+Goal:
+  
+  a : t
+  n : t
+  Hn : 0 <= n
+  q : t
+  Hq : 0 <= q
+  a : t
+  n0 : t
+  EQ : a = n
+  ============================
+   ((a = q -> (Q -> False) -> (Q -> False) -> False) /\
+    (a < 0) /\ (Q -> False) -> False)
+
+
+Debug: Going to execute:
+rewrite ring_rewrite_0_
+
+
+TcDebug (11) > 
+Debug: Level 11: In environment
+a, n0 : t
+eq : a = q -> (Q -> False) -> (Q -> False) /\
+      (a < 0) /\ (Q -> False) -> False
+eq, eq_dec a eq_dec
+
+
+TcDebug (11) > 
+Goal:
+  
+  a : t
+  n : t
+  Hn : 0 <= n
+  q : t
+  Hq : 0 <= q
+  a : t
+  n0 : t
+  EQ : a = n
+  ============================
+   ((a = q -> (Q -> False) -> (Q -> False) -> False) /\
+    (a < 0) /\ (Q -> False) -> False
+eq, eq_dec a eq_dec
+
+
+TcDebug (11) > 
+Debug: Evaluated term: ring_rewrite_0_
+
+Debug: Level 10: In environment
+a, n0 : t
+eq : a = q -> (Q -> False) -> (Q -> False) /\
+      (a < 0) /\ (Q -> False) -> False
+eq, eq_dec a eq_dec
+
+
+TcDebug (10) > 
+Debug: Level9: In environment
+a, n0 : t
+eq : a = q -> (Q -> False) -> (Q -> False) /\
+      (a < 0) /\ (Q -> False) -> False
+eq, eq_dec a eq_dec
+
+
+TcDebug (9) > 
+Debug: Level8: In environment
+a, n0 : t
+eq : a = q -> (Q -> False) -> (Q -> False) /\
+      (a < 0) /\ (Q -> False) -> False
+eq, eq_dec a eq_dec
+
+
+TcDebug (8) > 
+Goal:
+  
+  a : t
+  n : t
+  Hn : 0 <= n
+  q : t
+  Hq : 0 <= q
+  a : t
+  n0 : t
+  EQ : a = q -> (Q -> False) -> (Q -> False) /\
+      (a < 0) /\ (Q -> False) -> False
+eq, eq_dec a eq_dec
+
+
+TcDebug (8) > 
+Goal:
+  
+  a : t
+  n : t
+  Hn : 0 <= n
+  q : t
+  Hq : 0 <= q
+  a : t
+  n0 : t
+  EQ : a = q -> (Q -> False) -> (Q -> False) /\
+      (a < 0) /\ (Q -> False) -> False
+eq, eq_dec a eq_dec
+
+
+TcDebug (8) > 
+Debug: Evaluated term: ring_rewrite_0_
+
+Goal:
+  
+  a : t
+  n : t
+  Hn : 0 <= n
+  q : t
+  Hq : 0 <= q
+  a : t
+  n0 : t
+  EQ : a = q -> (Q -> False) -> (Q -> False) /\
+      (a < 0) /\ (Q -> False) -> False
+eq, eq_dec a eq_dec
+
+
+TcDebug (9)

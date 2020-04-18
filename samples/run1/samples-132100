@@ -1,0 +1,110 @@
+======== SAMPLE 1 ========
+)
+  a : elt
+  H0 : In a (x1 :: l1)
+  ============================
+   (InA X.eq x (a :: l1))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  s1 : tree
+  x1 : X.t
+  c1 : Info.t
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H6 : Ok l2
+  H7 : Ok r2
+  H8 : lt_tree x2 l2
+  H9 : gt_tree x2 r2
+  H5 : Ok l1
+  H11 : lt_tree x1 l1
+  H12 : gt_tree x1 Leaf
+  H : X.lt x1 x2
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 l1 x1 Leaf) -> InT a (Node c2 l2 x2 r2)
+  a : elt
+  H0 : In a (x1 :: l1)
+  ============================
+   (InA X.eq x (a :: l1))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Debug: Level 3: No matching clauses for match.
+
+Debug: Level 3: No matching clauses for match.
+
+Debug: Level 2: No matching clauses for match.
+
+Goal:
+  
+  s1 : tree
+  x1 : X.t
+  c1 : Info.t
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H6 : Ok l2
+  H7 : Ok r2
+  H8 : lt_tree x2 l2
+  H9 : gt_tree x2 r2
+  H5 : Ok l1
+  H11 : lt_tree x1 l1
+  H12 : gt_tree x1 Leaf
+  H : X.lt x1 x2
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 l1 x1 Leaf) -> InT a (Node c2 l2 x2 r2)
+  a : elt
+  H0 : In a (x1 :: l1)
+  ============================
+   (InA X.eq x (a :: l1))
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:(?X1 -> ?X2) -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (X1 -> X2);
+          [ exact
+          id
+          | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear id;
+             (solve [ t_tauto_intuit ]) ] ]
+| id:~ ?X1 -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (~ X1);
+          [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+| |- ?X1 =>
+      <Coq.Init.Tauto.is_disj> flags X1; (solve
+       [ left; t_tauto_intuit | right; t_tauto_intuit ])
+end ||
+  match goal with
+  | |- _ -> _ => intro; t_tauto_intuit
+  | |- _ => t_reduce; t_solver
+  end || t_solver
+
+
+TcDebug (2) > 
+Goal:
+  
+  s

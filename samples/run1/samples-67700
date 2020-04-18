@@ -1,0 +1,93 @@
+======== SAMPLE 1 ========
+ s') <-> In x0 (x' :: l') /\ ~ In x0 l'
+  H : In x0 (x' :: l')
+  H0 : forall x : elt, In x' s <-> In x0 (x :: l') -> X.lt x' x
+  H1 : forall x : elt, In x' s -> In x' (l' : t elt)
+  a : elt
+  s : list elt
+  l' : t elt
+  H2 : forall x : elt, In x' s <-> In x' (l' : t elt)
+  ============================
+   ((X.eq x0 x \/ In x0 l) /\ ~ (X.eq x0 x' \/ In x0 l'))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : t elt
+  x : X.t
+  _x : I.t
+  l' : t elt
+  Hl : forall x : elt, In x (a :: l) <-> In x l'
+  Hl' : forall x : elt, In x' (a :: l') <-> In x' l'
+  x'0 : elt
+  H0 : forall x : elt, In x' s <-> In x' (l' : t elt)
+  a : elt
+  s : list elt
+  l' : t elt
+  H2 : forall x : elt, In x' s <-> In x' (l' : t elt)
+  ============================
+   ((X.eq x0 x \/ In x0 l) /\ ~ (X.eq x0 x' \/ In x0 l'))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : t elt
+  x : X.t
+  _x : I.t
+  l' : t elt
+  Hl : forall x : elt, In x (a :: l) <-> In x l'
+  Hl' : forall x : elt, In x' (a :: l') <-> In x' l'
+  x'0 : elt
+  H0 : forall x : elt, In x' s <-> In x' (l' : t elt)
+  a : elt
+  s : list elt
+  l' : t elt
+  H2 : forall x : elt, In x' s <-> In x' (l' : t elt)
+  ============================
+   ((X.eq x0 x \/ In x0 l) /\ ~ (X.eq x0 x' \/ In x0 l'))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : t elt
+  x : X.t
+  _x : I.t
+  l' : t elt
+  Hl : forall x : elt, In x (a :: l) <-> In x l'
+  Hl' : forall x : elt, In x' (a :: l') <-> In x' l'
+  x'0 : elt
+  H0 : forall x : elt, In x' s <-> In x' (l' : t elt)
+  a : elt
+  s : list elt
+  l' : t elt
+  H2 : forall x : elt, In x' s <-> In x' (l' : t elt)
+  ============================
+   ((X.eq x0 x \/ In x0 l) /\ ~ (X.eq x0 x' \/ In x0 l'))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  l : t elt
+  x : X.t
+ 

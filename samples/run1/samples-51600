@@ -1,0 +1,99 @@
+======== SAMPLE 1 ========
+1 r1 _x)
+  ============================
+   (forall y : key * elt,
+    MapsTo y e (Node (Bk l1 x1 r1) x (Bk b y0 c)))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l1 : t elt
+  x1 : key
+  d1 : elt
+  r1 : t elt
+  _x : int
+  b : bool
+  e1 : b = true
+  d1 : elt
+  r1 : t elt
+  _x0 : int
+  b0 : bool
+  e1 : b || b0 = true
+  H3 : forall y : key, In y l1 -> X.lt y x1 \/ In y l2'
+  H4 : b = true -> In y (Node l1 x1 r1 _x)
+  H5 : b = true
+  H : b || b0 = true -> In y (Node l2 x2 r2 _x)
+  ============================
+   (forall y : key * elt,
+    MapsTo y e (Node (Bk l1 x1 r1 _x) x (Bk b y0 c)))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Debug: Level 0: No matching clauses for match.
+
+Debug: Level 0: No matching clauses for match.
+
+Debug: Level 0: No matching clauses for match.
+
+Goal:
+  
+  elt : Type
+  l1 : t elt
+  x1 : key
+  d1 : elt
+  r1 : t elt
+  _x : int
+  b : bool
+  e1 : b = true
+  d1 : elt
+  r1 : t elt
+  _x0 : int
+  b0 : bool
+  e1 : b = true
+  H1 : b || _x0 > d1 && b0 = true
+  ============================
+   (forall y : key * elt,
+    MapsTo y e (Node l1 x1 r1 _x) -> X.lt y x1 \/ In y l2' ->
+    (forall y : key * elt,
+    MapsTo y e (Node l2 x2 r2 _x) -> X.lt x1 y) ->
+    X.lt y x1 \/
+    (forall y : key * elt,
+    X.eq y X.t x1 y -> X.lt y x1 \/ In y l2')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.axioms> flags ||
+  match reverse goal with
+  | id:(?X1 -> ?X2) -> ?X3
+    |- _ =>
+        cut X3;
+         [ intro; clear id; t_tauto_intuit
+         | cut (X1 -> X2);
+            [ exact
+            id
+            | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear
+               id; (solve [ t_tauto_intuit ]) ] ]
+  | id:~ ?X1 -> ?X3
+    |- _ =>
+        cut X3;
+         [ intro; clear id; t_tauto_intuit
+         | cut (~ X1);
+            [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+  | |- ?X1 =>
+        <Coq.Init.Tauto.is_disj> flags X1; (solve
+ 

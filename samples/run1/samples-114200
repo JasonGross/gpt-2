@@ -1,0 +1,69 @@
+======== SAMPLE 1 ========
+_polynom.Pphi_pow 0 1 Z.add Z.mul Z.sub Z.opp 0 1 Zeq_bool
+               = (IDphi (R:=Z)) Z.pos (max_var_nformulae l) Z.of_N Z.pow get_signZ
+               (Z.pos (max_var_nformulae l) Z.of_N Z.pow get_signZ) p =
+              match get_signZ with
+              | Some d => get_sign_ext (Zpos d) None
+              | None => None
+             end
+  ============================
+   (p < max_var_nformulae l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  C : Type
+  cO : C
+  cI : C
+  cadd : C -> C -> C
+  cmul : C -> C -> C
+  csub : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  phi : C -> R
+  CRmorph : ring_morph 0 1 radd rmul rsub ropp req cO cI cadd cmul csub copp
+               ceqb phi
+  Cpow : Type
+  Cp_phi : N -> Cpow
+  rpow : R -> Cpow -> R
+  pow_th : power_theory 1 rmul req Cp_phi rpow
+  cdiv : C -> C -> C * C
+  div_th : div_theory req cadd cmul phi cdiv
+  get_sign : C -> option C
+  get_sign_spec : sign_theory copp ceqb get_sign
+  mkpow : R -> positive -> R
+  mkopp_pow : R -> positive -> R
+  mkmult_pow : R -> R -> positive -> R
+  mkpow_spec : forall (r : R) (p : positive), mkpow r p == r ^ p
+  mkopp_pow_spec : forall (r : R) (p : positive), mkopp_pow r p == - r ^ p
+  mkmult_pow_spec : forall (r x : R) (p : positive),
+                         mkmult_pow r x p == r * x ^ p
+  P2 : Pol
+  p : positive
+  P3 : Pol
+  IHP2 : forall (m m' : t elt) (h : int),
+         mkmult_m1 m' ->
+         intros m m' [mkmult_pow (mkmult_pow (mif m') x p] == p) true
+  p0 : positive
+  mkopp_pow_spec : forall (r : R) (p : positive), mkopp_pow r p0 == r * p0 ^ p
+  mkmult_pow_spec : forall (r x : R) (p : positive),
+                          mkmult_pow r x p0 * p0 ^ p0 == r * p0 ^ p
+  P3 : Pol
+  p1 : positive
+

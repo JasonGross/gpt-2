@@ -1,0 +1,114 @@
+======== SAMPLE 1 ========
+>)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  ln : nat
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H2 : InT x rl
+  H5 : InT x a
+  H : InT x lr
+  H2 : InT x a \/ X.eq x y \/ InT x b
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rl \/ X.eq x rx \/ InT x rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  ln : nat
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H2 : InT x rl
+  H5 : InT x a
+  H : InT x lr
+  H2 : InT x a \/ X.eq x y \/ InT x b
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rl \/ X.eq x rx \/ InT x rr)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  ln : nat
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H2 : InT x rl
+  H5 : InT x a
+  H : InT x lr
+  H2 : InT x a \/ X.eq x y \/ InT x b
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rl \/ X.eq x rx \/ InT x rr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ln : nat
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H2 : InT x rl
+  H5 : InT x a
+  H : InT x lr
+  H2 : InT x a \/ X.eq x y \/ InT x b
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rl \/ X.

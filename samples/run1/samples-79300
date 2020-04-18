@@ -1,0 +1,113 @@
+======== SAMPLE 1 ========
+  (D.lt e e0 = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  cmp : elt -> elt -> bool
+  Hg : compat_cmp
+  m : t elt
+  m' : t elt
+  y : match m with
+      | nil => Cmp ((m' + m') i + x :: m')%list
+      | x' :: m' =>
+           match X.compare x x' with
+           | Eq => m
+           | Lt => m'
+           | Gt => m'
+           end
+      | _ => fun _ => fold (fun _ => fv) m'
+      end
+   | _ => fun _ => fv
+   end
+  in
+  f ltac:(())
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  cmp : elt -> elt -> bool
+  Hg : compat_cmp
+  m : t elt
+  m' : t elt
+  y : match m with
+      | nil => Cmp ((m' + m') i + x :: m')%list
+      | x' :: m' =>
+           match X.compare x x' with
+           | Eq => m
+           | Lt => m'
+           | Gt => m'
+           end
+      | _ => fun _ => fv
+      end
+  in
+  f ltac:(())
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  cmp : elt -> elt -> bool
+  Hg : compat_cmp
+  m : t elt
+  m' : t elt
+  y : match m with
+      | nil => Cmp ((m' + m') i + x :: m')%list
+      | x' :: m' =>
+           match X.compare x x' with
+           | Eq => m
+           | Lt => m'
+           | Gt => m'
+           end
+      | _ => fun _ => fv
+      end
+  in
+  f ltac:(())
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  cmp : elt -> elt -> bool
+  Hg : compat_cmp
+  m : t elt
+  m' : t elt
+  y : match m with
+      | nil => Cmp ((m' + m') i + x :: m')%list
+      | x' :: m' =>
+           match X.compare x x' with
+           | Eq => m
+           | Lt => m'
+           | Gt => m'
+           end
+      | _ => fun _ => fv
+      end
+  in
+  f ltac:(())
+
+
+TcDebug (2) > 
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  cmp : elt -> elt -> bool
+  Hg : compat_cmp
+  m : t elt
+  m' : t elt
+  y : match m with
+      | nil =>

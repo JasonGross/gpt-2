@@ -1,0 +1,120 @@
+======== SAMPLE 1 ========
+ InA a l2
+  H9 : eqA a y -> eqA a x \/ InA a l
+  H13 : InA a l
+  H11 : InA a l1
+  H0 : eqA a x \/ InA a l
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : eqA x y
+  H1 : NoDupA (l1 ++ y :: l2)
+  H2 : equivlistA (x :: l) (l1 ++ y :: l2)
+  a : A
+  H3 : InA x l -> False
+  H4 : NoDupA l
+  H5 : NoDupA (l1 ++ l2)
+  H7 : InA a l
+  H9 : eqA a y -> eqA a x \/ InA a l
+  H13 : InA a l
+  H11 : InA a l1
+  H0 : eqA a x \/ InA a l
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : eqA x y
+  H1 : NoDupA (l1 ++ y :: l2)
+  H2 : equivlistA (x :: l) (l1 ++ y :: l2)
+  a : A
+  H3 : InA x l -> False
+  H4 : NoDupA l
+  H5 : NoDupA (l1 ++ l2)
+  H7 : InA a l
+  H9 : eqA a y -> eqA a x \/ InA a l
+  H13 : InA a l
+  H11 : InA a l1
+  H0 : eqA a x \/ InA a l
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : eqA x y
+  H1 : NoDupA (l1 ++ y :: l2)
+  H2 : equivlistA (x :: l) (l1 ++ y :: l2)
+  a : A
+  H3 : InA x l -> False
+  H4 : NoDupA l
+  H5 : NoDupA (l1 ++ l2)
+  H7 : InA a l
+  H9 : eqA a y -> eqA a x \/ InA a l
+  H13 : InA a l
+  H11 : InA a l1
+  H0 : eqA a x \/ InA a l
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1

@@ -1,0 +1,82 @@
+======== SAMPLE 1 ========
+ ~T a) (t0 : ZArithProof),
+                 deduce t0 e = Some t0 ->
+                 forall env : Env, eval' env t -> eval' env t0 -> eval' env t0
+  a0 : list (Term' * Annot)
+  IHb : Sort l -> Sort l' -> equal l l' = true <-> Equal l l'
+  Hm : Sort ((a, b) :: l)
+  e : elt
+  H0 : forall n : (t -> t) (m : t -> t) (y : elt),
+        Sort m ->
+        forall n' : t,
+        (fun x : elt => negb (fdec (P:=P) Pdec x)) l ->
+        y -> False
+  H : In a (add x (fdec (P:=P) Pdec x) l) -> False
+  ============================
+   (a = x)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : (Term' * Annot)%type
+  a : list (Term' * Annot)
+  IHb : Sort l -> Sort l' -> equal l l' = true <-> Equal l l'
+  Hm : Sort ((a, b) :: l)
+  e : elt
+  H0 : forall n : (t -> t) (m : t -> t) (y : elt),
+        Sort m ->
+        (fun x : elt => negb (fdec (P:=P) Pdec x)) l ->
+        y -> False
+  H : In a (add x (fdec (P:=P) Pdec x) l) -> False
+  ============================
+   (a = x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+

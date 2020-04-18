@@ -1,0 +1,156 @@
+======== SAMPLE 1 ========
+ y r1
+Unable to unify "crelation *" with "(relation * ?y ?y0 * ?y0 * ?y0 + ?y ?y <= ?y + ?y0 <= ?y2 - ?y <= ?y2 < ?to_elt".
+
+Debug:
+Level 3: In environment
+A : Type
+y : A
+H : In y (Node l e g r h)
+R : forall y : key, In y r r2
+x, y0 : A
+H0 : E.eq y x
+e0 : elt
+Unable to unify "elim y0 x" with "(?y <=?y0 && ?y0 <= ?y)".
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  y : key
+  e0 : elt
+  H2 : In y0 l
+  ============================
+   (In y0 (Node l e g r h))
+
+
+Debug:
+Going to execute:
+match H with
+| H' => fail 2
+| _ => unify X Y; clear H' || clear H
+end
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  y : key
+  e0 : elt
+  H2 : In y0 (Node l e g r h)
+  ============================
+   (In y0 (Node l e g r h))
+
+
+Debug: Going to execute:
+H
+
+
+TcDebug (4) > 
+Debug: Level 4: H
+ has value 
+(In y0 (Node l e g r h))
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  y : key
+  e0 : elt
+  H2 : In y0 (Node l e g r h)
+  ============================
+   (In y0 (Node l e g r h))
+
+
+Debug: Going to execute:
+unify X Y; clear H' || clear H
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  y : key
+  e0 : elt
+  H2 : In y0 (Node l e g r h)
+  ============================
+   (In y0 (Node l e g r h))
+
+
+Debug: Going to execute:
+unify X Y
+
+
+TcDebug (4) > 
+Debug: Evaluated term: (E.lt y x)
+
+Debug: Evaluated term: E.lt y x
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  y : key
+  e0 : elt
+  H3 : In y (Node l e g r h)
+  ============================
+   (E.lt y y)
+
+
+Debug: Going to execute:
+<ltac_plugin::unify@0> $1 $2
+
+
+TcDebug (4) > 
+Debug:
+Level 4: In environment
+A : Type
+x, elt : Type
+e : elt
+b : key
+x, e0 : elt
+b0 : key
+y : key
+e : elt
+H1 : X.eq x y
+e0 : elt
+H3 : In y (Node l e g r h)
+H4 : In y0 (Node l e g r h)
+Unable to unify "C:C" with "In y0 (Node l e g r h)".
+
+Debug:
+Level 4: In environment
+A : Type
+x, elt : Type
+e : elt
+b : key
+x, e0 : elt
+b0 : key
+y : key
+e : elt
+H1 : X.eq x y
+e0 : elt
+H3 : In y (Node l e g r h)
+H4 : In y0 (Node l e g r h)
+Unable to unify "C:C" with "In y0 (Node l e g r h)".
+
+Debug:
+Level 4: In environment
+A : Type
+x, elt : Type
+e : elt
+b : key

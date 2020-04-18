@@ -1,0 +1,150 @@
+======== SAMPLE 1 ========
+ closure>
+
+
+Goal:
+  
+  P : Prop
+  Q : Prop
+  R : Prop
+  H : decidable P
+  H0 : decidable Q
+  H1 : False
+  H2 : True
+  H3 : P
+  H4 : R -> P /\ Q
+  H5 : R -> P /\ Q
+  H6 : P /\ Q -> R
+  H7 : P /\ Q -> R
+  H10 : (R -> P) \/ (Q -> R) -> False
+  H12 : (P -> R) -> False
+  H13 : (P -> R) -> False
+  H14 : P
+  ============================
+   True
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  P : Prop
+  Q : Prop
+  R : Prop
+  H : decidable P
+  H0 : decidable Q
+  H1 : False
+  H2 : True
+  H3 : P
+  H4 : R -> P /\ Q
+  H5 : R -> P /\ Q
+  H6 : P /\ Q -> R
+  H7 : P /\ Q -> R
+  H10 : (R -> P) \/ (Q -> R) -> False
+  H12 : (P -> R) -> False
+  H13 : (P -> R) -> False
+  H14 : P
+  ============================
+   True
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  P : Prop
+  Q : Prop
+  R : Prop
+  H : decidable P
+  H0 : decidable Q
+  H1 : False
+  H2 : True
+  H3 : P
+  H4 : R -> P /\ Q
+  H5 : R -> P /\ Q
+  H6 : P /\ Q -> R
+  H7 : P /\ Q -> R
+  H10 : (R -> P) \/ (Q -> R) -> False
+  H12 : (P -> R) -> False
+  H13 : (P -> R) -> False
+  H14 : P
+  ============================
+   True
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  P : Prop
+  Q : Prop
+  R : Prop
+  H : decidable P
+  H0 : decidable Q
+  H1 : False
+  H2 : True
+  H3 : P
+  H4 : R -> P /\ Q
+  H5 : R -> P /\ Q
+  H6 : P /\ Q -> R
+  H7 : P /\ Q -> R
+  H10 : (R -> P) \/ (Q -> R) -> False
+  H12 : (P -> R) -> False
+  H13 : (P -> R) -> False
+  H14 : P
+  ============================
+   True
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  P : Prop
+  Q : Prop
+  R : Prop
+  H : decidable P
+  H0 : decidable Q
+  H1 : False
+  H2 : True
+  H3 : P
+  H4 : R -> P /\ Q
+  H5 : R -> P /\ Q
+  H6 : P /\ Q -> R
+  H7 : P /\ Q -> R
+  H10 : (R -> P) \/ (Q -> R) -> False
+  H12 : (P -> R) -> False
+  H13 : (P -> R) -> False
+  H14 : P
+  ============================
+   True
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  P : Prop
+  Q : Prop
+  R : Prop
+ 

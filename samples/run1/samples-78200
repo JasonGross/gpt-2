@@ -1,0 +1,86 @@
+======== SAMPLE 1 ========
+   : Sorted X.lt (rev (x1 :: l1)) (tail l2 acc)
+  ============================
+   (X.eq x x1 \/ InA X.eq x l1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall l2 acc : list X.t,
+        InA X.eq x (union_list l1 l2 acc) <->
+        InA X.eq x l1 \/ InA X.eq x l2 \/ InA X.eq x acc
+  x2 : X.t
+  l2 : list X.t
+  IH2 : forall acc : list X.t,
+        InA X.eq x (union_list (x1 :: l1) l2 acc) <->
+        InA X.eq x (x1 :: l1) \/ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list X.t
+  C : X.eq x1 x2
+  H : MX.TO.lt x1 x2
+  H0 : MX.TO.le x x2
+  ============================
+   (X.eq x x1 \/ InA X.eq x l1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall l2 acc : list X.t,
+        InA X.eq x (union_list l1 l2 acc) <->
+        InA X.eq x l1 \/ InA X.eq x l2 \/ InA X.eq x acc
+  x2 : X.t
+  l2 : list X.t
+  IH2 : forall acc : list X.t,
+        InA X.eq x (union_list (x1 :: l1) l2 acc) <->
+        InA X.eq x (x1 :: l1) \/ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list X.t
+  C : X.eq x1 x2
+  H : MX.TO.lt x1 x2
+  H0 : MX.TO.le x x2
+  ============================
+   (X.eq x x1 \/ InA X.eq x l1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall l2 acc : list X.t,
+        InA X.eq x (union_list l1 l2 acc) <->
+        InA X.eq x l1 \/ InA X.eq x l2 \/ InA X.eq x acc
+  x2 : X.t
+  l2 : list X.t
+  IH2 : forall acc : list X.t,
+        InA X.eq x (union_list (x1 :: l1) l2 acc) <->
+        InA X.eq x (x1 :: l1) \/ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list X.t
+  C : X.eq x1 x2
+  H : MX.TO.lt x1 x2
+  H0 : MX.TO.le x x2
+  ============================
+   (X.eq x x1 \/ InA X.eq x l1)
+
+
+Debug

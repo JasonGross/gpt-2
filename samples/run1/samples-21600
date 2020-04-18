@@ -1,0 +1,93 @@
+======== SAMPLE 1 ========
+      bst r2' ->
+        InT y (del x (Bk r2' (Bk r1 t0 r1)) <->
+        InT y (Bk r1 t1 r1) /\ (InT y (Bk r1 t1 r1) /\ (InT y (Bk r1 t1 r1) /\ (InT y r1) /\ (InT y (Bk r1 t1 r1)
+  y : key
+  H : InT y r1
+  ============================
+   (InT y r1 /\ (InT y (Bk r1 t0 r1)) <->
+    (InT y r1 /\ (InT y (Bk r1 t0 r1)) /\ (InT y r1) \/ InT y r1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : int
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : InA X.eq x l -> (X.eq y x \/ InA X.eq y l) -> InT y r
+  H5 : X.eq y x -> X.eq y x \/ InT y l
+  H : InT y r1
+  ============================
+   (InT y r1 /\ (InT y (Bk r1 t0 r1)) <->
+    (InT y r1 /\ (InT y (Bk r1 t0 r1)) /\ (InT y r1) \/ InT y r1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : int
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : InA X.eq x l -> (X.eq y x \/ InA X.eq y l) -> InT y r
+  H5 : X.eq y x -> X.eq y x \/ InT y l
+  H : InT y r1
+  ============================
+   (InT y r1 /\ (InT y (Bk r1 t0 r1)) <->
+    (InT y r1 /\ (InT y (Bk r1 t0 r1)) /\ (InT y r1) \/ InT y r1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : int
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : InA X.eq x l -> (X.eq y x \/ InA X.eq y l) -> InT y r
+  H5 : X.eq y x -> X.eq y x \/ InT y l
+  H : InT y r1
+  ============================
+   (InT y r1 /\ (InT y (Bk r1 t0 r1)) <->
+    (InT y r1 /\

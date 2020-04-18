@@ -1,0 +1,123 @@
+======== SAMPLE 1 ========
+clear X.lt y x -> In y (remove x s)
+  H0 : In y s
+  H5 : true = true
+  H3 : In y (remove x s)
+  H : true = true
+  ============================
+   (false = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x (remove x s)
+  H4 : true = true
+  H1 : In y s
+  H5 : true = true
+  H4 : true = true
+  H1 : In y s
+  H5 : true = true
+  H4 : true = true
+  H1 : In y (remove x s)
+  H7 : In y s \/ ~ E.eq z x \/ In y s
+  H7 : In y s \/ ~ E.eq z x \/ In y s
+  ============================
+   (false = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x (remove x s)
+  H4 : true = true
+  H1 : In y s
+  H5 : true = true
+  H4 : true = true
+  H1 : In y s
+  H5 : true = true
+  H4 : true = true
+  H1 : In y (remove x s)
+  H7 : In y s \/ ~ E.eq z x \/ In y s
+  H7 : In y s \/ ~ E.eq z x \/ In y s
+  H7 : In y s \/ ~ E.eq z x \/ In y s
+  ============================
+   (false = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x (remove x s)
+  H4 : true = true
+  H1 : In y s
+  H5 : true = true
+  H4 : true = true
+  H1 : In y (remove x s)
+  H7 : In y s \/ ~ E.eq z x \/ In y s
+  H7 : In y s \/ ~ E.eq z x \/ In y s
+  H7 : In y s \/ ~ E.eq z x \/ In y s
+  H7 : In y s \/ ~ E.eq z x \/ In y s
+  H8 : In y s
+  H3 : In y (remove x s)
+  H : true = true
+  ============================
+   (false = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x (remove x s)
+  H4 : true = true
+  H1 : In y s
+  H5 : true = true
+  H4 : true = true
+  H1 : In y (remove x s)
+  H7 : In y s \/ ~ E.eq z x \/ In y s
+  H7 : In y s \/ ~ E.eq z x \/ In y s
+  H7 : In y s \/ ~ E.eq z x \/ In y s
+  H7 : In y s \/ ~ E.eq z x \/ In y s
+  H7 : In y s \/ ~ E.

@@ -1,0 +1,152 @@
+======== SAMPLE 1 ========
+ \/ InA a l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  H : Equivalence eqA
+  R : relation A
+  H0 : StrictOrder R
+  H1 : Proper (eqA ==> eqA ==> iff) R
+  x : A
+  y : A
+  H2 : In x (eqA x y)
+  ============================
+   (eqA x y)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  H : Equivalence eqA
+  R : relation A
+  H0 : StrictOrder R
+  H1 : Proper (eqA ==> eqA ==> iff) R
+  x : A
+  y : A
+  H2 : In x (eqA x y)
+  ============================
+   (eqA x y)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : relation A
+  H : Equivalence eqA
+  R : relation A
+  H0 : StrictOrder R
+  H1 : Proper (eqA ==> eqA ==> iff) R
+  x : A
+  y : A
+  H2 : In x (eqA x y)
+  ============================
+   (eqA x y)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  H : Equivalence eqA
+  R : relation A
+  H0 : StrictOrder R
+  H1 : Proper (eqA ==> eqA ==> iff) R
+  x : A
+  y : A
+  H2 : In x (eqA x y)
+  ============================
+   (eqA x y)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  H : Equivalence eqA
+  R : relation A
+  H0 : StrictOrder R
+  H1 : Proper (eqA ==> eqA ==> iff) R
+  x : A
+  y : A
+  H2 : In x (eqA x y)
+  ============================
+   (eqA x y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  H : Equivalence eqA
+  R : relation A
+  H0 : StrictOrder R
+  H1 : Proper (eqA ==> eqA ==> iff) R
+  x : A
+  y : A
+  H2 : In x (eqA x y)
+  ============================
+   (eqA x y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  H : Equivalence eqA
+  R : relation A
+  H0 : StrictOrder R
+  H1 : Proper (eqA ==> eqA ==> iff) R
+  x : A
+  y : A
+  H2 : In x (eqA x y)
+  ============================
+   (eqA x y)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_con

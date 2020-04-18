@@ -1,0 +1,94 @@
+======== SAMPLE 1 ========
+ 1 :: nil) /\ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  H : X.eq x x1
+  ============================
+   (X.eq x x1 \/ InA X.eq x l1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (5) > 
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall (l2 : list X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (inter_list l1 l2 acc) <->
+        InA X.eq x l1 /\ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  H : X.eq x x1
+  ============================
+   (X.eq x x1 \/ InA X.eq x l1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (5) > 
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall (l2 : list X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (inter_list l1 l2 acc) <->
+        InA X.eq x l1 /\ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  H : X.eq x x1
+  ============================
+   (X.eq x x1 \/ InA X.eq x l1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (5) > 
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall (l2 : list X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (inter_list l1 l2 acc) <->
+        InA X.eq x l1 /\ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  H : X.eq x x1
+  ============================
+   (X.eq x x1 \/ InA X.eq x l1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (6) > 
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall (l2 : list X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (inter_list l1 l2 acc) <->
+        InA X.eq x l1 /\ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  H : X.eq x x1
+  ============================
+   (X.eq x x1 \/ InA X.eq x l1)
+
+
+Debug: Going to

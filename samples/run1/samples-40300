@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+ not_eq H x' l) = at_least_one r (find (elt:=elt') x l) (find (elt:=elt')) r)
+  ============================
+   ((and_lt_iff x y0 && gen_phi_find y y0 =
+    at_least_one_then_f o o')
+
+
+Debug: Going to execute:
+unfold; unfold X; intros
+
+
+TcDebug (32) > 
+Goal:
+  
+  A : Type
+  f : A -> bool
+  H : Proper (le_ord_theory A) f
+  H0 : Proper fold_option (elt:=elt) f
+  s : t
+  s' : t
+  H1 : Proper (le_minus_num s s') s
+  H3 : find (elt:=elt) l = at_least_one (Some e) s
+  H6 : Some e = Some s'
+  H4 : Some e = None
+  H2 : Some e = None
+  ============================
+   ((and_lt_iff x y0 && gen_phi_find y y0 =
+    at_least_one_then_f o o')
+
+
+Debug: Going to execute:
+unfold; unfold X
+
+
+TcDebug (32) > 
+Goal:
+  
+  A : Type
+  f : A -> bool
+  H : Proper (le_ord_theory A) f
+  H0 : Proper fold_option (elt:=elt) f
+  s : t
+  s' : t
+  H1 : Proper (le_minus_num s s') s
+  H3 : find (elt:=elt) l = at_least_one (Some e) s
+  H6 : Some e = Some s'
+  H4 : Some e = None
+  H2 : Some e = None
+  ============================
+   ((and_lt_iff x y0 && gen_phi_find y y0 =
+    at_least_one_then_f o o')
+
+
+Debug: Going to execute:
+unfold
+
+
+TcDebug (32) > 
+Goal:
+  
+  A : Type
+  f : A -> bool
+  H : Proper (le_ord_theory A) f
+  H0 : Proper fold_option (elt:=elt) f
+  s : t
+  s' : t
+  H1 : Proper (le_minus_num s s') s
+  H3 : find (elt:=elt) l = at_least_one (Some e) s
+  H6 : Some e = Some s'
+  H4 : Some e = None
+  H2 : Some e = None
+  ============================
+   ((and_lt_iff x y0 && gen_phi_find y y0 =
+    at_least_one_then_f o o')
+
+
+Debug:
+Going to execute:
+fold_right
+
+
+TcDebug (32) > 
+Goal:
+  
+  A : Type
+  f : A -> bool
+  H : Proper (le_ord_theory A) f
+  H0 : Proper fold_option (elt:=elt) f
+  s : t
+  s' : t
+  H1 : Proper (le_minus_num s s') s
+  H3 : find (elt:=elt) l = at_least_one (Some e) s
+  H6 : Some e = Some s'
+  H4 : Some e = None
+  H2 : Some e = None
+  ============================
+   ((and_lt_iff x y0 && gen_phi_find y y0 =
+    at_least_one_then_f o o')
+
+
+Debug: Going to execute:
+fold_right
+
+
+TcDebug (32) > 
+Goal:
+  
+  A : Type
+  f : A -> bool
+  H : Proper (le_ord_theory A) f
+  H0 : Proper fold_option (elt:=elt) f
+  s : t
+  s' : t
+  H1 : Proper (le_minus_num s s') s
+  H3 : find (elt:=elt) l = at_least_one (Some e) s
+  H6 : Some e = Some s'
+  H4 : Some e

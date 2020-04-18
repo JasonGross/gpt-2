@@ -1,0 +1,103 @@
+======== SAMPLE 1 ========
+  | x : X.t
+        [ intro; clear id; t_tauto_intuit
+         | cut (~ X1);
+            [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+| |- ?X1 =>
+      <Coq.Init.Tauto.is_disj> flags X1; (solve
+       [ left; t_tauto_intuit | right; t_tauto_intuit ])
+end ||
+  match goal with
+  | |- _ -> _ => intro; t_tauto_intuit
+  | |- _ => t_reduce; t_solver
+  end || t_solver
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H2 : InT x rl
+  H4 : InT x b
+  H5 : InT x rl
+  ============================
+   (InT x lr)
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:(?X1 -> ?X2) -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (X1 -> X2);
+          [ exact
+          id
+          | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear id;
+             (solve [ t_tauto_intuit ]) ] ]
+| id:~ ?X1 -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (~ X1);
+          [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+| |- ?X1 =>
+      <Coq.Init.Tauto.is_disj> flags X1; (solve
+       [ left; t_tauto_intuit | right; t_tauto_intuit ])
+end
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H2 : InT x rl
+  H4 : InT x b
+  H5 : InT x rl
+  ============================
+   (InT x lr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; (solve
+ [ left; t_tauto_intuit | right; t_tauto_intuit ])
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ In

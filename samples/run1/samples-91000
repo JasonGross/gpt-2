@@ -1,0 +1,86 @@
+======== SAMPLE 1 ========
+         eval_opt_clause env (add_term t cl) -> eval_clause env (t :: cl)
+  H0 : True
+  H2 : True
+  H4 : eval_clause env (t :: cl)
+  H1 : eval_clause env (t :: cl) -> eval_clause env (t :: cl)
+  H3 : eval_clause env (t :: cl)
+  ============================
+   (eval_clause env (t :: cl))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : (Term' * Annot)%type
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  IHcl : forall (cl' : clause) (env : Env),
+         eval_opt_clause env (or_clause cl cl') <->
+         ~ make_conj (eval_tt env) cl \/ ~ make_conj (eval_tt env) cl'
+  cl' : clause
+  env : Env
+  t : (Term' * Annot)%type
+  a : (Term' * Annot)%type
+  cl' : clause
+  env : Env
+  t0 : Term'
+  H : deduce (fst t) (fst a) = Some t0
+  H0 : True
+  H2 : True
+  H4 : eval_clause env (t :: cl)
+  H1 : eval_clause env (t :: cl)
+  H3 : eval_clause env (t :: cl)
+  ============================
+   (eval_clause env (t :: cl))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t ->

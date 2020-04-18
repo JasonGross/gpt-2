@@ -1,0 +1,88 @@
+======== SAMPLE 1 ========
+  H1 : make_conj (eval_clause env) f
+  ============================
+   (make_conj (eval_clause env) f)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : clause
+  t' : clause
+  U : checkthe_cv (fn' t t') ->
+        ~ make_conj (eval_clause env) (fold_left F f nil)
+  env' : Env
+  t0 : clause
+  env'' : Env
+  F := fun (acc : list clause) (e : clause) =>
+        match or_clause (p :: t) e with
+        | NotConstant =>
+              (p = t)%type
+              | _ =>
+               end
+        | _ =>
+              end
+        end
+  f1 : list clause
+  Hf1 : make_conj (eval_clause env) (fold_left F f nil)
+  ============================
+   (make_conj (eval_clause env) f)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : clause
+  t' : clause
+  U : checkthe_cv (fn' t t') ->
+        ~ make_conj (eval_clause env) (fold_left F f nil)
+  env' : Env
+  t0 : clause
+  env'

@@ -1,0 +1,86 @@
+======== SAMPLE 1 ========
+\r + - 1) <->
+   r /\ 0 < 1 < 2
+  H2 : r < 1 /\ 0 < 2
+  H3 : \/ r = 1 < 2
+  H : r = 1 /\ 0 < 2
+  H4 : r < 2
+  ============================
+   (r <
+    / \ (l ^ 4 + r) <
+     /\ r = 1 < 2 \/ (l ^ 4 + r) < 2) /\ r = r \/ (l ^ 4 + r) < 2)
+
+
+Debug:
+Going to execute:
+change_no_check (Node n : t, Prop) in *
+
+
+TcDebug (7) > 
+Debug:
+Level 6: In environment
+Node n : t, Prop : isNcst r : Prop
+Node r : t
+Node _x : t
+l2 : t
+e2 : D.t
+H0 : forall n : t, N.t -> N.t -> Prop
+mkP cmp : N.t -> (Node cmp rl : N.t -> Prop) -> Prop
+lmp : N.t -> prop
+E := fun _ => let l' := AddFvTail n l' in
+                   (Node cmp rl rx rd rr n m)
+  H2 : r < 1 /\ 0 < 2
+  H3 : \/ r = 1 < 2
+  H : r = 1 /\ 0 < 2
+  H4 : r < 2
+  ============================
+   (r <
+    / \ (l ^ 4 + r) <
+     /\ r = 1 < 2 \/ (l ^ 4 + r) < 2) /\ r = r \/ (l ^ 4 + r) < 2)
+
+
+Debug:
+Going to execute:
+change_no_check (Node n : t, Prop) in *
+
+
+TcDebug (6) > 
+Debug: Evaluated term: (Node (_x, r))
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equiv req
+  Reqe : ring_eq_ext radd rmul ropp req
+  SRinv_ext : forall p q : R, p == q -> / p == / q
+  AFth : almost_field_theory
+  ARth := AF_AR AFth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  rI_neq_rO := AF_1_neq_0 AFth : ~ 1 == 0
+  rdiv_def := AFdiv_def AFth : forall p q : R, p / q == p * / q
+  rdiv_l := AFdiv_l AFth : forall p : R, p / p == p * p
+  rdiv_m := AFdiv_mul AFth : forall p : R, p / p == p * p
+  rinv_l := AFinv_l AFth : forall p : R, p / p == p * p
+  rinc_def := AFinc_def AFth : forall n : t, n < n -> False : forall p : R, p / p == p * p
+  rinv_r := AFinv_r R req Rsth
+            : forall n : t, n < n -> False : forall p : R, p / p == p * p
+  n : t
+  ============================
+   (r <
+    / \ (l ^ 4 + r) <
+     /\ r = 1 < 2
+  H2 : r < 1 /\ 0 < 2
+  H3 : \/ r = 1 < 2
+  H : r = 1 /\ 0 < 2
+  H4 : r < 2
+  ============================
+   (r <
+    / \ (l ^ 4 + r) <
+     /\ r = 1 < 2 \/ (l ^ 4 + r) < 2) /\ r = r \/ (l ^ 4 + r) < 2)
+

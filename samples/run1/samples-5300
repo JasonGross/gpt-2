@@ -1,0 +1,83 @@
+======== SAMPLE 1 ========
+   False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : E.t
+  s : t
+  IHs : forall x0 : E.t, Ok s -> Ok s -> x = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x : E.t, Ok s0 -> Ok s0 -> x = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t
+  s0 : t
+  IHs0 : forall x0 : E.t, Ok s0 -> Ok s0 -> x0 = y
+  x0 : E.t

@@ -1,0 +1,55 @@
+======== SAMPLE 1 ========
+   (_x1 __:=eq))
+           (rev l1 _x2) ->
+           (exist s2 ((y1, l1) : elt),
+            (proj1_sig
+              (exist s2 ((y0, l0) : bool),
+                 (proj1_sig y0 l0)) <->
+              (exist s2 l1))
+  (let _x2 := Find_X5_or_Cross Zaggon nil in
+                       EZadd (Qpower_positive (Qpower_positive nil) x y0))
+                    nil
+                  (proj1_sig
+                   (exist s2 l2)))
+                    (proj1_sig
+                    (exist s2 (y1, l1)) : false = true)
+                       (proj1_sig
+                      (exist s2 0)))
+                      (proj1_sig
+                           (exist (y1, l1) : false = true)
+                              (proj1_sig
+                              (exist (y0, l0) : bool),
+                            (proj1_sig y0 y0))
+                            (exist (y1, l0)) nil)))
+                        (proj1_sig y0 (Pos.to_nat (Pos.max (2 * D1))))) * 10 ^ usize
+  d2 :: q1 :: nil
+  e2 :: (y1 + (y2 * m2)) : D1 = true
+  H2 : (q1 + t1)%positive =
+         (q2 + t1)%positive
+  ============================
+   (q1 + t1)%positive
+
+
+Debug: Going to execute:
+let H := fresh "ez" in
+let H1 := fresh "ez" in
+pose (pos H1 : nat -> Prop)
+ icipation (jump (Pos.succ fr) (Pos.succ (Pos.succ r)) : positive) ||
+      pose (Pos.succ fr) nil
+  H3 :
+         (x1 + y1)%positive =
+         Zeqd (Pos.succ (Pos.succ (Pos.succ r)) +
+          Zeqd (Pos.succ (Pos.succ (Pos.succ r))))
+  ============================
+    (q1 + t1)%positive
+
+
+Debug: Going to execute:
+let H := fresh "ez" in
+pose (pos H1 : nat -> Prop)
+icipation (jump (Pos.succ fr) (Pos.succ (Pos.succ r)) : positive)
+
+
+Goal:
+  
+

@@ -1,0 +1,113 @@
+======== SAMPLE 1 ========
+ IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  H2 : InT y l -> InT y t_left0 <-> InT y r /\ X.lt y x
+  H3 : InT y r
+  H1 : X.lt y x
+  H5 : X.lt y x [<=] t_left0
+  ============================
+   (InT y (Node i l x' r) /\ X.lt y x \/ InT y r)
+
+
+Debug: Going to execute:
+exact (id0 id1)
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (H2 H1)
+
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  H2 : InT y l -> InT y t_left0 <-> InT y r /\ X.lt y x
+  H3 : InT y r
+  H1 : X.lt y x
+  H5 : X.lt y x [<=] t_left0
+  ============================
+   (InT y (Node i l x' r) /\ X.lt y x \/ InT y r)
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  H0 : InT y l
+  ============================
+   (X.lt y x)
+
+
+Debug: Going to execute:
+clear id0
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  H0 : InT y l
+  ============================
+   (X.lt y x)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  H1 : InT y r -> InT y t_right0 <-> InT y r /\ X.lt y x
+  H3 : InT y r
+  H1 : InT y l
+  ============================
+   (X.lt

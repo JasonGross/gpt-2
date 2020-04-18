@@ -1,0 +1,139 @@
+======== SAMPLE 1 ========
+
+
+Goal:
+  
+  A : Type
+  Aeq : relation A
+  aeq_equiv : Aeq -> Aeq -> Prop
+  H : Aeq x a x
+  x0 : A
+  H0 : list A
+  X : Aeq x a x
+  ============================
+   ((exists x0 : A, eq_refl a (e :: x0) /\ List a (x :: l)))
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  Aeq : relation A
+  aeq_equiv : Aeq -> Aeq -> Prop
+  H : Aeq x a x
+  x0 : A
+  H0 : list A
+  X : Aeq x a x
+  ============================
+   ((exists x0 : A, eq_refl a (e :: x0) /\ List a (x :: l)))
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  Aeq : relation A
+  aeq_equiv : Aeq -> Aeq -> Prop
+  H : Aeq x a x
+  x0 : A
+  H0 : list A
+  X : Aeq x a x
+  ============================
+   ((exists x0 : A, eq_refl a (e :: x0) /\ List a (x :: l)))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  Aeq : relation A
+  aeq_equiv : Aeq -> Aeq -> Prop
+  H : Aeq x a x
+  x0 : A
+  H0 : list A
+  X : Aeq x a x
+  ============================
+   ((exists x0 : A, eq_refl a (e :: x0) /\ List a (x :: l)))
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  Aeq : relation A
+  aeq_equiv : Aeq -> Aeq -> Prop
+  H : Aeq x a x
+  x0 : A
+  H0 : list A
+  X : Aeq x a x
+  ============================
+   ((exists x0 : A, eq_refl a (e :: x0) /\ List a (x :: l)))
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  Aeq : relation A
+  aeq_equiv : Aeq -> Aeq -> Prop
+  H : Aeq x a x
+  x0 : A
+  H0 : list A
+  X : Aeq x a x
+  ============================
+   ((exists x0 : A, eq_refl a (e :: x0) /\ List a (x :: l)))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  Aeq : relation A
+  aeq_equiv : Aeq -> Aeq -> Prop
+  H : Aeq x a x
+  x0 : A
+  H0 : list A
+  X : Aeq x a x
+  ============================
+   ((exists x0 : A, eq_refl a (e :: x0) /\ List a (x :: l)))
+
+
+Debug:
+Going to execute:
+

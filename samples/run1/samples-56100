@@ -1,0 +1,95 @@
+======== SAMPLE 1 ========
+ (P:=P) Pdec) -> (Zunsky Zunsky0 ->
+       false = true) then (Zunsky3 ->
+       forall x y : Z, (x + y) * z == x * z + y * z -> x * z == y * z -> y * z -> z * z == z * (Z.pos x y))
+  H0 : (x |- _ => rewrite (fold_right fst x) (fold_right fst y))
+  H1 : (x |- _ => rewrite (fold_right fst x) (fold_right fst y))
+  H : MapsTo x e fst z
+  H3 : (MapsTo x e (fun x : t => y) (fold_right fst x))
+  ============================
+   (MapsTo x e fst z)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  P : Prop
+  Pdec : forall x y : Z, 1 * x == x + 2 * y
+  Hdec : forall x y : Z, x * y == y + 1 * x
+  x : Z
+  y : Z
+  z : Z
+  H0 : (x |- _ => rewrite (fold_right fst x) (fold_right fst y))
+  H1 : (x |- _ => rewrite (fold_right fst x) (fold_right fst y))
+  H : MapsTo x e fst z
+  H3 : (MapsTo x e (fun x : t => y) (fold_right fst x))
+  ============================
+   (MapsTo x e fst z)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  P : Prop
+  Pdec : forall x y : Z, 1 * x == x + 2 * y
+  Hdec : forall x y : Z, x * y == y + 1 * x
+  x : Z
+  y : Z
+  z : Z
+  H0 : (x |- _ => rewrite (fold_right fst x) (fold_right fst y))
+  H1 : (x |- _ => rewrite (fold_right fst x) (fold_right fst y))
+  H : MapsTo x e fst z
+  H3 : (MapsTo x e (fun x : t => y) (fold_right fst x))
+  ============================
+   (MapsTo x e fst z)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  P : Prop
+  Pdec : forall x y : Z, 1 * x == x + 2 * y
+  Hdec : forall x y : Z, x * y == y + 1 * x
+  x : Z
+  y : Z
+  z : Z
+  H0 : (x |- _ => rewrite (fold_right fst x) (fold_right fst y))
+  H1 : (x |- _ => rewrite (fold_right fst x) (fold_right fst y))
+  H : MapsTo x e fst z
+  H3 : (MapsTo x e (fun x : t => y) (fold_right fst x))
+  ============================
+   (MapsTo x e fst z)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  P : Prop
+  Pdec : forall x y : Z, 1 * x == x + 2 * y
+  Hdec : forall x y : Z, x * y == y + 1 * x
+  x : Z
+  y : Z
+  z : Z
+  H0 : (x |- _ => rewrite (fold_right fst x) (fold_right fst y))
+  H1 : (x |- _ => rewrite (fold_right fst x)

@@ -1,0 +1,148 @@
+======== SAMPLE 1 ========
+ sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  n : R
+  a : R
+  b : R
+  c : R
+  d : R
+  H : ~ b * d == 0
+  ============================
+   (~ b * d == 0)
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (16) > 
+Debug: Level 16: t
+ has value 
+b
+
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  n : R
+  a : R
+  b : R
+  c : R
+  d : R
+  H : ~ b * d == 0
+  ============================
+   (~ b * d == 0)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::split@0>
+
+
+TcDebug (16) > 
+Debug: Level 16: evaluation returns
+<tactic closure>
+
+
+Debug: Level 14: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  n : R
+  a : R
+  b : R
+  c : R
+  d : R
+  H : ~ b * d == 0
+  ============================
+   (~ b * d == 0)
+
+
+Debug: Going to execute:
+find_equiv b (find_equiv l x y)
+
+
+TcDebug (13) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  n : R
+  a : R
+  b : R
+  c : R
+  d : R
+  H : ~ b * d == 0
+  ============================
+   (~ b * d == 0)
+
+
+Debug:
+Going to execute:
+fun x => generalize t; clear H; intro H; intro H;
+ get_proof h; try reflexivity; trivial
+
+
+TcDebug (14) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  n : R
+  a : R
+  b : R
+  c : R
+  d : R
+  H : ~ b * d == 0
+  ============================
+   (~ b * d == 0)
+
+
+Debug:
+Going to execute:
+match goal with
+| H:x == _ |- _ => exact (destruct_condition (H x))
+| H:_ == x |- _ => exact (H (H x))
+| H:x ~= _ |- _ => exact (H (H x))
+| H:_ ~= x |- _ => clear H; clear H; clear H; intro H;
+ rename H Hd' H; rename H Hd' H; rename H Hd' H; clear H;
+ rename H Hd

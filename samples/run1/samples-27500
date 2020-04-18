@@ -1,0 +1,112 @@
+======== SAMPLE 1 ========
+ D)#2
+  x : elt
+  H1 : Sorted X.lt (rev l1)
+  H2 : Inf x (S0 x s)
+  H3 : forall y : elt, InA X.eq x l -> InA X.eq x s
+  H5 : X.eq x x'
+  H4 : InA X.eq x l
+  H : InA X.eq x a
+  ============================
+   (X.eq x x' /\ InA X.eq x (elements_aux acc r))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+ [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H1 : Sorted X.lt (rev l1)
+  H2 : Inf x (S0 x s)
+  H3 : forall y : elt, InA X.eq x l -> InA X.eq x s
+  H5 : X.eq x x'
+  H4 : InA X.eq x l
+  H : InA X.eq x a
+  ============================
+   (X.eq x x' /\ InA X.eq x (elements_aux acc r))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H1 : Sorted X.lt (rev l1)
+  H2 : Inf x (S0 x s)
+  H3 : forall y : elt, InA X.eq x l -> InA X.eq x s
+  H5 : X.eq x x'
+  H4 : InA X.eq x l
+  H : InA X.eq x a
+  ============================
+   (X.eq x x' /\ InA X.eq x (elements_aux acc r))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H1 : Sorted X.lt (rev l1)
+  H2 : Inf x (S0 x s)
+  H3 : forall y : elt, InA X.eq x l -> InA X.eq x s
+  H5 : X.eq x x'
+  H4 : InA X.eq x l
+  H : InA X.eq x a
+  ============================
+   (X.eq x x' /\ InA X.eq x (elements_aux acc r))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H1 : Sorted X.lt (rev l1)
+  H2 : Inf x (S0 x s)
+  H3 : forall y : elt, InA X.eq x l -> InA X.eq x s
+  H5 : X.eq x x'
+  H4 : InA X.eq x l
+  H : InA X.eq x a
+  ============================
+   (X.eq x x' /\ InA X.eq x (elements_aux acc r))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H1 : Sorted X.lt (rev l1)
+  H2 : Inf x (S0 x s)
+  H3 : forall y : elt, InA X.eq x l

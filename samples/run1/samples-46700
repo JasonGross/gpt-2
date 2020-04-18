@@ -1,0 +1,103 @@
+======== SAMPLE 1 ========
+2 : E.eq p -> False
+  p : PolC
+  m : PolC
+  r : R
+  H : r < 0
+  H1 : ~ b * 0 == 0
+  ============================
+   (a * b * (a * a' * b) == a * b * (b * b))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : BinNums.N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  T : Type
+  env : PolEnv
+  p : PolC
+  o : Op1
+  l : list NFormula
+  tg : T
+  F := fun (x : NFormula) (acc : list (list (NFormula * T))) =>
+       if check_inconsistent x then acc else ((x, tg) :: nil) :: acc
+    : NFormula -> list (list (NFormula * T)) -> list (list (NFormula * T))
+  G := fun x : NFormula => eval_nformula env x -> False : NFormula -> Prop
+  EQ : check_inconsistent (p, o) = true
+  H : eval_op1 o (eval_pol env p) -> False
+  H2 : make_conj (fun x : NFormula => eval_nformula env x -> False) l
+  H3 : eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l)
+  H1 : ~ b * 0 == 0
+  ============================
+   (a * b * (a * a' * b) == a * b * (b * b))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : BinNums.N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  T : Type
+  env : PolEnv
+  p : PolC
+  o : Op1
+  l : list NFormula
+  tg : T
+  F := fun (x : NFormula) (acc : list (list (NFormula * T))) =>
+       if check_inconsistent x then acc else ((x, tg) :: nil) :: acc
+    : NFormula -> list (list (NFormula * T)) -> list (list (NFormula *

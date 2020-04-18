@@ -1,0 +1,84 @@
+======== SAMPLE 1 ========
+ause env (0, e) :: l' -> option Term'
+  H0 : True
+  H2 : True
+  H4 : eval_tt env t
+  H5 : eval_tt env a /\ make_conj (eval_tt env) cl
+  H3 : eval' env t -> eval' env t /\ make_conj (eval_tt env) cl
+  ============================
+   (Term' -> Annot -> False)
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@1> $1
+
+
+TcDebug (2) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                     eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : (Term' * Annot)%type
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  H : deduce (fst t) (fst a) = None
+  H0 : True
+  H2 : True
+  H4 : eval_tt env t
+  H5 : eval_tt env a /\ make_conj (eval_tt env) cl
+  H3 : eval' env t -> eval' env t /\ make_conj (eval_tt env) cl
+  H6 : make_conj (eval_tt env) cl -> False
+  ============================
+   (Term' -> Annot -> False)
+
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : (Term' * Annot)%type
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  H : deduce (fst t) (fst a) = None
+  H0 : True
+  H2 : False
+  H4 : eval_tt env t
+  H5 : eval_tt env a /\ make_conj (eval_tt env) cl
+  H3 : eval' env t -> eval' env t /\ make_conj (eval_tt env) cl
+  H6 : make_conj (eval_tt env) cl -> False
+  H1 : False
+  ============================
+   (Term' -> Annot -> False)
+
+
+Debug

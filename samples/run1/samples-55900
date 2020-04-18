@@ -1,0 +1,107 @@
+======== SAMPLE 1 ========
+ := s''
+  IHm : forall s : t, Ok (diff m m') s ->
+         (forall x : elt, In x s <-> InA x (diff m m') /\ ~ In x s)
+  m' : t
+  x : elt
+  H : InA x s -> False
+  H0 : Ok s'
+  H1 : InA a s
+  H3 : InA a s'
+  ============================
+   ((In a s \/ In a s') /\ ~ In a s)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IHs : forall (x : elt) (f : elt -> bool), In x (diff s s') -> In x s'
+  x' : elt
+  f : elt -> bool
+  H0 : In x (diff s s') -> In x s'
+  H2 : In x s'
+  H6 : In x s -> False
+  H7 : In x s' -> False
+  H1 : In a s
+  H3 : InA a s'
+  ============================
+   ((In a s \/ In a s') /\ ~ In a s)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (1) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IHs : forall (x : elt) (f : elt -> bool), In x (diff s s') -> In x s'
+  x' : elt
+  f : elt -> bool
+  H0 : In x (diff s s') -> In x s'
+  H2 : In x s'
+  H6 : In x s -> False
+  H7 : In x s' -> False
+  H1 : In a s
+  H3 : InA a s'
+  ============================
+   ((In a s \/ In a s') /\ ~ In a s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IHs : forall (x : elt) (f : elt -> bool), In x (diff s s') -> In x s'
+  x' : elt
+  f : elt -> bool
+  H0 : In x (diff s s') -> In x s'
+  H2 : In x s'
+  H6 : In x s -> False
+  H7 : In x s' -> False
+  H1 : In a s
+  H3 : InA a s'
+  ============================
+   ((In a s \/ In a s') /\ ~ In a s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IH

@@ -1,0 +1,102 @@
+======== SAMPLE 1 ========
+
+     |- _ =>
+         generalize (Private_OrderTac.Tac.le_lt_trans H1 H2); intro;
+          Private_OrderTac.Tac.order_loop
+| H1:?x <= ?y, H2:?y < ?z
+  |- _ =>
+      match goal with
+      | H:x <= z |- _ => fail 1
+      | _ =>
+          generalize (Private_OrderTac.Tac.lt_le_trans H1 H2); intro;
+           Private_OrderTac.Tac.order_loop
+      end
+| H1:?x < ?y, H2:?y <= ?z
+  |- _ =>
+      match goal with
+      | H:x < z |- _ => fail 1
+      | _ =>
+          generalize (Private_OrderTac.Tac.le_lt_trans H1 H2); intro;
+           Private_OrderTac.Tac.order_loop
+      end
+| H1:?x <= ?y, H2:?y <= ?z
+  |- _ =>
+      match goal with
+      | H:x <= z |- _ => fail 1
+      | _ =>
+          generalize (Private_OrderTac.Tac.le_trans H1 H2); intro;
+           Private_OrderTac.Tac.order_loop
+      end
+| _ => idtac
+end
+
+
+TcDebug (1) > 
+Goal:
+    x : t  y : t  z : t  H0 : In y z <= x <= y  H1 : In x <= z  H2 : z <= y
+  ============================
+   (x + y <= y)
+
+
+Debug: Going to execute:
+intro
+
+
+TcDebug (2) > 
+Goal:
+    x : t  y : t  z : t  H0 : In y z <= x <= y  H1 : In x <= z  H2 : z <= y
+  ============================
+   (x + y <= y)
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : t
+  y : t
+  z : t
+  H0 : In y z <= x <= y
+  H1 : In x <= z
+  H2 : In y <> x
+  H3 : x < y <= y
+  ============================
+   (x + y <= y)
+
+
+Debug: Going to execute:
+Private_OrderTac.Tac.order_loop
+
+
+TcDebug (0) > 
+Goal:
+  
+  x : t
+  y : t
+  z : t
+  H0 : In y z <= x <= y
+  H1 : In x <= z
+  H2 : In y <> x
+  H3 : x < y <= y
+  H4 : In y1 -> In y2
+  H5 : In y2
+  H6 : In y1
+  H7 : In y0
+  H8 : In y1 -> In y2
+  ============================
+   (X.lt y x)
+
+
+Debug:
+Going to execute:
+match goal with
+| H:?x < ?x |- _ => exact (Private_OrderTac.Tac.lt_irrefl H)
+| H:?x ~= ?x |- _ => exact (H (Private_OrderTac.Tac.eq_refl x))
+| H:?x <= ?x |- _ => clear H; Private_OrderTac.Tac.order_loop
+| H:?x == ?y
+  |- _ =>
+      Private_OrderTac.Tac.order_eq x y H; Private_OrderTac.Tac.order_loop
+| H1

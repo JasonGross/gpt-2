@@ -1,0 +1,129 @@
+======== SAMPLE 1 ========
+eq x a
+  ============================
+   (forall x : O.t, In x s' <-> D.lt E.lt (f x))
+
+
+Debug: Going to execute:
+apply negb_conj; auto
+
+
+TcDebug (1) > 
+Goal:
+    x : O.t  s : t  s' : t  s'' : t  a : O.t
+  ============================
+   (forall x : O.t, In x s  <-> D.lt E.lt (f x))
+
+
+Debug: Going to execute:
+apply negb_conj
+
+
+TcDebug (1) > 
+Debug: Evaluated term: negb_conj
+
+Goal:
+    x : O.t  s : t  s' : t  s'' : t  a : O.t
+  ============================
+   (~ D.lt E.lt a)
+
+
+Goal:
+    x : O.t  s : t  s' : t  s'' : t  a : O.t
+  ============================
+   (~ D.lt E.lt a ~ D.lt E.lt a)
+
+
+Debug: Going to execute:
+auto
+
+
+TcDebug (1) > 
+Goal:
+    x : O.t  s : t  s' : t  s'' : t  a : O.t
+  ============================
+   (~ D.lt E.lt a ~ D.lt E.lt a)
+
+
+Goal:
+    x : O.t  s : t  s' : t  s'' : t  a : O.t
+  ============================
+   (~ D.lt E.lt a ~ D.lt E.lt a)
+
+
+Debug: Going to execute:
+<ltac_plugin::auto@0> $1 $2 $3
+
+
+TcDebug (1) > 
+Goal:
+    x : O.t  s : t  s' : t  s'' : t  a : O.t
+  ============================
+   (~ D.lt E.lt a ~ D.lt E.lt a)
+
+
+Goal:
+    x : O.t  s : t  s' : t  s'' : t  a : O.t
+  ============================
+   (D.lt E.lt a ~ D.lt E.lt a)
+
+
+Debug: Going to execute:
+unfold D.lt; apply limge_eq; [ auto ]
+
+
+TcDebug (0) > 
+Goal:
+    x : O.t  s : t  s' : t  s'' : t  a : O.t
+  ============================
+   (~ D.lt E.lt a ~ D.lt E.lt a)
+
+
+Debug: Going to execute:
+unfold D.lt; apply limge_eq
+
+
+TcDebug (0) > 
+Goal:
+    x : O.t  s : t  s' : t  s'' : t  a : O.t
+  ============================
+   (~ D.lt E.lt a ~ D.lt E.lt a)
+
+
+Debug: Going to execute:
+unfold D.lt; apply limge_eq
+
+
+TcDebug (0) > 
+Goal:
+    x : O.t  s : t  s' : t  s'' : t  a : O.t
+  ============================
+   (~ D.lt E.lt a ~ D.lt E.lt a)
+
+
+Debug: Going to execute:
+unfold D.lt
+
+
+TcDebug (0) > 
+Goal:
+    x : O.t  s : t  s' : t  s'' : t  a : O.t
+  ============================
+   (~ D.lt E.lt a ~ D.lt E.lt a)
+
+
+Debug: Going to execute:
+apply limge_eq
+
+
+TcDebug (0) > 
+Debug: Evaluated term: limge_eq
+
+Goal:
+    x : O.t  s : t  s' : t  a : O.t
+  ============================
+   (~ D.lt E.lt a)
+
+
+Goal:
+    x : O.t  s : t 

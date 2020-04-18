@@ -1,0 +1,116 @@
+======== SAMPLE 1 ========
+nomac_plugin::interp_ord_loop::~ intro H:(())
+  | |- ?X1 =>
+       <Coq.Init.Tauto.is_disj> flags X1; (solve
+       [ left; t_tauto_intuit | right; t_tauto_intuit ])
+| |- _ => t_reduce; t_solver
+end
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  ll : t elt
+  o : option elt
+  rl : t elt
+  e1 : split x l = << ll, o, rl >>
+  H0 : bst l
+  H1 : bst r
+  H12 : bst rl
+  H13 : bst rr
+  H4 : label0 (x, r) = label0 (x, r)
+  H : hd (Node i l x d r) @ l
+  y0 : key
+  H8 : bst (Node i l x d r) @ l = y0
+  ============================
+   (bst (Node i l x d r))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.axioms> flags
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  ll : t elt
+  o : option elt
+  rl : t elt
+  e1 : split x l = << ll, o, rl >>
+  H0 : bst l
+  H1 : bst r
+  H12 : bst rl
+  H13 : bst rr
+  H4 : label0 (x, r) = label0 (x, r)
+  H : hd (Node i l x d r) @ l
+  y0 : key
+  H8 : bst (Node i l x d r) @ l = y0
+  ============================
+   (bst (Node i l x d r))
+
+
+Debug:
+Going to execute:
+fun flags =>
+  match reverse goal with
+  | |- ?X1 => <Coq.Init.Tauto.is_unit_or_eq> flags X1; constructor 1
+  | _:?X1 |- _ => <Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+  | _:?X1 |- ?X1 => assumption
+  end
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  ll : t elt
+  o : option elt
+  rl : t elt
+  e1 : split x l = << ll, o, rl >>
+  H0 : bst l
+  H1 : bst r
+  H12 : bst rl
+  H13 : bst rr
+  H4 : label0 (x, r) = label0 (x, r)
+  H : hd (Node i l x d r) @ l
+  y0 : key
+  H8 : bst (Node i l x d r) @ l = y0
+  ============================
+   (bst (Node i l x d r))
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| |- ?X1 => <Coq.Init.Tauto.is_unit_or_eq> flags X1; constructor 1
+| _:?X1 |- _ => <Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+| _:?X1 |- ?X1 => assumption
+end
+
+
+TcDebug (4)

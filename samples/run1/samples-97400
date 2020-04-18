@@ -1,0 +1,69 @@
+======== SAMPLE 1 ========
+ H2 : bst r2'
+  l : X.lt x1 y
+  H11 : In y m2 /\ X.lt x1 y -> In y r2'
+  H8 : X.lt y x1
+  H12 : In y m2 /\ X.lt y x1
+  ============================
+   (X.lt y x1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f0 : key -> option elt -> option elt' -> option elt''
+  f : key -> elt -> option elt' -> option elt''
+  mapl : t elt -> t elt''
+  mapr : t elt' -> t elt''
+  f0_f : forall (x : key) (d : elt) (o : option elt'),
+         f x d o = f0 x (Some d) o
+  mapl_bst : forall m : t elt, bst m -> bst (mapl m)
+  mapr_bst : forall m' : t elt', bst m' -> bst (mapr m')
+  mapl_f0 : forall (x : X.t) (m : t elt),
+            bst m ->
+            find x (mapl m) =
+            match find x m with
+            | Some d => f0 x (Some d) None
+            | None => None
+            end
+  mapr_f0 : forall (x : X.t) (m' : t elt'),
+            bst m' ->
+            find x (mapr m') =
+            match find x m' with
+            | Some d' => f0 x None (Some d')
+            | None => None
+            end
+  f0_compat : forall (x x' : X.t) (o : option elt) (o' : option elt'),
+              X.eq x x' -> f0 x o o' = f0 x' o o'
+  l1 : t elt
+  x1 : key
+  d1 : elt
+  r1 : t elt
+  _x : int
+  l2' : t elt'
+  r2' : t elt'
+  m2 : t elt'
+  e1 : split x1 m2 = << l2', find x1 m2, r2' >>
+  e2 : elt''
+  e3 : f x1 d1 (find x1 m2) = Some e2
+  IHt1 : forall y : key,
+         bst l1 ->
+         bst l2' ->
+         In y l1 \/ In y l2' ->
+         find y (map2_opt l1 l2') = f0 y (find y l1) (find y l2')
+  IHt0 : forall y : key,
+         bst r1 ->
+         bst r2' ->
+         In y r1 \/ In y r2' ->
+         find y (map2_opt r1 r2') = f0 y (find y r1) (find y r2')
+  y : key
+  H0 : bst m2
+  H1 : In y (Node l1 x1 d1 r1 _x) \/ In y m2
+  H2 : bst r2

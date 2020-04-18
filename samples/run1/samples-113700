@@ -1,0 +1,78 @@
+======== SAMPLE 1 ========
+; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : (Term' * Annot)%type
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  t0 : Term'
+  H : deduce (fst t) (fst a) = Some t0
+  H0 : unsat t0 = false
+  H1 : eval' env (fst t) -> eval' env (fst a) -> eval' env t0
+  H3 : eval_clause env (t :: cl)
+  H4 : eval_clause env (t :: cl)
+  H1 : eval_clause env (t :: cl)
+  ============================
+   (eval_opt_clause env (Some u -> False) <->
+    ~ (eval_tt env t /\ make_conj (eval_tt env) cl) \/
+    ~ make_conj (eval_tt env) cl')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : (Term' * Annot)%type
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  t0 : Term'
+  H : deduce (fst t) (fst a) = Some t0
+  H0 : unsat t0 = false
+  H1 : eval' env (fst t) -> eval' env (fst a) -> eval' env t0
+  H3 : eval_clause env (t :: cl)
+  H4 : eval_clause env (t :: cl)
+  H1 : eval_clause env (t :: cl)
+  ============================
+   (eval_opt_clause env (Some u -> False) <->
+    ~ (eval_tt env t /\ make_conj (eval_tt env) cl) \/
+    ~ make

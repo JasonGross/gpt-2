@@ -1,0 +1,84 @@
+======== SAMPLE 1 ========
+ a p l
+  H2 : NoDupA (l1 ++ y :: l2)
+  H3 : NoDupA (l1 ++ y :: l2)
+  H4 : forall l2 : list A,
+       NoDupA l2 -> equivlistA l2 l -> PermutationA l2 l
+  H5 : NoDupA (l1 ++ y :: l2)
+  H6 : forall l1 : list A,
+       NoDupA l1 -> equivlistA l1 l -> PermutationA l1 l
+  H7 : forall x : list A,
+       NoDupA l1 -> equivlistA l1 l -> PermutationA l1 l
+  H8 : eqA xst x -> False
+  H9 : eqA x a
+  H10 : eqA x l2
+  H11 : False
+  H12 : InA a l2
+  H13 : InA a l1 -> eqA a x \/ InA a l
+  H3 : InA a l -> eqA a x \/ InA a l
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  a : A
+  l : list A
+  IHl : forall (l' : list A) (x : list A),
+        NoDupA (l ++ x :: l')
+  l' : list A
+  x : list A
+  H : NoDupA (l ++ l')
+  H5 : NoDupA (l1 ++ y :: l2)
+  H6 : forall l1 : list A,
+       NoDupA l1 -> equivlistA l1 l -> PermutationA l1 l
+  H2 : NoDupA (l1 ++ y :: l2)
+  H3 : NoDupA (l1 ++ y :: l2)
+  H4 : forall l2 : list A,
+       NoDupA l2 -> equivlistA l2 l -> PermutationA l2 l
+  H5 : NoDupA (l1 ++ y :: l2)
+  H6 : forall l1 : list A,
+       NoDupA l1 -> equivlistA l1 l -> PermutationA l1 l
+  H7 : forall x : list A,
+       NoDupA l1 -> equivlistA l1 l -> PermutationA l1 l
+  H8 : eqA xst x -> False
+  H9 : eqA x a
+  H10 : eqA x l2
+  H11 : False
+  H12 : InA a l2
+  H13 : InA a l1 -> eqA a x \/ InA a l
+  H3 : InA a l -> eqA a x \/ InA a l
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  a : A
+  l : list A
+  IHl : forall (l' : list A) (x : list A),
+        NoDupA (l ++ x :: l')
+  l' : list A
+  x : list A
+  H : NoDupA (l ++ l')
+  H5 : NoDupA (l1 ++ y :: l2)
+  H6 : forall l1 : list A,
+       NoDupA l1 -> equivlistA l1 l -> PermutationA l1 l
+  H2 : NoDupA (l1 ++ y :: l2)
+  H3

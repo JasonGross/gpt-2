@@ -1,0 +1,115 @@
+======== SAMPLE 1 ========
+
+  H2 : InA X.eq x l
+  ============================
+   (X.eq x x \/ (InA X.eq x l \/ InA X.eq x acc) \/
+    X.eq x x \/ (X.eq x x \/ InA X.eq x acc) \/ X.eq x x \/ InA X.eq x acc)"
+
+
+Goal
+
+      x : X.t
+  ============================
+   (X.eq x x \/ (InA X.eq x l \/ InA X.eq x acc) \/
+    X.eq x x \/ (X.eq x x \/ InA X.eq x acc))
+
+
+Debug: Going to execute:
+(X.eq x x \/ (X.eq x x \/ InA X.eq x l))
+
+
+TcDebug (0) > 
+Goal
+
+      x : X.t
+  ============================
+   (X.eq x x \/ (InA X.eq x l \/ InA X.eq x acc) \/
+    X.eq x x \/ (X.eq x x \/ InA X.eq x acc))
+
+
+Debug: Going to execute:
+intro
+
+
+TcDebug (1) > goal
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list T
+  l2 : list T
+  x2 : X.t
+  x1 : X.t
+  x2 : list T
+  H : (InA X.eq x l1) \/ InA X.eq x l2
+  H0 : (x1 /\ InA X.eq x l1) \/ InA X.eq x l2
+  ============================
+   (InA X.eq x x \/ (X.eq x x \/ InA X.eq x acc))
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::intro@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x1 : X.t
+  x2 : X.t
+  l1 : list T
+  l2 : list T
+  x2 : X.t
+  x1 : X.t
+  x2 : list T
+  H : (InA X.eq x l1) \/ InA X.eq x l2
+  H0 : (x1 /\ InA X.eq x l1) \/ InA X.eq x l2
+  ============================
+   (X.eq x x1 \/ InA X.eq x x1 \/ InA X.eq x acc)
+
+
+Goal:
+  
+  x1 : X.t
+  x2 : X.t
+  l1 : list T
+  l2 : list T
+  x2 : X.t
+  x1 : X.t
+  x2 : list T
+  H : (InA X.eq x l1) \/ InA X.eq x l2
+  H0 : (x1 /\ InA X.eq x l1) \/ InA X.eq x l2
+  ============================
+   (X.eq x x1 \/ InA X.eq x x1 \/ InA X.eq x acc)
+
+
+Debug: Going to execute:
+intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x1 : X.t
+  x2 : X.t
+  l1 : list T
+  l2 : list T
+  x2 : X.t
+  x1 : X.t
+  x2 : list T
+  H : (InA X.eq x l1) \/ InA X.eq x l2
+  H0 : (x1 /\ InA X.eq x l1) \/ InA X.eq x l2
+  ============================
+   (X.eq x x1 \/ InA X.eq x x1 \/ InA X.eq x acc)
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x1 : X.t
+  x2 : X.t
+  l1 : list T
+ 

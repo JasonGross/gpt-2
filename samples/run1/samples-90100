@@ -1,0 +1,142 @@
+======== SAMPLE 1 ========
+
+TcDebug (2) > 
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+        of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   ((6 + 10 * of_lu d') * 10 ^ usize d =
+    6 * 10 ^ usize d + of_lu d' * (10 * 10 ^ usize d))
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (3) > 
+Debug: Level 3: t
+ has value 
+(10 ^ usize d)
+
+
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+        of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   ((6 + 10 * of_lu d') * 10 ^ usize d =
+    6 * 10 ^ usize d + of_lu d' * (10 * 10 ^ usize d))
+
+
+Debug: Going to execute:
+true
+
+
+TcDebug (3) > 
+Debug: Evaluated term: true
+
+Debug: Level 2: evaluation returns
+true
+
+
+Debug: Level 1: evaluation returns
+true
+
+
+Debug: Level 0: evaluation returns
+true
+
+
+Debug: Level 0: evaluation returns
+true
+
+
+Debug: Level 1: isNcst t
+ has value 
+true
+
+
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+        of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   ((6 + 10 * of_lu d') * 10 ^ usize d =
+    6 * 10 ^ usize d + of_lu d' * (10 * 10 ^ usize d))
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (0) > 
+Debug: Evaluated term: 0
+
+Debug: Level 0: evaluation returns
+0
+
+
+Debug: Level 1: evaluation returns
+1
+
+
+Debug: Level 0: evaluation returns
+1
+
+
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+        of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   ((6 + 10 * of_lu d') * 10 ^ usize d =
+    6 * 10 ^ usize d + of_lu d' * (10 * 10 ^ usize d))
+
+
+Debug: Going to execute:
+NotConstant
+
+
+TcDebug (0) > 
+Debug: Evaluated term: NotConstant
+
+Debug: Level 0: evaluation returns
+NotConstant
+
+
+Debug: Level 1: Cst t
+ has value 
+NotConstant
+
+
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+        of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   ((6 + 10 * of_lu d') * 10 ^ usize d =
+    6 * 10 ^ usize d + of_lu d' * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+match t with
+| rO => fun _ => fv
+| rI => fun _ => fv
+| add ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+| mul ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+| sub ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+| opp ?t1 => fun _ => TFV t1 fv
+| pow ?t1 ?n =>
+

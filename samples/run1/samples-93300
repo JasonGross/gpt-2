@@ -1,0 +1,137 @@
+======== SAMPLE 1 ========
+_empty@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x r = << rl, o, rr >>
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : bst rl
+  H5 : bst rr
+  H6 : bst rr
+  lt_tree y l
+  H7 : gt_tree y r
+  H8 : lt_tree y l
+  H10 : gt_tree y rx
+  H7 : X.eq y0 x
+  ============================
+   (lt_tree y0 x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x r = << rl, o, rr >>
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : bst rl
+  H5 : bst rr
+  H6 : bst rr
+  lt_tree y l
+  H7 : gt_tree y l
+  H8 : lt_tree y l
+  H10 : gt_tree y rx
+  H7 : X.eq y0 x
+  ============================
+   (lt_tree y0 x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x r = << rl, o, rr >>
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : bst rl
+  H5 : bst rr
+  H6 : bst rr
+  lt_tree y l
+  H7 : gt_tree y l
+  H8 : lt_tree y l
+  H10 : gt_tree y rx
+  H7 : X.eq y0 x
+  ============================
+   (lt_tree y0 x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : key
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x r = << rl, o, rr >>
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : bst r

@@ -1,0 +1,178 @@
+======== SAMPLE 1 ========
+ > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : Empty s
+  H0 : forall a : elt, In a s' <-> Empty (union s s')
+  a : elt
+  H1 : In a s
+  H2 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match goal with
+| |- _ -> _ => intro; t_tauto_intuit
+| |- _ => t_reduce; t_solver
+end
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : Empty s
+  H0 : forall a : elt, In a s' <-> Empty (union s s')
+  a : elt
+  H1 : In a s
+  H2 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+t_reduce; t_solver
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : Empty s
+  H0 : forall a : elt, In a s' <-> Empty (union s s')
+  a : elt
+  H1 : In a s
+  H2 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+t_reduce
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : Empty s
+  H0 : forall a : elt, In a s' <-> Empty (union s s')
+  a : elt
+  H1 : In a s
+  H2 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+unfold not in *
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : Empty s
+  H0 : forall a : elt, In a s' <-> Empty (union s s')
+  a : elt
+  H1 : In a s
+  H2 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+t_solver
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : Empty s
+  H0 : forall a : elt, In a s' <-> Empty (union s s')
+  a : elt
+  H1 : In a s
+  H2 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+right; t_tauto_intuit
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : Empty s
+  H0 : forall a : elt, In a s' <-> Empty (union s s')
+  a : elt
+  H1 : In a s
+  H2 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+right
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : Empty s
+  H0 : forall a : elt, In a s' <-> Empty (union s s')
+  a : elt
+  H1 : In a s
+  H2 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::split@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : Empty s
+  H0 : forall a : elt, In a s' <-> Empty (union s s')
+  a : elt
+  H1 : In a s
+  H2 : bool
+  ============================
+   (In a s')
+
+
+Debug: Going to execute:
+t_tauto_intuit
+
+
+TcDebug (2) > 
+Goal

@@ -1,0 +1,107 @@
+======== SAMPLE 1 ========
+0; __:=radd_0_l, __:=radd_0_r, __:=rmul_0_r, __:=rmul_1_r, __:=ropp_0, __:=rsub_def); clear __:=__; __:=1; __:=radd_0_r; __:=rmul_0_r; __:=rsub_def;
+             (get_sign_None (C:=Q)) (2 # n :: p :: 1 # p :: 1 :: -1 # p :: nil) npe)%Q
+  ============================
+   (((2 # n - p) + (1 # p) <
+     (2 # n) + (1 # p) + (- (1 # p)) -> goal) -> goal)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  p : Z
+  H : 1 < p
+  H0 : forall n : Z, 1 <= n < p -> rel_prime n p
+  a : Z
+  H1 : (a | p)
+  H2 : p >= 0
+  H3 : a <= 0
+  H4 : - a <= p
+  H5 : - a < p
+  H6 : a < 0
+  H7 : a <= Z.pred 0
+  H8 : a < Z.pred 0
+  H9 : a < Z.abs 0
+  H10 : - p < a
+  H11 : a < 0
+  H12 : - p < a
+  H13 : a <= 0
+  H14 : a < -1 \/ a < -1 \/ 1
+  ============================
+   ((-1 # p < a \/ a < p) -> goal)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  p : Z
+  H : 1 < p
+  H0 : forall n : Z, 1 <= n < p -> rel_prime n p
+  a : Z
+  H1 : (a | p)
+  H2 : p >= 0
+  H3 : a <= 0
+  H4 : - a <= p
+  H5 : - a < p
+  H6 : a < 0
+  H7 : a <= Z.pred 0
+  H8 : a < Z.pred 0
+  H9 : a < Z.abs 0
+  H10 : - p < a
+  H11 : a < 0
+  H12 : - p < a
+  H13 : a <= 0
+  H14 : a < -1 \/ a < -1 \/ 1
+  ============================
+   ((-1 # p < a \/ a < p) -> goal)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  p : Z
+  H : 1 < p
+  H0 : forall n : Z, 1 <= n < p -> rel_prime n p
+  a : Z
+  H1 : (a | p)
+  H2 : p >= 0
+  H3 : a <= 0
+  H4 : - a <= p
+  H5 : - a < p
+  H6 : a < 0
+  H7 : a <= Z.pred 0
+  H8 : a < Z.pred 0
+  H9 : a < Z.abs 0
+  H10 : - p < a
+  H11 : a < 0
+  H12 : - p < a
+  H13 : a <= 0
+  H14 : a < -1 \/ a < -1 \/ 1
+  ============================
+   ((-1 # p < a \/ a < p) -> goal)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  p : Z
+  H : 1 < p
+  H0 : forall n : Z, 1 <= n <

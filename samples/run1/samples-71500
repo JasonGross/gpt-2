@@ -1,0 +1,154 @@
+======== SAMPLE 1 ========
+3) > 
+Goal:
+    A : Type  f : A -> bool  x : A  H : true = true
+  ============================
+   (In x s /\ f x = true \/ In x s /\ f x = true \/ In x s)
+
+
+Debug: Going to execute:
+unfold not in *
+
+
+TcDebug (1) > 
+Goal:
+    A : Type  f : A -> bool  x : A  H : true = true
+  ============================
+   (In x s /\ f x = true \/ In x s /\ f x = true \/ In x s)
+
+
+Debug: Going to execute:
+trivial
+
+
+TcDebug (1) > 
+Goal:
+    A : Type  f : A -> bool  x : A  H : false = true
+  ============================
+   (In x s /\ f x = true \/ In x s /\ f x = true \/ In x s)
+
+
+Debug: Going to execute:
+<ltac_plugin::trivial@0> $1 $2
+
+
+TcDebug (1) > 
+Debug: Level 1: Proof is not complete.
+
+Debug: Level 1: Proof is not complete.
+
+Goal:
+  
+  A : Type
+  f : A -> bool
+  x : A
+  H : true = true
+  ============================
+   (In x s /\ f x = true \/ In x s /\ f x = true \/ In x s)
+
+
+Debug: Going to execute:
+reflexivity
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  f : A -> bool
+  x : A
+  H : true = true
+  ============================
+   (In x s /\ f x = true \/ In x s /\ f x = true \/ In x s)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::reflexivity@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  f : A -> bool
+  x : A
+  H : true = true
+  ============================
+   (In x s /\ f x = true \/ In x s /\ f x = true \/ In x s)
+
+
+Debug: Going to execute:
+symmetry; trivial
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  f : A -> bool
+  x : A
+  H : true = true
+  ============================
+   (In x s /\ f x = true \/ In x s /\ f x = true \/ In x s)
+
+
+Debug: Going to execute:
+symmetry
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  f : A -> bool
+  x : A
+  H : true = true
+  ============================
+   (In x s /\ f x = true \/ In x s /\ f x = true \/ In x s)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::symmetry@0>
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  f : A -> bool
+  x : A
+  H : true = true
+  ============================
+   (In x s -> true = true \/ In x s)
+
+
+Debug: Going to execute:
+trivial
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  f : A -> bool
+  x : A
+  H : true = true
+  ============================
+   (In x s -> true = true \/ In x s)
+
+
+Debug: Going to execute:
+<ltac_plugin::trivial@0> $1 $2
+
+
+TcDebug (0) > 
+Goal:
+    A : Type  f : A -> bool  x : A  H : true = true
+  ============================
+   (In x s -> true = true \/ In x s)
+
+
+Goal:
+    A : Type  f : A -> bool  x : A
+  ============================
+   (In a s -> true = true \/ In a s)

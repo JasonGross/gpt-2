@@ -1,0 +1,115 @@
+======== SAMPLE 1 ========
+   (eqb true (f true))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  f : E.t -> bool
+  g : E.t -> bool
+  H : Proper (E.eq ==> Logic.eq) f
+  H0 : Proper (E.eq ==> Logic.eq) g
+  s : t
+  H1 : Proper (E.eq ==> Logic.eq) (fun x : E.t => f x || g x)
+  a : elt
+  H3 : f a || g a = true -> f a = true \/ g a = true
+  H2 : f a = true \/ g a = true
+  ============================
+   (eqb true (f true))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  f : E.t -> bool
+  g : E.t -> bool
+  H : Proper (E.eq ==> Logic.eq) f
+  H0 : Proper (E.eq ==> Logic.eq) g
+  s : t
+  H1 : Proper (E.eq ==> Logic.eq) (fun x : E.t => f x || g x)
+  a : elt
+  H3 : f a || g a = true -> f a = true \/ g a = true
+  H2 : f a = true \/ g a = true
+  ============================
+   (eqb true (f true))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  f : E.t -> bool
+  g : E.t -> bool
+  H : Proper (E.eq ==> Logic.eq) f
+  H0 : Proper (E.eq ==> Logic.eq) g
+  s : t
+  H1 : Proper (E.eq ==> Logic.eq) (fun x : E.t => f x || g x)
+  a : elt
+  H3 : f a || g a = true -> f a = true \/ g a = true
+  H2 : f a = true \/ g a = true
+  ============================
+   (eqb true (f true))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  f : E.t -> bool
+  g : E.t -> bool
+  H : Proper (E.eq ==> Logic.eq) f
+  H0 : Proper (E.eq ==> Logic.eq) g
+  s : t
+  H1 : Proper (E.eq ==> Logic.eq) (fun x : E.t => f x || g x)
+  a : elt
+  H3 : f a || g a = true -> f a = true \/ g a = true
+  H2 : f a = true \/ g a = true
+  ============================
+   (eqb true (f true))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  f : E.t -> bool
+  g : E.t -> bool
+  H : Proper (E.eq ==> Logic.eq) f
+  H0 : Proper (E.eq ==> Logic.eq) g
+  s : t
+  H1 : Proper (E.eq ==> Logic.eq) (fun x : E.t => f x || g x)
+  a : elt
+  H3 : f a || g a = true -> f a = true \/ g a = true
+  H2 : f a = true \/ g a = true
+  ============================
+   (eqb true (f true))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation

@@ -1,0 +1,138 @@
+======== SAMPLE 1 ========
+.t
+  rr : tree
+  LT : (rh + 2 <? lh) = false
+  LT' : (lh + 2 <? rh) = true
+  y : elt
+  H : InT y (Node lh ll lx lr)
+  ============================
+   (InT y (Node lh ll lx lr))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = false
+  LT' : (lh + 2 <? rh) = true
+  y : elt
+  H : InT y (Node lh ll lx lr)
+  ============================
+   (InT y (Node lh ll lx lr))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = false
+  LT' : (lh + 2 <? rh) = true
+  y : elt
+  H : InT y (Node lh ll lx lr)
+  ============================
+   (InT y (Node lh ll lx lr))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = false
+  LT' : (lh + 2 <? rh) = true
+  y : elt
+  H : InT y (Node lh ll lx lr)
+  ============================
+   (InT y (Node lh ll lx lr))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = false
+  LT' : (lh + 2 <? rh) = true
+  y : elt
+  H : InT y (Node lh ll lx lr)
+  ============================
+   (InT y (Node lh ll lx lr))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = false
+  LT' : (lh + 2 <? rh) = true
+  y : elt
+  H : InT y (Node lh ll lx lr)
+  ============================
+   (InT y (Node lh ll lx lr))
+
+
+Debug: Going to execute:
+fun

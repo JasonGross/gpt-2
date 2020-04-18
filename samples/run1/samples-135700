@@ -1,0 +1,143 @@
+======== SAMPLE 1 ========
+
+   (r + a - r <= 2)%Z
+
+
+Debug: Going to execute:
+trm
+
+
+TcDebug (24) > 
+Debug: Evaluated term: (Sorted (elements Sorted (elements_of_list (elements_of_list l)) a)
+
+Debug: Evaluated term: (Sorted (elements Sorted (elements_of_list l)) (elements_of_list l))
+
+Debug:
+Level 24: trm
+ has value 
+(Sorted (elements Sorted (elements_of_list (elements_of_list (elements_of_list (elements_of_list (elements_of_list (elements_of_list l)) e)))
+
+
+Goal:
+  
+  a : Z
+  b : Z
+  Hb : rel_prime a b
+  Hc : rel_prime a b
+  28 = (p | a - b)
+  H0 : rel_prime a b
+  H1 : p ~= a
+  ============================
+   (r + a - r <= 2)%Z
+
+
+Goal:
+  
+  a : Z
+  b : Z
+  Hb : rel_prime a b
+  Hc : rel_prime a b
+  28 = (p | a - b)
+  H0 : rel_prime a b
+  H1 : p ~= a
+  ============================
+   (r + a - r <= 2)%Z
+
+
+Goal:
+  
+  a : Z
+  b : Z
+  Hb : rel_prime a b
+  Hc : rel_prime a b
+  28 = (p | a - b)
+  H0 : rel_prime a b
+  H1 : p ~= a
+  ============================
+   (r + a - r <= 2)%Z
+
+
+Goal:
+    a : Z  b : Z  Hb : rel_prime a b
+  Hc : rel_prime a b
+  28 = (p | a - b)
+  H0 : rel_prime a b
+  H1 : p ~= a
+  ============================
+   (r + a - r <= 2)%Z
+
+
+Goal:
+    a : Z  b : Z  Hb : rel_prime a b
+  Hc : rel_prime a b
+  28 = (p | a - b)
+  H0 : rel_prime a b
+  H1 : p ~= a
+  ============================
+   (r + a - r <= 2)%Z
+
+
+Debug:
+Going to execute:
+let ex := z2ez x with ey := z2ez y in
+EPopp ex ey
+
+
+TcDebug (24) > 
+Goal:
+  
+  a : Z
+  b : Z
+  Hb : rel_prime a b
+  Hc : rel_prime a b
+  28 = (p | a - b)
+  H0 : rel_prime a b
+  H1 : p ~= a
+  ============================
+   (r + a - r <= 2)%Z
+
+
+Goal:
+  
+  a : Z
+  b : Z
+  Hb : rel_prime a b
+  Hc : rel_prime a b
+  28 = (p | a - b)
+  H0 : rel_prime a b
+  H1 : p ~= a
+  ============================
+   (r + a - r <= 2)%Z
+
+
+Goal:
+  
+  a : Z
+  b : Z
+  Hb : rel_prime a b
+  Hc : rel_prime a b
+  28 = (p | a - b)
+  H0 : rel_prime a b
+  H1 : p ~= a
+  ============================
+   (r + a - r <= 2)%Z
+
+
+Goal:
+  
+  a : Z
+  b : Z
+  Hb : rel_prime a b
+  Hc : rel_prime a b
+  28 = (p | a - b)
+  H0 : rel_prime a b
+  H1 : p ~= a
+  ============================
+   (r + a - r <= 2)%Z
+
+
+Debug:
+Going to execute:
+fun trm =>
+  match trm with
+  | ?x <-> ?y => let ex :=

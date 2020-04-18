@@ -1,0 +1,123 @@
+======== SAMPLE 1 ========
+eq y a) 
+  H2 : equivlistA (x1 :: l1) (l2')
+  H4 : mem x1 l2' <-> x1 :: l2' = true
+  H3 : NoDup l2'
+  H0 : E.eq x1 x2
+  H : In x1 l1
+  ============================
+   (E.eq x1 x2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : E.t
+  x1 : E.t
+  H1 : In x1 l1 -> False
+  H2 : equivlistA (x1 :: l1) (l2')
+  H4 : mem x1 l2' <-> x1 :: l2' = true
+  H3 : NoDup l2'
+  H0 : E.eq x1 x2
+  H : In x1 l1
+  ============================
+   (E.eq x1 x2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : E.t
+  x1 : E.t
+  H1 : In x1 l1 -> False
+  H2 : equivlistA (x1 :: l1) (l2')
+  H4 : mem x1 l2' <-> x1 :: l2' = true
+  H3 : NoDup l2'
+  H0 : E.eq x1 x2
+  H : In x1 l1
+  ============================
+   (E.eq x1 x2)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : E.t
+  x1 : E.t
+  H1 : In x1 l1 -> False
+  H2 : equivlistA (x1 :: l1) (l2')
+  H4 : mem x1 l2' <-> x1 :: l2' = true
+  H3 : NoDup l2'
+  H0 : E.eq x1 x2
+  H : In x1 l1
+  ============================
+   (E.eq x1 x2)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : E.t
+  x1 : E.t
+  H1 : In x1 l1 -> False
+  H2 : equivlistA (x1 :: l1) (l2')
+  H4 : mem x1 l2' <-> x1 :: l2' = true
+  H3 : NoDup l2'
+  H0 : E.eq x1 x2
+  H : In x1 l1
+  ============================
+   (E.eq x1 x2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : E.t
+  x1 : E.t
+  H1 : In x1 l1 -> False
+  H2 : equivlistA (x1 :: l1) (l2')
+  H4 : mem x1 l2' <-> x1 :: l2' = true
+  H3 : NoDup l2'
+  H0 : E.eq x1 x2
+  H : In x1 l1
+  ============================
+   (E.eq x1 x2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : E.t
+  x1 : E.t
+  H1 : In x1 l1 -> False
+  H2 : equivlistA (x

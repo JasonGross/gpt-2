@@ -1,0 +1,123 @@
+======== SAMPLE 1 ========
+ =
+    (eval_a (R a) -> False) /\
+    make_conj (fun _ => eval_nformula env') l -> False)
+
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  env : PolEnv
+  lhs : PExpr C
+  rhs : PExpr C
+  H0 : eval_pexpr env lhs == eval_pexpr env rhs
+  H1 : False
+  H2 : eval_pexpr env lhs == eval_pexpr env rhs -> False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  env : PolEnv
+  lhs : PExpr C
+  rhs : PExpr C
+  H0 : eval_pexpr env lhs == eval_pexpr env rhs
+  H1 : False
+  H2 : eval_pexpr env lhs == eval_pexpr env rhs -> False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  env : PolEnv
+  lhs : PExpr C
+  rhs : PExpr C
+  H0 : eval_pexpr env lhs == eval_pex

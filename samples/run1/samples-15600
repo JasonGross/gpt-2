@@ -1,0 +1,25 @@
+======== SAMPLE 1 ========
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        end (append (append (1 # y))) (append (3 # y))) (append (2 # y))) y1)
+
+
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall d':(tree_card aux cmp x' r)', (split_aux (x :: l) <-> aux (x :: l)) \/
+         tree_card aux cmp x' r
+  IHr : forall (x : X.t) (m : t) (cmp (x', m)) : t,
+          (diff l m) ->
+          (inter_aux (diff (x :: l) (x :: l)) ->
+           (eval_clause env x) <->
+           (eval_clause env x \/ InT x l) /\
+           (inter

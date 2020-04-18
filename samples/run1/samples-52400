@@ -1,0 +1,83 @@
+======== SAMPLE 1 ========
+   False
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (8) > 
+Debug:
+Level 8: evaluation returns
+<tactic closure>
+
+
+Debug:
+Level 7: evaluation returns
+<tactic closure>
+
+
+Goal:
+    n : t  m : t  H : m < 0  H0 : m <= 0  H1 : 0 < n  H2 : m <= 0  H : 0 < m
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match goal with
+| _ => idtac
+| _ => fail 100 "anomaly: failed to build a canonical relation to a priori closure"
+end
+
+
+TcDebug (7) > 
+Goal:
+    n : t  m : t  H : m < 0  H0 : m <= 0  H1 : 0 < n  H2 : m <= 0  H : 0 < m
+  ============================
+   False
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (7) > 
+Goal:
+    n : t  m : t  H : m < 0  H0 : m <= 0  H1 : 0 < n  H2 : m <= 0  H : 0 < m
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match goal with
+| _ => fail 1
+| _ =>
+    change_no_check (MX.OrderTac.interp_ord OEQ x y) in H ||
+      change_no_check (MX.OrderTac.interp_neq (MX.OrderTac.eq_sym eqn) y) in H ||
+        change_no_check (MX.OrderTac.neq_eq (MX.OrderTac.eq_sym eqn) z ==
+          change_no_check (MX.OrderTac.neq_eq (MX.OrderTac.eq_sym eqn) z) ||
+             change_no_check (MX.OrderTac.neq_eq (MX.OrderTac.eq_sym eqn) z) ||
+                 change_no_check (MX.OrderTac.neq_eq (MX.OrderTac.eq_sym eqn) z)
+end
+
+
+TcDebug (6) > 
+Goal:
+    n : t  m : t  H : m < 0  H0 : m <= 0  H1 : 0 < n  H2 : m <= 0  H : 0 < m
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+change_no_check (MX.OrderTac.interp_ord OEQ x y) in H ||
+  change_no_check (MX.OrderTac.interp_neq (MX.OrderTac.eq_sym eqn) y) in H ||
+    change_no_check (MX.OrderTac.neq_eq (MX.OrderTac.eq_sym eqn) z ==
+         change_no_check (MX.OrderTac.neq_eq (MX.OrderTac.eq_sym eqn) z) ||
+             change_no_check (MX.OrderTac.neq_eq (MX.OrderTac.eq_sym eqn) z) ||
+                  change_no_check (MX.OrderTac.neq_eq (MX.OrderTac.eq_sym eqn) z) ||
+                    change_no_check (MX.OrderTac.neq_eq (MX.OrderTac.eq_sym eqn) z) ||
+                     change_no_check (MX.OrderTac.neq_eq (MX.OrderTac.eq_sym eqn) z) ||
+                   

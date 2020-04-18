@@ -1,0 +1,86 @@
+======== SAMPLE 1 ========
+1 /\ InT y r1 /\ InT y s2 /\ InT y r2 \/ InT y r1 /\ InT y s2 /\ InT y s2 <->
+         InT y (Node _x l1 x1 r1) /\ InT y s2)
+
+
+Debug: Going to execute:
+revert z1 {| this := 0; sorted := ?h1 |}
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H0 : (split x1 s2)#b = false
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  IHb1 : Ok (diff l1 (split x1 s2)#l)
+  IHi1 : forall y : elt,
+         InT y (diff l1 (split x1 s2)#l) <->
+         InT y l1 /\ (InT y (split x1 s2)#l -> False)
+  H : InT y l1 /\ (InT y (split x1 s2)#l -> False)
+  H2 : InT y s2 /\ (InT y r1 /\ InT y s2 -> False)
+  H1 : InT y l1 /\ (InT y s2 /\ InT y r1 /\ InT y s2 -> False)
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H0 : (split x1 s2)#b = false
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  IHb1 : Ok (diff l1 (split x1 s2)#l)
+  IHi1 : forall y : elt,
+         InT y (diff l1 (split x1 s2)#l) <->
+         InT y l1 /\ (InT y (split x1 s2)#l -> False)
+  H : InT y l1 /\ (InT y (split x1 s2)#l -> False)
+  H2 : InT y s2 /\ (InT y r1 /\ InT y s2 -> False)
+  H1 : InT y l1 /\ (InT y s2 /\ InT y r1 /\ InT y s2 -> False)
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H0 : (split x1 s2)#b = false
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  IHb1 : Ok (diff l1 (split x1 s2)#l)
+  IHi1 : forall y : elt,
+         InT y (diff l1 (split x1 s2)#l) <->
+         InT y l1 /\ (InT y (split x1 s2)#l -> False)
+  H : InT y l1 /\ (InT y s2 /\ InT y r1 /

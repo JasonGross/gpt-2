@@ -1,0 +1,91 @@
+======== SAMPLE 1 ========
+2) (height r) -> MapsTo y e (remove x r)
+  H1 : ~ (bst ll lx lr)
+  H2 : bst lr
+  H3 : lt_tree lx ll
+  H4 : gt_tree lx lr
+  H5 : Ok r
+  H6 : Ok rd r
+  H7 : lt_tree rx rl
+  H8 : gt_tree rx rr
+  H9 : X.eq y r
+  ============================
+   (InT y ll)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : Color.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok (Bk ll lx lr) ->
+        InT y (del x (Bk ll lx lr)) <-> InT y (Bk ll lx lr) /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (del x r) <-> InT y r /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.eq y x
+  ============================
+   (X.eq y x \/ InT y lr \/ InT y (Bk ll lx lr) /\ ~ X.eq y x <->
+    InT y (Bk ll lx lr) /\ ~ X.eq y x \/ InT y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : Color.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok (Bk ll lx lr) ->
+        InT y (del x (Bk ll lx lr)) <-> InT y (Bk ll lx lr) /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (del x r) <-> InT y r /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.eq y x
+  ============================
+   (X.eq y x \/ InT y lr \/ InT y (Bk ll lx lr) /\ ~ X.eq y x <->
+    InT y (Bk ll lx lr) /\ ~ X.eq y x \/ InT y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : Color.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok (Bk ll lx lr) ->
+        InT y (del x (Bk ll lx lr)) <-> InT y (Bk ll lx lr) /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (del x r) <-> InT y r /\ ~ X.eq

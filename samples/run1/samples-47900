@@ -1,0 +1,151 @@
+======== SAMPLE 1 ========
+ execute a term with
+ "0 < ?X1 -> ?X2 \/ ?X3 -> ?X4"
+
+
+Debug:
+Level 10: In environment
+x, y : elt
+Hd : In y s -> In y (add x s)
+Hb, d : X.eq x y \/ In y s -> In y (add x s)
+H : In y s -> In y (add x s)
+H0 : ~ X.eq y x
+H1 : In y s
+Unable to unify "X.eq ?X1 ?X6" with "False".
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  e : E.eq x y
+  H1 : In y (add x s)
+  H2 : In y s
+  ============================
+   False
+
+
+Debug: Going to execute:
+unify X1; clear Hdiff X1; clear Hset H
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  e : E.eq x y
+  H1 : In y (add x s)
+  H2 : In y s
+  ============================
+   False
+
+
+Debug: Going to execute:
+unify X1; clear Hdiff X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  e : E.eq x y
+  H1 : In y (add x s)
+  H2 : In y s
+  ============================
+   False
+
+
+Debug: Going to execute:
+unify X1
+
+
+TcDebug (4) > 
+Debug: Evaluated term: (X.eq x y)
+
+Debug: Evaluated term: (E.eq x y)
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  e : E.eq x y
+  H1 : In y (add x s)
+  H2 : In y s
+  ============================
+   False
+
+
+Debug: Going to execute:
+<ltac_plugin::unify@0> $1 $2
+
+
+TcDebug (4) > 
+Debug:
+Level 4: In environment
+x, y : elt
+Hd : In y s -> In y (add x s)
+Hb, d : X.eq x y \/ In y s -> In y (add x s)
+H : In y s -> In y (add x s)
+H0 : ~ X.eq y x
+H1 : In y s
+Unable to unify "X.eq ?X1 ?X6" with "False".
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  e : E.eq x y
+  H1 : In y (add x s)
+  H2 : In y s
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match goal with
+| H:?A -> False |- _ => change_no_check (~ A) in H; clear H;
+          InT x of A; clear H || idtac "can not automatically prove hypothesis :"; FSetLogicalFacts.futuresaws vm_compute;
+          fail "futuresaver: No applicable tactic to execute in H"
+end ||
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  e : E.eq x y
+  H1 : In y (add x s)
+  H2 : In y s
+  ============================
+   False
+
+
+Debug: Going to execute:
+progress MSetDecideAuxiliary.substMSet;

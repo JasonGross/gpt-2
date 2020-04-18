@@ -1,0 +1,171 @@
+======== SAMPLE 1 ========
+ In H2)
+  H0 : InT y f
+  ============================
+   (InT y f)
+
+
+Debug: Going to execute:
+exact (trivial (x))
+
+
+TcDebug (0) > 
+Goal:
+  
+  x : int
+  y : int
+  s : tree
+  H5 : Ok s
+  H0 : InT y f
+  ============================
+   (InT y (InT y s [=] f s) | InT y s)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : int
+  y : int
+  s : tree
+  H5 : Ok s
+  H0 : InT y f
+  ============================
+   (InT y (InT y s [=] f s) | InT y s)
+
+
+Debug:
+Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (1) > 
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : int
+  y : int
+  s : tree
+  H5 : Ok s
+  H0 : InT y f
+  ============================
+   (InT y (InT y s [=] f s) | InT y s)
+
+
+Debug: Going to execute:
+elim tauto_plugin
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : int
+  y : int
+  s : tree
+  H5 : Ok s
+  H0 : InT y f
+  ============================
+   (InT y (InT y s [=] f s) | InT y s)
+
+
+Debug: Going to execute:
+elim tauto_plugin
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : int
+  y : int
+  s : tree
+  H5 : Ok s
+  H0 : InT y f
+  ============================
+   (InT y (InT y s [=] f s) | InT y s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; split; assumption
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : int
+  y : int
+  s : tree
+  H5 : Ok s
+  H0 : InT y f
+  ============================
+   (InT y (InT y s [=] f s) | InT y s)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : int
+  y : int
+  s : tree
+  H5 : Ok s
+  H0 : InT y f
+  ============================
+   (InT y (InT y s [=] f s) | InT y s)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : int
+  y : int
+  s : tree
+  H5 : Ok s
+  H0 : InT y f
+  ============================
+   (InT y (InT y s [=] f s) | InT y s)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; split; assumption
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : int
+  y : int
+  s : tree
+  H5 : Ok s
+  H0 : InT y f
+  ============================
+   (InT y (InT y s [=] f s) | InT y s)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : int
+  y :

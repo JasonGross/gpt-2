@@ -1,0 +1,106 @@
+======== SAMPLE 1 ========
+     InA X.eq x (x1 :: nil) ->
+                  X.eq x x2 -> f0 x1 d1 (find x1 d1) = f0 x1 d1 (find x1 d1)
+  IHb1 : Ok (diff b1 (a :: nil))
+  IHi1 : forall y : elt,
+         InT y (diff b1 (b2 :: positive)) <->
+         InT y (diff b1 (a :: nil)) /\
+         InT y (solve b1 (b2 :: positive)) ->
+         InT y (solve b1 (b2 :: positive)) ->
+         InT y (solve b1 (a :: nil)) ->
+         InT y (solve b1 (b2 :: positive)) ->
+         InT y (solve b1 (b2 :: positive))
+  ============================
+   (InT y s2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  b1 : tree
+  b2 : tree
+  x1 : X.t
+  b : tree
+  H0 : tree
+  H1 : InT x1 s2
+  H2 : InT x1 b1 -> False
+  H3 : InT x1 b2 -> False
+  H4 : X.eq x1 x2
+  H2 : X.eq x1 y
+  H : False
+  ============================
+   (InT x1 b1 \/ InT x2 d1 /\ ~ X.eq x1 x2 \/ InT x1 s2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  b1 : tree
+  b2 : tree
+  x1 : X.t
+  b : tree
+  H0 : tree
+  H1 : InT x1 s2
+  H2 : InT x1 b1 -> False
+  H3 : InT x1 b2 -> False
+  H4 : X.eq x1 x2
+  H2 : X.eq x1 y
+  H : False
+  ============================
+   (InT x1 b1 \/ InT x2 d1 /\ ~ X.eq x1 x2 \/ InT x1 s2)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  b1 : tree
+  b2 : tree
+  x1 : X.t
+  b : tree
+  H0 : tree
+  H1 : InT x1 s2
+  H2 : InT x1 b1 -> False
+  H3 : InT x1 b2 -> False
+  H4 : X.eq x1 x2
+  H2 : X.eq x1 y
+  H : False
+  ============================
+   (InT x1 b1 \/ InT x2 d1 /\ ~ X.eq x1 x2 \/ InT x1 s2)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  b1 : tree
+  b2 : tree
+  x1 : X.t
+  b : tree
+  H0 : tree
+  H1 : InT x1 s2
+  H2 : InT x1 b1 -> False
+  H3 : InT x1 b2 -> False
+  H4 : X.eq x1 x2
+  H2 : X.eq x1 y
+  H : False
+  ============================
+   (InT x1 b1 \/ InT x2 d1 /\ ~ X.eq x1 x2 \/ InT x1 s

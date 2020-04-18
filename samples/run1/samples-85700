@@ -1,0 +1,29 @@
+======== SAMPLE 1 ========
+         (Ring_polynom.PX
+                   (Ring_polynom.Pinj (Ring_polynom.Pc 0)
+                       (Ring_polynom.Pc 0))) 1T
+                     (Ring_polynom.Pc 0))) 1T
+                   :: lpe :: 
+                      (Ring_polynom.Pc (1 # 2)%Q
+                        :: (1 # 2)%Q
+                          :: (1 # 3)%Q
+                             :: match lpe with
+                              :: ltac
+                                :: Gtac
+                                  :: match
+                                      :: ((1 # 3)%Q
+                                       :: match lpe with
+                                     :: ltac
+                                    :: Gtac
+                                   :: 
+                                   ::  [0]
+                                  :: equiv
+                                   :: (1 # 3)%Q
+                                    :: 1 # 4)%Q
+                                :: rle
+                                  :: (2 # 4)%Q
+                                  :: rle
+                                   :: xn (2 * (2 * k)))
+                                :: yn (2 * k) + xn (2 * k)
+                               :: yn (1 # 3)
+                 

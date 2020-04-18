@@ -1,0 +1,100 @@
+======== SAMPLE 1 ========
+
+  ri : R
+  ============================
+   ((Qnum r) - Qnum (Qnum r) + - Qnum (Qnum (Rnth 0 lm)) (Qnum r))
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (22) > 
+Debug: Level 22: t
+ has value 
+(Qnum r)
+
+
+Goal:
+  
+  f : QExpr
+  f_eq : Proper (Init.Nat.max Q) (fun n : nat => Nat.max (x (d d)) (fun n : nat => Var.max (d m)))
+  k : positive
+  pmaj : forall p : nat, (Pos.to_nat p <= k)%nat -> (Qabs (f k) < Qabs (f (tl k)))%Q
+  ============================
+   ((Qnum r) - Qnum (Qnum r) + - Qnum (Qnum (Rnth 0 lm))
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (22) > 
+Debug: Level 22: t
+ has value 
+(Qnum r)
+
+
+Goal:
+  
+  f : QExpr
+  f_eq : Proper (Init.Nat.max Q) (fun n : nat => Nat.max (x (d d)) (fun n : nat => Var.max (d m))))
+  k : positive
+  pmaj : forall p : nat, (Pos.to_nat p <= k)%nat -> (Qabs (f k) < Qabs (f (tl k)))%Q
+  ============================
+   ((Qnum r) - Qnum (Qnum r) + - Qnum (Qnum (Rnth 0 lm) + Qnum (Qnum (Rnth 0 m)))
+
+
+Debug:
+Going to execute:
+fun t =>
+  tryif prop FSetDecideAuxiliary.FSet_Prop P holds by auto  100 
+   res := nil : list (Q * Ring_polynom.Mon * Ring_polynom.Pol Q)
+  res_eq : Ring_polynom.mk_monpol_list 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+            (triv_div 0 1 Qeq_bool) list_hyp = res
+  ============================
+   ((Qnum r) + Qnum (Qnum r) + - Qnum (Qnum (Rnth 0 lm)))
+
+
+Debug: Going to execute:
+<ltac_plugin::auto@0> $1 $2 $3
+
+
+TcDebug (22) > 
+Debug: Level 20: evaluation returns
+<tactic closure>
+
+
+Debug: Level 18: evaluation returns
+<tactic closure>
+
+
+Debug: Level 16: evaluation returns
+<tactic closure>
+
+
+Debug: Level 14: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  f : QExpr
+  f_eq : Proper (Init.Nat.max Q) (fun n : nat => Nat.max (x (d d)) (fun n : nat => Var.max (d m))
+  k : positive
+  pmaj : forall p : nat, (Pos.to_nat p <= k)%nat -> (Qabs (f k) < Qabs (f (tl k)))%Q
+  ============================
+   ((Qnum r) - Qnum (Qnum r) + - Qnum (Qnum (Rnth 0 lm)) + Qnum (Qnum (Rnth 0 m)))
+
+
+Debug:
+Going to execute:
+tryif prop FSetDecideAuxiliary.FSet_Prop P holds by auto  100 
+ with MSet_condition 
+ with
+           let vlpe := fresh "list_hyp" in
+          let vlmp := fresh "list_hyp_norm" in
+          let vlmp_eq := fresh "list_hyp_norm_eq" in
+          let vlmp_eq := fresh "list_hyp_norm_eq" in
+          pose (vlpe := pfv) vlmp vlmp_eq
+           (let vlmp_eq :=

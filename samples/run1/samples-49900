@@ -1,0 +1,35 @@
+======== SAMPLE 1 ========
+> intro G
+  do :ut@0>%signature <-> ~ eval_opt hyps
+  end : eq_list := {|
+               intro G [|G| A B; push H; unfold (neg; E.eq) H; apply (eq_ge_le_neq (eq_sym H2) H1; clear H [|A B; push H; unfold (neg; E.eq)) H1; clear H [|A B; clear H [|E1]
+   | A B; push H; unfold (neg; E.eq) H1
+  | a; clear H [|A B; clear H [|E1]
+  H4; apply (q_to_pos a (Pos.to_nat (2 * Pos.max Ax Az))
+  | a |= 0)#2
+  end : list A B
+  H1 : A (2 * (pos (Pos.to_nat (2 * Pos.max Ax Az)) + 1~1~0 <=
+         (Pos.to_nat (2 * Pos.max Ax Az)) + 1~1~0)
+          (Pos.to_nat (2 * (pos (Pos.to_nat (2 * Pos.max Ax Az)))) ==
+          Pos.to_nat (2 * (pos (Pos.to_nat (2 * Traits.length (Pos.to_nat (Pos.max Az)))) *
+           (Pos.to_nat (2 * (pos (Pos.to_nat (2 * Traits.length (Pos.to_nat (Pos.max Az)))))))%nat
+  H2 : (-2 * (2 * Pos.max Ax Az) <
+         Pos.to_nat (2 * (2 * Pos.max Ax Az)) *
+             (2 * Pos.max (A:=Pos.to_nat (Pos.max Ax Az) - (Pos.to_nat (2 * Pos.max Ax Az)) *
+              (2 * (Pos.to_nat (Pos.max Ax Az))))%nat))%Q
+  list_hyp := nil : list (Ring_polynom.PExpr Q * Ring_polynom.PExpr Q)
+  list_hyp_norm := nil : list (Q * Ring_polynom.Mon * Ring_polynom.Pol Q)
+  ring_lemma : forall (pe : Ring_polynom.PExpr Q) (npe : Ring_polynom.Pol Q),
+                Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+                  (triv_div 0 1 Qeq_bool) ring_subst_niter list_hyp_norm pe =
+               npe ->
+               (Ring_polynom.PEeval 0 1 Qplus Qmult Qminus Qopp
+                  (IDphi (R:=Q)) Z.of_N Qpower
+                  (2 # n :: 1 # p :: 1 #  n :: q :: nil) pe ==
+               Ring_polynom.Pphi_pow 0 1 Qplus Qmult Qminus Qopp 0 1
+                 Qeq_bool (IDphi (R:=Q)) Z.of_N Qpower
+                 (get_sign_None (C:=Q))
+                 (2 # n :: 1 # p :: 1 # n :: q :: nil) npe
+  res := Ring_polynom.PX (Ring_polynom.Pc 1) 1 (Ring_polynom.Pc 0)
+      : Ring_polynom.Pol Q
+  res_eq : Ring_poly

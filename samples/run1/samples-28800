@@ -1,0 +1,154 @@
+======== SAMPLE 1 ========
+.eq x e
+  H0 : InT x lr
+  H2 : true = true
+  H1 : InT x lr
+  ============================
+   (false = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H0 : InT x lr
+  H2 : true = true
+  H1 : InT x lr
+  ============================
+   (false = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H0 : InT x lr
+  H2 : true = true
+  H1 : InT x lr
+  ============================
+   (false = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H0 : InT x lr
+  H2 : true = true
+  H1 : InT x lr
+  ============================
+   (false = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H0 : InT x lr
+  H2 : true = true
+  H1 : InT x lr
+  ============================
+   (false = true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H0 : InT x lr
+  H2 : true = true
+  H1 : InT x lr
+  ============================
+   (false = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  lh : I.t
+  ll :

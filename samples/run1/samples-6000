@@ -1,0 +1,144 @@
+======== SAMPLE 1 ========
+         | Some d' => let e' := get_elements_by_ei in eq_refl
+    | None => None
+    end
+| d' => None
+end
+
+
+TcDebug (1) > 
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = None -> Nat.of_uint_acc d n = None -> Some n <= None
+  n : nat
+  k : positive
+  nP : positive
+  ============================
+   (None = k)
+
+
+Debug:
+Going to execute:
+fun t =>
+  let f :=
+  match Cst t with
+  | Some d => let e' := get_elements_by_ei in eq_refl
+   | None => None
+   end
+in
+f ltac:(())
+
+
+TcDebug (2) > 
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = None -> Nat.of_uint_acc d n = None -> Some n <= None
+  n : nat
+  k : positive
+  nP : positive
+  ============================
+   (None = k)
+
+
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = None -> Nat.of_uint_acc d n = None -> Some n <= None
+  n : nat
+  k : positive
+  nP : positive
+  ============================
+   (None = k)
+
+
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = None -> Nat.of_uint_acc d n = None -> Some n <= None
+  n : nat
+  k : positive
+  nP : positive
+  ============================
+   (None = k)
+
+
+Debug: Going to execute:
+Cst t
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+Cst t
+
+
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = None -> Nat.of_uint_acc d n = None -> Some n <= None
+  n : nat
+  k : positive
+  nP : positive
+  ============================
+   (None = k)
+
+
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = None -> Nat.of_uint_acc d n = None -> Some n <= None
+  n : nat
+  k : positive
+  nP : positive
+  ============================
+   (None = k)
+
+
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = None -> Nat.of_uint_acc d n = None -> Some n <= None
+  n : nat
+  k : positive
+  nP : positive
+  ============================
+   (None = k)
+
+
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = None -> Nat.of_uint_acc d n = None -> Some n <= None
+  n : nat
+  k : positive
+  nP : positive
+  ============================
+   (None = k)
+
+
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = None -> Nat.of_uint_acc d n = None -> Some n <= None
+  n : nat
+  k : positive
+  nP : positive
+  ============================
+   (None = k)
+
+
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc

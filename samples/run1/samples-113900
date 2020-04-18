@@ -1,0 +1,87 @@
+======== SAMPLE 1 ========
+_trans H -> H -> False
+  H
+
+
+Debug: Going to execute:
+unfold not, iff;
+ repeat
+  match goal with
+  | |- context [ True -> False ] => rewrite not_true_iff
+  | |- context [ False -> False ] => rewrite not_false_iff
+  | |- context [ (?P -> False) -> False ] =>
+        rewrite (not_not_iff P) by dec
+  | |- context [ (?P -> False) -> ?Q -> False ] =>
+        rewrite (contrapositive P Q) by dec
+  | |- context [ (?P -> False) \/ ?Q ] => MSetLogicalFacts.or_not_l_iff P Q dec
+  | |- context [ ?P \/ (?Q -> False) ] => MSetLogicalFacts.or_not_r_iff P Q dec
+  | |- context [ (?P -> False) -> ?Q ] =>
+        rewrite (imp_not_l P Q) by dec
+  | |- context [ (?P -> False) /\ (?Q -> False) ] =>
+        rewrite <- (not_or_iff P Q)
+  | |- context [ ?P -> ?Q -> False ] => rewrite <- (not_and_iff P Q)
+  | |- context [ ?P /\ ?Q -> False ] => rewrite <- (not_imp_iff P Q) by dec
+  end
+
+
+TcDebug (1) > 
+Goal:
+  
+  s1 : t
+  s2 : t
+  H1 : compat_P Q
+  H2 : compat_ bool
+  H3 : compat_bool
+  H4 : exists x : Q, In x s2 /\ Q
+  H5 : (exists y : Q, Qabs (s2 + s1) <> Qabs x y)
+  ============================
+   (Qabs x y)
+
+
+Debug:
+Going to execute:
+repeat
+ match goal with
+ | |- context [ True -> False ] => rewrite not_true_iff
+ | |- context [ False -> False ] => rewrite not_false_iff
+ | |- context [ (?P -> False) -> False ] => rewrite (not_not_iff P) by dec
+ | |- context [ (?P -> False) -> ?Q -> False ] =>
+    match goal with
+    |- context [ True -> False ] => rewrite not_True_iff
+    |- context [ False -> False ] => rewrite not_false_iff
+ | |- context [ (?P -> False) -> ?Q =>
+       rewrite (contrapositive P Q) by dec
+    |- context [ (?P -> False) \/ ?Q ] => MSetLogicalFacts.or_not_l_iff P Q dec
+   | |- context [ ?P \/ (?Q -> False) ] => MSetLogicalFacts.or_not_r_iff P Q dec
+   | |- context [ (?P -> False) -> ?Q ] =>
+       rewrite (imp_not_l P Q) by dec
+    | |- context [ (?P -> False) /\ (?Q -> False) ] =>
+       rewrite <- (not_or_iff P Q)
+  | |- context [ ?P -> ?Q -> False ] => rewrite <- (not_and_iff P Q)
+  | |- context [ ?P /\ ?Q -> False ] => rewrite <- (not_imp_iff P Q) by dec
+  end
+
+
+TcDebug (1) > 
+Goal:
+  
+  s1 : t
+  s2 : t
+  H1 : compat_P Q
+  H2 : compat_ bool
+  H3 : compat_bool
+  H4 : exists x : Q, In x s2 /\ Q
+  H5 : (exists y : Q, Qabs (s2 + s1) <> Qabs x y)
+  ============================
+   (Qabs x y)
+
+
+Debug:
+Going to execute:
+match goal with
+| |- context [ True -> False ] => rewrite not_true_iff
+| |- context [ False -> False ] => rewrite not_false_iff
+end
+
+
+

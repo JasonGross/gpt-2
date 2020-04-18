@@ -1,0 +1,119 @@
+======== SAMPLE 1 ========
+Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall x : X.t, Ok l -> (split x l)#b = true <-> InT x l
+  IHr : forall x : X.t, Ok r -> (split x r)#b = true <-> InT x r
+  x : X.t
+  H0 : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H1 : InT x l
+  ============================
+   (Ok r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall x : X.t, Ok l -> (split x l)#b = true <-> InT x l
+  IHr : forall x : X.t, Ok r -> (split x r)#b = true <-> InT x r
+  x : X.t
+  H0 : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H1 : InT x l
+  ============================
+   (Ok r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall x : X.t, Ok l -> (split x l)#b = true <-> InT x l
+  IHr : forall x : X.t, Ok r -> (split x r)#b = true <-> InT x r
+  x : X.t
+  H0 : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H1 : InT x l
+  ============================
+   (Ok r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall x : X.t, Ok l -> (split x l)#b = true <-> InT x l
+  IHr : forall x : X.t, Ok r -> (split x r)#b = true <-> InT x r
+  x : X.t
+  H0 : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H1 : InT x l
+  ============================
+   (Ok r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall x : X.t, Ok l -> (split x l)#b = true <-> InT x l
+  IHr : forall x : X.t, Ok r -> (split x r)#b = true <-> InT x r
+  x : X.t
+  H0 : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 :

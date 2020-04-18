@@ -1,0 +1,56 @@
+======== SAMPLE 1 ========
+?of_N Qpower
+                     (2 # n :: 1 # p :: 1 # n :: nil) pe ==
+                 Ring_polynom.Pphi_pow 0 1 Qplus Qmult Qminus Qopp 0 1
+                      Qeq_bool (IDphi (R:=Q)) (rdepth 0) (rpow 0 1 Qplus Qmult Qminus Qopp 0 1
+                      (IDphi (R:=Q)) Z.of_N Qpower (get_sign_None (C:=Q))
+                     (2 # n :: 1 # p :: 1 # n :: nil) npe)%Q
+  ============================
+   (2 # n < -1 * (1 # p))%Q
+
+
+Debug: Going to execute:
+isQcst t
+
+
+TcDebug (15) > 
+Goal:
+  
+  xn : nat -> Q
+  p : positive
+  n : positive
+  xcau : ((2 # n) + (1 # p) <
+          (1 # n) + (1 # p)%Q)%Q
+  nmaj : ((2 # n) + (1 # p) <
+          Qabs (xn (Pos.to_nat n) + -1 * xn (Pos.to_nat p)))%Q
+  e : (2 # n < - xn (Pos.to_nat p))%Q
+  goal := False : Prop
+  list_hyp := nil : list (Ring_polynom.PExpr Q * Ring_polynom.PExpr Q)
+  list_hyp_norm := nil : list (Q * Ring_polynom.Mon * Ring_polynom.Pol Q)
+  ring_lemma : forall (pe : Ring_polynom.PExpr Q) (npe : Ring_polynom.Pol Q),
+               Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+                 (triv_div 0 1 Qeq_bool) ring_subst_niter list_hyp_norm pe =
+                npe ->
+                (Ring_polynom.PEeval 0 1 Qplus Qmult Qminus Qopp
+                    (IDphi (R:=Q)) Z.of_N Qpower (get_sign_None (C:=Q)) pe ==
+                  Ring_polynom.Pphi_pow 0 1 Qplus Qmult Qminus Qopp 0 1
+                    Qeq_bool (IDphi (R:=Q)) Z.of_N Qpower
+                   (get_sign_None (C:=Q)) (get_sign_None (C:=Q))
+                   (2 # n
+                    :: 1 # p :: 1 # p :: nil) npe)%Q
+  ============================
+   (2 # n < -1 * (1 # p))%Q
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | QArith_base.inject_Z ?z => isZcst z
+  | (?n # ?d)%Q =>
+      match isZcst n with
+      | true => isPcst d
+      | _ => constr:false
+      end
+  | _ => constr:false
+

@@ -1,0 +1,142 @@
+======== SAMPLE 1 ========
+ with
+TcDebug (19) > 
+Debug: Level 19: t
+ has value 
+0
+
+
+Goal:
+  
+  R : ConstructiveReals
+  xn : nat -> Q
+  x : CRcarrier R
+  q : Q
+  H : CR_cv R (fun n : nat => CR_of_Q R (xn n)) x
+  r : Q
+  H1 : q < r
+  H2 : CRlt R (CR_of_Q R r) x
+  p : positive
+  pmaj : / (r - q) < Z.pos p # 1
+  n : nat
+  ============================
+   (q + (-1 # p) + (-1 # p) + r - q <= 0 + r)
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (19) > 
+Debug: Level 19: t
+ has value 
+0
+
+
+Goal:
+  
+  R : ConstructiveReals
+  xn : nat -> Q
+  x : CRcarrier R
+  q : Q
+  H : CR_cv R (fun n : nat => CR_of_Q R (xn n)) x
+  r : Q
+  H1 : q < r
+  H2 : CRlt R (CR_of_Q R r) x
+  p : positive
+  pmaj : / (r - q) < Z.pos p # 1
+  n : nat
+  ============================
+   (q + (-1 # p) + (-1 # p) + r - q <= 0 + r)
+
+
+Debug: Going to execute:
+constr:false
+
+
+TcDebug (19) > 
+Debug: Evaluated term: false
+
+Debug: Evaluated term: false
+
+Debug: Level 18: evaluation returns
+false
+
+
+Debug: Level 17: isQcst t
+ has value 
+false
+
+
+Goal:
+  
+  R : ConstructiveReals
+  xn : nat -> Q
+  x : CRcarrier R
+  q : Q
+  H : CR_cv R (fun n : nat => CR_of_Q R (xn n)) x
+  r : Q
+  H1 : q < r
+  H2 : CRlt R (CR_of_Q R r) x
+  p : positive
+  pmaj : / (r - q) < Z.pos p # 1
+  n : nat
+  ============================
+   (q + (-1 # p) + (-1 # p) + r - q <= 0 + r)
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | inject_Z ?z => isZcst z
+  | (?n # ?d)%Q =>
+      match isZcst n with
+      | true => isPcst d
+      | _ => constr:false
+      end
+  | _ => constr:false
+  end
+
+
+TcDebug (17) > 
+Goal:
+  
+  R : ConstructiveReals
+  xn : nat -> Q
+  x : CRcarrier R
+  q : Q
+  H : CR_cv R (fun n : nat => CR_of_Q R (xn n)) x
+  r : Q
+  H1 : q < r
+  H2 : CRlt R (CR_of_Q R r) x
+  p : positive
+  pmaj : / (r - q) < Z.pos p # 1
+  n : nat
+  ============================
+   (q + (-1 # p) + (-1 # p) + r - q <= 0 + r)
+
+
+Debug:
+Going to execute:
+match t with
+| inject_Z ?z => isZcst z
+| (?n # ?d)%Q =>
+    match isZcst n with
+    | true => isPcst d
+    | _ => constr:false
+    end
+| _ => constr:false
+end
+
+
+TcDebug (17) > 
+Goal:
+  
+  R : ConstructiveReals
+  xn : nat -> Q
+  x : CRcarrier R
+  q : Q
+  H : CR_cv R (fun n : nat => CR_of_Q R (xn n)) x
+  r : Q
+  H

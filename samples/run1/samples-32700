@@ -1,0 +1,85 @@
+======== SAMPLE 1 ========
+ clause
+  rll : t elt'
+  rlx : key
+  rld : elt'
+  rlr : t elt''
+  _x3 : int
+  _x0 : X.lt x y
+  H : bst (Node l2 x2 rl2 x2 rld)
+  H4 : X.eq y x1
+  H2 : In y l2'
+  ============================
+   (X.eq y x1 \/ In y l2')
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (4) > 
+Debug: Level 4: X.lt y x1
+ has value 
+(bst l2')
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  x1 : X.t
+  d : elt
+  l1 : list (X.t * elt)
+  l2 : list (X.t * elt)
+  r1 : t elt
+  r2 : t elt
+  H0 : bst l1
+  H1 : bst r1
+  H2 : lt_tree x1 l1
+  H3 : gt_tree x1 r1
+  y : key
+  y : key
+  H7 : In y r2' -> In y m2 /\ X.lt y x1
+  H4 : X.eq y x1
+  H2 : In y l2'
+  ============================
+   (X.eq y x1 \/ In y l2')
+
+
+Debug:
+Going to execute:
+match goal with
+| H:?A -> False |- _ => change_no_check (MX.OrderTac.OTF.eq x y) in H; MX.OrderTac.order_prepare
+| H:~ ?R ?x ?y
+  |- _ =>
+     match R with
+      | MX.TO.eq => fail 1
+       | _ =>
+           change_no_check (MX.OrderTac.OTF.eq x y) in H ||
+            MX.OrderTac.order_prepare (MX.OrderTac.OTF.eq x y)
+       end
+  | MX.TO.lt => fail 1
+| MX.TO.le => fail 1
+| _ =>
+     match R with
+     | MX.TO.eq => fail 1
+      | MX.TO.lt => fail 1
+      | _ =>
+          change_no_check (MX.OrderTac.OTF.eq x y) in H ||
+            MX.OrderTac.order_prepare (MX.OrderTac.OTF.lt x y)
+      end
+| _ =>
+     change_no_check (MX.OrderTac.OTF.eq x y) in H ||
+          change_no_check (MX.OrderTac.OTF.lt x y) in H ||
+            change_no_check (MX.OrderTac.OTF.lt x y) in H || clear H || fail 1; MX.OrderTac.order_prepare
+      end
+| _ =>
+     match R with
+      | MX.TO.eq => fail 1
+      | MX.TO.lt => fail 1
+      | MX.TO.le => fail 1
+      | _ =>
+          change_no_check (MX.OrderTac.OTF.eq x y) in H ||
+           change_no_check (MX.OrderTac.OTF.lt x y) in H ||
+            change_no_check (MX.OrderTac.OTF.lt x y) in H ||
+             change_no_check (MX.OrderTac.OTF.le x y) in H || clear H ||

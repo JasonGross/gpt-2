@@ -1,0 +1,82 @@
+======== SAMPLE 1 ========
+ env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  a : list (Term' * Annot)
+  f : cnf
+  H0 : make_conj (eval_tt env) a -> False
+  H1 : make_conj (eval_clause env) f
+  ============================
+   (~ make_conj (eval_tt env) a /\ make_conj (eval_clause env) f)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  a : list (Term' * Annot)
+  f : cnf
+  H0 : make_conj (eval_tt env) a -> False
+  H1 : make_conj (eval_clause env) f
+  ============================
+   (~ make_conj (eval_tt env) a /\ make_conj (eval_clause env) f)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                     eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  a : list (Term' * Annot)
+  f : cnf
+  H0 : make_conj (eval_tt env) a -> False
+  H1 : make_conj (eval_clause env) f
+  ============================
+   (~ make_conj (eval_tt env) a /\ make_conj (eval_clause env) f)
+
+
+Debug: Going to execute:
+<Coq.Init.T

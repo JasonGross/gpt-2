@@ -1,0 +1,111 @@
+======== SAMPLE 1 ========
+ : Type ] =>
+        generalize (Private_OrderTac.Tac.lt_le_rec => Reqe),
+           generalize (Private_OrderTac.Tac.le_neq_lt => Reqe),
+            generalize (Private_OrderTac.Tac.neq_lt_lt => Reqe),
+             generalize (Private_OrderTac.Tac.lt_le_trans H1 H2); intro;
+             Private_OrderTac.Tac.order_loop
+       end
+| H1:?x <= ?y, H2:?y < ?z
+  |- _ =>
+      match goal with
+      | H:x < z |- _ => fail 1
+      | _ =>
+          generalize (Private_OrderTac.Tac.le_lt_trans H1 H2); intro;
+           Private_OrderTac.Tac.order_loop
+      end
+| H1:?x < ?y, H2:?y <= ?z
+  |- _ =>
+      match goal with
+      | H:x < z |- _ => fail 1
+      | _ =>
+          generalize (Private_OrderTac.Tac.lt_le_trans H1 H2); intro;
+           Private_OrderTac.Tac.order_loop
+      end
+| H1:?x <= ?y, H2:?y <= ?z
+  |- _ =>
+      match goal with
+      | H:x <= z |- _ => fail 1
+      | _ =>
+          generalize (Private_OrderTac.Tac.le_trans H1 H2); intro;
+           Private_OrderTac.Tac.order_loop
+      end
+| _ => idtac
+end
+
+
+TcDebug (4) > 
+Goal:
+  
+  a : t
+  Ha : 0 < a
+  b : t
+  Hb : log2 a == b
+  H : log2 a < b
+  H0 : b < log2 a
+  H1 : b < 0
+  H2 : 0 <= log2 a
+  n : t
+  H4 : n < 0
+  H5 : 0 <= log2 a
+  H3 : 0 < b
+  ============================
+   False
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (5) > 
+Debug: Level 5: t
+ has value 
+a
+
+
+Goal:
+  
+  a : t
+  Ha : 0 < a
+  b : t
+  Hb : log2 a == b
+  H : log2 a < b
+  H0 : b < log2 a
+  H1 : b < 0
+  H2 : 0 <= log2 a
+  n : t
+  H4 : n < 0
+  H5 : 0 <= log2 a
+  H3 : 0 < b
+  ============================
+   False
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (5) > 
+Goal:
+  
+  a : t
+  Ha : 0 < a
+  b : t
+  Hb : log2 a == b
+  H : log2 a < b
+  H0 : b < log2 a
+  H1 : b < 0
+  H2 : 0 <= log2 a
+  n : t
+  H4 : n < 0
+  H5 : 0 <= log2 a
+  H3 : 0 < b
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+(apply Private_OrderTac.Tac.not_neq_eq; intro) ||
+  (apply Private_OrderTac.Tac.not_ge_lt; intro) ||
+    (apply Private_OrderTac.Tac

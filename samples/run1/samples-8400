@@ -1,0 +1,75 @@
+======== SAMPLE 1 ========
+) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  h : int
+  _x : int
+  y : key
+  H0 : In y r
+  ============================
+   (X.eq y x \/ In y h)
+
+
+Debug:
+Going to execute:
+match t with
+| rO => fun _ => Ring_polynom.PEO
+| rI => fun _ => Ring_polynom.PEI
+| radd ?t1 ?t2 =>
+    fun _ => let e1 := mkP t1 in
+         let e2 := mkP t2 in
+         Ring_polynom.PEadd e1 e2
+| rmul ?t1 ?t2 =>
+    fun _ => let e1 := mkP t1 in
+                 Ring_polynom.PEmul e1
+| rsub ?t1 ?t2 =>
+    fun _ => let e1 := mkP t1 in
+                       Ring_polynom.PEsub e1
+| ropp ?t1 =>
+    fun _ => let e1 := mkP t1 in
+                  Ring_polynom.PEopp e1
+| rdiv ?t1 ?t2 =>
+    fun _ => let e1 := mkP t1 in
+                 Ring_polynom.PEdiv e1
+| rinv ?t1 ?t2 =>
+    fun _ => let e1 := mkP t1 in
+                   Ring_polynom.PEinv e1
+| rle ?t1 ?t2 =>
+    fun _ => let e1 := mkP t1 in
+                  Ring_polynom.PEle e1
+| rlt ?t1 ?t2 =>
+    fun _ => let e1 := mkP t1 in
+                     Ring_polynom.PElt e1
+| rx ?t1 ?t2 =>
+    fun _ => let e1 := mkP t1 in
+                   Ring_polynom.PEax e1
+| rle ?t1 ?t2 =>
+    fun _ => let e1 := mkP t1 in
+                     Ring_polynom.PElt e1
+| rle_l?t1 =>
+    fun _ => let e1 := mkP t1 in
+                  Ring_polynom.PElt e1
+| rle_r?t1 =>
+    fun _ => let e1 := mkP t1 in
+                  Ring_polynom.PEle_r rl
+| rlt_e ?t1 ?n =>
+    match Cst t with
+    | NotConstant =>
+        fun _ => let p := Find_at t fv in
+                     Ring_polynom.PEX C p
+    | ?c => fun _ => let e1 := mkP t1 in
+                      Ring_polynom.PEc c
+    end
+| _ => fun _ => let p := Find_at t fv in
+          Ring_polynom.PEc c
+| _ => fun _ => PEc fun _ => X.eq x fnil
+| _ => PEc fun _ => solve [ inversion l; do 2 intro; use strict; repeat

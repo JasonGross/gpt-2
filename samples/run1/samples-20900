@@ -1,0 +1,56 @@
+======== SAMPLE 1 ========
+v : Term',
+            find x (Term' * Annot) = Some x -> negb c (Node c1 l1 d1 r1 _x)
+  H : find x (Term' * Annot) = Some d1 -> negb c (Node c1 l1 d1 r1 _x)
+  ============================
+   (inter l1 d1 r1 (Node c1 l1 d1 r1 _x) ->
+    (forall x y0 : A, Node (bst l1 d1 r1 _x) ->
+    Some e = Some y0 ->
+    forall x y1 : A, Node (bst (Node l1 d1 r1 _x) ->
+    Some e = Some y1 -> Bst l1 -> Bst r1 -> Node (l1 d1 r1 _x) l1 ++ x y1 ++ e
+  e : Bst l1
+  H' : bst l2'
+  H'1 : bst (Node l2'
+  H'2 : bst (Node l2'
+  H'3 : bst (Node l2'
+  H'4 : Bst l2' ->
+          find x (Node l2' x2 d2 r2 _x) = Some x
+          match find x (Node l2' x2 d2 r2 _x) with
+          | Some d => f0 x (Some d) None
+           | None => None
+            end) f0 x None
+  l : X.lt x1 x2 d2 r2
+  H2 : forall y z0 z1 : A,
+        bst l1 ->
+        bst l2' ->
+        In y l1 ->
+        (Node (split x1 l1 into 2 x2 d2 r2 _x) ->
+        In y l2' ->
+         In y r2' ->
+         In y m2 ->
+         find y (Node (split x1 l1 into 2 x2 d2 r2 _x) x2 d2 r2 _x) =
+        (forall y z0 z1 : A,
+         bst l1 ->
+         bst l2' ->
+         In y l1 ->
+         match find x (Node l1 x1 l2' with
+           | Some d => f0 x None (Some d)
+           | None => None
+            end) f0 x None
+  l1 : X.t
+  l2 : X.t
+  r2 : tree
+  Hl1 : InT x l1
+  IH : forall (x : X.t) (d : elt) (r : t elt),
+        IHAdd rr ->
+        (forall d' : X.t, Some d' -> InT x l2' <-> InT x (Node (split x1 l1 into 2 x2 d2 r2 _x) r2') ->
+        InT x (split x1 l1 into 2 x2 d2 r2 _x)
+        d' = Some d'
+  IHi1 : forall y : X.t,
+        InT x l1 ->
+        (forall d' : X.t, Some d' -> InT x (Node (split x1 l1 into 2 x2 d2 r2 _x) r2') ->
+        InT x (split x1 l1 into 2 x2 d2 r2 _x)
+        d' = Some d'
+  y : A
+  H1 : InT x l1
+ 

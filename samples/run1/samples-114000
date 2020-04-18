@@ -1,0 +1,84 @@
+======== SAMPLE 1 ========
+ acc -> eval' env t0
+  H3 : eval_opt_clause env (add_term t cl) -> eval' env t0
+  ============================
+   (eval_clause env ((t :: a :: cl) :: acc)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : (Term' * Annot)%type
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  t0 : Term'
+  H : deduce (fst t) (fst a) = Some t0
+  H0 : unsat t0 = false
+  H1 : eval' env (fst t) -> eval' env (fst a) -> eval' env t0
+  H3 : eval_opt_clause env (add_term t cl) -> eval' env t0
+  ============================
+   (eval_clause env ((t :: a :: cl) :: acc)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : (Term' * Annot)%type
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  t0 : Term'
+  H : deduce (fst t) (fst a) = Some t0
+  H0 : unsat t0 = false
+  H1 : eval' env (fst t) -> eval' env (fst a) -> eval' env t0
+  H3 : eval_opt_clause env (add_term t cl) -> eval' env t0
+  ============================
+   (eval_clause env ((t :: a :: cl) :: acc)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+T

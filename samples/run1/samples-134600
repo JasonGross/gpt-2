@@ -1,0 +1,87 @@
+======== SAMPLE 1 ========
+:
+  
+  w1 : ZWitness
+  w2 : ZWitness
+  LT : Zdivide_pol w1 w2
+  Hg1 : Zwemaker -> Zgluid_gen
+  Hg2 : forall n : Z, 1 <= n < w1 * pag2 n
+  Hg3 : n = w1 * pag2 n
+  Hg4 : n < w1 * pag2 n -> False
+  Hg0 : 0 < w1 * pag2 n
+  H1 : ZChecker ((PsubC Z.sub p1 w1, Equal) :: l) w1 = true
+  H : (PsubC Z.sub p1 w1, Equal) :: l = true
+  ============================
+   (p1 = ?p2)%positive = true
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.simplif> flags;
+ <Coq.Init.Tauto.axioms> flags ||
+   match reverse goal with
+   | id:(?X1 -> ?X2) -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (X1 -> X2);
+             [ exact
+             id
+             | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear
+                id; (solve [ t_tauto_intuit ]) ] ]
+   | id:~ ?X1 -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (~ X1);
+             [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+   | |- ?X1 =>
+         <Coq.Init.Tauto.is_disj> flags X1; (solve
+          [ left; t_tauto_intuit | right; t_tauto_intuit ])
+   end ||
+     match goal with
+     | |- _ -> _ => intro; t_tauto_intuit
+     | |- _ => t_reduce; t_solver
+     end || t_solver
+
+
+TcDebug (5) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  w1 : ZWitness
+  w2 : ZWitness
+  LT : Zdivide_pol w1 w2
+  Hg1 : Zwemaker -> Zgluid_gen
+  Hg2 : forall n : Z, 1 <= n < w1 * pag2 n
+  Hg3 : n = w1 * pag2 n
+  Hg4 : n = w1 * pag2 n -> False
+  Hg0 : 0 < w1 * pag2 n
+  H1 : ZChecker ((PsubC Z.sub p1 w1, Equal) :: l) w1 = true
+  H : (PsubC Z.sub p1 w1, Equal) :: l = true
+  ============================
+   (p1 = ?p2)%positive = true
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.simplif> flags
+
+
+TcDebug (0) > 
+Goal:
+  
+  w1 : ZWitness
+  w2 : ZWitness
+  LT : Zdivide_pol w1 w2
+  Hg1 : Zwemaker -> Zgluid_gen
+  Hg2 : forall n : Z, 1 <= n < w1 * pag2 n
+  Hg3 : n = w1 * pag2 n
+  Hg4 : n = w1 * pag2 n -> False
+

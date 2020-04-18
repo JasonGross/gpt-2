@@ -1,0 +1,73 @@
+======== SAMPLE 1 ========
+MX.eq_trans (MX.Peq q1 q2) a -> False) ->
+      InA eqke (x, e) (elements_aux nil s2) ->
+      InA eqke (x, e) (elements_aux nil s2)
+  ============================
+   (MapsTo x e s /\ InA eqke (x, e) (elements_aux nil s2))
+
+
+Debug:
+Going to execute:
+match goal with
+| |- ?X1 -> ?X2 => intro
+| |- ~ _ => unfold not at 1; intro
+end
+
+
+TcDebug (0) > 
+Debug: Level 0: No matching clauses for match.
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  unsat : forall x : elt, eval' x <-> eval' x''
+  x : elt
+  H : InA eqke (x, e) (elements s) -> ~ In x s
+  H1 : (forall x0 : elt, In x0 s -> InA eqke (x, e) (elements s)) -> forall x0 : elt, InA eqke (x, e) (elements s)
+  H2 : InA eqke (x, e) (elements s) -> InA eqke (x, e) (elements s)
+  H3 : InA eqke (x, e) (elements s)
+  ============================
+   (MapsTo x e s /\ InA eqke (x, e) (elements_aux nil s2))
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:?X1
+  |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+| id:_ <-> _ |- _ => elim id; do 2 intro; clear id
+| id:~ _ |- _ => red in id
+| id:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+| id0:?X1 -> ?X2, id1:?X1 |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+| id:?X1 -> ?X2
+  |- _ =>
+      <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+      [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+| id:?X1 <-> ?X2 -> ?X3
+  |- _ =>
+      assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+       (do 2 intro; apply id; split; assumption); clear id
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+| |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+| |- _ <-> _ => split
+| |- ~ _ => red
+end; <Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (0) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  unsat : forall x : elt, eval' x <-> eval' x''
+  x : elt
+  H : InA eqke (x, e) (elements s) -> ~ In x s
+  H1 : (forall x0 : elt, In x0 s -> InA eqke (x, e) (elements s)) -> forall x0 : elt, InA eqke (x, e) (elements s)
+  H2 : InA eqke (x, e) (elements s) -> InA eqke (x, e) (elements s)
+  H3 : In

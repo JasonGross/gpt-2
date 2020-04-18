@@ -1,0 +1,107 @@
+======== SAMPLE 1 ========
+ d' : uint  d'' : uint
+  r : tree
+  IHopp r : (rh -> a) -> r
+  H : forall y : positive,
+      r <=? r = ?rg :=== ring_morph r
+  ============================
+   (forallb_eq : Ring_polynom.norm_subst r x y -> r = hd * (rec rh) * (g r + r hd))
+
+
+Debug:
+Going to execute:
+match goal with
+| H:f ?s |- _ => is_tree_constr s; inversion_clear H; inv_ok
+| H:f _ ?s |- _ => is_tree_constr s; inversion_clear H; inv_ok
+| H:f _ _ ?s |- _ => is_tree_constr s; inversion_clear H; inv_ok
+| H:f _ _ _ ?s |- _ => is_tree_constr s; inversion_clear H; inv_ok
+| H:f ?s |- _ => is_tree_constr s; inversion_clear H; inv_ok
+| H:f _ ?s |- _ => is_tree_constr s; inversion_clear H; inv_ok
+| _ => idtac
+end
+
+
+TcDebug (1) > 
+Goal:
+  
+  ============================
+   (forall f : Ring_polynom.PExpr Z,
+     R (f x + mem x s) (R:(f x * 1) ^^ p) -> r = hd)
+
+
+Debug:
+Going to execute:
+match goal with
+| H:f ?s |- _ => is_tree_constr s; inversion_clear H; inv_ok
+| H:f ?s |- _ => is_tree_constr s; inversion_clear H; inv_ok
+| H:f _ ?s |- _ => is_tree_constr s; inversion_clear H; inv_ok
+| H:f _ _ ?s |- _ => is_tree_constr s; inversion_clear H; inv_ok
+| H:f ?s |- _ => is_tree_constr s; inversion_clear H; inv_ok
+| H:f ?s |- _ => is_tree_constr s; inversion_clear H; inv_ok
+| H:f ?s |- _ => is_tree_constr s; inversion_clear H; inv_ok
+| H:f ?s |- _ => is_tree_constr s; inversion_clear H; inv_ok
+| _ => idtac
+end
+
+
+TcDebug (2) > 
+Goal:
+  
+  ============================
+   (forall f : Ring_polynom.PExpr Z,
+     R (f x + mem x s) (R:(f x * 1) ^^ p) -> r = hd)
+
+
+Debug: Going to execute:
+idtac
+
+
+TcDebug (4) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ============================
+   (forall f : Ring_polynom.PExpr Z,
+     R (f x + mem x s) (R:(f x * 1) ^^ p) -> r = hd)
+
+
+Debug: Going to execute:
+idtac
+
+
+TcDebug (0) > 
+Goal:
+  
+  ============================
+   (forall f : Ring_polynom.PExpr Z,
+     R (f x + mem x s) (R:(f x * 1) ^^ p) -> r = hd)
+
+
+Debug: Going to execute:
+Ring_polynom.Mon * Ring_polynom.Pol
+
+
+TcDebug (0) > 
+Debug: Evaluated term: ring_polynom.mon
+
+Debug: Level 0: Found no morph morph
+
+Debug: Level 0: Found no morph morph
+
+Debug: Level 0: No applicable tactic.
+
+Goal:
+  
+  ============================
+   (forall f : Ring_polynom.PExpr Z

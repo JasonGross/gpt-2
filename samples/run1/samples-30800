@@ -1,0 +1,158 @@
+======== SAMPLE 1 ========
+l : tree
+  y : elt
+  H0 : X.eq y lx
+  ============================
+   (InT y lx)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  i : Info.t
+  lrx : O.t
+  lrd : R.t
+  lrr : R.t
+  x : X.t
+  r : tree
+  y : elt
+  H0 : X.eq y lx
+  ============================
+   (InT y lx)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : Info.t
+  lrx : O.t
+  lrd : R.t
+  lrr : R.t
+  x : X.t
+  r : tree
+  y : elt
+  H0 : X.eq y lx
+  ============================
+   (InT y lx)
+
+
+Debug: Going to execute:
+solve [ left; t_tauto_intuit | right; t_tauto_intuit ]
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : Info.t
+  lrx : O.t
+  lrd : R.t
+  lrr : R.t
+  x : X.t
+  r : tree
+  y : elt
+  H0 : X.eq y lx
+  ============================
+   (InT y lx)
+
+
+Debug: Going to execute:
+left; t_tauto_intuit
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : Info.t
+  lrx : O.t
+  lrd : R.t
+  lrr : R.t
+  x : X.t
+  r : tree
+  y : elt
+  H0 : X.eq y lx
+  ============================
+   (InT y lx)
+
+
+Debug: Going to execute:
+left
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : Info.t
+  lrx : O.t
+  lrd : R.t
+  lrr : R.t
+  x : X.t
+  r : tree
+  y : elt
+  H0 : X.eq y lx
+  ============================
+   (InT y lx)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::left@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  i : Info.t
+  lrx : O.t
+  lrd : R.t
+  lrr : R.t
+  x : X.t
+  r : tree
+  y : elt
+  H0 : X.eq y lx
+  ============================
+   (InT y lx)
+
+
+Debug: Going to execute:
+t_tauto_intuit
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : Info.t
+  lrx : O.t
+  lrd : R.t
+  lrr : R.t
+  x : X.t
+  r : tree
+  y : elt
+  H0 : X.eq y lx
+  ============================
+   (InT y lx)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.simplif> flags;
+ <Coq.Init.Tauto.axioms> flags ||
+   match reverse goal with
+  | id:(?X1 -> ?X2) -> ?X3
+   |- _ =>
+       cut X3;
+        [ intro; clear id; t_tauto_intuit
+        | cut (X1 -> X2);
+           [ exact
+           id
+           | generalize (fun y : X2 => id (fun x : X1

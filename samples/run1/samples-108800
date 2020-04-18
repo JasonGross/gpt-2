@@ -1,0 +1,160 @@
+======== SAMPLE 1 ========
+ e' : elt
+  H4 : X.eq y m#1
+  ============================
+   (In y l')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  _x0 : height r <= height l + 2
+  y : key
+  H : In y r
+  ============================
+   (X.eq y m#1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  _x0 : height r <= height l + 2
+  y : key
+  H : In y r
+  ============================
+   (X.eq y m#1)
+
+
+Debug: Going to execute:
+solve [ left; t_tauto_intuit | right; t_tauto_intuit ]
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  _x0 : height r <= height l + 2
+  y : key
+  H : In y r
+  ============================
+   (X.eq y m#1)
+
+
+Debug: Going to execute:
+left; t_tauto_intuit
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  _x0 : height r <= height l + 2
+  y : key
+  H : In y r
+  ============================
+   (X.eq y m#1)
+
+
+Debug: Going to execute:
+left
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  _x0 : height r <= height l + 2
+  y : key
+  H : In y r
+  ============================
+   (X.eq y m#1)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::left@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  _x0 : height r <= height l + 2
+  y : key
+  H : In y r
+  ============================
+   (X.eq y m#1)
+
+
+Debug: Going to execute:
+t_tauto_intuit
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  _x0 : height r <= height l + 2
+  y : key
+  H : In y r
+  ============================
+   (X.eq y m#1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.simplif> flags;
+ <Coq.Init.Tauto.axioms> flags ||
+   match reverse goal with
+   | id:(?X1 -> ?X2) -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_t

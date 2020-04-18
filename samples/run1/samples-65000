@@ -1,0 +1,122 @@
+======== SAMPLE 1 ========
+
+#! E.eq x y
+  | _ =>
+      rewr H (Private_OrderTac.Tac.neq_eq H eqn);
+       Private_OrderTac.Tac.order_rewr x eqn
+| H:_ == x
+  | _ =>
+      rewr H (Private_OrderTac.Tac.eq_le (Private_OrderTac.Tac.eq_sym eqn) H);
+       Private_OrderTac.Tac.order_rewr x eqn
+| H:x ~= y
+  | _ =>
+      rewr H (Private_OrderTac.Tac.eq_neq (Private_OrderTac.Tac.eq_sym eqn) H);
+       Private_OrderTac.Tac.order_rewr x eqn
+| H:_ ~= x
+  | _ =>
+      rewr H (Private_OrderTac.Tac.neq_eq H eqn);
+       Private_OrderTac.Tac.order_rewr x eqn
+| H:x < y
+  | _ =>
+      rewr H (Private_OrderTac.Tac.eq_lt (Private_OrderTac.Tac.eq_sym eqn) H);
+       Private_OrderTac.Tac.order_rewr x eqn
+| H:_ < y
+  | _ =>
+      rewr H (Private_OrderTac.Tac.lt_eq H eqn);
+       Private_OrderTac.Tac.order_rewr x eqn
+| H:x <= y  | _ =>
+      rewr H (Private_OrderTac.Tac.eq_le (Private_OrderTac.Tac.eq_sym eqn) H);
+       Private_OrderTac.Tac.order_rewr x eqn
+| H:_ <= y
+  | _ =>
+      rewr H (Private_OrderTac.Tac.le_eq H eqn);
+       Private_OrderTac.Tac.order_rewr x eqn
+| _ => clear eqn
+end
+
+
+TcDebug (11) > 
+Goal:
+  
+  R : ConstructiveReals
+  x : t
+  y : t
+  H : y == x
+  ============================
+   (y == x)
+
+
+Debug:
+Going to execute:
+rewr H (Private_OrderTac.Tac.le_eq H eqn);
+ Private_OrderTac.Tac.order_rewr x eqn
+
+
+TcDebug (12) > 
+Goal:
+  
+  R : ConstructiveReals
+  x : t
+  y : t
+  H : y == x
+  ============================
+   (y == x)
+
+
+Debug: Going to execute:
+rewr H (Private_OrderTac.Tac.le_eq H eqn)
+
+
+TcDebug (12) > 
+Debug: Evaluated term: (Private_OrderTac.Tac.le_eq H h)
+
+Goal:
+  
+  R : ConstructiveReals
+  x : t
+  y : t
+  H : y == x
+  ============================
+   (y == x)
+
+
+Debug: Going to execute:
+generalize t; clear H; intro H
+
+
+TcDebug (13) > 
+Debug: Level 12: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  R : ConstructiveReals
+  x : t
+  y : t
+  H : y == x
+  ============================
+   (y == x)
+
+
+Debug: Going to execute:
+generalize t; clear H
+
+
+TcDebug (11) > 
+Goal:
+  
+  R : ConstructiveReals
+  x : t
+  y : t
+  H : y == x
+  ============================
+   (y == x)
+
+
+Debug: Going to execute:
+generalize t
+
+
+TcDebug (11) > 
+Debug: Evaluated term: (Private_OrderTac.

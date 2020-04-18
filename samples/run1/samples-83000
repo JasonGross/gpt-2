@@ -1,0 +1,151 @@
+======== SAMPLE 1 ========
+env@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  _x0 : height r <= height l + 2
+  H1 : In x l
+  H2 : In x (add x s)
+  H3 : In x (add x s)
+  H4 : In x (add x s)
+  ============================
+   (In x l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  _x0 : height r <= height l + 2
+  H1 : In x l
+  H2 : In x (add x s)
+  H3 : In x (add x s)
+  H4 : In x (add x s)
+  ============================
+   (In x l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  _x0 : height r <= height l + 2
+  H1 : In x l
+  H2 : In x (add x s)
+  H3 : In x (add x s)
+  H4 : In x (add x s)
+  ============================
+   (In x l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  _x0 : height r <= height l + 2
+  H1 : In x l
+  H2 : In x (add x s)
+  H3 : In x (add x s)
+  H4 : In x (add x s)
+  ============================
+   (In x l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  _x0 : height r <= height l + 2
+  H1 : In x l
+  H2 : In x (add x s)
+  H3 : In x (add x s)
+  H4 : In x (add x s)
+  ============================
+   (In x l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  _x0 : height r <= height l + 2
+  H1 : In x l
+  H2 : In x (add x s)
+  H3 : In x (add x s)
+  H4 : In x (add x s)
+  ============================
+   (In x l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+

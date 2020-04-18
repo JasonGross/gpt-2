@@ -1,0 +1,116 @@
+======== SAMPLE 1 ========
+ :  (X.t1 :: mon | X.t2 _; X.eq _; I.eX1 | I.eq _) => X3
+  I.e0 |     : match reverse 1 with InA X1 | InA X2 | InA X1 => I.e0 | X.eq X1 -> InA X1
+  
+ 
+  H : InA X0
+  H1 : InA X0 -> X.eq X0
+  I : X.lt X0
+  H3 : InA X0 -> X.eq X0
+  H0 : InA x0
+  H : X1
+  H0' : InA x
+  H1 : X.lt X0
+  H0' : InA x1
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  X1 : Type
+  A2 : Type
+  A3 : Type
+  IHv : (type A' = Some other) X1 ->
+          Hv' := InA X1  X2
+             (X.eq _; I.eq _) => (X' = Some other)
+  H : InA x0
+  H1 : X.lt X0
+  H1' : InA x0
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  X1 : Type
+  A2 : Type
+  A3 : Type
+  IHv : (type A' = Some other) X1 ->
+          Hv' := InA X1  X2
+              (X.eq _; I.eq _) => (X' = Some other)
+  H : InA x0
+  H1 : X.lt X0
+  H1' : InA x0
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  X1 : Type
+  A2 : Type
+  A3 : Type
+  IHv : (type A' = Some other) X1 ->
+            Hv' := InA X1  X2
+                (X.eq _; I.eq _) => (X' = Some other)
+  H : InA x0
+  H1 : X.lt X0
+  H1' : InA x0
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0@times 20>
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  X1 : Type
+  A2 : Type
+  A3 : Type
+  IHv : (type A' = Some other) X1 ->
+          Hv' := InA X1  X2
+              (X.eq _; I.eq _) => (X' = Some other)
+  H : InA x0
+  H1 : X.lt X0
+  H1' : InA x0
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0@times 20>'
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  X1 : Type
+  A2 : Type
+  A3 : Type
+  IHv : (type A' = Some other) X1 ->
+           Hv' := InA X1
+              (

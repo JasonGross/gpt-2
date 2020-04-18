@@ -1,0 +1,97 @@
+======== SAMPLE 1 ========
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  m : elt
+  e1 : remove_min l2 x2 r2 = (s2', m)
+  y : elt
+  s1 : tree
+  H : InT y s1
+  ============================
+   (X.eq y m)
+
+
+Debug: Going to execute:
+OrderTac.order_prepare
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  l2 : t elt
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  m : elt
+  e1 : remove_min l2 x2 r2 = (s2', m)
+  y : elt
+  s1 : tree
+  H : InT y s1
+  ============================
+   (X.eq y m)
+
+
+Debug:
+Going to execute:
+match goal with
+| H:?A -> False |- _ => change_no_check (~ A) in H; OrderTac.order_prepare
+| H:~ ?R ?x ?y
+  |- _ =>
+      match R with
+      | OrderTac.OTF.eq => fail 1
+      | _ =>
+          change_no_check (~ OrderTac.OTF.eq x y) in H ||
+            apply OrderTac.not_gt_le in H ||
+              apply OrderTac.not_ge_lt in H || clear H || fail 1;
+           OrderTac.order_prepare
+      end
+| H:?R ?x ?y
+  |- _ =>
+      match R with
+      | OrderTac.OTF.eq => fail 1
+      | OrderTac.OTF.lt => fail 1
+      | OrderTac.OTF.le => fail 1
+      | _ =>
+          change_no_check (OrderTac.OTF.eq x y) in H ||
+            change_no_check (OrderTac.OTF.lt x y) in H ||
+               change_no_check (OrderTac.OTF.le x y) in H || clear H || fail 1;
+           OrderTac.order_prepare
+      end
+| |- ~ _ => intro; OrderTac.order_prepare
+| |- _ ?x ?x =>
+      exact (OrderTac.eq_refl x) || exact (OrderTac.le_refl x) || exfalso
+| _ =>
+    (apply OrderTac.not_neq_eq; intro) ||
+      (apply OrderTac.not_ge_lt; intro) ||
+        (apply OrderTac.not_gt_le; intro) || exfalso
+end
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  l2 : t elt
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  m : elt
+  e1 : remove_min l2 x2 r2 = (s2', m)
+  y : elt
+  s1 : tree
+  H : InT y s1
+  ============================
+   (X.eq y m)
+
+
+Debug:
+Going to execute:
+match R with
+| OrderTac.OTF.eq => fail 1
+| OrderTac.OTF.lt => fail 1
+| OrderTac.OTF.le => fail 1
+| _ =>
+    change_no_check (~ OrderTac.OTF.eq x y) in H ||
+      change_no_check (OrderTac.OTF.lt x y) in H ||
+        change_no_check (OrderTac.OTF.le

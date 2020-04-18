@@ -1,0 +1,84 @@
+======== SAMPLE 1 ========
+TcDebug (8) > 
+Goal:
+  
+  i : Color.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok (Rd ll lx lr) ->
+        InT y (del x (Rd ll lx lr)) <->
+        InT y (Rd ll lx lr) /\ (X.eq y x -> False)
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (del x r) <-> InT y r /\ (X.eq y x -> False)
+  x : X.t
+  y : elt
+  H0 : X.lt x x'
+  H6 : Ok r
+  H7 : lt_tree x' (Rd ll lx lr)
+  H8 : gt_tree x' r
+  H1 : X.eq y x'
+  H : X.eq y x
+  H10 : Ok ll
+  H11 : Ok lr
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.simplif> flags
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : Color.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok (Rd ll lx lr) ->
+        InT y (del x (Rd ll lx lr)) <->
+        InT y (Rd ll lx lr) /\ (X.eq y x -> False)
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (del x r) <-> InT y r /\ (X.eq y x -> False)
+  x : X.t
+  y : elt
+  H0 : X.lt x x'
+  H6 : Ok r
+  H7 : lt_tree x' (Rd ll lx lr)
+  H8 : gt_tree x' r
+  H1 : X.eq y x'
+  H : X.eq y x
+  H10 : Ok ll
+  H11 : Ok lr
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+fun flags =>
+  <Coq.Init.Tauto.not_dep_intros>;
+   repeat
+    (match reverse goal with
+     | id:?X1
+       |- _ =>
+           <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+     | id:_ <-> _ |- _ => elim id; do 2 intro; clear id
+     | id:~ _ |- _ => red in id
+     | id:?X1
+       |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+     | id0:?X1 -> ?X2, id1:?X1
+       |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+     | id:?X1 -> ?X2
+       |- _ =>
+           <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+            [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+     | id:?X1 -> ?X2
+       |- _ => <Coq.Init

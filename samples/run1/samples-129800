@@ -1,0 +1,141 @@
+======== SAMPLE 1 ========
+
+  ============================
+   (to_N y = N.pos (xI (xI (xI (xI (xI (xI (xO (xO xO xH))))))))))
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (4) > 
+Debug: Level 4: t
+ has value 
+(Raw.Inj xI (xI (xI (xI (xI (xI (xI xI xI))))))))
+
+
+Goal:
+    x : nat  y : nat  l : tree  H : false = true
+  ============================
+   (to_N y = N.pos (xI (xI (xI (xI (xI (xO (xO xH))))))))))
+
+
+Debug: Going to execute:
+check_is_list l
+
+
+TcDebug (4) > 
+Goal:
+    x : nat  y : nat  l : tree  H : false = true
+  ============================
+   (to_N y = N.pos (xI (xI (xI (xI (xO (xO xH))))))))
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | (?p~1)%positive => isPcst p
+  | (?p~0)%positive => isPcst p
+  | 1%positive => true
+  | Pos.of_succ_nat ?n => isnatcst n
+  | _ => false
+  end
+
+
+TcDebug (5) > 
+Goal:
+    x : nat  y : nat  l : tree  H : false = true
+  ============================
+   (to_N y = N.pos (xI (xI (xI (xI (xO (xO xH))))))))
+
+
+Debug:
+Going to execute:
+match t with
+| (?p~1)%positive => isPcst p
+| (?p~0)%positive => isPcst p
+| 1%positive => true
+| Pos.of_succ_nat ?n => isnatcst n
+| _ => false
+end
+
+
+TcDebug (5) > 
+Goal:
+    x : nat  y : nat  l : tree  H : false = true
+  ============================
+   (to_N y = N.pos (xI (xI (xI (xI (xO (xO xH))))))))
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (6) > 
+Debug: Level 6: t
+ has value 
+(xI (xI (xI (xI (xO (xO xH)))))))
+
+
+Goal:
+    x : nat  y : nat  l : tree  H : false = true
+  ============================
+   (to_N y = N.pos (xI (xI (xI (xO (xO xH))))))))
+
+
+Debug: Going to execute:
+false
+
+
+TcDebug (6) > 
+Debug: Evaluated term: false
+
+Debug: Level 5: evaluation returns
+false
+
+
+Debug: Level 4: evaluation returns
+false
+
+
+Debug: Level 3: isNcst t
+ has value 
+false
+
+
+Goal:
+    x : nat  y : nat  l : tree  H : false = true
+  ============================
+   (to_N y = N.pos (xI (xI (xI (xO (xO xH))))))))
+
+
+Debug: Going to execute:
+NotConstant
+
+
+TcDebug (4) > 
+Debug: Evaluated term: NotConstant
+
+Debug: Level 3: evaluation returns
+NotConstant
+
+
+Debug: Level 2: Cst t
+ has value 
+NotConstant
+
+
+Goal:
+    x : nat  y : nat  l : tree  H : false = true
+  ============================
+   (to_N y = N.pos (xI (xI (xI (xO (xO xH))))))))
+
+
+Debug:
+Going to execute:
+match t with
+| rO => fun _ => Ring_polynom.PEO
+| rI => fun _ => Ring_polynom.PEI
+| radd ?t1 ?t2 =>
+ 

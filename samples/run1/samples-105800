@@ -1,0 +1,79 @@
+======== SAMPLE 1 ========
+re_refl x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f : option elt -> option elt' -> option elt''
+  k : X.t
+  e : elt
+  m : list (X.t * elt)
+  IHm : Sorted (ltk (elt:=elt)) m ->
+        forall m' : list (X.t * elt'),
+        Sorted (ltk (elt:=elt')) m' ->
+        forall x : key,
+        find (elt:=oee') x (combine m m') =
+        at_least_one (find (elt:=elt) x m) (find (elt:=elt') x m')
+  Hm : Sorted (ltk (elt:=elt)) ((k, e) :: m)
+  k' : X.t
+  e' : elt'
+  m' : list (X.t * elt')
+  IHm' : Sorted (ltk (elt:=elt')) m' ->
+         forall x : key,
+         find (elt:=oee') x (combine ((k, e) :: m) m') =
+         at_least_one (find (elt:=elt) x ((k, e) :: m))
+           (find (elt:=elt') x m')
+  Hm' : Sorted (ltk (elt:=elt')) ((k', e') :: m')
+  x : key
+  H1 : Sorted (ltk (elt:=elt)) m
+  H2 : HdRel (ltk (elt:=elt)) (k, e) m
+  H5 : Sorted (ltk (elt:=elt')) m'
+  H6 : HdRel (ltk (elt:=elt')) (k', e') m'
+  l : TO.lt k' k
+  l0 : TO.lt x k
+  H : TO.lt k' x
+  ============================
+   (None = at_least_one None None)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f : option elt -> option elt' -> option elt''
+  k : X.t
+  e : elt
+  m : list (X.t * elt)
+  IHm : Sorted (ltk (elt:=elt)) m ->
+        forall m' : list (X.t * elt'),
+        Sorted (ltk (elt:=elt')) m' ->
+        forall x : key,
+        find (elt:=oee') x (combine m m') =
+        at_least_one (find (elt:=elt) x m) (find (elt:=elt') x m')
+  Hm : Sorted (ltk (elt:=elt)) ((k, e) :: m)
+  k' : X.t
+  e' : elt'
+  m' : list (X.t * elt')
+  IHm' : Sorted (ltk (elt:=elt')) m' ->
+         forall x : key,
+         find (elt:=oee') x (combine ((k, e) :: m) m') =
+         at_least_one (find (elt:=elt) x ((k, e) :: m))
+           (find (elt

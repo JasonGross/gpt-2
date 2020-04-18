@@ -1,0 +1,164 @@
+======== SAMPLE 1 ========
+
+
+Debug: Going to execute:
+rewrite IHp1, IHp1_n, IHp1_r; apply IHp1_l
+
+
+TcDebug (0) > 
+Goal:
+    s : t
+  ============================
+   (s [=] s [])
+
+
+Debug: Going to execute:
+rewrite IHp1, IHp1_n, IHp1_r
+
+
+TcDebug (0) > 
+Debug: Evaluated term: IHp1_n
+
+Debug: Evaluated term: IHp1_n
+
+Debug: Evaluated term: IHp1_r
+
+Goal:
+    s : t  H : singleton s [=] singleton s
+  ============================
+   (s [=] s [])
+
+
+Debug: Going to execute:
+apply Zle_l
+
+
+TcDebug (0) > 
+Debug: Evaluated term: Zle_l
+
+Debug: Evaluated term: Zle_l
+
+Goal:
+    s : t  H : singleton s [=] singleton s
+  ============================
+   (s [=] s [])
+
+
+Goal:
+    s : t  H : singleton s [=] singleton s
+  ============================
+   (s [=] singleton s)
+
+
+Debug: Going to execute:
+rewrite f_minus
+
+
+TcDebug (0) > 
+Goal:
+    s : t  H : singleton s [=] singleton s
+  ============================
+   (s [=] s [])
+
+
+Debug: Going to execute:
+apply Zle_list
+
+
+TcDebug (0) > 
+Debug: Evaluated term: Zle_list
+
+Debug: Evaluated term: Zle_list
+
+Goal:
+    s : t  H : singleton s [=] singleton s
+  ============================
+   (s [=] s [])
+
+
+Goal:
+    s : t  H : singleton s [=] singleton s
+  ============================
+   (x [=] s [])
+
+
+Debug: Going to execute:
+apply Z_le
+
+
+TcDebug (0) > 
+Debug: Evaluated term: Z_le
+
+Goal:
+    x : t  H : singleton s
+  ============================
+   (x [=] s [=] x [=] s)
+
+
+Goal:
+    s : t  H : singleton s [=] singleton s
+  ============================
+   (x x [=] s)
+
+
+Debug: Going to execute:
+apply (Zle_list (S s) a)
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (Zlt_list (S s) a)
+
+Goal:
+    x : t  H : singleton s [=] singleton s
+  ============================
+   (0 <= x)
+
+
+Goal:
+    s : t  H : singleton s [=] singleton s
+  ============================
+   (0 <= x~0)
+
+
+Debug: Going to execute:
+apply (Zle_list (S s) a)
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (Zle_list (S s) a))
+
+Debug: Evaluated term: (zle_list (S s) a)
+
+Debug: Evaluated term: zle_list_nth_d
+
+Debug: Evaluated term: Zle_list_nth_d
+
+Goal:
+    s : t  H : singleton s  ============================
+   (x -> bool -> s [=] s)
+
+Debug: Going to execute:
+apply le_le_list
+
+
+TcDebug (0) > 
+Debug: Evaluated term: le_le_list
+
+Debug: Evaluated term: le_le_list
+
+Goal:
+    s : t  H : singleton s  ============================
+   (x -> bool -> s [=] s)
+
+
+Debug: Going to execute:
+apply le_lt_list
+
+
+TcDebug (0) > 
+Debug: Evaluated term: le_lt_list
+
+Debug: Evaluated term: le_lt_list
+
+Goal:
+    s : t 

@@ -1,0 +1,93 @@
+======== SAMPLE 1 ========
+ Q ==> x0 ==> x1) r1)
+       (projT1 (existT (fun morph : A -> B => (R ==> R') morph morph) y X4)
+         y0)
+        (projT1 (existT (fun morph : A -> B => (R ==> R') morph morph) z X2)
+          y0)
+  X0 : A
+  y0 : A
+  X1 : R x1 y1
+  ============================
+   (R'
+      (projT1 (existT (fun morph : A -> B => (R ==> R') morph morph) x X4) x0)
+      (projT1 (existT (fun morph : A -> B => (R ==> R') morph morph) z X2) y0))
+
+
+Debug: Going to execute:
+assert X2; [ exact (id0 id1) | clear id0 ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : crelation A
+  eqa : Equivalence R
+  B : Type
+  R' : crelation B
+  eqb : Equivalence R'
+  x : A -> B
+  X4 : (R ==> R') x x
+  y : A -> B
+  X3 : (R ==> R') y y
+  z : A -> B
+  X2 : (R ==> R') z z
+  X : forall x0 y0 : A,
+      R x0 y0 ->
+      R'
+        (projT1 (existT (fun morph : A -> B => (R ==> R') morph morph) x X4) x0)
+        (projT1 (existT (fun morph : A -> B => (R ==> R') morph morph) y X4) y0)
+  X0 : A
+  y0 : A
+  X1 : R x1 y1
+  ============================
+   (R'
+      (projT1 (existT (fun morph : A -> B => (R ==> R') morph morph) x X4) x0)
+      (projT1 (existT (fun morph : A -> B => (R ==> R') morph morph) z X2) y0))
+
+
+Debug: Going to execute:
+assert X2; [ exact (id0 id1) | clear id0 ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : crelation A
+  eqa : Equivalence R
+  B : Type
+  R' : crelation B
+  eqb : Equivalence R'
+  x : A -> B
+  X4 : (R ==> R') x x
+  y : A -> B
+  X3 : (R ==> R') y y
+  z : A -> B
+  X2 : (R ==> R') z z
+  X : forall x0 y0 : A,
+      R x0 y0 ->
+      R'
+        (projT1 (existT (fun morph : A -> B => (R ==> R') morph morph) x X4) x0)
+        (projT1 (existT (fun morph : A -> B => (R ==> R') morph morph) y X4) y0)
+  X0 : A
+  y0 : A
+  X1 : R x1 y1
+  ============================
+   (R'
+      (projT1 (existT (fun morph : A -> B => (R ==> R') morph morph) x X4) x0)
+      (projT1 (existT (fun morph : A -> B => (R ==> R') morph morph) z X2) y0))
+
+
+Debug: Going to execute:
+assert X2
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (R x x0)
+
+Goal:
+  
+  A : Type
+  R : crelation A
+  eqa : Equivalence

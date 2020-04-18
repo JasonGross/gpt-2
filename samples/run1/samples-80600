@@ -1,0 +1,71 @@
+======== SAMPLE 1 ========
+n, 0 == n + (1 + n)) -> 0 == n + (n + n))
+
+
+Debug:
+Going to execute:
+intros; Private_OrderTac.Tac.order_prep; Private_OrderTac.Tac.order_loop;
+ fail (0 <= c)
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : positive
+  pf : ZArithProof
+  H : forall y : ZArithProof,
+      ltof ZArithProof bdepth y (Private_OrderTac.Tac.compare z1 z)
+  l := fun pf : ZArithProof => Constructive ltac:(fun _ => nfe2) (fcons pf)
+      in z1 :: ltof ZArithProof
+  ============================
+   (bdepth 0 <= 0 ->
+    (q1 < q2 - q1 -> q2 <= q2 - q1 -> (q1 + 1)%positive -> (q2 < q1)%positive) ->
+    (q2 <= q1 - q1 -> q1 <= q2 - q2 -> (q1 + 1)%positive ->
+    (q1 <= q2 - q1 -> q1 <= q2 - q2 -> (q1 + 1)%positive ->
+    q1 < q2 - q0)%positive)
+
+
+Debug:
+Going to execute:
+intros; Private_OrderTac.Tac.order_prepare; Private_OrderTac.Tac.order_loop
+
+
+TcDebug (0) > 
+Goal:
+  
+  _x : positive
+  pf : ZArithProof
+  H : forall y : ZArithProof,
+      ltof ZArithProof bdepth y (Private_OrderTac.Tac.compare z1 z)
+  l := fun pf : ZArithProof => Constructive ltac:(fun _ => nfe2) (fcons pf)
+      in z1 :: ltof ZArithProof
+  ============================
+   (bdepth 0 <= 0 ->
+    (q1 < q2 - q1 -> q2 <= q2 - q1 -> (q1 + 1)%positive -> (q2 < q1)%positive) ->
+    (q2 <= q1 - q1 -> q1 <= q2 - q2 -> (q1 + 1)%positive ->
+    q1 <= q2 - q1 -> q1 <= q2 - q2 -> (q1 + 1)%positive ->
+    (q1 <= q2 - q1 -> q1 <= q2 - q2 -> (q1 + 1)%positive ->
+    q1 <= q2 - q1 -> q1 <= q2 - q2 -> (q1 + 1)%positive ->
+    q1 < q2 - q1 -> q1 <= q2 - q2 -> (q1 + 1)%positive ->
+    q1 <= res1_1)%Q
+
+
+Debug: Going to execute:
+intros; Private_OrderTac.Tac.order_prepare
+
+
+TcDebug (0) > 
+Goal:
+  
+  _x : positive
+  pf : ZArithProof
+  H : forall y : ZArithProof,
+      ltof ZArithProof bdepth y (Private_OrderTac.Tac.compare z1 z)
+  l := fun pf : ZArithProof => Constructive ltac:(fun _ => nfe2) (fcons pf)
+      in z1 :: ltof ZArithProof
+  ============================
+   (bdepth 0 <= 0 ->
+    (q1 < q2 - q1 -> q2 <= q2 - q1 -> (q1 + 1)%positive -> (q2 < q1)%positive) ->
+    (q1 <= q2 - q1 -> q1 <= q2 - q2 -> (q1 + 1)%positive ->
+    q1 <= q2 - q1 -> q1 <= q2 - q2 -> (q1 + 1)%positive ->
+    l <= (q2 - q1) + (q2 - q1) in (q

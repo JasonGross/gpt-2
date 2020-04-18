@@ -1,0 +1,76 @@
+======== SAMPLE 1 ========
+  m2 : t elt'
+  m3 : t elt''
+  x : key
+  y : key
+  e : elt
+  H : Equal m2 (add x e m)
+  H0 : NoDup l2 (add x e m)
+  H1 : NoDup l1 (add x e m)
+  H2 : forall y : key, In y l2' <-> In y m2 /\ X.lt y x
+  H3 : forall y : key, In y r2' <-> In y m2 /\ X.lt x y
+  H5 : forall y : key, In y r2' <-> In y m2 /\ X.lt x y
+  H6 : bst l1 -> bst l2'
+  H7 : bst r1
+  H8 : lt_tree x1 l1
+  H9 : gt_tree x1 r1
+  H10 : bst l2'
+  H11 : bst r2'
+  H12 : lt_tree x1 l2'
+  H13 : gt_tree x1 r2'
+  H4 : Ok l1
+  H5 : Ok r1
+  H9 : gt_tree x1 l1
+  H10 : bst l2'
+  H12 : bst r1
+  H13 : gt_tree x1 l2'
+  H4 : Ok l2
+  H5 : Ok r2
+  H9 : gt_tree x1 l2'
+  H10 : bst l2'
+  H12 : bst r2'
+  H13 : gt_tree x1 r2'
+  H2 : forall y : key, In y l2' <-> In y m2 /\ X.lt y x
+  H3 : forall y : key, In y r2' <-> In y m2 /\ X.lt x y
+  H6 : bst l1
+  H11 : bst r1
+  H10 : bst l2'
+  H12 : bst r2'
+  H13 : gt_tree x1 l2'
+  H4 : Ok l2
+  H5 : Ok r2
+  H9 : gt_tree x1 l2'
+  H10 : bst l2'
+  H12 : bst r1
+  H13 : gt_tree x1 l2'
+  H2 : forall y : key, In y l2' <-> In y m2 /\ X.lt y x
+  H3 : forall y : key, In y r2' <-> In y m2 /\ X.lt x y
+  H6 : bst l1
+  H11 : bst r1
+  H10 : bst l2'
+  H12 : bst r2'
+  H13 : gt_tree x1 l2'
+  H4 : Ok l2
+  H5 : Ok r2
+  H9 : gt_tree x1 l2'
+  H12 : bst r1
+  H13 : gt_tree x1 l2'
+  H2 : forall y : key, In y l2' <-> In y m2 /\ X.lt y x
+  H3 : forall y : key, In y r2' <-> In y m2 /\ X.lt x y
+  H6 : bst l1
+  H11 : bst r1
+  H13 : gt_tree x1 l2'
+  H2 : forall y : key, In y l2' <-> In y m2 /\ X.lt x y
+  H3 : forall y : key, In y r2' <-> In y m2 /\ X.lt x y
+  H6 : bst l1
+  H11 : bst r1
+  H10 : bst l2'
+  H12 : bst r2'
+  H13 : gt_tree x1 l2'
+  H4 : Ok l2
+  H5 : Ok r2
+  H9 : gt_tree x1 l2'
+  H12 : bst r1
+  H13 : gt_tree x1 l2'
+  H2 : forall y : key, In y l2' <-> In y m2 /\ X.lt x y
+  H3 : forall y : key, In y r2' <

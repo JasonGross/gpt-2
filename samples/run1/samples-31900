@@ -1,0 +1,139 @@
+======== SAMPLE 1 ========
+  (X.eq y x0 /\ False)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+    y : X.t  y0 : X.t  X.t  H : X.eq y x
+  ============================
+   (X.eq y x0 /\ False)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+    y : X.t  y0 : X.t  H : X.eq y x
+  ============================
+   (X.eq y x0 /\ False)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+    y : X.t  y0 : X.t  H : X.eq y x
+  ============================
+   (X.eq y x0 /\ False)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+    y : X.t  y0 : X.t  H : X.eq y x
+  ============================
+   (X.eq y x0 /\ False)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+    y : X.t  y0 : X.t  H : X.eq y x
+  ============================
+   (X.eq y x0 /\ False)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+    y : X.t  y0 : X.t  H : X.eq y x
+  ============================
+   (X.eq y x0 /\ False)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+    y : X.t  y0 : X.t  H : X.eq y x
+  ============================
+   (X.eq y x0 /\ False)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+    y : X.t  y0 : X.t  H : X.eq y x
+  ============================
+   (X.eq y x0 /\ False)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+    y : X.t  y0 : X.t  H : X.eq y x
+  ============================
+   (X.eq y x0 /\ False)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+    y : X.t  y0 : X.t  H : X.eq y x
+  ============================
+   (X.eq y x0 /\ False)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+    y : X.t  y0 : X.t  H : X.eq y x
+  ============================
+   (X.eq y x0 /\ False)
+
+
+Debug: Going to execute:
+fun t

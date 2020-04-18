@@ -1,0 +1,101 @@
+======== SAMPLE 1 ========
+) ~= 0 \/ ~ Eq = Gt
+  H0 : In a s' -> False
+  H1 : Eq = Gt -> False
+  H2 : In a s -> False
+  ============================
+   ((In a s /\ ~ Eq ~= 0 -> In a s' /\ ~ Eq) /\
+    (In a (add x s) /\ ~ Eq = 0 -> In a s' /\ ~ Eq))
+
+
+Debug: Going to execute:
+intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : E.t
+  H : In x s
+  a : E.t
+  H5 : False -> In x s /\ False
+  H4 : Eq = Eq
+  H0 : In a s' -> False
+  H1 : Eq = Gt -> False
+  H2 : In a s -> False
+  ============================
+   ((In a s /\ ~ Eq ~= 0 -> In a s' /\ ~ Eq) /\
+    (In a (add x s) /\ ~ Eq = 0 -> In a s' /\ ~ Eq))
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@0>
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : E.t
+  H : In x s
+  a : E.t
+  H5 : False -> In x s /\ False
+  H4 : Eq = Eq
+  H0 : In a s' -> False
+  H1 : Eq = Gt -> False
+  H2 : In a s -> False
+  H3 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+Private_OrderTac.Tac.order_loop
+
+
+TcDebug (0) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : E.t
+  H : In x s
+  a : E.t
+  H5 : False -> In x s /\ False
+  H4 : Eq = Eq
+  H0 : In a s' -> False
+  H1 : Eq = Gt -> False
+  H2 : In a s -> False
+  H3 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match goal with
+| H:?x < ?x |- _ => exact (Private_OrderTac.Tac.lt_irrefl H)
+| H:?x ~= ?x |- _ => exact (H (Private_OrderTac.Tac.eq_refl x))
+| H:?x <= ?x |- _ => clear H; Private_OrderTac.Tac.order_loop
+| H:?x == ?y
+  |- _ =>
+      Private_OrderTac.Tac.order_eq x y H; Private_OrderTac.Tac.order_loop
+| H1:?x <= ?y, H2:?y <= ?x
+  |- _ =>
+      generalize (Private_OrderTac.Tac.le_antisym H1 H2); clear H1 H2; intro;
+       Private_OrderTac.Tac.order_loop
+| H1:?x <= ?y, H2:?x ~= ?y
+  |- _ =>
+      generalize (Private_OrderTac.Tac.le_neq_lt H1 H2); clear H1 H2; intro;
+       Private_OrderTac.Tac.order_loop
+| H1:?x <= ?y, H2:?y ~= ?x
+  |- _ =>
+      generalize
+       (Private_OrderTac.Tac.le_neq_lt H1 (Private_OrderTac.Tac.neq_sym H2));
+       clear H1 H2; intro; Private_OrderTac.Tac.order_loop
+| H1:?x < ?y, H2:?y < ?z
+  |- _ =>
+      match goal with

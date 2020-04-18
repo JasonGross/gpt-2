@@ -1,0 +1,127 @@
+======== SAMPLE 1 ========
+ _x ll lx (Node _x0 lrl lrx lrr))) = true
+  e1 : (height (Node _x0 lrl lrx lrr) <=? height ll) = false
+  y : elt
+  H0 : X.eq y x
+  ============================
+   (X.eq y x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  _x0 : I.t
+  lrl : tree
+  lrx : X.t
+  lrr : tree
+  e : (height r + 2 <? height (Node _x ll lx (Node _x0 lrl lrx lrr))) = true
+  e1 : (height (Node _x0 lrl lrx lrr) <=? height ll) = false
+  y : elt
+  H0 : X.eq y x
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  _x0 : I.t
+  lrl : tree
+  lrx : X.t
+  lrr : tree
+  e : (height r + 2 <? height (Node _x ll lx (Node _x0 lrl lrx lrr))) = true
+  e1 : (height (Node _x0 lrl lrx lrr) <=? height ll) = false
+  y : elt
+  H0 : X.eq y x
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  _x0 : I.t
+  lrl : tree
+  lrx : X.t
+  lrr : tree
+  e : (height r + 2 <? height (Node _x ll lx (Node _x0 lrl lrx lrr))) = true
+  e1 : (height (Node _x0 lrl lrx lrr) <=? height ll) = false
+  y : elt
+  H0 : X.eq y x
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  _x0 : I.t
+  lrl : tree
+  lrx : X.t
+  lrr : tree
+  e : (height r + 2 <? height (Node _x ll lx (Node _x0 lrl lrx lrr))) = true
+  e1 : (height (Node _x0 lrl lrx lrr) <=? height ll) = false
+  y : elt
+  H0 : X.eq y x
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  _x0 : I.t
+  lrl : tree
+  lrx : X.t
+  lrr : tree
+  e : (height r + 2 <? height (Node _x ll lx (Node _x0 lrl lrx lrr)))

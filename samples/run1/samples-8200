@@ -1,0 +1,105 @@
+======== SAMPLE 1 ========
+ env : list (NFormula Z) -> list (forall a : NFormula Z),
+         list (forall a z : NFormula Z) ->
+         list (forall a y : NFormula Z) -> list (forall a z : NFormula Z) ->
+         list (forall a z0 y : NFormula Z) -> list (forall a z0 z0 : NFormula Z) ->
+          list (forall a z : NFormula Z) ->
+          list (forall a z0 y0 : NFormula Z) -> list (forall a z0 z0 : NFormula Z) ->
+          [ exact z0 <- a | uniq z0 <- z0]
+
+
+Goal:
+  
+  num : Z
+  a : NFormula Z
+  z : positive
+  baz : positive
+  m' : Z
+  H0 : (NFormula Z)%Z =
+        (forall a : NFormula Z, (a = z) -> Z' -> Z' (Zabs Z 4) * Z' (Zabs Z 1))
+  ============================
+   (forall a z0, (Z' * Z' * Z'))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  num : Z
+  a : NFormula Z
+  z : positive
+  baz : positive
+  m' : Z
+  H0 : (NFormula Z)%Z =
+        (forall a : NFormula Z, (a = z) -> Z' -> Z' (Zabs Z 4) * Z' (Zabs Z 1))
+  ============================
+   (forall a z0, (Z' * Z' * Z'))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  num : Z
+  a : NFormula Z
+  z : positive
+  baz : positive
+  m' : Z
+  H0 : (NFormula Z)%Z =
+        (forall a : NFormula Z, (a = z) -> Z' -> Z' (Zabs Z 4) * Z' (Zabs Z 1))
+  ============================
+   (forall a z0, (Z' * Z' * Z'))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  num : Z
+  a : NFormula Z
+  z : positive
+  baz : positive
+  m' : Z
+  H0 : (NFormula Z)%Z =
+        (forall a : NFormula Z, (a = z) -> Z' -> Z' (Zabs Z 4) * Z' (Zabs Z 1))
+  ============================
+   (forall a z0, (Z' * Z' * Z'))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  num : Z
+  a : NFormula Z
+  z : positive
+  baz : positive
+  m' : Z
+  H0 : (NFormula Z)%Z =
+        (forall a : NFormula Z, (a = z) -> Z' -> Z' (Zabs Z 4) * Z' (Zabs Z 1))
+  ============================
+   (forall a z0, (Z' * Z' * Z'))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (

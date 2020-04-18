@@ -1,0 +1,132 @@
+======== SAMPLE 1 ========
+) \/
+   X.eq y x \/ In y l \/ X.eq y x' \/ In y r <->
+    In y (Node l y0 d' r h))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : int
+  _x : height (Node ll lx ld (Node lrl lrx lrd lrr _x2) _x0) > height r + 2
+  _x1 : height ll < height (Node lrl lrx lrd lrr _x2)
+  y : key
+  H0 : In y lrr
+  ============================
+   (In y lrr \/ In y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : int
+  _x : height (Node ll lx ld (Node lrl lrx lrd lrr _x2) _x0) > height r + 2
+  _x1 : height ll < height (Node lrl lrx lrd lrr _x2)
+  y : key
+  H0 : In y lrr
+  ============================
+   (In y lrr \/ In y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : int
+  _x : height (Node ll lx ld (Node lrl lrx lrd lrr _x2) _x0) > height r + 2
+  _x1 : height ll < height (Node lrl lrx lrd lrr _x2)
+  y : key
+  H0 : In y lrr
+  ============================
+   (In y lrr \/ In y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : int
+  _x : height (Node ll lx ld (Node lrl lrx lrd lrr _x2) _x0) > height r + 2
+  _x1 : height ll < height (Node lrl lrx lrd lrr _x2)
+  y : key
+  H0 : In y lrr
+  ============================
+   (In y lrr \/ In y r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x

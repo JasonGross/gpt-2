@@ -1,0 +1,136 @@
+======== SAMPLE 1 ========
+
+Debug: Level 1: cleb is used in hypothesis dec_bst.
+
+Debug: Level 1: cleb is used in hypothesis dec_bst.
+
+Goal:
+  
+  x1 : E.t
+  x2 : E.t
+  x3 : E.t
+  x4 : E.t
+  s1 : t
+  s2 : t
+  s3 : t
+  s4 : t
+  H1 : In x3 s2
+  H5 : In x1 s4
+  a : E.t
+  H7 : In a s1 -> False
+  H8 : In x1 s1 -> False
+  H9 : In x4 s1 -> False
+  H10 : In x3 s1 -> False
+  H11 : In x2 s1 -> False
+  H : E.eq x1 x2
+  H0 : In x4 s3
+  H4 : In a s4
+  H6 : E.eq x2 x3
+  H2 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x1 : E.t
+  x2 : E.t
+  x3 : E.t
+  x4 : E.t
+  s1 : t
+  s2 : t
+  s3 : t
+  s4 : t
+  H1 : In x3 s2
+  H5 : In x1 s4
+  a : E.t
+  H7 : In a s1 -> False
+  H8 : In x1 s1 -> False
+  H9 : In x4 s1 -> False
+  H10 : In x3 s1 -> False
+  H11 : In x2 s1 -> False
+  H : E.eq x1 x2
+  H0 : In x4 s3
+  H4 : In a s4
+  H6 : E.eq x2 x3
+  H2 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x1 : E.t
+  x2 : E.t
+  x3 : E.t
+  x4 : E.t
+  s1 : t
+  s2 : t
+  s3 : t
+  s4 : t
+  H1 : In x3 s2
+  H5 : In x1 s4
+  a : E.t
+  H7 : In a s1 -> False
+  H8 : In x1 s1 -> False
+  H9 : In x4 s1 -> False
+  H10 : In x3 s1 -> False
+  H11 : In x2 s1 -> False
+  H : E.eq x1 x2
+  H0 : In x4 s3
+  H4 : In a s4
+  H6 : E.eq x2 x3
+  H2 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x1 : E.t
+  x2 : E.t
+  x3 : E.t
+  x4 : E.t
+  s1 : t
+  s2 : t
+  s3 : t
+  s4 : t
+  H1 : In x3 s2
+  H5 : In x1 s4
+  a : E.t
+  H7 : In a s1 -> False
+  H8 : In x1 s1 -> False
+  H9 : In x4 s1 -> False
+  H10 : In x3 s1 -> False
+  H11 : In x2 s1 -> False
+  H : E.eq x1 x2
+  H0 : In x4 s3
+  H4 : In a s4
+  H6 : E.eq x2 x3
+  H2 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+Tc

@@ -1,0 +1,99 @@
+======== SAMPLE 1 ========
+ InT x lr
+  x : tree
+  H0 : InT x (Node c l x r)
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rl \/ X.eq x rx \/ InT x rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  c : Info.t
+  l : tree
+  x : X.t
+  rl : tree
+  x : X.t
+  rx : X.t
+  rr : tree
+  e : (height (Node c l x rl rx rr) + 2 <? height l) = false
+  e2 : (height (Node c l x rl rx rr) + 2 <? height l) = true
+  y : elt
+  H : InT y l \/ InT y (Node c l x rl rx rr)
+  ============================
+   ((InT y ll \/ X.eq y lx \/ InT y lr) \/ InT y rl \/ X.eq y rx \/ InT x rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  c : Info.t
+  l : tree
+  x : X.t
+  rl : tree
+  x : X.t
+  rx : X.t
+  rr : tree
+  e : (height (Node c l x rl rx rr) + 2 <? height l) = false
+  e2 : (height (Node c l x rl rx rr) + 2 <? height l) = true
+  y : elt
+  H : InT y l \/ InT y (Node c l x rl rx rr)
+  ============================
+   ((InT y ll \/ X.eq y lx \/ InT y lr) \/ InT y rl \/ X.eq y rx \/ InT x rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  c : Info.t
+  l : tree
+  x : X.t
+  rl : tree
+  x : X.t
+  rx : X.t
+  rr : tree
+  e : (height (Node c l x rl rx rr) + 2 <? height l) = false
+  e2 : (height (Node c l x rl rx rr) + 2 <? height l) = true
+  y : elt
+  H : InT y l \/ InT y (Node c l x rl rx rr)
+  ============================
+   ((InT y ll \/ X.eq y lx \/ InT y lr) \/ InT y rl \/ X.eq y rx \/ InT x rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  c : Info.t
+  l : tree
+  x : X.t
+  rl : tree
+  x : X.t
+  rx : X.t
+  rr : tree
+  e : (height (Node c l x rl rx rr) + 2 <? height l) = false
+  e2 : (height (Node c l x rl rx rr) + 2 <? height l) = true
+  y : elt
+  H : InT y l \/ InT y (Node c l x rl rx rr)
+  ============================
+   ((InT y ll \/ X.eq y lx \/ InT y lr) \/ InT y rl \/ X.eq y rx \/ InT x rr)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 =>

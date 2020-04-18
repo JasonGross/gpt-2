@@ -1,0 +1,96 @@
+======== SAMPLE 1 ========
+ : NFormula -> Prop
+  EQ : check_inconsistent (p, o) = true
+  H4 : snd_sym = snd_sym
+  H3 : eval_op1 snd_sym = << l, o, r >>
+  H0 : eval_cnf eval (xcnf false false) = true
+  H1 : eval_op1 (fun x : NFormula => eval_nformula env x -> False) (eval env) l -> False
+  ============================
+   (eval_op1 (fun x : NFormula => eval_nformula env x -> False) (eval env) l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  C : Type
+  R : Type
+  ring0 : C
+  ring1 : C
+  add : C -> C -> C
+  mul : C -> C -> C
+  sub : C -> C -> C
+  opp : C -> C
+  ring_eq : C -> C -> Prop
+  Ro : Ring_ops
+  Cr : Ring
+  ring2 : R
+  ring3 : R
+  add0 : R -> R -> R
+  mul0 : R -> R -> R
+  sub0 : R -> R -> R
+  opp0 : R -> R
+  ring_eq0 : R -> R -> Prop
+  Ro0 : Ring_ops
+  Rr : Ring
+  Rh0 : Bracket C R
+  Rh : Ring_morphism
+  phiCR_comm : forall (c : C) (x : R), x * [c] == [c] * x
+  Ceqb : C -> C -> bool
+  Ceqb_eq : forall x y : C, Ceqb x y = true -> x == y
+  Cpow : Set
+  Cp_phi : N -> Cpow
+  rpow : R -> Cpow -> R
+  pow_th : power_theory Cp_phi rpow
+  subst_l := fun P : Pol => P : Pol -> Pol
+  Pmul_subst := fun P1 P2 : Pol => subst_l (P1 ** P2) : Pol -> Pol -> Pol
+  Ppow_subst := Ppow_N subst_l : Pol -> N -> Pol
+  l : list R
+  pe2 : PExpr C
+  n : NFormula
+  IHmul_1 : forall (l : list R) (x : NFormula),
+              PCond l (Rx l) ->
+              PCond l (x, l) -> if (y (ins x l)) + (1 # x) * x
+               PCond l l' : forall x y : R, (x ** y) * z == x ** y + z * z
+  l' : list R
+  e1 : Psatz
+  H : forall a : C, a == 0 -> (a / 2 ^ b == a * a * 1 + b * b)
+  H0 : eval_nformula env (p, o)
+        (1 # x)
+  ============================
+   (PCond 0 0)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  C : Type
+  R : Type
+  ring0 : C
+  ring1 : C
+  add : C -> C -> C
+  mul : C -> C -> C
+  sub : C -> C -> C
+  opp : C -> C
+  ring_eq : C -> C -> Prop
+  Ro : Ring_ops
+  Cr : Ring
+  ring2 : R
+  ring3 : R
+  add0 : R -> R -> R
+  mul0 : R -> R -> R
+  sub0 : R -> R -> R
+  opp0 : R -> R
+  ring_eq0 : R -> R -> Prop
+  Ro0 : Ring_ops
+  Rr : Ring
+  Rh0 : Bracket C R
+  Rh : Ring_morphism
+  phiCR_comm : forall (c :

@@ -1,0 +1,48 @@
+======== SAMPLE 1 ========
+ Annot) in intro; clear id
+     (S
+                        (S
+                        (S
+                         (S
+                           (S
+                              (S
+                                 (S
+                                      (S
+                                         |} s''))
+       (E
+              (S
+                (S
+                     (S
+                         (S
+                                (S
+                                      | E.eq y acc
+                               (S
+                                     (S
+                                          | E.eq y acc
+                                       (S
+                                            | E.eq y acc
+                                      | E.eq y le))) in
+     (E
+         match goal with
+        | (s
+          | Nil => S
+         | (s
+           | nil => S
+          | EQ _ =>
+             _ ÷ s
+          | rsub ==> ?X1 -> ?X3
+         | opp_reflexivity
+          | cleav_reflexivity
+           | ropp_reflexivity
+            | reflexivity
+            | productivity
+            | discriminate_conj
+            | have_disj
+            | apply (disj@0_0)
+            | equal
+            | _ => equal
+             end) f nil)
+
+
+TcDebug (15) > 
+

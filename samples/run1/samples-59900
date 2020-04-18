@@ -1,0 +1,129 @@
+======== SAMPLE 1 ========
+ InA a l
+  H1 : InA a l -> eqA a x \/ InA a l
+  H3 : InA a l' -> eqA a x \/ InA a l
+  H4 : eqA a x \/ InA a l'
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l' : list A
+  l'' : list A
+  x : A
+  y : A
+  H0 : eqA x y
+  H : InA a l'
+  H1 : InA a l -> eqA a x \/ InA a l
+  H3 : InA a l' -> eqA a x \/ InA a l
+  H4 : InA a l
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l' : list A
+  l'' : list A
+  x : A
+  y : A
+  H0 : eqA x y
+  H : InA a l'
+  H1 : InA a l -> eqA a x \/ InA a l
+  H3 : InA a l' -> eqA a x \/ InA a l
+  H4 : eqA a x \/ InA a l'
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l' : list A
+  l'' : list A
+  x : A
+  y : A
+  H0 : eqA x y
+  H : InA a l'
+  H1 : InA a l -> eqA a x \/ InA a l
+  H3 : InA a l' -> eqA a x \/ InA a l
+  H4 : InA a l
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l' : list A
+  l'' : list A
+  x : A
+  y : A
+  H0 : eqA x y
+  H : InA a l'
+  H1 : InA a l -> eqA a x \/ InA a l
+  H3 : InA a l' -> eqA a x \/ InA a l
+  H4 : InA a l
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l' : list A
+  l'' : list A
+  x : A
+  y : A
+  H0 : eqA x y
+  H : InA a l'
+  H1 : InA a l -> eqA a x \/ InA a l
+  H3 : InA a l

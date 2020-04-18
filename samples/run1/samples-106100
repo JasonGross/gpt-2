@@ -1,0 +1,74 @@
+======== SAMPLE 1 ========
+rewrite ring_subst_niter (lemma ring_subst_niter)
+            (gen_phiN 1 rmul (CR_of_Q R (CR_of_Q R (CR_of_Q R (CR_of_Q R 1)))))
+            :: yn (Pos.to_nat (2 * (3 * k))) :: 1 # 4)%Q
+  x : Q
+  H0 : (cvmod (x + (1 # 4))%positive <= x)%nat
+  H1 : (cvmod (x + (1 # 4)%positive <= x)%nat
+  ============================
+   (x < -1 * yn (Pos.to_nat (2 * (3 * k))) + 1 * xn (Pos.to_nat (2 * (3 * k))) -
+    (xn (Pos.to_nat (2 * (3 * k))) + 1 * xn (Pos.to_nat (2 * (3 * k))) -
+    (yn (Pos.to_nat (2 * (3 * k))) + 1 * yn (Pos.to_nat (2 * (3 * k))) + 1)%Q
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | QArith_base.inject_Z ?z => isZcst z
+  | (?n # ?d)%Q =>
+      match isZcst n with
+      | true => isPcst d
+      | _ => constr:false
+      end
+  | _ => constr:false
+  end
+
+
+TcDebug (34) > 
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+  k : positive
+  H : (Qabs
+         (proj1_sig
+            (exist (fun x : nat -> Q => QCauchySeq x Pos.to_nat) xn limx)
+            (Pos.to_nat (2 * (3 * k))) -
+            proj1_sig
+             (exist (fun x : nat -> Q => QCauchySeq x Pos.to_nat) yn limy)
+             (Pos.to_nat (2 * (3 * k)))) <= 2 # 2 * (3 * k))%Q
+  p : nat
+  q : nat
+  H0 : (cvmod (x + (1 # 4))%positive <= x)%nat
+  H1 : (cvmod (x + (1 # 4)%positive <= x)%nat
+  ============================
+   (x < -1 * yn (Pos.to_nat (2 * (3 * k))) + 1 * xn (Pos.to_nat (2 * (3 * k))) -
+    (xn (Pos.to_nat (2 * (3 * k))) + 1 * xn (Pos.to_nat (2 * (3 * k)))) -
+    (yn (Pos.to_nat (2 * (3 * k))) + 1 * yn (Pos.to_nat (2 * (3 * k))) + 1)%Q
+
+
+Debug:
+Going to execute:
+match t with
+| QArith_base.inject_Z ?z => isZcst z
+| (?n # ?d)%Q =>
+    match isZcst n with
+    | true => isPcst d
+    | _ => constr:false
+    end
+| _ => constr:false
+end
+
+
+TcDebug (34) > 
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+  k : positive
+  H

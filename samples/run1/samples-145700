@@ -1,0 +1,154 @@
+======== SAMPLE 1 ========
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H0 : bst l
+  H2 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : In x l -> mem x l = true
+  H5 : In x r
+  ============================
+   (mem x l = true)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H0 : bst l
+  H2 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : In x l -> mem x l = true
+  H5 : In x r
+  ============================
+   (mem x l = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H0 : bst l
+  H2 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : In x l -> mem x l = true
+  H5 : In x r
+  ============================
+   (mem x l = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H0 : bst l
+  H2 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : In x l -> mem x l = true
+  H5 : In x r
+  ============================
+   (mem x l = true)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H0 : bst l
+  H2 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : In x l -> mem x l = true
+  H5 : In x r
+  ============================
+   (mem x l = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H0 : bst l
+  H2 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : In x l -> mem x l = true
+  H5 : In x r
+  ============================
+   (mem x l = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; split
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H0 : bst l
+  H2 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : In x l

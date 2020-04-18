@@ -1,0 +1,140 @@
+======== SAMPLE 1 ========
+ In t1 ->
+          t y a b
+  H1 : E.o := Et;n := H1
+  H2 : Ok := Ok.is_positive
+  H3 : Ok.eq_eup := I.is_positive
+  H4 : Ok.eq_eq_eup := I.is_sub
+  ============================
+   (fold_tree E_t E_s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  l : Type
+  a : Type
+  t : torsion
+  y : Some t
+  H1 : e1 -> e1 -> H2
+  H2 : e2 -> e2 -> H1
+  H : Ok := Ok.eq_eup
+  H3 : Ok.eq_eq_eup := I.is_sub
+  ============================
+   (fold_tree E_t E_s)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l : Type
+  a : Type
+  t : torsion
+  y : Some t
+  H1 : e1 -> e1 -> H2
+  H2 : e2 -> e2 -> H1
+  H : Ok := Ok.eq_eup
+  H3 : Ok.eq_eq_eup := I.is_sub
+  ============================
+   (fold_tree E_t E_s)
+
+
+Debug:
+Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l : Type
+  a : Type
+  t : torsion
+  y : Some t
+  H1 : e1 -> e1 -> H2
+  H2 : e2 -> e2 -> H1
+  H : Ok := Ok.eq_eup
+  H3 : Ok.eq_eq_eup := I.is_sub
+  ============================
+   (fold_tree E_t E_s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  l : Type
+  a : Type
+  t : torsion
+  y : Some t
+  H1 : e1 -> e1 -> H2
+  H2 : e2 -> e2 -> H1
+  H : Ok := Ok.eq_eup
+  H3 : Ok.eq_eq_eup := I.is_sub
+  ============================
+   (fold_tree E_t E_s)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  l : Type
+  a : Type
+  t : torsion
+  y : Some t
+  H1 : e1 -> e1 -> H2
+  H2 : e2 -> e2 -> H1
+  H : Ok := Ok.eq_eup
+  H3 : Ok.eq_eq_eup := I.is_sub
+  ============================
+   (fold_tree E_t E_s)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  l : Type
+  a : Type
+  t : torsion
+  y : Some t
+  H1 : e1 -> e1 -> H2
+  H2 : e2 -> e2 -> H1
+  H : Ok := Ok.eq_eup
+  H3 : Ok.eq_eq_eup := I.is_sub
+  ============================
+   (fold_tree E_t E_s)
+
+
+Debug:
+Going to execute:
+fun tauto_flags

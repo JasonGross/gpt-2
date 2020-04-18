@@ -1,0 +1,128 @@
+======== SAMPLE 1 ========
+  H3 : Inx.eq x y -> InT x lr \/ InT x rl
+  H5 : InT x b
+  H4 : InT x lr
+  H0 : InT x a
+  H : InT x lr
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rl \/ X.eq x rx \/ InT x rr)
+
+
+Debug: Going to execute:
+left; t_tauto_intuit
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H6 : InT x a
+  H2 : InT x lr \/ InT x rl
+  H3 : Inx x y -> InT x lr \/ InT x rl
+  H5 : InT x b
+  H4 : InT x lr
+  H0 : InT x a
+  H : InT x lr
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rl \/ X.eq x rx \/ InT x rr)
+
+
+Debug: Going to execute:
+left
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H6 : InT x a
+  H2 : InT x lr \/ InT x rl
+  H3 : Inx x y -> InT x lr \/ InT x rl
+  H5 : InT x b
+  H4 : InT x lr
+  H0 : InT x a
+  H : InT x lr
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rl \/ X.eq x rx \/ InT x rr)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::left@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H1 : InT x lr \/ InT x rl
+  H5 : InT x b
+  H4 : InT x lr
+  H0 : InT x a
+  H : InT x lr
+  a : tree
+  y : X.t
+  b : tree
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x lr)
+
+
+Debug: Going to execute:
+t_tauto_intuit
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H1 : InT x lr \/ InT x rl
+  H5 : InT x b
+  H4 : InT x lr
+  H0 : InT x a
+  H : InT x lr
+  a : tree
+  y : X.t
+  b : tree
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x lr)
+
+
+Debug:
+Going

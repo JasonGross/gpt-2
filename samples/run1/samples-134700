@@ -1,0 +1,116 @@
+======== SAMPLE 1 ========
+minus acc) =>
+             if exist (fun x : elt => mem x l = true) x then add y x else x)
+            else mem_mem l = true)
+  ============================
+   (mem x l = true <-> x~0 = 1 \/ mem x 0 = 1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  a : elt
+  s : list elt
+  IHs : forall (x : elt) (f : elt -> bool),
+        Proper (X.eq ==> eq) f -> In x (filter f s) <-> In x s /\ f x = true
+  x : elt
+  f : elt -> bool
+  H : Proper (X.eq ==> eq) f
+  E : f a = true
+  H2 : f x = true
+  H0 : In x s
+  H2 : f x = true
+  ============================
+   (mem x l = true <-> x = 1 \/ mem x 0 = 1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  a : elt
+  s : list elt
+  IHs : forall (x : elt) (f : elt -> bool),
+        Proper (X.eq ==> eq) f -> In x (filter f s) <-> In x s /\ f x = true
+  x : elt
+  f : elt -> bool
+  H : Proper (X.eq ==> eq) f
+  E : f a = true
+  H2 : f x = true
+  H0 : In x s
+  H2 : f x = true
+  ============================
+   (mem x l = true <-> x = 1 \/ mem x 0 = 1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  a : elt
+  s : list elt
+  IHs : forall (x : elt) (f : elt -> bool),
+        Proper (X.eq ==> eq) f -> In x (filter f s) <-> In x s /\ f x = true
+  x : elt
+  f : elt -> bool
+  H : Proper (X.eq ==> eq) f
+  E : f a = true
+  H2 : f x = true
+  H0 : In x s
+  H2 : f x = true
+  ============================
+   (mem x l = true <-> x = 1 \/ mem x 0 = 1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  a : elt
+  s : list elt
+  IHs : forall (x : elt) (f : elt -> bool),
+        Proper (X.eq ==> eq) f -> In x (filter f s) <-> In x s /\ f x = true
+  x : elt
+  f : elt -> bool
+  H : Proper (X.eq ==> eq) f
+  E : f a = true
+  H2 : f x = true
+  H0 : In x s
+  H2 : f x = true
+  ============================
+   (mem x l = true <-> x = 1 \/ mem x 0 = 1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Debug: Level 1: No matching clauses for match.
+
+Debug: Level 1: No matching clauses for match.
+
+Debug: Level 0: No matching clauses for match.
+
+Goal:
+  
+  a : elt
+ 

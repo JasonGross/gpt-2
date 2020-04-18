@@ -1,0 +1,56 @@
+======== SAMPLE 1 ========
+ s -> bool /\ c :: lhf c' -> bool
+  c' : C
+  H0 : Type
+  H1 : X.eq x (Node ll lx lr ld (|| (Node ll lx ld lr) -> (Node ll lx lrx ld lr))))
+  ============================
+   (X.eq x x' \/ (X.eq x x') ->
+   (X.eq x x' \/ (X.eq x \/ c' \/ c')))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  r : tree
+  IHl : forall (h : I.t) (e : tree) (l : tree),
+        (match l with
+          <Coq.Init.Tauto.is_unit_or_eq> flags X1; elim id
+            ; reflexivity
+              ; context_loop
+                ; (exists? (e : tree) (lt : X.t, i : elt) (e' : tree),
+                         (let i1 :=?p:(Node ll lx lr ld (|| (Node ll lx lrx ld lr) <->
+                  c'' s') = true)
+               (X.eq x x') ->
+          (forall (i : elt) (k : X.t) (e' : tree),
+            (let i : elt -> bool = true -> c'' s
+            (apply X' c (fun _ => reflexivity (k)) p) ll) (let lx ll' : list X.t -> list X.t lx \/ InT x c')
+   (do i1 :=?p:(Node ll lx lrx ld (|| (Node ll lx lrx ld lr) <->
+          (X.eq x x') -> true = true) <->
+        (forall t : elt,
+          (forall a : elt,
+           (MX (MX lx ld (|| (Node ll lx lrx ld lr) &&
+         X.eq x x' \/ (X.eq x x') ->
+          (X.eq x x' \/ c' \/ c')))
+
+           X.eq x ll' -> true = true) ->
+          (forall t : elt,
+          (forall a : elt,
+           (MX (MX lx ld (|| (Node ll lx lrx ld lr) &&
+         X.eq x x' \/ (X.eq x x') ->
+          \/ c'' s') = true)
+       (do i1 :=?p:(Node ll lx lrx ld lr (|| (Node ll lx lrx ld lr) <->
+         (X.eq x x' \/ (X.eq x x') ->
+         (X.eq x x' \/ c' \/ c')))
+        (forall t : elt,
+          (forall a : elt,
+   

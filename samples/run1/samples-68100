@@ -1,0 +1,145 @@
+======== SAMPLE 1 ========
+ (In x left; do 2 intro; apply id_simpl in id_wf
+| |- right; ?cannot_conj> flags X1; split
+| |-  |- context [<=] closure f
+| |- f ?X1 => assumption
+end
+
+
+TcDebug (1) > 
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 33) = (if Nat.leb 33 255 then Some 33 else None))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 34) = (if Nat.leb 34 255 then Some 34 else None))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 35) = (if Nat.leb 35 255 then Some 35 else None))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 36) = (if Nat.leb 36 255 then Some 36 else None))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 37) = (if Nat.leb 37 255 then Some 37 else None))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; split
+
+
+TcDebug (2) > 
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 38) = (if Nat.leb 38 255 then Some 38 else None))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 39) = (if Nat.leb 39 255 then Some 39 else None))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 40) = (if Nat.leb 40 255 then Some 40 else None))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 41) = (if Nat.leb 41 255 then Some 41 else None))
+
+
+Debug:
+Going to execute:
+split
+
+
+TcDebug (2) > 
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 42) = (if Nat.leb 42 255 then Some 42 else None))
+
+
+Debug: Going to execute:
+split
+
+
+TcDebug (2) > 
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 43) = (if Nat.leb 43 255 then Some 43 else None))
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::split@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  ============================
+   (option_map
+       (fun _ : nat => Some "141"%char)
+        (fun _ : nat => Some "183"%char) (fun _ : nat => Some "199"%

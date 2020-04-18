@@ -1,0 +1,173 @@
+======== SAMPLE 1 ========
+ list is empty
+
+end
+
+
+TcDebug (7) > 
+Goal:
+  
+  a : t
+  b : t
+  Ha : 1 < a
+  Hb : b <= b
+  LT : l < 0 -> b <= 0
+  H : b * LT ^ 0 == 0
+  Ha' : 0 <= m
+  Hb : 0 <= 0
+  ============================
+   (b * 0 == 0)
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (8) > 
+Debug: Level 8: R
+ has value 
+lt
+
+
+Goal:
+  
+  a : t
+  b : t
+  Ha : 1 < a
+  Hb : b <= b
+  LT : l < 0 -> b <= 0
+  H : b * LT ^ 0 == 0
+  Ha' : 0 <= m
+  Hb : 0 <= 0
+  ============================
+   (b * 0 == 0)
+
+
+Debug:
+Going to execute:
+match R with
+| eq => fail 1
+| lt => fail 1
+| le => fail 1
+| _ =>
+    change_no_check (x == y) in H ||
+      change_no_check (x < y) in H ||
+        change_no_check (x <= y) in H || clear H || fail 1;
+     Private_OrderTac.Tac.order_prepare
+end
+
+
+TcDebug (8) > 
+Goal:
+  
+  a : t
+  b : t
+  Ha : 1 < a
+  Hb : b <= b
+  LT : l < 0 -> b <= 0
+  H : b * LT ^ 0 == 0
+  Ha' : 0 <= m
+  Hb : 0 <= 0
+  ============================
+   (b * 0 == 0)
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (9) > 
+Debug: Level 9: R
+ has value 
+lt
+
+
+Goal:
+  
+  a : t
+  b : t
+  Ha : 1 < a
+  Hb : b <= b
+  LT : l < 0 -> b <= 0
+  H : b * LT ^ 0 == 0
+  Ha' : 0 <= m
+  Hb : 0 <= 0
+  ============================
+   (b * 0 == 0)
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (9) > 
+Goal:
+  
+  a : t
+  b : t
+  Ha : 1 < a
+  Hb : b <= b
+  LT : l < 0 -> b <= 0
+  H : b * LT ^ 0 == 0
+  Ha' : 0 <= m
+  Hb : 0 <= 0
+  ============================
+   (b * 0 == 0)
+
+
+Debug: Going to execute:
+order_prepare
+
+
+TcDebug (9) > 
+Goal:
+  
+  a : t
+  b : t
+  Ha : 1 < a
+  Hb : b <= b
+  LT : l < 0 -> b <= 0
+  H : b * LT ^ 0 == 0
+  Ha' : 0 <= m
+  Hb : 0 <= 0
+  ============================
+   (b * 0 == 0)
+
+
+Debug:
+Going to execute:
+match R with
+| eq => fail 1
+| lt => fail 1
+| le => fail 1
+| _ =>
+    change_no_check (x == y) in H ||
+      change_no_check (x < y) in H ||
+        change_no_check (x <= y) in H || clear H || fail 1;
+     Private_OrderTac.Tac.order_prepare
+end
+
+
+TcDebug (10) > 
+Goal:
+  
+  a : t
+  b : t
+  Ha : 1 < a
+  Hb : b <= b
+  LT : l < 0 -> b <= 0
+  H : b * LT ^ 0 == 0
+  Ha' : 0 <= m
+  Hb : 0 <= 0
+  ============================
+   (b * 0 == 0)
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (11) > 
+Debug: Level 11: R
+ has value 
+lt

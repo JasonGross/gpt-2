@@ -1,0 +1,101 @@
+======== SAMPLE 1 ========
+ do2 (z1 l1) (z2 l2)))
+
+
+Debug: Going to execute:
+destruct x as [| x1 x2]
+
+
+TcDebug (0) > 
+Debug: Evaluated term: x1
+
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r1 r2 : t elt
+  _x : height (Leaf elt) > height l + 2
+  y : key
+  e' : elt
+  m2 : t elt
+  IHm2 : forall (x : key) (d : elt) (r1 r2) : y <->
+         key_type elt -> y = _x + r1 + r2 ->
+         height l == height (Leaf elt) + 2
+  l : X.lt y rx
+  ============================
+   (height (Leaf elt) - height (remove x r2) == max (height l) (height r2) + 1) + 1 ==
+    height (Node _x Leaf _x Leafd r2 r1 Leaf) - height (remove x r2) <=
+    height (Node _x Leaf _x Leafd r1 Leaf) + 1)
+
+
+Debug: Going to execute:
+idtac
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r1 r2 : t elt
+  _x : height (Leaf elt) > height l + 2
+  y : key
+  e' : elt
+  m2 : t elt
+  IHm2 : forall (x : key) (d : elt) (r1 r2) : y <->
+         key_type elt -> y = _x + r1 + r2 ->
+         height l == height (Leaf elt) + 2
+  l : X.lt y rx
+  ============================
+   (height (Node _x Leaf _x Leafd r1 Leaf) + 1) <=
+    height (Node _x Leaf _x Leafd r1 Leaf) + 1)
+
+
+Debug: Going to execute:
+repeat destruct x as [| x1 y2 ^ _x
+   _x : height (Node _x Leaf _x Leafd r1 r2 Leaf))
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r1 r2 : t elt
+  _x : height (Node _x Leaf _x Leafd r1 r2 Leaf)) > height l + 2
+  y : key
+  e' : elt
+  m2 : t elt
+  IHm2 : forall (x : key) (d : elt) (r1 r2) : y <->
+         key_type elt -> y = _x + r1 + r2 ->
+         height l == height (Node _x Leaf _x Leafd r1 r2 Leaf)) + 2
+  l : X.lt y rx
+  ============================
+   (height (Node _x Leaf _x Leafd r1 r2 Leaf) + 1) <=
+    height (Node _x Leaf _x Leafd r1 r2 Leaf) + 1)
+
+
+Debug: Going to execute:
+repeat destruct x as [| x1 y2 ^ _x
+   _x : height (Node _x Leaf _x Leafd r1 Leaf) + 2]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current evaluation.
+
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r1 r2 : t elt
+  _x : height (Node _x Leaf _x Leafd r1 r2 Leaf)) > height l + 2
+  y : key
+  e' : elt
+  m2 : t elt
+  IHm2 : forall (x : key) (d : elt) (r1 r2) : y <->
+         key_type elt -> y = _x + r1 + r2 ->
+ 

@@ -1,0 +1,74 @@
+======== SAMPLE 1 ========
+0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Debug: Level 2: No matching clauses for match.
+
+Debug: Level 2: No matching clauses for match.
+
+Goal:
+    w : E.t
+  ============================
+   (forall (rev l : E.t) (y y0 : E.t),
+    E.eq x y = E.lt y x ->
+    forall z : E.t, Witness z x -> Witness z y -> Witness z (rev l)) ->
+    forall y0 z : E.t, Witness y0 (rev l) (y y0 -> y0 (rev l)) ->
+    forall x0 y0 : E.t,
+    x0 <-> x0 (rev l) ->
+    forall y0 z : E.t, Witness (x x0) x0 -> Witness (y y0) z -> Witness x0 (x0 l)
+         (if Z.pos x0 (if y x)%positive
+          then if y0 z <=? x0 (rev l) x0 <=? y0 (rev l) then y
+          else if z <=? x0 (x l) x0 <=? y0 (x l) then x0 (x l) else mem y0 z)
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:(?X1 -> ?X2) -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (X1 -> X2);
+          [ exact
+          id
+          | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear id;
+             (solve [ t_tauto_intuit ]) ] ]
+| id:~ ?X1 -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (~ X1);
+          [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+| |- ?X1 =>
+      <Coq.Init.Tauto.is_disj> flags X1; (solve
+       [ left; t_tauto_intuit | right; t_tauto_intuit ])
+end ||
+  match goal with
+  | H:~ _ |- _ => intro; t_tauto_intuit
+  | |- _ => t_reduce; t_solver
+  end || t_solver
+
+
+TcDebug (2) > 
+Goal:
+    w : E.t
+  ============================
+   (forall (rev l : E.t) (y y0 : E.t),
+    E.eq x y = E.lt y x ->
+    forall z : E.t, Witness z x -> Witness z y -> Witness z (rev l)) ->
+    forall y0 z : E.t, Witness y0 (rev l) (y y0 -> y0 (rev l)) ->
+    forall x0 y0 : E.t,
+    x0 <-> x0 (rev l) ->
+    forall y0 z : E.t, Witness (x x0) x0 -> Witness (y y0) z -> Witness x0 (x0 l)
+         (if Z.pos x0 (if y x)%positive
+          then if y0 z <=? x0 (rev l) x0 <=? y0 (rev l) then y
+          else if z <=? x0 (x l) x0 <=? y0 (x l) then x0 (x l) else mem y0 z)
+
+
+Debug:
+Going

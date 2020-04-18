@@ -1,0 +1,126 @@
+======== SAMPLE 1 ========
+ y s)
+  H : match X.compat_option with
+        | Eq => fv
+        | Lt => fv
+        | Gt => fv
+        end
+  H1 : fdec (OrderTac.op, Lt) l = Lt
+  H2 : OrderTac.order_list l
+  H3 : order_sym fdec
+  ============================
+   (FEeval l nm == Lt)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  w : t
+  x : elt
+  l : list elt
+  f : elt -> bool
+  Hf : Proper (E.eq ==> Logic.eq) f
+  s : t
+  H : forall a : elt, n = 0 <> 0 -> False
+  X : elt -> bool
+  H0 : bool
+  H1 : OrderTac.interp_ord OrdersTac.OEQ x 0
+  H2 : OrderTac.order_list l
+  H3 : OrderTac.order_sym fdec
+  ============================
+   (FEeval l nm == Lt)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  w : t
+  x : elt
+  l : list elt
+  f : elt -> bool
+  Hf : Proper (E.eq ==> Logic.eq) f
+  s : t
+  H : forall a : elt, n = 0 <> 0 -> False
+  X : elt -> bool
+  H0 : bool
+  H1 : OrderTac.interp_ord OrdersTac.OEQ x 0
+  H2 : OrderTac.order_list l
+  H3 : OrderTac.order_sym fdec
+  ============================
+   (FEeval l nm == Lt)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  w : t
+  x : elt
+  l : list elt
+  f : elt -> bool
+  Hf : Proper (E.eq ==> Logic.eq) f
+  s : t
+  H : forall a : elt, n = 0 <> 0 -> False
+  X : elt -> bool
+  H0 : bool
+  H1 : OrderTac.interp_ord OrdersTac.OEQ x 0
+  H2 : OrderTac.order_list l
+  H3 : OrderTac.order_sym fdec
+  ============================
+   (FEeval l nm == Lt)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  w : t
+  x : elt
+  l : list elt
+  f : elt -> bool
+  Hf : Proper (E.eq ==> Logic.eq) f
+  s : t
+  H : forall a : elt, n = 0 <> 0 -> False
+  X : elt -> bool
+  H0 : bool
+  H1 : OrderTac.interp_ord OrdersTac.OEQ x 0
+  H2 : OrderTac.order_list l
+  H3 : OrderTac.order_sym fdec
+  ============================
+   (FEeval l nm == Lt)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  w : t
+  x : elt
+  l : list elt
+  f : elt -> bool
+  Hf : Proper (E.eq ==> Logic.eq) f
+  s : t
+  H : forall a : elt, n = 0 <> 0 -> False
+

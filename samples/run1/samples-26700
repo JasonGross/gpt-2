@@ -1,0 +1,138 @@
+======== SAMPLE 1 ========
+
+  q : positive
+  ============================
+   (0 + (z * (1 + 2) * q) = (z * (1 + 2) * q) + Z.pos p)
+
+
+Debug:
+Going to execute:
+match t with
+| (?x + ?y)%Z =>
+    let ex := z2ez x with ey := z2ez y in
+    EZadd ex ey
+| (?x - ?y)%Z =>
+    let ex := z2ez x with ey := z2ez y in
+    EZsub ex ey
+| (?x * ?y)%Z =>
+    let ex := z2ez x with ey := z2ez y in
+    EZmul ex ey
+| Z.max ?x ?y => let ex := z2ez x with ey := z2ez y in
+                   EPequiv ex ey
+| Z.mul ?x => let ex := z2ez x in
+                 EPsub ex ey
+| Z.opp ?x => let ex := z2ez x in
+                   EPof ex
+| _ => None
+end
+
+
+TcDebug (9) > 
+Goal:
+  
+  s : t
+  ============================
+   (0 + (z * (1 + 2) * q) = (z * (1 + 2) * q) + Z.pos p)
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (10) > 
+Debug: Level 10: t
+ has value 
+(Z.pos p :: nil)%Z
+
+
+Goal:
+  
+  s : t
+  ============================
+   (0 + (z * (1 + 2) * q) = (z * (1 + 2) * q) + Z.pos p)
+
+
+Debug:
+Going to execute:
+let ex := z2ez x with ey := z2ez y in
+ EZadd ex ey
+
+
+TcDebug (10) > 
+Goal:
+  
+  s : t
+  ============================
+   (0 + (z * (1 + 2) * q) = (z * (1 + 2) * q) + Z.pos p)
+
+
+Debug:
+Going to execute:
+fun t =>
+  let ex := z2ez x with ey := z2ez y in
+ EZadd ex ey
+
+
+TcDebug (11) > 
+Goal:
+  
+  s : t
+  ============================
+   (0 + (z * (1 + 2) * q) = (z * (1 + 2) * q) + Z.pos p)
+
+
+Debug:
+Going to execute:
+let ex := z2ez x with ey := z2ez y in
+EZadd ex ey
+
+
+TcDebug (11) > 
+Goal:
+  
+  s : t
+  ============================
+   (0 + (z * (1 + 2) * q) = (z * (1 + 2) * q) + Z.pos p)
+
+
+Debug:
+Going to execute:
+fun t =>
+  let ex := z2ez x with ey := z2ez y in
+    EZsub ex ey
+
+
+TcDebug (12) > 
+Goal:
+  
+  s : t
+  ============================
+   (0 + (z * (1 + 2) * q) = (z * (1 + 2) * q) + Z.pos p)
+
+
+Debug:
+Going to execute:
+let ex := z2ez x with ey := z2ez y in
+    EZsub ex ey
+
+
+TcDebug (12) > 
+Goal:
+  
+  s : t
+  ============================
+   (0 + (z * (1 + 2) * q) = (z * (1 + 2) * q) + Z.pos p)
+
+
+Debug:
+Going to execute:
+fun t =>
+  let ex := z2ez x with ey := z2ez y in
+    EZsub ex ey
+
+
+TcDebug (13) > 
+Goal:
+  
+  s : t
+  ============================

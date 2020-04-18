@@ -1,0 +1,113 @@
+======== SAMPLE 1 ========
+ id
+| id0:?X1 -> ?X2, id1:?X1 |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+| id:?X1 -> ?X2
+  |- _ =>
+      <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+       [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+| id:?X1 <-> ?X2 -> ?X3
+  |- _ =>
+      assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+       (do 2 intro; apply id; split; assumption); clear id
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+| |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+| |- _ <-> _ => split
+| |- ~ _ => red
+end
+
+
+TcDebug (0) > 
+Goal:
+  
+  s : t
+  f : elt -> bool
+  s1 : t
+  s2 : t
+  C : compat_bool E.eq f
+  D : compat_bool E.eq (fun x : E.t => f x || g x)
+  H2 : In x (filter f s)
+  H0 : In x s
+  H1 : f x = true
+  H : bool
+  H4 : true = true
+  H4 : f x = true
+  ============================
+   (In x (filter f s))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  f : elt -> bool
+  s1 : t
+  s2 : t
+  C : compat_bool E.eq f
+  D : compat_bool E.eq (fun x : E.t => f x || g x)
+  H2 : In x (filter f s)
+  H0 : In x s
+  H1 : f x = true
+  H : bool
+  H4 : true = true
+  H4 : f x = true
+  ============================
+   (In x (filter f s))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  f : elt -> bool
+  s1 : t
+  s2 : t
+  C : compat_bool E.eq f
+  D : compat_bool E.eq (fun x : E.t => f x || g x)
+  H2 : In x (filter f s)
+  H0 : In x s
+  H1 : f x = true
+  H : bool
+  H4 : true = true
+  H4 : f x = true
+  ============================
+   (In x (filter f s))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  f : elt -> bool
+  s1 : t
+  s2 : t
+  C : compat_bool E.eq f
+  D : compat_bool E.eq (fun x : E.t => f x || g x)
+  H2 : In x (filter f s)
+  H0 : In x s
+  H1 : f x = true
+  H : bool
+  H4 : true = true
+  H4 : f x = true
+  ============================
+   (In x (filter f s))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X

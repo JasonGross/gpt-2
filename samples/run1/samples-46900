@@ -1,0 +1,124 @@
+======== SAMPLE 1 ========
+  H1 : 0 <= - q + -0%Z
+  H2 : 0 <= 0%Z
+  H : 0 <= - q + -0%Z
+  H3 : forall x : Z, (x | q)%Z
+  x : Z
+  H4 : 0 <= - q + -0%Z
+  H5 : - q + -0%Z
+  ============================
+   (0 <= - q + -0%Z)
+
+
+Debug: Going to execute:
+do_ccl
+
+
+TcDebug (0) > 
+Goal:
+  
+  p : Z
+  Ha : p > 0
+  q : Z
+  Hq : - p < q + -0%Z
+  Hq' : - p = 0%Z
+  H1 : 0 <= - q + -0%Z
+  H2 : 0 <= 0%Z
+  H : 0 <= - q + -0%Z
+  H3 : forall x : Z, (x | q)%Z
+  x : Z
+  H4 : 0 <= - q + -0%Z
+  H5 : - q + -0%Z
+  ============================
+   (0 <= - q + -0%Z)
+
+
+Debug:
+Going to execute:
+try do_atom; repeat (do_intro; try do_atom); (solve [ split; do_ccl ])
+
+
+TcDebug (1) > 
+Goal:
+  
+  p : Z
+  Ha : p > 0
+  q : Z
+  Hq : - p < q + -0%Z
+  Hq' : - p = 0%Z
+  H1 : 0 <= - q + -0%Z
+  H2 : 0 <= 0%Z
+  H : 0 <= - q + -0%Z
+  H3 : forall x : Z, (x | q)%Z
+  x : Z
+  H4 : 0 <= - q + -0%Z
+  H5 : - q + -0%Z
+  ============================
+   (0 <= - q + -0%Z)
+
+
+Debug:
+Going to execute:
+try do_atom; repeat (do_intro; try do_atom); (solve [ split; do_ccl ])
+
+
+TcDebug (2) > 
+Goal:
+  
+  p : Z
+  Ha : p > 0
+  q : Z
+  Hq : - p < q + -0%Z
+  Hq' : - p = 0%Z
+  H1 : 0 <= - q + -0%Z
+  H2 : 0 <= 0%Z
+  H : 0 <= - q + -0%Z
+  H3 : forall x : Z, (x | q)%Z
+  x : Z
+  H4 : 0 <= - q + -0%Z
+  H5 : - q + -0%Z
+  ============================
+   (0 <= - q + -0%Z)
+
+
+Debug: Going to execute:
+try do_atom; repeat (do_intro; try do_atom)
+
+
+TcDebug (0) > 
+Goal:
+  
+  p : Z
+  Ha : p > 0
+  q : Z
+  Hq : - p < q + -0%Z
+  Hq' : - p = 0%Z
+  H1 : 0 <= - q + -0%Z
+  H2 : 0 <= 0%Z
+  H : 0 <= - q + -0%Z
+  H3 : forall x : Z, (x | q)%Z
+  x : Z
+  H4 : 0 <= - q + -0%Z
+  H5 : - q + -0%Z
+  ============================
+   (0 <= - q + -0%Z)
+
+
+Debug: Going to execute:
+try do_atom
+
+
+TcDebug (0) > 
+Goal:
+  
+  p : Z
+  Ha : p > 0
+  q : Z
+  Hq : - p < q + -0%Z
+  Hq' : - p = 0%Z
+  H1 : 0 <= - q + -0%Z
+  H2 : 0 <= 0%Z
+  H : 0 <= - q + -0%Z
+  H3 : forall x : Z, (x | q)%Z
+  x : Z
+  H4 : 0 <=

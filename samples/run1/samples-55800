@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+ 1
+  H1 : make_conj E f
+  ============================
+   (E.eq E f)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  Eq : Type
+  eqa : Eq
+  f : list (Mon * Pol)
+  f_list := nil : list (Pol * Ring_polynom.Mon * Ring_polynom.Pol Q)
+  P2 : Pol
+  p : positive
+  p0 : Pol
+  p1 : positive
+  H : ((2 # p) * Qpower_positive (n # 1) + Qpower_positive (n # 1) ==
+     Qpower_positive (n # 1) + Qpower_positive (n # 1) * Qpower_positive (n # 1))%Q
+  l : list Q
+  ============================
+   (E.eq E f)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  Eq : Type
+  eqa : Eq
+  f : list (Mon * Pol)
+  f_list := nil : list (Pol * Ring_polynom.Mon * Ring_polynom.Pol Q)
+  P2 : Pol
+  p : positive
+  p0 : Pol
+  p1 : positive
+  H : ((2 # p) * Qpower_positive (n # 1) + Qpower_positive (n # 1) ==
+    Qpower_positive (n # 1) + Qpower_positive (n # 1) * Qpower_positive (n # 1))%Q
+  l : list Q
+  ============================
+   (E.eq E f)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  Eq : Type
+  eqa : Eq
+  f : list (Mon * Pol)
+  f_list := nil : list (Pol * Ring_polynom.Mon * Ring_polynom.Pol Q)
+  P2 : Pol
+  p : positive
+  p0 : Pol
+  p1 : positive
+  H : ((2 # p) * Qpower_positive (n # 1) + Qpower_positive (n # 1) ==
+    Qpower_positive (n # 1) + Qpower_positive (n # 1) * Qpower_positive (n # 1))%Q
+  l : list Q
+  ============================
+   (E.eq E f)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  Eq : Type
+  eqa : Eq
+  f : list (Mon * Pol)
+  f_list := nil : list (Pol * Ring_polynom.Mon * Ring_polynom.Pol Q)
+  P2 : Pol
+  p : positive
+  p0 : Pol
+  p1 : positive
+  H : ((2 # p) * Qpower_positive (n # 1) + Qpower_positive (n # 1) ==
+    Qpower_positive (n # 1) + Qpower_positive (n # 1) * Qpower_positive (n # 1))%Q
+  l : list Q
+  ============================
+   (E.eq E f)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  Eq : Type
+  eqa : Eq
+  f : list (Mon * Pol)
+  f_list := nil : list (Pol * Ring_polynom.Mon * Ring_polynom.Pol Q)
+  P2 : Pol
+  p : positive
+  p0 : Pol
+  p1 : positive
+  H : ((2 # p) * Qpower_positive (n # 1) + Qpower_positive (n # 1) ==
+    Qpower_positive (

@@ -1,0 +1,88 @@
+======== SAMPLE 1 ========
+ const R
+  ============================
+   ((1 # p) + (1 # p) + - (1 # p) < (1 # p) + - (1 # p))%Q
+
+
+Goal:
+  
+  xn : nat -> Q
+  p : positive
+  n : positive
+  xcau : ((1 # p) + (1 # p) + - (1 # p) < (1 # p) + - (1 # p))%Q
+  nmaj : ((1 # p) + (1 # p) <
+          Qabs (xn (Pos.to_nat n) + -1 * xn (Pos.to_nat p)))%Q
+  e : (Pos.to_nat p <= Pos.to_nat n)%nat
+  goal := False : Prop
+  ============================
+   ((1 # p) + (1 # p) + - (1 # p) < (1 # p) + - (1 # p))%Q
+
+
+Goal:
+  
+  xn : nat -> Q
+  p : positive
+  n : positive
+  xcau : ((1 # p) + (1 # p) + - (1 # p) < (1 # p) + - (1 # p))%Q
+  nmaj : ((1 # p) + (1 # p) <
+          Qabs (xn (Pos.to_nat n) + -1 * xn (Pos.to_nat p)))%Q
+  e : (Pos.to_nat p <= Pos.to_nat n)%nat
+  goal := False : Prop
+  ============================
+   ((1 # p) + (1 # p) + - (1 # p) < (1 # p) + - (1 # p))%Q
+
+
+Debug: Going to execute:
+try do_atom
+
+
+TcDebug (0) > 
+Goal:
+  
+  xn : nat -> Q
+  p : positive
+  n : positive
+  xcau : ((1 # p) + (1 # p) + - (1 # p) < (1 # p) + - (1 # p))%Q
+  nmaj : ((1 # p) + (1 # p) <
+          Qabs (xn (Pos.to_nat n) + -1 * xn (Pos.to_nat p)))%Q
+  e : (Pos.to_nat p <= Pos.to_nat n)%nat
+  goal := False : Prop
+  ============================
+   ((1 # p) + (1 # p) + - (1 # p) < (1 # p) + - (1 # p))%Q
+
+
+Debug: Going to execute:
+do_atom
+
+
+TcDebug (0) > 
+Goal:
+  
+  xn : nat -> Q
+  p : positive
+  n : positive
+  xcau : ((1 # p) + (1 # p) + - (1 # p) < (1 # p) + - (1 # p))%Q
+  nmaj : ((1 # p) + (1 # p) <
+          Qabs (xn (Pos.to_nat n) + -1 * xn (Pos.to_nat p)))%Q
+  e : (Pos.to_nat p <= Pos.to_nat n)%nat
+  goal := False : Prop
+  ============================
+   ((1 # p) + (1 # p) + - (1 # p) < (1 # p) + - (1 # p))%Q
+
+
+Debug: Going to execute:
+trivial with eq_true
+
+
+TcDebug (0) > 
+Goal:
+  
+  xn : nat -> Q
+  p : positive
+  n : positive
+  xcau : ((1 # p) + (1 # p) + - (1 # p) < (1 # p) + - (1 # p))%Q
+  nmaj : ((1 # p) + (1 # p) <
+          Qabs (xn (Pos.to_nat n) + -1 * xn (Pos.to_nat p)))%Q
+  e : (Pos.to_nat p <= Pos.to_nat n)%nat
+  goal := False : Prop
+

@@ -1,0 +1,98 @@
+======== SAMPLE 1 ========
+:: > x)
+)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : X.t
+  x1 : uint
+  y : Y.t
+  z : Z
+  l1 : list (Z.t * Z.t)
+  IH1 : forall y : uint,
+       bst - (height l1 <? height l2) <=? height (l1 ++ height l2)
+  y : y + 2
+  z : Z
+  l2 : list (Z.t * Z.t)
+  IH2 : forall y : uint,
+       bst - (height l2 <=? height l1) <=? height (l2 ++ height l1)
+  y : y + 2
+  z : Z
+  l3 : list (Z.t * Z.t)
+  IH3 : forall y : uint,
+       bst - (height l3 >=? height l1) <=? height (l3 ++ height l1)
+  y : y + 2
+  z : Z
+  l4 : list (Z.t * Z.t)
+  Hl4 : (height l4 <? height l2) <=? height (l4 ++ height l2)
+  y : y + 2
+  z : Z
+  l5 : list (Z.t * Z.t)
+  Hl5 : (height l5 <? height l2) <=? height (l5 ++ height l2)
+  y : y + 2
+  z : Z
+  l6 : list (Z.t * Z.t)
+  Hl6 : (height l6 <? height l2) <=? height (l6 ++ height l2)
+  y : y + 2
+  z : Z
+  l7 : list (Z.t * Z.t)
+  Hl7 : (height l7 <? height l2) <=? height (l7 ++ height l2)
+  y : y + 2
+  z : Z
+  l8 : list (Z.t * Z.t)
+  Hl8 : (height l8 <? height l2) <=? height (l8 ++ height l2)
+  y : y + 2
+  z : Z
+  l9 : list (Z.t * Z.t)
+  Hl9 : (height l9 <? height l2) <=? height (l9 ++ height l2)
+  y : y + 2
+  z : Z
+  l10 : list (Z.t * Z.t)
+  Hl10 : (height l10 <? height l2) <=? height (l10 ++ height l2)
+  y : y + 2
+  z : Z
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  x1 : uint
+  y : Y.t
+  z : Z
+  l1 : list (Z.t * Z.t)
+  IH1 : forall y : uint,
+       bst - (height l1 <? height l2) <=? height (l1 ++ height l2)
+  y : y + 2
+  z : Z
+  l2 : list (Z.t * Z.t)
+  IH2 : forall y : uint,
+       bst - (height l2 <=? height l1) <=? height (l2 ++ height l1)
+  y : y + 2
+  z : Z
+  l3 : list (Z.t * Z.t)
+  IH3 : forall y : uint,
+       bst - (height l3 >=? height l1) <=? height (l3 ++ height l1)
+  y : y + 2
+  z : Z
+  l4 : list (Z.t * Z.t)
+  Hl4 : (height l4 <? height l2) <=? height (l4 ++ height l2)
+  y : y + 2
+  z : Z
+  l

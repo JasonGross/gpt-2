@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+ (Pos.to_nat n) (a :: s)
+  H3 : a = a * s
+  ============================
+   ((a = 1) * 1 * 2 ^ usize d + 2 * of_lu d') * 2 ^ usize d =
+    1 * 1 * 2 ^ usize d + 1 * 2 ^ usize d)
+
+
+Debug: Going to execute:
+progress rewrite (ARmul_1_r Rsth ARth)
+
+
+TcDebug (0) > 
+Goal:
+  
+  a : N
+  b : positive
+  a' : N
+  ma' : list (NFormula (NFormula Z * 1 * of_lu (a :: s) + NFormula Z * 1 * of_lu a')
+  H : (1 # 2 <= a)%N
+  ============================
+   ((a = 1) * 1 * 2 ^ usize d + 2 * of_lu d') * 2 ^ usize d =
+    1 * 1 * 2 ^ usize d + 1 * 2 ^ usize d)
+
+
+Debug: Going to execute:
+rewrite (ARmul_1_r Rsth ARth)
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (ARmul_1_r Rsth ARth)
+
+Debug:
+Level 0: Found no subterm matching "(?n <= ?n')" in the current goal.
+
+Goal:
+  
+  a : N
+  b : positive
+  a' : N
+  ma' : list (NFormula (NFormula Z * 1 * of_lu (a :: s) + NFormula Z * 1 * of_lu a'))
+  H : (1 # 2 <= a)%N
+  ============================
+   ((a = 1) * 1 * 2 ^ usize d + 2 * of_lu d') * 2 ^ usize d =
+    1 * 1 * 2 ^ usize d + 1 * 2 ^ usize d)
+
+
+Debug: Going to execute:
+rewrite (ARmul_1_r Rsth ARth)
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (ARmul_1_r Rsth ARth)
+
+Debug:
+Level 0: Found no subterm matching "(?n <= ?n')" in the current goal.
+
+Goal:
+  
+  a : N
+  b : positive
+  a' : N
+  ma' : list (NFormula (NFormula Z * 1 * of_lu (a :: s) + NFormula Z * 1 * of_lu a'))
+  H : (1 # 4 == ?n)%N
+  ============================
+   (of_lu a' * ?n = a' * ?n' /\ (1 # 4 == ?n'))
+
+
+Debug: Going to execute:
+t; easy
+
+
+TcDebug (0) > 
+Goal:
+  
+  a : N
+  b : positive
+  a' : N
+  ma' : list (NFormula (NFormula Z * 1 * of_lu (a :: s) + NFormula Z * 1 * of_lu a'))
+  H : (1 # 4 == ?n)%N
+  ============================
+   (of_lu a' * ?n = a' * ?n' /\ (1 # 4 == ?n'))
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (0) > 
+Debug:
+True
+
+
+Debug: Evaluated term: (ARmul_1_r Rsth ARth)
+
+Goal:
+  
+  a : N
+  b : positive
+  a' : N
+  ma' : list (NFormula (NFormula Z * 1 * of_lu (a :: s) + NFormula Z * 1 * of_lu a'))
+  H : (1 # 4 == ?n)%N
+  ============================
+   (of_lu a' * ?n = a' * ?n' /\ (1 # 4 == ?n'))
+
+
+Debug: Going to execute:
+easy
+
+
+TcDebug (0) > 
+Goal:
+  
+  a : N
+  b : positive
+  a' : N
+  ma' : list (NFormula (NFormula Z * 1 * of_lu (a :: s

@@ -1,0 +1,147 @@
+======== SAMPLE 1 ========
+t
+  k : key
+  e : elt
+  m : t elt
+  m' : t elt
+  H0 : MapsTo k e m
+  H1 : In k m'
+  ============================
+   (Ink e m)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (6) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x y
+  y0 : key
+  H0 : MapsTo y0 e (Node l y d r _x)
+  H1 : X.eq y0 y0
+  H5 : Ok l
+  H12 : Ok r
+  H4 : Ok l
+  H13 : lt_tree y l
+  H3 : Ok l
+  H14 : gt_tree y l
+  H4 : Ok l'
+  H5 : Ok r
+  H3 : Ok r
+  ============================
+   (Ink e m)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (6) > 
+Debug: Level 6: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x y
+  y0 : key
+  H0 : MapsTo y0 e (Node l y d r _x)
+  H1 : X.eq y0 y0
+  H5 : Ok l
+  H12 : Ok r
+  H4 : Ok l
+  H13 : lt_tree y l
+  H3 : Ok l
+  H14 : gt_tree y l
+  H4 : Ok l'
+  H5 : Ok r
+  H3 : Ok r
+  ============================
+   (Ink e m)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (5) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x y
+  y0 : key
+  H0 : MapsTo y0 e (Node l y d r _x)
+  H1 : X.eq y0 y0
+  H5 : Ok l
+  H12 : Ok r
+  H4 : Ok l
+  H13 : lt_tree y l
+  H3 : Ok l
+  H14 : gt_tree y l
+  H4 : Ok l'
+  H5 : Ok r
+  H3 : Ok r
+  ============================
+   (Ink e m)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (5) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x y
+  y0 : key
+  H0 : MapsTo y0 e (Node l y d r _x)
+  H1 : X.eq y0 y0
+  H5 : Ok l
+  H12 : Ok r
+  H4 : Ok l
+  H13 : lt_tree y l
+  H3 : Ok l
+  H14 : gt_tree y l
+  H4 : Ok l'
+  H5 : Ok r
+  H3 : Ok r
+  ============================
+   (Ink e m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (5) > 

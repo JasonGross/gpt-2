@@ -1,0 +1,98 @@
+======== SAMPLE 1 ========
+ Ok s -> False
+  Hs : Ok s
+  Hs' : Ok s'
+  acc := nil : list elt
+  Hacc : Ok acc
+  H : In x acc
+  ============================
+   (In x s)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IHs : forall acc : list elt,
+        Ok acc ->
+        forall (x : elt) (s' : t),
+        Ok s ->
+        Ok s' ->
+        In x
+          (fold_left
+             (fun (x0 : t) (y : elt) => if mem y s' then add y x0 else x0) s
+             acc) <-> In x s /\ In x s' \/ In x acc
+  acc : list elt
+  Hacc : Ok acc
+  H : In x acc
+  ============================
+   (In x s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IHs : forall acc : list elt,
+        Ok acc ->
+        forall (x : elt) (s' : t),
+        Ok s ->
+        Ok s' ->
+        In x
+          (fold_left
+             (fun (x0 : t) (y : elt) => if mem y s' then add y x0 else x0) s
+             acc) <-> In x s /\ In x s' \/ In x acc
+  acc : list elt
+  Hacc : Ok acc
+  H : In x acc
+  ============================
+   (In x s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IHs : forall acc : list elt,
+        Ok acc ->
+        forall (x : elt) (s' : t),
+        Ok s ->
+        Ok s' ->
+        In x
+          (fold_left
+             (fun (x0 : t) (y : elt) => if mem y s' then add y x0 else x0) s
+             acc) <-> In x s /\ In x s' \/ In x acc
+  acc : list elt
+  Hacc : Ok acc
+  H : In x acc
+  ============================
+   (In x s)
+
+
+Debug: Going to execute:
+<Co

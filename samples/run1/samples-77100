@@ -1,0 +1,130 @@
+======== SAMPLE 1 ========
+
+
+
+TcDebug (6) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H5 : InT x a
+  H : InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  ============================
+   (InT x ll)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (6) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H5 : InT x a
+  H : InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  ============================
+   (InT x ll)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (7) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H5 : InT x a
+  H : InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  ============================
+   (InT x ll)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (7) > 
+Debug: Level 7: evaluation returns
+<tactic closure>
+
+
+Debug: Level 5: No matching clauses for match.
+
+Debug: Level 5: No matching clauses for match.
+
+Debug: Level 5: No matching clauses for match.
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H5 : InT x a
+  H : InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  ============================
+   (InT x ll)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.axioms> flags ||
+  match reverse goal with
+  | id:(?X1 -> ?X2) -> ?X3
+    |- _ =>
+        cut X3;
+         [ intro; clear id; t_tauto_intuit
+         | cut (X1 -> X2);
+            [ exact
+            id
+            | generalize (fun y : X2 => id (fun x : X

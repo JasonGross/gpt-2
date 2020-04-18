@@ -1,0 +1,51 @@
+======== SAMPLE 1 ========
+      forall (m' : t A) (q : m') (e : m'),
+           (l : list (H :: C)) (lb : A) = true ->
+           forall cmp : elt -> elt -> bool,
+           (l1 ++ l2) ->
+           forall cmp : elt -> elt -> bool,
+           (forall k : X.t, In k m <-> In k m' \/ In k m) /\
+           (forall (k : X.t) (e0 e' : elt),
+           (l1 ++ l2) -> (e1 ++ l2) -> MapsTo k e0))
+           (forall (k : X.t) (e' : elt),
+           (xb : X.t) (e'0 : elt),
+           (eqk (x a, e') (b : X.t)) -> In k m -> MapsTo k e'0) m'
+  k : X.t
+  e' : elt
+  H0 : MapsTo k e'0 m
+  ============================
+   (MapsTo k e'0 (Node m' e'0 m' e'1) (Node m' e'0 m') \/
+    MapsTo k e'0 (Node m' e'0 m' e'1) (if MapsTo k e'0 then True else mem k e'1)
+
+
+Debug: Going to execute:
+try (rewrite (eq_refl _ _) with eq_lemma))
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (eq_refl _ _)
+
+Debug: Evaluated term: (eq_refl _ _)
+
+Goal:
+  
+  eq_refl : forall a : elt, In a s -> In a s
+  eq_f : forall p q : elt,
+            Ring_polynom.mk_monpol_list 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+               (triv_div 0 1 Qeq_bool) eq_bool
+                (triv_div 0 1 Qeq_bool) n order_pos)
+               (Ring_polynom.add Qeq_bool (triv_div 0 1 Qeq_bool) (2 # n)) eq_bool
+                 (Ring_polynom.times_inv (triv_div 0 1 Qeq_bool) (2 # n)) n +
+                 Ring_polynom.opp 0 1 Qplus Qmult Qminus Qopp
+                   (Ring_polynom.Padd Qeq_bool (triv_div 0 1 Qeq_bool) (2 # n))) n
+  n : Q
+  p : positive
+  pmaj : (2 # n <
+          (2 # n) + - (1 # p) <
+            (2 # n) + (- (1 # p) + 1 # p))%Q
+  goal := False : Prop
+  list_hyp := nil : list (Ring_polynom.PExpr Q * Ring_polynom.PExpr Q)
+  list_hyp_norm := nil : list (Q * Ring_polynom.Mon * Ring_polynom.Pol Q)
+  ring_lemma : forall (pe : Ring_polynom.PExpr Q) (npe : Ring_polynom.Pol Q),
+              Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+        

@@ -1,0 +1,86 @@
+======== SAMPLE 1 ========
+   match _ => elimtype X1 X2 id
+      | id:(?X1 -> ?X2) -> ?X3
+         |- _ =>
+             (do 2 intro; apply id; split; assumption); clear id
+       | id:~ _ |- _ => solve_up id; [ exact (id0 id1) | clear id0 ]
+       end; <Coq.Init.Tauto.not_dep_intros>)
+
+
+TcDebug (1) > 
+Goal:
+    n : nat  m : nat  H : n < m
+  ============================
+   (m <= m - n < m -> eval_n m m <= m - n -> eval_n n m <= m)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.not_dep_intros>;
+ repeat
+  (match reverse goal with
+   | id:?X1
+     |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+   | id:_ <-> _ |- _ => elim id; do 2 intro; clear id
+   | id:~ _ |- _ => red in id
+   | id:?X1
+     |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+   | id0:?X1 -> ?X2, id1:?X1
+     |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+   | id:?X1 -> ?X2
+     |- _ =>
+         <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+          [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+   | id:?X1 -> ?X2
+     |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+   | id:?X1 <-> ?X2 -> ?X3
+     |- _ =>
+         assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+          (do 2 intro; apply id; split; assumption); clear id
+   | id:?X1 -> ?X2
+     |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+   | |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+   | |- _ <-> _ => split
+   | |- ~ _ => red
+   end; <Coq.Init.Tauto.not_dep_intros>)
+
+
+TcDebug (1) > 
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+    n : nat  m : nat  H : n < m
+  ============================
+   (m <= m - n -> eval_n m m <= m - n -> eval_n n m <= m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (0) > 
+Goal:
+    n : nat  m : nat  H : n < m
+  ============================
+   (m <= m - n -> eval_n m m <= m - n -> eval_n n m <= m)
+
+
+Debug:
+Going to execute:
+repeat
+ match goal with
+ | |- ?X1 -> ?X2 => intro
+ | |- ~ _ => unfold not at 1; intro
+ end
+
+
+TcDebug (1) > 
+Goal:
+    n : nat  m : nat  H : n < m
+  ============================
+   (m <= m - n -> eval_n m m <= m - n -> eval_n n m <= m)
+
+
+

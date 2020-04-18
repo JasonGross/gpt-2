@@ -1,0 +1,114 @@
+======== SAMPLE 1 ========
+ x : R, x * 1 == x
+  r : R
+  Hr : x == x
+  ============================
+   (x == 0 \/ x == 0)
+
+
+Debug: Going to execute:
+<ltac_plugin::split@0> $1
+
+
+TcDebug (2) > 
+Debug: Level 2: No matching clauses for match.
+
+Debug: Level 2: No matching clauses for match.
+
+Debug: Level 1: No matching clauses for match.
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : BinNums.N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  T : Type
+  env : PolEnv
+  p : PolC
+  o : Op1
+  l : list NFormula
+  tg : T
+  F := fun (x : NFormula) (acc : list (list (NFormula * T))) =>
+       if check_inconsistent x then acc else ((x, tg) :: nil) :: acc
+    : NFormula -> list (list (NFormula * T)) -> list (list (NFormula * T))
+  G := fun x : NFormula => eval_nformula env x -> False : NFormula -> eval_nformula env x
+  H0 : eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l
+  H1 : make_conj G l
+  H2 : gt_tree x (Node C A)
+  H3 : bst r
+  H4 : bst r
+  H5 : lt_tree x r
+  H6 : gt_tree x r
+  H7 : lt_tree x l
+  H8 : 0 < gt_tree x r
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match H with
+| H' => fail 2
+| _ => unify X.compare x y; clear x;
+end
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : BinNums.N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  T : Type
+  env : PolEnv
+  p : PolC
+  o : Op1
+  l : list NFormula
+  tg : T
+  F := fun (x : NFormula) (acc : list (list (NFormula * T))) =>
+       if if_spec p := eval_pol env p then if_spec tg := eval_pol env t then 0 else env x
+   : NFormula -> list (list (NFormula * T)) ->

@@ -1,0 +1,125 @@
+======== SAMPLE 1 ========
+ H0 : InT y l -> False
+  H3 : InT y (append l)
+  ============================
+   (X.eq y m1 \/ InT y l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  y' : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt x y'
+  e1 : X.compare x y' = LT _x
+  H : InT y l -> False
+  H3 : InT y (append l)
+  ============================
+   (X.eq y m1 \/ InT y l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  y' : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt x y'
+  e1 : X.compare x y' = LT _x
+  H : InT y l -> False
+  H3 : InT y (append l)
+  ============================
+   (X.eq y m1 \/ InT y l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Debug: Level 0: No matching clauses for match.
+
+Debug: Level 0: No matching clauses for match.
+
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  y' : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt x y'
+  e1 : X.compare x y' = LT _x
+  H : InT y l -> False
+  H3 : InT y (append l)
+  ============================
+   (X.eq y m1 \/ InT y l)
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:(?X1 -> ?X2) -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (X1 -> X2);
+          [ exact
+          id
+          | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear id;
+            (solve [ t_tauto_intuit ]) ] ]
+| id:~ ?X1 -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (~ X1);
+          [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+| |- ?X1 =>
+      <Coq.Init.Tauto.is_disj> flags X1; (solve
+       [ left; t_tauto_intuit | right; t_tauto_intuit ])
+end ||
+  match goal with
+  | |- _ -> _ => intro; t_tauto_intuit
+  | |- _ => t_reduce; t_solver
+  end || t_solver
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  y' : key
+  d' : el

@@ -1,0 +1,109 @@
+======== SAMPLE 1 ========
+  P : Prop
+  Q : Prop
+  R : Prop
+  H : P
+  H0 : P / Q * R == Q * ((P * R) @ (tlpow (p_e n)) r))
+  r : t
+  H1 : P @ (tlpow (p_e n)) r == Q @ (tlpow (p_e n)) r
+  c : c
+  H2 : P @ (tlpow (p_e n)) r
+  H4 : P @ (tlpow (p_e n)) p_e n
+  h : False
+  H5 : P @ (tlpow (p_e n)) r
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : BinNums.N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  D : Type
+  env : PolEnv
+  p : PolC
+  o : Op1
+  l : list NFormula
+  tg : T
+  F := fun (x : NFormula) (acc : list (list (NFormula * T))) =>
+       if check_inconsistent x then acc else ((x, tg) :: nil) :: acc
+    : NFormula -> list (list (NFormula * T)) -> list (list (NFormula * T))
+  G := fun x : NFormula => eval_nformula env x -> False : NFormula -> Prop
+  EQ : check_inconsistent (p, o) = true
+  H1 : P @ (tlpow (p_e n)) r == Q @ (tlpow (p_e n)) r
+  c : c
+  H2 : P @ (tlpow (p_e n)) r
+  H4 : P @ (tlpow (p_e n)) r
+  H1 : P @ (tlpow (p_e n)) r
+  H4 : P @ (tlpow (p_e n)) p_e n
+  h : False
+  H5 : P @ (tlpow (p_e n)) r
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : BinNums.N -> E
+  rpow : R -> E -> R
+

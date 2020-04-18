@@ -1,0 +1,147 @@
+======== SAMPLE 1 ========
+ Row := Rsth Reqe : rminus : R to rriv rpow
+  y : positive
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  ll : t elt
+  o : option elt
+  rl : t elt
+  e1 : split x l = << ll, o, rl >>
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  ============================
+   (y0 = y + x0 + l - x)
+
+
+Debug: Going to execute:
+progress rewrite ring_sub_def
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  l : t elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  ll : t elt
+  o : option elt
+  rl : t elt
+  e1 : split x l = << ll, o, rl >>
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  ============================
+   (y0 = y + x0 + l - x)
+
+
+Debug: Going to execute:
+rewrite ring_sub_def
+
+
+TcDebug (0) > 
+Debug: Evaluated term: ring_sub_def
+
+Debug: Level 0: Found no subterm matching "?y /\ _ ?y0" in the current goal.
+
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  l : t elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  ll : t elt
+  o : option elt
+  rl : t elt
+  e1 : split x l = << ll, o, rl >>
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  ============================
+   (y0 = y + x0 + l - x)
+
+
+Debug: Going to execute:
+rewrite ring_sub_def
+
+
+TcDebug (0) > 
+Debug: Evaluated term: ring_sub_def
+
+Debug: Level 0: Found no subterm matching "?y /\ _ ?y0" in the current goal.
+
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  l : t elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  ll : t elt
+  o : option elt
+  rl : t elt
+  e1 : split x l = << ll, o, rl >>
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  ============================
+   (y0 = y + x0 + l - x)
+
+
+Debug: Going to execute:
+simpl
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  l : t elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  ll : t elt
+  o : option elt
+  rl : t elt
+  e1 : split x l = << ll, o, rl >>
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  ============================
+   (y0 = y + x0 + l - x)
+
+
+Debug: Going to execute:
+simpl
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  l : t el

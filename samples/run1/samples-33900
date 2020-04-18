@@ -1,0 +1,167 @@
+======== SAMPLE 1 ========
+   (r = (s1, s2), s3)
+
+
+Debug: Going to execute:
+progress rewrite (ARopp_add ARth)
+
+
+TcDebug (0) > 
+Goal:
+  
+  x1 : Prop
+  x2 : Prop
+  y1 : Prop
+  y2 : Prop
+  z1 : Prop
+  z2 : Prop
+  H1 : x1 = x1
+  H2 : x2 = x2
+  H : y1 = y1
+  ============================
+   (y1 = x1)
+
+
+Debug: Going to execute:
+rewrite <- ARopp_add ARth
+
+
+TcDebug (0) > 
+Debug: Evaluated term: ARopp_add
+
+Debug: Level 0: Found no subterm matching "(?p~1)%positive" in the current goal.
+
+Goal:
+  
+  x1 : Prop
+  x2 : Prop
+  y1 : Prop
+  y2 : Prop
+  z1 : Prop
+  z2 : Prop
+  H1 : x1 = x1
+  H2 : x2 = x2
+  H : y1 = x1
+  ============================
+   (y1 = x1)
+
+
+Debug: Going to execute:
+rewrite <- ARopp_add ARth
+
+
+TcDebug (0) > 
+Debug: Evaluated term: ARopp_add
+
+Debug: Level 0: Found no subterm matching "(?p~1)%positive" in the current goal.
+
+Goal:
+  
+  x1 : Prop
+  x2 : Prop
+  y1 : Prop
+  y2 : Prop
+  z1 : Prop
+  z2 : Prop
+  H1 : x1 = x1
+  H2 : x2 = x2
+  H : y1 = x1
+  ============================
+   (y1 = x1)
+
+
+Debug: Going to execute:
+rewrite <- ARopp_add ARth
+
+
+TcDebug (0) > 
+Debug: Evaluated term: ARopp_add
+
+Debug: Level 0: Found no subterm matching "(?p~1)%positive" in the current goal.
+
+Goal:
+  
+  x1 : Prop
+  x2 : Prop
+  y1 : Prop
+  y2 : Prop
+  z1 : Prop
+  z2 : Prop
+  H1 : x1 = x1
+  H2 : x2 = x2
+  H : y1 = x1
+  ============================
+   (y1 = x1)
+
+
+Debug: Going to execute:
+rewrite <- ARopp_add ARth
+
+
+TcDebug (0) > 
+Debug: Evaluated term: ARopp_add
+
+Debug: Level 0: Found no subterm matching "(?p~1)%positive" in the current goal.
+
+Goal:
+  
+  x1 : Prop
+  x2 : Prop
+  y1 : Prop
+  y2 : Prop
+  z1 : Prop
+  z2 : Prop
+  H1 : x1 = x1
+  H2 : x2 = x2
+  H : y1 = x1
+  ============================
+   (y1 = x1)
+
+
+Debug: Going to execute:
+rewrite <- ARopp_inv_add ARth
+
+
+TcDebug (0) > 
+Debug: Evaluated term: ARopp_inv_add
+
+Goal:
+  
+  x1 : Prop
+  x2 : Prop
+  y1 : Prop
+  y2 : Prop
+  z1 : Prop
+  z2 : Prop
+  H1 : x1 = x1
+  H2 : x2 = x2
+  H : y1 = x1
+  ============================
+   (y1 = x1)
+
+
+Debug: Going to execute:
+rewrite <- ARopp_assnorm_mul PX
+
+
+TcDebug (0) > 
+Goal:
+  
+  x1 : Prop
+  x2 : Prop
+  y1 : Prop
+  y2 : Prop
+  z1 : Prop
+  z2 : Prop
+  H1 : x1 = x1
+  H2 : x2 = x2
+  H : y1 = x1
+  ============================
+   (y1 = x1)
+
+
+Debug: Going to execute:
+rewrite <- complement_mul_comb C
+
+
+T

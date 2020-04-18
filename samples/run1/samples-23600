@@ -1,0 +1,29 @@
+======== SAMPLE 1 ========
+ Hr | _ => clear eqn
+| _ =>
+    (apply Private_OrderTac.Tac.not_ge_lt; intro) ||
+     apply Private_OrderTac.Tac.not_gt_le; intro
+end
+
+
+TcDebug (0) > 
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  n : Z
+  Hequz : positive is Ax + -1 * zn Pos.to_nat
+  Hdu : Z.pos Ax <= xn (Pos.to_nat n) - zn (Pos.to_nat n) - xn (Pos.to_nat n)
+  Hxn : (xn (Pos.to_nat n) + -1 * zn Pos.to_nat) ==
+       Z.pos Ax <= xn (Pos.to_nat n) - zn (Pos.to_nat n) - xn (Pos.to_nat n)
+  ============================
+   (xn (Pos.to_nat n) + -1 * zn Pos.to_nat <=
+    (xn (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat
+                      
+                     (xn n - xn (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat
+                     (xn n - xn (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (                   (xn n - 3)%nat
+                      (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (1)))%nat
+                  (xn zn (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (1))))
+                    (xn (Pos.to_nat (1) + (-1 * (9 + Pos.to_nat (Pos.to_nat (1) + Pos.to_nat (1)))%nat))
+                (xn (Pos.to_nat (Pos.to_nat (Pos.to_nat (Pos.to_nat (2))))))))
+             (xn (Pos.to_nat (1) + (9 + Pos.to_nat (Pos.to_nat (1) + Pos

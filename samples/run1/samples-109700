@@ -1,0 +1,68 @@
+======== SAMPLE 1 ========
+              forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  p : (Term' * Annot)%type
+  t : list (Term' * Annot)
+  f : cnf
+  H0 : make_conj (eval_clause env)
+         (fold_left
+            (fun (acc : list clause) (e : clause) =>
+             match or_clause (p :: t) e with
+             | Some cl => cl :: acc
+             | None => acc
+             end) f nil) ->
+       (eval_clause env (p :: t) \/ make_conj (eval_clause env) f) /\
+       make_conj (eval_clause env) nil
+  H1 : (eval_clause env (p :: t) \/ make_conj (eval_clause env) f) /\
+       make_conj (eval_clause env) nil ->
+       make_conj (eval_clause env)
+         (fold_left
+            (fun (acc : list clause) (e : clause) =>
+             match or_clause (p :: t) e with
+             | Some cl => cl :: acc
+             | None => acc
+             end) f nil)
+  X0 : clause -> list clause
+  ============================
+   (make_conj (eval_clause env) f ->
+    make_conj (eval_clause env) nil ->
+    make_conj (eval_clause env)
+       (fold_left
+           (fun (acc : list clause) (e : clause) =>
+            match or_clause (p :: t) e with
+            | Some cl => cl :: acc
+            | None => acc
+            end) f nil))
+
+
+Debug:
+Going to execute:
+assert (a = b) by (lemma vfv vlpe pe1 pe2)
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (Term'
+           (Node t t1 t2 r1 _x0 r2 t2 l1 x1 l2 r2))
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  p : (Term' * Annot)%type
+  t : list (Term' * Annot)
+  f : cnf

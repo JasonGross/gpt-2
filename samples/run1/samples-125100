@@ -1,0 +1,111 @@
+======== SAMPLE 1 ========
+ = true \/ In y s -> In y (add x s)
+  x : E.t
+  y : E.t
+  ============================
+   ((In y s1 \/ E.eq x y \/ In y s1) /\ ~ E.eq x y \/ In y s1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  s1 : t
+  s1' : t
+  E.eq : elt -> elt -> bool
+  s2 : t
+  s2' : t
+  E.eq : elt -> elt -> bool
+  s3 : t
+  s3' : t
+  E.eq : elt -> elt -> bool
+  H : E.eq s1' s2 \/ E.eq s2' s3
+  H2 : In y s2
+  H0 : E.eq x y -> In y (add x s3)
+  H3 : In y (add x s3) -> true = true
+  H4 : true = true
+  ============================
+   ((In y s1 \/ E.eq x y \/ In y s1) /\ ~ E.eq x y \/ In y s1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s1 : t
+  s1' : t
+  E.eq : elt -> elt -> bool
+  s2 : t
+  s2' : t
+  E.eq : elt -> elt -> bool
+  s3 : t
+  s3' : t
+  E.eq : elt -> elt -> bool
+  H : E.eq s1' s2 \/ E.eq s2' s3
+  H2 : In y s2
+  H0 : E.eq x y -> In y (add x s3)
+  H3 : In y (add x s3) -> true = true
+  H4 : true = true
+  ============================
+   ((In y s1 \/ E.eq x y \/ In y s1) /\ ~ E.eq x y \/ In y s1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s1 : t
+  s1' : t
+  E.eq : elt -> elt -> bool
+  s2 : t
+  s2' : t
+  E.eq : elt -> elt -> bool
+  s3 : t
+  s3' : t
+  E.eq : elt -> elt -> bool
+  H : E.eq s1' s2 \/ E.eq s2' s3
+  H2 : In y s2
+  H0 : E.eq x y -> In y (add x s3)
+  H3 : In y (add x s3) -> true = true
+  H4 : true = true
+  ============================
+   ((In y s1 \/ E.eq x y \/ In y s1) /\ ~ E.eq x y \/ In y s1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  s1 : t
+  s1' : t
+  E.eq : elt -> elt -> bool
+  s2 : t
+  s2' : t
+  E.eq : elt -> elt -> bool
+  s3 : t
+  s3' : t
+  E.eq : elt -> elt -> bool
+  H : E.eq s1' s2 \/ E.eq s2' s3
+  H2 : In y s2
+  H0 : E.eq x y -> In y (add x s3)
+  H3 : In y (add x s3) -> true = true
+  H4 : true = true
+  ============================
+   ((

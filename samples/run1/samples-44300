@@ -1,0 +1,124 @@
+======== SAMPLE 1 ========
+
+
+TcDebug (2) > 
+Goal:
+  
+  x1 : O1.t
+  x2 : O2.t
+  y1 : O1.t
+  y2 : O2.t
+  c1 : Info.t
+  c2 : Info.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H8 : Ok s1
+  H9 : Ok r1
+  H : X.lt s2 x1
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 Leaf x1 r1) -> InT a (Node c2 l2 x2 r2)
+  H4 : X.lt a x1
+  H2 : InT a r1
+  ============================
+   (InT a r2)
+
+
+Goal:
+  
+  x1 : O1.t
+  x2 : O2.t
+  y1 : O1.t
+  y2 : O2.t
+  c1 : Info.t
+  c2 : Info.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H8 : Ok s1
+  H9 : Ok r1
+  H : X.lt s2 x1
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 Leaf x1 r1) -> InT a (Node c2 l2 x2 r2)
+  H4 : X.lt a x1
+  H2 : InT a r1
+  ============================
+   (InT a r2)
+
+
+Goal:
+  
+  x1 : O1.t
+  x2 : O2.t
+  y1 : O1.t
+  y2 : O2.t
+  c1 : Info.t
+  c2 : Info.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H8 : Ok s1
+  H9 : Ok r1
+  H : X.lt s2 x1
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 Leaf x1 r1) -> InT a (Node c2 l2 x2 r2)
+  H4 : X.lt a x1
+  H2 : InT a r1
+  ============================
+   (InT a r2)
+
+
+Goal:
+  
+  x1 : O1.t
+  x2 : O2.t
+  y1 : O1.t
+  y2 : O2.t
+  c1 : Info.t
+  c2 : Info.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H8 : Ok s1
+  H9 : Ok r1
+  H : X.lt s2 x1
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 Leaf x1 r1) -> InT a (Node c2 l2 x2 r2)
+  H4 : X.lt a x1
+  H2 : InT a r1
+  ============================
+   (InT a r2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  x1 : O1.t
+  x2 : O2.t
+  y1 : O1.t
+  y2 : O2.t
+  c1 : Info.t
+  c2 : Info.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H8 : Ok s1
+  H9 : Ok r1
+  H : X.lt s2 x1
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 Leaf x1 r1) -> InT a (Node c2 l2 x2 r2)
+  H4 : X.lt a x1
+  H2 : InT a r1
+  ============================
+   (InT a r2)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+T

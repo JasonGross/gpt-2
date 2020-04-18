@@ -1,0 +1,154 @@
+======== SAMPLE 1 ========
+
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l0 : tree
+  x : X.t
+  r : tree
+  H5 : Ok l0
+  H6 : Ok r
+  H7 : lt_tree x l0
+  H : Ok lr
+  H0 : Ok r
+  H2 : X.eq x x'
+  ============================
+   (InT y l0 \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l0 : tree
+  x : X.t
+  r : tree
+  H5 : Ok l0
+  H6 : Ok r
+  H7 : lt_tree x l0
+  H : Ok lr
+  H0 : Ok r
+  H2 : X.eq x x'
+  ============================
+   (InT y l0 \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l0 : tree
+  x : X.t
+  r : tree
+  H5 : Ok l0
+  H6 : Ok r
+  H7 : lt_tree x l0
+  H : Ok lr
+  H0 : Ok r
+  H2 : X.eq x x'
+  ============================
+   (InT y l0 \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l0 : tree
+  x : X.t
+  r : tree
+  H5 : Ok l0
+  H6 : Ok r
+  H7 : lt_tree x l0
+  H : Ok lr
+  H0 : Ok r
+  H2 : X.eq x x'
+  ============================
+   (InT y l0 \/ InT y r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l0 : tree
+  x : X.t
+  r : tree
+  H5 : Ok l0
+  H6 : Ok r
+  H7 : lt_tree x l0
+  H : Ok lr
+  H0 : Ok r
+  H2 : X.eq x x'
+  ============================
+   (InT y l0 \/ InT y r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  _x : I.t
+  l0 : tree
+  x : X.t
+  r : tree
+  H5 : Ok l0
+  H6 : Ok r
+  H7 : lt_tree x l0
+  H : Ok lr
+  H0 : Ok r
+  H2 : X.eq x x'
+  ============================
+   (InT y l0 \/ InT y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l0 : tree
+  x : X.t
+  r : tree
+  H5 : Ok l0
+  H6 : Ok r
+  H7 : lt_tree x l0
+  H : Ok lr
+  H0 : Ok r
+  H2 : X.eq x x'
+ 

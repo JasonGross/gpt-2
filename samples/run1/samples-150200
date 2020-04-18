@@ -1,0 +1,115 @@
+======== SAMPLE 1 ========
+ ex1
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (add x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (add x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x' x
+  H2 : InT y l
+  ============================
+   (InT y l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (add x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (add x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x' x
+  H2 : InT y l
+  ============================
+   (InT y l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (add x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (add x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x' x
+  H2 : InT y l
+  ============================
+   (InT y l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (add x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (add x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x' x
+  H2 : InT y l
+  ============================
+   (InT y l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (add x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (add x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x' x
+  H2 : InT y l
+  ============================
+   (InT y l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+

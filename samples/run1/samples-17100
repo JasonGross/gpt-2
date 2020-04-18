@@ -1,0 +1,114 @@
+======== SAMPLE 1 ========
+ : y * x
+  ============================
+   (rpow p 1 == pow_pos rmul p 1)
+
+
+Debug: Going to execute:
+case _, _
+
+
+TcDebug (45) > 
+Goal:
+  
+  p : Z
+  H : 1 <= p
+  x : Z
+  H0 : 2 <= x
+  H1 : rpow x (interp_of p) (interp_of p min p) <= x - v2 ^ p
+  rmul_0 : forall (x : Z) (v1 : positive),
+        lt_tree x (interp_of lt0 lh) r
+  m : Z
+  p0 : positive
+  H0 : lt_tree x (interp_of p lh)
+  H : rmul_0 (x <= p) lh
+  x : Z
+  H0 : lt_tree x (interp_of p lh) r
+  V1 : Z
+  H1 : v1 * p == p * x
+  H2 : x < x
+  ============================
+   (rpow p 1 == pow_pos rmul p 1)
+
+
+Debug: Going to execute:
+case _, _
+
+
+TcDebug (45) > 
+Debug: Evaluated term: (n - 1)
+
+Goal:
+  
+  p : Z
+  H : 1 <= p
+  x : Z
+  H0 : 2 <= x
+  H1 : rpow x (interp_of p) (interp_of p min p) <= x - v2 ^ p
+  rmul_0 : forall (x : Z) (v1 : positive),
+         lt_tree x (interp_of lt0 lh) r
+  p0 : positive
+  H0 : lt_tree x (interp_of p lh)
+  H : rmul_0 (x <= p) lh
+  x : Z
+  H0 : lt_tree x (interp_of p lh)
+  V1 : Z
+  H1 : v1 * p == p * x
+  H2 : x < x
+  ============================
+   (rpow p 1 == pow_pos rmul p 1)
+
+
+Debug: Going to execute:
+cut l
+
+
+TcDebug (44) > 
+Goal:
+  
+  p : Z
+  H : 1 <= p
+  x : Z
+  H0 : 2 <= x
+  H1 : rpow x (interp_of p) (interp_of p min p) <= x - v2 ^ p
+  rmul_0 : forall (x : Z) (v1 : positive),
+        lt_tree x (interp_of lt0 lh) r
+  p0 : positive
+  H0 : lt_tree x (interp_of p lh)
+  H : rmul_0 (x <= p) lh
+  x : Z
+  H0 : lt_tree x (interp_of p lh)
+  V1 : Z
+  H1 : v1 * p == p * x
+  H2 : x < x
+  ============================
+   (rpow p 1 == pow_pos rmul p 1)
+
+
+Debug: Going to execute:
+l
+
+
+TcDebug (44) > 
+Debug: Level 44: l
+ has value 
+(interp_of p)
+
+
+Goal:
+  
+  p : Z
+  H : 1 <= p
+  x : Z
+  H0 : 2 <= x
+  H1 : rpow x (interp_of p) (interp_of p min p) <= x - v2 ^ p
+  rmul_0 : forall (x : Z) (v1 : positive),
+        lt_tree x (interp_of lt0 lh) r
+  p0 : positive
+  H0 : lt_tree x (interp_of p lh)
+  H : rmul_0 (x <= p) lh
+  x : Z
+  H0 : lt_tree x (interp_of p lh)
+  V1 : Z
+  H1 : v1 * p == p * x
+  H2

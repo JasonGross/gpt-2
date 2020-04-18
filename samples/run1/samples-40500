@@ -1,0 +1,127 @@
+======== SAMPLE 1 ========
+          eqA x e z
+  ============================
+   (eqA (x :: l))
+
+
+Debug: Going to execute:
+idtac
+
+
+TcDebug (2) > 
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec A eq
+  B : Type
+  equiv1 : Equivalence eq
+  H0 : EqDec B eq
+  a0 : A
+  b0 : B
+  a : A
+  b : B
+  y0 : B
+  y1 : A
+  H2 : In a (fst y1)
+  H3 : In y3 y1 -> False
+  H6 : FExpr B \/ In y3 y3 -> False
+  H6 : False
+  H : In
+        (fun t =>
+           (if (x1 y1 then y2 else x3) rthen (fun t => AddFvTailTac.Tac.interp_ord OEQ z t') fv a0)
+             (fv y1)) (a, b0)
+  H11 : In y2 (fst y1)
+  H6 : fv y1 then fv y2 else 0
+  H3 : In y3 y1 -> False
+  H7 : In y2 (fst y1)
+  ============================
+   (eqA x y0)
+
+
+Debug: Going to execute:
+f ltac:(())
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec A eq
+  B : Type
+  equiv1 : Equivalence eq
+  H0 : EqDec B eq
+  a0 : A
+  b0 : B
+  a : A
+  b : B
+  y0 : B
+  y1 : A
+  H2 : In a (fst y1)
+  H3 : In y3 y1 -> False
+  H6 : FExpr B \/ In y3 y3 -> False
+  H6 : False
+  H : In
+        (fun t =>
+           (if (x1 y1 then y2 else x3) rthen (fun t => AddFvTailTac.Tac.interp_ord OEQ z t') fv a0)
+            (fv y1)) (a, b0)
+  H11 : In y2 (fst y1)
+  H6 : fv y1 then fv y2 else 0
+  H3 : In y3 y1 -> False
+  H7 : In y2 (fst y1)
+  ============================
+   (eqA x y0)
+
+
+Debug: Going to execute:
+f ltac:(())
+
+
+TcDebug (0) > 
+Debug: Level 0: No matching clauses for match.
+
+Debug: Level 0: No matching clauses for match.
+
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec A eq
+  B : Type
+  equiv1 : Equivalence eq
+  H0 : EqDec B eq
+  a0 : A
+  b0 : B
+  a : A
+  b : B
+  y0 : B
+  y1 : A
+  H2 : In a (fst y1)
+  H3 : In y3 y1 -> False
+  H6 : FExpr B \/ In y3 y3 -> False
+  H7 : In y2 (fst y1)
+  ============================
+   (~ In y1 \/ ~ In y2)
+
+
+Debug:
+Going to execute:
+match goal with
+| |- ?X1 -> ?X2 => intro
+| |- ~ _ => unfold not at 1; intro
+end
+
+
+TcDebug (0) > 
+Debug: Level 0: No matching clauses for match.
+
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec

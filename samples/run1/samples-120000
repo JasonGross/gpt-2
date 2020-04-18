@@ -1,0 +1,142 @@
+======== SAMPLE 1 ========
+ flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  X : Type
+  y : X.t
+  l : t elt
+  r : t elt
+  e : elt
+  h : int
+  H : forall y : key, In y l -> X.lt y x
+  H0 : forall y : key, In y r -> X.lt y x
+  H1 : X.lt y x
+  y0 : key
+  H3 : X.eq y0 y
+  ============================
+   (X.eq y0 y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  X : Type
+  y : X.t
+  l : t elt
+  r : t elt
+  e : elt
+  h : int
+  H : forall y : key, In y l -> X.lt y x
+  H0 : forall y : key, In y r -> X.lt y x
+  H1 : X.lt y x
+  y0 : key
+  H3 : X.eq y0 y
+  ============================
+   (X.eq y0 y)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  X : Type
+  y : X.t
+  l : t elt
+  r : t elt
+  e : elt
+  h : int
+  H : forall y : key, In y l -> X.lt y x
+  H0 : forall y : key, In y r -> X.lt y x
+  H1 : X.lt y x
+  y0 : key
+  H3 : X.eq y0 y
+  ============================
+   (X.eq y0 y)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  X : Type
+  y : X.t
+  l : t elt
+  r : t elt
+  e : elt
+  h : int
+  H : forall y : key, In y l -> X.lt y x
+  H0 : forall y : key, In y r -> X.lt y x
+  H1 : X.lt y x
+  y0 : key
+  H3 : X.eq y0 y
+  ============================
+   (X.eq y0 y)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  X : Type
+  y : X.t
+  l : t elt
+  r : t elt
+  e : elt
+  h : int
+  H : forall y : key, In y l -> X.lt y x
+  H0 : forall y : key, In y r -> X.lt y x
+  H1 : X.lt y x
+  y0 : key
+  H3 : X.eq y0 y
+  ============================
+   (X.eq y0 y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  X : Type
+  y : X.t
+  l : t elt
+  r : t elt
+  e : elt
+  h : int
+  H : forall y : key, In y l -> X.lt y x
+  H0 : forall y : key, In y r -> X.lt y x
+  H1 : X.lt y x
+  y0 : key
+  H3 : X.eq y0 y
+  ============================
+   (X.eq y0 y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (

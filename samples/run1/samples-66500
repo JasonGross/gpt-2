@@ -1,0 +1,109 @@
+======== SAMPLE 1 ========
+
+   (InT y (Node _x (Node _x0 rll rlx rlr) rx rr))
+
+
+Debug: Going to execute:
+do_intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  e : (height (Node _x (Node _x0 rll rlx rlr) rx rr) + 2 <? height l) = false
+  e2 : (height (Node _x0 rll rlx rlr) <=? height rr) = false
+  y : elt
+  H0 : InT y l
+  ============================
+   (X.eq y x \/ InT y l \/ InT y (Node _x (Node _x0 rll rlx rlr) rx rr))
+
+
+Debug: Going to execute:
+let H := fresh in
+intro H; use_hyp H
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  e : (height (Node _x (Node _x0 rll rlx rlr) rx rr) + 2 <? height l) = false
+  e2 : (height (Node _x0 rll rlx rlr) <=? height rr) = false
+  y : elt
+  H0 : InT y l
+  ============================
+   (X.eq y x \/ InT y l \/ InT y (Node _x (Node _x0 rll rlx rlr) rx rr))
+
+
+Debug: Going to execute:
+let H := fresh in
+intro H; use_hyp H
+
+
+TcDebug (3) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  e : (height (Node _x (Node _x0 rll rlx rlr) rx rr) + 2 <? height l) = false
+  e2 : (height (Node _x0 rll rlx rlr) <=? height rr) = false
+  y : elt
+  H0 : InT y l
+  ============================
+   (X.eq y x \/ InT y l \/ InT y (Node _x (Node _x0 rll rlx rlr) rx rr))
+
+
+Debug: Going to execute:
+intro H; use_hyp H
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  e : (height (Node _x (Node _x0 rll rlx rlr) rx rr) + 2 <? height l) = false
+  e2 : (height (Node _x0 rll rlx rlr) <=? height rr) = false
+  y : elt
+  H0 : InT y l
+  ============================
+   (X.eq y x \/ InT y l \/ InT y (Node _x (Node _x0 rll rlx rlr) rx rr))
+
+
+Debug: Going to execute:
+intro H
+
+
+TcDebug (3) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  e : (height (Node _x (Node _x0 rll rlx rlr) rx rr) + 2 <? height l) = false
+  e2 : (height (Node _x0 rll rlx rlr) <=? height rr) = false
+  y : elt
+  H0 : InT y l
+  ============================
+   (X.eq y x \/ InT y l \/ InT y (Node _x (Node _x0 rll rlx rlr) rx rr))
+
+
+Debug: Going to execute:
+<lt

@@ -1,0 +1,150 @@
+======== SAMPLE 1 ========
+} /\ ~ E.eq x y
+  x1 : E.t
+  y1 : E.t
+  z1 : E.t
+  t1 : E.t
+  Ha : E.eq x1 y1
+  Ha' : E.eq x1 x4
+  H1 : InT x1 y
+  ============================
+   (E.eq x y1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : E.t
+  y : E.t
+  z : E.t
+  t1 : E.t
+  Ha : E.eq x1 y1
+  Ha' : E.eq x1 x4
+  H1 : InT x1 y
+  ============================
+   (E.eq x y1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : E.t
+  y : E.t
+  z : E.t
+  t1 : E.t
+  Ha : E.eq x1 y1
+  Ha' : E.eq x1 x4
+  H1 : InT x1 y
+  ============================
+   (E.eq x y1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : E.t
+  y : E.t
+  z : E.t
+  t1 : E.t
+  Ha : E.eq x1 y1
+  Ha' : E.eq x1 x4
+  H1 : InT x1 y
+  ============================
+   (E.eq x y1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : E.t
+  y : E.t
+  z : E.t
+  t1 : E.t
+  Ha : E.eq x1 y1
+  Ha' : E.eq x1 x4
+  H1 : InT x1 y
+  ============================
+   (E.eq x y1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : E.t
+  y : E.t
+  z : E.t
+  t1 : E.t
+  Ha : E.eq x1 y1
+  Ha' : E.eq x1 x4
+  H1 : InT x1 y
+  ============================
+   (E.eq x y1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : E.t
+  y : E.t
+  z : E.t
+  t1 : E.t
+  Ha : E.eq x1 y1
+  Ha' : E.eq x1 x4
+  H1 : InT x1 y
+  ============================
+   (E.eq x y1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : E.t
+  y : E.t
+  z : E.t
+  t1 : E.t
+  Ha : E.eq x1 y1
+  Ha' : E.eq x1 x4
+  H1 : InT x1 y
+  ============================
+   (E.eq

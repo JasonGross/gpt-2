@@ -1,0 +1,140 @@
+======== SAMPLE 1 ========
+::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  n : E.eq x y -> False
+  H3 : E.eq x y -> In y (remove x s)
+  H0 : In y s -> true = true
+  H4 : true = true -> In y (remove x s)
+  H : In y s -> false = true
+  H5 : false = true -> In y s
+  H6 : In y s -> In y (remove x s)
+  H1 : In y (remove x s)
+  H8 : In y s
+  ============================
+   (false = false)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  n : E.eq x y -> False
+  H3 : E.eq x y -> In y (remove x s)
+  H0 : In y s -> true = true
+  H4 : true = true -> In y (remove x s)
+  H : In y s -> false = true
+  H5 : false = true -> In y s
+  H6 : In y s -> In y (remove x s)
+  H1 : In y (remove x s)
+  H8 : In y s
+  ============================
+   (false = false)
+
+
+Debug: Going to execute:
+elim id
+
+
+TcDebug (1) > 
+Debug: Evaluated term: H2
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  n : E.eq x y -> False
+  H3 : E.eq x y -> In y (remove x s)
+  H0 : In y s -> true = true
+  H4 : true = true -> In y (remove x s)
+  H : In y s -> false = true
+  H5 : false = true -> In y s
+  H6 : In y s -> In y (remove x s)
+  H1 : In y (remove x s)
+  H8 : In y s
+  ============================
+   (In y s)
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  n : E.eq x y -> False
+  H3 : E.eq x y -> In y (remove x s)
+  H0 : In y s -> true = true
+  H4 : true = true -> In y (remove x s)
+  H : In y s -> false = true
+  H5 : false = true -> In y s
+  H6 : In y s -> In y (remove x s)
+  H1 : In y (remove x s)
+  H8 : In y s
+  ============================
+   (In y s)
+
+
+Debug: Going to execute:
+do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  n : E.eq x y -> False
+  H3 : E.eq x y -> In y (remove x s)
+  H0 : In y s -> true = true
+  H4 : true = true -> In y (remove x s)
+  H : In y s -> false = true
+  H5 : false = true -> In y s
+  H6 : In y s -> In y (remove x s)
+  H1 : In y (remove x s)
+  H8 : In y s
+  ============================
+   (In y s)
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+ 

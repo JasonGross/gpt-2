@@ -1,0 +1,52 @@
+======== SAMPLE 1 ========
+                      (Ring_polynom.PEmul (num nfe1) (denum nfe2)))
+                      (Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp
+                      Qeq_bool (triv_div 0 1 Qeq_bool) ring_subst_niter list_hyp_norm pe =
+                  Ring_polynom.PEeval 0 1 Qplus Qmult Qminus Qopp
+                    (IDphi (R:=Q)) Z.of_N Qpower (2 # n :: xn (Pos.to_nat n) + 2)) pe ==
+                 Ring_polynom.Pphi_pow 0 1 Qplus Qmult Qminus Qopp 0 1
+                   (IDphi (R:=Q)) Z.of_N Qpower (get_sign_None (C:=Q))
+                  (2 # n :: xn (Pos.to_nat n) + 2)) npe)%Q
+  res := nil : list (Ring_polynom.PExpr Q * Ring_polynom.PExpr Q)
+  res_eq : Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+            (triv_div 0 1 Qeq_bool) ring_subst_niter list_hyp_norm
+            (Ring_polynom.PEadd (Ring_polynom.PEc 1) (Ring_polynom.PEc 1))) = res
+  thm : (xn (Pos.to_nat n) + (n + m + (Pos.to_nat n + m)) ==
+         xn (Pos.to_nat n) + (n + m + (Pos.to_nat n + m))%Q
+  ============================
+   (xn (Pos.to_nat n) + (n + m + (Pos.to_nat n + m)) ==
+    xn (Pos.to_nat n) + - (n + (n + m)) + (- (n + m)) + (xn (Pos.to_nat n) - (n + m)) n + (xn (Pos.to_nat n + m)))%Q
+
+
+Debug:
+Going to execute:
+fun (PEX Q 3) ty =>
+  let rec find n l :=
+   match l with
+   | nil => fail 100 "anomaly: Find_at"
+   | (a :: _)%list => eval compute in n
+   | _ => find (Pos.succ n) l
+   end
+  in
+  get_sign_None (Nat.succ 1) (2 # n :: xn (Pos.to_nat n) + 2))
+
+
+TcDebug (5) > 
+Debug: Evaluated term: (xn (Pos.to_nat n) + (n + m))
+
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+  n : positive
+  maj : (2 # n <
+         (Pos.to_nat n - (Pos.to_nat n + - 1)))%Q
+  nmaj : (2 # n <
+         (Pos.to_nat n - (Pos.to_nat n + - 1)))%Q
+  EnvRing RNG
+  n : positive
+  maj := (2 # n <
+         (Pos.to_nat n - (Pos.to_nat n + - 1)))%Q
+  nmaj_min := (0 # n)%nat :

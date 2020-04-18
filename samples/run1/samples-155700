@@ -1,0 +1,140 @@
+======== SAMPLE 1 ========
+ : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  H5 : X.eq x y
+  ============================
+   (X.eq x lx \/ InT x lr)
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| |- ?X1 => <Coq.Init.Tauto.is_unit_or_eq> flags X1; constructor 1
+| _:?X1 |- _ => <Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+| _:?X1 |- ?X1 => assumption
+end
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  H5 : X.eq x y
+  ============================
+   (X.eq x lx \/ InT x lr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; constructor 1
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  H5 : X.eq x y
+  ============================
+   (X.eq x lx \/ InT x lr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  H5 : X.eq x y
+  ============================
+   (X.eq x lx \/ InT x lr)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  H5 : X.eq x y
+  ============================
+   (X.eq x lx \/ InT x lr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4

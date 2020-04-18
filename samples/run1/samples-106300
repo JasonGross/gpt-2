@@ -1,0 +1,141 @@
+======== SAMPLE 1 ========
+ x l /\ f x = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  p : Z
+  H : 1 < p
+  H0 : forall n : Z, 1 <= n < p -> rel_prime n p
+  a : Z
+  H1 : (a | p)
+  H2 : p >= 0
+  H3 : a <= 0
+  H4 : - a <= p
+  H5 : - a < p
+  H6 : a < 0
+  ============================
+   (- p < a < -1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  p : Z
+  H : 1 < p
+  H0 : forall n : Z, 1 <= n < p -> rel_prime n p
+  a : Z
+  H1 : (a | p)
+  H2 : p >= 0
+  H3 : a <= 0
+  H4 : - a <= p
+  H5 : - a < p
+  H6 : a < 0
+  ============================
+   (- p < a < -1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  p : Z
+  H : 1 < p
+  H0 : forall n : Z, 1 <= n < p -> rel_prime n p
+  a : Z
+  H1 : (a | p)
+  H2 : p >= 0
+  H3 : a <= 0
+  H4 : - a <= p
+  H5 : - a < p
+  H6 : a < 0
+  ============================
+   (- p < a < -1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+ [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+
+
+TcDebug (2) > 
+Goal:
+  
+  p : Z
+  H : 1 < p
+  H0 : forall n : Z, 1 <= n < p -> rel_prime n p
+  a : Z
+  H1 : (a | p)
+  H2 : p >= 0
+  H3 : a <= 0
+  H4 : - a <= p
+  H5 : - a < p
+  H6 : a < 0
+  ============================
+   (- p < a < -1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2
+
+
+TcDebug (2) > 
+Goal:
+  
+  p : Z
+  H : 1 < p
+  H0 : forall n : Z, 1 <= n < p -> rel_prime n p
+  a : Z
+  H1 : (a | p)
+  H2 : p >= 0
+  H3 : a <= 0
+  H4 : - a <= p
+  H5 : - a < p
+  H6 : a < 0
+  ============================
+   (- p < a < -1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  p : Z
+  H : 1 < p
+  H0 : forall n : Z, 1 <= n < p -> rel_prime n p
+  a : Z
+  H1 : (a | p)
+  H2 : p >= 0
+  H3 : a <= 0
+  H4 : - a <= p
+  H5 : - a < p
+  H6 : a < 0
+  ============================
+   (- p < a < -1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (3) >

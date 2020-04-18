@@ -1,0 +1,131 @@
+======== SAMPLE 1 ========
+ x lr \/ InT x rl
+  H2 : InT x rr
+  ============================
+   (X.eq x lx)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rr
+  ============================
+   (X.eq x lx)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rr
+  ============================
+   (X.eq x lx)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rr
+  ============================
+   (X.eq x lx)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rr
+  ============================
+   (X.eq x lx)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H0 : InT x lr -> InT x a \

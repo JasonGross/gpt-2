@@ -1,0 +1,171 @@
+======== SAMPLE 1 ========
+
+   (of_nat 16 = Some y -> to_nat y = 16)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 17 = Some y -> to_nat y = 17)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 18 = Some y -> to_nat y = 18)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 19 = Some y -> to_nat y = 19)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 20 = Some y -> to_nat y = 20)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 21 = Some y -> to_nat y = 21)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 22 = Some y -> to_nat y = 22)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 23 = Some y -> to_nat y = 23)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 24 = Some y -> to_nat y = 24)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 25 = Some y -> to_nat y = 25)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 26 = Some y -> to_nat y = 26)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 27 = Some y -> to_nat y = 27)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 28 = Some y -> to_nat y = 28)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 29 = Some y -> to_nat y = 29)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 30 = Some y -> to_nat y = 30)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 31 = Some y -> to_nat y = 31)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 32 = Some y -> to_nat y = 32)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 33 = Some y -> to_nat y = 33)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 34 = Some y -> to_nat y = 34)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 35 = Some y -> to_nat y = 35)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 36 = Some y -> to_nat y = 36)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 37 = Some y -> to_nat y = 37)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 38 = Some y -> to_nat y = 38)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 39 = Some y -> to_nat y = 39)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 40 = Some y -> to_nat y = 40)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 41 = Some y -> to_nat y = 41)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 42 = Some y -> to_nat y = 42)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 43 = Some y -> to_nat y = 43)
+
+
+Goal:
+    y : byte
+  ============================
+   (of_nat 44 = Some y -> to_nat y

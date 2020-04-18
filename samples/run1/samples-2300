@@ -1,0 +1,102 @@
+======== SAMPLE 1 ========
+t3_tac: at y t1 -> False)
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0>
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  l1 : list A
+  x2 : A
+  l2 : list B
+  maj : 0 < maj - 1
+  cl : A
+  Seq : a -> bool
+  H : lt_tree a = false
+  ============================
+   (a = false)
+
+
+Debug: Going to execute:
+match reverse goal with
+| id:?X1
+  |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+| id:_ <-> _ |- _ => elim id; intro; clear id
+| id:~ _ |- _ => red in id
+| id:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+| id0:?X1 |- _ => assert X3; [ exact (id0 id1) | clear id0 ]
+| id1:?X1 |- _ => <Coq.Init.Tauto.is_unit_or_eq> flags X1; constructor 1
+| id:?X1 |- _ =>
+       <Coq.Init.Tauto.is_conj> flags X1; split
+| id3:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.is_disj> flags X3; split
+| id:?X1 -> ?X2
+  |- _ =>
+      assert ((X1 ` X2 `) -> (X2 `) -> (X3 `) |- _ =>
+        match reverse goal with
+        | __�_ |- _ => <Coq.Init.Tauto.is_conj> flags X3; elim id; intro; clear id
+       | __�_ |- _ =>
+        match reverse goal with
+        | __�_ |- _ => elim id; intro; clear id
+       | __�_ |- _ =>
+        match reverse goal with
+        | __�_ |- _ =>
+               clear id; id
+        | __�_ |- _ =>
+               clear id
+        | __�_ |- _ =>
+                id; id
+         | __�_ |- _ =>
+                clear id
+        | __�_ |- _ =>
+              clear id
+        | __�_ |- _ =>
+            end
+fun AReeq := Equivalence_polynom.F := False => <tauto_plugin::is_disj@0>
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  l1 : list A
+  x2 : A
+  l2 : list B
+  maj : 0 < maj - 1
+  cl : A
+  Seq : a -> bool
+  H : lt_tree a = false
+  ============================
+   (a = false)
+
+
+Debug:
+Going to execute:
+<tauto_plugin::is_disj@0> $1
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  l1 : list A
+  x2 : A
+  l2 : list B
+  maj : 0 < maj - 1
+  cl : A
+  Seq : a -> bool
+  H : lt_tree a = false
+  ============================
+   (a = false)
+
+
+Debug:
+Going to execute:
+<Coq

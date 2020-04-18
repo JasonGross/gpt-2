@@ -1,0 +1,134 @@
+======== SAMPLE 1 ========
+
+  H9 : In Y n
+  H5 : X.eq y0 y' \/ In Y n
+  H11 : In Y m
+  H8 : X.eq y0 x'
+  H9 : X.eq y x
+  ============================
+   (In Y m)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> 0 < n -> False
+  n : t
+  m : t
+  H : m < n
+  H1 : In y m
+  H3 : In y m
+  H6 : X.eq y x
+  H10 : In y m -> False
+  H7 : In y m -> In y m
+  H7 : In y r -> False
+  H9 : In y m
+  H5 : X.eq y0 y' \/ In Y n
+  H11 : In Y m
+  H8 : X.eq y0 x'
+  H9 : X.eq y x
+  ============================
+   (In Y m)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  R : forall n : t, 0 == n <-> 0 < n -> False
+  n : t
+  m : t
+  H : m < n
+  H1 : In y m
+  H3 : In y m
+  H6 : X.eq y x
+  H10 : In y m -> False
+  H7 : In y m -> In y m
+  H7 : In y r -> False
+  H9 : In y m
+  H5 : X.eq y0 y' \/ In Y n
+  H11 : In Y m
+  H8 : X.eq y0 x'
+  H9 : X.eq y x
+  ============================
+   (In Y m)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+
+
+TcDebug (2) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> 0 < n -> False
+  n : t
+  m : t
+  H : m < n
+  H1 : In y m
+  H3 : In y m
+  H6 : X.eq y x
+  H10 : In y m -> False
+  H7 : In y m -> In y m
+  H7 : In y r -> False
+  H9 : In y m
+  H5 : X.eq y0 y' \/ In Y n
+  H11 : In Y m
+  H8 : X.eq y0 x'
+  H9 : X.eq y x
+  ============================
+   (In Y m)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> 0 < n -> False
+  n : t
+  m : t
+  H : m < n
+  H1 : In y m
+  H3 : In y m
+  H6 : X.eq y x
+  H10 : In y m -> False
+  H7 : In y m -> In y m
+  H7 : In y r -> False
+  H9 : In y m
+  H5 : X.eq y0 y' \/ In Y n
+  H11 : In Y m
+  H8 : X.eq y0 x'
+  H9 : X.eq y x
+  ============================
+   (In Y m)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  R : forall n : t,

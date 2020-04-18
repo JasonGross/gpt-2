@@ -1,0 +1,82 @@
+======== SAMPLE 1 ========
+ In/In x l2 \/ In x s3 /\ In x l1 \/ In x s2 \/ In x s3 =>
+         Ok l1 ->
+         InT x l1 \/ In x s2 \/ In x s3 ->
+         Ok l2 ->
+         InT x l2 \/ In x s2 \/ In x s3 =>
+         InT x l1 \/ In x s2 \/ In x s3
+  H1 : X.eq x l1
+  H : InT x s1
+  H3 : InT x l2
+  H0 : InT x l2
+  H5 : InT x s2
+  ============================
+   (InT x l1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  s2 : tree
+  IHl1 : forall (s' : t) (x : elt),
+        Ok l1 ->
+        Ok (split x s2)#l ->
+        InT x (inter l1 (split x s2)#l) <->
+        InT x l1 \/ In x s2 \/ In x s2
+  l2 : tree
+  s2 : tree
+  IHr2 : forall (x : elt) (s' : t),
+        Ok r1 ->
+        Ok (split x s2)#r ->
+        InT x (inter r1 (split x s2)#r) <->
+        InT x r1 \/ In x s2 \/ In x s2
+  x : elt
+  s2 : tree
+  H0 : InT x s2
+  H5 : InT x s2
+  ============================
+   (InT x l1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  s2 : tree
+  IHl1 : forall (s' : t) (x : elt),
+        Ok l1 ->
+        Ok (split x s2)#l ->
+        InT x (inter l1 (split x s2)#l) <->
+        InT x l1 \/ In x s2 \/ In x s2
+  l2 : tree
+  s2 : tree
+  IHr2 : forall (x : elt) (s' : t),
+        Ok r1 ->
+        Ok (split x s2)#r ->
+        InT x (inter r1 (split x s2)#r) <->
+        InT x r1 \/ In x s2 \/ In x s2
+  l2 : tree
+  s2 : tree
+  IHr2 : forall (x : elt) (s' : t),
+        Ok l1 ->
+        Ok (split x s2)#l ->
+        InT x (inter l1 (split x s2)#l) <->
+        InT x l1 \/ In x s2 \/ In x s2
+  l2 : tree
+  s2 : tree
+  IHr2 : forall (x : elt) (s' : t),
+        Ok l2 ->
+        Ok (split x s2)#l ->
+        InT x (inter r1 (split x s2)#l) <->
+        In

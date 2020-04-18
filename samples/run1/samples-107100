@@ -1,0 +1,73 @@
+======== SAMPLE 1 ========
+ (rev l2)))
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:?X1
+  |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+| id:_ <-> _ |- _ => elim id; do 2 intro; clear id
+| id:~ _ |- _ => red in id
+| id:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+| id0:?X1 -> ?X2, id1:?X1 |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+| id:?X1 -> ?X2
+  |- _ =>
+      <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+       [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+| id:?X1 <-> ?X2 -> ?X3
+  |- _ =>
+      assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+       (do 2 intro; apply id; split; assumption); clear id
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+| |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+| |- _ <-> _ => split
+| |- ~ _ => red
+end; <Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l2 : t elt
+  x2 : key
+  d2 : elt
+  r2 : t elt
+  _x4 : int
+  m2' : t elt
+  e1 : split x1 m2' = << l2, find x1 m2' >>
+  e2 : elt''
+  e3 : f x1 d1 (find x1 m2') = Some e2
+  IHt1 : forall y : key,
+         bst l1 ->
+         bst l2 ->
+         In y l1 \/ In y l2' ->
+         find y (map2_opt l1 l2') = f0 y (find y l1) (find y l2')
+  IHt0 : forall y : key,
+         bst r1 ->
+         bst r2 ->
+         In y r1 \/ In y r2' ->
+         find y (map2_opt r1 r2') = f0 y (find y r1) (find y r2')
+  y : key
+  H0 : bst m2
+  H : In y (Node l1 x1 d1 r1 _x)
+  H4 : MX.TO.lt y x1
+  H5 : MX.TO.lt x1 y
+  H1 : (In y l1 \/ In y l2') \/ In y r2'
+  ============================
+   (In y (Node l1 x1 d1 r1 _x))
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:?X1
+  |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+| id:_ <-> _ |- _ => elim id; do 2 intro; clear id
+| id:~ _ |- _ => red in id
+| id:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+| id0:?X1 ->

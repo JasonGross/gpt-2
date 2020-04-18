@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  Hlr : forall (x : key) (d : elt) (r : t elt) (y : key),
+        In y (join lr x d r) <-> X.eq y x \/ In y lr \/ In y r
+  x : key
+  d : elt
+  y : key
+  H0 : In y lr \/ In y r
+  ============================
+   (X.eq y x \/ In y (Node ll lx ld lr lh) \/ In y r)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  Hlr : forall (x : key) (d : elt) (r : t elt) (y : key),
+        In y (join lr x d r) <-> X.eq y x \/ In y lr \/ In y r
+  x : key
+  d : elt
+  y : key
+  H0 : In y lr \/ In y r
+  ============================
+   (X.eq y x \/ In y (Node ll lx ld lr lh) \/ In y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  Hlr : forall (x : key) (d : elt) (r : t elt) (y : key),
+        In y (join lr x d r) <-> X.eq y x \/ In y lr \/ In y r
+  x : key
+  d : elt
+  y : key
+  H0 : In y lr \/ In y r
+  ============================
+   (X.eq y x \/ In y (Node ll lx ld lr lh) \/ In y r)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  Hlr : forall (x : key) (d : elt) (r : t elt) (y : key),
+        In y (join lr x d r) <-> X.eq y x \/ In y lr \/ In y r
+  x : key
+  d : elt
+  y : key
+  H0 : In y lr \/ In y r
+  ============================
+   (X.eq y x \/ In y (Node ll lx ld lr lh) \/ In y r)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  Hlr : forall (

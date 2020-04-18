@@ -1,0 +1,149 @@
+======== SAMPLE 1 ========
+  x : A -> B
+  y : A -> B
+  z : A -> B
+  X : (R ==> R') x y
+  X0 : (R ==> R') z y
+  x0 : A
+  y0 : A
+  X1 : R x0 y0
+  ============================
+   (R' (x x0) (z y0))
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  eqa : Equivalence R
+  B : Type
+  R' : relation B
+  eqb : Equivalence R'
+  x : A -> B
+  x0 : A
+  y : A -> B
+  z : A -> B
+  X : (R ==> R') x y
+  X0 : (R ==> R') z y
+  x0 : A
+  y0 : A
+  X1 : R x0 y0
+  ============================
+   (R' (x x0) (z y0))
+
+
+Debug: Going to execute:
+clear id0
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  eqa : Equivalence R
+  B : Type
+  R' : relation B
+  eqb : Equivalence R'
+  x : A -> B
+  x0 : A
+  y : A -> B
+  z : A -> B
+  X : (R ==> R') x y
+  X0 : (R ==> R') z y
+  x0 : A
+  y0 : A
+  X1 : R x0 y0
+  ============================
+   (R' (x x0) (z y0))
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (1) > 
+Debug: Level 1: x is used in "relation X0 y0".
+
+Debug: Level 1: x is used in "relation X0 y0".
+
+Goal:
+  
+  A : Type
+  R : relation A
+  eqa : Equivalence R
+  B : Type
+  R' : relation B
+  eqb : Equivalence R'
+  x : A -> B
+  x0 : A
+  y : A -> B
+  z : A -> B
+  X : (R ==> R') x y
+  X0 : (R ==> R') z y
+  x0 : A
+  y0 : A
+  X1 : R x0 y0
+  ============================
+   (R' (x x0) (z y0))
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (1) > 
+Debug: Level 1: x is used in "relation X0 y0".
+
+Debug: Level 1: x is used in "relation X0 y0".
+
+Debug: Level 1: x is used in "relation X0 y0".
+
+Goal:
+  
+  A : Type
+  R : relation A
+  eqa : Equivalence R
+  B : Type
+  R' : relation B
+  eqb : Equivalence R'
+  x : A -> B
+  x0 : A
+  y : A -> B
+  z : A -> B
+  X : (R ==> R') x y
+  X0 : (R ==> R') z y
+  x0 : A
+  y0 : A
+  X1 : R x0 y0
+  ============================
+   (R' (x x0) (z y0))
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  eqa : Equivalence R
+  B : Type
+  R' : relation B
+  eqb : Equivalence R'
+  x : A -> B
+  x0 : A
+  y : A -> B
+  z : A -> B
+  X : (R ==> R') x y
+  X0 : (R ==> R') z y
+  x : A -> B
+  y0 : A
+  X

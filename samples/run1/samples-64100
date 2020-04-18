@@ -1,0 +1,113 @@
+======== SAMPLE 1 ========
+  r : t elt
+  h : int (P.t elt)
+  e : elt
+  H0 : X.eq x ltac:(get_Eq RNG)
+  H3 : (X.eq x lx \/ InT x lr) /\
+        (X.eq x lx \/ InT x lr) \/ InT x r
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  lc : Color.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  IHlr : forall r : tree, I.t (Branch lr -> False) -> X.lt x r
+  x : elt
+  H : X.eq x lx
+  H0 : X.eq x lr \/ InT x rl \/ X.eq x rx \/ InT x rr
+  H1 : X.eq x lx
+  H5 : InT x rl
+  H3 : InT x a
+  H4 : InT x rl
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  lc : Color.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  IHlr : forall r : tree, I.t (Branch lr -> False) -> X.lt x r
+  x : elt
+  H : X.eq x lx
+  H0 : X.eq x lr \/ InT x rl \/ X.eq x rx \/ InT x rr
+  H1 : X.eq x lx
+  H5 : InT x rl
+  H3 : InT x a
+  H4 : InT x rl
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  lc : Color.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  IHlr : forall r : tree, I.t (Branch lr -> False) -> X.lt x r
+  x : elt
+  H : X.eq x lx
+  H0 : X.eq x lr \/ InT x rl \/ X.eq x rx \/ InT x rr
+  H1 : X.eq x lx
+  H5 : InT x rl
+  H3 : InT x a
+  H4 : InT x rl
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug: Going to execute:
+elim id
+
+
+TcDebug (2) > 
+Debug: Evaluated term: H3
+
+Goal:
+  
+  lc : Color.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  IHlr : forall r : tree, I.t (Branch lr -> False) -> X.lt x r
+  x : elt
+  H : X.eq x lx
+  H0 : X.eq x lr \/ InT x rl \/ X.eq x rx \/ InT x rr
+  H1 : X.eq x lx
+  H5 : InT x rl
+  H3 : InT x a
+  H4 : InT x rl
+  ============================
+   (X.eq x lx \/ InT x lr)
+
+

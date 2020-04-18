@@ -1,0 +1,151 @@
+======== SAMPLE 1 ========
+
+   (o = o' -> False)
+
+
+Debug: Going to execute:
+do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  o : bool
+  r : tree
+  l' : tree
+  o' : bool
+  r' : tree
+  H : o = o'
+  H0 : subset r' r = true
+  H3 : subset r' r = true
+  H1 : subset r' r = true
+  H4 : subset r' r = true
+  ============================
+   (o = o' -> False)
+
+
+Debug: Going to execute:
+intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  o : bool
+  r : tree
+  l' : tree
+  o' : bool
+  r' : tree
+  H : o = o'
+  H0 : subset r' r = true
+  H3 : subset r' r = true
+  H1 : subset r' r = true
+  H4 : subset r' r = true
+  H5 : subset r' r = true
+  ============================
+   (o = o' -> False)
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@0>
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  o : bool
+  r : tree
+  l' : tree
+  o' : bool
+  r' : tree
+  H : o = o'
+  H0 : subset r' r = true
+  H3 : subset r' r = true
+  H1 : subset r' r = true
+  H4 : subset r' r = true
+  H5 : subset r' r = true
+  H6 : subset r' r = true
+  H7 : subset r' r = true
+  ============================
+   (eq (le e' r) -> False)
+
+
+Debug: Going to execute:
+intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  o : bool
+  r : tree
+  l' : tree
+  o' : bool
+  r' : tree
+  H : o = o'
+  H0 : subset r' r = true
+  H3 : subset r' r = true
+  H1 : subset r' r = true
+  H4 : subset r' r = true
+  H5 : subset r' r = true
+  H6 : subset r' r = true
+  H7 : subset r' r = true
+  ============================
+   (eq (le e' r) -> False)
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@0>
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  o : bool
+  r : tree
+  l' : tree
+  o' : bool
+  r' : tree
+  H : o = o'
+  H0 : subset r' r = true
+  H3 : subset r' r = true
+  H1 : subset r' r = true
+  H4 : subset r' r = true
+  H5 : subset r' r = true
+  H6 : subset r' r = true
+  H7 : subset r' r = true
+  H8 : subset l l' = true
+  H9 : subset l' l = true
+  ============================
+   (subset r r' r = true ->
+   subset l r' r = true -> Subset r r' 1 + subset r' r = true -> (?x1 = ?x2) = ?x1 = true)
+
+
+Debug: Going to execute:
+clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  o : bool
+  r : tree
+  l' : tree
+  o' : bool
+  r' : tree
+  H : o = o'
+  H0 : subset r' r = true
+  H3 : subset r' r = true
+  H1 : subset r' r = true
+  H4 : subset r' r = true
+  H5 : subset r' r = true
+  H6 : subset r' r = true
+  H7 : subset r' r = true
+  H8 : subset l l' = true
+  H9 :

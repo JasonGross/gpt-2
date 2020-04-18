@@ -1,0 +1,111 @@
+======== SAMPLE 1 ========
+E : In x l
+  EQ : z2ez x = e2
+  H0 : z1ez e = z2ez z
+  H1 : z1ez e = z2ez z
+  ============================
+   (Z.of_nat (z1ez e = z2ez z) = z2ez (z1ez e) = z2ez (z2ez e))
+
+
+Debug:
+Going to execute:
+match l with
+| nil => fail 100 "anomaly: Find_at"
+| (a :: _)%list => eval compute in n
+| (_ :: ?l)%list => find (Pos.succ n) l
+end
+
+
+TcDebug (18) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  acc : list (key * elt)
+  x0 : X.t
+  e0 : elt
+  H : InA eqke (x0, e0) (elements_aux acc r) ->
+      MapsTo x0 e0 r \/ InA eqke (x0, e0) acc
+  H2 : InA eqke (x0, e0) acc -> InA eqke (x0, e0) (elements_aux acc r)
+  Hadd : Equal m (add x e r)
+  Hc : MapsTo x0 e0 r
+  ============================
+   (Z.of_nat (z1ez e = z2ez z) = z2ez (z1ez e) = z2ez (z2ez e))
+
+
+Debug: Going to execute:
+l
+
+
+TcDebug (19) > 
+Debug: Level 19: l
+ has value 
+z2ez
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  acc : list (key * elt)
+  x0 : X.t
+  e0 : elt
+  H : InA eqke (x0, e0) (elements_aux acc r) ->
+      MapsTo x0 e0 r \/ InA eqke (x0, e0) acc
+  H2 : InA eqke (x0, e0) acc -> InA eqke (x0, e0) (elements_aux acc r)
+  Hadd : Equal m (add x e r)
+  Hc : MapsTo x0 e0 r
+  ============================
+   (Z.of_nat (z1ez e = z2ez z) = z2ez (z1ez e) = z2ez (z2ez e))
+
+
+Debug: Going to execute:
+find (Pos.succ n) l
+
+
+TcDebug (19) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  acc : list (key * elt)
+  x0 : X.t
+  e0 : elt
+  H : InA eqke (x0, e0) (elements_aux acc r) ->
+      MapsTo x0 e0 r \/ InA eqke (x0, e0) acc
+  H2 : InA eqke (x0, e0) acc -> InA eqke (x0, e0) (elements_aux acc r)
+  Hadd : Equal m (add x e r)
+  Hc : MapsTo x0 e0 r
+  ============================
+   (Z.of_nat (z1ez e = z2ez z) = z2ez (z1ez e) = z2ez (z2ez e))
+
+
+Debug:
+Going to execute:
+fun n l =>
+  match l with
+  | nil => fail 100 "anomaly: Find_at"
+  | (a :: _)%list => eval compute in n
+  | (_ :: ?l)%list => find (Pos.succ n) l
+  end
+
+
+TcDebug (20) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt

@@ -1,0 +1,154 @@
+======== SAMPLE 1 ========
+Order)
+t y'1 : key
+{:?key0
+
+'||
+t
+|| true
+
+'
+' _
+' y'2 : key
+' _ :?key2'
+' || true
+'
+' _
+' y'3 : key
+T _ :?t1 :: t1
+' t0 : key
+' _ :?key1
+' || true
+'
+' _
+' y4 : key
+T _ :?t2 :: t2
+' t3 : key
+T _ :?t3
+'
+' || false
+' \/ In x1 (key1 :: t1)
+'
+'
+' _
+' y'0 : key
+T _ :?t1 :: t1
+' t2 : key
+T _ :?t2
+' || true
+'
+' _
+' y'1 : key
+T _ :?key0
+'||
+t
+|| true
+'
+'
+' _
+' y'2 : key
+T _ :?t1 :: t1
+' t0 : key
+' _ :?key0
+' || true
+'
+' _
+' y'3 : key
+T _ :?t2 :: t2
+' t3 : key
+T _ :?t3
+'
+' || false
+' \/ In x1 (key1 :: t1)
+'
+
+'
+' _
+',
+' y,
+t1
+'
+' _ _',
+' y2
+' \/
+
+Tc sl f x1 d1 d2
+Tc f x2 m1
+
+Tc sl f x3 d2
+Tc f x4 m2
+Tc f x5 m3
+Tc f x6 m4
+Tc f x7 m2
+Tc f x8 x2d
+Tc f x1 d2
+Tc f x3 d1
+Tc f x4 m1
+Tc f x7 d1
+Tc f x4 m2
+Tc f x8 d1
+Tc f x1 l1
+Tc f x1 r1
+Tc f x1 s1
+Tc f x4 s2
+Tc c1 c2
+Tc c2 c3
+Tc c4 c5
+Tc c6 c7
+Tc c8 d1 d2
+Tc c1 c6
+Tc c9 d1 d2
+Tc c2 c1 d1
+Tc c3 d1 d2
+Tc c9 d2 d1
+Tc c6 c2 c1 d2
+Tc c7 d1 d2
+Tc c8 d3 d2
+Tc c9 d3 d2
+Tc c10 d2 d1
+Tc c7 d2 d1
+Tc c9 d3 d2
+Tc c10 d3 d1
+Tc c9 d3 d2
+Tc c10 d3 d1
+Tc c10 d3 d1
+Tc c9 d3 d2
+Tc c10 d3 d1
+Tc c9 d3 d2
+Tc c11 d2 d1
+Tc c11 d2 d1
+Tc c11 d2 d1
+Tc c10 d3 d1
+Tc c11 d2 d1
+Tc c9 d3 d2
+Tc c10 d3 d1
+Tc c9 d3 d2
+Tc c9 d3 d1
+Tc c10 d3 d1
+Tc c9 d3 d2
+Tc c10 d3 d1
+Tc c9 d3 d2
+Tc c10 d3 d1
+Tc c9 d3 d2
+Tc c10 d3 d1
+Tc c10 d3 d1
+Tc c10 d3 d1
+Tc c10 d3 d1
+Tc c5 d1 d2
+Tc c5 d1 d2
+Tc c5 d1 d2
+Tc c5 d1 d2
+Tc c4 d1 d2
+Tc c4 d1 d2
+Tc c3 d1 d2
+Tc c3 d1 d2
+Tc c3 d1 d2
+Tc c4 d1 d2
+Tc c3 d1 d2
+Tc c3 d1 d2
+Tc c3 d1 d2
+Tc c3 d1 d2
+Tc c3 d1 d2
+Tc c3 d1 d2
+Tc c3 d1 d2
+Tc

@@ -1,0 +1,194 @@
+======== SAMPLE 1 ========
+  
+  d : uint
+  IHd : forall d' : uint,
+       of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   ((1 + 10 * of_lu d') * 10 ^ usize d =
+    of_lu d' * (10 ^ usize d) + of_lu d' * (10 ^ usize d))
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (10) > 
+Debug: Level 10: t
+ has value 
+(10 ^ usize d)
+
+
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+       of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   ((1 + 10 * of_lu d') * 10 ^ usize d =
+    of_lu d' * (10 ^ usize d) + of_lu d' * (10 ^ usize d))
+
+
+Debug: Going to execute:
+false
+
+
+TcDebug (10) > 
+Debug: Evaluated term: false
+
+Debug: Level 9: evaluation returns
+false
+
+
+Debug: Level 8: evaluation returns
+false
+
+
+Debug: Level 6: evaluation returns
+false
+
+
+Debug: Level 5: evaluation returns
+false
+
+
+Debug: Level 5: evaluation returns
+false
+
+
+Debug: Level 5: evaluation returns
+false
+
+
+Debug: Level 4: evaluation returns
+false
+
+
+Debug: Level 4: evaluation returns
+false
+
+
+Debug: Level 3: evaluation returns
+false
+
+
+Debug: Level 2: evaluation returns
+false
+
+
+Debug: Level 2: evaluation returns
+false
+
+
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+       of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   ((1 + 10 * of_lu d') * 10 ^ usize d =
+    of_lu d' * (10 ^ usize d) + of_lu d' * (10 ^ usize d))
+
+
+Debug: Going to execute:
+NotConstant
+
+
+TcDebug (1) > 
+Debug: Evaluated term: NotConstant
+
+Debug: Level ¬
+ has value 
+NotConstant
+
+
+Debug: Level ¬
+ has value 
+NotConstant
+
+
+Debug: Level ¬
+ has value 
+NotConstant
+
+
+Debug: Level ¬
+ has value 
+NotConstant
+
+
+Debug: Level ¬
+ has value 
+NotConstant
+
+
+Debug: Level ¬
+ has value 
+NotConstant
+
+
+Debug: Level ¬
+ has value 
+NotConstant
+
+
+Debug: Level ¬
+ has value 
+NotConstant
+
+
+Debug: Level ¬
+ has value 
+NotConstant
+
+
+Debug: Level ¬
+ has value 
+NotConstant
+
+
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+       of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   ((1 + 10 * of_lu d') * 10 ^ usize d =
+    of_lu d' * (10 ^ usize d) + of_lu d' * (10 ^ usize d))
+
+
+Debug: Going to execute:
+NotConstant
+
+
+TcDebug (1) > 
+Debug: Evaluated term: NotConstant
+
+Debug: Level 1: evaluation returns
+NotConstant
+
+
+Debug: Level 1: evaluation returns
+NotConstant
+
+
+Debug: Level 1: evaluation returns
+NotConstant
+
+
+Debug: Level 1: evaluation returns
+NotConstant
+
+
+Debug: Level 1: evaluation returns
+NotConstant
+
+
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+       of_lu

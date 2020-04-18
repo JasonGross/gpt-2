@@ -1,0 +1,66 @@
+======== SAMPLE 1 ========
+_nat
+  nhs : list A
+  d : A
+  ============================
+   (D.lt d * D.succ (D.eq d * D.succ (D.pow_PEO (nth 0%nat p) l) ^ 2 < nzhead (denum nhs))
+
+
+Debug:
+Going to execute:
+let f :=
+ match Cst t with
+ | NotConstant =>
+     match t with
+     | rO => fun _ => PEO
+     | rI => fun _ => PEI
+     | radd ?t1 ?t2 =>
+         fun _ => let e1 := mkP t1 in
+                    let e2 := mkP t2 in
+                    (e1 + e2)%poly
+     | rmul ?t1 ?t2 =>
+         fun _ => let e1 := mkP t1 in
+                    let e2 := mkP t2 in
+                    (e1 * e2)%poly
+     | rsub ?t1 ?t2 =>
+         fun _ => let e1 := mkP t1 in
+                    let e2 := mkP t2 in
+                    (e1 - e2)%poly
+     | ropp ?t1 => fun _ => let e1 := mkP t1 in
+                              (- e1)%poly
+     | rpow ?t1 ?n =>
+         match CstPow n with
+         | NotConstant => fun _ => let p := Find_at t fv in
+                                            PEX C p
+         | ?c => fun _ => let e1 := mkP t1 in
+                            (e1 ^ c)%poly
+         end
+     | _ => fun _ => let p := Find_at t fv in
+                         PEX C p
+     end
+ | ?c => fun _ => PEc c
+ end
+in
+f ltac:(())
+
+
+TcDebug (19) > 
+Goal:
+  
+  A : Type
+  P : t -> A -> Type
+  f : elt -> A -> A
+  i : A
+  Pempty : forall s' : t, Empty s' -> P s' i
+  a : elt
+  l : list elt
+  Pstep' : forall (x : E.t) (a0 : A) (s' s'' : t),
+            InA x (a :: l) ->
+           ~ In x s' -> Add x s' s'' -> P s' a0 -> P s'' (f x a0)
+  Hdup : NoDup (a :: l)
+  IHl : (forall (x : E.t) (a : A) (s' s'' : t),
+         InA x l -> In x (a :: l) -> In x s' -> Add x s' s'' -> P s' a0 -> P s'' (f x a0)
+  Hdup : NoDup (a :: l)
+  x : E.t
+  H : InA a l
+  =========================

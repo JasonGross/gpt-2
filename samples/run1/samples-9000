@@ -1,0 +1,85 @@
+======== SAMPLE 1 ========
+
+                                                                                                                                       :: t0;  y0;  x0)
+  ============================
+   (interp_spec X 0%Z ==
+                    (interp_spec (elt:=t0;)%Z))%Z) <->
+                    (1%Z)%Z))%Z)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  a : Z
+  l : list A
+  IHl : forall (a0 : A) (l0 : list A),
+         InA eqke (Hl0, l0) lhs lr Hl
+  Hrec : forall (H : InA eqke (Hl0, l)) (Hr : Set),
+          Proper (eq_setoid H) l ARth
+  Hr : Set contains rl, lr, x, rl, x + 0, rl + 1
+  H : InL (x, rl)
+  ============================
+   (true = false && (Rmul_req (R:?R) <= R?x) false>%su)
+
+
+
+Debug:
+Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  a : Z
+  l : list A
+  IHl : forall (a0 : A) (l0 : list A),
+         InA eqke (Hl0, l0) lhs lr Hl
+  Hrec : forall (H : InA eqke (Hl0, l)) (Hr : Set),
+          Proper (eq_setoid H) l ARth
+  Hr : Set contains rl, lr, x, rl, x + 0, rl + 1
+  H : InL (x, rl)
+  ============================
+   (true = false && (Rmul_req (R:?R) <= R?x) false>%su)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  a : Z
+  l : list A
+  IHl : forall (a0 : A) (l0 : list A),
+         InA eqke (Hl0, l0) lhs lr Hl
+  Hrec : forall (H : InA eqke (Hl0, l)) (Hr : Set),
+          Proper (eq_setoid H) l ARth
+  Hr : Set contains rl, lr, x, rl, x + 0, rl + 1
+  H : InL (x, rl)
+  ============================
+   (false = false && (Rmul_req (R:?R) <= R?x) false>%su)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  a : Z
+  l : list A
+  IHl : forall (a0 : A) (l0 : list A),
+ 

@@ -1,0 +1,112 @@
+======== SAMPLE 1 ========
+ (rev l2 ++ x2 :: nil)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  x1 : X.t
+  x2 : X.t
+  d1 : D.t
+  d2 : D.t
+  l1 : list (X.t * D.t)
+  l2 : list (X.t * D.t)
+  Hl1 : D.eq x1 x2
+  Hl2 : X.eq x2 x1
+  Hl3 : X.eq x2 x1
+  H1 : D.eq a x1
+  H : X.eq x x2
+  ============================
+   (D.eq e e1 \/
+    D.eq e e1 \/
+    (In a d1 \/ In a s2) /\ (In a d1 -> False) /\
+    (In a s2 -> In a s2))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x1 : X.t
+  x2 : X.t
+  d1 : D.t
+  d2 : D.t
+  l1 : list (X.t * D.t)
+  l2 : list (X.t * D.t)
+  Hl1 : D.eq x1 x2
+  Hl2 : X.eq x2 x1
+  Hl3 : X.eq x2 x1
+  H1 : D.eq a x1
+  H : X.eq x x2
+  ============================
+   (D.eq e e1 \/
+    D.eq e e1 \/
+    (In a d1 \/ In a s2) /\ (In a d1 -> False) /\
+    (In a s2 -> In a s2))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  x1 : X.t
+  x2 : X.t
+  d1 : D.t
+  d2 : D.t
+  l1 : list (X.t * D.t)
+  l2 : list (X.t * D.t)
+  Hl1 : D.eq x1 x2
+  Hl2 : X.eq x2 x1
+  Hl3 : X.eq x2 x1
+  H1 : D.eq a x1
+  H : X.eq x x2
+  ============================
+   (D.eq e e1 \/
+    D.eq e e1 \/
+    (In a d1 \/ In a s2) /\ (In a d1 -> False) /\
+    (In a s2 -> In a s2))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  x1 : X.t
+  x2 : X.t
+  d1 : D.t
+  d2 : D.t
+  l1 : list (X.t * D.t)
+  l2 : list (X.t * D.t)
+  Hl1 : D.eq x1 x2
+  Hl2 : X.eq x2 x1
+  Hl3 : X.eq x2 x1
+  H1 : D.eq a x1
+  H : X.eq x x2
+  ============================
+   (D.eq e e1 \/
+    D.eq e e1 \/
+    (In a d1 \/ In a s2) /\ (In a d1 -> False) /\
+    (In a s2 -> In a s2))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1

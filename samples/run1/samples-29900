@@ -1,0 +1,126 @@
+======== SAMPLE 1 ========
+  rpow r (Cp_phi n)
+  ============================
+   (- (2) == rpow (e2_1_l) - (2) <= e1 r2)
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference t was not found in the current environment.
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r - height r <= 1
+  y : key
+  e' : elt
+  H : MapsTo y e' (Node l x d (Leaf elt) x d (Leaf rl rx rd rr)
+  ============================
+   (- (2) == rpow (e2_1_l) - (2) <= e1 r2)
+
+
+Debug: Going to execute:
+true
+
+
+TcDebug (0) > 
+Debug: Evaluated term: true
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r - height r <= 1
+  y : key
+  e' : elt
+  H : MapsTo y e' (Node l x d (Leaf elt) x d (Leaf rl rx rd rr)
+  ============================
+   (- (2) == rpow (e1_1_r) - (2) <= e1 r2)
+
+
+Debug: Going to execute:
+NotConstant
+
+
+TcDebug (0) > 
+Debug: Evaluated term: NotConstant
+
+Debug: Level 0: The reference t was not found in the current environment.
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r - height r <= 1
+  y : key
+  e' : elt
+  H : MapsTo y e' (Node l x d (Leaf elt) x d (Leaf rl rx rd rr)
+  ============================
+   (- (2) == rpow (e1_1_r) - (2) <= e1 r2)
+
+
+Debug:
+Going to execute:
+match t with
+| rO => fun _ => fv
+| rI => fun _ => fv
+| add ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+| mul ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+| sub ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+| opp ?t1 => fun _ => TFV t1 fv
+| pow ?t1 ?n =>
+    match CstPow n with
+    | NotConstant => fun _ => AddFvTail t fv
+    | _ => fun _ => TFV t1 fv
+    end
+| _ => fun _ => AddFvTail t fv
+end
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r - height r <= 1
+  y : key
+  e' : elt
+  H : MapsTo y e' (Node l x d (Leaf elt) x d (Leaf rl rx rd rr)
+  ============================
+   (- (2) == rpow (e1_1_r) - (2) <= e1 r2)
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (1) > 
+Debug: Level 1: t
+ has value 
+(Leaf elt -> Leaf rl rx rd rr)
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r - height r <=

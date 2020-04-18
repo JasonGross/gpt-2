@@ -1,0 +1,89 @@
+======== SAMPLE 1 ========
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  y : E.t
+  z : E.t
+  no_middle_eval : forall (x y : E.t) (o : option elt) (o' : option elt'),
+                 E.eq x y -> equal x o' = equal x oo'
+  no_middle_eval' : forall (x y : E.t) (o : option elt) (o' : option elt'),
+                 E.eq x y -> equal x o' = equal x o'
+  x : E.t
+  y : E.t
+  z : E.t
+  no_middle_eval' : forall (x y : E.t) (o : option elt) (o' : option elt'),
+                 E.eq x y -> equal x o' = equal x o'
+  x0 : E.t
+  y0 : E.t
+  c : E.t
+  l : list elt
+  H : bst (ExProof x x0)
+  H0 : forall y : E.t, bst x0 -> False
+  H1 : InT y (Node c l x0 r)
+  ============================
+   (InT y (Node c l x0 r))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  y : E.t
+  z : E.t
+  no_middle_eval : forall (x y : E.t) (o : option elt) (o' : option elt'),
+                E.eq x y -> equal x o' = equal x o'
+  no_middle_eval' : forall (x y : E.t) (o : option elt) (o' : option elt'),
+                 E.eq x y -> equal x o' = equal x o'
+  x : E.t
+  y : E.t
+  z : E.t
+  no_middle_eval' : forall (x y : E.t) (o : option elt) (o' : option elt'),
+                E.eq x y -> equal x o' = equal x o'
+  x0 : E.t
+  y0 : E.t
+  c : E.t
+  l : list elt
+  H : bst (ExProof x x0)
+  H0 : forall y : E.t, bst x0 -> False
+  H1 : InT y (Node c l x0 r)
+  ============================
+   (InT y (Node c l x0 r))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  y : E.t
+  z : E.t
+  no_middle_eval : forall (x y : E.t) (o : option elt) (o' : option elt'),
+                E.eq x y -> equal x o' = equal x o'
+  no_middle_eval' : forall (x y : E.t) (o : option elt) (o' : option elt'),
+                E.eq x y -> equal x o' = equal x o'
+  x : E.t
+

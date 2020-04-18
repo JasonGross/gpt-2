@@ -1,0 +1,132 @@
+======== SAMPLE 1 ========
+) :: acc :: nil) :: acc
+    : NFormula -> list (list (NFormula * T)) -> list (list (NFormula * T))
+  E := fun x : NFormula => eval_nformula env x -> False : NFormula -> Prop
+  H : True
+  ============================
+   True
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : BinNums.N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  T : Type
+  env : PolEnv
+  t : Formula C
+  tg : T
+  e : PolC
+  o : Op1
+  U : check_inconsistent (e, o) = true
+  H : True
+  H0 : eval_nformula env (e, o)
+  H2 : False
+  ============================
+   True
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : BinNums.N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  T : Type
+  env : PolEnv
+  t : Formula C
+  tg : T
+  e : PolC
+  o : Op1
+  U : check_inconsistent (e, o) = true
+  H : True
+  H0 : eval_nformula env (e, o)
+  H2 : False
+  ============================
+   True
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+

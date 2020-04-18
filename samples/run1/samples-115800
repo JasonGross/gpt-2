@@ -1,0 +1,95 @@
+======== SAMPLE 1 ========
+' t' = Some u ->
+             match X.compare x1 y with
+             | Some d' =>
+                    match X.compare x1 y with
+                     | None => None
+                     | None => None
+                     end
+             | None => True
+              | None => None
+              end
+       | None => False
+       end
+   | None => True
+   end
+  in
+  f ltac:(())
+
+
+TcDebug (11) > 
+Goal:
+  
+  d : uint
+  u : uint
+  E : nztail d = D0 u
+  IHd : forall d' : uint,
+        D0 u <> Nil -> nzhead (revapp d d') = revapp (D0 u) d'
+  d1 : uint
+  d2 : uint
+  H : D7 (D0 u) <> Nil
+  ============================
+   (nzhead (D7 d2) = revapp (D0 u) (D7 d2))
+
+
+Goal:
+  
+  d : uint
+  u : uint
+  E : nztail d = Nil -> nzhead (revapp d (D0 u) <> Nil)
+  IHd : forall d' : uint,
+        D0 u <> Nil -> nzhead (revapp d d') = revapp (D0 u) d'
+  d1 : uint
+  d2 : uint
+  H : D7 (D0 u) <> Nil
+  ============================
+   (nzhead (D7 d2) = revapp (D0 u) (D7 d2))
+
+
+Goal:
+  
+  d : uint
+  u : uint
+  E : nztail d = Nil -> nzhead (revapp d (D0 u) <> Nil)
+  IHd : forall d' : uint,
+        D0 u <> Nil -> nzhead (revapp d (D0 u) = revapp (D0 u) d'
+  d1 : uint
+  d2 : uint
+  H : D7 (D0 u) <> Nil
+  ============================
+   (nztail (D7 d2) = revapp (D0 u) (D7 d2))
+
+
+Goal:
+  
+  d : uint
+  u : uint
+  E : nztail d = Nil -> nzhead (revapp d (D0 u) <> Nil)
+  IHd : forall d' : uint,
+        D0 u <> Nil -> nzhead (revapp d (D0 u) = revapp (D0 u) d'
+  d1 : uint
+  d2 : uint
+  H : D7 (D0 u) <> Nil
+  ============================
+   (nztail (D7 d' = revapp (D0 u) (D7 d2))
+
+
+Debug:
+Going to execute:
+let do_atom := solve
+[ trivial with eq_true | reflexivity | symmetry; trivial | contradiction ]
+in
+let rec do_ccl :=
+ try do_atom; repeat (do_intro; try do_atom); (solve [ split; do_ccl ])
+in
+(solve [ do_atom | use_hyps; do_ccl ]) || fail "Cannot solve this goal"
+
+
+TcDebug (4) > 
+Goal:
+  
+  d : uint
+  u : uint
+  E : nztail d = Nil -> nzhead (revapp d (D0 u) <> Nil)
+  IHd : forall d' : uint,
+        D0 u <> Nil -> nzhead (rev

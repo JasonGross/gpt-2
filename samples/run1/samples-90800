@@ -1,0 +1,100 @@
+======== SAMPLE 1 ========
+ n : Raw.elt (y', e') m -> Raw.In y m'
+  H2 : Raw.In y m -> Raw.In y m'
+  H4 : Raw.In y' m' -> Raw.In y' m
+  ============================
+   (ep2p (norm_ep e1))
+
+
+Debug:
+Going to execute:
+match goal with
+| H:_ |- _ => progress change_no_check _ |- _ => clear H
+end
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f0 : key -> option elt -> option elt' -> option elt''
+  f : key -> elt -> option elt' -> option e0
+  hd : elt
+  y : key
+  Hfke : f0 y = true
+  H : Raw.In0 k (x (f f0))
+  H0 : Raw.In0 k nil -> Raw.In0 k nil
+  H1 : Raw.In0 k nil -> Raw.In0 k (f x)
+  ============================
+   (ep2p (norm_ep e1))
+
+
+Debug: Going to execute:
+fail
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f0 : key -> option elt -> option elt' -> option elt''
+  f : key -> elt -> option elt' -> option e0
+  hd : elt
+  y : key
+  Hfke : f0 y = true
+  H : Raw.In0 k (x (f f0))
+  H0 : Raw.In0 k nil -> Raw.In0 k nil
+  H1 : Raw.In0 k nil -> Raw.In0 k (f x)
+  ============================
+   (ep2p (norm_ep e1))
+
+
+Debug:
+Going to execute:
+match goal with
+| H:_ |- _ => progress change_no_check (Raw.equal_opp elt) in H; Raw.interp_ord OrdersEqual
+| H:x |- _ => progress change_no_check (Raw.eq_sym H); Raw.interp_ord OrdersEqual
+| H:_ |- _ => progress change_no_check (Raw.eq_sym H); Raw.interp_ord OrdersEqual
+| H1:x |- _ => progress change_no_check (Raw.eq_sym H1); Raw.interp_ord OrdersEqual
+| H2:x |- _ => progress change_no_check (Raw.eq_sym H2); Raw.interp_ord OrdersEqual
+| H3:x |- _ => progress change_no_check (Raw.eq_sym H3); Raw.interp_ord OrdersEqual
+| H4:x |- _ => progress change_no_check (Raw.eq_sym H4); Raw.interp_ord OrdersEqual
+| H5:x |- _ => progress change_no_check (Raw.eq_sym H5); Raw.interp_ord OrdersEqual
+| _ => Raw.equal_decidable P; Raw.OrderTac.order_rewr x eqn
+| _ => clear eqn
+end
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f0 : key -> option elt -> option elt' -> option elt''
+  f : key -> elt -> option elt' -> option e0
+  hd : elt
+  y : key
+  Hfke : f0 y = true
+  H : Raw.In0 k (x (f f0))
+  H0 : Raw.In0 k nil -> Raw.In0 k nil
+  H1 : Raw.In0 k nil -> Raw.In0 k (f x)
+  ============================
+   (ep2p (norm_ep e1))
+
+
+Debug: Going to execute:
+progress change_no_check (Raw.eq_sym H1 H2) with EI
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f0

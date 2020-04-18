@@ -1,0 +1,88 @@
+======== SAMPLE 1 ========
+ In_N (l1 ++ l2) = N.pos p1)
+  ============================
+   (X.eq x x1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : positive
+  IHx : forall (l1 : list X.t) (IHr1 : forall (H1 : N.pos l1) (H2 : (R ==> R) x l1),
+         mem x (add x l1) = true <->
+         InT x (Node l1 l2 acc)
+  H1 : InT x l1
+  H0 : InA X.eq x (union_list l1 l2 acc) <->
+        InA X.eq x l1 /\ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  H : InA X.eq x l1
+  H2 : InA X.eq x l2
+  ============================
+   (X.eq x x1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : positive
+  IHx : forall (l1 : list X.t) (IHr1 : forall (H1 : N.pos l1) (H2 : (R ==> R) x l1),
+         mem x (add x l1) = true <->
+         InT x (Node l1 l2 acc)
+  H1 : InT x l1
+  H0 : InA X.eq x (union_list l1 l2 acc) <->
+        InA X.eq x l1 /\ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  H : InA X.eq x l1
+  H2 : InA X.eq x l2
+  ============================
+   (X.eq x x1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : positive
+  IHx : forall (l1 : list X.t) (IHr1 : forall (H1 : N.pos l1) (H2 : (R ==> R) x l1),
+         mem x (add x l1) = true <->
+         InT x (Node l1 l2 acc)
+  H1 : InT x l1
+  H0 : InA X.eq x (union_list l1 l2 acc) <->
+        InA X.eq x l1 /\ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  H : InA X.eq x l1
+  H2 : InA X.eq x l2
+  ============================
+   (X.eq x x1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : positive
+  IHx : forall (l1 : list X.t) (IHr1 : forall (H1 : N.pos l1) (H2 : (R ==> R) x l1),
+         mem x (add x l1) = true <->
+         InT x (Node l1 l2 acc)
+  H1 : InT x l1
+  H0 : InA X.eq x (union_list l1 l2 acc) <->
+         InA X.eq x l1 /\ InA X.eq x l2

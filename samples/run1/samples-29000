@@ -1,0 +1,79 @@
+======== SAMPLE 1 ========
+ eq : CArithProof -> C -> C
+  IHf : (~ C -> bool) (add f)
+    | PERmutation :: nil => evalF (fst p) (add f)
+    | (exists-false : Equivalence R -> False) =>
+         ~ (PEst p /\ f x = true)
+            (PEadd (PEopp (PEopp (PEX Q 1)) /\ 0
+                     (PEadd (PEopp (PEopp (PEX Q 1)) /\ 0))
+                        (PEX Q 1))) + 1
+                    ((PEX Q 1, PEX Q 1)%Z / (1 + (PEX Q 1)) * PEQ 1))
+      | P
+      end = Pphi (add x y) (add p y))
+
+
+Debug: Going to execute:
+assert X2
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (eval_clause env cl)
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                   eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  IHcl : forall (cl' : clause) (env : Env),
+         eval_opt_clause env (or_clause cl cl') <->
+         ~ make_conj (eval_tt env) cl \/ ~ make_conj (eval_tt env) cl'
+  cl' : clause
+  env : Env
+  c : clause
+  H2 : eval_tt env a
+  H3 : make_conj (eval_tt env) cl' -> False
+  H1 : eval_tt env a -> False
+  H : make_conj (eval_tt env) cl' -> False
+  H0 : make_conj (eval_tt env) c
+  H1 : make_conj (eval_tt env) cl -> False
+  ============================
+   (~ make_conj (eval_tt env) cl)
+
+
+Debug: Going to execute:
+exact (id0 id1)
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (eval_clause env)
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                   eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+              unsat

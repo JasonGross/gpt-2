@@ -1,0 +1,139 @@
+======== SAMPLE 1 ========
+
+Debug: Going to execute:
+<nacticacticyou
+
+
+
+TcDebug (0) > 
+Debug: Level 0: No applicable tactic.
+
+Goal:
+  
+  x : E.t
+  x' : E.t
+  IHx : forall (y : E.t) (y' : E.t),
+         Ok e = y -> In y (add y e) <-> In y (remove y e) /\ e = y \/ In y (add y e)
+  y : E.t
+  y' : E.t
+  H1 : E.eq x a
+  H : In a x' -> False
+  H0 : In y l
+  ============================
+   False
+
+
+Debug: Going to execute:
+solve [ inversion H ]
+
+
+TcDebug (0) > 
+Goal:
+  
+  x : E.t
+  x' : E.t
+  IHx : forall (y : E.t) (y' : E.t),
+         Ok e = y -> In y (add y e) <-> In y (remove y e) /\ e = y \/ In y (add y e)
+  y : E.t
+  y' : E.t
+  H1 : E.eq x a
+  H : In a x' -> False
+  H0 : In y l
+  ============================
+   False
+
+
+Debug: Going to execute:
+inversion H
+
+
+TcDebug (0) > 
+Debug: Level 0: The type of y0 = true is not inductive.
+
+Debug: Level 0: The type of y0 = true is not inductive.
+
+Goal:
+  
+  x : E.t
+  x' : E.t
+  IHx : forall (y : E.t) (y' : E.t),
+         Ok e = y -> In y (add y e) <-> In y (remove y e) /\ e = y \/ In y (add y e)
+  y : E.t
+  y' : E.t
+  H1 : E.eq x a
+  H : In a x' -> False
+  H0 : In y l
+  ============================
+   False
+
+
+Debug: Going to execute:
+exact H
+
+
+TcDebug (0) > 
+Goal:
+  
+  x : E.t
+  x' : E.t
+  IHx : forall (y : E.t) (y' : E.t),
+         Ok e = y -> In y (add y e) <-> In y (remove y e) /\ e = y \/ In y (add y e)
+  y : E.t
+  y' : E.t
+  H1 : E.eq x a
+  H : In a x' -> False
+  H0 : In y l
+  ============================
+   False
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (0) > 
+Goal:
+    x : E.t  E : Proper (E.eq ==> Logic.eq) -> In x (filter f)
+  ============================
+   (~ E.eq x)
+
+
+Debug: Going to execute:
+try execute H in H
+
+
+TcDebug (0) > 
+Goal:
+  
+  x : E.t
+  E : Proper (E.eq ==> Logic.eq) -> In x (filter f)
+  ============================
+   (~ E.eq x)
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (0) > 
+Goal:
+  
+  x : E.t  E : Proper (E.eq ==> Logic.eq) -> In x (filter f)
+  ============================
+   (~ E.eq x)
+
+
+Debug: Going to execute:
+H
+
+
+TcDebug (0) > 
+Debug: H
+Debug: H
+
+Debug: Unable to find any E.t 
+Debug: Unable to find any E.t
+
+Debug: Found no subcommands for "E.eq x".
+
+Debug: Going to execute:

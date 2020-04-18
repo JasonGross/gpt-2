@@ -1,0 +1,123 @@
+======== SAMPLE 1 ========
+ rrr ?t1 ?c0 ?c1) \/
+        mem x (Node c1 l1 x1 H (Node c2 l2 x2 r2)))
+
+
+Debug: Going to execute:
+isPcst p
+
+
+TcDebug (2) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H3 : ~ InT x2 r1
+  H4 : InT x1 r2
+  H : InT x1 l1
+  H0 : InT x2 (Node c2 l2 x2 r2)
+  H2 : InT x2 r2
+  ============================
+   ((InT x1 r1 -> InT x2 (Node c2 l2 x2 r2)) ->
+    (InT x1 (Node c2 l2 x2 r2)) /\ ~ InT x1 r1)
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | (?p~1)%positive => isPcst p
+  | (?p~0)%positive => isPcst p
+  | 1%positive => true
+  | Pos.of_succ_nat ?n => isnatcst n
+  | _ => false
+  end
+
+
+TcDebug (3) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H3 : ~ InT x2 r1
+  H4 : InT x1 r2
+  H : InT x1 l1
+  H0 : InT x2 (Node c2 l2 x2 r2)
+  H2 : InT x2 r2
+  ============================
+   ((InT x1 r1 -> InT x2 (Node c2 l2 x2 r2)) ->
+    (InT x1 (Node c2 l2 x2 r2)) /\ ~ InT x1 r1)
+
+
+Debug:
+Going to execute:
+match t with
+| (?p~1)%positive => isPcst p
+| (?p~0)%positive => isPcst p
+| 1%positive => true
+| Pos.of_succ_nat ?n => isnatcst n
+| _ => false
+end
+
+
+TcDebug (3) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H3 : ~ InT x2 r1
+  H4 : InT x1 r2
+  H : InT x1 l1
+  H0 : InT x2 (Node c2 l2 x2 r2)
+  H2 : InT x2 r2
+  ============================
+   ((InT x1 r1 -> InT x2 (Node c2 l2 x2 r2)) ->
+    (InT x1 (Node c2 l2 x2 r2)) /\ ~ InT x1 r1)
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (4) > 
+Debug: Level 4: t
+ has value 
+(InT x1 r2)
+
+
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r

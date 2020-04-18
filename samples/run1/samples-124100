@@ -1,0 +1,120 @@
+======== SAMPLE 1 ========
+                   Ring_polynom.PEX C p
+        | ?c => fun _ => let e1 := mkP t1 in
+                          let e2 := mkP t2 in
+                         Ring_polynom.PEpow e1 c
+        end
+    | _ => fun _ => let p := Find_at t fv in
+                      Ring_polynom.PEX C p
+    end
+| ?c => fun _ => Ring_polynom.PEc c
+end
+
+
+TcDebug (12) > 
+Goal:
+  
+  p1 : Z
+  p2 : positive
+  q1 : Z
+  q2 : positive
+  H : p1 * Z.pos q2 = q1 * Z.pos p2
+  r1 : Z
+  r2 : positive
+  s1 : Z
+  s2 : positive
+  H0 : r1 * Z.pos s2 = s1 * Z.pos r2
+  ============================
+   (s1 * s2 * Z.pos q2 * Z.pos p2 =
+    Z.pos p2 * Z.pos r2 * (s1 * s2))
+
+
+Debug: Going to execute:
+Cst t
+
+
+TcDebug (13) > 
+Goal:
+  
+  p1 : Z
+  p2 : positive
+  q1 : Z
+  q2 : positive
+  H : p1 * Z.pos q2 = q1 * Z.pos p2
+  r1 : Z
+  r2 : positive
+  s1 : Z
+  s2 : positive
+  H0 : r1 * Z.pos s2 = s1 * Z.pos r2
+  ============================
+   (s1 * s2 * Z.pos q2 * Z.pos p2 =
+    Z.pos p2 * Z.pos r2 * (s1 * s2))
+
+
+Debug: Going to execute:
+Zcst
+
+
+TcDebug (14) > 
+Goal:
+  
+  p1 : Z
+  p2 : positive
+  q1 : Z
+  q2 : positive
+  H : p1 * Z.pos q2 = q1 * Z.pos p2
+  r1 : Z
+  r2 : positive
+  s1 : Z
+  s2 : positive
+  H0 : r1 * Z.pos s2 = s1 * Z.pos r2
+  ============================
+   (s1 * s2 * Z.pos q2 * Z.pos p2 =
+    Z.pos p2 * Z.pos r2 * (s1 * s2))
+
+
+Debug:
+Going to execute:
+fun t => match isZcst t with
+         | true => t
+         | _ => NotConstant
+         end
+
+
+TcDebug (15) > 
+Debug: Level 14: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  p1 : Z
+  p2 : positive
+  q1 : Z
+  q2 : positive
+  H : p1 * Z.pos q2 = q1 * Z.pos p2
+  r1 : Z
+  r2 : positive
+  s1 : Z
+  s2 : positive
+  H0 : r1 * Z.pos s2 = s1 * Z.pos r2
+  ============================
+   (s1 * s2 * Z.pos q2 * Z.pos p2 =
+    Z.pos p2 * Z.pos r2 * (s1 * s2))
+
+
+Debug: Going to execute:
+match isZcst t with
+| true => t
+| _ => NotConstant
+end
+
+
+TcDebug (14) > 
+Goal:
+  
+  p1 : Z
+  p2 : positive
+  q1 : Z
+  q2 : positive
+  H : p1 * Z.pos q2 = q

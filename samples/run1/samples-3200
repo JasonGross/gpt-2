@@ -1,0 +1,189 @@
+======== SAMPLE 1 ========
+; x : Z)
+  ============================
+   (true = true || true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : Z
+  ============================
+   (true = true || true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : Z
+  ============================
+   (true = true || true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : Z
+  ============================
+   (true = true || true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : Z
+  ============================
+   (true = true || true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : Z
+  ============================
+   (true = true || true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : Z
+  ============================
+   (true = true || true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : Z
+  ============================
+   (true = true || true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : Z
+  ============================
+   (true = true || true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : Z
+  ============================
+   (true = true || true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : Z
+  ============================
+   (true = true || true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : Z
+  ============================
+   (true = true || true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : Z
+  ============================
+   (true = true || true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : Z
+  ============================
+   (true = true || true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Debug: Level 3: No matching clauses for match.
+
+Debug: Level 2: No matching clauses for match.
+
+Debug: Level 1: No matching clauses for match.
+
+Debug: Level 0: No matching clauses for match.
+

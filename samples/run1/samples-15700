@@ -1,0 +1,119 @@
+======== SAMPLE 1 ========
+' <-> E.eq x y
+  H0 : E.eq x y \/ InT x b
+  H3 : InT x r
+  H0 : NoDupA eqk (a :: l)
+  H : InA a :: l
+  H1 : cmp eqA a = true
+  ============================
+   (E.eq (fst (a :: l) :: b) \/ E.eq (fst a) /' \/ InA a /')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  c : clause
+  c' : clause
+  IH : forall (a : A) (b : B),
+        InA eqk (a :: b) -> InA eqke (a :: c) b -> False
+  H : InA eqk (a :: c) b -> False
+  a : A
+  l : list A
+  H0 : InA a l
+  H : InA a :: l
+  ============================
+   (InA x \/ X.eq x a \/ InA a /')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  c : clause
+  c' : clause
+  IH : forall (a : A) (b : B),
+        InA eqk (a :: b) -> InA eqke (a :: c) b -> False
+  H : InA eqk (a :: c) b -> False
+  a : A
+  l : list A
+  H0 : InA a l
+  H : InA a :: l
+  ============================
+   (InA x \/ X.eq x a \/ InA a /')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  c : clause
+  c' : clause
+  IH : forall (a : A) (b : B),
+        InA eqk (a :: b) -> InA eqke (a :: c) b -> False
+  H : InA eqk (a :: c) b -> False
+  a : A
+  l : list A
+  H0 : InA a l
+  H : InA a :: l
+  ============================
+   (InA x \/ X.eq x a \/ InA a /')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  c : clause
+  c' : clause
+  IH : forall (a : A) (b : B),
+        InA eqk (a :: b) -> InA eqke (a :: c) b -> False
+  H : InA eqk (a :: c) b -> False
+  a : A
+  l : list A
+  H0 : InA a l
+  H : InA a :: l
+  ============================
+   (InA x \/ X.eq x a \/ InA a /')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  c : clause
+  c' : clause
+  IH : forall (a : A) (b : B),
+        InA eqk (a :: b) -> InA eqke (a :: c) b -> False
+  H : InA eqk (a :: c) b -> False
+  a : A
+  l : list A
+  H0 : InA a l
+  H : InA a :: l
+  ============================
+   (InA x \/ X

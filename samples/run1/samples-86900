@@ -1,0 +1,145 @@
+======== SAMPLE 1 ========
+
+  k' : key
+  e' : elt
+  Hfke : f k e = true
+  X : t elt
+  H : ~ E.eq k k'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  k : key
+  e : elt
+  acc : t elt
+  m1 : t elt
+  m2 : t elt
+  Hke : MapsTo k e m
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m1)
+  k' : key
+  e' : elt
+  Hfke : f k e = true
+  X : t elt
+  H : ~ E.eq k k'
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  k : key
+  e : elt
+  acc : t elt
+  m1 : t elt
+  m2 : t elt
+  Hke : MapsTo k e m
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m1)
+  k' : key
+  e' : elt
+  Hfke : f k e = true
+  X : t elt
+  H : ~ E.eq k k'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  k : key
+  e : elt
+  acc : t elt
+  m1 : t elt
+  m2 : t elt
+  Hke : MapsTo k e m
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m1)
+  k' : key
+  e' : elt
+  Hfke : f k e = true
+  X : t elt
+  H : ~ E.eq k k'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  k : key
+  e : elt
+  acc : t elt
+  m1 : t elt
+  m2 : t elt
+  Hke : MapsTo k e m
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m1)
+  k' : key
+  e' : elt
+  Hfke : f k e = true
+  X : t elt
+  H : ~ E.eq k k'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  k : key
+  e : elt
+  acc : t elt
+  m1 : t elt
+  m2 : t elt
+

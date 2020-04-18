@@ -1,0 +1,49 @@
+======== SAMPLE 1 ========
+ :
+    "Type" with "fst d'0 rI" in
+              check rI fst d'0 rI
+              (Bk rI fst d'0 rI)
+               (Bk rI fst d
+                 (Bk rI (split x1 r1 in y'2)
+                    :: lt x1 r1 -> lt x1 r1) -> False
+                :: gtA (split x1 r1 in y'2)
+                    :: lt x1 r1 -> lt x1 r1
+                     :: lt x1 r1 -> lt x1 r1  gtA (map fst r1) ltA
+                     :: map s2 ltA
+                      :: map s2 r1 -> lt x1 r1  gtA (split x1 s2) ltA
+                      :: lt x1 r1 -> lt x1 r1  H : check (map fst (b :: nil) d = false)
+       : InA eqke (b :: nil) ltA
+  H0 : eval_fst (map fst (a :: d :: ld lw f t) d)
+  H4 : make_conj (fun x : NFormula => eval_nformula env x -> False) ltA
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  f : E.t -> (E.t -> (E.t -> (E.t -> (E.t -> (E.t -> (E.t -> (E.t -> (E.t -> True or False)
+          (if (f x = true) ltA
+          (map fst l
+            | vmFlD [|1] bst l ])
+            | _ =>
+               (map_pow_spec fst (a :: ld) lw fst t)
+               | vmFlD [|1] bst l ]);
+                     FEmul e1 e2);
+                     (let lw fst :=
+                     match lw fst with
+                    | nil =>
+                     match lw fst with
+                    | nil => match lw fst with
+                    | nil => match lw fst with
+                     | nil => match lw fst with
+                     | nil => match lw fst with
+                                 

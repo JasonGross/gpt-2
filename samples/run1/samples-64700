@@ -1,0 +1,145 @@
+======== SAMPLE 1 ========
+ : key
+  c1 : tree
+  H0 : InT y r
+  ============================
+   (InT y (Rd (Bk l x d r) x d r) /\ X.lt x y)
+
+
+Debug: Going to execute:
+rewrite (ARmul_assoc ARth)
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (ARmul_assoc ARth)
+
+Debug: Level 0: Found no subterm matching "?r * 0" in the current goal.
+
+Debug: Level 0: Found no subterm matching "?r * 0" in the current goal.
+
+Debug: Level 0: No applicable tactic.
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  rx : height r <= height l + 2
+  z : elt
+  Heqz : z = max (height l) (height r) + 1
+  H2 : limz > height r
+  H : avl z
+  H3 : 0 <= z
+  H4 : 0 <= 0
+  H0 : 0 <= z
+  H5 : 0 <= 0
+  H6 : 0 <= 0
+  H7 : 0 <= 0
+  H8 : 0 <= 0
+  H9 : 0 <= 0
+  H10 : 0 <= 0
+  H11 : 0 <= 0
+  H12 : 0 <= 0
+  ============================
+   (0 <= 0 \/ 0 <= 0)
+
+
+Debug: Going to execute:
+(solve [ do_atom | use_hyps; do_ccl ]) || fail "Cannot solve this goal"
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  rx : height r <= height l + 2
+  z : elt
+  Heqz : z = max (height l) (height r) + 1
+  H2 : limz > height r
+  H : avl z
+  H3 : 0 <= z
+  H4 : 0 <= 0
+  H0 : 0 <= z
+  H5 : 0 <= 0
+  H6 : 0 <= 0
+  H7 : 0 <= 0
+  H8 : 0 <= 0
+  H9 : 0 <= 0
+  H10 : 0 <= 0
+  H11 : 0 <= 0
+  H12 : 0 <= 0
+  ============================
+   (0 <= 0 \/ 0 <= 0)
+
+
+Debug: Going to execute:
+solve [ do_atom | use_hyps; do_ccl ]
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  rx : height r <= height l + 2
+  z : elt
+  H2 : 0 <= height r
+  H8 : 0 <= 0
+  H9 : 0 <= 0
+  H10 : 0 <= 0
+  H11 : 0 <= 0
+  H12 : 0 <= 0
+  ============================
+   (0 <= 0 \/ 0 <= 0)
+
+
+Debug: Going to execute:
+do_atom
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x : height l <= height r + 2
+  rx : height r <= height l + 2
+  z : elt
+  H2 : 0 <= height r
+  H8 : 0 <= 0
+  H9 : 0 <= 0
+  H10 : 0 <= 0
+  H11 : 0 <= 0
+  H12 : 0 <= 0
+  ============================
+   (0 <= 0 \/ 0 <= 0)
+
+
+Debug: Going to execute:
+trivial with eq_true
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _

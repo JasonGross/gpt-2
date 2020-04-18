@@ -1,0 +1,147 @@
+======== SAMPLE 1 ========
+2
+  H7 : Ok l
+  H7 : Ok r
+  H8 : lt_tree x' l
+  H1 : E.eq x' r
+  H3 : E.eq x x'
+  H : Ok r
+  H0 : In y l
+  H6 : Ok r
+  H2 : In y (x' * l')
+  ============================
+   (E.eq y x' \/ In y l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_in1 : t
+  t_in2 : t
+  ll : t
+  lx : X.t
+  ld : elt
+  lrl : t
+  lrx : elt
+  lrr : t
+  x : X.t
+  y : elt
+  y' : X.t
+  H0 : X.eq y x -> False
+  H1 : In y l
+  H7 : Ok l
+  H8 : Ok r
+  H7 : Ok r
+  H8 : lt_tree x' l
+  H1 : E.eq x' r
+  H3 : E.eq x x'
+  H : Ok r
+  H0 : In y l
+  H6 : Ok r
+  H2 : In y (x' * l')
+  ============================
+   (E.eq y x' \/ In y l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_in1 : t
+  t_in2 : t
+  ll : t
+  lx : X.t
+  ld : elt
+  lrl : t
+  lrx : elt
+  lrr : t
+  x : X.t
+  y : elt
+  y' : X.t
+  H0 : X.eq y x -> False
+  H1 : In y l
+  H7 : Ok l
+  H8 : Ok r
+  H7 : Ok r
+  H8 : lt_tree x' l
+  H1 : E.eq x' r
+  H3 : E.eq x x'
+  H : Ok r
+  H0 : In y l
+  H6 : Ok r
+  H2 : In y (x' * l')
+  ============================
+   (E.eq y x' \/ In y l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_in1 : t
+  t_in2 : t
+  ll : t
+  lx : X.t
+  ld : elt
+  lrl : t
+  lrx : elt
+  lrr : t
+  x : X.t
+  y : elt
+  y' : X.t
+  H0 : In y l
+  H6 : Ok r
+  H2 : In y (x' * l')
+  ============================
+   (E.eq y x' \/ In y l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : I.t
+  l

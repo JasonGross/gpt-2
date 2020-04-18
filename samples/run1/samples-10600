@@ -1,0 +1,159 @@
+======== SAMPLE 1 ========
+ n'
+  H : eqA a x -> False
+  a : A
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  A0 : Set A -> Prop
+  eqA_compat : Compat A
+  eqA_equiv : Equivalence eqA
+  a : A
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  A0 : Set A -> Prop
+  eqA_compat : Compat A
+  eqA_equiv : Equivalence eqA
+  a : A
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  A0 : Set A -> Prop
+  eqA_compat : Compat A
+  eqA_equiv : Equivalence eqA
+  a : A
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  A0 : Set A -> Prop
+  eqA_compat : Compat A
+  eqA_equiv : Equivalence eqA
+  a : A
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  A0 : Set A -> Prop
+  eqA_compat : Compat A
+  eqA_equiv : Equivalence eqA
+  a : A
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  A0 : Set A -> Prop
+  eqA_compat : Compat A
+  eqA_equiv : Equivalence eqA
+  a : A
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  A0 : Set A -> Prop
+  eqA_compat : Compat A
+  eqA_equiv : Equivalence eqA
+  a : A
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  A0 : Set A -> Prop
+  eqA_compat : Compat A
+  eqA_equiv : Equivalence eqA
+  a : A
+  ============================
+   False
+
+
+Debug: Going to execute:
+

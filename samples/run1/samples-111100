@@ -1,0 +1,122 @@
+======== SAMPLE 1 ========
+
+   ((0 < n \/ n == 0) /\ (m < 0 \/ m == 0) \/
+    (n < 0 \/ n == 0) /\ (0 < m \/ m == 0))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H : m < 0
+  H2 : n < 0 \/ m < 0
+  H1 : 0 < n
+  H : 0 < n
+  ============================
+   ((0 < n \/ n == 0) /\ (m < 0 \/ m == 0) \/
+    (n < 0 \/ n == 0) /\ (0 < m \/ m == 0))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H : m < 0
+  H2 : n < 0 \/ m < 0
+  H1 : 0 < n
+  H : 0 < n
+  ============================
+   ((0 < n \/ n == 0) /\ (m < 0 \/ m == 0) \/
+    (n < 0 \/ n == 0) /\ (0 < m \/ m == 0))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H : m < 0
+  H2 : n < 0 \/ m < 0
+  H1 : 0 < n
+  H : 0 < n
+  ============================
+   ((0 < n \/ n == 0) /\ (m < 0 \/ m == 0) \/
+    (n < 0 \/ n == 0) /\ (0 < m \/ m == 0))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H : m < 0
+  H2 : n < 0 \/ m < 0
+  H1 : 0 < n
+  H : 0 < n
+  ============================
+   ((0 < n \/ n == 0) /\ (m < 0 \/ m == 0) \/
+    (n < 0 \/ n == 0) /\ (0 < m \/ m == 0))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H : m < 0
+  H2 : n < 0 \/ m < 0
+  H1 : 0 < n
+  H : 0 < n
+  ============================
+   ((0 < n \/ n == 0) /\ (m < 0 \/ m == 0) \/
+    (n < 0 \/ n == 0) /\ (0 < m \/ m == 0))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H : m < 0
+  H2 : n < 0 \/ m < 0
+  H1 : 0 < n
+  H : 0 < n
+

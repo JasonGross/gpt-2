@@ -1,0 +1,137 @@
+======== SAMPLE 1 ========
+ b = (a, b)
+  ============================
+   (H0 <> H1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  B : Type
+  eqB : B -> B -> Prop
+  st : Equivalence eqB
+  f : A -> B
+  i : B
+  Comp : Proper (eqA ==> eqB ==> eqB) f
+  R : A -> A -> Prop
+  R_sym : Symmetric R
+  R_compat : Proper (eqA ==> eqB ==> eqB)
+  TraR : Transitive R
+  b : A
+  H : b == 0
+  H0 : False
+  ============================
+   (H0 <> H1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  B : Type
+  eqB : B -> B -> Prop
+  st : Equivalence eqB
+  f : A -> B
+  i : B
+  Comp : Proper (eqA ==> eqB ==> eqB) f
+  R : A -> A -> Prop
+  R_sym : Symmetric R
+  R_compat : Proper (eqA ==> eqB ==> eqB)
+  TraR : Transitive R
+  b : A
+  H : b == 0
+  H0 : False
+  ============================
+   (H0 <> H1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  B : Type
+  eqB : B -> B -> Prop
+  st : Equivalence eqB
+  f : A -> B
+  i : B
+  Comp : Proper (eqA ==> eqB ==> eqB) f
+  R : A -> A -> Prop
+  R_sym : Symmetric R
+  R_compat : Proper (eqA ==> eqB ==> eqB)
+  TraR : Transitive R
+  b : A
+  H : b == 0
+  H0 : False
+  ============================
+   (H0 <> H1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  B : Type
+  eqB : B -> B -> Prop
+  st : Equivalence eqB
+  f : A -> B
+  i : B
+  Comp : Proper (eqA ==> eqB ==> eqB) f
+  R : A -> A -> Prop
+  R_sym : Symmetric R
+  R_compat : Proper (eqA ==> eqB ==> eqB)
+  TraR : Transitive R
+  b : A
+  H : b == 0
+  H0 : False
+  ============================
+   (H0 <> H1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  B : Type
+  eqB : B -> B -> Prop
+  st : Equivalence eqB
+  f : A -> B
+  i : B
+  Comp : Proper (eqA ==> eqB ==> eqB) f
+  R : A -> A -> Prop

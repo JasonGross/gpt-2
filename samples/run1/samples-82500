@@ -1,0 +1,98 @@
+======== SAMPLE 1 ========
+ x -> False -> R
+  Hex : ~ In x m
+  ============================
+   (In x m)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  Hn : In x m -> False
+  Hadd : Add x e m m'
+  m1 : t elt
+  m2 : t elt
+  Hdisj : Disjoint m1 m2
+  Hor : forall (k : key) (e : elt),
+        MapsTo k e m' <-> MapsTo k e m1 \/ MapsTo k e m2
+  Heq_x : (forall k : key,
+          MapsTo k e m -> MapsTo k e m' <-> MapsTo k e m1 \/ MapsTo k e m2) ->
+         ~ In x m2 -> In x (fold_right f i m1)
+  Heq_y : (forall k : key,
+          MapsTo k e m -> MapsTo k e m' <-> MapsTo k e m1 \/ MapsTo k e m2) ->
+         ~ In x m2
+  H : MapsTo k e m1
+  H1 : ~ In x m1
+  ============================
+   (In x m)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  Hn : In x m -> False
+  Hadd : Add x e m m'
+  m1 : t elt
+  m2 : t elt
+  Hdisj : Disjoint m1 m2
+  Hor : forall (k : key) (e : elt),
+        MapsTo k e m' <-> MapsTo k e m1 \/ MapsTo k e m2
+  Heq_x : (forall k : key,
+          MapsTo k e m -> MapsTo k e m' <-> MapsTo k e m1 \/ MapsTo k e m2) ->
+         ~ In x m2 -> In x (fold_right f i m1)
+  Heq_y : (forall k : key,
+          MapsTo k e m -> MapsTo k e m' <-> MapsTo k e m1 \/ MapsTo k e m2) ->
+         ~ In x m2
+  H : MapsTo k e m1
+  H1 : ~ In x m1
+  ============================
+   (In x m)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  Hn : In x m -> False
+  Hadd : Add x e m m'
+  m1 : t elt
+  m2 : t elt
+  Hdisj : Disjoint m1 m2
+  Hor : forall (k : key) (e : elt),
+        MapsTo k e m' <-> MapsTo k e m1 \/ MapsTo k e m2
+  Heq_x : (forall k : key,
+          MapsTo k e m -> MapsTo k e m' <-> MapsTo k e m1 \/ MapsTo k e m2) ->
+         ~ In x m2 -> In x (fold_right f i m1)
+  Heq_y

@@ -1,0 +1,135 @@
+======== SAMPLE 1 ========
+2)#l <->
+          InT x lr \/ InT x rl \/ X.eq x rx \/ InT x rr
+  x : X.t
+  lr : tree
+  x0 : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H5 : InT x lr
+  H2 : InT x b
+  H4 : InT x rl
+  H3 : InT x a
+  H0 : InT x lr \/ InT x rl
+  ============================
+   (InT x a)
+
+
+Debug: Going to execute:
+intuition X1; assumption
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H5 : InT x lr
+  H2 : InT x b
+  H4 : InT x rl
+  H3 : InT x a
+  H0 : InT x lr \/ InT x rl
+  ============================
+   (InT x a)
+
+
+Debug: Going to execute:
+intuition X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H5 : InT x lr
+  H2 : InT x b
+  H4 : InT x rl
+  H3 : InT x a
+  H0 : InT x lr \/ InT x rl
+  ============================
+   (InT x a)
+
+
+Debug: Going to execute:
+<ltac_plugin::intuition@0> $1 $2 $3
+
+
+TcDebug (3) > 
+Debug: Level 3: Proof is not complete.
+
+Debug: Level 3: Proof is not complete.
+
+Debug: Level 3: Proof is not complete.
+
+Debug: Level 4: Proof is not complete.
+
+Debug: Level 4: Proof is not complete.
+
+Debug: Level 5: Proof is not complete.
+
+Debug: Level 5: Proof is not complete.
+
+Debug: Level 6: Proof is not complete.
+
+Debug: Level 5: Proof is not complete.
+
+Debug: Level 6: Proof is not complete.
+
+Debug: Level 7: Proof is not complete.
+
+Debug: Level 6: Proof is not complete.
+
+Debug: Level 7: Proof is not complete.
+
+Debug: Level 8: Proof is not complete.
+
+Debug: Level 6: Proof is not complete.
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H5 : InT x lr
+  H2 : InT x b
+  H4 : InT x rl
+  H3 : InT x a
+  H0 : InT x lr \/ In

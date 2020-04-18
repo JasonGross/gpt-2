@@ -1,0 +1,140 @@
+======== SAMPLE 1 ========
+) [0] == [0]
+  H4 : (bst (join l x d rl) /\ bst rr)
+  ============================
+   (bst (create (create l x d rl) rx rr))
+
+
+Debug:
+Going to execute:
+match R with
+| MX.OrderTac.OTF.eq => fail 1
+| _ =>
+    change_no_check (~ MX.OrderTac.OTF.eq x y) in H
+end
+
+
+TcDebug (14) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  H1 : isok rr = true
+  H : isok rr = true -> False
+  H0 : isok l = true
+  H7 : Ok l
+  H8 : lt_tree l
+  H9 : gt_tree l
+  H3 : isok r = true
+  H : isok rr = true -> False
+  H0 : isok l = true
+  H2 : isok rr = true
+  H10 : Ok rr
+  H11 : lt_tree rx rr
+  H isok b = true
+  ============================
+   (bst (create (create l x d rl) rx rr))
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (15) > 
+Debug: Level 15: R
+ has value 
+MX.OrderTac.OTF.eq
+
+
+Goal:
+  
+  l : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  H1 : isok rr = true
+  H : isok rr = true -> False
+  H0 : isok l = true
+  H2 : isok rr = true
+  H10 : Ok rr
+  H11 : lt_tree rx rr
+  H isok b = true
+  ============================
+   (bst (create (create l x d rl) rx rr))
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (15) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  H1 : isok rr = true
+  H : isok rr = true -> False
+  H0 : isok l = true
+  H2 : isok rr = true
+  H10 : Ok rr
+  H11 : lt_tree rx rr
+  H isok b = true
+  ============================
+   (bst (create (create l x d rl) rx rr))
+
+
+Debug:
+Going to execute:
+match R with
+| MX.OrderTac.OTF.eq => fail 1
+| _ =>
+    change_no_check (~ MX.OrderTac.OTF.eq x y) in H ||
+      apply MX.OrderTac.not_gt_le in H ||
+        apply MX.OrderTac.not_ge_lt in H || clear H || fail 1;
+     MX.OrderTac.order_prepare
+end
+
+
+TcDebug (14) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  H1 : isok rr = true
+  H : isok rr = true -> False
+  H0 : isok l = true
+  H2 : isok rr = true
+  H10 : Ok rr
+  H11 : lt_tree rx rr
+  H isok b = true
+  ============================
+   (bst (create (create l x d rl) rx rr))
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (15) > 
+Debug: Level 15: R
+ has value 
+MX.OrderTac.OTF.eq
+
+
+Goal:
+  
+  l : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr :

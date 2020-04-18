@@ -1,0 +1,47 @@
+======== SAMPLE 1 ========
+  y1 : t elt
+  y2 : t elt
+  z1 : Z
+  z2 : z
+  Heqz1 := fun p1 p2 : Z => f2 : Z => p1 * Z -> In p2
+              (f2 : Z => f2)
+            (Ring_polynom.PEmul (Ring_polynom.PEX Z 1) :: nil)
+           (Ring_polynom.PEmul (Ring_polynom.PEX Z 2) :: nil)
+            res0 := f0 : Ring_polynom.PEx Z
+             f0 : Ring_polynom.Q =>
+            f0 x (Ring_polynom.PEmul (Ring_polynom.PEX Z 2) :: nil)
+            f0 z1 := f0 z2 : Ring_polynom.Pol Z
+  res_eq2_r : Ring_polynom.norm_subst 0 1 Z.add Z.mul Z.sub Z.opp Zeq_bool
+              Z.quotrem ring_subst_niter list_hyp :=
+               Z.quotrem ring_subst_niter ring_subst_niter ring_subst_niter ring_subst_niter ring_subst_niter list_hyp
+              (Ring_polynom.PEmul (Ring_polynom.PEX Z 2) :: nil) = res2
+  thm2 : Ring_polynom.PEeval 0 1 Z.add Z.mul Z.sub Z.opp 
+          (IDphi (R:=Z)) Z.of_N Z.pow
+          (z1 :: t1 :: Z.pos z2 :: Z.pos t2 :: Z.pos x2 :: Z.pos y2 :: nil)
+           (Ring_polynom.PEmul (Ring_polynom.PEX Z 2) :: nil) =
+         Ring_polynom.Pphi_pow 0 1 Z.add Z.mul Z.sub Z.opp 0 1 Zeq_bool
+          (IDphi (R:=Z)) Z.of_N Z.pow get_signZ
+          (z1 :: t1 :: Z.pos z2 :: Z.pos t2 :: Z.pos x2 :: Z.pos y2 :: nil)
+           res0 := Ring_polynom.Pinj 2
+            (Ring_polynom.PX (Ring_polynom.Pc 1) 1 (Ring_polynom.Pc 0))
+       : Ring_polynom.Pol Z
+  res_eq1_r := Ring_polynom.Pinj 2
+             (-1) :: nil ->
+             Ring_polynom.Pol Z 1
+              (Ring_polynom.PX (Ring_polynom.Pc 1) 1 (Ring_polynom.Pc 0)) = res1
+  ============================
+   (Ring_polynom.Pphi_pow 0 1 Z.add Z.mul Z.sub Z.opp 0 1 Zeq_bool
+     Ring_polynom.PEX Z 2)
+
+
+Debug:
+Going to execute:
+fun t =>
+  let f :=
+   match Cst t with
+   | NotConstant =>
+       fun _ => AddFvTail t fv
+       | _ => fun _ => TFV t1 fv
+       | _ => fun _ => TFV t2 fv
+       end
+   | _ => fun _ => AddF

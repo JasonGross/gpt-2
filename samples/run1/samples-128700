@@ -1,0 +1,107 @@
+======== SAMPLE 1 ========
+   (a ÷ b = ÷ (b ÷ c))
+
+
+Debug:
+Going to execute:
+match Cst t with
+| NotConstant =>
+    match t with
+    | rO => fun _ => fv
+    | rI => fun _ => fv
+    | add ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+    | mul ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+    | sub ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+    | opp ?t1 => fun _ => TFV t1 fv
+    | pow ?t1 ?n =>
+        match CstPow n with
+        | NotConstant => fun _ => AddFvTail t fv
+        | _ => fun _ => TFV t1 fv
+        end
+    | _ => fun _ => AddFvTail t fv
+    end
+| _ => fun _ => fv
+end
+
+
+TcDebug (14) > 
+Goal:
+  
+  Aux1 : forall a b c : t,
+         0 <= a -> 0 < b -> c ~= 0 -> a ÷ b ÷ c == a ÷ (b * c)
+  Aux2 : forall a b c : t,
+         0 <= a -> b ~= 0 -> c ~= 0 -> a ÷ b ÷ c == a ÷ (b * c)
+  ============================
+   (0 < a ÷ b)
+
+
+Debug: Going to execute:
+Cst t
+
+
+TcDebug (15) > 
+Goal:
+  
+  Aux1 : forall a b c : t,
+         0 <= a -> 0 < b -> c ~= 0 -> a ÷ b ÷ c == a ÷ (b * c)
+  Aux2 : forall a b c : t,
+         0 <= a -> b ~= 0 -> c ~= 0 -> a ÷ b ÷ c == a ÷ (b * c)
+  ============================
+   (0 < a ÷ b)
+
+
+Debug: Going to execute:
+T
+
+
+TcDebug (16) > 
+Debug: Level 16: Cst t
+ has value 
+B
+
+
+Goal:
+  
+  Aux1 : forall a b c : t,
+         0 <= a -> 0 < b -> c ~= 0 -> a ÷ b ÷ c == a ÷ (b * c)
+  Aux2 : forall a b c : t,
+         0 <= a -> b ~= 0 -> c ~= 0 -> a ÷ b ÷ c == a ÷ (b * c)
+  ============================
+   (0 < a ÷ b)
+
+
+Debug: Going to execute:
+BinNat.N.of_nat t
+
+
+TcDebug (16) > 
+Debug: Evaluated term: (BinNat.N.of_nat a)
+
+Debug: Level 15: evaluation returns
+BinNat.N.of_nat a
+
+
+Debug: Level 13: Cst t
+ has value 
+(BinNat.N.of_nat a)
+
+
+Goal:
+  
+  Aux1 : forall a b c : t,
+         0 <= a -> 0 < b -> c ~= 0 -> a ÷ b ÷ c == a ÷ (b * c)
+  Aux2 : forall a b c : t,
+         0 <= a -> b ~= 0 -> c ~= 0 -> a ÷ b ÷ c == a ÷ (b * c)
+  ============================
+   (0 < a ÷ b)
+
+
+Debug: Going to execute:
+fun _ => fv
+
+
+TcDebug (13) > 
+Goal:
+  
+  Aux1 : forall a b c : t,
+       

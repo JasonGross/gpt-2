@@ -1,0 +1,111 @@
+======== SAMPLE 1 ========
+ H3 : b = true
+  ============================
+   (b~0 == 0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  b : positive
+  IHb : forall y0 z : positive, b <> 0 ->
+       b * Z.pos x y0 == y * Z.pos x y0 + z * Z.pos x y0
+  z : positive
+  H : 0 <= Z.pos z y0 * Z.pos z y0
+  H0 : 0 <= Z.pos z y0 * Z.pos z y0
+  H1 : 0 <= Z.min z y0 - Z.min z y0
+  ============================
+   (b~0 == 0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  b : positive
+  IHb : forall y0 z : positive, b <> 0 ->
+       b * Z.pos x y0 == y * Z.pos x y0 + z * Z.pos x y0
+  z : positive
+  H : 0 <= Z.pos z y0 * Z.pos z y0
+  H0 : 0 <= Z.pos z y0 * Z.pos z y0
+  H1 : 0 <= Z.min z y0 - Z.min z y0
+  ============================
+   (b~0 == 0)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  b : positive
+  IHb : forall y0 z : positive, b <> 0 ->
+       b * Z.pos x y0 == y * Z.pos x y0 + z * Z.pos x y0
+  z : positive
+  H : 0 <= Z.pos z y0 * Z.pos z y0
+  H0 : 0 <= Z.pos z y0 * Z.pos z y0
+  H1 : 0 <= Z.min z y0 - Z.min z y0
+  ============================
+   (b~0 == 0)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  b : positive
+  IHb : forall y0 z : positive, b <> 0 ->
+       b * Z.pos x y0 == y * Z.pos x y0 + z * Z.pos x y0
+  z : positive
+  H : 0 <= Z.pos z y0 * Z.pos z y0
+  H0 : 0 <= Z.pos z y0 * Z.pos z y0
+  H1 : 0 <= Z.min z y0 - Z.min z y0
+  ============================
+   (b~0 == 0)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  b : positive
+  IHb : forall y0 z : positive, b <> 0 ->
+       b * Z.pos x y0 == y * Z.pos x y0 + z * Z.pos x y0
+  z : positive
+  H : 0 <= Z.pos z y0 * Z.pos z y0
+  H0 : 0 <= Z.pos z y0 * Z.pos z y0
+  H1 : 0 <= Z.min z y0 - Z.min z y0
+  ============================
+   (b~0 == 0)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  b : positive
+  IHb : forall y0 z : positive, b <

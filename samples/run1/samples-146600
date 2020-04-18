@@ -1,0 +1,118 @@
+======== SAMPLE 1 ========
+1 /\ s' [=] subst
+                   :: 
+                      {}_
+                   end) s)
+  ============================
+   (0 <= x -> False)
+
+
+Debug: Going to execute:
+exact id
+
+
+TcDebug (1) > 
+Debug: Evaluated term: a
+
+Goal:
+  
+  A : Type
+  eval : A -> Prop
+  a : A
+  l : list A
+  IHl : forall (l' : list A) (x : A),
+        make_conj l x <-> eval (fun l : list A => l') (x :: l) x
+  l' : list A
+  x : A
+  Hx : eval (fun l : list A => l') x
+  l'' : list A
+  e : (height (Leaf elt)%nat + 2 <? height l')%nat = true
+  e'' : (height l' <=? x)%nat = true
+  LE : lt a l
+  H1 : make_conj (eval_tt env) a
+  H2 : make_conj (eval_cl env) a -> False
+  H3 : make_conj (eval_tt env) cl
+  H : False
+  ============================
+   (0 <= x -> False)
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  eval : A -> Prop
+  a : A
+  l : list A
+  IHl : forall (l' : list A) (x : A),
+        make_conj l x <-> eval (fun l : list A => l') (x :: l) x
+  l' : list A
+  x : A
+  H0 : eval a
+  ============================
+   (fun a : A => (make_conj l x in l' <-> eval (fun l : list A => l') x) a)
+
+
+Debug: Going to execute:
+do 2 intro
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  eval : A -> Prop
+  a : A
+  l : list A
+  IHl : forall (l' : list A) (x : A),
+        make_conj l x <-> eval (fun l : list A => l') (x :: l) x
+  l' : list A
+  x : A
+  H0 : eval a
+  ============================
+   (fun a : A => (make_conj l x in l' <-> eval (fun l : list A => l') x) a)
+
+
+Debug: Going to execute:
+intro
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  eval : A -> Prop
+  a : A
+  l : list A
+  IHl : forall (l' : list A) (x : A),
+        make_conj l x <-> eval (fun l : list A => l') (x :: l) x
+  l' : list A
+  x : A
+  H0 : eval a
+  ============================
+   (fun a : A => (make_conj l x in l' <-> eval (fun l : list A => l') x) a)
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@0>
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  eval : A -> Prop
+  a : A
+  l : list A
+  IHl : forall (l' : list A) (x : A),
+        make_conj l x <-> eval (fun l : list A => l') (x :: l) x
+  l' : list A
+  x : A
+  H0 : eval a
+  H1 : make_conj (eval_tt env) a
+  H2 : x <> 0
+  ============================

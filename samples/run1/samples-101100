@@ -1,0 +1,102 @@
+======== SAMPLE 1 ========
+ req csub copp
+
+
+TcDebug (12) > 
+Goal:
+  
+  l : list A
+  x : A
+  i : A
+  H : In x l
+  H0 : lt_list i l
+  H2 : with_rewr x (remove_neq Rhead l)
+  H3 : rtimes_rem l x
+  H4 : (lxor_times_i ++ lxor_times_i) @ l == [x] * (sgn (x-- l)) @ l
+  R_list_pow : forall (x : A) (n : nat),
+               0%nat -> 
+               forall (pe : R), (pe ==> Pe) pe -> ~ eq (fst (x, n)) (fst (x, n))
+  ============================
+   (Pe (rdist (Rdistr i l x)) == n + -Pe)
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | (?p~1)%positive => isPcst p
+  | (?p~0)%positive => isPcst p
+  | 1%positive => true
+  | Pos.of_succ_nat ?n => isnatcst n
+  | _ => false
+  end
+
+
+TcDebug (13) > 
+Goal:
+  
+  l : list A
+  x : A
+  i : A
+  H : In x l
+  H0 : lt_list i l
+  H2 : with_rewr x (remove_neq Rhead l)
+  H3 : rtimes_rem l x
+  H4 : (lxor_times_i ++ lxor_times_i) @ l == [x] * (sgn (x-- l)) @ l
+  R_list_pow : forall (x : A) (n : nat),
+               0%nat -> 
+               forall (pe : R), (pe ==> Pe) pe -> ~ eq (fst (x, n)) (fst (x, n))
+  ============================
+   (Pe (rdist (Rdist i l x)) == n + -Pe)
+
+
+Debug:
+Going to execute:
+match t with
+| (?p~1)%positive => isPcst p
+| (?p~0)%positive => isPcst p
+| 1%positive => true
+| Pos.of_succ_nat ?n => isnatcst n
+| _ => false
+end
+
+
+TcDebug (13) > 
+Goal:
+  
+  l : list A
+  x : A
+  i : A
+  H : In x l
+  H0 : lt_list i l
+  H2 : with_rewr x (remove_neq Rhead l)
+  H3 : rtimes_rem l x
+  H4 : (lxor_times_i ++ lxor_times_i) @ l == [x] * (sgn (x-- l)) @ l
+  R_list_pow : forall (x : A) (n : nat),
+              0%nat -> 
+               forall (pe : R), (pe ==> Pe) pe -> ~ eq (fst (x, n)) (fst (x, n))
+  ============================
+   (Pe (rdist (Rdist i l x)) == n + -Pe)
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (14) > 
+Debug: Level 14: t
+ has value 
+Pe
+
+
+Goal:
+  
+  l : list A
+  x : A
+  i : A
+  H : In x l
+  H0 : lt_list i l
+  H2 : with_rewr x (remove_neq Rhead l)
+  H3 : rtimes_rem l x
+  H4 : (lxor_times_i ++ lxor_times_i) @ l == [x] * (sgn (x-- l)) @ l
+

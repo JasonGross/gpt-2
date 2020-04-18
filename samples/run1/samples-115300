@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+.Tauto.is_empty> flags X1; elimtype X1; assumption
+  | _:?X1 |- ?X1 => assumption
+  end
+
+
+TcDebug (1) > 
+Goal:
+    s : t  s' : t  x : E.t  H : In x s  a : E.t  H2 : In a s  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| |- ?X1 => <Coq.Init.Tauto.is_unit_or_eq> flags X1; constructor 1
+| _:?X1 |- _ => <Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+| _:?X1 |- ?X1 => assumption
+end
+
+
+TcDebug (1) > 
+Goal:
+    s : t  s' : t  x : E.t  H : In x s  a : E.t  H2 : In a s  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; constructor 1
+
+
+TcDebug (2) > 
+Goal:
+    s : t  s' : t  x : E.t  H : In x s  a : E.t  H2 : In a s  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1
+
+
+TcDebug (2) > 
+Goal:
+    s : t  s' : t  x : E.t  H : In x s  a : E.t  H2 : In a s  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (3) > 
+Goal:
+    s : t  s' : t  x : E.t  H : In x s  a : E.t  H2 : In a s  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+    s : t  s' : t  x : E.t  H : In x s  a : E.t  H2 : In a s  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+    s : t  s' : t  x : E.t  H : In x s  a : E.t  H2 : In a s  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+    s : t  s' : t  x : E.t  H : In x s  a : E.t  H2 : In a s  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+    s : t  s' : t  x : E.t  H : In x s  a : E.t  H2 : In a s  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) >

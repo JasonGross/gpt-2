@@ -1,0 +1,71 @@
+======== SAMPLE 1 ========
+ avil tl)
+       | _ => fun _ => TFV t1 fv
+       end
+ | _ => fun _ => AddFvTail t fv
+ end
+in
+f ltac:(())
+
+
+TcDebug (22) > 
+Goal:
+  
+  d : uint
+  IHd : forall acc : positive,
+        Nat.of_uint_acc d acc = Some (acc -> positive) ->
+        forall d : uint,
+        Sorted lacc d = of_lu (rev d) acc
+  acc : positive
+  H0 : Sorted lacc d = Sorted lacc (D0 d)
+  H1 : D0 d = Sorted lacc (D1 d)
+  H2 : forall acc : positive,
+        Nat.of_uint_acc d acc = Some (acc -> positive) ->
+        forall d : uint,
+        Sorted lacc d = Sorted lacc (D1 d)
+  acc : positive
+  H0 : Sorted lacc d = Sorted lacc (D2 d)
+  H1 : D2 d = Sorted lacc (D3 d)
+  H2 : forall acc : positive,
+        Nat.of_uint_acc d acc = Some (acc -> positive) ->
+        forall d : uint,
+        Sorted lacc d = Sorted lacc (D3 d)
+  acc : positive
+  H0 : Sorted lacc d = Sorted lacc (D4 d)
+  H1 : D4 d = Sorted lacc (D5 d)
+  H2 : forall acc : positive,
+        Nat.of_uint_acc d acc = Some (acc -> positive) ->
+        forall d : uint,
+        Sorted lacc d = Sorted lacc (D5 d)
+  acc : positive
+  H0 : Sorted lacc d = Sorted lacc (D6 d)
+  H1 : D6 d = Sorted lacc (D7 d)
+  H2 : forall acc : positive,
+        Nat.of_uint_acc d acc = Some (acc -> positive) ->
+        forall d : uint,
+        Sorted lacc d = Sorted lacc (D7 d)
+  acc : positive
+  H0 : Sorted lacc d = Sorted lacc (D8 d)
+  H1 : D8 d = Sorted lacc (D9 d)
+  H3 : Sorted lacc d = Sorted lacc (D10 d)
+  H4 : forall x : positive,
+        Nat.of_uint_acc d (Sorted x x) = Some (x -> x) ->
+        Sorted lacc d = Sorted lacc (D11 x)
+  acc : positive
+  H0 : Sorted lacc d = Sorted lacc (D12 d)
+  H1 : D12 d = Sorted lacc (D13 d)
+  H2 : forall acc : positive,
+        Nat.of_uint_acc d acc = Some (x -> x) ->
+        forall d : uint,
+        Sorted lacc d = Sorted lacc (D13 d)
+  acc : positive
+  H0 : Sorted lacc d = Sorted lacc (D14 d)
+  H1 : D14 d = Sorted lacc (D15 d)
+  H2 : forall acc : positive,
+        Nat.of_uint_acc d acc = Some (x -> x) ->
+        forall d : uint,
+        Sorted lacc d = Sorted lacc (D15 d)
+  acc : positive
+  H0 : Sorted lacc d = Sorted lacc (D16 d)
+  H1 : D16 d = Sorted lacc (D17 d)
+  H2 :

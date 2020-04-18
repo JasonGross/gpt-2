@@ -1,0 +1,125 @@
+======== SAMPLE 1 ========
+eq x x'
+  y : elt
+  Hs1 : Ok s
+  Hs2 : Ok (inter s s')
+  H : In x s -> false = true
+  H4 : false = true -> In x s
+  H0 : In x s' -> false = true
+  H6 : false = true -> In x s'
+  H1 : In x (inter s s') -> In x s /\ In x s'
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H2 : In x s
+  ============================
+   (false = false && false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H3 : In x (inter s s') -> false = true
+  H4 : false = true -> In x s
+  H0 : In x s' -> false = true
+  H6 : false = true -> In x s'
+  H1 : In x (inter s s') -> In x s /\ In x s'
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H2 : In x s
+  ============================
+   (false = false && false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H3 : In x (inter s s') -> false = true
+  H4 : false = true -> In x s
+  H0 : In x s' -> false = true
+  H6 : false = true -> In x s'
+  H1 : In x (inter s s') -> In x s /\ In x s'
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H2 : In x s
+  ============================
+   (false = false && false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H3 : In x (inter s s') -> false = true
+  H4 : false = true -> In x s
+  H0 : In x s' -> false = true
+  H6 : false = true -> In x s'
+  H1 : In x (inter s s') -> In x s /\ In x s'
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H2 : In x s
+  ============================
+   (false = false && false)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H3 : In x (inter s s') -> false = true
+  H4 : false = true -> In x s
+  H0 : In x s' -> false = true
+  H6 : false = true -> In x s'
+  H1 : In x (inter s s') -> In x s /\ In x s'
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H2 : In x s
+  ============================
+   (false = false && false)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' :

@@ -1,0 +1,147 @@
+======== SAMPLE 1 ========
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  U : Type
+  X : Ensemble U
+  x : Ensemble U
+  H' : Ensemble U
+  H'0 : Add U X x
+  a : Ensemble U
+  H'1 : In U X x -> False
+  l : Ensemble U
+  H'2 : ~ In U X l
+  H0 : X x
+  H1 : None = Some (Fun U X (Subtract U X x) y)
+  H : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  U : Type
+  X : Ensemble U
+  x : Ensemble U
+  H' : Ensemble U
+  H'0 : Add U X x
+  a : Ensemble U
+  H'1 : In U X x -> False
+  l : Ensemble U
+  H'2 : ~ In U X l
+  H0 : X x
+  H1 : None = Some (fun U X (Subtract U X x) y)
+  H : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  U : Type
+  X : Ensemble U
+  x : Ensemble U
+  H' : Ensemble U
+  H'0 : Add U X x
+  a : Ensemble U
+  H'1 : In U X x -> False
+  l : Ensemble U
+  H'2 : ~ In U X l
+  H0 : X x
+  H1 : None = Some (fun U X (Subtract U X x) y)
+  H : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  U : Type
+  X : Ensemble U
+  x : Ensemble U
+  H' : Ensemble U
+  H'0 : Add U X x
+  a : Ensemble U
+  H'1 : In U X x -> False
+  l : Ensemble U
+  H'2 : ~ In U X l
+  H0 : X x
+  H1 : None = Some (fun U X (Subtract U X x) y)
+  H : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  U : Type
+  X : Ensemble U
+  x : Ensemble U
+  H' : Ensemble U
+  H'0 : Add U X x
+  a : Ensemble U
+  H'1 : In U X x -> False
+  l : Ensemble U
+  H'2 : ~ In U X l
+  H0 : X x
+  H1 : None = Some (fun U X (Subtract U X x) y)
+  H : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  U : Type
+  X : Ensemble U
+  x : Ensemble U
+  H' : Ensemble U
+  H'0 : Add U X x
+  a : Ensemble U
+  H'1 : In U X x -> False
+  l : Ensemble U
+  H'2 : ~ In U X l
+  H0 : X x
+  H1 : None = Some (fun U X (Subtract U X x) y)
+  H : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1

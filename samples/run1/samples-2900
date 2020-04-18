@@ -1,0 +1,129 @@
+======== SAMPLE 1 ========
+ x -> Q (filter (opth i j) (if e2
+
+then e1
+
+))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : Color.t
+  j : uint
+  ij : uint
+  il : uint
+  maxQi : int
+  H0 : ((int | uint) (of i (max i)) == maxQi (of j (max il))
+  H4 : (of i (max j)))
+  Hlt : maxQi (max i) @ h = maxQi (max il) + - maxQi (max il)
+  H1 : (of i (max i)) <= maxQi (of j (max il) - (of i j in max (lh il))
+  Q1 : max (of i j))
+  H3 : (max (of i j)) < max j
+  ============================
+   (of i j)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : Color.t
+  j : uint
+  ij : uint
+  il : uint
+  maxQi : int
+  H0 : ((int | uint) (of i (max i)) == maxQi (of j (max il))
+  H4 : (of i (max i))
+  Hlt : maxQi (max i) @ h = maxQi (max il) + - maxQi (max il)
+  H1 : (of i (max i)) <= max j
+  ============================
+   (of i j)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : Color.t
+  j : uint
+  ij : uint
+  il : uint
+  maxQi : int
+  H0 : ((int | uint) (of i (max i)) == maxQi (of j (max il))
+  H4 : (of i (max i))
+  Hlt : maxQi (max i) @ h = maxQi (max il) + - maxQi (max il)
+  H1 : (of i (max i)) <= max j
+  ============================
+   (of i j)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  ============================
+   (of i (max i))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : Color.t
+  j : uint
+  ij : uint
+  il : uint
+  maxQi : int
+  H0 : ((int | uint) (of i (max i)) == maxQi (of j (max il))
+  H4 : (of i (max i))
+  Hlt : maxQi (max i) @ h = maxQi (max il) + - maxQi (max il)
+  H1 : (of i (max i)) <= max j
+  ============================
+   (of i (max i))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  ============================
+   (of i (max i))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : Color.t
+  j : uint
+  ij : uint
+  il : uint
+  maxQi : int
+  H0 : ((int | uint) (of i (max i)) == maxQi (of j (max il))
+  H4 : (of i (

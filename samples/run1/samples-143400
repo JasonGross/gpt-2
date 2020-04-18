@@ -1,0 +1,111 @@
+======== SAMPLE 1 ========
+1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  n : R
+  m : R
+  IHn : n <= - m + (n + m + - n)
+  H : forall (m : R) (x : elt),
+       n < m ->
+       R x (digits - 1) < n ->
+       forall m0 m0 : t,
+       m0 -> m0 (digits - 1) < m0 -> -1 * n < m0 -> xn m0 * -1)
+  x : elt
+  H0 : S n <= -1
+  H1 : S (2 * m0) < -1
+  ============================
+   (m0 == -1)
+
+
+Debug: Going to execute:
+is_tree_constr s2
+
+
+TcDebug (4) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  n : R
+  m : R
+  IHn : n <= - m + (n + m + - n)
+  H : forall (m : R) (x : elt),
+       n < m ->
+       R x (digits - 1) < n ->
+       forall m0 m0 : t,
+       m0 -> m0 (digits - 1) < m0 -> -1 * n < m0 -> xn m0 * -1)
+  x : elt
+  H0 : S n <= -1
+  H1 : S (2 * m0) < -1
+  ============================
+   (m0 == -1)
+
+
+Debug:
+Going to execute:
+fun c => match c with
+         | Leaf => idtac
+         | Node _ _ _ => idtac
+         | _ => fail
+         end
+
+
+TcDebug (5) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  n : R
+  m : R
+  IHn : n <= - m + (n + m + - n)
+  H : forall (m : R) (x : elt),
+       n < m ->
+       R x (digits - 1) < n ->
+       forall m0 m0 : t,
+       m0 -> m0 (digits - 1) < m0 -> -1 * n < m0 -> xn m0 * -1)
+  x : elt
+  H0 : S n <= -1
+  H1 : S (2 * m0) < -1
+  ============================
+   (m0 == -1)
+
+
+Debug:
+Going to execute:
+match c with
+| Leaf => idtac
+| Node _ _ _ => idtac
+| _ => fail
+end
+
+
+TcDebug (5) > 

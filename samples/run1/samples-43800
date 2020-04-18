@@ -1,0 +1,108 @@
+======== SAMPLE 1 ========
+8 : In x rl
+  H2 : In x l
+  H3 : In x l'
+  ============================
+   (In x l')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) + 2
+  _x2 : height rr < height (Node rll rlx rld rlr _x3)
+  y : key
+  H0 : In y l \/ In y rll
+  ============================
+   (X.eq y x \/ In y l \/ In y (Node (Node rll rlx rld rlr _x3) rx rd rr _x1))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) + 2
+  _x2 : height rr < height (Node rll rlx rld rlr _x3)
+  y : key
+  H0 : In y l \/ In y rll
+  ============================
+   (X.eq y x \/ In y l \/ In y (Node (Node rll rlx rld rlr _x3) rx rd rr _x1))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) + 2
+  _x2 : height rr < height (Node rll rlx rld rlr _x3)
+  y : key
+  H0 : In y l \/ In y rll
+  ============================
+   (X.eq y x \/ In y l \/ In y (Node (Node rll rlx rld rlr _x3) rx rd rr _x1))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l :

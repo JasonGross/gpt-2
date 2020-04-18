@@ -1,0 +1,123 @@
+======== SAMPLE 1 ========
+ = r2
+  ============================
+   (complement r2 + - rx2 * r2)
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H4 : Ok l1
+  H9 : Ok r1
+  H10 : lt_tree x1 l1
+  H11 : gt_tree x1 Leaf
+  H : X.lt x1 x2
+  H0 : bool
+  H1 : forall a : elt, InT a l1 -> InT a l2
+  H2 : forall a : elt, InT a r1 -> InT a r2
+  a : elt
+  H1 : forall a : elt, InT a l1 -> InT a l2
+  ============================
+   (X.eq x1 a)
+
+
+Debug: Going to execute:
+clear id0
+
+
+TcDebug (1) > 
+Goal:
+  
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H4 : Ok l1
+  H9 : Ok r1
+  H10 : lt_tree x1 l1
+  H11 : gt_tree x1 Leaf
+  H : X.lt x1 x2
+  H0 : bool
+  H1 : forall a : elt, InT a l1 -> InT a l2
+  H2 : forall a : elt, InT a r1 -> InT a r2
+  a : elt
+  H1 : forall a : elt, InT a l1 -> InT a l2
+  ============================
+   (X.eq x1 a)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H4 : Ok l1
+  H9 : Ok r1
+  H10 : lt_tree x1 l1
+  H11 : gt_tree x1 r2
+  H0 : bool
+  H1 : forall a : elt, InT a l1 -> InT a l2
+  H2 : forall a : elt, InT a r1 -> InT a r2
+  a : elt
+  H1 : forall a : elt, InT a l1 -> InT a l2
+  ============================
+   (InT a r2)
+
+
+Debug: Going to execute:
+clear id0
+
+
+TcDebug (1) > 
+Goal:
+  
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H4 : Ok l1
+  H9 : Ok r1
+  H10 : lt_tree x1 l1
+  H11 : gt_tree x1 r2
+  H0 : bool
+  H1 : forall a : elt, InT a l1 -> InT a l2
+  H2 : forall a : elt, InT a r1 -> InT a r2
+  a : elt
+  H1 : forall a : elt, InT a l1 -> InT a l2
+  ============================
+   (InT a r2)
+
+
+Goal:
+  
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+ 

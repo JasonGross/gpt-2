@@ -1,0 +1,152 @@
+======== SAMPLE 1 ========
+ exec,
+       Hf0 : transpose ?<ltac_opt@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  i : A
+  x : A
+  H : forallb ub : A, In ub r -> x == 0 -> False
+  H0 : In ub (x :: nil) -> x == 0 -> False
+  Huniq_x : forall x y : A, x == y -> False
+  y : A
+  H1 : x == y
+  ============================
+   (x == y)
+
+
+Debug: Going to execute:
+intuition
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  i : A
+  x : A
+  H : forallb ub : A, In ub r -> x == 0 -> False
+  H0 : In ub (x :: nil) -> x == 0 -> False
+  Huniq_x : forall x y : A, x == y -> False
+  y : A
+  H1 : x == y
+  ============================
+   (x == y)
+
+
+Debug: Going to execute:
+do_intro
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  i : A
+  x : A
+  H : forallb ub : A, In ub r -> x == 0 -> False
+  H0 : In ub (x :: nil) -> x == 0 -> False
+  Huniq_x : forall x y : A, x == y -> False
+  y : A
+  H1 : x == y
+  ============================
+   (x == y)
+
+
+Debug: Going to execute:
+let H := fresh in
+intuition
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  i : A
+  x : A
+  H : forallb ub : A, In ub r -> x == 0 -> False
+  H0 : In ub (x :: nil) -> x == 0 -> False
+  Huniq_x : forall x y : A, x == y -> False
+  y : A
+  H1 : x == y
+  ============================
+   (x == y)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::intuition@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  i : A
+  x : A
+  H : forallb ub : A, In ub r -> x == 0 -> False
+  H0 : In ub (x :: nil) -> x == 0 -> False
+  Huniq_x : forall x y : A, x == y -> False
+  y : A
+  H1 : y == y
+  ============================
+   (x == y)
+
+
+Debug: Going to execute:
+intuition
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  i : A
+  x : A
+  H : forallb ub : A, In ub r -> x == 0 -> False
+  H0 : In ub (x :: nil) -> x == 0 -> False
+  Huniq_x : forall x y : A, x == y -> False
+  y : A
+  H1 : x == y
+  ============================
+   (x == y)
+
+
+Debug:
+Going to execute:
+let H := fresh in
+intuition
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  i : A
+  x : A
+  H : forallb ub : A, In ub r -> x == 0 -> False
+  H0 : In ub (x :: nil) -> x == 0 -> False
+  Huniq_x : forall x y : A, x == y -> False
+  y : A
+  H1 : x == y
+  ============================
+   (x == y)
+
+
+Debug:
+Going to execute:
+fun H =>
+  let ph := fresh "X" in
+  let ph' := fresh "X" in
+  destruct H as [H ph ph']
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  i : A
+  x : A
+  H : forallb ub : A, In ub r ->

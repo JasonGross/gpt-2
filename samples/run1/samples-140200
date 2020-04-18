@@ -1,0 +1,122 @@
+======== SAMPLE 1 ========
+uated term: P
+
+Debug: Evaluated term: (p2 @ l == 0)
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  C : Type
+  cO : C
+  cI : C
+  cadd : C -> C -> C
+  cmul : C -> C -> C
+  csub : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  phi : C -> R
+  CRmorph : ring_morph 0 1 radd rmul rsub ropp req cO cI cadd cmul csub copp
+             ceqb phi
+  Cpow : Type
+  Cp_phi : N -> Cpow
+  rpow : R -> Cpow -> R
+  pow_th : power_theory 1 rmul req Cp_phi rpow
+  cdiv : C -> C -> C * C
+  div_th : div_theory req cadd cmul phi cdiv
+  P2 : Pol
+  p : positive
+  P3 : Pol
+  c : C
+  p0 : positive
+  M : Mon
+  p1 : Pol
+  p2 : Pol
+  p3 : Pol
+  l : list R
+  He : p = p0
+  ============================
+   (MPcond LM2 l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  C : Type
+  cO : C
+  cI : C
+  cadd : C -> C -> C
+  cmul : C -> C -> C
+  csub : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  phi : C -> R
+  CRmorph : ring_morph 0 1 radd rmul rsub ropp req cO cI cadd cmul csub copp
+              ceqb phi
+  Cpow : Type
+  Cp_phi : N -> Cpow
+  rpow : R -> Cpow -> R
+  pow_th : power_theory 1 rmul req Cp_phi rpow
+  cdiv : C -> C -> C * C
+  div_th : div_theory req cadd cmul phi cdiv
+  P2 : Pol
+  p : positive
+  P3 : Pol
+  c : C
+  p0 : positive
+  M : Mon
+  p1 : Pol
+  p2 : Pol
+  p3 : Pol
+  l : list R
+  He : p = p0
+  ============================
+   (MPcond LM2 l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  AR

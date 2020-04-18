@@ -1,0 +1,121 @@
+======== SAMPLE 1 ========
+
+   A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : elt -> A -> A
+  Comp : compat_op E.eq eqA f
+  Reqe : ring_eq_ext eqA f m
+  i : A
+  H : ~ InA eqA (x, i)
+  H0 : eqA x i
+  ============================
+   (eqA x x /\ InA eqA (x, i) \/ InA eqA (x', i))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : eqA x x' : A
+  EQ : E.eq x x'
+  H1 : E.eq x' x -> False
+  H2 : InA eqA x (x :: l)
+  ============================
+   (eqA x x /\ InA eqA (x, i) \/ InA eqA (x', i))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : eqA x x' : A
+  EQ : E.eq x x'
+  H1 : E.eq x' x -> False
+  H2 : InA eqA x (x :: l)
+  ============================
+   (eqA x x /\ InA eqA (x, i) \/ InA eqA (x', i))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : eqA x x' : A
+  EQ : E.eq x x'
+  H1 : E.eq x' x -> False
+  H2 : InA eqA x (x :: l)
+  ============================
+   (eqA x x /\ InA eqA (x, i) \/ InA eqA (x', i))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : eqA x x' : A
+  EQ : E.eq x x'
+  H1 : E.eq x' x -> False
+  H2 : InA eqA x (x :: l)
+  ============================
+   (eqA x x /\ InA eqA (x, i) \/ InA eqA (x', i))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : eqA x x' : A
+  EQ : E.eq x x'
+  H1 : E.eq x' x -> False
+  H2 : InA eqA x (x :: l)
+  ============================
+   (eqA x x /\ InA eqA (x, i) \/ InA eqA (x', i))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : eqA x x' : A
+  EQ : E.eq x x'
+  H1 : E.eq x' x -> False
+  H2 : InA eqA x (x :: l)
+  ============================
+   (eqA x x /\ InA eqA (x, i) \/ InA eqA (x', i))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : eqA x x' : A
+  EQ : E.eq x x'
+  H1 : E.eq x' x -> False
+  H2 : InA eqA x (x :: l)

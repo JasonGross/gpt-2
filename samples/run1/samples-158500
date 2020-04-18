@@ -1,0 +1,45 @@
+======== SAMPLE 1 ========
+
+
+TcDebug (1) > 
+Goal:
+    Hl : notred l
+  ============================
+   (forall b : t,
+    (forall ll : t, is_cnf_ff (cnf_ff (xiff (x ll)) (zn (n + 1))) ->
+    bst (Node ll lx ld (Node lrl lrx lrd lrr _x2) _x0) \/
+    (forall
+         : t,
+          bst lrl ->
+          Ring_polynom.PEeval 0%coef 1%polynom.PEeval 0%polynom.PEX C b
+           then
+             (fold_right
+                (fun (pf : NFormula Z) (x : NFormula Z) (eval : Z -> Prop) (pf : NFormula Z)
+                 (H0 : eval_nformula env pf) d
+                 (condition
+                  (x0 : ZArithProof) lx d (fun x : NFormula Z => eval_nformula env x0) ->
+          eval_nformula env (x0, d) \/ ~ eval_nformula env pf
+  H1 : make_conj (eval_nformula env) l
+  n : nat
+  H : 0 <= 0 - Z.succ (Z.pos fr)
+  H2 : 0 <= Z.pos fr - Z.succ (Z.pos x fr)
+  H3 : 0 <= Z.pos x - Z.succ (Z.pos fr)
+  goal := False : Prop
+  list_hyp := nil : list (Ring_polynom.PExpr Z * Ring_polynom.PExpr Z)
+  list_hyp_norm := nil : list (Z * Ring_polynom.Mon * Ring_polynom.Pol Z)
+  ring_lemma : forall (pe : Ring_polynom.PExpr Z) (npe : Ring_polynom.Pol Z),
+               Ring_polynom.norm_subst 0%Z 1%Z Z.add Z.mul Z.sub
+                 Zeq_bool Z.quotrem ring_subst_niter list_hyp_norm pe = npe ->
+               Ring_polynom.PEeval 0%Z 1%Z Z.add Z.mul Z.sub
+                 (IDphi (R:=Z)) Z.of_N Z.pow (x :: nil) pe =
+               Ring_polynom.Pphi_pow 0%Z 1%Z Z.add Z.mul Z.sub
+                 Zeq_bool (IDphi (R:=Z)) Z.of_N Z.pow get_signZ
+                 (x :: nil) npe
+  res := Ring_polynom.Pc 0 : Ring_polynom.Pol Z
+  res_eq : Ring_polynom.mk_monpol_list 0%Z 1%Z Z.add Z.mul Z.sub
+             Z.sub Z.opp Zeq_bool
+             Z.quotrem 0%Z 1%Z Z.add Z.mul Z.sub
+             Z.sub Z.opp Zeq_bool (IDphi (R:=Z)) Z.of_N Z.pow
+            (x :: nil) npe
+  ============================
+

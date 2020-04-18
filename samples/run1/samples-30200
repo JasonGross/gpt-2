@@ -1,0 +1,91 @@
+======== SAMPLE 1 ========
+, rr) - q1 * r == rq * r + 1)
+
+
+Debug: Going to execute:
+change_no_check (MX.TO.le x y) in H
+
+
+TcDebug (15) > 
+Debug:
+Level 15: In environment
+X : Type
+X1 : X2, Type
+X2 : X1, Type
+X3 : X2, Type
+X4 : X3, Type
+X5 : X4, Type
+X6 : X5, Type
+X7 : X4, Type
+X9 : X3, Type
+a = x2 \/ In x4 l
+a0 : E.t
+b : E.t
+e0 : E.eq x1 x2
+Unable to unify "Type" with "MX.TO.le x x2".
+
+Goal:
+  
+  x : X.t
+  e : elt
+  s : list elt
+  IHs : forall (x : E.t) (f : elt -> bool),
+        Proper (E.eq ==> Logic.eq) f ->
+        In f (extract_hyps l (nhyps_of_psatz e1)) ->
+        In f l -> f x = true \/ In f (extract_hyps l (nhyps_of_psatz e2))
+  x : elt
+  f : elt -> bool
+  H : Proper (E.eq ==> Logic.eq) f
+  H2 : In x (extract_hyps l (nhyps_of_psatz e1))
+  H3 : f x = true
+  H : f x = true
+  ============================
+   (In f (extract_hyps l (nhyps_of_psatz e1)) \/ In f (extract_hyps l (nhyps_of_psatz e2)))
+
+
+Debug: Going to execute:
+progress MSetDecideAuxiliary.progress MSet_gen MSet_gen_simpl
+
+
+TcDebug (15) > 
+Goal:
+  
+  x : X.t
+  e : elt
+  s : list elt
+  IHs : forall (x : E.t) (f : elt -> bool),
+        Proper (E.eq ==> Logic.eq) f ->
+        In f (extract_hyps l (nhyps_of_psatz e1)) ->
+        In f l -> f x = true \/ In f (extract_hyps l (nhyps_of_psatz e2))
+  x : elt
+  f : elt -> bool
+  H : Proper (E.eq ==> Logic.eq) f
+  H2 : In x (extract_hyps l (nhyps_of_psatz e1))
+  H3 : f x = true
+  H : f x = true
+  ============================
+   (In f (extract_hyps l (nhyps_of_psatz e1)) \/ In f (extract_hyps l (nhyps_of_psatz e2)))
+
+
+Debug: Going to execute:
+MSetDecideAuxiliary.progress MSet_gen MSet_gen_simpl
+
+
+TcDebug (15) > 
+Goal:
+  
+  x : X.t
+  e : elt
+  s : list elt
+  IHs : forall (x : E.t) (f : elt -> bool),
+        Proper (E.eq ==> Logic.eq) f ->
+        In f (extract_hyps l (nhyps_of_psatz e1)) ->
+        In f l -> f x = true \/ In f (extract_hyps l (nhyps_of_psatz e2))
+  x : elt
+  f : elt -> bool
+  H : Proper (E.eq ==> Logic.eq) f
+  H2 : In x (extract_hyps l (nhyps_of_psatz e1))
+  H3 : f x = true
+  H : f x = true
+  ============================
+   (In f (

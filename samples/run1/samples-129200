@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+j> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  U : Type
+  A : Type
+  s1 : Ensemble A
+  s2 : Ensemble A
+  s3 : Ensemble A
+  x : A
+  H : In A (Union A (Setminus A s1 s3) (Setminus A s2 s3)) x
+  x0 : A
+  H0 : In A (Setminus A s1 (Union A s3 (Setminus A s2 s3))) x
+  H3 : In A s2 x0
+  H1 : x0 = x
+  H4 : In A s3 x
+  ============================
+   (In A (Union A (Setminus A s1 (Union A s3 (Setminus A s2 s3))) x))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  U : Type
+  A : Type
+  s1 : Ensemble A
+  s2 : Ensemble A
+  s3 : Ensemble A
+  x : A
+  H : In A (Union A (Setminus A s1 s3) (Setminus A s2 s3)) x
+  x0 : A
+  H0 : In A (Setminus A s1 (Union A s3 (Setminus A s2 s3))) x
+  H3 : In A s2 x0
+  H1 : x0 = x
+  H4 : In A s3 x
+  ============================
+   (In A (Union A (Setminus A s1 (Union A s3 (Setminus A s2 s3))) x))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  U : Type
+  A : Type
+  s1 : Ensemble A
+  s2 : Ensemble A
+  s3 : Ensemble A
+  x : A
+  H : In A (Union A (Setminus A s1 s3) (Setminus A s2 s3)) x
+  x0 : A
+  H0 : In A (Setminus A s1 (Union A s3 (Setminus A s2 s3))) x
+  H3 : In A s2 x0
+  H1 : x0 = x
+  H4 : In A s3 x
+  ============================
+   (In A (Union A (Setminus A s1 (Union A s3 (Setminus A s2 s3))) x))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  U : Type
+  A : Type
+  s1 : Ensemble A
+  s2 : Ensemble A
+  s3 : Ensemble A
+  x : A
+  H : In A (Union A (Setminus A s1 s3) (Setminus A s2 s3)) x
+  x0 : A
+  H0 : In A (Setminus A s1 (Union A s3 (Setminus A s2 s3))) x
+  H3 : In A s2 x0
+  H1 : x0 = x
+  H4 : In A s3 x
+  ============================
+   (In A (Union A (Setminus A s1 (Union A s3 (Setminus A s2 s3))) x))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  U : Type
+  A : Type
+  s1 : Ensemble A
+  s2 : Ensemble A
+  s3 : Ensemble A
+  x : A
+  H : In A (Union A (Setminus A s1 s3) (Setminus A s2 s3)) x
+  x0 : A
+  H0 : In A (Setminus A s1 (Union A s3 (Setminus A s2 s3))) x
+  H3 : In A s2 x0
+  H1 : x0 = x
+ 

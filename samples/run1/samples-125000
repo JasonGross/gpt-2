@@ -1,0 +1,110 @@
+======== SAMPLE 1 ========
+    MapsTo k e' (Node ll lx ld lr _x) ->
+     X.eq y m#1 /\ e' = m#2 \/ MapsTo k e' l'
+  k : key
+  e : elt
+  Hnot : MapsTo k e (Node ll lx ld lr _x)
+  ============================
+   (MapsTo k e (Node (Node ll lx ld lr _x) x d r h))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall h : int,
+        bst (Node ll lx ld lr h) -> bst (remove_min ll lx ld lr)#1
+  h : int
+  H1 : bst r
+  H2 : lt_tree x (Node ll lx ld lr _x)
+  H3 : gt_tree x r
+  H : bst ll
+  H4 : bst lr
+  H5 : lt_tree lx ll
+  H6 : gt_tree lx lr
+  y : key
+  H0 : In y l'
+  H7 : X.eq y m#1 /\ y = y
+  ============================
+   (MapsTo k e (Node (Node ll lx ld lr _x) x d r h))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall h : int,
+        bst (Node ll lx ld lr h) -> bst (remove_min ll lx ld lr)#1
+  h : int
+  H1 : bst r
+  H2 : lt_tree x (Node ll lx ld lr _x)
+  H3 : gt_tree x r
+  H : bst ll
+  H4 : bst lr
+  H5 : lt_tree lx ll
+  H6 : gt_tree lx lr
+  y : key
+  H0 : In y l'
+  H7 : X.eq y m#1 /\ y = y
+  ============================
+   (MapsTo k e (Node (Node ll lx ld lr _x) x d r h))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall h : int,
+        bst (Node ll lx ld lr h) -> bst (remove_min ll lx ld lr)#1
+  h : int
+  H1 : bst r
+ 

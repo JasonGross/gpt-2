@@ -1,0 +1,195 @@
+======== SAMPLE 1 ========
+===
+   False
+
+
+Goal:
+    n : Q  m : Q  p : Q  H : n ~= Q  H1 : p ~= m
+  ============================
+   False
+
+
+Goal:
+    n : Q  m : Q  p : Q  H : n ~= Q2
+  ============================
+   False
+
+
+Goal:
+    n : Q  m : Q  p : Q  H : p ~= m
+  ============================
+   False
+
+
+Goal:
+    n : Q  m : Q  p : Q  H : p ~= m
+  ============================
+   False
+
+
+Goal:
+    m : Q  p : Q  H : m ~= n
+  ============================
+   False
+
+
+Goal:
+    n : Q  m : Q
+  p : Q
+  H : n ~= m
+  ============================
+   False
+
+
+Goal:
+    n : Q  m : Q
+  p : Q
+  H : m ~= n
+  ============================
+   False
+
+
+Goal:
+    n : Q  m : Q
+  p : Q
+  H0 : m ~= n
+  ============================
+   False
+
+
+Goal:
+    n : Q  m : Q
+  ============================
+   False
+
+
+Goal:
+    m : Q  m : Q
+  q : Q
+  H1 : q → n < m
+  H2 : n < m
+  H1 : n ~= Q
+  ============================
+   False
+
+
+Goal:
+    m : Q  m : Q
+  q : Q
+  H1 : q → n < m
+  H2 : n <= m
+  H1 : n ~= Q
+  ============================
+   False
+
+
+Goal:
+    m : Q  m : Q
+  ============================
+   False
+
+
+Goal:
+    n : Q  m : Q
+  p : Q
+  H : m ~= n
+  ============================
+   False
+
+
+Goal:
+    n : Q  m : Q  p : Q
+  p : Q
+  H1 : m ~= m
+  ============================
+   False
+
+
+Goal:
+    n : Q  m : Q
+  p0 : Q
+  H1 : m <= n
+  H2 : n <= m
+  n : Q  m : Q  p : Q
+  p0 : m ~= n
+  ============================
+   False
+
+
+Debug: Going to execute:
+apply Q; auto
+
+
+TcDebug (0) > 
+Goal:
+    n : Q  m : Q  p : Q  H : n ~= Q
+  ============================
+   Q
+
+
+Goal:
+    n : Q  m : Q  p : Q  H : n ~= Q
+  ============================
+   Q
+
+
+Goal:
+    n : Q  m : Q  p : Q
+  ============================
+   Q
+
+
+Goal:
+    n : Q  m : Q  p : Q
+  ============================
+   Q
+
+
+Goal:
+    n : Q  m : Q  p : Q
+  ============================
+   Q
+
+
+Debug: Going to execute:
+apply Q; auto
+
+
+TcDebug (0) > 
+Goal:
+    n : Q  m : Q  p : Q  H : n ~= Q
+  ============================
+   Q
+
+
+Goal:
+    n : Q  m : Q  p : Q
+  ============================
+   Q
+
+
+Goal:
+    n : Q  m : Q  p : Q  H : n ~= Q
+  ============================
+   Q
+
+
+Goal:
+    n : Q  m : Q  p : Q  H : n ~= Q
+  ============================
+   Q
+
+
+Goal:
+    n : Q  m : Q  p : Q
+  ============================
+   Q
+
+
+Goal:
+    n : Q  m : Q  p : Q
+  ============================
+   Q
+
+
+Goal:

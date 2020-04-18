@@ -1,0 +1,41 @@
+======== SAMPLE 1 ========
+ IH1 : forall (i : nat) (w0 : Z),
+                      Z.pos q = i / (q - q) 
+                    (Ring_polynom.norm_sub d 1) 1
+                          (Ring_polynom.triv_div 0 1 Z.add
+                               Z.opp Zeq_bool
+                                Z.quotrem ring_subst_niter list_hyp_norm 
+                               (Ring_polynom.PEmul (num nfe1)
+                                  (Ring_polynom.PEadd (Ring_polynom.PEX Z 1))
+                                 (Ring_polynom.PEX Z 3)) (Ring_polynom.PEX Z 2))
+                            (Ring_polynom.PEX Z 4)))
+                     (Ring_polynom.PEmul (num nfe2)
+                       (Ring_polynom.PEX Z 5)) (Ring_polynom.PEX Z 4))) =
+                 Ring_polynom.Pphi(Z.pos p)
+                  (Ring_polynom.Pphi_pow (Z.pos p) 1
+                     (Ring_polynom.Pc 1))
+                    (Ring_polynom.Pphi_pow 0 (Z.pos p)) l
+                    (Ring_polynom.Pc 1)) lxor
+                   (Ring_polynom.PEX Z 2))
+                   (Ring_polynom.Pphi_pow 0 (Z.pos p)) (Ring_polynom.PEX Z 3))
+                   (Ring_polynom.PEX Z 4))) (Ring_polynom.PEX Z 2)) = Ring_polynom.Pphi_pow 0 (Z.pos p) lxor (Ring_polynom.PEX Z 3))
+                 (Ring_polynom.PEX Z 4)) (Ring_polynom.PEX Z 2))
+
+
+Debug:
+Level 3: type of lemma
+ has value 
+(Ring_polynom.PEeval 0)
+
+
+Goal:
+  
+  env : PolEnv Z
+  p : positive
+  d : positive
+  ring0 : Z
+  gen := Pos.succ d : positive
+  list_hyp := nil : list (Ring_polynom.PExpr Z * Ring_polynom.PExpr Z)
+  list_hyp_norm := nil : list (Z * Ring_polynom.Mon * Ring_polynom.Pol Z)
+  ring_lemma : forall (pe : Ring_polynom.PExpr Z) (npe : Ring_polynom.Pol Z),
+           

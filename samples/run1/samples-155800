@@ -1,0 +1,140 @@
+======== SAMPLE 1 ========
+> ==> iff)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : positive
+  IHx : forall s s' : t,
+        mem x (inter s s') = true <-> mem x s = true /\ mem x s' = true
+  s'1 : tree
+  b : bool
+  s'2 : tree
+  H : false = true
+  ============================
+   (mem x s'2 = true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : positive
+  IHx : forall s s' : t,
+        mem x (inter s s') = true <-> mem x s = true /\ mem x s' = true
+  s'1 : tree
+  b : bool
+  s'2 : tree
+  H : false = true
+  ============================
+   (mem x s'2 = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : positive
+  IHx : forall s s' : t,
+        mem x (inter s s') = true <-> mem x s = true /\ mem x s' = true
+  s'1 : tree
+  b : bool
+  s'2 : tree
+  H : false = true
+  ============================
+   (mem x s'2 = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : positive
+  IHx : forall s s' : t,
+        mem x (inter s s') = true <-> mem x s = true /\ mem x s' = true
+  s'1 : tree
+  b : bool
+  s'2 : tree
+  H : false = true
+  ============================
+   (mem x s'2 = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : positive
+  IHx : forall s s' : t,
+        mem x (inter s s') = true <-> mem x s = true /\ mem x s' = true
+  s'1 : tree
+  b : bool
+  s'2 : tree
+  H : false = true
+  ============================
+   (mem x s'2 = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : positive
+  IHx : forall s s' : t,
+        mem x (inter s s') = true <-> mem x s = true /\ mem x s' = true
+  s'1 : tree
+  b : bool
+  s'2 : tree
+  H : false = true
+  ============================
+   (mem x s'2 = true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : positive
+  IHx : forall s s' : t,
+        mem x (inter s s') = true <-> mem x s = true /\ mem x s' = true
+  s'1 : tree
+  b : bool
+  s'2 : tree
+  H : false = true
+  ============================
+   (mem x s'2 = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+T

@@ -1,0 +1,152 @@
+======== SAMPLE 1 ========
+   (n < 0 \/ n == 0)
+
+
+Debug: Going to execute:
+assert X2; [ exact (id0 id1) | clear id0 ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H0 : 0 < n /\ 0 < m \/ m < 0 /\ n < 0
+  H1 : n == 0
+  H2 : 0 < m
+  ============================
+   (n < 0 \/ n == 0)
+
+
+Debug: Going to execute:
+assert X2
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (m < 0 \/ 0 < n)
+
+
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H0 : 0 < n /\ 0 < m \/ m < 0 /\ n < 0
+  H1 : n == 0
+  H2 : 0 < m
+  ============================
+   (m < 0 \/ 0 < n)
+
+
+Debug: Going to execute:
+exact (id0 id1)
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (H H1)
+
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H0 : 0 < n /\ 0 < m \/ m < 0 /\ n < 0
+  H1 : n == 0
+  H2 : 0 < m
+  ============================
+   (m < 0 \/ 0 < n)
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H0 : 0 < n /\ 0 < m \/ m < 0 /\ n < 0
+  H1 : n == 0
+  H2 : 0 < m
+  H : 0 < m
+  H3 : 0 < m
+  ============================
+   (m < 0 \/ 0 < n)
+
+
+Debug: Going to execute:
+clear id0
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H0 : 0 < n /\ 0 < m \/ m < 0 /\ n < 0
+  H1 : n == 0
+  H2 : 0 < m
+  H : 0 < m
+  H3 : 0 < m
+  ============================
+   (m < 0 \/ 0 < n)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H1 : n == 0
+  H2 : 0 < m
+  H : 0 < m
+  ============================
+   (m < 0 <-> n == 0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (0) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H1 : n == 0
+  H2 : 0 < m
+  H : 0 < m
+  ============================
+   (m < 0 <-> n == 0)
+
+
+Debug:
+Going to execute:
+repeat
+ match goal with
+ | |- ?X1 -> ?X2 => intro
+ | |- ~ _ => unfold not at 1; intro
+ end
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H1 : n == 0
+  H2 : 0 < m
+  H : 0 < m
+  ============================
+   (m < 0 <->

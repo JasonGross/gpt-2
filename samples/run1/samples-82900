@@ -1,0 +1,95 @@
+======== SAMPLE 1 ========
+e) ->
+           find x (map_option_no_check (a = b)) = true
+  y : X.t
+  H1 : X.eq y m#1
+  H6 : InT y l1
+  H5 : InT y r1
+  H7 : InT y s2
+  H8 : X.lt y x
+  ============================
+   (InT y (Node _x l1 x1 r1))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  IHt0 : forall y : elt,
+          Ok l1 ->
+          Ok (split x1 s2)#l ->
+          InT y (union l1 (split x1 s2)#l) <->
+          InT y l1 \/ InT y (split x1 s2)#l
+  IHt1 : forall y : elt,
+          Ok r1 ->
+          Ok (split x1 s2)#r ->
+          InT y (union r1 (split x1 s2)#r) <->
+          InT y r1 \/ InT y (split x1 s2)#r
+  y : X.t
+  H1 : X.eq y m#1
+  H6 : InT y l1
+  H5 : InT y r1
+  H7 : InT y s2
+  H8 : X.lt y x
+  ============================
+   (InT y (Node _x l1 x1 r1))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  IHt0 : forall y : elt,
+          Ok l1 ->
+          Ok (split x1 s2)#l ->
+          InT y (union l1 (split x1 s2)#l) <->
+          InT y l1 \/ InT y (split x1 s2)#l
+  IHt1 : forall y : elt,
+          Ok r1 ->
+          Ok (split x1 s2)#r ->
+          InT y (union r1 (split x1 s2)#r) <->
+          InT y r1 \/ InT y (split x1 s2)#r
+  y : X.t
+  H1 : X.eq y m#1
+  H6 : InT y l1
+  H5 : InT y r1
+  H7 : InT y s2
+  H8 : X.lt y x
+  ============================
+   (InT y (Node _x l1 x1 r1))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  IHt0 : forall y : elt,
+          Ok l1 ->
+          Ok (split x1 s2)#l ->
+          InT y (

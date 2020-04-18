@@ -1,0 +1,166 @@
+======== SAMPLE 1 ========
+
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  x' : key
+  Hx : D.eq x x'
+  z : respecting e.eq
+  z' : respecting e.eq
+  H : D.eq x x'
+  H2 : y <= x'
+  H3 : x' < y
+  H0 : E.eq z x'
+  H4 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  x' : key
+  Hx : D.eq x x'
+  z : respecting e.eq
+  z' : respecting e.eq
+  H : D.eq x x'
+  H2 : y <= x'
+  H3 : x' < y
+  H0 : E.eq z x'
+  H4 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  x' : key
+  Hx : D.eq x x'
+  z : respecting e.eq
+  z' : respecting e.eq
+  H : D.eq x x'
+  H2 : y <= x'
+  H3 : x' < y
+  H0 : E.eq z x'
+  H4 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  x' : key
+  Hx : D.eq x x'
+  z : respecting e.eq
+  z' : respecting e.eq
+  H : D.eq x x'
+  H2 : y <= x'
+  H3 : x' < y
+  H0 : E.eq z x'
+  H4 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  x' : key
+  Hx : D.eq x x'
+  z : respecting e.eq
+  z' : respecting e.eq
+  H : D.eq x x'
+  H2 : y <= x'
+  H3 : x' < y
+  H0 : E.eq z x'
+  H4 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  x' : key
+  Hx : D.eq x x'
+  z : respecting e.eq
+  z' : respecting e.eq
+  H : D.eq x x'
+  H2 : y <= x'
+  H3 : x' < y
+  H0 : E.eq z x'
+  H4 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  x' : key
+  Hx : D.eq x x'
+  z : respecting e.eq
+  z' : respecting e.eq
+  H : D.eq x x'
+  H2 : y <= x'
+  H3 : x' < y
+  H0 : E.eq z x'
+  H4 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun =>

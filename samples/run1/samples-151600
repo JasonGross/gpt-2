@@ -1,0 +1,113 @@
+======== SAMPLE 1 ========
+ at 6
+  H5 : NoDupA (l1 ++ l2)
+  H7 : InA a l
+  H9 : eqA a y -> False
+  H6 : InA y l1 -> False
+  H12 : InA y l2 -> False
+  H10 : eqA a x
+  H13 : False
+  H11 : InA a l1
+  H14 : eqA a y \/ eqA a x \/ InA a l
+  H11 : eqA a x
+  H15 : False
+  H14 : eqA a y \/ eqA a x \/ InA a l
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; constructor 1
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : eqA x y
+  H1 : NoDupA (l1 ++ y :: l2)
+  H2 : equivlistA (x :: l) (l1 ++ y :: l2)
+  a : A
+  H3 : InA x l -> False
+  H4 : NoDupA l
+  H5 : NoDupA (l1 ++ l2)
+  H7 : InA a l
+  H9 : eqA a y -> False
+  H6 : InA y l1 -> False
+  H12 : InA y l2 -> False
+  H10 : eqA a x
+  H13 : False
+  H11 : InA a l1
+  H14 : eqA a y \/ eqA a x \/ InA a l
+  H11 : eqA a x
+  H15 : False
+  H14 : eqA a y \/ eqA a x \/ InA a l
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : eqA x y
+  H1 : NoDupA (l1 ++ y :: l2)
+  H2 : equivlistA (x :: l) (l1 ++ y :: l2)
+  a : A
+  H3 : InA x l -> False
+  H4 : NoDupA l
+  H5 : NoDupA (l1 ++ l2)
+  H7 : InA a l
+  H9 : eqA a y -> False
+  H6 : InA y l1 -> False
+  H12 : InA y l2 -> False
+  H10 : eqA a x
+  H13 : False
+  H11 : InA a l1
+  H14 : eqA a y \/ eqA a x \/ InA a l
+  H11 : eqA a x
+  H15 : False
+  H14 : eqA a y \/ eqA a x \/ InA a l
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : eqA x y
+  H1 : NoDupA (l1 ++ y :: l2)
+  H2 : equivlistA (x :: l) (l1 ++ y :: l2)
+  a : A
+  H

@@ -1,0 +1,123 @@
+======== SAMPLE 1 ========
+ t2 :: nil) :: nil) = (a :: nil)%signature
+  ============================
+   (nil = pf :: ring_subst_nformulae (pf :: nil) (mapl_type_of_C mO))
+
+
+Debug: Going to execute:
+fun t => save t
+
+
+TcDebug (21) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  env : PolEnv
+  e : PolC
+  o : Op1
+  Op : o = Strict
+  z : positive
+  H0 : o = pf (z) n
+  z : positive
+  H1 : ZChecker ((PsubC Z.sub pxy (Z.pos z) :: Z.of_nat n) z) = true
+  H2 : O.gen z = true
+  H1 : ZChecker ((PsubC Z.sub pb (Z.pos z) :: Z.of_nat n) z) = true
+  ============================
+   (O.gen = true)
+
+
+Debug:
+Going to execute:
+fold R; clear H
+
+
+TcDebug (21) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  env : PolEnv
+  e : PolC
+  o : Op1
+  Op : o = Strict
+  z : positive
+  H0 : o = pf (z) n
+  z : positive
+  H1 : ZChecker ((PsubC Z.sub pxy (Z.pos z) :: Z.of_nat n) z) = true
+  H2 : O.gen z = true
+  H1 : ZChecker ((PsubC Z.sub pb (Z.pos z) :: Z.of_nat n) z) = true
+  ============================
+   (O.gen z = true)
+
+
+Debug:
+Going to execute:
+fold R; clear H
+
+
+TcDebug (21) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+

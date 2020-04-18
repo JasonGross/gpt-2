@@ -1,0 +1,157 @@
+======== SAMPLE 1 ========
+
+   (In a s)
+
+
+Debug:
+Going to execute:
+match goal with
+| H:x < z |- _ => fail 1
+| _ =>
+    generalize (Private_OrderTac.Tac.lt_trans H1 H2); intro;
+     Private_OrderTac.Tac.order_loop
+end
+
+
+TcDebug (16) > 
+Goal:
+    a : t  H0 : False
+  ============================
+   (In a s)
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (17) > 
+Goal:
+    a : t  H0 : False
+  ============================
+   (In a s)
+
+
+Debug:
+Going to execute:
+match R with
+| eq => fail 1
+| lt => fail 1
+| le => fail 1
+| _ =>
+    change_no_check (x ~= y) in H ||
+      change_no_check (x < y) in H ||
+        change_no_check (x <= y) in H || clear H || fail 1;
+     Private_OrderTac.Tac.order_prepare
+end
+
+
+TcDebug (16) > 
+Goal:
+    a : t  H0 : False
+  ============================
+   (In a s)
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (17) > 
+Debug: Level 17: R
+ has value 
+le
+
+
+Goal:
+    a : t  H0 : False
+  ============================
+   (In a s)
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (17) > 
+Goal:
+    a : t  H0 : False
+  ============================
+   (In a s)
+
+
+Debug:
+Going to execute:
+(apply Private_OrderTac.Tac.not_neq_eq; intro) ||
+  (apply Private_OrderTac.Tac.not_ge_lt; intro) ||
+    (apply Private_OrderTac.Tac.not_gt_le; intro) || exfalso
+
+
+TcDebug (16) > 
+Goal:
+    a : t  H0 : False
+  ============================
+   (In a s)
+
+
+Debug: Going to execute:
+apply Private_OrderTac.Tac.not_neq_eq; intro
+
+
+TcDebug (16) > 
+Goal:
+    a : t  H0 : False
+  ============================
+   (In a s)
+
+
+Debug: Going to execute:
+apply Private_OrderTac.Tac.not_neq_eq
+
+
+TcDebug (16) > 
+Debug: Evaluated term: Private_OrderTac.Tac.not_neq_eq
+
+Debug: Level 16: In environment
+a, H0 : False
+Unable to unify "?M988 == ?M989" with "In a s".
+
+Debug: Level 16: In environment
+a, H0 : False
+Unable to unify "?M988 == ?M989" with "In a s".
+
+Debug: Level 15: In environment
+a, H0 : False
+Unable to unify "?M988 == ?M989" with "In a s".
+
+Goal:
+    a : t  H0 : False
+  ============================
+   (In a s)
+
+
+Debug:
+Going to execute:
+(apply Private_OrderTac.Tac.not_ge_lt; intro) ||
+  (apply Private_OrderTac.Tac.not_gt_le; intro) || exfalso
+
+
+TcDebug (15) > 
+Goal:
+    a : t  H0 : False
+  ============================
+   (In a s)
+
+
+Debug: Going to execute:
+apply Private_OrderTac.Tac.not_ge_lt; intro
+
+
+TcDebug (15) > 
+Goal:
+    a : t  H0 : False
+  ============================
+   (In a s)
+
+
+Debug: Going to execute:
+apply Private_OrderTac.Tac.not

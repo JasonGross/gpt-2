@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+ OkA a (mapc (mapi :: n) l) ->
+        InA eqke (x0, e0) acc <->
+        MapsTo x0 e0 ((x0, e0) :: m1)
+  H0 : InA eqke (x0, e0) ((x', e', m2) :: m3)
+  H1 : InA eqke (x0, e0) ((x, e) :: m1)
+  H2 : MapsTo x0 e0 m3
+  ============================
+   (m1 * m3)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  m1 : t elt
+  k : key
+  e0 : elt
+  m2 : t elt
+  t : int
+  x : X.t
+  e : key
+  y : elt
+  l : list (key * elt)
+  e0_elements : gt_t * elt = find y m2 /\ Q
+  H0 : InA eqke (x0, e0) ((x, e) :: m1)
+  H1 : InA eqke (x0, e0) ((x, e) :: m1)
+  H2 : MapsTo x0 e0 m3
+  ============================
+   (m1 * m3)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  k : key
+  e0 : elt
+  m2 : t elt
+  t : int
+  x : X.t
+  e : key
+  y : elt
+  l : list (key * elt)
+  e0_elements : gt_t * elt = find y m2 /\ Q
+  H0 : InA eqke (x0, e0) ((x, e) :: m1)
+  H1 : InA eqke (x0, e0) ((x, e) :: m1)
+  H2 : MapsTo x0 e0 m3
+  ============================
+   (m1 * m3)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  k : key
+  e0 : elt
+  m2 : t elt
+  t : int
+  x : X.t
+  e : key
+  y : elt
+  l : list (key * elt)
+  e0_elements : gt_t * elt = find y m2 /\ Q
+  H0 : InA eqke (x0, e0) ((x, e) :: m1)
+  H1 : InA eqke (x0, e0) ((x, e) :: m1)
+  H2 : MapsTo x0 e0 m3
+  ============================
+   (m1 * m3)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  k : key
+  e0 : elt
+  m2 : t elt
+  t : int
+  x : X.t
+  e : key
+  y : elt
+  l : list (key * elt)
+  e0_elements : gt_t * elt = find y m2 /\ Q
+  H0 : InA eqke (x0, e0) ((x, e) :: m1)
+  H1 : InA eqke (x0, e0) ((x, e) :: m1)
+  H2 : MapsTo x0 e0 m3
+  ============================
+   (m1 * m3)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+

@@ -1,0 +1,161 @@
+======== SAMPLE 1 ========
+    (X.eq y x \/ InA eqke (y, e0) l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  y : key
+  H : In y l
+  ============================
+   (X.eq y x \/ InA eqke (y, e0) l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  y : key
+  H : In y l
+  ============================
+   (X.eq y x \/ InA eqke (y, e0) l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  y : key
+  H : In y l
+  ============================
+   (X.eq y x \/ InA eqke (y, e0) l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  y : key
+  H : In y l
+  ============================
+   (X.eq y x \/ InA eqke (y, e0) l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  y : key
+  H : In y l
+  ============================
+   (X.eq y x \/ InA eqke (y, e0) l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  y : key
+  H : In y l
+  ============================
+   (X.eq y x \/ InA eqke (y, e0) l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  y : key
+  H : In y l
+  ============================
+   (X.eq y x \/ InA eqke (y, e0) l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  y : key
+  H : In y l
+  ============================
+   (X.eq y x \/ InA eqke (y, e0) l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  y : key
+  H : In y l
+  ============================
+ 

@@ -1,0 +1,126 @@
+======== SAMPLE 1 ========
+ n
+  ============================
+   (MapsTo y e0 (Node m1 k e m2 t))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  t0 : X.t
+  e : elt
+  k' : X.t
+  y : elt
+  t1 : X.t
+  l : list (X.t * elt)
+  t2 : X.t
+  H : In k' m1 -> False
+  H0 : Ok (rev (elements m1))
+  H1 : In k' m1 -> False
+  H2 : In k' m1 -> False
+  H3 : MapsTo y e (t0, e) -> MapsTo y e (t1, e)
+  ============================
+   (MapsTo y e0 (Node m1 k e m2 t))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  t0 : X.t
+  e : elt
+  k' : X.t
+  y : elt
+  t1 : X.t
+  l : list (X.t * elt)
+  t2 : X.t
+  H : In k' m1 -> False
+  H0 : Ok (rev (elements m1))
+  H1 : In k' m1 -> False
+  H2 : In k' m1 -> False
+  H3 : MapsTo y e (t0, e) -> MapsTo y e (t1, e)
+  ============================
+   (MapsTo y e0 (Node m1 k e m2 t))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  t0 : X.t
+  e : elt
+  k' : X.t
+  y : elt
+  t1 : X.t
+  l : list (X.t * elt)
+  t2 : X.t
+  H : In k' m1 -> False
+  H0 : Ok (rev (elements m1))
+  H1 : In k' m1 -> False
+  H2 : In k' m1 -> False
+  H3 : MapsTo y e (t0, e) -> MapsTo y e (t1, e)
+  ============================
+   (MapsTo y e0 (Node m1 k e m2 t))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  t0 : X.t
+  e : elt
+  k' : X.t
+  y : elt
+  t1 : X.t
+  l : list (X.t * elt)
+  t2 : X.t
+  H : In k' m1 -> False
+  H0 : Ok (rev (elements m1))
+  H1 : In k' m1 -> False
+  H2 : In k' m1 -> False
+  H3 : MapsTo y e (t0, e) -> MapsTo y e (t1, e)
+  ============================
+   (MapsTo y e0 (Node m1 k e m2 t))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  t0 : X.t
+  e : elt
+  k' : X.t
+  y : elt
+  t1 : X.t
+  l : list (X.t * elt)
+  t2 : X.t
+  H : In k' m1 -> False
+  H0 : Ok (rev (elements m1))
+  H1 : In k' m1 -> False
+

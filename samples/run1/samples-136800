@@ -1,0 +1,95 @@
+======== SAMPLE 1 ========
+  (InA X.eq x l2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  c : Info.t
+  l : tree
+  x0 : X.t
+  r : tree
+  H2 : forall acc : list X.t,
+       Sorted X.lt acc ->
+       length + length + Sorted X.lt (elements_aux acc r)
+  H3 : forall (x : elt) (e : X.t),
+       length <= e + length l ->
+       Sorted X.lt acc ->
+       (forall x y : elt, InA X.eq x acc -> InT y l -> X.lt y x) ->
+       Sorted X.lt (elements_aux acc l)
+  H4 : bst l
+  H5 : bst r
+  y0 : X.t
+  H6 : X.lt y0 x
+  H7 : forall y : X.t, InT y (Node c l y r) -> X.lt y0 x
+  H8 : gt_tree x r
+  H : MX.TO.lt x x
+  H2 : MX.TO.lt y0 x
+  ============================
+   (InA X.eq x l2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  c : Info.t
+  l : tree
+  x0 : X.t
+  r : tree
+  H2 : forall acc : list X.t,
+       Sorted X.lt acc ->
+       length + length + Sorted X.lt (elements_aux acc r)
+  H3 : forall (x : elt) (e : X.t),
+       length <= e + length l ->
+       Sorted X.lt acc ->
+       (forall x y : elt, InA X.eq x acc -> InT y l -> X.lt y x) ->
+       Sorted X.lt (elements_aux acc l)
+  H4 : bst l
+  H5 : bst r
+  y0 : X.t
+  H6 : X.lt y0 x
+  H7 : forall y : X.t, InT y (Node c l y r) -> X.lt y0 x
+  H8 : gt_tree x r
+  H : MX.TO.lt x x
+  H2 : MX.TO.lt y0 x
+  ============================
+   (InA X.eq x l2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  c : Info.t
+  l : tree
+  x0 : X.t
+  r : tree
+  H2 : forall acc : list X.t,
+       Sorted X.lt acc ->
+       length + length + Sorted X.lt (elements_aux acc r)
+  H3 : forall (x : elt) (e : X.t),
+       Sorted X.lt acc ->
+       (forall x y : elt, InA X.eq x acc -> InT y l -> X.lt y x) ->
+       Sorted X.lt (elements_aux acc l)
+  H4 : bst l
+  H5 : bst r
+  y0 : X.t
+  H6 : X.lt y0 x
+  H7 : forall y : X.t, InT y (Node c l y r) -> X.lt y0 x
+  H8 : gt_tree x r
+  H : MX.TO.

@@ -1,0 +1,120 @@
+======== SAMPLE 1 ========
+ a)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = true
+  lt_tree0 : lt_tree x (Node rl rx rr)
+  gt_tree0 : gt_tree x (Node rh rl rx rr)
+  H5 : Ok rl
+  H6 : Ok rr
+  H7 : lt_tree rx rl
+  H8 : gt_tree rx rr
+  H4 : Ok ll
+  H9 : Ok lr
+  H10 : lt_tree lx ll
+  H11 : gt_tree lx copp
+  H : (gt_tree x (Node lh ll lx lr)) /\ ~ (gt_tree x lr)
+  ============================
+   (gt_tree x (Node rh rl rx rr))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = true
+  lt_tree0 : lt_tree x (Node rl rx rr)
+  gt_tree0 : gt_tree x (Node rh rl rx rr)
+  H5 : Ok rl
+  H6 : Ok rr
+  H7 : lt_tree rx rl
+  H8 : gt_tree rx rr
+  H4 : Ok ll
+  H9 : Ok lr
+  H10 : lt_tree lx ll
+  H11 : gt_tree lx copp
+  H : (gt_tree x (Node lh ll lx lr)) /\ ~ (gt_tree x lr)
+  ============================
+   (gt_tree x (Node rh rl rx rr))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  rh : I.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = true
+  lt_tree0 : lt_tree x (Node rl rx rr)
+  gt_tree0 : gt_tree x (Node rh rl rx rr)
+  H5 : Ok rl
+  H6 : Ok rr
+  H7 : lt_tree rx rl
+  H8 : gt_tree rx rr
+  H4 : Ok ll
+  H9 : Ok lr
+  H10 : lt_tree lx ll
+  H11 : gt_tree lx copp
+  H : (gt_tree x (Node lh ll lx lr)) /\ ~ (gt_tree x lr)
+  ============================
+   (gt_tree x (Node rh rl rx rr))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  rh : I.t
+  rl : tree
+ 

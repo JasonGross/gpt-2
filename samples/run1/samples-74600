@@ -1,0 +1,132 @@
+======== SAMPLE 1 ========
+ * a))) * Z.pos b +
+    (Z.pos b * (Z.pos c * Z.pos l)) *
+    ((Z.pos rll + Z.pos rlr) * (Z.pos a * Z.pos b))%Z)
+
+
+Debug: Going to execute:
+isPcst p
+
+
+TcDebug (23) > 
+Goal:
+    a : Z  b : positive  H : 0 <= Z.pos b  H0 : 0 < Z.pos c  H1 : Z.pos b < a
+  ============================
+   (0 <= 0)
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | 0%Z => true
+  | Z.pos ?p => isPcst p
+  | Z.neg ?p => isPcst p
+  | Z.of_nat ?n => isnatcst n
+  | Z.of_N ?n => isNcst n
+  | _ => false
+  end
+
+
+TcDebug (24) > 
+Goal:
+    a : Z  b : positive  H : 0 <= Z.pos b  H0 : 0 < Z.pos c  H1 : Z.pos b < a
+  ============================
+   (0 <= 0)
+
+
+Debug:
+Going to execute:
+match t with
+| 0%Z => true
+| Z.pos ?p => isPcst p
+| Z.neg ?p => isPcst p
+| Z.of_nat ?n => isnatcst n
+| Z.of_N ?n => isNcst n
+| _ => false
+end
+
+
+TcDebug (24) > 
+Goal:
+    a : Z  b : positive  H : 0 <= Z.pos b  H0 : 0 < Z.pos c  H1 : Z.pos b < a
+  ============================
+   (0 <= 0)
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (25) > 
+Debug: Level 25: t
+ has value 
+(Z.pos b :: Z.pos c :: Z.pos q :: Z.pos r)
+
+
+Goal:
+    a : Z  b : positive  H : 0 <= Z.pos b  H0 : 0 < Z.pos c  H1 : Z.pos b < a
+  ============================
+   (0 <= 0)
+
+
+Debug: Going to execute:
+false
+
+
+TcDebug (25) > 
+Debug: Evaluated term: false
+
+Debug: Level 24: evaluation returns
+false
+
+
+Debug: Level 23: isZcst t
+ has value 
+false
+
+
+Goal:
+    a : Z  b : positive  H : 0 <= Z.pos b  H0 : 0 < Z.pos c  H1 : Z.pos b < a
+  ============================
+   (0 <= 0)
+
+
+Debug: Going to execute:
+NotConstant
+
+
+TcDebug (23) > 
+Debug: Evaluated term: NotConstant
+
+Debug: Level 22: evaluation returns
+NotConstant
+
+
+Debug: Level 21: Cst t
+ has value 
+NotConstant
+
+
+Goal:
+    a : Z  b : positive  H : 0 <= Z.pos b  H0 : 0 < Z.pos c  H1 : Z.pos b < a
+  ============================
+   (0 <= 0)
+
+
+Debug:
+Going to execute:
+match t with
+| rO => fun _ => FEO
+| rI => fun _ => FEI
+| radd ?t1 ?t2 =>
+    fun _ => let e1 := mkP t1 in
+             let e2 := mkP t2 in
+             FEadd e1 e2
+| rmul ?t1 ?t2 =>
+    fun _ => let e1 := mkP t1 in
+             let e2 := mkP t2 in
+             FEmul e1 e2
+| rsub ?t1 ?t2 =>
+    fun _ => let e1 := mkP t1 in
+           

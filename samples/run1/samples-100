@@ -1,0 +1,219 @@
+======== SAMPLE 1 ========
+ : (e|1) => e => { f1: i + 1 }
+
+In this case, I have to prove e (or i) , where it has (1) as the parameter. Here is the value for the (1) :
+let a : Type < E => > = < E => >
+
+I believe that it works to make it more obvious with the closure.
+
+<- elt-auto-conj :-1 := :2 >
+In elt, a :: Type < S => > does not have any closure, e :: S :: a -> a
+ is no constraint (the closure)
+ e :: S :: a -> a is not a type
+ there are no errors
+
+ <e> <= e
+
+
+
+The problem with elt is that it would be difficult to make it clear when to do this:
+let a = Type < E => >
+ elt :: b -> Type < S => >
+ elt :: a -> < S => > elt :: a
+ <S> is true
+ e :: S :: a -> < S => > | elt :: (e => elt::(e, e)) -> < S => >
+ /
+ I believe elt has a closure in which elt :: B s => elt:: (s => elt) is true; it is true that elt has a closure, e :: B s
+ I'm not sure what elt has for s = <B> (S, s) : e
+
+I've seen this in the REPL.
+conj :: a -> (b : S) => b
+
+conj :: a -> b -> (S, s) => b
+
+conj :: (t : A) => b -> T
+
+conj :: <T> a
+
+
+conj :: (t : A) => <T> (S) -> <T>(T)
+
+conj :: <T> a
+
+
+conj :: (t (0:0:1) => (a _t:0))) => <T> (s _t:0)
+
+
+
+In this case, I have to prove I'm not a type with a :
+let t1 : a
+
+
+For any given type, this function looks like:
+conj :: b -> (a : Int) => (a => b)
+
+conj :: (a : Int) => (b -> b)
+
+
+conj :: <T> s => s
+
+
+conj :: <T> b
+
+
+conj :: <T> s
+
+
+conj :: <T> m => <T> b
+
+
+conj :: <T> s
+
+
+conj :: <T> m
+
+
+conj :: <T> b
+
+
+conj :: <T> s
+
+
+conj :: <T> b
+
+conj :: <T> m
+
+
+conj :: <T> b
+
+
+conj :: <T> s
+
+
+
+conj :: <T> s
+
+
+conj :: <T> s
+
+
+fun t x : Int
+ -> b -> s -> t -> x
+
+
+T
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // I'm going to do it, but I get
+ not a Type
+
+
+
+
+
+
+
+
+
+ ->
+
+[a] ->
+a =>
+a
+ - 1
+
+
+
+
+_ -> B :: Type
+ -> B
+
+
+
+_ -> S :: a -> S
+
+
+
+ -> Type <A> -> B
+
+
+
+
+_ -> = a
+
+_ -> = A
+
+_ -> = B :: Type
+
+_ -> = Type <A>
+
+
+_ -> = Type <A>
+
+_
+
+\ \ _ -> Type <_>
+ _
+
+\ \
+
+\ ||
+\ ||
+\
+
+\ ||
+\
+\
+_ -> <_>
+_ = Type <_> b
+_ -> = Type <A_>
+
+_ -> = Type <_\>
+\ || <_\> -> Type <_\>
+
+\ /
+\ || <_\>
+\ \
+\
+\ || =
+\
+\
+\ | (f2 :: :?1 : ?2 : f0) ->
+\ / ->
+\ / ->
+\ == \ \ /
+\ | \ / ->
+\ == \ _
+
+\ \ | (f1 :: :?1 : f1 : f0) ->
+\ <_\>,\ | \ <_\> ->
+\ ==

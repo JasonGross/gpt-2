@@ -1,0 +1,107 @@
+======== SAMPLE 1 ========
+ returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  a : A
+  l : list A
+  IHl : forall eqA_equiv : Equivalence eqA
+  eqA_dec : forall x y : A, eqA x y <-> eqA x y
+  a0 : A
+  l0' : list A
+  H0 : eqA a0 a'
+  H1 : forall y z : A, eqA x y -> eqA_dec (a0, b0) = eqA y z
+  ============================
+  eqA a a'
+    (forall x y : set, eqA x y == eqA x z)
+      (forall a y0 : set, eqA x y0 -> eqA x y0))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  a : A
+  l : list A
+  IHl : forall eqA_equiv : Equivalence eqA
+  eqA_dec : forall x y : A, eqA x y <-> eqA x y
+  a0 : A
+  l0' : list A
+  H0 : eqA a0 a'
+  H1 : forall y z : A, eqA x y -> eqA_dec (a0, b0) = eqA y z
+  ============================
+  eqA a a'
+    (forall x y : set, eqA x y == eqA x z)
+      (forall a y0 : set, eqA x y0 -> eqA x y0))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  a : A
+  l : list A
+  IHl : forall eqA_equiv : Equivalence eqA
+  eqA_dec : forall x y : A, eqA x y <-> eqA x y
+  a0 : A
+  l0' : list A
+  H0 : eqA a0 a'
+  H1 : forall y z : A, eqA x y -> eqA_dec (a0, b0) = eqA y z
+  ============================
+  eqA a a'
+    (forall x y : set, eqA x y == eqA x z)
+      (forall a y0 : set, eqA x y0 -> eqA x y0))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  a : A
+  l : list A
+  IHl : forall eqA_equiv : Equivalence eqA
+  eqA_dec : forall x y : A, eqA x y <-> eqA x y
+  a0 : A
+  l0' : list A
+  H0 : eqA a0 a'
+  H1 : forall y z : A, eqA x y -> eqA_dec (a0, b0) = eqA y z
+  ============================
+  eqA a a'
+    (forall x y : set, eqA x y == eqA x z)
+      (forall a y0 : set, eqA x y0 -> eqA x y0))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+ 

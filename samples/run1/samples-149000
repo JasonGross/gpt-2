@@ -1,0 +1,97 @@
+======== SAMPLE 1 ========
+ x a)
+
+
+Debug: Going to execute:
+subst y
+
+
+TcDebug (1) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H4 : Ok l1
+  H9 : Ok r1
+  H10 : lt_tree x1 l1
+  H11 : gt_tree x1 r1
+  H : X.lt x1 x2
+  H1 : forall a : elt, InT a (Node c1 Leaf x1 r1) -> InT a r2
+  H2 : forall a : elt, InT a l1 -> InT a (Node c2 l2 x2 r2)
+  a : elt
+  H12 : InT a r1
+  ============================
+   (InT a r2)
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:?X1
+  |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+| id:_ <-> _ |- _ => elim id; do 2 intro; clear id
+| id:~ _ |- _ => red in id
+| id:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+| id0:?X1 -> ?X2, id1:?X1 |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+| id:?X1 -> ?X2
+  |- _ =>
+      <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+       [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+| id:?X1 <-> ?X2 -> ?X3
+  |- _ =>
+      assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+       (do 2 intro; apply id; split; assumption); clear id
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+| |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+| |- _ <-> _ => split
+| |- ~ _ => red
+end
+
+
+TcDebug (1) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H4 : Ok l1
+  H9 : Ok r1
+  H10 : lt_tree x1 l1
+  H11 : gt_tree x1 r1
+  H : X.lt x1 x2
+  H1 : forall a : elt, InT a (Node c1 Leaf x1 r1) -> InT a r2
+  H2 : forall a : elt, InT a l1 -> InT a (Node c2 l2 x2 r2)
+  a : elt
+  H12 : InT a r1
+  ============================
+   (InT a r2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+

@@ -1,0 +1,125 @@
+======== SAMPLE 1 ========
+   [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+| id:?X1 <-> ?X2 -> ?X3
+  |- _ =>
+      assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+       (do 2 intro; apply id; split; assumption); clear id
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+| |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+| |- _ <-> _ => split
+| |- ~ _ => red
+end
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  a : E.t
+  H : In a s' -> In a s
+  H0 : In a s \/ In a s''
+  H1 : In a s' -> E.eq x a \/ In a s
+  H2 : In a s
+  H5 : true = true
+  ============================
+   (false = true && true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  a : E.t
+  H : In a s' -> In a s
+  H0 : In a s \/ In a s''
+  H1 : In a s' -> E.eq x a \/ In a s
+  H2 : In a s
+  H5 : true = true
+  ============================
+   (false = true && true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  a : E.t
+  H : In a s' -> In a s
+  H0 : In a s \/ In a s''
+  H1 : In a s' -> E.eq x a \/ In a s
+  H2 : In a s
+  H5 : true = true
+  ============================
+   (false = true && true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  a : E.t
+  H : In a s' -> In a s
+  H0 : In a s \/ In a s''
+  H1 : In a s' -> E.eq x a \/ In a s
+  H2 : In a s
+  H5 : true = true
+  ============================
+   (false = true && true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  a : E.t
+  H : In a s' -> In a s
+  H0 : In a s \/ In a s''
+  H1 : In a s' -> E.eq x a \/ In a s
+  H2 : In a s
+  H5 : true = true
+  ============================
+   (false = true && true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal

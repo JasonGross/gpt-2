@@ -1,0 +1,153 @@
+======== SAMPLE 1 ========
+
+  x : A
+  y : A
+  l : list A
+  H : In y l
+  a : In y l
+  H2 : In y l -> In y (remove x l)
+  H4 : In y (remove x l)
+  H3 : In y m
+  H1 : In y m
+  ============================
+   (In y m)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  m : list A
+  H : In y (remove x l)
+  a : In y l
+  H2 : In y l -> In y (remove x l)
+  H4 : In y (remove x l)
+  H3 : In y m
+  H1 : In y m
+  ============================
+   (In y m)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  m : list A
+  H : In y (remove x l)
+  a : In y l
+  H2 : In y l -> In y (remove x l)
+  H4 : In y (remove x l)
+  H3 : In y m
+  H1 : In y m
+  ============================
+   (In y m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  m : list A
+  H : In y (remove x l)
+  a : In y l
+  H2 : In y l -> In y (remove x l)
+  H4 : In y (remove x l)
+  H3 : In y m
+  H1 : In y m
+  ============================
+   (In y m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  m : list A
+  H : In y (remove x l)
+  a : In y l
+  H2 : In y l -> In y (remove x l)
+  H4 : In y (remove x l)
+  H3 : In y m
+  H1 : In y m
+  ============================
+   (In y m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  m : list A
+  H : In y (remove x l)
+  a : In y l
+  H2 : In y l -> In y (remove x l)
+  H4 : In y (remove x l)
+  H3 : In y m
+  H1 : In y m
+  ============================
+   (In y m)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  m : list A
+  H : In y (remove x l)
+  a : In y l
+  H2 : In y l -> In y (remove x l)
+  H4 : In y (remove x l)
+  H3 : In y m
+  H1 : In y m
+  ============================
+   (In y m)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  m : list A
+  H : In y (remove x l)
+  a : In y l
+  H2 : In y l -> In y (remove x l)
+  H4 : In y (remove x l)
+  H3 : In y m
+  H

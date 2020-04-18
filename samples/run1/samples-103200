@@ -1,0 +1,111 @@
+======== SAMPLE 1 ========
+eq x0 : X.t
+  x4 : elt
+  H2 : MapsTo x3 x4
+  ============================
+   (MapsTo x3 x4)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  x0 : X.t
+  l : t elt
+  o : option elt
+  r : t elt
+  e1 : split x r = << rl, o, rr >>
+  y0 : X.t
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H : forall x y : key, In y rl <-> In y r /\ X.lt y x
+  H4 : forall y : key, In y rr <-> In y r /\ X.lt x y
+  H6 : bst l
+  H7 : bst r
+  H8 : lt_tree y l
+  H9 : gt_tree y r
+  y0 : X.t
+  H0 : bst r
+  H1 : bst r
+  H2 : lt_tree y r
+  H3 : gt_tree y r
+  H : forall x y : key, In y rl <-> In y r /\ X.lt y x
+  ============================
+   (MapsTo x3 x4)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  x0 : X.t
+  l : t elt
+  o : option elt
+  r : t elt
+  e1 : split x r = << rl, o, rr >>
+  y0 : X.t
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H : forall x y : key, In y rl <-> In y r /\ X.lt y x
+  H4 : forall y : key, In y rr <-> In y r /\ X.lt x y
+  H6 : bst l
+  H7 : bst r
+  H8 : lt_tree y l
+  H9 : gt_tree y r
+  y0 : X.t
+  H0 : bst r
+  H1 : bst r
+  H2 : lt_tree y r
+  H3 : gt_tree y r
+  H : forall x y : key, In y rl <-> In y r /\ X.lt y x
+  ============================
+   (MapsTo x3 x4)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  x0 : X.t
+  l : t elt
+  o : option elt
+  r : t elt
+  e1 : split x r = << rl, o, rr >>
+  y0 : X.t
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H : forall x y : key, In y rl <-> In y r /\ X.lt y x
+  H4 : forall y : key, In y rr <-> In y r /\ X.lt x y
+  H6 : bst l
+  H7 : bst r
+  H8 : lt_tree y l
+  H9 : gt_tree y r
+  y0 : X.t
+  H0 : bst r
+  H1 : bst r
+  H2 : lt_tree y r
+  H3 : gt_tree y r
+  H : forall x y : key, In y rl <-> In y r /\ X.lt y x
+

@@ -1,0 +1,58 @@
+======== SAMPLE 1 ========
+ => <tauto_plugin::is_empty@0>
+
+
+TcDebug (6) > 
+Debug: Level 6: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f0 : key -> option elt -> option elt' -> option elt''
+  f : key -> elt -> option elt' -> option elt''
+  mapl : t elt -> t elt''
+  mapr : t elt' -> t elt''
+  f0_f : forall (x : key) (d : elt) (o : option elt'),
+          f x d o = f0 x (Some d) o
+  mapl_bst : forall m : t elt, bst m -> bst (mapl m)
+  mapr_bst : forall m' : t elt', bst m' -> bst (mapr m')
+  mapl_f0 : forall (x : X.t) (m : t elt),
+         bst m ->
+          forall x : elt, bst m' -> f0 x (Some x) m
+  mapr_f0 : forall (x m : t elt),
+         bst (mapr m') ->
+          forall x m' : t elt', bst m' -> mapr m'
+  mapr_f0_min (x, x) :
+          bst (mapr (mapl m) \/ mapr m')
+  mapl_f0 : forall (x : X.t) (m' : t elt'),
+         bst (mapr (mapm') \/ mapm'')
+  mapr_compat : forall (x x' : X.t) (m' : t elt'),
+         bst m ->
+          forall x' : X.t,
+           forall x'' : X.t,
+            forall x' : X.t',
+           
+  x2 = f x2 (Some x) m' -> x2 = f None x2 m' ->
+           (Some x m') ->
+               In x2 (mapl m') -> In x2 (mapr m')
+  mapr_compat : forall (x2 x1 : X.t) (m1 : t elt1),
+          bst m1 ->
+          forall x1' : X.t,
+            forall x2': X.t,
+               In x1' : X.t, In x2 (mapr m1')
+  mapl_f0 : forall (x1 : X.t) (m1 : t elt1),
+          bst m1 ->
+          forall x1' : X.t,
+            forall x2': X.t, In x1' : X.t
+  mapr_f0 : forall (x1 m1 : t elt1),
+          bst m1 ->
+          forall x2' : X.t,
+            bst m2 ->
+           forall x'2': X.t, In x1' : X.t
+  mapl_bst : forall m1 : t elt1, bst m1 -> bst (mapr (mapm1')
+  mapl_f0 : forall (x1 : X.t) (m1 : t elt1),
+        

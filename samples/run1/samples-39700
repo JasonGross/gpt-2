@@ -1,0 +1,103 @@
+======== SAMPLE 1 ========
+
+  H : E.eq x y
+  H2 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  e : E.eq x y
+  H0 : In y s
+  H1 : In y (add x s)
+  H3 : False
+  H4 : E.eq x y -> False
+  H5 : E.eq x y \/ False -> In y s
+  H6 : nil
+  H7 : E.eq x y \/ False -> In y s
+  H4 : E.eq x y \/ False -> In y s
+  H5 : E.eq x y \/ False -> In y s
+  H6 : nil
+  H7 : E.eq x y \/ False -> In y s
+  H4 : E.eq x y \/ False -> In y s
+  H5 : E.eq x y \/ False -> In y s
+  H6 : nil
+  H7 : E.eq x y \/ False -> In y s
+  H4 : E.eq x y \/ False -> In y s
+  H5 : E.eq x y \/ False -> In y s
+  H6 : nil
+  H7 : E.eq x y \/ False -> In y s
+  H4 : E.eq x y \/ False -> In y s
+  H5 : E.eq x y \/ False -> In y s
+  H6 : nil
+  H7 : E.eq x y \/ False -> In y s
+  H4 : E.eq x y \/ False -> In y s
+  H5 : E.eq x y \/ False -> In y s
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  e : E.eq x y
+  H0 : In y s
+  H1 : In y (add x s)
+  H3 : False
+  H4 : E.eq x y -> False
+  H5 : E.eq x y \/ False -> In y s
+  H6 : nil
+  H7 : E.eq x y \/ False -> In y s
+  H4 : E.eq x y \/ False -> In y s
+  H5 : E.eq x y \/ False -> In y s
+  H6 : nil
+  H7 : E.eq x y \/ False -> In y s
+  H4 : E.eq x y \/ False -> In y s
+  H5 : E.eq x y \/ False -> In y s
+  H6 : nil
+  H7 : E.eq x y \/ False -> In y s
+  H4 : E.eq x y \/ False -> In y s
+  H5 : E.eq x y \/ False -> In y s
+  H6 : nil
+  H7 : E.eq x y \/ False -> In y s
+  H4 : E.eq x y \/ False -> In y s
+  H5 : E.eq x y \/ False -> In y s
+  H6 : nil
+  H7 : E.eq x y \/ False -> In y s
+  H4 : E.eq x y \/ False -> In y s
+  H5 : E.eq x y \/ False -> In y s
+  H6 : nil
+  H7 : E.eq x y \/ False -> In y s
+  H4 : E.eq x y \/ False -> In y s
+  H5 : E.eq x y \/ False -> In y s
+  H6 : nil
+  H7 : E.eq x y \/ False -> In y s
+  H4 : E.eq x y \/ False -> In y s
+  H5 : E.eq x y \/ False -> In y s

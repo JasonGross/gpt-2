@@ -1,0 +1,107 @@
+======== SAMPLE 1 ========
+ (InT y l \/ InT y r))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  rll : tree
+  rlx : X.t
+  rlr : tree
+  e : (height (Node _x (Node _x0 rll rlx rlr) rx rr) + 2 <? height l) = false
+  e2 : (height (Node _x0 rll rlx rlr) <=? height rr) = false
+  y : elt
+  ============================
+   (X.eq y x \/ InT y l \/ InT y (Node _x0 rll rlx rlr) \/ InT y rlr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  rll : tree
+  rlx : X.t
+  rlr : tree
+  e : (height (Node _x (Node _x0 rll rlx rlr) rx rr) + 2 <? height l) = false
+  e2 : (height (Node _x0 rll rlx rlr) <=? height rr) = false
+  y : elt
+  ============================
+   (X.eq y x \/ InT y l \/ InT y (Node _x (Node _x0 rll rlx rlr) rx rr) \/ InT y rlr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  rll : tree
+  rlx : X.t
+  rlr : tree
+  e : (height (Node _x (Node _x0 rll rlx rlr) rx rr) + 2 <? height l) = false
+  e2 : (height (Node _x0 rll rlx rlr) <=? height rr) = false
+  y : elt
+  ============================
+   (X.eq y x \/ InT y l \/ InT y (Node _x (Node _x0 rll rlx rlr) rx rr) \/ InT y rlr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  rll : tree
+  rlx : X.t
+  rlr : tree
+  e : (height (Node _x (Node _x0 rll rlx rlr) rx rr) + 2 <? height l) = false
+  e2 : (height (Node _x0 rll rlx rlr) <=? height rr) = false
+  y : elt
+  ============================
+   (X.eq y x \/ InT y l \/ InT y (Node _x (Node _x0 rll rlx rlr) rx rr) \/ InT y rlr)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t

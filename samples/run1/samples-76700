@@ -1,0 +1,84 @@
+======== SAMPLE 1 ========
+)    (IDphi (R:=Z)) Z.of_N Z.pow
+      (projT1 (existT (fun morph : A -> B => (R:=Z -> R') morph morph) x 1 + 2)
+          (R:=Z)) Z.of_N
+           (projT1 (existT (fun morph : A -> B => (R:=Z -> R') morph morph) x 1 + 2)
+           (R:=Z)) Z.of_N
+            (projT1 (existT (fun morph : A -> B => (R:=Z -> R') morph morph) y X2) x 1 + 2)
+           (R:=Z)) Z.of_N (projT1 (existT (fun morph : A -> B => (R:=Z -> R') morph morph) y X2)
+           (B:=Q)) Z.of_N (projT1 (existT (fun morph : A -> B => (R:=Z -> R') morph morph) z X2)
+           (B:=Q)) Z.of_N (projT1 (existT (fun morph : A -> B => (R:=Z -> R') morph morph) z X2)
+         end
+  ============================
+   ((projT1 (existT (fun morph : A -> B => (R:=Z -> R') morph morph) x 1 + 2) -
+    (projT1 (existT (fun morph : A -> B => (R:=Z -> R') morph morph) z X2) +
+     (projT1 (existT (fun morph : A -> B => (R:=Z -> R') morph morph) y X2) x 1 + 2)
+
+
+Debug: Going to execute:
+revert H
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  B : Type
+  R : A -> A -> Prop
+  H : B -> B -> Prop
+  x1 : A -> B
+  x2 : A -> B
+  y1 : A -> B
+  X : (R ==> iff x1 x2)%poly
+  x3 : A -> B
+  x4 : A -> B
+  y1 : A -> B
+  X0 : (R ==> iff y1 x3)%poly
+  ============================
+   ((projT1 (existT (fun morph : A -> B => (R:=Z -> R') morph morph) x1 + 2)%poly)
+
+
+Debug: Going to execute:
+now rewrite <-_
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  B : Type
+  R : A -> A -> Prop
+  H : B -> B -> Prop
+  x1 : A -> B
+  x2 : A -> B
+  y1 : A -> B
+  X : (R ==> iff x1 x2)%poly
+  x3 : A -> B
+  x4 : A -> B
+  y1 : A -> B
+  X0 : (R ==> iff y1 x3)%poly
+  ============================
+   ((projT1 (existT (fun morph : A -> B => (R:=Z -> R') morph morph) x1 + 2)%poly)
+
+
+Debug: Going to execute:
+revert H
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  B : Type
+  R : A -> A -> Prop
+  H : B -> B -> Prop
+  x1 : A -> B
+  x2 : A -> B
+  y1 : A -> B
+  X : (R ==> iff x1 x2)%poly
+  x3 : A -> B
+  x4 : A -> B
+  y1 : A -> B
+  X0 : (R ==> iff y1 x3)%poly
+  ============================
+   ((projT1 (existT (fun morph : A -> B => (R:=Z -> R') morph

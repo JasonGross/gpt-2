@@ -1,0 +1,170 @@
+======== SAMPLE 1 ========
+
+   (Some c = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; (solve
+ [ left; t_tauto_intuit | right; t_tauto_intuit ])
+
+
+TcDebug (1) > 
+Goal:
+  
+  c : Info.t
+  l : tree
+  o : option Term
+  r : tree
+  H : ~ c -> False
+  H0 : make_conj (eval_clause env) l
+  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  c : Info.t
+  l : tree
+  o : option Term
+  r : tree
+  H : ~ c -> False
+  H0 : make_conj (eval_clause env) l
+  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  c : Info.t
+  l : tree
+  o : option Term
+  r : tree
+  H : ~ c -> False
+  H0 : make_conj (eval_clause env) l
+  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  c : Info.t
+  l : tree
+  o : option Term
+  r : tree
+  H : ~ c -> False
+  H0 : make_conj (eval_clause env) l
+  H1 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  c : Info.t
+  l : tree
+  o : option Term
+  r : tree
+  H : ~ c -> False
+  H0 : make_conj (eval_clause env) l
+  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  c : Info.t
+  l : tree
+  o : option Term
+  r : tree
+  H : ~ c -> False
+  H0 : make_conj (eval_clause env) l
+  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  c : Info.t
+  l : tree
+  o : option Term
+  r : tree
+  H : ~ c -> False
+  H0 : make_conj (eval_clause env) l
+  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  c : Info.t
+  l : tree
+  o : option Term
+  r : tree
+  H : ~ c -> False
+  H0 : make_conj (eval_clause env) l
+  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  c : Info.t
+  l : tree
+  o : option Term
+  r : tree
+  H : ~ c -> False
+  H0 : make_conj (eval_clause env) l
+  H

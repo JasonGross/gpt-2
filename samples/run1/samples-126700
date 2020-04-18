@@ -1,0 +1,95 @@
+======== SAMPLE 1 ========
+l rx rr) + 2 <? height l) = false
+  e2 : (height rl <=? height rr) = true
+  y : elt
+  H : InT y rr
+  ============================
+   (MapsTo y r
+      (Node l x d (Node (Node rll rlx rld rlr _x3) rx rd rr _x1)
+         (max (height l) (height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1)) + 1)))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) + 2
+  _x2 : height rr < height (Node rll rlx rld rlr _x3)
+  y : elt
+  H : InT y rr
+  ============================
+   (MapsTo y r
+      (Node l x d (Node (Node rll rlx rld rlr _x3) rx rd rr _x1)
+         (max (height l) (height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1)) + 1)))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) + 2
+  _x2 : height rr < height (Node rll rlx rld rlr _x3)
+  y : elt
+  H : InT y rr
+  ============================
+   (MapsTo y r
+      (Node l x d (Node (Node rll rlx rld rlr _x3) rx rd rr _x1)
+         (max (height l) (height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1)) + 1)))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _

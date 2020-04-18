@@ -1,0 +1,98 @@
+======== SAMPLE 1 ========
+:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  F : elt -> bool
+  Comp : Proper (E.eq ==> Logic.eq) f
+  Comp' : Proper (E.eq ==> Logic.eq) (fun x : E.t => negb (f x))
+  s : t
+  s' : t
+  x : elt
+  H : f x = False
+  a : elt
+  H0 : (In x s /\ f a = true) \/ In x s' /\ f a = true
+  ============================
+   ((In x s' \/ In x (a :: s')) ->
+    (In x s /\ f a = true \/ In x s') /\ f a = true))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  F : elt -> bool
+  Comp : Proper (E.eq ==> Logic.eq) f
+  Comp' : Proper (E.eq ==> Logic.eq) (fun x : E.t => negb (f x))
+  s : t
+  s' : t
+  x : elt
+  H : f x = False
+  a : elt
+  H0 : (In x s /\ f a = true) \/ In x s' /\ f a = true
+  ============================
+   ((In x s' \/ In x (a :: s')) ->
+    (In x s /\ f a = true \/ In x s' /\ f a = true) ->
+    (E.eq x a \/ In x s /\ f a = true) \/
+    In x s /\ f a = true \/ In x s' /\ f a = true))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  F : elt -> bool
+  Comp : Proper (E.eq ==> Logic.eq) f
+  Comp' : Proper (E.eq ==> Logic.eq) (fun x : E.t => negb (f x))
+  s : t
+  s' : t
+  x : elt
+  H : f x = False
+  a : elt
+  H0 : (In x s /\ f a = true) \/ In x s' /\ f a = true
+  ============================
+   ((In x s' \/ In x (a :: s')) ->
+    (In x s /\ f a = true \/ In x s' /\ f a = true) ->
+    (E.eq x a \/ In x s /\ f a = true) \/
+    In x s /\ f a = true \/ In x s' /\ f a = true))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  F : elt -> bool
+  Comp : Proper (E.eq ==> Logic.eq) f
+  Comp' : Proper (E.eq ==> Logic.eq) (fun x : E.t => negb (f x))
+  s : t
+  s' : t
+  x : elt
+  H : f x = False
+  a : elt
+  H0 : (In x s /\ f a = true) \/ In x s' /\ f a = true
+  ============================
+   ((In x s' \/ In x (a :: s')) ->
+    (In x s /\ f a = true \/ In x s' /\ f a = true) ->
+    (E.eq x a \/ In x s /\ f a = true) \/
+    In x s /\ f a = true \/ In x s' /\ f a = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1

@@ -1,0 +1,96 @@
+======== SAMPLE 1 ========
+ false 
+1 : Type
+  k3 : t elt
+  H : NoDupk3 (eltk3_1 (id1 (id1 k)) k)
+  P : positive
+  H1 : NoDupk3 k1
+  H2 : (k == (k * 1)) == nil
+  fp_prop : forall (y : key) (f : key) (n : elt) (fp : positive)
+  ============================
+   (k == (x * 1) * x * 1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 X2 id1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  k3 : t elt
+  H : NoDupk3 (eltk3_1 (id1 (id1 k) k)
+  P : positive
+  H1 : NoDupk3 k1
+  H2 : (k == (k * 1) * x * 1)
+  fp_prop : forall (y : key) (f : key) (n : elt) (fp : positive)
+  ============================
+   (k == (x * 1) * x * 1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0> $1
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  k3 : t elt
+  H : NoDupk3 (eltk3_1 (id1 (id1 k) k)
+  P : positive
+  H1 : NoDupk3 k1
+  H2 : (k == (k * x) * x * x
+  fp_prop : forall (y : key) (f : key) (n : elt) (fp : positive)
+  ============================
+   (k == (x * 1) * x * x * x
+    k == (x * 1) * x * x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  k3 : t elt
+  H : NoDupk3 (eltk3_1 (id1 (id1 k) k)
+  P : positive
+  H1 : NoDupk3 k1
+  H2 : (k == (k * x) * x * x
+  fp_prop : forall (y : key) (f : key) (n : elt) (fp : positive)
+  ============================
+   (k == ((x * 1) * x * x)
+    k == (x * 1) * x * x
+        (k * 1)
+  P = fp (k * x) == fp
+  H : NoDupk3 (eltk3_1 (id1 (id1 k) (k * (x * 1) * x * x * y + 1) = nil
+  H0 : k == nil = nil -> k == (x * n) * n (x * y)))
+  H1 : NoDupk3 k1
+  H2 : fp_compat h = nil -> nil
+  ============================
+   (k == (x * n) * n * z
+     k == (x * n * z \/
+     k == nil
+     k * n == (x * n * z (x * 1)) / 2)
+  C : Type
+  C : Type
+  r : t elt
+  H1 : NoDupk3 (eltk3_1 (id1 (id1 k) k)
+  P : positive
+  H1 : NoDupk3 k1
+  H2 : (k == (k * x) * x * x
+      fp_prop : forall (y : key) (f : key) (n : elt) (fp : positive)
+  ============================
+   (k == (x * n) * n * z
+      k == (x * n) * n (x * 2)))
+  C : Type
+  C : Type

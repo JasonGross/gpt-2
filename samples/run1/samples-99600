@@ -1,0 +1,63 @@
+======== SAMPLE 1 ========
+===
+   (p + p <= n)
+
+
+Debug:
+Going to execute:
+fun C Cst CstPow rO rI radd rmul rsub ropp rdiv rinv rpow t fv =>
+  let rec mkP t :=
+   let f :=
+    match Cst t with
+    | NotConstant =>
+        match t with
+        | rO => fun _ => Ring_polynom.PEO
+        | rI => fun _ => Ring_polynom.PEI
+        | radd ?t1 ?t2 =>
+            fun _ =>
+              let e1 := mkP t1 in
+              let e2 := mkP t2 in
+              Ring_polynom.PEadd e1 e2
+        | rmul ?t1 ?t2 =>
+            fun _ =>
+              let e1 := mkP t1 in
+              let e2 := mkP t2 in
+              Ring_polynom.PEmul e1 e2
+        | rsub ?t1 ?t2 =>
+            fun _ =>
+              let e1 := mkP t1 in
+              let e2 := mkP t2 in
+              Ring_polynom.PEsub e1 e2
+        | ropp ?t1 =>
+            fun _ => let e1 := mkP t1 in
+                     Ring_polynom.PEopp e1
+        | rpow ?t1 ?n =>
+            match CstPow n with
+            | NotConstant =>
+                fun _ => let p := Find_at t fv in
+                         Ring_polynom.PEX C p
+            | ?c => fun _ => let e1 := mkP t1 in
+                             Ring_polynom.PEpow e1 c
+            end
+        | _ => fun _ => let p := Find_at t fv in
+                         Ring_polynom.PEX C p
+        end
+    | ?c => fun _ => Ring_polynom.PEc c
+    end
+  in
+  f ltac:(())
+
+
+TcDebug (15) > 
+Goal:
+  
+  xn : nat -> Q
+  p : positive
+  n : positive
+  xcau : ((2 # n) + (1 # p) + - (1 # p) < (1 # p) + - (1 # p))%Q
+  nmaj : ((2 # n) + (1 # p) <
+          Qabs (xn (Pos.to_nat (Pos.max n (Pos.to_nat p))))%Q
+  e : (Pos.to_nat (Pos.max n (Pos.to_nat p)))%Q
+  goal := False : Prop
+  list_hyp := nil : list (Ring_polynom.PExpr Q * Ring_polynom.PExpr Q)
+  list_hyp_norm := nil : list (Q

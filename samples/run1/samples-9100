@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+ r1
+  ============================
+   (forall y : Q,
+    mem2mem r1 y = [rec rh r2] * of_lu (rec lr)
+          (height lr r1) +
+           mem2mem q2 rh r2 ])
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  b : Q
+  x1 : ZArithProof
+  q1 : ZArithProof
+  LR : 0 <= height (b) + 2
+  H0 : 0 <= ZArithProof
+  H1 : False
+  H2 : 0 <= QArithProof
+  H3 : False
+  c : ZArithProof
+  H4 : 0 <= QArithProof
+  H5 : 0 <= QArithProof
+  H6 : QArithProof
+  H7 : QArithProof
+  H8 : 0 <= QArithProof
+  H9 : False
+  H : 0 <= QArithProof
+  H10 : QArithProof
+  H11 : QArithProof
+  H13 : In x1
+  H12 : true = true
+  H0 : 0 <= ZArithProof
+  H1 : False
+  H2 : 0 <= QArithProof
+  H3 : False
+  c : ZArithProof
+  H4 : 0 <= QArithProof
+  H5 : 0 <= QArithProof
+  H6 : QArithProof
+  H7 : QArithProof
+  H8 : 0 <= QArithProof
+  H9 : False
+  H : 0 <= QArithProof
+  H10 : QArithProof
+  H11 : QArithProof
+  H13 : In x1
+  H12 : true = true
+  H0 : 0 <= ZArithProof
+  H1 : False
+  H2 : 0 <= QArithProof
+  H3 : False
+  c : ZArithProof
+  H4 : 0 <= QArithProof
+  H5 : 0 <= QArithProof
+  H6 : QArithProof
+  H7 : QArithProof
+  H8 : 0 <= QArithProof
+  H9 : False
+  H : 0 <= QArithProof
+  H10 : QArithProof
+  H11 : QArithProof
+  H13 : In x1
+  H12 : true = true
+  H0 : 0 <= ZArithProof
+  H1 : False
+  H2 : 0 <= QArithProof
+  H3 : False
+  c : ZArithProof
+  H4 : 0 <= QArithProof
+  H5 : 0 <= QArithProof
+  H6 : QArithProof
+  H7 : QArithProof
+  H8 : 0 <= QArithProof
+  H9 : False
+  H : 0 <= QArithProof
+  H10 : QArithProof
+  H11 : QArithProof
+  H13 : In x1
+  H12 : true = true
+  H0 : 0 <= ZArithProof
+  H1 : False
+  H2 : 0 <= QArithProof
+  H3 : False
+  c : ZArithProof
+  H4 : 0 <= QArithProof
+  H5 : 0 <= QArithProof
+  H6 : QArithProof
+  H7 : QArithProof
+  H8 : 0 <= QArithProof
+  H9 : False
+  H : 0 <= QArithProof
+  H10 : QArithProof
+  H11 : QArithProof
+  H13 : In x1
+  H12 : true = true
+  H0 : 0 <= ZArithProof
+  H1 : False
+  H2 : 0 <= QArithProof
+  H3 : False
+  c : ZArithProof
+  H4 : 0 <= QArithProof
+  H5 : 0 <= QArithProof
+  H6 : QArithProof
+  H7 : QArithProof
+  H8 : 0 <= QArithProof
+  H9 : False
+  H : 0 <= QArithProof
+  H10 : QArithProof
+  H11 : QArithProof
+  H13 : In x1
+  H

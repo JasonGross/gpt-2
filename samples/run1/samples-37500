@@ -1,0 +1,116 @@
+======== SAMPLE 1 ========
+1 = p
+  ============================
+   (p < q \/ p < q)
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+| x => cardinal (reqx x)
+| _ => add (reqx x)
+| _ => mul x (reqx x)
+| y => cardinal (reqrx y)
+end
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+| cardinal (reqx x)
+| _ => add (reqx x)
+| _ => mul x (reqx x)
+| H => cardinal (reqx x)
+| H1 : max 2 req' x y = H1
+| H2 : max 2 req' x y = H2
+| H3 : max 2 req' x y = H3
+| H4 : max 2 req' x y = H4
+| X : cardinal (reqx x)
+| H5 : max 2 req' x y = x -> C -> req' x y
+| H6 : cardinal (reqx x)
+| H7 : min 2 req' x y = S (max p x)
+end
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Prop
+  x~0 : A <-> A \/ ~ x <> A
+ p : positive
+  H : true = true \/ ~ y <= x
+ f0 : A <-> A -> A
+  H1 : (EqDec A eq {~ 1 | x~0}~~ x) <->
+    Prop
+  ============================
+   (p < q \/ p < q)
+
+
+Debug: Going to execute:
+solve D.trivial with eq_true
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Prop
+  x~0 : A <-> A \/ ~ x <> A
+ p : positive
+  H : true = true \/ ~ y <= x
+ f0 : A <-> A -> A
+  H1 : (EqDec A eq {~ 1 | x~0}~ x) <->
+    Prop
+  ============================
+   (p < q \/ p < q)
+
+
+Debug: Going to execute:
+order_rewr x eqn
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Prop
+  x~0 : A <-> A \/ ~ x <> A
+ p : positive
+  H : true = true \/ ~ y <= x
+ f0 : A <-> A -> A
+  H1 : (EqDec A eq {~ 1 | x~0}~ x) <->
+    Prop
+  ============================
+   (p < q \/ p < q)
+
+
+Debug:
+Going to execute:
+fun x eqn =>
+  let rewr H t := generalize t; clear H; intro H in
+  match goal with
+  | H:x == _
+    |- _ => rewr H (eq_trans (x~0 x~0))
+  | H:_ == x
+    |- _ => rewr H (eq_lt (x~2~0 x~0))
+  | H:x ~= _
+    |- _ => rewr H (eq_le (x~0 x~0))
+  | H:_ ~= x
+    |- _ => rewr H (eq_le (x~1 x~0))
+  | H:x ~= _
+    |- _ => rewr H (eq_le (x~0 x~0))
+  | H:x ~= x
+    |- _ => idtac
+  | _ => fail 1
+  end
+  in
+  let rewr H t := generalize t; clear H; intro H in
+  match goal with
+  | H:x == _
+    |- _ => rewr H (eq_trans (x~0 x~0))
+  | H:_ == x
+    |- _ => rewr H (eq_lt (x~2~0 x~0))
+  | H:_ ~= x
+    |- _ => rewr H (eq_le (x~1 x~0))
+  | H:_ ~= x
+    |-

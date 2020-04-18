@@ -1,0 +1,98 @@
+======== SAMPLE 1 ========
+ <= n
+  m : t
+  m' : t
+  H : n <= n
+  k : t
+  H0 : m ~= 0
+  H1 : n == 0
+  ============================
+   (0 == [1] * 0 /\ 0 * 0 < 1 -> 0 * 0 * 0 < 1 -> 0 * 0 * 0 < 1)
+
+
+Debug: Going to execute:
+clear eqn
+
+
+TcDebug (17) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  m' : t
+  H : n <= n
+  n : t
+  m : t
+  m' : t
+  H : n <= n
+  k : t
+  H0 : m ~= 0
+  H1 : n == 0
+  ============================
+   (0 == [1] * 0 /\ 0 * 0 < 1 -> 0 * 0 * 0 < 1 -> 0 * 0 * 0 < 1)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (17) > 
+Debug: Level 16: evaluation returns
+<tactic closure>
+
+
+Debug: Level 11: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  m' : t
+  H : n <= n
+  m : t
+  m' : t
+  H0 : m ~= 0
+  H1 : n == 0
+  ============================
+   (0 == [1] * 0 /\ 0 * 0 < 1 -> 0 * 0 -> 1 * 0 < 1)
+
+
+Debug: Going to execute:
+match goal with
+| H:?x < ?x |- _ => exact (Private_OrderTac.Tac.lt_irrefl H)
+| H:?x ~= ?x |- _ => exact (H (Private_OrderTac.Tac.eq_refl x))
+| H:?x <= ?x |- _ => clear H; Private_OrderTac.Tac.order_loop
+| H:?x == ?y
+  |- _ =>
+      Private_OrderTac.Tac.order_eq x y H; Private_OrderTac.Tac.order_loop
+| H1:?x <= ?y, H2:?y <= ?x
+  |- _ =>
+      generalize (Private_OrderTac.Tac.le_antisym H1 H2); clear H1 H2; intro;
+       Private_OrderTac.Tac.order_loop
+| H1:?x <= ?y, H2:?x ~= ?y
+  |- _ =>
+      generalize (Private_OrderTac.Tac.le_neq_lt H1 H2); clear H1 H2; intro;
+       Private_OrderTac.Tac.order_loop
+| H1:?x <= ?y, H2:?y ~= ?x
+  |- _ =>
+      generalize
+       (Private_OrderTac.Tac.le_neq_lt H1 (Private_OrderTac.Tac.neq_sym H2));
+       clear H1 H2; intro; Private_OrderTac.Tac.order_loop
+| H1:?x < ?y, H2:?y < ?z
+  |- _ =>
+      match goal with
+      | H:x < z |- _ => fail 1
+      | _ =>
+          generalize (Private_OrderTac.Tac.lt_trans H1 H2); intro;
+           Private_OrderTac.Tac.order_loop
+      end
+| H1:?x <= ?y, H2:?y < ?z
+  |- _ =>
+      match goal with
+      | H:x < z |- _ => fail 1
+      | _ =>
+         

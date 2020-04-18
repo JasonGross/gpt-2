@@ -1,0 +1,60 @@
+======== SAMPLE 1 ========
+A fst r))))) ==
+                  (FEeval 0 1 Qplus Qmult Qminus Qopp Qdiv Qinv 
+                     (IDphi (R:=Q)) Z.of_N Qpower 
+                     (xn p
+                      :: yn p
+                          :: 1 # p :: xn (Pos.to_nat (Pos.max 4 k)) :: nil)
+                     (FEsub (FEX Q 3) (FEX Q 6)) ==
+                   FEeval 0 1 Qplus Qmult Qminus Qopp Qdiv Qinv 
+                    (IDphi (R:=Q)) Z.of_N Qpower
+                    (xn p
+                     :: yn p
+                        :: 1 # p :: xn (Pos.to_nat (Pos.max 4 k))
+                           :: 1 # p :: xn (Pos.to_nat (Pos.max 4 k))))%Q
+                     (FEadd (FEX Q 1)
+                       (FEopp (FEdiv (FEadd (FEX Q 3) Qcub (FEX Q 4) Qcub (FEX Q 2)) Qcquot)))%Q
+  ============================
+   (xn (2 * (3 * k))%Q
+
+
+Debug: Going to execute:
+fcons x fnil
+
+
+TcDebug (15) > 
+Goal:
+  
+  ex1 : forall x y z : Q, (x + y) * z == x * z + y * z
+  ex2 : forall x y : Q, x + y == y + x
+  ex3 : forall x y z : Q, x + y + z == x + (y + z)
+  ex4 : inject_Z E.eq x y
+  ex5 : inject_Z E.eq x y
+  ex6 : In x m1
+  ex7 : In x m2
+  ex8 : In x m3
+  ex10 : (true -> False) /\ In x m2 -> False
+  ex11 : (false -> False) /\ In x m3 -> False
+  ex12 : (In x m1 /\ In x m2) -> False
+  ex13 : (true -> False) /\ In x m3 -> False
+  ex14 : In x m1
+  ex15 : In x m1
+  ex16 : In x m2
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : BinNums.N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  T : Type
+  env : PolEnv
+  p : PolC
+  o : Op1
+  l : list NFormula
+  tg : T
+  F := fun (x : NFormula) (acc : list (list (NFormula * T))) =>
+       if check_inconsistent x then acc else ((x, tg) :: nil) :: acc
+    : NFormula -> list (list (NFormula * T)) -> list (list (NFormula * T))
+  G := fun x : NFormula => eval_nformula env x -> False : NFormula ->

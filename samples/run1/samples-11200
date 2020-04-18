@@ -1,0 +1,74 @@
+======== SAMPLE 1 ========
+      (R x s)
+  H0 : forall p q : R, PQ * p == n -> r ^ p == R ^ q
+  H1 : p == q
+  H2 : r < q
+  ============================
+   (PQ * p >> p == Q)
+
+
+Debug: Going to execute:
+fun Cst CstPow rf t fv =>
+  let cmp := TFV t fv in
+   match cmp with
+   | y': X.t
+    |- _ =>
+         fun _ => let e1 := mkP t1 in
+           let e2 := mkP t2 in
+           let f := fun _ => let e1 := mkP t1 in
+               (f x e1) (e1 e2)
+   | _ => clear cmp
+   end
+
+
+TcDebug (7) > 
+Debug: Evaluated term: rr
+
+Debug: Evaluated term: rr
+
+Debug: Evaluated term: rr
+
+Goal:
+    xn : nat  x0 : positive  yn : nat  x1 : positive  y : nat  t0 : positive  H : cmp m * y  H0 : m < xn m  H1 : cmp m < y  H0 : m == xn m
+  ============================
+   (q == rr)
+
+
+Debug:
+Going to execute:
+intros fv_comm;
+ (let prh := proofHyp_tac lH in
+  let prh := proofHyp_tac lH in
+  let prh := proofHyp_tac lH
+ in
+  let fv := FV_hypo_tac p fv lH;
+  let fv := FV_hypo_tac r1 fv lH in
+   let fv := FV_hypo_tac r2 fv lH in
+  let prh := proofHyp_tac lH in
+  let prh := proofHyp_tac lH
+in
+  (let prh := proofHyp_tac lH in
+  let prh := proofHyp_tac lH in
+  let fv := FV_tac lFV lH fv in
+  let fv := FV_tac r1 fv lH in
+  let prh := proofHyp_tac lH in
+  let fv := FV_tac _H prh in
+  let p := Find_at t fv in
+        (if p then None else (ff x p))
+         (let prh := proofHyp_tac lH in
+           let prh := ProofHyp_tac lH in
+           let prh := ProofHyp_tac r1 fv in
+           ((let prh := proofHyp_tac lH in
+            let prh := proofHyp_tac r1 fv in
+             fail "trivial"
+           then
+            change_no_check t1 r1 in
+             (let prh := ProofHyp_tac lH in
+              let prh := ProofHyp_tac r1 fv in
+              let ex 1 := mkP t1 in
+              let ex 2 := mkP t2 in
+              let ex 3 := mkP t3 in
+                clear ex r1, ex r2
+                ex r3 -> ex r1
+                
+                  (let p :=

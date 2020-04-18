@@ -1,0 +1,59 @@
+======== SAMPLE 1 ========
+   | None => None
+| _ : O.t
+| _x : O.n
+| _x0 : O.t
+| _x1 : O.n
+| _x2 : O.o
+| _x3 : O.o
+| _x4 : O.o
+| _x5 : O.o
+| _x6 : O.o
+| _x7 : O.o
+| _xcrl : forall x0 y0 : O.t,
+         InT y0 (Node _xcrl x0 y0) ->
+         InT y0 (Node _xcrl x0 y0) -> False
+         InA eqke (x, y0) (Node _xcrl x0 y0)
+| _xcrl : N.o
+| _xcrl0 : N.o
+| _xcrl1 : N.o
+| _eqke : (X.eq : Type X -> O.lt x1 x2) -> option elt {append x0 x1}
+| elt : Type X -> O.lt x1 x2
+| env : Env X
+| env' : Env X
+| is_conj : (E.eq : A -> Prop) -> (E.eq : Equivalence -> Prop)
+           InSome (E.eq x e1) \/ InSome (E.eq x e2) <-> (E.eq x e1) /\ InSome (E.eq x e2)
+| bad : C -> A
+| env' : Env X
+| is_conj' : (E.cont : A -> Prop) -> (E.cont : Equivalence -> Prop)
+           InSome (E.cont x e1) \/ InSome (E.cont x e2) <-> (E.cont x e1) /\ InSome (E.cont x e2)
+| env'1 : (E.eq : A -> Prop) -> Prop = E.eq x1 \/ InSome (E.eq x e1)
+| env'2 : (E.eq : A -> Prop) -> Prop = E.eq x2 \/ InSome (E.eq x e2)
+| env'3 : (E.eq : A -> Prop) -> Prop = E.eq x3 \/ InSome (E.eq x e1)
+| env'4 : (E.eq : A -> Prop) -> Prop = E.eq x4 \/ InSome (E.eq x e1)
+| env'5 : (E.eq : A -> Prop) -> Prop = E.eq x5 \/ InSome (E.eq x e2)
+| env'6 : (E.eq : A -> Prop) -> Prop = E.eq x6 \/ InSome (E.eq x e1)
+| env'7 : (E.eq : A -> Prop) -> Prop = E.eq x7 \/ InSome (E.eq x e2)
+| env'8 : (E.eq : A -> Prop) -> Prop = E.eq x8 \/ InSome (E.eq x e1)
+| env'9 : (E.eq : A -> Prop) -> Prop = E.eq x9 \/ InSome (E.eq x e1)
+| env'10 : (E.eq x e0)
+ | _ =>
+       change_no_check (Node _xcrl x0 y0) in
+               end
+end
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f0 : key -> option elt -> option elt' -> option elt''
+  f : key -> elt -> option elt' -> option elt''
+  mapl : t elt -> t elt''
+  mapr : t elt' -> t elt''
+  f0_f : forall (x : key) (d : elt) (o : option elt'),
+          f x d o = f0 x (Some d)
+  mapl_bst : forall m : t elt, bst m -> bst (mapl m)
+  mapr_bst : forall

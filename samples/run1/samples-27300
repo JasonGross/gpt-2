@@ -1,0 +1,102 @@
+======== SAMPLE 1 ========
+ (x : elt) (f : elt -> bool),
+       bst m ->
+       Sorted ltk acc ->
+       (forall (x : X.t) (f : elt -> bool),
+         InA X.eq x (elements_aux acc f) ->
+         Sorted ltk acc) ->
+        Sorted ltk (elements_aux acc f)
+  x0 : elt
+  y0 : elt
+  H0 : InA X.eq x0 acc
+  H4 : bst l
+  H5 : bst r
+  H6 : bst rl
+  H0 : InA X.eq x0 (x :: elements_aux acc r)
+  H : InA X.eq y0 (elements_aux acc r)
+  ============================
+   (InA X.eq y0 (Node l y d r _x) /\ ~ (X.eq y0 x \/ InA X.eq y0 d r) \/
+    X.eq y0 x -> False)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : t
+  y : X.t
+  H : InA X.eq y l
+  H4 : bst l
+  H5 : bst r
+  H6 : bst rl
+  H0 : InA X.eq x0 (x :: elements_aux acc r)
+  H : InA X.eq y0 (elements_aux acc r)
+  ============================
+   (InA X.eq y0 (Node l y d r _x) /\ ~ (X.eq y0 x \/ InA X.eq y0 d r) \/
+    X.eq y0 x -> False)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : t
+  y : X.t
+  H : InA X.eq y l
+  H4 : bst l
+  H5 : bst r
+  H6 : bst rl
+  H0 : InA X.eq x0 (x :: elements_aux acc r)
+  H : InA X.eq y0 (elements_aux acc r)
+  ============================
+   (InA X.eq y0 (Node l y d r _x) /\ ~ (X.eq y0 x \/ InA X.eq y0 d r) \/
+    X.eq y0 x -> False)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  l : t
+  y : X.t
+  H : InA X.eq y l
+  H4 : bst l
+  H5 : bst r
+  H6 : bst rl
+  H0 : InA X.eq x0 (x :: elements_aux acc r)
+  H : InA X.eq y0 (elements_aux acc r)
+  ============================
+   (InA X.eq y0 (Node l y d r _x) /\ ~ (X.eq y0 x \/ InA X.eq y0 d r) \/
+    X.eq y0 x -> False)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l : t
+  y : X.t
+  H : InA X.eq y l
+  H4 : bst l
+  H5 : bst r
+  H6 : bst rl
+  H0 : InA X.eq x0 (x :: elements_aux acc r)
+  H : InA X.eq y0 (elements_aux acc r)
+  ============================
+   (InA X.eq y0

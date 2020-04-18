@@ -1,0 +1,92 @@
+======== SAMPLE 1 ========
+ l) : list NFormula) (f : NFormula),
+                  eval_Psatz l e1 = Some f ->
+                forall f' : NFormula,
+                F' eval_Psatz l e2 = Some f ->
+                forall env : PolEnv, eval_Psatz l e1 = Some f ->
+                eval_Psatz l e2 = Some f ->
+                eval_Psatz l e1
+  ============================
+   ((Some e1 = Some b) /\ (False -> eval_nformula env f') /\
+     make_conj (fun x : NFormula => eval_nformula env x -> False) l -> False)
+
+
+Debug: Going to execute:
+elim id
+
+
+TcDebug (1) > 
+Debug: Evaluated term: H0
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : BinNums.N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  T : Type
+  env : PolEnv
+  p : PolC
+  o : Op1
+  l : list NFormula
+  tg : T
+  F := fun (x : NFormula) (acc : list (list (NFormula * T))) =>
+       if check_inconsistent x then acc else ((x, tg) :: nil) :: acc
+    : NFormula -> list (list (NFormula * T)) -> list (list (NFormula * T))
+  G := fun x : NFormula => eval_nformula env x -> False : NFormula -> Prop
+  EQ : check_inconsistent (p, o) = true
+  H : eval_op1 o (eval_pol env p) -> False
+  H0 : eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l) ->
+        eval_f (fun x : NFormula => eval_nformula env x -> False) l
+  H1 : eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l)
+  H3 : eval_op1 o (eval_pol env p) -> False
+  H2 : make_conj (fun x : NFormula => eval_nformula env x -> False) l
+  ============================
+   False
+
+
+Debug: Going to execute:
+auto with arith
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C

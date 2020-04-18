@@ -1,0 +1,85 @@
+======== SAMPLE 1 ========
+ qn (of_lu (rev d) + of_lu d' * 10 ^ usize d)%N
+           (N.pos (Pos' * 10 ^ usize d))%N :: nil)
+          (FEsub (FEadd (FEX Q 1) (FEopp (FEX Q 2))) (FEc 0)) ==
+         FEeval 0 1 Qplus Qmult Qminus Qopp Qdiv Qinv 
+          (IDphi (R:=Q)) Z.of_N Qpower
+          (xn (Pos' * p)%nat :: yn (Pos' * p)%nat :: nil)
+          res0
+  ============================
+   (xn (Pos' * p)%nat + - (xn (Pos' * p)%nat) - ((- n # 1)%Q) * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+lazymatch
+on
+
+
+TcDebug (0) > 
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+        of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   (of_lu (revapp d d') * 10 ^ usize d =
+    of_lu (rev d) * 10 ^ usize d + of_lu d' * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+fun m =>
+  match t with
+  | 0 => true
+  | 1 => false
+  | 2 => false
+  | 3 => true
+  | ?x + ?y : D
+  |- ?_ =>
+      let ex := i2ei x with ey := i2ei y in
+      EZadd ex ey
+  | ?x - ?y => let ex := i2ei x with ey := i2ei y in
+                  EZsub ex ey
+  | ?x * ?y => let ex := i2ei x with ey := i2ei y in
+                  EZmul ex ey
+  | - ?_ =>
+      let ex := i2ei x with ey := i2ei y in
+                 EZopp ex ey
+  | - ?_ => intro
+  end
+
+
+TcDebug (1) > 
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+        of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   (of_lu (revapp d d') * 10 ^ usize d =
+    of_lu (rev d) * 10 ^ usize d + of_lu d' * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+match t with
+| 0 => true
+| 1 => false
+| 2 => false
+| 3 => true
+| ?x + ?y => let ex := i2ei x with ey := i2ei y in
+              EZadd ex ey
+| ?x - ?y => let ex := i2ei x with ey := i2ei y in
+              EZsub ex ey
+| ?x - ?y => let ex := i2ei x with ey := i2ei y in
+             EZmul ex ey
+| - ?x => let ex := i2ei x in
+          EZmul ex ey
+| (- ?x)%Z =>
+     let ex := z2ez p with ey := z2ez r in
+     EZadd ex ey
+| (?x0)%Z =>
+   

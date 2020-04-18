@@ -1,0 +1,71 @@
+======== SAMPLE 1 ========
+ H2); IHl1 x2 H3
+  H2 : H2
+  H2' : forall y : key,
+       InA X.eq y (add_field x1 y) -> InA X.eq y (x1 :: lh) \/ InA X.eq y lh \/ InA X.eq y r1
+  H4 : InA X.eq y lx
+  H5 : X.eq y x1
+  H : X.eq y rx
+  H0 : lh x1 -> InA X.eq y lh \/ InA X.eq y lx
+  H1 : X.eq y rx -> InA X.eq y r1
+  H3 : lh x1 -> InA X.eq y lh \/ InA X.eq y lx
+  ============================
+   (InA X.eq y lx /\ ~ (X.eq y x1 -> X.eq y lh \/ InA X.eq y r1 /\ ~ InA X.eq y r2))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : X.t
+  H : forall l : t, InT a -> InT x lh
+  H2 : forall y : key,
+       InA X.eq y (add_field x1 y) -> InA X.eq y (x1 :: lh) \/ InA X.eq y lh \/ InA X.eq y r1
+  H4 : InA X.eq y lx
+  H5 : X.eq y x1
+  H : X.eq y rx
+  H0 : lh x1 -> InA X.eq y lh \/ InA X.eq y lx
+  H1 : X.eq y rx -> InA X.eq y r1
+  H3 : lh x1 -> InA X.eq y lh \/ InA X.eq y lx
+  ============================
+   (InA X.eq y lx /\ ~ (X.eq y x1 -> X.eq y lh \/ InA X.eq y r1 /\ ~ InA X.eq y r2))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : X.t
+  H : forall l : t, InT a -> InT x lh
+  H2 : forall y : key,
+       InA X.eq y (add_field x1 y) -> InA X.eq y (x1 :: lh) \/ InA X.eq y lh \/ InA X.eq y r1
+  H4 : InA X.eq y lx
+  H5 : X.eq y x1
+  H : X.eq y rx
+  H0 : lh x1 -> InA X.eq y lh \/ InA X.eq y lx
+  H1 : X.eq y rx -> InA X.eq y r1
+  H3 : lh x1 -> InA X.eq y lh \/ InA X.eq y lx
+  ============================
+   (InA X.eq y lx /\ ~ (X.eq y x1 -> X.eq y lh \/ InA X.eq y r1 /\ ~ InA X.eq y r2))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : X.t
+  H : forall l : t, InT a -> InT x lh
+  H2 : forall y : key,
+      InA X.eq y (add_field x1 y) -> InA X.eq y (x1 :: lh) \/ InA X.eq y lh \/ InA X.eq y r1
+  H4 : InA X.eq y lx
+  H5 : X.eq y x1

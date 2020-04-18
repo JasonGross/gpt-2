@@ -1,0 +1,61 @@
+======== SAMPLE 1 ========
+_not_iff id
+| _ => clear_inversion H; inv_ok
+| H:Ok (Node _ _ _ _) |- _ => clear H; inv_ok
+| H:Ok Leaf |- _ => clear H; inv_ok
+| H:bst (Node _ _ _ _) |- _ => clear H; inv_ok
+| _ => idtac
+end
+
+
+TcDebug (0) > 
+Goal:
+  
+  x : int
+  _x : X.lt (rev (x + 1) ^ n)
+  y : int
+  n : ~ (yn + zn)%Z
+  ============================
+   ((yn + zn)%Z = (yn + zn)%Z * y)%Z ->
+    (yn + (yn + zn)%Z ->
+    (yn + (yn + zn)%Z ->
+    (yn + (yn + zn)%Z ->
+    (yn + (yn + zn)%Z ->
+    (yn + (yn + zn)%Z ->
+    (yn + (yn + (yn + zn)%Z ->
+    (yn + (yn + zn)%Z ->
+    (yn + (yn + (yn + zn)%Z ->
+    (yn + (yn + (yn + zn)%Z ->
+    (yn + (yn + (yn + zn)%Z ->
+    (yn + (yn + (yn + (yn + zn)%Z ->
+    ((yn + zn)%Z ->
+     y * y + (yn * zn)%Z)%Z) <->
+    (yn + (yn + (yn + (yn + (yn + zn)%Z ->
+     ((yn + zn)%Z ->
+     y * y + (yn * zn)%Z)%Z ->
+    (yn + (yn + (yn + (yn + zn)%Z ->
+     (yn + (yn + (yn + zn)%Z ->
+     ((yn + zn)%Z ->
+      y * y + (yn * zn)%Z)%Z ->
+    (yn + (yn + (yn + (yn + zn)%Z ->
+     (yn + (yn + (yn + (yn + zn)%Z ->
+     ((yn + zn)%Z ->
+       y * y + (yn * zn)%Z)%Z ->
+     (yn + (yn + (yn + zn)%Z ->
+       (yn + (yn + zn)%Z ->
+       (yn + (yn + (yn + zn)%Z ->
+        (yn + (yn + (yn + zn)%Z ->
+        (yn + (yn + (yn + zn)%Z ->
+        (yn + (yn + (yn + zn)%Z ->
+         (yn + (yn + (yn + zn)%Z ->
+         0 <=
+         y <= y * zn)%nat
+             y ==
+            y * zn%nat +
+             zn%nat
+             _
+             id
+              (zn + n)%nat
+               (zn + n)%nat
+  res := ?X89@{__:=R; __:=0; __:=1; __:=radd; __:=rmul; __:=rsub; __:=ropp;
+                __:=rdiv; __:=rinv; __:=req; __:=Rsth; __:=Re

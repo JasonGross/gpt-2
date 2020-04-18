@@ -1,0 +1,129 @@
+======== SAMPLE 1 ========
+div
+
+
+TcDebug (18) > 
+Goal:
+  
+  xn : Type
+  E : Type
+  yn : Type
+  l' : t elt
+  x : key
+  e : elt
+  y : key
+  H' : E.eq xn (elements_aux elements x) y
+  H'0 : E.eq xn y s
+  ============================
+   (E.eq xn (elements_aux elements y) (map (fun t => remove x y) (fun t : elt => remove x y) e elements)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (19) > 
+Goal:
+  
+  xn : Type
+  E : Type
+  yn : Type
+  l' : t elt
+  x : key
+  e : elt
+  y : key
+  H' : E.eq xn (elements_aux elements x) y
+  H'0 : E.eq xn y s
+  ============================
+   (E.eq xn (elements_aux elements y) (map (fun t => remove x y)) (fun t : elt => remove x y) e elements)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (19) > 
+Debug: Level 19: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  xn : Type
+  E : Type
+  yn : Type
+  l' : t elt
+  x : key
+  e : elt
+  y : key
+  H' : E.eq xn (elements_aux elements x) y
+  H'0 : E.eq xn y s
+  ============================
+   (E.eq xn (elements_aux elements y) (map (fun t => remove x y) (fun t : elt => remove x y) e elements)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+
+
+TcDebug (18) > 
+Goal:
+  
+  xn : Type
+  E : Type
+  yn : Type
+  l' : t elt
+  x : key
+  e : elt
+  y : key
+  H' : E.eq xn (elements_aux elements x) y
+  H'0 : E.eq xn y s
+  ============================
+   (E.eq xn (elements_aux elements y) (map (fun t => remove x y) (fun t : elt => remove x y) e elements)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (19) > 
+Goal:
+  
+  xn : Type
+  E : Type
+  yn : Type
+  l' : t elt
+  x : key
+  e : elt
+  y : key
+  H' : E.eq xn (elements_aux elements x) y
+  H'0 : E.eq xn y s
+  ============================
+   (E.eq xn (elements_aux elements y) (map (fun t => remove x y) (fun t : elt => remove x y) e elements)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (19) > 
+Debug: Level 19: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  xn : Type
+  E : Type
+  yn : Type
+  l' : t elt
+  x : key
+  e : elt
+  y : key
+  H' : E.eq xn (elements_aux elements x) y
+  H'0 : E.eq xn y s
+  ============================
+   (E.eq xn (elements_aux elements y) (map (fun t => remove x y) (fun t : elt => remove x y) e

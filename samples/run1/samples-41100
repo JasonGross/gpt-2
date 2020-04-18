@@ -1,0 +1,121 @@
+======== SAMPLE 1 ========
+.
+
+In conclusion
+Goal:
+  
+  elt : Type
+  x : X.t
+  f : X.t -> bool
+  H' : check_inconsistent X f
+  H0 : In x g
+  ============================
+   (In x (f s))
+
+
+Debug: Going to execute:
+intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  f : X.t -> bool
+  H' : check_inconsistent X f
+  H0 : In x g
+  ============================
+   (In x (f s))
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  f : X.t -> bool
+  H' : check_inconsistent X f
+  H0 : In x g
+  H1 : f s -> In x s
+  ============================
+   True
+
+
+Debug:
+Going to execute:
+match goal with
+| H:?A -> False |- _ => change_no_check (~ A) in H; MX.OrderTac.order_prepare
+end
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  f : X.t -> bool
+  H' : check_inconsistent X f
+  H0 : In x g
+  H1 : f s -> In x s
+  ============================
+   True
+
+
+Debug:
+Going to execute:
+change_no_check (~ A) in H; MX.OrderTac.order_prepare
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  f : X.t -> bool
+  H' : check_inconsistent X f
+  H0 : In x g
+  H1 : f s -> In x s
+  ============================
+   True
+
+
+Debug:
+Going to execute:
+change_no_check (~ A) in H; MX.OrderTac.order_prepare
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  f : X.t -> bool
+  H' : check_inconsistent X f
+  H0 : In x g
+  H1 : f s -> In x s
+  ============================
+   True
+
+
+Debug:
+Going to execute:
+change_no_check (~ A) in H
+
+
+TcDebug (3) > 
+Debug: Evaluated term: (MX.OrderTac.order_prepare H
+          (MX.OrderTac.lt_list 0 H
+                  (MX.OrderTac.eq_list 0)
+                   (MX.OrderTac.eq_true (MX.OrderTac.eq_sym H1 H)
+                     (MX.OrderTac.eq_false (MX.OrderTac.eq_sym H1 H)
+                      
+                     (MX.OrderTac.eq_false (MX.OrderTac.eq_sym H1 H)
+                        (MX.OrderTac.eq_false (MX.OrderTac.eq_sym H2 H)
+                        
+                        (MX.OrderTac.eq_true (MX.OrderTac.eq_sym H1 H)
+                        (MX.OrderTac.eq_false (MX.OrderTac

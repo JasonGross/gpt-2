@@ -1,0 +1,112 @@
+======== SAMPLE 1 ========
+ else x == x'
+  y : positive
+  b : Z
+  c : Z
+  d : positive
+  H : a * Z.pos d = c * Z.pos b
+  g : Z
+  aa : Z
+  bb : Z
+  Hg1 : Zis_gcd a (Z.pos b) g
+  Hg2 : 0 <= g
+  Hg3 : a = g * aa
+  Hg4 : Z.pos b = g * bb
+  Hg0 : g <> 0
+  g' : Z
+  cc : Z
+  dd : Z
+  Hg'1 : Zis_gcd c (Z.pos d) g'
+  Hg'2 : 0 <= g'
+  Hg'3 : c = g' * cc
+  Hg'4 : Z.pos d = g' * dd
+  Hg'0 : g' <> 0
+  x : Z
+  Hc : (x | cc)
+  xd : Z
+  Ha : (x | dd)
+  Hxd : xd = xd * x
+  Hg'11 : (g' | c)
+  Hg'12 : (g' | Z.pos d)
+  Hg'13 : forall x : Z, (x | c) -> (x | Z.pos d) -> (x | g')
+  ============================
+   (g' * (xd * x) = xd * (g' * x))
+
+
+Debug: Going to execute:
+<PreMiddle_clear@0> $1
+
+
+TcDebug (9) > 
+Debug: Level 6: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  a : Z
+  b : positive
+  c : Z
+  d : positive
+  H : a * Z.pos d = c * Z.pos b
+  g : Z
+  aa : Z
+  bb : Z
+  Hg1 : Zis_gcd a (Z.pos b) g
+  Hg2 : 0 <= g
+  Hg3 : a = g * aa
+  Hg4 : Z.pos b = g * bb
+  Hg0 : g <> 0
+  g' : Z
+  cc : Z
+  dd : Z
+  Hg'1 : Zis_gcd c (Z.pos d) g'
+  Hg'2 : 0 <= g'
+  Hg'3 : c = g' * cc
+  Hg'4 : Z.pos d = g' * dd
+  Hg'0 : g' <> 0
+  x : Z
+  Hc : (x | cc)
+  xd : Z
+  Ha : (x | dd)
+  Hxd : xd = xd * x
+  Hg'11 : (g' | c)
+  Hg'12 : (g' | Z.pos d)
+  Hg'13 : forall x : Z, (x | c) -> (x | Z.pos d) -> (x | g')
+  ============================
+   (g' * (xd * x) = xd * (g' * x))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; split
+
+
+TcDebug (5) > 
+Goal:
+  
+  a : Z
+  b : positive
+  c : Z
+  d : positive
+  H : a * Z.pos d = c * Z.pos b
+  g : Z
+  aa : Z
+  bb : Z
+  Hg1 : Zis_gcd a (Z.pos b) g
+  Hg2 : 0 <= g
+  Hg3 : a = g * aa
+  Hg4 : Z.pos b = g * bb
+  Hg0 : g <> 0
+  g' : Z
+  cc : Z
+  dd : Z
+  Hg'1 : Zis_gcd c (Z.pos d) g'
+  Hg'2 : 0 <= g'
+  Hg'3 : c = g' * cc
+  Hg'4 : Z.pos d = g' * dd
+  Hg'0 : g' <> 0
+  x : Z
+  Hc : (x | cc)
+  xd : Z
+  Ha : (x | dd)
+  Hxd

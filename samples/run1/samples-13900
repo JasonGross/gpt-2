@@ -1,0 +1,107 @@
+======== SAMPLE 1 ========
+ px (elements_aux p x0)) =>
+         if m' == m', add x0 (elements_aux p x0)) m')
+
+
+Debug:
+Going to execute:
+match goal with
+| |- _ -> _ => intro; t_tauto_intuit
+| |- _ => t_reduce; t_solver
+end || t_solver
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x x1
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x1 l = << rl, o, rr >>
+  y0 : key
+  H0 : bst m
+  H1 : bst l
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  e1 : split x1 r = << rl, o, rr >>
+  y0 : key
+  H0 : bst m
+  H1 : bst l
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  e1 : split x1 r = << rl, o, rr >>
+  y0 : key
+  H0 : bst m
+  H1 : bst l
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  e1 : split x1 r = << rl, o, rr >>
+  y0 : key
+  H0 : bst m
+  H1 : bst l
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  e1 : split x1 r = << rl, o, rr >>
+  y0 : key
+  H0 : bst m
+  H1 : bst l
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  e1 : split x1 r = << rl, o, rr >>
+  y0 : key
+  H0 : bst m
+  H1 : bst l
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  e1 : split x1 r = << rl, o, rr >>
+  y0 : key
+  H0 : bst m
+  H1 : bst l
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  e1 : split x1 r = << rl, o, rr >>
+  y0 : key
+  H0 : bst m
+  H1 : bst l
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  e1 : split x1 r = << rl, o, rr >>
+  y0 : key
+  H0 : bst m
+  H1 : bst l
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  e1 : split x1 r = << rl, o, rr >>
+  y0 : key
+  H0 : bst m
+  H1 : bst l
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  e1 : split x1 r = << rl, o, rr >>
+  y0 : key
+  H0 : bst m
+  H1 : bst l
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  e1 : split x1 r = << rl, o, rr >>
+  y0 : key
+  H0 : bst m
+  H1 : bst l
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  e1 : split x1 r = << rl, o, rr >>
+  y0 : key
+  H0 : bst m
+  H1 : bst l
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  e1 : split x1 r = <<

@@ -1,0 +1,69 @@
+======== SAMPLE 1 ========
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+                unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                 deduce t t' = Some u ->
+                 forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  IHcl : forall (cl' : clause) (env : Env),
+         eval_opt_clause env (or_clause cl cl') <->
+         ~ make_conj (eval_tt env) cl \/ ~ make_conj (eval_tt env) cl'
+  cl' : clause
+  env : Env
+  H0 : True -> ~ (eval_tt env a /\ make_conj (eval_tt env) cl')
+  H1 : ~ (eval_tt env a /\ make_conj (eval_tt env) cl') -> True
+  H2 : eval_tt env a
+  H3 : make_conj (eval_tt env) cl -> False
+  ============================
+   (True <->
+    ~ (eval_tt env a /\ make_conj (eval_tt env) cl) \/
+    ~ make_conj (eval_tt env) cl')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                     eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+                unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                 deduce t t' = Some u ->
+                 forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  IHcl : forall (cl' : clause) (env : Env),
+         eval_opt_clause env (or_clause cl cl') <->
+         ~ make_conj (eval_tt env) cl \/ ~ make_conj (eval_tt env) cl'
+  cl' : clause
+  env : Env
+  H0 : True -> ~ (eval_tt env a /\ make_conj (eval_tt env) cl')
+  H1 : ~ (eval_tt env a /\ make_conj (eval_tt env) cl') -> True
+  H2 : eval_tt env a
+  H3 : make_conj (eval_tt env) cl -> False
+  ============================
+   (True <->
+    ~ (eval_tt env a /\ make_conj (eval_tt env) cl) \/
+    ~ make_conj (eval_tt env) cl')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (

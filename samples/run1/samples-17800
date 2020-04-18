@@ -1,0 +1,163 @@
+======== SAMPLE 1 ========
+ t0 x y z
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  GT : lh > rh + 2
+  y : key
+  H : In y lr
+  H10 : In y rr
+  ============================
+   (In y lr \/ In y lr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  GT : lh > rh + 2
+  y : key
+  H : In y lr
+  H10 : In y rr
+  ============================
+   (In y lr \/ In y lr)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  GT : lh > rh + 2
+  y : key
+  H : In y lr
+  H10 : In y rr
+  ============================
+   (In y lr \/ In y lr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  GT : lh > rh + 2
+  y : key
+  H : In y lr
+  H10 : In y rr
+  ============================
+   (In y lr \/ In y lr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  GT : lh > rh + 2
+  y : key
+  H : In y lr
+  H10 : In y rr
+  ============================
+   (In y lr \/ In y lr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+ 

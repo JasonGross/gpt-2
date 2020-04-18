@@ -1,0 +1,139 @@
+======== SAMPLE 1 ========
+
+<Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H2 : n < 0
+  H1 : m == 0 -> False
+  ============================
+   ((m == 0) /\ (n < 0 \/ m == 0))
+
+
+Debug:
+Going to execute:
+match isZcst t with
+| true => t
+| _ => NotConstant
+end
+
+
+TcDebug (2) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H2 : n < 0
+  H1 : m == 0 -> False
+  ============================
+   ((m == 0) /\ (n < 0 \/ m == 0))
+
+
+Debug: Going to execute:
+isZcst t
+
+
+TcDebug (3) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H2 : n < 0
+  H1 : m == 0 -> False
+  ============================
+   ((m == 0) /\ (n < 0 \/ m == 0))
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | 0%Z => true
+  | 1%Z => false
+  | 2%Z => true
+  | 3%Z => true
+  | ?x + ?y => let e := p2ep x with m := p2ep y in
+                     EPequiv b e m
+  | ?x - ?y => let e := p2ep x with m := p2ep y in
+                  EPimpl e m
+  | ?x * ?y => let e := p2ep x with m := p2ep y in
+                  EPand ex e m
+  | ?x ] => let e := p2ep x with m := p2ep y in
+                EPor ex m
+  | ?x - ?y => let e := p2ep x with m := p2ep y in
+                 EPor ex m
+  | ?x => EPraw x
+  end
+
+
+TcDebug (4) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H2 : n < 0
+  H1 : m == 0 -> False
+  ============================
+   ((m == 0) /\ (n < 0 \/ m == 0))
+
+
+Debug:
+Going to execute:
+match isZcst t with
+| true => t
+| _ => NotConstant
+end
+
+
+TcDebug (4) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H2 : n < 0
+  H1 : m == 0 -> False
+  ============================
+   ((m == 0) /\ (n < 0 \/ m == 0))
+
+
+Debug:
+Going to execute:
+isZcst t, true => t
+
+
+TcDebug (5) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H2 : n < 0
+  H1 : m == 0 -> False
+  ============================
+   ((m == 0) /\ (n < 0 \/ m == 0))
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | 0%Z => true
+  | 1%Z => false
+  | 2%Z => true
+  | 3%Z => true
+  | 6%Z => true
+  | EPequiv b e m
+ 

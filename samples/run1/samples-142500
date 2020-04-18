@@ -1,0 +1,125 @@
+======== SAMPLE 1 ========
+ e l
+  H14 : eqA a x
+  ============================
+   (eqA a x)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : relation A
+  e : Equivalence eqA
+  x : A
+  l : list A
+  H : eqA x l
+  H0 : eqlistA l l
+  IHAdd : forall x y : A, eqlistA l (x :: l) (y :: l)
+  x0 : A
+  y0 : A
+  H1 : eqlistA l (x0 :: l) (y0 :: l)
+  H2 : eqlistA l (x1 :: l) (y1 :: l)
+  H6 : equivlistA (x :: l) (x0 :: l)
+  H7 : InA x l
+  H14 : eqA a x
+  ============================
+   (eqA a x)
+
+
+Debug: Going to execute:
+assert X2
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (eqlistA (x1 :: l) (y1 :: l))
+
+Goal:
+  
+  A : Type
+  eqA : relation A
+  e : Equivalence eqA
+  x : A
+  l : list A
+  H : eqA x l
+  H0 : eqlistA l l
+  IHAdd : forall x y : A, eqlistA l (x :: l) (y :: l)
+  x0 : A
+  y0 : A
+  H1 : eqlistA l (x0 :: l) (y0 :: l)
+  H2 : eqlistA l (x1 :: l) (y1 :: l)
+  H6 : equivlistA (x :: l) (y1 :: l)
+  H7 : InA x l
+  H14 : eqA a x
+  ============================
+   (eqlistA (x1 :: l) (y1 :: l))
+
+
+Debug: Going to execute:
+exact (id0 id1)
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (- (x1 :: l))
+
+Goal:
+  
+  A : Type
+  eqA : relation A
+  e : Equivalence eqA
+  x : A
+  l : list A
+  H : eqA x l
+  H0 : eqlistA l l
+  IHAdd : forall x y : A, eqlistA l (x :: l) (y :: l)
+  x0 : A
+  y0 : A
+  H1 : eqlistA l (x0 :: l) (y0 :: l)
+  H2 : eqlistA l (x1 :: l) (y1 :: l)
+  H6 : equivlistA (x :: l) (y1 :: l)
+  H7 : InA x l
+  H14 : eqA a x
+  ============================
+   (eqlistA (x1 :: l) (y1 :: l))
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  e : Equivalence eqA
+  x : A
+  l : list A
+  H : eqA x l
+  H0 : eqlistA l l
+  IHAdd : forall x y : A, eqlistA l (x :: l) (y :: l)
+  x0 : A
+  y0 : A
+  H1 : eqlistA l (x0 :: l) (y0 :: l)
+  H2 : eqlistA l (x1 :: l) (y1 :: l)
+  H6 : equivlistA (x :: l) (y1 :: l)
+  H7 : InA x l
+  H14 : eqA a x
+  H0 : eqlistA l l
+  ============================
+   (eqlistA (x1 :: l) (y1 :: l))
+
+
+Debug: Going to execute:
+exact (id0 id1)
+
+
+TcDebug (1)

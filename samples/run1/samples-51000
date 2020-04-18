@@ -1,0 +1,120 @@
+======== SAMPLE 1 ========
+ InT y (Node l y d r _x) \/ InT y (Node r rhs))
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:(?X1 -> ?X2) -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (X1 -> X2);
+          [ exact
+          id
+          | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear id;
+              (solve [ t_tauto_intuit ]) ] ]
+| id:~ ?X1 -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (~ X1);
+          [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+| |- ?X1 =>
+      <Coq.Init.Tauto.is_disj> flags X1; (solve
+       [ left; t_tauto_intuit | right; t_tauto_intuit ])
+end
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  _x0 : I.t
+  lrl : tree
+  lrx : X.t
+  lrr : tree
+  x : X.t
+  r : t
+  _x2 : I.t
+  lrl2 : tree
+  lrx2 : X.t
+  lrr2 : tree
+  x : X.t
+  r2 : t
+  _x4 : I.t
+  lrl2 : tree
+  lrx2 : X.t
+  lrr2 : tree
+  x : X.t
+  r2 : t
+  _x8 : I.t
+  lrl2 : tree
+  lrx2 : X.t
+  lrr2 : tree
+  x : X.t
+  r2 : t
+  _x12 : I.t
+  lrr2 : tree
+  ============================
+   ((InT y lrl2 \/ X.eq x lrx2 \/ InT y lrr2) \/ InT y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; (solve
+ [ left; t_tauto_intuit | right; t_tauto_intuit ])
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  _x0 : I.t
+  lrl : tree
+  lrx : X.t
+  lrr : tree
+  x : X.t
+  r : t
+  _x2 : I.t
+  lrl2 : tree
+  lrx2 : X.t
+  lrr2 : tree
+  x : X.t
+  r2 : t
+  _x8 : I.t
+  lrr2 : tree
+  ============================
+   ((InT y lrl2 \/ X.eq x lrx2 \/ InT y lrr2) \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  _x0 : I.t
+  lrl : tree
+  lrx : X.t
+  lrr : tree
+  x : X.t
+  r : t
+  _x2 : I.t
+  lrl2 : tree
+  lrx2 : X.t
+ 

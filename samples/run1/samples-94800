@@ -1,0 +1,116 @@
+======== SAMPLE 1 ========
+
+
+TcDebug (7) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  H0 : X.lt x' x
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H1 : InT y t_left0 -> InT y r /\ X.lt y x
+  H2 : InT y r
+  H3 : InT y l
+  ============================
+   (Ok l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (7) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  H0 : X.lt x' x
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H1 : InT y t_left0 -> InT y r /\ X.lt y x
+  H2 : InT y r
+  H3 : InT y l
+  ============================
+   (Ok l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (7) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  H0 : X.lt x' x
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H1 : InT y t_left0 -> InT y r /\ X.lt y x
+  H2 : InT y r
+  H3 : InT y l
+  ============================
+   (Ok l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (8) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  H0 : X.lt x' x
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H1 : InT y t_left0 -> InT y r /\ X.lt y x
+  H2 : InT y r
+  H3 : InT y l
+

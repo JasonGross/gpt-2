@@ -1,0 +1,175 @@
+======== SAMPLE 1 ========
+  (0 < rpow (e1) (e2))
+
+
+Debug: Going to execute:
+t_solver
+
+
+TcDebug (3) > 
+Goal:
+  
+  P : Prop
+  Q : Prop
+  R : Prop
+  C : Prop
+  TF : Type
+  f : decidable P
+  H : decidable Q
+  H0 : decidable Q
+  H1 : False
+  H2 : True
+  H3 : P
+  H4 : R -> P /\ Q
+  H5 : R -> P /\ Q
+  H6 : P /\ Q -> R
+  H7 : P /\ Q -> R
+  H8 : R -> P /\ Q
+  H9 : R -> P
+  H10 : (R -> P) \/ (Q -> R) -> False
+  H11 : P /\ R -> False
+  H12 : (P -> R) -> False
+  H13 : (P -> R) -> False
+  H14 : Q
+  ============================
+   (0 < rpow (e1) (e2))
+
+
+Debug: Going to execute:
+<ltac_plugin::auto@0> $1 $2 $3
+
+
+TcDebug (3) > 
+Debug: Level 2: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 3: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 3: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 2

@@ -1,0 +1,98 @@
+======== SAMPLE 1 ========
+ InT
+  IHr : forall (x : X.t) (y : elt),
+         Ok r -> InT y (del x r) <-> InT y r /\ X.lt x y
+  x : X.t
+  y : elt
+  H0 : X.lt x x'
+  H5 : Ok (Bk ll lx lr)
+  H6 : Ok (Bk rl rx rr)
+  H7 : lt_tree x' (Bk ll lx lr)
+  H8 : gt_tree x' r
+  H1 : InT y (Bk ll lx lr)
+  H2 : X.eq y x -> False
+  ============================
+   (InT y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (5) > 
+Goal:
+  
+  i : Color.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x' : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  IHl : forall (x : X.t) (y : elt),
+         Ok (Bk ll lx lr) ->
+         InT y (del x (Bk ll lx lr)) <-> InT y (Bk ll lx lr) /\ X.lt x y
+  IHr : forall (x : X.t) (y : elt),
+         Ok r -> InT y (del x r) <-> InT y r /\ X.lt x y
+  x : X.t
+  y : elt
+  H0 : X.lt x x'
+  H5 : Ok (Bk ll lx lr)
+  H6 : Ok (Bk rl rx rr)
+  H7 : lt_tree x' (Bk ll lx lr)
+  H8 : gt_tree x' r
+  H1 : InT y (Bk ll lx lr)
+  H2 : X.eq y x -> False
+  ============================
+   (InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (5) > 
+Goal:
+  
+  i : Color.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x' : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  IHl : forall (x : X.t) (y : elt),
+         Ok (Bk ll lx lr) ->
+         InT y (del x (Bk ll lx lr)) <-> InT y (Bk ll lx lr) /\ X.lt x y
+  IHr : forall (x : X.t) (y : elt),
+         Ok r -> InT y (del x r) <-> InT y r /\ X.lt x y
+  x : X.t
+  y : elt
+  H0 : X.lt x x'
+  H5 : Ok (Bk ll lx lr)
+  H6 : Ok (Bk rl rx rr)
+  H7 : lt_tree x' (Bk ll lx lr)
+  H8 : gt_tree x' r
+  H1 : InT y (Bk ll lx lr)
+  H2 : X.eq y x -> False
+  ============================
+   (InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (5) > 
+Goal:
+  
+  i : Color.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x' : X.t
+  rl : tree
+  rx : X.t

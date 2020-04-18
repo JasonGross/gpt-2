@@ -1,0 +1,142 @@
+======== SAMPLE 1 ========
+ : bst y -> False
+  H2 : In y l
+  H3 : In y (remove x l) -> False
+  H : In y l /\ ~ X.eq y x
+  H1 : X.eq y x -> In y (remove x l)
+  H4 : bst l
+  H5 : bst r
+  a : cmp (remove x l) y
+  y0 : X.t
+  bst r0
+  H6 : In y0 l
+  H7 : In y0 r -> In y0 (remove x r)
+  ============================
+   (In y0 (Node l y d r _x))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x y
+  y0 : X.t
+  bst l
+  H5 : bst r
+  a : cmp (remove x l) y
+  y0 : X.t
+  bst r0
+  H6 : In y0 l
+  H7 : In y0 r -> In y0 (remove x r)
+  ============================
+   (In y0 (Node l y d r _x))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x y
+  y0 : X.t
+  bst l
+  H5 : bst r
+  a : cmp (remove x l) y
+  y0 : X.t
+  bst r0
+  H6 : In y0 l
+  H7 : In y0 r -> In y0 (remove x r)
+  ============================
+   (In y0 (Node l y d r _x))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x y
+  y0 : X.t
+  bst l
+  H5 : bst r
+  a : cmp (remove x l) y
+  y0 : X.t
+  bst r0
+  H6 : In y0 l
+  H7 : In y0 r -> In y0 (remove x r)
+  ============================
+   (In y0 (Node l y d r _x))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x y
+  y0 : X.t
+  bst l
+  H5 : bst r
+  a : cmp (remove x l) y
+  y0 : X.t
+  bst r0
+  H6 : In y0 l
+  H7 : In y0 r -> In y0 (remove x r)
+  ============================
+   (In y0 (Node l y d r _x))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d :

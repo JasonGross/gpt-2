@@ -1,0 +1,93 @@
+======== SAMPLE 1 ========
+) ->
+     Sorted X.lt (rev (x1 :: l1)) ->
+     forall x : elt,
+     (forall x0 : O.t, InA X.lt x x0 -> InA X.lt x0 l1) ->
+     forall x : elt,
+     (forall x0 : O.t, InA X.lt x x0 -> InA X.lt x0 l2) -> X.lt x x0
+  x : X.t
+  x0 : O.t
+  H : X.lt x x0
+  ============================
+   (O.lt x x0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : O.t
+  x0 : O.t
+  x1 : ocon
+  l1 : list (O.t * O.t)
+  l2 : list (list (O.t * O.t))
+  no_middle_eval : forall (x : list (O.t * O.t)) (c : Env.T),
+                 eval_tt env x -> eval_tt env l1 -> False
+  x : O.t
+  y : ocon
+  H1 : ocon
+  H2 : eval_tt env a
+  H3 : make_conj (fun x : Env => eval_tt env x) y
+  H4 : False
+  H : eval_tt env x /\ make_conj (fun x : Env => eval_tt env x)
+  H5 : make_conj (fun x : Env => eval_tt env x)
+  H6 : False
+  C : eval_tt env a /\ make_conj (fun x : Env => eval_tt env x) y
+  ============================
+   (O.lt x x0)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : O.t
+  x0 : O.t
+  x1 : ocon
+  l1 : list (O.t * O.t)
+  l2 : list (list (O.t * O.t))
+  no_middle_eval : forall (x : list (O.t * O.t)) (c : Env.T),
+                eval_tt env x -> eval_tt env l1 -> False
+  x : O.t
+  y : ocon
+  H1 : ocon
+  H2 : eval_tt env a
+  H3 : make_conj (fun x : Env => eval_tt env x) y
+  H4 : False
+  H : eval_tt env x /\ make_conj (fun x : Env => eval_tt env x)
+  H5 : make_conj (fun x : Env => eval_tt env x)
+  H6 : False
+  C : eval_tt env a /\ make_conj (fun x : Env => eval_tt env x) y
+  ============================
+   (O.lt x x0)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : O.t
+  x0 : O.t
+  x1 : ocon
+  l1 : list (O.t * O.t)
+  l2 : list (list (O.t * O.t))
+  no_middle_eval : forall (x : list (O.t * O.t)) (c : Env.T),
+                eval_tt env x -> eval_tt env l1 -> False
+  x : O.t
+  y : ocon
+  H1 : ocon
+  H2 : eval_tt env a
+  H3 : make_conj (fun x : Env => eval

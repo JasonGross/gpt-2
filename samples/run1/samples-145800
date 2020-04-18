@@ -1,0 +1,171 @@
+======== SAMPLE 1 ========
+ H6 : true = true
+  ============================
+   (true = false || true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H0 : In y s -> false = true
+  H6 : true = true
+  ============================
+   (true = false || true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H0 : In y s -> false = true
+  H6 : true = true
+  ============================
+   (true = false || true)
+
+
+Debug: Going to execute:
+assert X2; [ exact (id0 id1) | clear id0 ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H0 : In y s -> false = true
+  H6 : true = true
+  ============================
+   (true = false || true)
+
+
+Debug: Going to execute:
+assert X2
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (true = false)
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H0 : In y s -> false = true
+  H6 : true = true
+  ============================
+   (true = false)
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H0 : In y s -> false = true
+  H6 : true = true
+  H0 : In y s -> false = true
+  H7 : false = true
+  ============================
+   (false = false || false)
+
+
+Debug: Going to execute:
+clear id0
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H0 : In y s -> false = true
+  H6 : true = true
+  H0 : In y s -> false = true
+  H7 : false = true
+  ============================
+   (false = false || false)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H0 : In y s -> false = true
+  H6 : true = true
+  H0 : In y s -> false = true
+  ============================
+   (false = false || false)
+
+
+Debug: Going to execute:
+cut X1; [ exact id | constructor 1; fail ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False

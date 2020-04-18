@@ -1,0 +1,120 @@
+======== SAMPLE 1 ========
+
+
+  ============================
+   (E.eq x a)
+
+
+Debug:
+Going to execute:
+match Cst t with
+| NotConstant =>
+    match t with
+    | rO => fun _ => fv
+    | rI => fun _ => fv
+    | add ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+    | mul ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+    | sub ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+    | opp ?t1 => fun _ => TFV t1 fv
+    | pow ?t1 ?n =>
+        match CstPow n with
+        | NotConstant => fun _ => AddFvTail t fv
+        | _ => fun _ => TFV t1 fv
+        end
+    | _ => fun _ => AddFvTail t fv
+    end
+ | _ => fun _ => fv
+ end
+in
+f ltac:(())
+
+
+TcDebug (18) > 
+Goal:
+    x : Q  H : x ~= nil  ============================
+   (x == 0 -> False -> False)
+
+
+Debug:
+Going to execute:
+match Cst t with
+| NotConstant =>
+    match t with
+    | rO => fun _ => fv
+    | rI => fun _ => fv
+    | add ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+    | mul ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+    | sub ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+    | opp ?t1 => fun _ => TFV t1 fv
+    | pow ?t1 ?n =>
+        match CstPow n with
+        | NotConstant => fun _ => AddFvTail t fv
+        | _ => fun _ => TFV t1 fv
+        end
+    | _ => fun _ => AddFvTail t fv
+    end
+| _ => fun _ => fv
+end
+
+
+TcDebug (19) > 
+Goal:
+    x : Q  H : x ~= nil  ============================
+   (x == 0 -> False -> False)
+
+
+Debug: Going to execute:
+Cst t
+
+
+TcDebug (20) > 
+Goal:
+    x : Q  H : x ~= nil  H0 : y = 255
+  ============================
+   (x == 0 -> False -> False)
+
+
+Debug: Going to execute:
+Qcst
+
+
+TcDebug (21) > 
+Goal:
+    x : Q  H : x ~= nil  H0 : y = 255
+  ============================
+   (x == 0 -> False -> False)
+
+
+Debug:
+Going to execute:
+fun t => match isQcst t with
+         | true => t
+         | _ => constr:NotConstant
+          end
+
+
+TcDebug (22) > 
+Debug: Level 21: evaluation returns
+<tactic closure>
+
+
+Goal:
+    x : Q  H : x ~= nil  H0 : y = 255
+  ============================
+   (x == 0 -> False -> False)
+
+
+Debug: Going to execute:
+match isQcst t with
+| true => t
+| _ => constr:NotConstant
+end
+
+
+TcDebug (21) > 
+Goal:
+    x : Q  H : x ~= nil  H0 : y = 255
+  ============================
+   (x == 0 -> False -> False)
+
+

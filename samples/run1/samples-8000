@@ -1,0 +1,119 @@
+======== SAMPLE 1 ========
+ for > x ->
+     X.eq y x -> False
+  IHr ?x_1 : (forall y : elt, In y (Some (x :: l)) <->
+      X.eq y x \/ In y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : elt
+  l : list elt
+  r : t elt
+  hh : int <-> ~ 0 <= height l + 2
+  Hr : forall y : elt, In y (Some l) <-> In y l /\ rhr == rhr
+  y : elt
+  l' : list elt
+  r' : t elt
+  h : int <-> ~ 0 <= height l + 2
+  Hr : forall y : elt, In y (Some l') <-> In y l /\ rhr == rhr
+  y : elt
+  l' : list elt
+  r' : t elt
+  H0 : int <-> ~ 0 <= height l' + 2
+  ============================
+   (forall y : elt -> In y (Some l))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : elt
+  l : list elt
+  r : t elt
+  hh : int <-> ~ 0 <= height l + 2
+  Hr : forall y : elt, In y (Some l) <-> In y l /\ rhr == rhr
+  y : elt
+  l' : list elt
+  r' : t elt
+  H0 : int <-> ~ 0 <= height l' + 2
+  ============================
+   (forall y : elt -> In y (Some l))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : elt
+  l : list elt
+  r : t elt
+  hh : int <-> ~ 0 <= height l + 2
+  Hr : forall y : elt, In y (Some l) <-> In y l /\ rhr == rhr
+  y : elt
+  l' : list elt
+  r' : t elt
+  H0 : int <-> ~ 0 <= height l' + 2
+  ============================
+   (forall y : elt -> In y (Some l))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : elt
+  l : list elt
+  r : t elt
+  hh : int <-> ~ 0 <= height l + 2
+  Hr : forall y : elt, In y (Some l) <-> In y l /\ rhr == rhr
+  y : elt
+  l' : list elt
+  r' : t elt
+  H0 : int <-> ~ 0 <= height l' + 2
+  ============================
+   (forall y : elt -> In y (Some l))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : elt
+  l : list elt
+  r : t elt
+  hh : int <-> ~ 0 <= height l + 2
+  Hr : forall y : elt, In y (Some l) <-> In y l /\ rhr == rhr
+  y : elt
+  l' : list elt
+  r' : t elt
+  H0 : int <-> ~ 0 <= height l' + 2
+  ============================
+   (forall y : elt -> In y (Some l))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj

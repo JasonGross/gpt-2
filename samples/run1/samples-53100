@@ -1,0 +1,131 @@
+======== SAMPLE 1 ========
+_polynom.Pol Q),
+              match type of B with
+              | Some d => f0 y = f0 x :: lt y
+              | None => None
+              end) f0 y)
+          end) f0 x)
+
+
+Debug:
+Going to execute:
+match type of B with
+| Some d => f0 y = f0 x :: lt y
+| _ => None
+end
+
+
+TcDebug (22) > 
+Goal:
+  
+  FunChoice : FunctionalChoice
+  SetoidFunSymmetric : ExtensionalFunctionalChoice
+  Evaluated_eq_ext : ExtensionalFunctionalChoice
+  x : elt
+  f : list (QFormula Q) -> list (list (NFormula * T)))
+  H : True
+  H0 : True
+  ============================
+   (f x = f y)
+
+
+Debug: Going to execute:
+type of B
+
+
+TcDebug (23) > 
+Debug: Evaluated term: (relation f0 y)
+
+Debug: Evaluated term: A
+
+Debug: Evaluated term: A
+
+Debug: Evaluated term: B
+
+Debug: Evaluated term: (relation f0 y)
+
+Goal:
+  
+  FunChoice : FunctionalChoice
+  SetoidFunSymmetric : ExtensionalFunctionalChoice
+  Evaluated_eq_ext : ExtensionalFunctionalChoice
+  x : elt
+  f : list (QFormula Q) -> list (list (NFormula * T)))
+  H : True
+  H0 : True
+  ============================
+   (f x = f y)
+
+
+Debug: Going to execute:
+<ltac_plugin::flatten_contravariant_conj@0> $1
+
+
+TcDebug (23) > 
+Debug: Level 23: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  FunChoice : FunctionalChoice
+  SetoidFunSymmetric : ExtensionalFunctionalChoice
+  Evaluated_eq_ext : ExtensionalFunctionalChoice
+  x : elt
+  f : list (QFormula Q) -> list (list (NFormula * T)))
+  H : True
+  H0 : True
+  Some d : list (of_list (QFormula * T)) (f y)
+  f0 : list (QFormula * T)
+  Hf0 : True
+  g : list (C * Q_bool)
+  f : list (C * Q_bool)
+  x0 : list (X.t * c :: nil) -> list (Q.t * c :: nil)
+  y : elt
+  H0 : False
+  H1 : True
+  ============================
+   (relation f0 y)
+
+
+Goal:
+  
+  FunChoice : FunctionalChoice
+  SetoidFunSymmetric : ExtensionalFunctionalChoice
+  Evaluated_eq_ext : ExtensionalFunctionalChoice
+  x0 : list (X.t * c :: nil) -> list (Q.t * c :: nil)
+  y : elt
+  H0 : True
+  H1 : True
+  ============================
+   (relation f0 y)
+
+
+Goal:
+  
+  FunChoice : FunctionalChoice
+  SetoidFunSymmetric : ExtensionalFunctionalChoice
+  Evaluated_eq_ext : ExtensionalFunctionalChoice
+  x0 : list (X.t * c :: nil) -> list (Q.t * c :: nil)
+  y : elt
+  H0 : False
+  H1 : True
+  ============================
+   (relation f0 y)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+
+
+TcDebug (23) > 
+Goal:
+  
+  FunChoice : FunctionalChoice
+  SetoidFunSymmetric : ExtensionalFunctionalChoice
+  Evaluated_eq_ext : ExtensionalFunctionalChoice
+  x0 : list (X.t * c :: nil) -> list (Q.t * c :: nil)
+  y : elt
+  H0 : False
+  H1 : True

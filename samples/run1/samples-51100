@@ -1,0 +1,94 @@
+======== SAMPLE 1 ========
+ l + 2)%Z)
+
+
+Debug: Going to execute:
+Zify.zify (fun _ => AddFvTail t fv => isZcst t)
+
+
+TcDebug (13) > 
+Debug:
+Level 13: isnatcst p
+ has value 
+true
+
+
+Goal:
+  
+  d : uint
+  IH1 : of_lu (Little.double d) = 2 * of_lu d
+  IH2 : of_lu (Little.succ_double d) = 2 * of_lu d + 1
+  ============================
+   (8 + 10 * (2 * of_lu d) = 2 * (9 + 10 * of_lu d))
+
+
+Debug: Going to execute:
+zify
+
+
+TcDebug (13) > 
+Goal:
+  
+  d : uint
+  IH1 : of_lu (Little.double d) = 2 * of_lu d
+  IH2 : of_lu (Little.succ_double d) = 2 * of_lu d + 1
+  ============================
+   (8 + 10 * (2 * of_lu d) = 2 * (9 + 10 * of_lu d))
+
+
+Debug:
+Going to execute:
+fun t fv =>
+  let f :=
+   match Cst t with
+   | NotConstant =>
+       match t with
+       | rO => fun _ => fv
+       | rI => fun _ => fv
+       | add ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+       | mul ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+       | sub ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+       | opp ?t1 => fun _ => TFV t1 fv
+       | pow ?t1 ?n =>
+           match CstPow n with
+           | NotConstant => fun _ => AddFvTail t fv
+           | _ => fun _ => TFV t1 fv
+           end
+       | _ => fun _ => AddFvTail t fv
+       end
+   | _ => fun _ => fv
+   end
+
+ in
+ f ltac:(())
+in
+TFV t fv
+
+
+TcDebug (12) > 
+Goal:
+  
+  d : uint
+  IH1 : of_lu (Little.double d) = 2 * of_lu d
+  IH2 : of_lu (Little.succ_double d) = 2 * of_lu d + 1
+  ============================
+   (8 + 10 * (2 * of_lu d) = 2 * (9 + 10 * of_lu d))
+
+
+Debug:
+Going to execute:
+fun t fv =>
+  let f :=
+   match Cst t with
+   | NotConstant =>
+       match t with
+       | rO => fun _ => fv
+       | rI => fun _ => fv
+       | add ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+       | mul ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+       | sub ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+       | opp ?t1 => fun _ => TFV t1 fv
+       | pow ?t1 ?n =>
+            match CstPow n with
+            | NotConstant => fun _ => AddFvTail t fv
+          

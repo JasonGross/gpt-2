@@ -1,0 +1,94 @@
+======== SAMPLE 1 ========
+ r -> False
+  eqA : relationA x y l -> eqA a x l -> match l with Fnorm0
+  || Fnorm0 (fnorm0 (fst b)) (fst (Some d) (Some e) (Some d)) -> eqA a x l -> Fnorm0 a l
+  end
+
+
+TcDebug (1) > 
+Goal:
+  
+  b : elt
+  l : list elt
+  H : fnorm0 (fst - 1) l
+  H1 : fnorm1 d l
+  H2 : fnorm2 d (Some d) l
+  H3 : fnorm2 d (Some e) l
+  H4 : Some snd
+  H5 : gt_tree x a
+  ============================
+   (findA eqA (fst (fst b)) (fst (Some d) (Some e) (Some d)) =
+    (findA eqA (fst (fst b)) (fst (Some d) (Some e) (Some d))
+      (findA eqA (fst (fst b) (fslist d l)) (fst (fst b)))))
+
+
+Goal:
+  
+  b : elt
+  l : list elt
+  H : fnorm0 (fst - 1) l
+  H1 : fnorm1 d l
+  H2 : fnorm2 d (Some d) l
+  H3 : fnorm2 d (Some e) l
+  H4 : Some snd
+  H5 : gt_tree x a
+  ============================
+   (findA eqA (fst (fst b)) (fst (Some d) (Some e) (Some d)) =
+    (findA eqA (fst (fst b)) (fst (Some d) (Some e) (Some d))
+      (findA eqA (fst (fst b) (fslist d l)) (fst (fst b)))))
+
+
+Goal:
+  
+  b : elt
+  l : list elt
+  H : fnorm0 (fst - 1) l
+  H1 : fnorm1 d l
+  H2 : fnorm2 d (Some d) l
+  H3 : fnorm2 d (Some e) l
+  H4 : Some snd
+  H5 : gt_tree x a
+  ============================
+   (findA eqA (fst (fst b)) (fst (Some d) (Some e) (Some d)) =
+    (findA eqA (fst (fst b)) (fst (Some d) (Some e) (Some d))
+      (findA eqA (fst (fst b) (fslist d l)) (fst (fst b)))))
+
+
+Debug: Going to execute:
+f s'
+
+
+TcDebug (2) > 
+Goal:
+  
+  b : elt
+  l : list elt
+  H : fnorm0 (fst - 1) l
+  H1 : fnorm1 d l
+  H2 : fnorm2 d (Some d) l
+  H3 : fnorm2 d (Some e) l
+  H4 : Some snd
+  H5 : gt_tree x a
+  ============================
+   (findA eqA (fst (fst b)) (fst (Some d) (Some e) (Some d)) =
+    (findA eqA (fst (fst b)) (fst (Some d) (Some e) (Some d))
+     (findA eqA (fst (fst b)) (fst (Some d) (Some e) (Some d)))))
+
+
+Debug: Going to execute:
+getA f
+
+
+TcDebug (3) > 
+Goal:
+  
+  b : elt
+  l : list elt
+  H : fnorm0 (fst - 1) l
+  H1 : fnorm1 d l
+  H2 : fnorm2 d (Some d) l
+  H3 : fnorm2 d (Some e) l
+  H4 : Some snd
+  H5 : gt_tree x a
+  ============================
+   (findA eqA (fst (fst b)) (fst (Some d)

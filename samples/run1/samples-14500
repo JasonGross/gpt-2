@@ -1,0 +1,112 @@
+======== SAMPLE 1 ========
+  H : InT x acc
+  H0 : InA x0 (remove x acc)
+  H2 : ~ InT x (remove x acc)
+  ============================
+   (InT x (remove x acc) <-> (InT x x0 /\ X.eq x a \/ InA x0 /\ X.eq x x0 \/ InA x acc))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  A : Type
+  x0 : X.t
+  a : X.t
+  acc : list X.t
+  Heq : X.eq x x0
+  H : InT x acc
+  H0 : InA x0 (remove x acc)
+  H2 : ~ InT x (remove x acc)
+  ============================
+   (InT x (remove x acc) <-> (InT x x0 /\ X.eq x a \/ InA x0 /\ X.eq x x0 \/ InA x acc))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  A : Type
+  x0 : X.t
+  a : X.t
+  acc : list X.t
+  Heq : X.eq x x0
+  H : InT x acc
+  H0 : InA x0 (remove x acc)
+  H2 : ~ InT x (remove x acc)
+  ============================
+   (InT x (remove x acc) <-> (InT x x0 /\ X.eq x a \/ InA x0 /\ X.eq x x0) \/ InA x acc))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  A : Type
+  x0 : X.t
+  a : X.t
+  acc : list X.t
+  Heq : X.eq x x0
+  H : InT x acc
+  H0 : InA x0 (remove x acc)
+  H2 : ~ InT x (remove x acc)
+  ============================
+   (InT x (remove x acc) <-> (InT x x0 /\ X.eq x a \/ InA x0 /\ X.eq x x0) \/ InA x acc))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  A : Type
+  x0 : X.t
+  a : X.t
+  acc : list X.t
+  Heq : X.eq x x0
+  H : InT x acc
+  H0 : InA x0 (remove x acc)
+  H2 : ~ InT x (remove x acc)
+  ============================
+   (InT x (remove x acc) <-> (InT x x0 /\ X.eq x a \/ InA x0 /\ X.eq x x0) \/ InA x acc))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : X.t
+  A : Type
+  x0 : X.t
+  a : X.t
+  acc : list X.t
+  Heq : X.eq x x0
+  H : InT x acc
+  H0 : InA x0 (remove x acc)
+  H2 : ~ InT x (remove x acc)
+  ============================
+   (InT x (remove x acc) <-> (InT x x0 /\ X.eq x a \/ InA x0 /\ X.eq x x0) \/ InA x acc))
+
+
+Debug: Going to execute:
+<

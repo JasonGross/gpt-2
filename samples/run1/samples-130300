@@ -1,0 +1,83 @@
+======== SAMPLE 1 ========
+ x) (f : NFormula),
+         eval_Psatz l e2 = Some f ->
+         (forall f' : NFormula,
+          In f' (extract_hyps l (nhyps_of_psatz e2)) -> eval_nformula env f') ->
+         eval_nformula env f
+  l : list NFormula
+  f : NFormula
+  H0 : forall f' : NFormula,
+       In f' (extract_hyps l (nhyps_of_psatz e1 ++ nhyps_of_psatz e2)) ->
+       eval_nformula env f'
+  n : NFormula
+  H : eval_Psatz l e2 = Some n
+  n0 : NFormula
+  H1 : eval_Psatz l e1 = Some n0
+  H2 : nformula_plus_nformula n0 n = Some f
+  f' : NFormula
+  H3 : In f' (extract_hyps l (nhyps_of_psatz e2))
+  ============================
+   (In f' (extract_hyps l (nhyps_of_psatz e2)))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  env : PolEnv
+  e1 : Psatz
+  e2 : Psatz
+  IHe1 : forall (l : list NFormula) (f : NFormula),
+         eval_Psatz l e1 = Some f ->
+         (forall f' : NFormula,
+          In f' (extract_hyps l (nhyps_of_psatz e1)) -> eval_nformula env f') ->
+         eval_nformula env f
+  IHe2 : forall (l : list NFormula) (f : NFormula),
+         eval_Psatz l e2 = Some f ->
+         (forall f' : NFormula,
+          In f' (extract_hyps l (nhyps_of_psatz e2)) -> eval_nformula env f') ->
+         eval_nformula env f
+  l : list NFormula
+  f : NFormula
+  H0 : forall f' : NFormula,
+       In f' (extract_hyps l (nhyps_of_psatz e1 ++ nhyps_of_psatz e2)) ->
+       eval_nformula env f'
+  n : NFormula
+  H : eval_Psatz l e2 = Some n
+  n0 : NFormula
+  H1 : eval_Psatz l e1 = Some n0
+  H2 : nformula_plus_nformula n0 n = Some f
+  f' : NFormula
+  H3 : In

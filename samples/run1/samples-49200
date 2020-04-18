@@ -1,0 +1,130 @@
+======== SAMPLE 1 ========
+ant m2
+  e1 : X.eq x k
+  H : e1 = e1 \/ MapsTo k e1 (Node m1 k' e2')
+  ============================
+   (MapsTo k e1 (Node m1 k' e2'))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m1 : t elt
+  m2 : t elt
+  k : key
+  e : elt
+  m3 : t elt
+  m4 : t elt
+  Hm4 : Empty m2 = NoDupA m3
+  Hm5 : snd m2 m3 = snd (m4 m1) m4
+  Hx : a = 1
+  Hnil : Ok nil
+  H1 : mem x m1 = true
+  H2 : a = 1
+  H' : False
+  H3 : False
+  ============================
+   (MapsTo k e m1 \/ MapsTo k e m2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m1 : t elt
+  m2 : t elt
+  k : key
+  e : elt
+  m3 : t elt
+  m4 : t elt
+  Hm4 : Empty m2 = NoDupA m3
+  Hm5 : snd m2 m3 = snd (m4 m1) m4
+  Hx : a = 1
+  Hnil : Ok nil
+  H1 : mem x m1 = true
+  H2 : a = 1
+  H' : False
+  H3 : False
+  ============================
+   (MapsTo k e m1 \/ MapsTo k e m2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m1 : t elt
+  m2 : t elt
+  k : key
+  e : elt
+  m3 : t elt
+  m4 : t elt
+  Hm4 : Empty m2 = NoDupA m3
+  Hm5 : snd m2 m3 = snd (m4 m1) m4
+  Hx : a = 1
+  Hnil : Ok nil
+  H1 : mem x m1 = true
+  H2 : a = 1
+  H' : False
+  H3 : False
+  ============================
+   (MapsTo k e m1 \/ MapsTo k e m2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m1 : t elt
+  m2 : t elt
+  k : key
+  e : elt
+  m3 : t elt
+  m4 : t elt
+  Hm4 : Empty m2 = NoDupA m3
+  Hm5 : snd m2 m3 = snd (m4 m1) m4
+  Hx : a = 1
+  Hnil : Ok nil
+  H1 : mem x m1 = true
+  H2 : a = 1
+  H' : False
+  H3 : False
+  ============================
+   (MapsTo k e m1 \/ MapsTo k e m2)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  m1 : t elt
+  m2 : t elt
+  k : key
+  e : elt
+  m3 : t elt
+  m4 : t elt
+  Hm4 : Empty m2 = NoDupA m3
+  Hm5 : snd m2 m3 = snd (m4 m

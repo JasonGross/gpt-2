@@ -1,0 +1,109 @@
+======== SAMPLE 1 ========
+, bst m
+  H1 : bst l
+  H2 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : MapsTo x e l
+  ============================
+   (lt_tree y d -> MapsTo y d)
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  ll : t elt
+  o : option elt
+  rl : t elt
+  e1 : split x l = << ll, o, rl >>
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : MapsTo x e l
+  H : c = c * y0 /\ y1 = c
+  f0_compat : forall (x y0 : X.t) (o : option elt) (o' : option elt'),
+              X.eq x y0 -> f0 x o o' = f0 x o o'
+  f' := fun x : elt => f0 x = true
+        : option elt -> option elt' -> option elt''
+  H5 : bst l
+  H6 : bst r
+  l0 : MX.TO.lt y0 y
+  l1 : MX.TO.lt x y0
+  H9 : MX.TO.eq y0 y
+  H2 : MX.TO.lt y0 x
+  H10 : MX.TO.eq y0 y
+  ============================
+   (Some d = find y0 l1)
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (23) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  ll : t elt
+  o : option elt
+  rl : t elt
+  e1 : split x l = << ll, o, rl >>
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : MapsTo x e l
+  H : c = c * y0 /\ y1 = c
+  f0_compat : forall (x y0 : X.t) (o : option elt) (o' : option elt'),
+              X.eq x y0 -> f0 x o o' = f0 x o o'
+  f' := fun x : elt => f0 x = true
+        : option elt -> option elt' -> option elt''
+  H5 : bst l
+  H6 : bst r
+  l0 : MX.TO.lt y0 y
+  l1 : MX.TO.lt x y0
+  H2 : MX.TO.lt y0 x
+  H10 : MX.TO.eq y0 y
+  ============================
+   (Some d = find y0 l1)
+
+
+Debug:
+Going to execute:
+match R with
+| MX.TO.eq => fail 1
+| MX.TO.lt => fail 1
+| MX.TO.le => fail 1
+| _ =>
+    change_no_check (MX.TO.eq x y) in H ||
+      change_no_check (MX.TO.lt x y) in H ||
+        change_no_check (MX.TO.le x y) in H || clear H || fail 1;
+     MX.OrderTac.order_prepare
+end
+
+
+TcDebug (22) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt

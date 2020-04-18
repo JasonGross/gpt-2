@@ -1,0 +1,97 @@
+======== SAMPLE 1 ========
+ C : Type
+  Q : Prop
+  q : relation
+  cl : list X.t,
+           Qlist.Tc x (flist (x e c n) (nlist flist x e c) (nlist listlist e f)
+  c : clause
+  x : t
+  e : t
+  f := fun x : t => eval_clause env x f : clause
+   : Ensemble (eval_tt env) cl c
+  I (x e f) : eval_clause env (pf f) <->
+       eval_clause env (pf f)
+  c : clause
+  H : make_unop_constr s c
+  ============================
+   (make_spec (x e f) c <-> make_constr (x e f) c)
+
+
+Debug: Going to execute:
+fun red in
+
+assert (pf lH) : isn
+   true <> true -> exists (filter n d') (filter (d n (elements s m.inter pf lh))
+
+
+Debug: Going to execute:
+red in
+assert (pf lH) : isn
+   true <> true -> exists (filter n d')
+
+
+Goal:
+  
+  x : t
+  e : t
+  f := fun x : t => eval_clause env x f : clause
+   : Ensemble (eval_tt env) cl c
+  I (x e f) : eval_clause env (pf f) <->
+       eval_clause env (pf f)
+  c : clause
+  H : make_unop_constr s c
+  ============================
+   (make_spec (x e f) c <->
+      eval_clause env (pf f)
+       eval_clause env (pf f)
+  c : clause
+  H : make_unop_constr c c
+  H4 : eval_clause env pf c
+  H0 : make_funcl x c -> x ~= c
+  let lH := fresh in
+         eval_clause env (pf lH)
+     : Ensemble (eval_tt env) cl (C:Checker c lH)
+     : Evaluatedt
+     : Type
+        eval_tt env a ?Tc => 
+        eval_tt env a c ?X n
+         (make_impl (x e f f) c *\ eval_clause env a ?Tc r ?Tc r) lH)
+
+
+Debug: Going to execute:
+<ltac_plugin::red@0>%list
+
+
+TcDebug (3) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : t
+  e : t
+  f := fun x : t => eval_clause env x f : clause
+   : Ensemble (eval_tt env) cl c
+  I (x e f) : eval_clause env (pf f) <->
+      eval_clause env (pf f)
+  c : clause
+  H : make_unop_constr s c
+  H3 : false = true
+  ============================
+   (false = true && false)
+
+
+Debug: Going to execute:
+t_reduce | vm_compute; autoadd mul;
+       t_reduce; autoadd (t_mul_1) mul
+      
+         Hmul (t_mul_1) 1 cmul
+                fold mul;
+           [semble (mul_1 (mk_mul_1 _x3) mul;
+                  eval_clause env; [semble  Hmul | | (?x <= y :: 0)%poly ?x = ?y =>
+                match check_

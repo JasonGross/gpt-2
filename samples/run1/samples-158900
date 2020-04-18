@@ -1,0 +1,97 @@
+======== SAMPLE 1 ========
+ intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  a : Z
+  b : Z
+  x : Z
+  H : forall y : Z,
+      0 <= y < x ->
+      0 <= y ->
+      forall u1 u2 u3 v1 v2 : Z,
+      u1 * a + u2 * b = u3 ->
+      v1 * a + v2 * b = y ->
+      (forall d : Z, Zis_gcd u3 y d -> Zis_gcd a b d) -> Euclid
+  H0 : 0 <= x
+  Hv3 : 0 <= x
+  u1 : Z
+  u2 : Z
+  u3 : Z
+  v1 : Z
+  v2 : Z
+  H1 : u1 * a + u2 * b = u3
+  H2 : v1 * a + v2 * b = x
+  H3 : forall d : Z, Zis_gcd u3 x d -> Zis_gcd a b d
+  Hneq : x <> 0
+  Hneq' : 0 <= u1 * a + u2 * b
+  ============================
+   (u1 * a + u2 * b * (u1 * a + u2 * b) =
+    (u1 * a + u2 * b * (u1 * a + u2 * b)) *
+    (u2 * b * (u2 * a + u2 * b))%Z)
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (2) > 
+Goal:
+  
+  a : Z
+  b : Z
+  x : Z
+  H : forall y : Z,
+      0 <= y < x ->
+      0 <= y ->
+      forall u1 u2 u3 v1 v2 : Z,
+      u1 * a + u2 * b = u3 ->
+      v1 * a + v2 * b = y ->
+      (forall d : Z, Zis_gcd u3 y d -> Zis_gcd a b d) -> Euclid
+  H0 : 0 <= x
+  Hv3 : 0 <= x
+  u1 : Z
+  u2 : Z
+  u3 : Z
+  v1 : Z
+  v2 : Z
+  H1 : u1 * a + u2 * b = u3
+  H2 : v1 * a + v2 * b = x
+  H3 : forall d : Z, Zis_gcd u3 x d -> Zis_gcd a b d
+  Hneq : x <> 0
+  Hneq' : 0 <= u1 * a + u2 * b
+  ============================
+   (u1 * a + u2 * b * (u1 * a + u2 * b) =
+    (u1 * a + u2 * b * (u1 * a + u2 * b)) *
+    (u2 * b * (u2 * a + u2 * b))%Z)
+
+
+Debug: Going to execute:
+f ltac:(())
+
+
+TcDebug (2) > 
+Goal:
+  
+  a : Z
+  b : Z
+  x : Z
+  H : forall y : Z,
+      0 <= y < x ->
+      0 <= y ->
+      forall u1 u2 u3 v1 v2 : Z,
+      u1 * a + u2 * b = u3 ->
+      v1 * a + v2 * b = y ->
+      (forall d : Z, Zis_gcd u3 y d -> Zis_gcd a b d) -> Euclid
+  H0 : 0 <= x
+  Hv3 : 0 <= x
+  u1 : Z
+  u2 : Z
+  u3 : Z
+  v1 : Z
+  v2 : Z
+  H1 : u1 * a + u2 * b = u3
+  H2 : v1 * a + v2 * b = x
+  H3 : forall

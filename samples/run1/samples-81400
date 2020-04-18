@@ -1,0 +1,141 @@
+======== SAMPLE 1 ========
+_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt y x
+  e1 : X.compare x y = GT _x
+  H1 : X.eq y x -> In y (add x e r)
+  H3 : In y r
+  H0 : In y h
+  H5 : In y s
+  H6 : In y s -> In y (add x e r)
+  ============================
+   (X.eq y y)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt y x
+  e1 : X.compare x y = GT _x
+  H1 : X.eq y x -> In y (add x e r)
+  H3 : In y r
+  H0 : In y h
+  H5 : In y s
+  H6 : In y s -> In y (add x e r)
+  ============================
+   (X.eq y y)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt y x
+  e1 : X.compare x y = GT _x
+  H1 : X.eq y x -> In y (add x e r)
+  H3 : In y r
+  H0 : In y h
+  H5 : In y s
+  H6 : In y s -> In y (add x e r)
+  ============================
+   (X.eq y y)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt y x
+  e1 : X.compare x y = GT _x
+  H1 : X.eq y x -> In y (add x e r)
+  H3 : In y r
+  H0 : In y h
+  H5 : In y s
+  H6 : In y s -> In y (add x e r)
+  ============================
+   (X.eq y y)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt y x
+  e1 : X.compare x y = GT _x
+  H1 : X.eq y x -> In y (add x e r)
+  H3 : In y r
+  H0 : In y h
+  H5 : In y s
+  H6 : In y s -> In y (add x e r)
+  ============================
+   (X.eq y y)
+
+
+Debug

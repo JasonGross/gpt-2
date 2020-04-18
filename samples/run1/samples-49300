@@ -1,0 +1,119 @@
+======== SAMPLE 1 ========
+c := Seq_res q2 r1 r2')
+
+
+Debug: Going to execute:
+clear nz
+
+
+TcDebug (3) > 
+Goal:
+  
+  ============================
+   ((forall q : key -> option elt -> option elt' -> option elt''))%type
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (3) > 
+Debug: Level 3: nz is used implicitly in mapr in SORaddon in hypothesis mapr_bst.
+
+Debug: Level 3: mapr is used in hypothesis mapr_bst.
+
+Debug: Level 3: mapr is used in hypothesis mapr_bst.
+
+Debug: Level 3: mapr is used in hypothesis mapr_bst.
+
+Goal:
+  
+  ============================
+   ((forall q : key -> option elt -> option elt' -> option elt''))%type
+
+
+Debug: Going to execute:
+assert (eqn : t elt -> t elt')
+
+
+TcDebug (3) > 
+Debug: Evaluated term: t
+
+Goal:
+  
+  ============================
+   ((forall q : key -> option elt -> option elt'' -> option elt'')
+
+
+Debug: Going to execute:
+exact (lt_opt x o o')
+
+
+TcDebug (3) > 
+Debug: Evaluated term: (lt_opt x o o')
+
+Goal:
+  
+  ============================
+   ((forall q : key -> option elt -> option elt'' -> option elt'')%type
+
+)%type
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (3) > 
+Goal:
+    s : t
+  ============================
+   (forall (k : key) (e0 : elt),
+    [ exact p0 == (e0, p0) -> key -> elt', Empty lt_list pk e0) ->
+    s' -> s [=] s [=] s') -> t elt''
+  ============================
+   ((forall q : key -> option elt -> option elt'' -> option elt'')
+     i : t
+   s' : t
+  b : elt
+  p : t elt
+  H0 : key -> elt''
+  E1 : t elt' -> option elt''
+  H : None
+  H1 : t elt''
+  e : elt
+  H2 : t elt''
+  e' : elt''
+  H3 : t elt''
+  ============================
+   (forall p : key -> option elt -> option elt''
+    [ exact p0 == (e0, p0) -> key -> elt', Empty lt_list pk e0) ->
+    t elt''
+  ============================
+   (forall q : key -> elt -> option elt'' -> option elt'')
+
+
+Debug: Going to execute:
+exact (Le_lt_opt p q)
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (Le_lt_opt p q)
+
+Goal:
+  
+  ============================
+   ((forall n : t elt,
+    P : t elt -> E.t ]
+     l : list (t elt)
+     q : t elt -> elt
+     ============================
+    (forall (x : 9) (i : t elt),
+     X : elt -> E.t ]
+     P2 : t elt
+     q : t elt -> elt -> P2 : t elt
+     lm : list (t elt)
+     q0 : t elt
+     QSeq : (e : elt) (d : elt) (r : t elt) <-> (QSeq -> Rd (e, d) -> e r) /\ 0 <= Qdistr q r
+     q1 : t elt
+       in : (QSeq -> R

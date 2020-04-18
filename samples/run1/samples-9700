@@ -1,0 +1,27 @@
+======== SAMPLE 1 ========
+
+           match CstPow n with
+                          Ring_polynom.PEX C p
+                      | ?c => fun _ => ring_polynom.PEc c
+                           Ring_polynom.PEpow 0 1 p
+                               Ring_polynom.PEX C
+                              Ring_polynom.PEX C
+                                   Ring_polynom.PEX C
+                                        Ring_polynom.PEX C
+                                       Ring_polynom.PEX C
+                                       Ring_polynom.PEX C
+                                               Ring_polynom.PEX C
+                                         Ring_polynom.PEX C
+                                              Ring_polynom.EPex C
+                                            Ring_polynom.PEX C
+                                        Ring_polynom.PEX C
+                                    Ring_polynom.PEX C ring_polynom.PEX C p
+                               Ring_polynom.PEX C
+                                 Ring_polynom.PEX C
+                                    Ring_polynom.PEX C
+                                 Ring_polynom.PEX C ring_polynom.P_phi 1
+                                Ring_polynom.P_mma @@ 1 # H
+                   Ring_polynom.PEc 0 @@ 1 # H
+                 Ring_polynom.PEO 1
+                          Ring_polynom.EX Q 2
+              

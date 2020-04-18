@@ -1,0 +1,95 @@
+======== SAMPLE 1 ========
+ : list (X.t * D.t)
+  t : X.t
+  l : list (X.t * D.t)
+  H : In t m1
+  H2 : In x at l
+  ============================
+   (InT x m1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+ [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  e : D.t
+  m1 : list (X.t * D.t)
+  IHm1 : forall (Hm1 : Sorted (Raw.PX.ltk (elt:=D.t)) m1) (m2 m3 : t),
+        lt {| this := m1; sorted := Hm1 |} m2 ->
+        lt m2 m3 -> lt {| this := m1; sorted := Hm1 |} m3
+  x' : X.t
+  e' : D.t
+  m2 : list (X.t * D.t)
+  Heq : X.eq x x'
+  H0 : D.eq e e'
+  H1 : lt_list m1 m2
+  H3 : lt_list m2 m3
+  H4 : gt_list m1 m3
+  H2 : In x' m1
+  ============================
+   (InT x m1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  e : D.t
+  m1 : list (X.t * D.t)
+  IHm1 : forall (Hm1 : Sorted (Raw.PX.ltk (elt:=D.t)) m1) (m2 m3 : t),
+        lt {| this := m1; sorted := Hm1 |} m2 ->
+        lt m2 m3 -> lt {| this := m1; sorted := Hm1 |} m3
+  x' : X.t
+  e' : D.t
+  m2 : list (X.t * D.t)
+  Heq : X.eq x x'
+  H0 : D.eq e e'
+  H1 : lt_list m1 m2
+  H3 : lt_list m2 m3
+  H4 : gt_list m1 m3
+  H2 : In x' m1
+  ============================
+   (InT x m1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  e : D.t
+  m1 : list (X.t * D.t)
+  IHm1 : forall (Hm1 : Sorted (Raw.PX.ltk (elt:=D.t)) m1) (m2 m3 : t),
+        lt {| this := m1; sorted := Hm1 |} m2 ->
+        lt m2 m3 -> lt {| this := m1; sorted := Hm1 |} m3
+  x' : X.t
+  e' : D.t
+  m2 : list (X.t * D.t)
+  Heq : X.eq x x'
+  H0 : D.eq e e'
+  H1 : lt_list m1 m2
+  H3 : lt_list m2 m3
+  H4 : gt_list m1 m3
+  H2 : In x' m1
+  ============================
+   (InT x m1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (

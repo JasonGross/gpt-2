@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+_tree x1 r1
+  y : elt
+  H0 : E.eq y x1
+  H : InT y l1
+  H3 : InT y t1
+  ============================
+   (InT y r1 /\ E.eq y x1 \/ InT y t1 /\ X.lt x y -> InT y r1 \/ InT y r2)
+
+
+Debug: Going to execute:
+<g_plugin::flatten_tree@0> $1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> A
+  Comp : Proper (E.eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  k : key
+  l : (key * elt)%type
+  e : elt
+  i : A
+  y : elt
+  H0 : E.eq y x1
+  H : InT y l1
+  H3 : InT y t1
+  ============================
+   (InT y r1 /\ E.eq y x1 \/ InT y t1 /\ X.lt x y -> InT y r1 \/ InT y r2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.flatten_tree@0> $1 $2
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> A
+  Comp : Proper (E.eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  k : key
+  l : (key * elt)%type
+  e : elt
+  y : elt
+  H0 : E.eq y x1
+  H : InT y l1
+  H3 : InT y t1
+  ============================
+   (InT y r1 /\ E.eq y x1 \/ InT y t1 /\ X.lt x y -> InT y r1 \/ InT y r2)
+
+
+Debug: Going to execute:
+fun => <Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> A
+  Comp : Proper (E.eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  k : key
+  l : (key * elt)%type
+  e : elt
+  y : elt
+  H0 : E.eq y x1
+  H : InT y l1
+  H3 : InT y t1
+  ============================
+   (InT y r1 /\ E.eq y x1 \/ InT y t1 /\ X.lt x y -> InT y r1 \/ InT y r2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> A
+  Comp : Proper (E.eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  k : key
+  l : (key * elt)%type
+  e : elt
+  y : elt
+  H0 : E.eq y x1
+  H : InT y l1
+  H3 : InT y t1
+  ============================
+   (InT y

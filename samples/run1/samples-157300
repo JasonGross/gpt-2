@@ -1,0 +1,126 @@
+======== SAMPLE 1 ========
+auto_intuit
+
+
+TcDebug (1) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  s : t
+  s' : t
+  H : forall a : elt, In a s -> In a s'
+  a : elt
+  H0 : In a (union s s')
+  H1 : false = true
+  H2 : In a s
+  ============================
+   (false = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (1) > 
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  s : t
+  s' : t
+  H : forall a : elt, In a s -> In a s'
+  a : elt
+  H0 : In a (union s s')
+  H1 : false = true
+  H2 : In a s
+  ============================
+   (false = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  s : t
+  s' : t
+  H : forall a : elt, In a s -> In a s'
+  a : elt
+  H0 : In a (union s s')
+  H1 : false = true
+  H2 : In a s
+  ============================
+   (false = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  s : t
+  s' : t
+  H : forall a : elt, In a s -> In a s'
+  a : elt
+  H0 : In a (union s s')
+  H1 : false = true
+  H2 : In a s
+  ============================
+   (false = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  s : t
+  s' : t
+  H : forall a : elt, In a s -> In a s'
+  a : elt
+  H0 : In a (union s s')
+  H1 : false = true
+  H2 : In a s
+  ============================
+   (false = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  s : t
+  s' : t
+  H : forall a : elt, In a s -> In a s'
+  a : elt
+  H0

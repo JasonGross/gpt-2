@@ -1,0 +1,163 @@
+======== SAMPLE 1 ========
+eq y x  H1 : m <= f0 x /\ f0 y = true
+  ============================
+   (n <= m -> MapsTo f0 (f h) (f0 h h))
+
+
+Debug: Going to execute:
+H
+
+
+TcDebug (6) > 
+Debug: Level 6: H
+ has value 
+f
+
+
+Goal:
+    a : Q  n : positive
+  ============================
+   (n <= - a \/ n <= - a \/ ltof_cn f0)
+
+
+Debug: Going to execute:
+unfold f
+
+
+TcDebug (6) > 
+Goal:
+    a : Q  n : positive
+  ============================
+   (n <= - a \/ n <= - a \/ ltof_cn f0)
+
+
+Debug:
+Going to execute:
+match goal with
+| H:f ?l |- _ => is_list_constr l; inversion_clear H; invlist f
+end
+
+
+TcDebug (6) > 
+Goal:
+    a : Q  n : positive
+  ============================
+   (n <= - a \/ n <= - a \/ ltof_cn f0)
+
+
+Debug: Going to execute:
+is_list_constr l; inversion_clear H; invlist f
+
+
+TcDebug (7) > 
+Goal:
+    a : Q  n : positive
+  ============================
+   (n <= - a \/ n <= - a \/ ltof_cn f0)
+
+
+Debug: Going to execute:
+is_list_constr l; inversion_clear H
+
+
+TcDebug (7) > 
+Goal:
+    a : Q  n : positive
+  ============================
+   (n <= - a \/ n <= - a \/ ltof_cn f0)
+
+
+Debug:
+Going to execute:
+fun c => match c with
+         | nil => idtac
+         | _ :: _ => idtac
+         | _ => fail
+         end
+
+
+TcDebug (8) > 
+Goal:
+    a : Q  n : positive
+  ============================
+   (n <= - a \/ n <= - a \/ ltof_cn f0)
+
+
+Debug:
+Going to execute:
+match c with
+| nil => idtac
+| _ :: _ => idtac
+| _ => fail
+end
+
+
+TcDebug (8) > 
+Goal:
+    a : Q  n : positive
+  ============================
+   (n <= - a \/ n <= - a \/ ltof_cn f0)
+
+
+Debug: Going to execute:
+c
+
+
+TcDebug (9) > 
+Debug: Level 9: c
+ has value 
+nil
+
+
+Goal:
+    a : Q  n : positive
+  ============================
+   (n <= - a \/ n <= - a \/ ltof_cn f0)
+
+
+Debug: Going to execute:
+idtac
+
+
+TcDebug (9) > 
+Debug: Level 8: evaluation returns
+<tactic closure>
+
+
+Debug: Level 6: evaluation returns
+<tactic closure>
+
+
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+    a : Q  n : positive
+  ============================
+   (n <= - a \/ n <= - a \/ ltof_cn f0)
+
+
+Debug:
+Going to execute:
+intros x y z, add_add_assoc_lem l y_gen,
+        add_assoc_lem (add_assoc_opp Eq) l 
+
+
+TcDebug (1) > 
+Goal:
+    a : Q  n : positive
+  ============================
+   (n <= - a \/ n <= - a \/ ltof_cn f0)
+
+
+Debug: Going to execute:
+gen_add_opp_n, add_add

@@ -1,0 +1,82 @@
+======== SAMPLE 1 ========
+ elt : Type
+  l : list (Term' * Annot)
+  c : clause
+  t0 : list (Term' * Annot)
+  H0 : c = nil ->
+        match c with
+        | t0 :: l0 :: nil => l0 /\ make_conj l1 l2
+        | t0 :: l1 :: nil => l1 /\ make_conj l2 nil
+        end
+  H1 : (Term' * Annot)%type
+  ============================
+   (forall a : Term',
+    deduce (fst (a, b)) (fst (a, b)) =
+        match cst 0 m with
+        | Some d => None m ->
+         | None => Some e2
+         end
+       end
+    | Some d' => if match isLeaf elt with
+              | Some d' => fst m
+              end
+    | None => None
+    end = None ->
+    forall m : list (Term' * Annot),
+     (forall a : Term',
+     deduce (fst (a, b)) (fst (a, b)) =
+        match cst m with
+          | Some d => fst a -> False
+          | None => None m
+          end) m)
+   end = None ->
+    Some e2 = None ->
+    forall m : list (Term' * Annot),
+     None = Some e2 ->
+    forall m' : list (list (Term' * Annot))
+  m' : list (Term' * Annot))
+  H : None = Some e2
+  ============================
+   (forall m : list (Term' * Annot),
+     (Some e1 = Some e2 ->
+     match cst m with
+      | Some d' => fst m' ->
+      Some e' = Some e' -> cmp e1 e2 = None) ->
+      forall m : list (Term' * Annot),
+     None = Some e1
+     _ => None
+     end)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  a : list (Term' * Annot)
+  b : list (Term' * Annot)
+  c : clause
+  t : list (Term' * Annot)
+  f : cnf
+  H0 : c = nil ->
+       In a (Choice m') -> True
+  H1 : (eval

@@ -1,0 +1,111 @@
+======== SAMPLE 1 ========
+>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H4 : Ok l1
+  H9 : Ok r1
+  H10 : lt_tree x1 l1
+  H11 : gt_tree x1 r1
+  H : X.eq x1 x2
+  H0 : forall a : elt, InT a (Node c1 l1 x1 r1) -> InT a (Node c2 l2 x2 r2)
+  ============================
+   ((forall a : elt, InT a (Node c1 l1 x1 a) -> InT a l2) <->
+    (forall a : elt, InT a (Node c2 l2 x2 r2)) ->
+    InT a l2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H4 : Ok l1
+  H9 : Ok r1
+  H10 : lt_tree x1 l1
+  H11 : gt_tree x1 r1
+  H : X.eq x1 x2
+  H0 : forall a : elt, InT a (Node c1 l1 x1 r1) -> InT a (Node c2 l2 x2 r2)
+  ============================
+   ((forall a : elt, InT a (Node c1 l1 x1 a) -> InT a l2) <->
+    (forall a : elt, InT a (Node c2 l2 x2 r2)) ->
+    InT a l2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H4 : Ok l1
+  H9 : Ok r1
+  H10 : lt_tree x1 l1
+  H11 : gt_tree x1 r1
+  H : X.eq x1 x2
+  H0 : forall a : elt, InT a (Node c1 l1 x1 a) -> InT a (Node c2 l2 x2 r1)
+  ============================
+   ((forall a : elt, InT a (Node c1 l1 x1 a) -> InT a l2) <->
+    (forall a : elt, InT a (Node c2 l2 x2 r2)) ->
+    InT a l2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 :

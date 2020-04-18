@@ -1,0 +1,134 @@
+======== SAMPLE 1 ========
+ t
+  x : elt
+  y : elt
+  Hs : Ok nil
+  H0 : In y nil
+  ============================
+   (In y nil)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : elt
+  y : elt
+  Hs : Ok nil
+  H0 : In y nil
+  ============================
+   (In y nil)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : elt
+  y : elt
+  Hs : Ok nil
+  H0 : In y nil
+  ============================
+   (In y nil)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : elt
+  y : elt
+  Hs : Ok nil
+  H0 : In y nil
+  ============================
+   (In y nil)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : elt
+  y : elt
+  Hs : Ok nil
+  H0 : In y nil
+  ============================
+   (In y nil)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : elt
+  y : elt
+  Hs : Ok nil
+  H0 : In y nil
+  ============================
+   (In y nil)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (split x l)#l <-> InT y l /\ X.lt y x
+  x : elt

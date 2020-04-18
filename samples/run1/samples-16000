@@ -1,0 +1,92 @@
+======== SAMPLE 1 ========
+ (Hd ll lx (_, X.eq _ x0 y) _,
+ "X.eq y x" || true) || gt_tree x (Hd ll lx (_, X.eq _ x0 y) y) <->
+        InT y (del x (Hd ll lx (_, X.eq _ x0 y)) + 1) \/ InT y r
+  x : X.t
+  c : Info.t
+  lx : X.t
+  lrx : X.t
+  lrr : tree
+  x : X.t
+  r : tree
+  y : elt
+  e : X.eq y (Hd ll lx (Hd lrr r) <-> (X.eq y llx /\ (X.eq y lrx \/ InT y (Rd ll lx r)) \/ InT y r) \/ X.eq y x) \/ InT y r)
+  ============================
+   (X.eq y x \/ InT y (Rd ll lx (Rd lrr r) <-> InT y (Rd ll lx r))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  c : Info.t
+  lx : X.t
+  lrx : X.t
+  lrr : tree
+  x : X.t
+  r : tree
+  y : elt
+  e : X.eq y (Hd ll lx (Hd lrr r) <-> (X.eq y llx /\ (X.eq y lrx \/ InT y (Rd ll lx r)) \/ InT y r) \/ X.eq y x) \/ InT y r)
+  ============================
+   (X.eq y x \/ InT y (Rd ll lx (Rd lrr r) <-> InT y (Rd ll lx r))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  c : Info.t
+  lx : X.t
+  lrx : X.t
+  lrr : tree
+  x : X.t
+  r : tree
+  y : elt
+  e : X.eq y (Hd ll lx (Hd lrr r) <-> (X.eq y llx /\ (X.eq y lrx \/ InT y (Rd ll lx r)) \/ InT y r) \/ X.eq y x) \/ InT y r)
+  ============================
+   (X.eq y x \/ InT y (Rd ll lx (Rd lrr r) <-> InT y (Rd ll lx r))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  c : Info.t
+  lx : X.t
+  lrx : X.t
+  lrr : tree
+  x : X.t
+  r : tree
+  y : elt
+  e : X.eq y (Hd ll lx (Hd lrr r) <-> (X.eq y llx /\ (X.eq y lrx \/ InT y (Rd ll lx r)) \/ InT y r) \/ X.eq y x) \/ InT y r)
+  ============================
+   (X.eq y x \/ InT y (Rd ll lx (Rd lrr r) <-> InT y (Rd ll lx r))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  c : Info.t
+  lx : X.t
+  lrx : X.t

@@ -1,0 +1,190 @@
+======== SAMPLE 1 ========
+  False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H : x = y -> False
+  H0 : x = y
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H : x = y -> False
+  H0 : x = y
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H : x = y -> False
+  H0 : x = y
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H : x = y -> False
+  H0 : x = y
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H : x = y -> False
+  H0 : x = y
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H : x = y -> False
+  H0 : x = y
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H : x = y -> False
+  H0 : x = y
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H : x = y -> False
+  H0 : x = y
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H : x = y -> False
+  H0 : x = y
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  x : A
+  y : A
+  l : list A
+  H : x = y -> False
+  H0 : x = y
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  A :

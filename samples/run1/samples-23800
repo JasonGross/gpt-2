@@ -1,0 +1,80 @@
+======== SAMPLE 1 ========
+ow_conj (fun x : E.t => f x || g x)
+         : forall x y z : R, None (fun z : R => f x ~= z)
+  x : R
+  y : R
+  z : R
+  H : z~1 = y -> False
+  H0 : z eq_sym (fun x : R => x) y = true
+  ============================
+   (x ~= y)
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:(?X1 -> ?X2) -> ?X3
+    |- _ =>
+        cut X3;
+         [ intro; clear id; t_tauto_intuit
+         | cut (X1 -> X2);
+            [ exact
+            id
+            | generalize (fun x : X2 => id (fun x : X1 => y)); intro; clear id;
+               (solve [ t_tauto_intuit ]) ] ]
+| id:~ ?X1 -> ?X3
+    |- _ =>
+        cut X3;
+         [ intro; clear id; t_tauto_intuit
+         | cut (~ X1);
+            [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+| |- ?X1 =>
+        <Coq.Init.Tauto.is_disj> flags X1; (solve
+         [ left; t_tauto_intuit | right; t_tauto_intuit ])
+end ||
+  match goal with
+  | |- _ -> _ => intro; t_tauto_intuit
+  | |- _ => t_reduce; t_solver
+  end || t_solver
+
+
+TcDebug (2) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  Ax : positive
+  majx : forall p q : R, p == q -> / p == / q
+  Ay : positive
+  majy : forall p : R, p == q -> / p == / q
+  Az : positive
+  majz : forall p : R, p == q -> / p == / q
+  p : R
+  ============================
+   (x ~= y)
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:(?X1 -> ?X2) -> ?X3
+  |- _ =>
+      let e1 := mkPX.t in
+      let e2 := mkPX.t in
+      Ring_polynom.PEadd e1 e2
+                {|
+                 Ring_polynom.PEsub
+                    Ring_polynom.PEX C p
+                       Ring_polynom.PEsub
+                         Ring_polynom.Psatz
+                                Ring_polynom.Done
+                           

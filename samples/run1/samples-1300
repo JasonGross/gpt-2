@@ -1,0 +1,141 @@
+======== SAMPLE 1 ========
+ / _
+  l : key
+  IHt1 : eval' env' env''' = eval_clause env' env'''
+  env' : Env
+  env'_clause : clause
+  env'' : clause
+  c : clause
+  c' : clause
+  _x : value
+  c' : clause
+  IHhc : eval_clause env' env'
+  _x' : Type
+  ll : t elt
+  lx : key
+  IHc : eval_clause env' env''' = eval_clause env' env'''
+  env' : Env
+  env'_clause : clause
+  env'' : clause
+  c : clause
+  c' : clause
+  _x' : value
+  c' : clause
+  IHhc : eval_clause env' env''' = eval_clause env' env'''
+  env' : Env
+  env'_clause : clause
+  env'' : clause
+  c : clause
+  c' : clause
+  _x' : value
+  c' : clause
+  IHc : eval_clause env' env''' = eval_clause env' env'''
+  env' : Env
+  env'_clause : clause
+  env' : clause
+  c : clause
+  c' : clause
+  _x' : value
+  c' : clause
+  IHhc : eval_clause env' env''' = eval_clause env' env'''
+  env' : Env
+  env'_clause : clause
+  env' : clause
+  c : clause
+  c' : clause
+  _x' : value
+  c' : clause
+  IHhc : eval_clause env' env''' = eval_clause env' env'''
+  ============================
+   (eval_clause env' env')
+
+
+Debug:
+Going to execute:
+<Coq.Init.T auto_id0>
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : A -> Type
+  l : t elt
+  x0 : key
+  l1 : elt
+  y : A
+  x' : key
+  y0 : A
+  x : A
+  y : A
+  x', y' : key
+  y0' : A
+  y1 : A
+  y2 : A
+  y3 : A
+  y', y' : key
+  x0 : A
+  y1' : A
+  y2' : A
+  y', y' : key
+  y' : A
+  x0' : A
+  y'' : key
+  ============================
+   (eval_clause env)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : A -> Type
+  l : t elt
+  x0 : key
+  l1 : elt
+  y : A
+  x' : key
+  y0 : A
+  x', y' : key
+  x', y0' : key
+  y0' : A
+  x', y' : key
+  y0'' : A
+  x0' : A
+  y' : A
+  x0' : A
+  y' : key
+  x0' : A
+  y0' : key
+  x0' : A
+  y0' : key
+  x0'' : A
+  y0' : key
+  x0'', y' : key
+  x0', y' : key
+  x0', y' : key
+  y0', y' : key
+  x0', y' : key
+  x0', y' : key
+  x0', y' : key
+  x0', y' : key
+  x0', y' : key
+  x0', y' : key
+  x0', y' : key
+  x0', y' : key
+  ============================
+   (eval_clause env)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<t

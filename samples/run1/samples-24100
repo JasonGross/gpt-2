@@ -1,0 +1,100 @@
+======== SAMPLE 1 ========
+1) ->  (X.eq y x \/ In y s /\ f y = true <-> (X.eq y x \/ In y s -> f y = true)
+  ============================
+   ((X.eq y x \/ In y s) \/ In y s ->
+    In y s -> f y = true <-> (X.eq y x \/ In y s -> f y = true) \/
+    In y s /\ f x = true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  f : E.t -> bool
+  g : E.t -> bool
+  H : Proper (E.eq ==> Logic.eq) f
+  H0 : Proper (E.eq ==> Logic.eq) g
+  s : t
+  H1 : Proper (E.eq ==> Logic.eq) (fun x : E.t => f x || g x)
+  a : elt
+  H5 : In a s
+  H6 : X.eq a x -> False
+  H7 : In a s /\ f a = true
+  H4 : In a s
+  ============================
+   ((X.eq a x \/ In y s -> f y = true <-> (X.eq a x \/ In y s -> f y = true) \/
+    In y s /\ f x = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  f : E.t -> bool
+  g : E.t -> bool
+  H : Proper (E.eq ==> Logic.eq) f
+  H0 : Proper (E.eq ==> Logic.eq) g
+  s : t
+  H1 : Proper (E.eq ==> Logic.eq) (fun x : E.t => f x || g x)
+  a : elt
+  H5 : In a s
+  H6 : X.eq a x -> False
+  H7 : In a s /\ f a = true
+  H4 : In a s
+  ============================
+   ((X.eq a x \/ In y s -> f y = true <-> (X.eq a x \/ In y s -> f y = true) \/
+    In y s /\ f x = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  f : E.t -> bool
+  g : E.t -> bool
+  H : Proper (E.eq ==> Logic.eq) f
+  H0 : Proper (E.eq ==> Logic.eq) g
+  s : t
+  H1 : Proper (E.eq ==> Logic.eq) (fun x : E.t => f x || g x)
+  a : elt
+  H5 : In a s
+  H6 : X.eq a x -> False
+  H7 : In a s /\ f a = true
+  H4 : In a s
+  ============================
+   ((X.eq a x \/ In y s -> f y = true <-> (X.eq a x \/ In y s -> f y = true) \/
+    In y s /\ f x = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  f : E.t -> bool
+  g : E.t -> bool
+  H : Proper (E.eq ==> Logic.eq) f
+  H0 : Proper (E.eq ==> Logic.eq) g
+  s : t
+  H1 : Proper (E.eq ==> Logic.eq) (fun x : E.t => f x || g x)
+  a : elt
+  H5 : In a s
+  H6 : X.eq a x -> False
+  H7 : In a s /

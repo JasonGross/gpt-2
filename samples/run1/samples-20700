@@ -1,0 +1,121 @@
+======== SAMPLE 1 ========
+ HX (rev d) l -> InT x d rl -> InT x (join l d rl')
+  H4 : X.eq x x2
+  H1 : InT x rl
+  H5 : X.eq x l
+  H0 : X.eq x x2
+  ============================
+   (X.eq x x1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) + 2
+  _x2 : height rr >= height rll
+  y : key
+  H : InT y l
+  ============================
+   (X.eq y rx)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) + 2
+  _x2 : height rr >= height rll
+  y : key
+  H : InT y l
+  ============================
+   (X.eq y rx)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) + 2
+  _x2 : height rr >= height rll
+  y : key
+  H : InT y l
+  ============================
+   (X.eq y rx)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l +

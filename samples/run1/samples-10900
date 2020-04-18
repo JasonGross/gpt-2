@@ -1,0 +1,119 @@
+======== SAMPLE 1 ========
+ H' : Sorted X.lt l'
+  H' : Sorted X.lt l'
+  H4 : False
+  H3 : Inf x' l'
+  H1 : True
+  H7 : False
+  H4 : False
+  H0 : Inf x1 l'
+  H3 : Inf x' r'
+  H : Sorted X.lt l
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  Inf : Sorted X.lt
+  Inf' : Sorted X.lt
+  Op1 : Op1 -> Op2
+  Op2 : Op1 -> Op2
+  Op3 : Op1 -> Op3
+  X : Sorted X.lt Inf'
+  Op : X Sorted X.lt
+  Op' : X Sorted X.lt
+  U : Sorted X.lt (a :: l)
+  V : Sorted X.lt (x :: l)
+  H0 : Inf x' l'
+  H1 : True
+  H7 : False
+  H4 : False
+  H0 : Inf x1 l'
+  H3 : Inf x' r'
+  H : Sorted X.lt l
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l'
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l'
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l'
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l'
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  Inf : Sorted X.lt
+  Inf' : Sorted X.lt
+  Op1 : Op1 -> Op2
+  Op2 : Op1 -> Op2
+  Op3 : Op1 -> Op3
+  X : Sorted X.lt Inf'
+  Op : X Sorted X.lt
+  Op' : X Sorted X.lt
+  U : Sorted X.lt (a :: l)
+  V : Sorted X.lt (x :: l)
+  H0 : Inf x' l'
+  H1 : True
+  H7 : False
+  H4 : False
+  H0 : Inf x1 l'
+  H3 : Inf x' r'
+  H : Sorted X.lt l
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l'
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l'
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l'
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l'
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l'
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l'
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l'
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l'
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l'
+  H0 : Inf x1 l
+  H3 : Inf x' r
+  H : Sorted X.lt l'
+  H0 :

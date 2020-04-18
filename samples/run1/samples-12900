@@ -1,0 +1,151 @@
+======== SAMPLE 1 ========
+ ~ z1 + z2 :: x1 :: y1 :: z1 :: y2 :: z2 :: z1 :: y2 :: z1 :: y0 :: z :: z :: y0 :: true)
+  ============================
+   (true = In y0)
+
+
+TFV_progress x a; inv
+
+
+TcDebug (18) > 
+Goal:
+  
+  elt : Type
+  x : Q
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x y
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x r = << rl, o, rr >>
+  y0 : X.t
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  ============================
+   (In y0 /\ In y0)
+
+
+Debug: Going to execute:
+rewrite (ARadd_0_l ARth)
+
+
+TcDebug (18) > 
+Debug: Evaluated term: (ARadd_0_l ARth)
+
+Debug: Level 18: evaluation returns
+ARadd_0_l ARth
+
+
+Debug: Level 17: evaluation returns
+ARadd_0_l ARth
+
+
+Debug: Level 16: evaluation returns
+ARadd_0_l ARth
+
+
+Goal:
+  
+  elt : Type
+  x : Q
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x y
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x r = << rl, o, rr >>
+  y0 : X.t
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  ============================
+   (In y0 /\ In y0)
+
+
+Debug:
+Going to execute:
+(set_signal e2; set_add_3 ARth)
+
+
+TcDebug (15) > 
+Goal:
+  
+  elt : Type
+  x : Q
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x y
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x r = << rl, o, rr >>
+  y0 : X.t
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  ============================
+   (In y0 /\ In y0)
+
+
+Debug:
+Going to execute:
+(set_signal e2; set_add_3 ARth)
+
+
+TcDebug (15) > 
+Goal:
+  
+  elt : Type
+  x : Q
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x y
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x r = << rl, o, rr >>
+  y0 : X.t
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  ============================
+   (In y0 /\ In y0)
+
+
+Debug: Going to execute:
+(set_signal e2; set_add_3 ARth)
+
+
+TcDebug (15) > 
+Debug: Evaluated term: (ARadd_0_l ARth)
+
+Debug: Level 15: evaluation returns
+ARadd_0_l ARth
+
+
+Debug: Level 15: evaluation returns
+ARadd_0_l ARth
+
+
+Goal:
+  
+  elt :

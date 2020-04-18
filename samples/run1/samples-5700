@@ -1,0 +1,102 @@
+======== SAMPLE 1 ========
+lements > 
+Goal:
+  
+  n : t
+  s : t
+  Hn : S t -> true = true
+  a : E.t
+  H : In a s -> False
+  H0 : False
+  H1 : E.eq true a
+  H5 : In a s
+  H3 : E.eq true a -> False
+  H6 : In a s
+  H2 : In a s -> In a x
+  H8 : In a s
+  H11 : In a s /\ In a x -> In a y = true
+  H7 : In a s /\ In a x -> In a y = true -> true
+  H5 : false = true
+  H8 : false = true -> In a y \/ In a x \/ In a l
+  H10 : In a s /\ In a x -> In a y = true -> In a x \/ In a y = true -> true
+  H10 : In a s -> In a y \/ In a x -> In a y = true -> In a x \/ In a l
+  ============================
+   (In a y /\ In a x * In a l /\ In a y \/ In a x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  n : t
+  s : t
+  Hn : S t -> true = true
+  a : E.t
+  H : In a s -> False
+  H0 : False
+  H1 : E.eq true a
+  H5 : In a s
+  H3 : E.eq true a -> False
+  H6 : In a s
+  H2 : In a s -> In a x
+  H8 : In a s
+  H11 : In a s /\ In a x -> In a y = true
+  H7 : In a s /\ In a x -> In a y = true -> true
+  H5 : false = true
+  H8 : false = true -> In a y \/ In a x \/ In a x
+  H10 : In a s /\ In a x -> In a y -> In a x \/ In a y = true -> In a x \/ In a l
+  ============================
+   (In a y /\ In a x * In a l /\ In a y \/ In a x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  n : t
+  s : t
+  Hn : S t -> true = true
+  a : E.t
+  H : In a s -> False
+  H0 : False
+  H1 : E.eq true a
+  H5 : In a s
+  H3 : E.eq true a -> False
+  H6 : In a s
+  H2 : In a s -> In a x
+  H8 : In a s
+  H11 : In a s /\ In a x -> In a y -> In a x \/ In a y = true
+  H7 : In a s /\ In a x -> In a y = true -> In a x \/ In a l
+  ============================
+   (In a y /\ In a x * In a l /\ In a y \/ In a x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  n : t
+  s : t
+  Hn : S t -> true = true
+  a : E.t
+  H : In a s -> False
+  H0 : False
+  H1 : E.eq true a
+  H5 : In a s
+  H3 : E.eq true a -> False
+  H6 : In a s
+  H2 : In a s -> In a x
+  H8 : In a s
+  H11 : In a s /\ In a x -> In a y -> In a x \/ In a y = true
+  H7 : In a s /\ In a x -> In a y = true -> In a x \/ In a l
+  ============================
+   (In a y /\ In a x * In a l /\ In

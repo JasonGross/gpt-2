@@ -1,0 +1,97 @@
+======== SAMPLE 1 ========
+ H7 : a <= p
+  H8 : n < 3
+  H9 : l < 2
+  H10 : g = 0 /\ a = 1 \/ 2 = 0 /\ a = 1
+  ============================
+   (2 * a + 2 * (2 * g) = a)
+
+
+Goal:
+  
+  p : Z
+  H : 1 < p
+  H0 : forall n : Z, 1 <= n < p -> testbit p b = true -> a = p
+  H1 : (testbit p b = true /\ a = 1 \/ a = p)
+  H2 : forall n : Z, 0 <= n < p -> n < p
+  a : Z
+  b : Z
+  H3 : 1 < a
+  H4 : 1 < p
+  H5 : a <= 0
+  H6 : 0 <= a
+  H7 : a <= p
+  H8 : n < Z.abs p
+  H9 : l < 2
+  H10 : g = 0 /\ a = 1 \/ 2 = 0 /\ a = 1
+  ============================
+   (2 * a + 2 * (2 * g) = a)
+
+
+Goal:
+  
+  p : Z
+  H : 1 < p
+  H0 : forall n : Z, 1 <= n < p -> testbit p b = true -> a = p
+  H1 : (testbit p b = true /\ a = 1 \/ a = p)
+  H2 : forall n : Z, 0 <= n < p -> n < p
+  a : Z
+  b : Z
+  H3 : 1 < a
+  H4 : a < p
+  H5 : a <= 0
+  H6 : 0 <= a
+  H7 : a <= p
+  H8 : n < Z.abs p
+  H9 : l < 2
+  H10 : g = 0 /\ a = 1 \/ 2 = 0 /\ a = 1
+  ============================
+   (2 * a + 2 * (2 * g) = a)
+
+
+Debug:
+Going to execute:
+fun t =>
+  let f :=
+   match Cst t with
+   | NotConstant =>
+       match t with
+       | rO => fun _ => fv
+       | rI => fun _ => fv
+       | add ?t1 ?t2 => TFV t2 ltac:(TFV t1 fv)
+       | mul ?t1 ?t2 => TFV t2 ltac:(TFV t1 fv)
+       | sub ?t1 ?t2 => TFV t2 ltac:(TFV t1 fv)
+       | opp ?t1 => fun _ => TFV t1 fv
+       | pow ?t1 ?n =>
+           match CstPow n with
+           | NotConstant => fun _ => AddFvTail t fv
+           | _ => fun _ => TFV t1 fv
+           end
+       | _ => fun _ => AddFvTail t fv
+       end
+   | _ => fun _ => fv
+   end
+  in
+  f ltac:(())
+
+
+TcDebug (18) > 
+Goal:
+  
+  p : Z
+  H : 1 < p
+  H0 : forall n : Z, 1 <= n < p -> testbit p b = true -> a = p
+  H1 : (testbit p b = true /\ a = 1 \/ a = 1)
+  H2 : forall n : Z, 0 <= n < p -> n < p
+  a : Z
+  b : Z
+  H3 : 1 < a
+  H4 : a < p
+  H5 : a <= 0
+  H6 : 0 <= a
+  H7 : a <= p
+  H8 : n < Z.abs p
+  H9 : l < 2
+  H10 : g = 0 /\ a = 1 \/ 2 = 0 /\ a = 1
+  ============================
+   (2 * a +

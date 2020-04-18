@@ -1,0 +1,159 @@
+======== SAMPLE 1 ========
+l y0 (remove x r))
+           (x - y) =>
+          x + - (x - y) * x + - y)
+           y + (x - y + - y) * x
+  y : positive
+  Hxy : - y == x - y
+  ============================
+   (x - y + - y == x - y)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : positive
+  Hxy : - y == x - y
+  ============================
+   (x - y + - y == x - y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : positive
+  Hxy : - y == x - y
+  ============================
+   (x - y + - y == x - y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : positive
+  Hxy : - y == x - y
+  ============================
+   (x - y + - y == x - y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : positive
+  Hxy : - y == x - y
+  ============================
+   (x - y + - y == x - y)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : positive
+  Hxy : - y == x - y
+  ============================
+   (x - y + - y == x - y)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : positive
+  Hxy : - y == x - y
+  ============================
+   (x - y + - y == x - y)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : positive
+  Hxy : - y == x - y
+  ============================
+   (x - y + - y == x - y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : positive
+  Hxy : - y == x - y
+  ============================
+   (x - y + - y == x - y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : positive
+  Hxy : - y == x - y
+  ============================
+   (x - y +

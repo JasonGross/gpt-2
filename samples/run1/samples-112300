@@ -1,0 +1,111 @@
+======== SAMPLE 1 ========
+ tree
+  x : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = false
+  LT' : (lh + 2 <? rh) = true
+  y : elt
+  H : InT y rr
+  ============================
+   ((X.eq y x \/ InT y (Node lh ll lx lr) \/ InT y (Node rh rl rx rr)) <->
+    (InT y (Node lh ll lx lr) \/ InT y (Node rh rl rx rr)) \/ InT y)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = false
+  LT' : (lh + 2 <? rh) = true
+  y : elt
+  H : InT y rr
+  ============================
+   ((X.eq y x \/ InT y (Node lh ll lx lr) \/ InT y (Node rh rl rx rr)) <->
+    (InT y (Node lh ll lx lr) \/ InT y (Node rh rl rx rr)) \/ InT y)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = false
+  LT' : (lh + 2 <? rh) = true
+  y : elt
+  H : InT y rr
+  ============================
+   ((X.eq y x \/ InT y (Node lh ll lx lr) \/ InT y (Node rh rl rx rr)) <->
+    (InT y (Node lh ll lx lr) \/ InT y (Node rh rl rx rr)) \/ InT y)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = false
+  LT' : (lh + 2 <? rh) = true
+  y : elt
+  H : InT y rr
+  ============================
+   ((X.eq y x \/ InT y (Node lh ll lx lr) \/ InT y (Node rh rl rx rr)) <->
+    (InT y (Node lh ll lx lr) \/ InT y (Node rh rl rx rr)) \/ InT y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  lh : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  LT : (rh + 2 <? lh) = false
+  LT' : (lh + 2 <? rh) = true
+  y : elt
+  H : InT y rr
+  ============================
+   ((X.eq y x \/ InT

@@ -1,0 +1,102 @@
+======== SAMPLE 1 ========
+_height rl rx rr)
+  H6 : lt_tree x (Node rl rx rr)
+  H3 : MX.TO.lt lx rx
+  H7 : MX.TO.lt x rx
+  u : key
+  H8 : MX.TO.lt x rx
+  ============================
+   (X.lt rx u)
+
+
+Debug: Going to execute:
+change_no_check (MX.TO.lt x y) in H
+
+
+TcDebug (31) > 
+Debug:
+Level 31: In environment
+elt : Type
+rr : t elt
+x : key
+rl : t elt
+ _x0 : int
+_ : key
+IHl : forall (r : t elt) (e : elt) (h : int),
+      bst l ->
+      (forall d : key, find x d = None) ->
+      bst rl ->
+      lt_tree x (Node lt_tree x rl) ->
+      gt_tree x rl -> find x r = Some e
+H1 : bst l
+H2 : bst r
+H3 : MX.TO.lt lx rx
+The term "elt" has type "Type" while it is expected to have type "X.t".
+
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  Hlr : forall (x : X.t) (d : elt) (r : t elt) (y : X.t),
+        bst l ->
+        bst r ->
+        lt_tree x lr ->
+        gt_tree x r -> find y (join lr x d r) = Some e
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  Hrl : forall y : X.t,
+        bst (Node ll lx ld lr lh) ->
+        bst rl ->
+        lt_tree x (Node ll lx ld lr lh) ->
+        gt_tree x rl ->
+        find y (join (Node ll lx ld lr lh) x d rl) =
+        find y (create (Node ll lx ld lr lh) x d rl)
+  GT : lh > rh + 2
+  y : X.t
+  H1 : bst l
+  H2 : bst r
+  H3 : MX.TO.lt lx rx
+  H7 : MX.TO.lt x rx
+  u : key
+  H8 : MX.TO.lt x rx
+  ============================
+   (X.lt rx u)
+
+
+Debug:
+Going to execute:
+change_no_check (MX.TO.lt x y) in H ||
+  change_no_check (MX.TO.le x y) in H || clear H || fail 1
+
+
+TcDebug (31) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  Hlr : forall (x : X.t) (d : elt) (r : t elt) (y : X.t),
+        bst l ->
+        bst r ->
+        lt_tree x lr ->
+        gt_tree x r -> find y (join lr x d r) = Some e
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+ 

@@ -1,0 +1,122 @@
+======== SAMPLE 1 ========
+ Prop)) (eval_f ev' f2)
+  H4 : eval_f ev' f2
+  ============================
+   (eval_f ev' f1 /\ eval_f ev' f2 <-> eval_f ev f1 /\ eval_f ev' f2)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  TA : Type
+  TX : Type
+  AA : Type
+  AF : Type
+  ex : TX -> Prop
+  ev : TA -> Prop
+  ev' : TA -> Prop
+  f1 : GFormula
+  f2 : GFormula
+  H : forall a : TA, ev a <-> ev' a
+  H5 : eval_f ev f1
+  H6 : eval_f ev' f1
+  H2 : eval_f ev f1
+  H0 : eval_f ev f2
+  H1 : eval_f ev' f2
+  H3 : eval_f ev f2
+  ============================
+   (eval_f ev' f1 /\ eval_f ev' f2 <-> eval_f ev f1 /\ eval_f ev' f2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  TA : Type
+  TX : Type
+  AA : Type
+  AF : Type
+  ex : TX -> Prop
+  ev : TA -> Prop
+  ev' : TA -> Prop
+  f1 : GFormula
+  f2 : GFormula
+  H : forall a : TA, ev a <-> ev' a
+  H5 : eval_f ev f1
+  H6 : eval_f ev' f1
+  H2 : eval_f ev f1
+  H0 : eval_f ev f2
+  H1 : eval_f ev' f2
+  H3 : eval_f ev f2
+  ============================
+   (eval_f ev' f1 /\ eval_f ev' f2 <-> eval_f ev f1 /\ eval_f ev' f2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  TA : Type
+  TX : Type
+  AA : Type
+  AF : Type
+  ex : TX -> Prop
+  ev : TA -> Prop
+  ev' : TA -> Prop
+  f1 : GFormula
+  f2 : GFormula
+  H : forall a : TA, ev a <-> ev' a
+  H5 : eval_f ev f1
+  H6 : eval_f ev' f1
+  H2 : eval_f ev f1
+  H0 : eval_f ev f2
+  H1 : eval_f ev' f2
+  H3 : eval_f ev f2
+  ============================
+   (eval_f ev' f1 /\ eval_f ev' f2 <-> eval_f ev f1 /\ eval_f ev' f2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  TA : Type
+  TX : Type
+  AA : Type
+  AF : Type
+  ex : TX -> Prop
+  ev : TA -> Prop
+  ev' : TA -> Prop
+  f1 : GFormula
+  f2 : GFormula
+  H : forall a : TA, ev a <-> ev' a
+  H5 : eval_f ev f1
+  H6 : eval_f ev' f1
+  H2 : eval_f ev f1
+  H0 : eval_f ev f2
+  H1 : eval_f ev' f2
+  H3 : eval_f ev f2
+  ============================
+   (eval_f ev' f1 /\ eval_f ev' f2 <-> eval_f ev f1 /\ eval_f ev' f2)
+
+
+Debug

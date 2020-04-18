@@ -1,0 +1,161 @@
+======== SAMPLE 1 ========
+:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 132) =
+    (if Nat.leb 132 255 then Some 132 else None))
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 133) =
+    (if Nat.leb 133 255 then Some 133 else None))
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 134) =
+    (if Nat.leb 134 255 then Some 134 else None))
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 135) =
+    (if Nat.leb 135 255 then Some 135 else None))
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 136) =
+    (if Nat.leb 136 255 then Some 136 else None))
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 137) =
+    (if Nat.leb 137 255 then Some 137 else None))
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 138) =
+    (if Nat.leb 138 255 then Some 138 else None))
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 139) =
+    (if Nat.leb 139 255 then Some 139 else None))
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 140) =
+    (if Nat.leb 140 255 then Some 140 else None))
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 141) =
+    (if Nat.leb 141 255 then Some 141 else None))
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level 0: The reference x was not found in the current environment.
+
+Goal:
+  
+  ============================
+   (option_map to_nat (of_nat 142) =
+    (if Nat.leb 142 255 then Some 142 else None))
+
+
+Debug: Going to execute:
+destruct x as [| x]
+
+
+TcDebug (0) > 
+Debug: Level

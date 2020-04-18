@@ -1,0 +1,127 @@
+======== SAMPLE 1 ========
+ False
+  H2 : X.eq y x -> False
+  H3 : X.eq y x'|- _ => OnT y l
+  H4 : InT y l
+  X : X.eq y x'
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (split x r)#r <-> InT y r /\ X.lt x y
+  H0 : X.lt x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H4 : InT y l
+  X : X.eq y x'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (split x r)#r <-> InT y r /\ X.lt x y
+  H0 : X.lt x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H4 : InT y l
+  X : X.eq y x'
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (split x r)#r <-> InT y r /\ X.lt x y
+  H0 : X.lt x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H4 : InT y l
+  X : X.eq y x'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  x : X.t
+  y : elt
+  t_left0 : t
+  t_in0 : bool
+  t_right0 : t
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (split x r)#r <-> InT y r /\ X.lt x y
+  H0 : X.lt x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H4 : InT y l
+

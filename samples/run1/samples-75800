@@ -1,0 +1,178 @@
+======== SAMPLE 1 ========
+eq y x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  Eq : Equivalence R
+  x : A
+  y : A
+  X : eqA x y
+  H1 : eqA x y
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  R : relation A
+  Eq : Equivalence R
+  x : A
+  y : A
+  X : eqA x y
+  H1 : eqA x y
+  ============================
+   (R x y)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  Eq : Equivalence R
+  x : A
+  y : A
+  X : eqA x y
+  H1 : eqA x y
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  Eq : Equivalence R
+  x : A
+  y : A
+  X : eqA x y
+  H1 : eqA x y
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  Eq : Equivalence R
+  x : A
+  y : A
+  X : eqA x y
+  H1 : eqA x y
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  Eq : Equivalence R
+  x : A
+  y : A
+  X : eqA x y
+  H1 : eqA x y
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  Eq : Equivalence R
+  x : A
+  y : A
+  X : eqA x y
+  H1 : eqA x y
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  R : relation A
+  Eq : Equivalence R
+  x : A
+  y : A
+  X : eqA x y
+  H1 : eqA x y
+  ============================
+   (R x y)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  Eq : Equivalence R
+  x : A
+  y : A
+  X : eqA x y
+  H1 : eqA x y
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X

@@ -1,0 +1,21 @@
+======== SAMPLE 1 ========
+        (EPimpl (EPdisj a H0b H0c H1st A))
+          (EPimpl
+             (EPeq (EZofI (EIadd (EIraw (height l) A))
+                     (EZofI (EIadd (EIraw (height (Node l y0))))))))))
+                     (EPimpl
+                                      (EPge (EZofI (EIadd (EIraw (height l)) (EIraw l))))
+                                      (EZofI
+                                               (EIsub
+                                                     (EIadd
+                                                          (EImax 
+                                                           (EIadd
+                                                            (EIadd
+                                                                 (EImax 
+                                                              (EIadd
+                                                              (EImax
+                                                                  (EIadd
+                                                                 (EImax 
+                                                                EIadd
+                                                            (EImax 
+ 

@@ -1,0 +1,163 @@
+======== SAMPLE 1 ========
+ @_; #.c
+  x : X.t
+  H0 : (diff_eq_diff)r
+  H1 : lt_tree_tree
+  ============================
+   (diff_eq_diff lt_tree)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1 (diff_eq_diff)r
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : tree
+  A1 : InT
+  x : X.t
+  H0 : (diff_eq_diff lt_tree)
+  H1 : lt_tree_tree
+  ============================
+   (diff_eq_diff lt_tree)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1 (diff_eq_diff)r
+
+
+TcDebug (1) > 
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Debug: Level 2: evaluation returns
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Debug: Level 2: is_empty returns
+false
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.empty_conj> intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : tree
+  A1 : InT
+  x : X.t
+  H0 : (diff_eq_diff lt_tree)
+  H1 : lt_tree_tree
+  ============================
+   (diff_eq_diff lt_tree)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : tree
+  A1 : InT
+  x : X.t
+  H0 : (diff_eq_diff lt_tree)
+  H1 : lt_tree_tree
+  ============================
+   (diff_eq_diff lt_tree)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty_conj> intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : tree
+  A1 : InT
+  x : X.t
+  H0 : (diff_eq_diff lt_tree)
+  H1 : lt_tree_tree
+  ============================
+   (diff_eq_diff lt_tree)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  R : tree
+  A1 : InT
+  x : X.t
+  H0 : (diff_eq_diff lt_tree)
+  H1 : lt_tree_tree
+  ============================
+   (diff_eq_diff lt_tree)
+
+
+Debug:
+Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Debug: Level 3: evaluation returns
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+Debug: Level 2: is_empty returns
+true
+
+Debug:
+
+Going to execute:
+<Coq.Init.Tauto.is_empty> intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : tree
+  A1 : InT
+  x : X.t
+  H0 : (diff_eq_diff lt_tree)
+  H1 : lt_tree_tree
+  ============================
+   (diff_eq_diff lt_tree)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A :

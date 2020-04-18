@@ -1,0 +1,141 @@
+======== SAMPLE 1 ========
+     InA X.eq x (elt:=elt'))
+  H5 : X.eq x x2 -> False
+  H7 : X.eq x x0
+  H4 : X.eq x x0
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  H : Type
+  X : A
+  X0 : Type
+  LT : (A * Annot)%type
+  lx : A
+  lrl : A
+  lrx : A
+  lrd : A
+  lrr : A
+  lrr6 : A
+  ll : A
+  lrr8 : A
+  lrr9 : A
+  LT : (A * Annot)%type
+  lx' : A
+  lrl' : A
+  lrx : A
+  lrd' : A
+  lrr' : A
+  lrx0 : A
+  lrr' : A
+  lrx1 : A
+  LT : (A * Annot)%type
+  lx'' : A
+  lrl' : A
+  lrx0 : A
+  lrr' : A
+  lrx1 : A
+  LT : (A * Annot)%type
+  lx'_ : A
+  lrr' : A
+  lrx0 : A
+  lrr' : A
+  lrx1 : A
+  LT : (A * Annot)%type
+  lx'_0 : A
+  lrr' : A
+  lrx0 : A
+  lrr' : A
+  lrx1 : A
+  LT : (A * Annot)%type
+  lx'_1 : A
+  lrr' : A
+  lrx0 : A
+  lrr' : A
+  lrx1 : A
+  LT : (A * Annot)%type
+  lx'_2 : A
+  Leaf : A
+  V : Subset
+  x' : A
+  lrl' : A
+  lrx0 : A
+  lrr' : A
+  lrx1 : A
+  LT : (A * Annot)%type
+  lx'-1 : A
+  Leaf : LT
+  E : relation x' -> False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  H : Type
+  X : A
+  X0 : Type
+  LT : (A * Annot)%type
+  lx : A
+  lrl : A
+  lrx : A
+  lrd : A
+  lrr : A
+  lrr6 : A
+  ll : A
+  lrr8 : A
+  lrr9 : A
+  LT : (A * Annot)%type
+  lx' : A
+  lrl' : A
+  lrx0 : A
+  lrr' : A
+  lrx1 : A
+  LT : (A * Annot)%type
+  lx'' : A
+  lrr' : A
+  lrx0 : A
+  lrr' : A
+  lrx1 : A
+  LT : (A * Annot)%type
+  lx'_ : A
+  lrr' : A
+  lrx0 : A
+  lrr' : A
+  lrx1 : A
+  LT : (A * Annot)%type
+  lx'_0 : A
+  lrr' : A
+  lrx0 : A
+  lrr' : A
+  lrx1 : A
+  LT : (A * Annot)%type
+  lx'_1 : A
+  lrr' : A
+  lrx0 : A
+  lrr' : A
+  lrx1 : A
+  LT : (A * Annot)%type
+  lx'_1 : A
+  lrr' : A
+  lrx0 : A
+  lrr' : A
+  lrx1 : A
+  LT : (A * Annot)%type
+  lx'

@@ -1,0 +1,124 @@
+======== SAMPLE 1 ========
+ (Rd lrl lrx lrd lrr _x2)
+  y : - (6 + 10 * of_lu d') * 10 ^ usize d =
+    8 * (2 * (2 * of_lu d') + of_lu d') * 10 ^ usize d -
+    r * (10 * 10_N (2 * of_lu d') + of_lu d') =
+    8 * (9 + 10 * of_lu d) + of_lu d') * 10 ^ usize d
+
+
+Debug:
+Going to execute:
+match t with
+| 0 => true
+| S ?p => isnatcst p
+| _ => false
+end
+
+
+TcDebug (5) > 
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+        of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   ((8 + 10 * of_lu d') * 10 ^ usize d =
+    8 * (2 * (2 * of_lu d') + of_lu d') * 10 ^ usize d
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (6) > 
+Debug: Level 6: t
+ has value 
+8
+
+
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+        of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   ((8 + 10 * of_lu d') * 10 ^ usize d =
+    8 * (2 * (2 * of_lu d') + of_lu d') * 10 ^ usize d
+
+
+Debug: Going to execute:
+isnatcst p
+
+
+TcDebug (6) > 
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+        of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   ((8 + 10 * of_lu d') * 10 ^ usize d =
+    8 * (2 * (2 * of_lu d') + of_lu d') * 10 ^ usize d
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | 0 => true
+  | S ?p => isnatcst p
+  | _ => false
+  end
+
+
+TcDebug (7) > 
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+        of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   ((8 + 10 * of_lu d') * 10 ^ usize d =
+    8 * (2 * (2 * of_lu d') + of_lu d') * 10 ^ usize d
+
+
+Debug:
+Going to execute:
+match t with
+| 0 => true
+| S ?p => isnatcst p
+| _ => false
+end
+
+
+TcDebug (7) > 
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+        of_lu (revapp d d') = of_lu (rev d) + of_lu d' * 10 ^ usize d
+  d' : uint
+  ============================
+   ((8 + 10 * of_lu d') * 10 ^ usize d =
+    8 * (2 * (2 * of_lu d') + of_lu d') * 10 ^ usize d
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (8) > 
+Debug: Level 8: t
+ has value 
+8
+
+
+Goal:
+  
+  d : uint
+  IHd : forall d' : uint,
+        of_lu (revapp d d') = of_

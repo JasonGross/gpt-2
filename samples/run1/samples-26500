@@ -1,0 +1,65 @@
+======== SAMPLE 1 ========
+
+           deduce t t' = Some u ->
+              deduce t t' = Some u
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  eval : Env -> Term -> Prop
+  normalise_correct : forall (env : Env) (t : Term) (tg : Annot),
+                      eval_cnf env (normalise t tg) -> eval env t
+  negate_correct : forall (env : Env) (t : Term) (tg : Annot),
+                   eval_cnf env (negate t tg) -> ~ eval env t
+  f : GFormula
+  IHf : forall (pol : bool) (env : Env),
+         eval_cnf env (xcnf pol f) ->
+         eval_f (fun x : Prop => x) (eval env) (if pol then f else eval env)
+  env : Env
+  F := fun x : Prop => ((x1, e1) :: (x2, e2) :: nil)
+  env' := fun x : Prop => eval_cnf env x : Prop => eval_f (fun x : Prop => x)) (eval env') f
+  x0 : GT
+  H0 : eval_f (fun x : Prop => x0) (eval env') f'
+  H1 : True
+  H : eval_f (fun x : Prop => x0) (eval env') f' -> False
+  H3 : eval_f (fun x : Prop => x) (eval env) f
+  ============================
+   False
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                     eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+                unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                 deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  eval : Env -> Term -> Prop
+  normalise_correct : forall (env : Env) (t : Term) (tg : Annot),
+                      eval_cnf env (normalise t tg) -> eval env t
+  negate_correct : forall (env : Env) (t : Term) (tg : Annot),
+                   eval_cnf env (negate t tg) -> ~ eval env t
+  f : GFormula
+  IHf : forall (pol : bool) (env : Env),
+         eval_cnf env (xcnf pol f) ->
+         eval_f (fun x : Prop => x) (eval env) (if pol then f else eval env)
+  env : Env
+  F := fun x : Prop => ((x1, e1) :: (x2, e2) :: nil)
+ 

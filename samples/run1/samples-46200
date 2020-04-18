@@ -1,0 +1,72 @@
+======== SAMPLE 1 ========
+   |- _ =>
+          <Coq.Init.Tauto.not_dep_intros>;
+           (do 2 intro; apply id; split; assumption); clear id
+             (solve [ t_tauto_intuit ]) ] ]
+| id:~ ?X1 -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (~ X1);
+          [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+| |- ?X1 =>
+      <Coq.Init.Tauto.is_disj> flags X1; (solve
+       [ left; t_tauto_intuit | right; t_tauto_intuit ])
+end ||
+  match goal with
+  | |- ?X1 =>
+      <Coq.Init.Tauto.is_unit_or_eq> flags X1; constructor 1
+  | _:?X1 |- _ => <Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+  | _:?X1 |- ?X1 => assumption
+  end
+
+
+TcDebug (3) > 
+Goal:
+    s : t  s' : t  s'' : t  a : E.t  H0 : In a s'
+  ============================
+   (In a s' /\ In a s'')
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:?X1
+  |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+| id:_ <-> _ |- _ => elim id; do 2 intro; clear id
+| id:~ _ |- _ => red in id
+| id:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+| id0:?X1 -> ?X2, id1:?X1 |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+| id:?X1 -> ?X2
+  |- _ =>
+      <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+       [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+| id:?X1 <-> ?X2 -> ?X3
+  |- _ =>
+      assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+       (do 2 intro; apply id; split; assumption); clear id
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+| |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+| |- _ <-> _ => split
+| |- ~ _ => red
+end; <Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (3) > 
+Goal:
+    s : t  s' : t  s'' : t  a : E.t  H0 : In a s'
+  ============================
+   (In a s' /\ In a s'')
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:?X1
+  |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+| id:_ <-> _ |- _ => elim id; do 2 intro; clear id
+| id:~ _ |- _ => red in id
+| id:

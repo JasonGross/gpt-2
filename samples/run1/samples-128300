@@ -1,0 +1,144 @@
+======== SAMPLE 1 ========
+ l
+  ============================
+   (X.eq y lx)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (5) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  _x : height (Node ll lx ld (Leaf elt) _x0) > height r + 2
+  _x1 : height ll < height (Leaf elt)
+  y : key
+  H : In y ll
+  ============================
+   (X.eq y lx)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (5) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  _x : height (Node ll lx ld (Leaf elt) _x0) > height r + 2
+  _x1 : height ll < height (Leaf elt)
+  y : key
+  H : In y ll
+  ============================
+   (X.eq y lx)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (5) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  _x : height (Node ll lx ld (Leaf elt) _x0) > height r + 2
+  _x1 : height ll < height (Leaf elt)
+  y : key
+  H : In y ll
+  ============================
+   (X.eq y lx)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (6) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  _x : height (Node ll lx ld (Leaf elt) _x0) > height r + 2
+  _x1 : height ll < height (Leaf elt)
+  y : key
+  H : In y ll
+  ============================
+   (X.eq y lx)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (6) > 
+Debug: Level 6: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  _x : height (Node ll lx ld (Leaf elt) _x0) > height r + 2
+  _x1 : height ll < height (Leaf elt)
+  y : key
+  H : In y ll
+  ============================
+   (X.eq y lx)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (5) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  _x : height (Node ll lx ld (Leaf elt) _x0) > height r + 2
+  _x1 : height ll < height (

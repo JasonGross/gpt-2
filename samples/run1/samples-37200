@@ -1,0 +1,152 @@
+======== SAMPLE 1 ========
+)
+
+
+Debug: Going to execute:
+solve [ inversion H ]
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  Heq : x = x''
+  H : In x s -> true = true
+  H0 : In x s' -> false = true
+  H5 : false = true -> In x s'
+  H2 : In x s'
+  H6 : false = true -> In x s'
+  H7 : In x s \/ In x s' -> In x (diff s s')
+  H2 : In x s''
+  H3 : In x (diff s s')
+  ============================
+   (false = false || false)
+
+
+Debug: Going to execute:
+solve [ inversion H ]
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  Heq : x = x''
+  H : In x s -> true = true
+  H0 : In x s' -> false = true
+  H5 : false = true -> In x s'
+  H2 : In x s''
+  H3 : In x (diff s s')
+  ============================
+   (false = false || false)
+
+
+Debug: Going to execute:
+inversion H
+
+
+TcDebug (3) > 
+Debug: Level 3: The type of H is not inductive.
+
+Debug: Level 3: No applicable tactic.
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  Heq : x = x''
+  H : In x s -> true = true
+  H0 : In x s' -> false = true
+  H5 : false = true -> In x s'
+  H2 : In x s''
+  H3 : In x (diff s s')
+  ============================
+   (false = false || false)
+
+
+Debug:
+Going to execute:
+try do_atom; repeat (do_intro; try do_atom); (solve [ split; do_ccl ])
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  Heq : x = x''
+  H : In x s -> true = true
+  H0 : In x s' -> false = true
+  H5 : false = true -> In x s'
+  H2 : In x s''
+  H3 : In x (diff s s')
+  ============================
+   (false = false || false)
+
+
+Debug: Going to execute:
+try do_atom; repeat (do_intro; try do_atom)
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  Heq : x = x''
+  H : In x s -> true = true
+  H0 : In x s' -> false = true
+  H5 : false = true -> In x s'
+  H2 : In x s''
+  H3 : In x (diff s s')
+  ============================
+   (false = false || false)
+
+
+Debug: Going to execute:
+try do_atom
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  Heq : x = x''
+  H : In x s -> true = true
+  H0 : In x s' -> false = true
+  H5 : false = true -> In x s'
+  H2 : In x s''
+  H3 : In x (diff s s')
+  ============================
+   (false = false || false)
+
+
+Debug: Going to execute:
+do_atom
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  Heq : x = x''
+  H : In x s -> true = true
+  H0 : In x s' -> false = true

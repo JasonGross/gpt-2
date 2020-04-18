@@ -1,0 +1,106 @@
+======== SAMPLE 1 ========
+ a r4 : R
+  f0_f : forall (x : key) (d : elt) (o : option elt'),
+         bst l -> In f0 (bst (l :: l') bst l) <-> In f0 l /\ (In f0 l) \/ In f0 (l :: l')
+  a : key
+  b : elt
+  ============================
+   (MapsTo x a b \/ MapsTo x a l \/ In f0 (a, b) \/ In f0 (l :: l') <->
+    MapsTo x a b \/ MapsTo x l \/ In f0 (l :: l')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x y
+  IHt : forall y : key,
+        bst r ->
+        bst (map2_opt r rtl rx rd rr _x) ->
+        ltf y t (rewr r rtl rx rd rr _x)
+  Ht0 : bst l
+  H : bst r
+  H2 : lt_tree bst l
+  ============================
+   (MapsTo y x d \/ MapsTo y l \/ In f0 (a, b) \/ In f0 (l :: l') <->
+    GIn f0 (a, b) \/ In f0 (l :: l')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x y
+  IHt : forall y : key,
+        bst r ->
+        bst (map2_opt r rtl rx rd rr _x) ->
+        ltf y t (rewr r rtl rx rd rr _x)
+  Ht0 : bst l
+  H : bst r
+  H2 : lt_tree bst l
+  ============================
+   (MapsTo y x d \/ MapsTo y l \/ In f0 (a, b) \/ In f0 (l :: l') <->
+    GIn f0 (a, b) \/ In f0 (l :: l')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.eq x y
+  IHt : forall y : key,
+        bst r ->
+        bst (map2_opt r rtl rx rd rr _x) ->
+        ltf y t (rewr r rtl rx rd rr _x)
+  Ht0 : bst l
+  H : bst r
+  H2 : lt_tree bst l
+  ============================
+   (MapsTo y x d \/ MapsTo y l \/ In f0 (a, b) \/ In f0 (l :: l')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+

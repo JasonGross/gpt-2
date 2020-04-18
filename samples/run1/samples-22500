@@ -1,0 +1,97 @@
+======== SAMPLE 1 ========
+                     f x d o lim)
+  H3 : Ok d'
+  H4 : lt_tree x' lt'
+  H5 : gt_tree x' lt'
+  h : I.t
+  x0 : elt
+  H6 : Ok d'
+  H7 : lt_tree x' lt'
+  H8 : gt_tree x' lt' -> False
+  H1 : Ring_ops.eq_transient lt_tree
+  H7 : Ring_ops.lt_transient lt_tree
+  H5 : Ok d'
+  H9 : Ok s
+  H13 : (split x0 s)#b = false
+  H4 : Ok lt
+  H12 : Ok s'
+  H8 : gt_tree x' lt'
+  H7 : Ring_ops.eq_transient lt_tree
+  H5 : Ok d'
+  H8 : gt_tree x' lt'
+  H7 : Ring_ops.lt_transient lt_tree
+  H5 : Ok d'
+  H9 : Ok s
+  H13 : (split x0 s)#b = false
+  H4 : Ok lt
+  H12 : Ok s'
+  H8 : gt_tree x' lt'
+  H7 : Ring_ops.eq_transient lt_tree
+  H5 : Ok d'
+  H8 : gt_tree x' lt'
+  H7 : Ring_ops.lt_transient lt_tree
+  H5 : Ok d'
+  H9 : Ok s
+  H13 : (split x0 s)#b = false
+  H4 : Ok lt
+  H12 : Ok s'
+  H8 : gt_tree x' lt'
+  H7 : Ring_ops.eq_transient lt_tree
+  H5 : Ok d'
+  H9 : Ok s
+  H13 : (split x0 s)#b = false
+  H4 : Ok lt
+  H12 : Ok s'
+  H8 : gt_tree x' lt'
+  H7 : Ring_ops.eq_transient lt_tree
+  H5 : Ok d'
+  H9 : Ok s
+  H13 : (split x0 s)#b = false
+  H5 : Ok d'
+  H10 : lt_tree x' lt'
+  H7 : Ring_ops.eq_transient lt_tree
+  H5 : Ok d'
+  H10 : (split x0 s)#b = false
+  ============================
+   (X.lt x' x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  _x1 : I.t
+  _x0 : X.lt x' x
+  _x : elt
+  _x0_r : t elt
+  l' : t elt
+  o' : option elt
+  r' : t elt
+  o'1 : option elt
+  r'1 : t elt
+  H0 : f x o' = f _x1 (find x' r)
+  H1 : bst l'
+  H2 : find x' r = f _x1 (find x' r)
+  H3 : Ok l'
+  H4 : lt_tree x' lt'
+  H5 : gt_tree x' lt'
+  h : I.t
+  x0 : elt
+  H6 : Ok d'
+  H7 : lt_tree x' lt'
+  H8 : gt_tree x' lt' -> False
+  H1 : Ring_ops.eq_transient lt_tree
+  H7 : Ring_ops.lt_transient lt_tree
+  H5 : Ok d'
+  H8 : gt_tree x' lt'
+  H7 : Ring_ops.le_transient lt_tree
+  H5 : Ok d'
+  H8 :

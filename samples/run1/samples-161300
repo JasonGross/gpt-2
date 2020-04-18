@@ -1,0 +1,111 @@
+======== SAMPLE 1 ========
+ = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+    d : uint
+  ============================
+   ("6"%char = "7"%char /\ D6 d = D7 d \/
+    "6"%char = "8"%char /\ D6 d = D8 d \/
+    "6"%char = "9"%char /\ D6 d = D9 d)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+    d : uint
+  ============================
+   ("6"%char = "7"%char /\ D6 d = D7 d \/
+    "6"%char = "8"%char /\ D6 d = D8 d \/
+    "6"%char = "9"%char /\ D6 d = D9 d)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+    d : uint
+  ============================
+   ("6"%char = "7"%char /\ D6 d = D7 d \/
+    "6"%char = "8"%char /\ D6 d = D8 d \/
+    "6"%char = "9"%char /\ D6 d = D9 d)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+    d : uint
+  ============================
+   ("6"%char = "7"%char /\ D6 d = D7 d \/
+    "6"%char = "8"%char /\ D6 d = D8 d \/
+    "6"%char = "9"%char /\ D6 d = D9 d)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+    d : uint
+  ============================
+   ("6"%char = "7"%char /\ D6 d = D7 d \/
+    "6"%char = "8"%char /\ D6 d = D8 d \/
+    "6"%char = "9"%char /\ D6 d = D9 d)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+    d : uint
+  ============================
+   ("6"%char = "7"%char /\ D6 d = D7 d \/
+    "6"%char = "8"%char /\ D6 d = D8 d \/
+    "6"%char = "9"%char /\ D6 d = D9 d)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+    d : uint
+  ============================
+   ("6"%char = "7"%char /\ D6 d = D7 d \/
+    "6"%char = "8"%char /\ D6 d = D8 d \/
+    "6"%char = "9"%char /\ D6 d = D9 d)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+    d : uint
+  ============================
+   ("6"%char = "7"%char /\ D6 d = D7 d \/
+    "6"%char

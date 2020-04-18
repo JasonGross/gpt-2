@@ -1,0 +1,147 @@
+======== SAMPLE 1 ========
+ div) + x (mapl m)
+  ============================
+   (R' (x x m) (m (add x (jump p m))))
+
+
+Debug: Going to execute:
+x
+
+
+TcDebug (4) > 
+Debug: Level 4: x
+ has value 
+x
+
+
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  p : t
+  p0 : t
+  H : n == 0
+  H2 : n < p0 < p1 -> n == 0
+  H0 : m == 0
+  H3 : n < p1
+  H4 : 0 < p2
+  ============================
+   (R' (x x m) (m (add x (jump p m))))
+
+
+Debug: Going to execute:
+fun _ => AddFvTail t fv
+
+
+TcDebug (4) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  p : t
+  p0 : t
+  H : n == 0
+  H2 : n < p0 < p1 -> n == 0
+  H0 : m == 0
+  H3 : n < p1
+  H4 : 0 < p2
+  ============================
+   (R' (x x m) (m (add x (jump p m))))
+
+
+Debug: Going to execute:
+f ltac:(())
+
+
+TcDebug (2) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  p : t
+  p0 : t
+  H : n == 0
+  H2 : n < p0 < p1 -> n == 0
+  H0 : m == 0
+  H3 : n < p1
+  H4 : 0 < p2
+  ============================
+   (R' (x x m) (m (add x (jump p m))))
+
+
+Debug: Going to execute:
+AddFvTail t fv
+
+
+TcDebug (2) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  p : t
+  p0 : t
+  H : n == 0
+  H2 : n < p0 < p1 -> n == 0
+  H0 : m == 0
+  H3 : n < p1
+  H4 : 0 < p2
+  ============================
+   (R' (x x m) (m (add x (jump p m))))
+
+
+Debug:
+Going to execute:
+fun a l =>
+  match l with
+  | nil => a :: nil
+  | a :: _ => l
+  | ?x :: ?l => let l' := AddFvTail a l in
+               x :: l'
+  end
+
+
+TcDebug (3) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  p : t
+  p0 : t
+  H : n == 0
+  H2 : n < p0 < p1 -> n == 0
+  H0 : m == 0
+  H3 : n < p1
+  H4 : 0 < p2
+  ============================
+   (R' (x x m) (m (add x (jump p m))))
+
+
+Debug:
+Going to execute:
+match l with
+| nil => a :: nil
+| a :: _ => l
+| ?x :: ?l => let l' := AddFvTail a l in
+              x :: l'
+end
+
+
+TcDebug (3) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  p : t
+  p0 : t
+  H : n == 0
+  H2 : n < p0 < p1 -> n == 0
+  H0 : m == 0
+  H3 : n < p1
+  H4 : 0 < p2
+

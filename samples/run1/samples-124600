@@ -1,0 +1,119 @@
+======== SAMPLE 1 ========
+ -> False ])
+ end) f acc)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  acc : list (key * elt)
+  x0 : X.t
+  e0 : elt
+  H : InA eqke (x0, e0) (elements_aux acc r) ->
+      MapsTo x0 e0 r \/ InA eqke (x0, e0) acc
+  H1 : Sorted X.lt acc
+  H2 : Inf x0 l
+  H3 : Inf x0 r
+  H4 : X.eq x0 x
+  ============================
+   (MapsTo x0 e0 l \/ InA eqke (x0, e0) ((x, e) :: elements_aux acc r))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  acc : list (key * elt)
+  x0 : X.t
+  e0 : elt
+  H : InA eqke (x0, e0) (elements_aux acc r) ->
+      MapsTo x0 e0 r \/ InA eqke (x0, e0) acc
+  H1 : Sorted X.lt acc
+  H2 : Inf x0 l
+  H3 : Inf x0 r
+  H4 : X.eq x0 x
+  ============================
+   (MapsTo x0 e0 l \/ InA eqke (x0, e0) ((x, e) :: elements_aux acc r))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  acc : list (key * elt)
+  x0 : X.t
+  e0 : elt
+  H : InA eqke (x0, e0) (elements_aux acc r) ->
+      MapsTo x0 e0 r \/ InA eqke (x0, e0) acc
+  H1 : Sorted X.lt acc
+  H2 : Inf x0 l
+  H3 : Inf x0 r
+  H4 : X.eq x0 x
+  ============================
+   (MapsTo x0 e0 l \/ InA eqke (x0, e0) ((x, e) :: elements_aux acc r))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  acc : list (key * elt)
+  x0 : X.t
+  e0 : elt
+  H : InA eqke (x0, e0) (elements_aux acc r) ->
+      MapsTo x0 e0 r \/ InA eqke (x0, e0) acc
+  H1 : Sorted X.lt acc
+  H2 : Inf x0 l
+  H3 : Inf x0 r
+  H4 : X.eq x0 x
+  ============================
+   (MapsTo x0 e0 l \/ InA eqke (x0, e0) ((x, e) :: elements_aux acc r))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1

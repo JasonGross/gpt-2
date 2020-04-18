@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+
+
+ZqrO (Debug: lx.x
+
+)
+
+
+Debug: Going to execute:
+match clojure.lang.O
+
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  r : nat
+  rI : (Tef x' \/ InT xlt rI') x
+  l1 : Info.t
+  x' : x'
+  x = y : y 0'
+  r1 : Info.t
+  rI' : (Tef l1' \/ InT l1' \/ InT x' l1') x
+  l2 : Info.t
+  x + y : y 0'
+  x' : x'
+  l : Info.t
+  r : Info.t
+  x : X.t
+  Hp : X.lt x x
+  r : Info.t
+  l : Info.t
+  IHp : l' x r'
+  y : y 0'
+  r2 : Info.t
+  Hp : l' x r'
+  l2' : Info.t
+  x : X.t
+  l' : Info.t
+  Hp' : l' x r'
+  y : y 0'
+  r' : Info.t
+  Hp' : l' x (y 0' * x)
+  r2' : Info.t
+  Hp'' : l' x r'
+  x' : X.t
+  x' : X.lt x x'
+  Hp' : l' x (l0 x l)
+  Hp''' : l' l0 x l'
+  Hp : X.lt x l'
+  y : y 0'
+  r : Info.t
+  Hp : l' x x (x.lt x x)
+  r' : Info.t
+  Hp : x.lt x x'
+  Hp' : x.lt x x'
+  Hp5 : Hp' + x x 0'
+  x : X.eq x x (x.lt x x')
+  Hp6 : Hp' == 0
+  Hp' : x.lt x x'
+  Hp' : x.lt x x'
+  Hp : X.lt x x'
+  Hp' -> x.lt x x'
+  ============================
+   (X.lt x x' + y x)
+
+
+Debug: Going to execute:
+match env X with
+|- ?x2 = ?x2%x
+|- ?y2 = ?y2%x2%x2%x2
+|- ?x3 = ?x3%x3
+|- ?x4 = ?x4%x4%x4%x4
+|- ?y4 = ?y4%x4%x4%x4
+end
+
+
+TcDebug (0) > 
+Goal:
+ 
+  x : X.t
+  r : nat
+  rI : (Tef x' \/ InT xlt rI') x
+  l1 : Info.t
+  x' : x'
+  x = y : y 0'
+  r1 : Info.t
+  rI' : (Tef l1' \/ InT l1' \/ InT x' l1') x
+  l2 : Info.t
+  x + y : y 0'
+  x : X.t
+  l : Info.t
+  r : Info.t
+  x : X.t
+  Hp : X.lt x x
+  r : Info.t
+  l : Info.t
+  IHp : l' x r'
+  y : y 0'
+  r' : Info.t
+  Hp : l' x r'
+  y : y 0'
+  r' : Info.t
+  Hp' : l' x (y 0' * x)
+  d : Info.t
+  Hp : d x y
+  a : (y + (y + 0) * (y + 0) * (y + 0))%x
+  y : y
+  Hp : d x y
+  H : d x 0'
+  H0 : Info.t
+  l1 : Info.t
+  x : X.t
+  r1 : Info.t
+  l

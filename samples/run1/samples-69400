@@ -1,0 +1,118 @@
+======== SAMPLE 1 ========
+ : eval_Psatz l e1 = Some f
+  F1 :unsat t = true
+  H :E.eq z1 z
+  H0 :E.eq z x
+  ============================
+   (In z l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  f : t -> t
+  Comp : Proper (eq ==> iff) f
+  T : Type
+  tg : T
+  F : Proper (eq ==> iff) f
+  Tg_eq : Proper (eq ==> iff) g
+  s : t
+  x : E.t
+  y : E.t
+  fr := tg int : int -> E.t
+  E : Type
+  e : elt
+  H : compat_op E.eq (fun _ : E.t => Nat.otf E.iter (f (x :: nil)) (fun _ : E.t => Nat.otf E.iter (f nil))
+  g : E.t
+  Hg0 : g = true -> g0 = true
+  H0 :gt nil
+  ============================
+   (In x l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  f : t -> t
+  Comp : Proper (eq ==> iff) f
+  T : Type
+  tg : T
+  F : Proper (eq ==> iff) f
+  Tg_eq : Proper (eq ==> iff) g
+  s : t
+  x : E.t
+  y : E.t
+  fr := tg int : int -> E.t
+  E : Type
+  e : elt
+  H : compat_op E.eq (fun _ : E.t => Nat.otf E.iter (f (x :: nil)) (fun _ : E.t => Nat.otf E.iter (f nil))
+  g : E.t
+  Hg0 : g = true -> g0 = true
+  H0 :gt nil
+  ============================
+   (In x l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  f : t -> t
+  Comp : Proper (eq ==> iff) f
+  T : Type
+  tg : T
+  F : Proper (eq ==> iff) f
+  Tg_eq : Proper (eq ==> iff) g
+  s : t
+  x : E.t
+  y : E.t
+  fr := tg int : int -> E.t
+  E : Type
+  e : elt
+  H : compat_op E.eq (fun _ : E.t => Nat.otf E.iter (f (x :: nil)) (fun _ : E.t => Nat.otf E.iter (f nil))
+  g : E.t
+  Hg0 : g = true -> g0 = true
+  H0 :gt nil
+  ============================
+   (In x l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  f : t -> t
+  Comp : Proper (eq ==> iff) f
+  T : Type
+  tg : T
+  F : Proper (eq ==> iff) f
+  Tg_eq : Proper (eq ==> iff) g
+  s : t
+  x : E.t
+  y : E.t
+  fr := tg int : int -> E.t
+  E : Type
+  e : elt
+  H : compat_op E.eq (fun _ : E.t => Nat.otf E.iter (f (x :: nil)) (fun _ : E.t => Nat.otf E.iter (f nil))
+  g : E.t
+  Hg0 : g = true -> g0 = true
+  H0 :gt nil

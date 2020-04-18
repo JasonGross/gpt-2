@@ -1,0 +1,101 @@
+======== SAMPLE 1 ========
+.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H3 : InT x rl -> InT x a \/ X.eq x y \/ InT x b
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rr
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H3 : InT x rl -> InT x a \/ X.eq x y \/ InT x b
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rr
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H3 : InT x rl -> InT x a \/ X.eq x y \/ InT x b
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rr
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H3 : InT x rl -> InT x a \/ X.eq x y \/ InT x b
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rr
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.

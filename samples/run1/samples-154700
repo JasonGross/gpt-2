@@ -1,0 +1,121 @@
+======== SAMPLE 1 ========
+ l1 x1 Leaf) -> InT a l2) \/ InT a r2
+  H8 : X.lt a x1
+  ============================
+   (a ::ivalence a0 :: recursion l2)
+
+
+Debug: Going to execute:
+t_solver
+
+
+TcDebug (2) > 
+Goal:
+  
+  recursion :
+  
+  recursion0 : forall l : tree,
+         0 <= l1 -> recursion l1 l2 -> recursion l2 l
+  l1 : tree
+  x1 : X.t
+  c1 : Info.t
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H6 : Ok l2
+  H7 : Ok r2
+  H8 : lt_tree x2 l2
+  H9 : gt_tree x2 r2
+  H5 : Ok l1
+  H11 : lt_tree x1 l1
+  H12 : gt_tree x1 Leaf
+  H : X.eq x1 x2
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 l1 x1 Leaf) -> InT a l2
+  a : elt
+  H10 : InT a l1
+  ============================
+   (X.eq a x2)
+
+
+Goal:
+  
+  recursion :
+  
+  recursion0 : forall l : tree,
+         0 <= l1 -> recursion l1 l2 -> recursion l2 l
+  l1 : tree
+  x1 : X.t
+  c1 : Info.t
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H6 : Ok l2
+  H7 : Ok r2
+  H8 : lt_tree x2 l2
+  H9 : gt_tree x2 r2
+  H5 : Ok l1
+  H11 : lt_tree x1 l1
+  H12 : gt_tree x1 Leaf
+  H : X.eq x1 x2
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 l1 x1 Leaf) -> InT a l2
+  a : elt
+  H10 : InT a l1
+  ============================
+   (X.eq a x2)
+
+
+Debug: Going to execute:
+right; t_tauto_intuit
+
+
+TcDebug (2) > 
+Goal:
+  
+  recursion :
+  
+  recursion0 : forall l : tree,
+         0 <= l1 -> recursion l1 l2 -> recursion l2 l
+  l1 : tree
+  x1 : X.t
+  c1 : Info.t
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H6 : Ok l2
+  H7 : Ok r2
+  H8 : lt_tree x2 l2
+  H9 : gt_tree x2 r2
+  H5 : Ok l1
+  H11 : lt_tree x1 l1
+  H12 : gt_tree x1 Leaf
+  H : X.eq x1 x2
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 l1 x1 Leaf) -> InT a l2
+  a : elt
+  H10 : InT a l1
+  ============================
+   (X.eq a x2)
+
+
+Goal:
+  
+  recursion :
+  
+  recursion0 : forall l : tree,
+         0 <= l1 -> recursion l1 l2 -> recursion l2 l
+  l1 : tree
+  x1 : X.t
+  c1 : Info.t
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H6 : Ok l2
+  H7 : Ok r2
+  H8 : lt_tree x2 l2
+  H9 : gt_tree x2

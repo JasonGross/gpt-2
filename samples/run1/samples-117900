@@ -1,0 +1,131 @@
+======== SAMPLE 1 ========
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H0 : Add x e m m'
+  t0 : E.t
+  e0 : elt
+  l : E.lt x t0
+  H2 : MapsTo t0 e0 m
+  H3 : E.lt t0 x
+  ============================
+   (E.eq x t0 /\ e = e0 \/ ~ E.eq x t0 /\ MapsTo t0 e0 m)
+
+
+Debug: Going to execute:
+clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H0 : Add x e m m'
+  t0 : E.t
+  e0 : elt
+  l : E.lt x t0
+  H2 : MapsTo t0 e0 m
+  H3 : E.lt t0 x
+  ============================
+   (E.eq x t0 /\ e = e0 \/ ~ E.eq x t0 /\ MapsTo t0 e0 m)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (1) > 
+Debug: Level 1: m is used in conclusion.
+
+Debug: Level 1: m is used in conclusion.
+
+Debug: Level 1: m is used in conclusion.
+
+Debug: Level 1: m is used in conclusion.
+
+Debug: Level 1: m is used in conclusion.
+
+Debug: Level 1: m is used in conclusion.
+
+Debug: Level 1: m is used in conclusion.
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H0 : Add x e m m'
+  t0 : E.t
+  e0 : elt
+  l : E.lt x t0
+  H2 : MapsTo t0 e0 m
+  H3 : E.lt t0 x
+  ============================
+   (E.eq x t0 /\ e = e0 \/ ~ E.eq x t0 /\ MapsTo t0 e0 m)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+ [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H0 : Add x e m m'
+  t0 : E.t
+  e0 : elt
+  l : E.lt x t0
+  H2 : MapsTo t0 e0 m
+  H3 : E.lt t0 x
+  ============================
+   (E.eq x t0 /\ e = e0 \/ ~ E.eq x t0 /\ MapsTo t0 e0 m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H0 : Add x e m m'
+  t0 : E.t
+  e0 : elt
+  l : E.lt x t0
+  H2 : MapsTo t0 e0 m
+  H3 : E.lt t0 x
+  ============================
+   (E.eq x t0 /\ e = e0 \/ ~ E.eq x t0 /\ MapsTo t0 e0 m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1
+
+
+TcDebug (1

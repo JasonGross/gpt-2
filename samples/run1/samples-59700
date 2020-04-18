@@ -1,0 +1,140 @@
+======== SAMPLE 1 ========
+'
+  H9 : In x4 s3 -> False
+  H5 : In x1 s3
+  a : E.t
+  H7 : In a s1 -> False
+  H8 : In x1 s1 -> False
+  H11 : In x4 s1 -> False
+  H0 : E.eq x3 x4
+  H4 : E.eq x4 a
+  H6 : False
+  H7 : E.eq x2 x2
+  H0 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  x1 : E.t
+  x2 : E.t
+  x3 : E.t
+  x4 : E.t
+  s1 : t
+  s2 : t
+  s3 : t
+  s4 : t
+  H1 : In x3 s2
+  H5 : In x1 s3
+  a : E.t
+  H7 : In a s1 -> False
+  H8 : In x1 s1 -> False
+  H11 : In x4 s1 -> False
+  H0 : E.eq x3 x4
+  H4 : E.eq x4 a
+  H6 : False
+  H7 : E.eq x2 x2
+  H0 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  x1 : E.t
+  x2 : E.t
+  x3 : E.t
+  x4 : E.t
+  s1 : t
+  s2 : t
+  s3 : t
+  s4 : t
+  H1 : In x3 s2
+  H5 : In x1 s3
+  a : E.t
+  H7 : In a s1 -> False
+  H8 : In x1 s1 -> False
+  H11 : In x4 s1 -> False
+  H0 : E.eq x3 x4
+  H4 : E.eq x4 a
+  H6 : False
+  H7 : E.eq x2 x2
+  H0 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  x1 : E.t
+  x2 : E.t
+  x3 : E.t
+  x4 : E.t
+  s1 : t
+  s2 : t
+  s3 : t
+  s4 : t
+  H1 : In x3 s2
+  H5 : In x1 s3
+  a : E.t
+  H7 : In a s1 -> False
+  H8 : In x1 s1 -> False
+  H11 : In x4 s1 -> False
+  H0 : E.eq x3 x4
+  H4 : E.eq x4 a
+  H6 : False
+  H7 : E.eq x2 x2
+  H0 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  x1 : E.t
+  x2 : E.t
+  x3 : E.t
+  x4 : E.t
+  s1 : t
+  s2 : t
+  s3 : t
+  s4 : t
+  H1 : In x3 s2
+  H5 : In x1 s3
+  a : E.t
+  H7 : In a s1 -> False
+  H8 : In x1 s1 -> False
+  H11 : In x4 s1 -> False
+  H0 : E.eq x3 x4
+  H4 : E.eq x4 a
+  H6 : False
+  H7 : E.eq x2 x2
+  H0 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::

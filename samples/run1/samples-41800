@@ -1,0 +1,88 @@
+======== SAMPLE 1 ========
+D s2)#l
+  IHo2 : Ok (inter r1 (split x1 s2)#r)
+  IHi2 : forall y : elt,
+         InT y (inter r1 (split x1 s2)#r) <->
+         InT y r1 /\ InT y (split x1 s2)#r
+  y : elt
+  H1 : InT y (Node _x l1 x1 r1)
+  H2 : InT y s2
+  ============================
+   (InT y l1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  F := fun (x : X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (diff_list l1 l2 acc) <->
+        InA X.eq x l1 /\ (InA X.eq x l2 -> False) \/ InT x s2 /\ (InA X.eq x l1 /\ ~ InA X.eq x l2)
+  IHb2 : Ok (diff l1 (split x1 s2)#l)
+  H0 : InT x s2
+  H1 : InT x l1
+  H2 : InT x s2
+  ============================
+   (InT x l1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  F := fun (x : X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (diff_list l1 l2 acc) <->
+        InA X.eq x l1 /\ (InA X.eq x l2 -> False) \/ InT x s2 /\ (InA X.eq x l1 /\ ~ InA X.eq x l2)
+  IHb2 : Ok (diff l1 (split x1 s2)#l)
+  H0 : InT x s2
+  H1 : InT x l1
+  H2 : InT x s2
+  ============================
+   (InT x l1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  F := fun (x : X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (diff_list l1 l2 acc) <->
+        InA X.eq x l1 /\ (InA X.eq x l2 -> False) \/ InT x s2 /\ (InA X.eq x l1 /\ ~ InA X.eq x l2)
+  IHb2 : Ok (diff l1 (split x1 s2)#l)
+  H0 : InT x s2
+  H1 : InT x l1
+  H2 :

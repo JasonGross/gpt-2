@@ -1,0 +1,104 @@
+======== SAMPLE 1 ========
+) n * xn p -
+    xn (Pos.to_nat n) + (xn n - yn p) ==
+    xn p - yn p + (xn n - xn p + (yn p - yn (Pos.to_nat n))))
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | inject_Z ?z => isZcst z
+  | ?n # ?d => match isZcst n with
+                | true => isPcst d
+                | _ => constr:false
+                end
+  | _ => constr:false
+  end
+
+
+TcDebug (16) > 
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  n : Z
+  Heqn : n = Qfloor (xn 4%nat + (1 # 4))
+  H : (xn 4%nat + (1 # 4) < QArith_base.inject_Z (n + 1))%Q
+  H0 : (QArith_base.inject_Z n <= xn 4%nat + (1 # 4))%Q
+  ============================
+   (xn (Pos.to_nat n) + (xn (Pos.to_nat (Pos.max 4 k)) - (n + 1))))%Q
+
+
+Debug:
+Going to execute:
+match t with
+| inject_Z ?z => isZcst z
+| ?n # ?d => match isZcst n with
+              | true => isPcst d
+              | _ => constr:false
+              end
+| _ => constr:false
+end
+
+
+TcDebug (16) > 
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  n : Z
+  Heqn : n = Qfloor (xn 4%nat + (1 # 4))
+  H : (xn 4%nat + (1 # 4) < QArith_base.inject_Z (n + 1))%Q
+  H0 : (QArith_base.inject_Z n <= xn 4%nat + (1 # 4))%Q
+  ============================
+   (xn (Pos.to_nat n) + (xn (Pos.to_nat (Pos.max 4 k)) - (n + 1))%Q
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (17) > 
+Debug: Level 17: t
+ has value 
+(xn (Pos.to_nat n))
+
+
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  n : Z
+  Heqn : n = Qfloor (xn 4%nat + (1 # 4))
+  H : (xn 4%nat + (1 # 4) < QArith_base.inject_Z (n + 1))%Q
+  H0 : (QArith_base.inject_Z n <= xn 4%nat + (1 # 4))%Q
+  ============================
+   (xn (Pos.to_nat n) + (xn (Pos.to_nat (Pos.max 4 k)) - (n + 1))%Q
+
+
+Debug: Going to execute:
+constr:false
+
+
+TcDebug (17) > 
+Debug: Evaluated term: false
+
+Debug: Evaluated term: false
+
+Debug: Level 16: evaluation returns
+false
+
+
+Debug: Level 15: isQcst t
+ has value 
+false
+
+
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  n : Z
+  Heqn : n = Qfloor (xn 4%nat + (1 # 4))
+  H : (xn 4%nat + (1 # 4) < QArith

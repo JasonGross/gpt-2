@@ -1,0 +1,144 @@
+======== SAMPLE 1 ========
+ == _ in
+    end
+npe : nat
+Hm2 : [c] == [cO]
+Hm1 : φ (p) + 2 = φ (digits)
+Hm2 : φ (p) + φ (digits) = φ (p) + 1
+k : positive
+n : nat
+k' : nat
+Unable to unify "nat" with "S (nat (add k'))".
+
+Debug: Level 0: No such contradiction
+
+Debug: Level 0: No such contradiction
+
+Goal:
+    p : positive
+  ============================
+   (P (S (n + 1 # n) - (S (nat (add k')) n +
+    (S (pos p)) - S p) +
+    (P + complement q :: complement l q))
+
+
+Debug: Going to execute:
+match H with
+| H' => fail 2
+| _ => unify X Y; clear H' || clear H
+end
+
+
+TcDebug (0) > 
+Goal:
+    p : positive  q : positive
+  ============================
+   (P (S (nat (add k')) n + (S (pos p)) - S p) +
+    (P + complement q :: complement l q))
+
+
+Debug: Going to execute:
+H
+
+
+TcDebug (1) > 
+Debug: Level 1: H
+ has value 
+p
+
+
+Goal:
+    p : positive  q : positive
+  ============================
+   (P (S (nat (add k')) n + (S (pos p)) - S p) +
+    (P + complement q :: complement l q))
+
+
+Debug: Going to execute:
+unify X Y; clear H' || clear H
+
+
+TcDebug (1) > 
+Goal:
+    p : positive  q : positive
+  ============================
+   (P (S (nat (add k')) n + (S (pos p)) - S p) +
+    (P + complement q :: complement l q))
+
+
+Debug: Going to execute:
+unify X Y
+
+
+TcDebug (1) > 
+Debug: Evaluated term: S (pred p)
+
+Debug: Evaluated term: S (pred p))
+
+Goal:
+    p : positive  q : positive
+  ============================
+   (P (S (add k')) n + (S (pos p)) - S p) +
+    (P + complement q :: complement l q))
+
+
+Debug: Going to execute:
+<ltac_plugin::unify@0> $1 $2
+
+
+TcDebug (1) > 
+Debug:
+Level 1: In environment
+p, q : positive
+The term "q" has type "positive" while it is expected to have type
+ "Prop C".
+
+Goal:
+    p : positive  q : positive
+  ============================
+   (P (S (nat (add k')) n + (S (pos p)) - S p) +
+    P + complement q :: complement l q = P (S (pred p)))
+
+
+Debug:
+Going to execute:
+match H with
+| H' => fail 2
+| _ => unify X Y; clear H' || clear H
+end
+
+
+TcDebug (1) > 
+Goal:
+    p : positive  q : positive
+  ============================
+   (P (S (nat (add k')) n + (S (pos p)) - S p) +
+    P + complement q :: complement l q = P (S (pred p)))
+
+
+Debug: Going to execute:
+H
+
+
+TcDebug (2) > 
+Debug: Level 2: H
+ has value 
+y
+
+
+Goal:
+    p : positive  q : positive
+  ============================
+   (P (S (nat (add k')) n + (S (pos p)) - S p) +
+    P + complement q :: complement l q = P (S (pred p)))
+
+
+Debug: Going to execute:
+unify X Y; clear H' || clear H
+
+
+TcDebug (2) > 
+Goal:
+    p : positive  q : positive
+  ============================
+   (P (S (nat (add k'))

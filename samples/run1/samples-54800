@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+  (X.eq y x \/ In y (Node ll lx ld lr lh) \/ In y (Node rl rx rd rr rh))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  LE : lh <= rh + 2
+  GT' : rh > lh + 2
+  y : key
+  H : In y (Node ll lx ld lr lx (Node ld lr _x1 _x0 _x4 _x0r rll rlx rr)
+  ============================
+   (X.eq y x \/ In y (Node ll lx ld lr lx (Node ld lr _x1 _x0 _x0r rll rlx rr)
+         (max (height lr) (height rll) + 1))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  LE : lh <= rh + 2
+  GT' : rh > lh + 2
+  y : key
+  H : In y (Node ll lx ld lr lx (Node ld lr _x1 _x0 _x0r rll rlx rr)
+  ============================
+   (X.eq y x \/ In y (Node ll lx ld lr lx (Node ld lr _x1 _x0 _x0r rll rlx rr)
+         (max (height lr) (height rll) + 1))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  LE : lh <= rh + 2
+  GT' : rh > lh + 2
+  y : key
+  H : In y (Node ll lx ld lr lx (Node ld lr _x1 _x0 _x0r rll rlx rr)
+  ============================
+   (X.eq y x \/ In y (Node ll lx ld lr lx (Node ld lr _x1 _x0 _x0r rll rlx rr)
+        (max (height lr) (height rll) + 1))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int

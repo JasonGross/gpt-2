@@ -1,0 +1,76 @@
+======== SAMPLE 1 ========
+rict C
+  csub : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  phi : C -> R
+  CRmorph : ring_morph 0 1 radd rmul rsub ropp req 0%coef 1%coef cadd cmul
+              csub copp ceqb phi
+  phi_0 := morph0 CRmorph : [0] == 0
+  phi_1 := morph1 CRmorph : [1] == 1
+  Cpow : Type
+  Cp_phi : N -> Cpow
+  rpow : R -> Cpow -> R
+  pow_th : power_theory 1 rmul req Cp_phi rpow
+  get_sign : C -> option C
+  get_sign_spec : sign_theory copp ceqb get_sign
+  cdiv : C -> C -> C * C
+  cdiv_th : div_theory req cadd cmul phi cdiv
+  rpow_pow := rpow_pow_N pow_th
+           : forall (r : R) (n : N), rpow r (Cp_phi n) == pow_N 1 rmul r n
+  a : R
+  b : R
+  c : R
+  d : R
+  H : ~ b == 0
+  H0 : ~ d == 0
+  ============================
+   (0 == ~ b * d * 0)
+
+
+Debug: Going to execute:
+x :: l'
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (l' :: d :: nil)
+
+Debug: Level 1: Not convertible.
+
+Debug: Level 1: Not convertible.
+
+Debug: Level 1: Not convertible.
+
+Debug: Level 0: Not convertible.
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  rdiv : R -> R -> R
+  rinv : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  SRinv_ext : forall p q : R, p == q -> / p == / q
+  AFth : almost_field_theory
+  ARth := AF_AR AFth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  rI_neq_rO := AF_1_neq_0 AFth : ~ 1 == 0
+  rdiv_def := AFdiv_def AFth : forall p q : R, p / q == p * / q
+  rinv_l := AFinv_l AFth : forall p : R, ~ p == 0 -> / p * p == 1
+  eq_trans := Seq_trans R req Rsth
+           : forall x y z : R, x == y -> y == z -> x == z
+  eq_sym := Seq_sym R req Rsth : forall x y : R, x == y -> y == x
+  eq_refl := Seq_refl R req Rsth : forall x : R, x == x
+  radd_0_l := ARadd_0_l ARth : forall x : R, 0 + x == x
+  radd_comm := ARadd_comm ARth : forall x y : R, x + y == y + x
+  radd_assoc := ARadd_assoc ARth : forall x y z : R, x + (y + z) == x + y + z
+  rmul_1_l := ARmul_1_l ARth : forall x : R, 1 * x == x
+  rmul_0_l := ARmul_0_l ARth : forall x : R, 0 * x == 0
+  rmul_comm := ARmul_comm ARth : forall x y : R, x * y == y * x
+  rmul_assoc := ARmul_assoc ARth : forall x y z : R, x * (y * z) == x * y

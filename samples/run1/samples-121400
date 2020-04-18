@@ -1,0 +1,110 @@
+======== SAMPLE 1 ========
+_tree lx lr
+  y : key
+  H0 : In y (Node ll lx ld lr lh) \/ In y (Node rl rx rd rr rh)
+  ============================
+   (In y ll)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  Hlr : forall (x : key) (d : elt) (r : t elt) (y : key),
+        In y (join lr x d r) <-> X.eq y x \/ In y lr \/ In y (Node rl rx rd rr rh)
+  x : key
+  d : elt
+  y : key
+  H0 : In y (Node ll lx ld lr lh) \/ In y (Node rl rx rd rr rh)
+  ============================
+   (In y ll)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  Hlr : forall (x : key) (d : elt) (r : t elt) (y : key),
+        In y (join lr x d r) <-> X.eq y x \/ In y lr \/ In y (Node rl rx rd rr rh)
+  x : key
+  d : elt
+  y : key
+  H0 : In y (Node ll lx ld lr lh) \/ In y (Node rl rx rd rr rh)
+  ============================
+   (In y ll)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  Hlr : forall (x : key) (d : elt) (r : t elt) (y : key),
+        In y (join lr x d r) <-> X.eq y x \/ In y lr \/ In y (Node rl rx rd rr rh)
+  x : key
+  d : elt
+  y : key
+  H0 : In y (Node ll lx ld lr lh) \/ In y (Node rl rx rd rr rh)
+  ============================
+   (In y ll)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  Hlr : forall (x : key) (d : elt) (r : t elt) (y : key),
+        In y (join lr x d r) <-> X.eq y x \/ In y lr \/ In y (Node rl rx rd rr rh)
+  x : key
+  d : elt
+  y : key
+  H0 : In y (Node ll lx ld lr lh) \/ In y (Node rl rx rd rr rh)
+  ============================
+   (In y ll)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (4

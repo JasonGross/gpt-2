@@ -1,0 +1,167 @@
+======== SAMPLE 1 ========
+
+
+
+TcDebug (0) > 
+Goal:
+    A : Type  e : A -> Prop  b : B  n : nat  E : n <> n
+  ============================
+   (((n == n)%nat)%nat = n - nat)
+
+
+Debug: Going to execute:
+isnatcst p
+
+
+TcDebug (0) > 
+Goal:
+    A : Type  e : A -> Prop  b : B  n : nat  E : n <> n
+  ============================
+   (((n == n)%nat)%nat = n - nat)
+
+
+Debug:
+Going to execute:
+fun t => match t with
+         | 0 => true
+         | S ?p => isnatcst p
+         | _ => false
+         end
+
+
+TcDebug (1) > 
+Goal:
+    A : Type  e : A -> Prop  b : B  n : nat  E : n <> n
+  ============================
+   (((n == n)%nat)%nat = n - nat)
+
+
+Debug:
+Going to execute:
+match t with
+| 0 => true
+| S ?p => isnatcst p
+| _ => false
+end
+
+
+TcDebug (1) > 
+Goal:
+    A : Type  e : A -> Prop  b : B  n : nat  E : n <> n
+  ============================
+   (((n == n)%nat)%nat = n - nat)
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (2) > 
+Debug: Level 2: t
+ has value 
+Nat
+
+
+Goal:
+    A : Type  e : A -> Prop  b : B  n : nat  E : n <> n
+  ============================
+   (((n == n)%nat)%nat = n - nat)
+
+
+Debug: Going to execute:
+false
+
+
+TcDebug (2) > 
+Goal:
+    A : Type  e : A -> Prop  b : B  n : nat  E : n <> n
+  ============================
+   (((n == n)%nat)%nat = n - nat)
+
+
+Debug: Going to execute:
+true
+
+
+TcDebug (2) > 
+Debug: Evaluated term: true
+
+Debug: Level 2: evaluation returns
+true
+
+
+Debug: Level 1: evaluation returns
+true
+
+
+Debug: Level 0: isnatcst p
+ has value 
+true
+
+
+Goal:
+    A : Type  e : A -> Prop  b : B  n : nat  E : n <> n
+  ============================
+   (((n == n)%nat)%nat = n - nat)
+
+
+Debug: Going to execute:
+true
+
+
+TcDebug (0) > 
+Debug: Evaluated term: true
+
+Debug: Level 0: isnatcst p
+ has value 
+true
+
+
+Goal:
+    A : Type  e : A -> Prop  b : B  n : nat  E : n <> n
+  ============================
+   (((n == n)%nat)%nat = n - nat)
+
+
+Debug: Going to execute:
+false
+
+
+TcDebug (0) > 
+Debug: Evaluated term: false
+
+Debug: Level 0: isnatcst p
+ has value 
+false
+
+
+Goal:
+    A : Type  e : A -> Prop  b : B  n : nat  E : n <> n
+  ============================
+   (((n == n)%nat)%nat = n - nat)
+
+
+Debug: Going to execute:
+false
+
+
+TcDebug (0) > 
+Debug: Evaluated term: false
+
+Debug: Level 0: isnatcst p
+ has value 
+false
+
+
+Goal:
+    A : Type  e : A -> Prop  b : B  n : nat  E : n <> n
+  ============================
+   (((n == n)%nat)%nat = n - nat)
+
+
+Debug: Going to execute:
+false
+
+
+TcDebug (0) > 
+

@@ -1,0 +1,87 @@
+======== SAMPLE 1 ========
+ InT y r /\ InT y r
+  H9 : InT y l
+  H10 : InT y l1
+  ============================
+   (InT y l1 \/ InT y s2 /\ X.lt y x1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  IHt0 : forall y : elt,
+         Ok l1 ->
+         Ok (split x1 s2)#l ->
+         InT y (union l1 (split x1 s2)#l) <->
+         InT y l1 \/ InT y (split x1 s2)#l
+  IHt1 : forall y : elt,
+         Ok r1 ->
+         Ok (split x1 s2)#r ->
+         InT y (union r1 (split x1 s2)#r) <->
+         InT y r1 \/ InT y (split x1 s2)#r
+  y : elt
+  H0 : InT y (Node _x l1 x1 r1) \/ InT y s2
+  H1 : InT y s2 -> lt_tree x1 l1
+  H2 : lt_tree x1 l1
+  H3 : ~ InT y r1
+  ============================
+   (InT y l1 \/ InT y s2 /\ X.lt y x1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  IHt0 : forall y : elt,
+         Ok l1 ->
+         Ok (split x1 s2)#l ->
+         InT y (union l1 (split x1 s2)#l) <->
+         InT y l1 \/ InT y (split x1 s2)#l
+  IHt1 : forall y : elt,
+         Ok r1 ->
+         Ok (split x1 s2)#r ->
+         InT y (union r1 (split x1 s2)#r) <->
+         InT y r1 \/ InT y (split x1 s2)#r
+  y : elt
+  H0 : InT y (Node _x l1 x1 r1) \/ InT y s2
+  H1 : InT y s2 -> lt_tree x1 l1
+  H2 : lt_tree x1 l1
+  H3 : ~ InT y r1
+  ============================
+   (InT y l1 \/ InT y s2 /\ X.lt y x1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  IHt0 : forall y : elt,
+         Ok l1 ->
+         Ok (split x1 s2)#l ->
+         InT y (union l1 (split x1 s2)#l) <->
+         InT y l1 \/ InT y (split x1 s2)#

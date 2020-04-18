@@ -1,0 +1,143 @@
+======== SAMPLE 1 ========
+
+   (MapsTo y e' (Node ll lx ld lr lh) \/ In y rl)
+
+
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  GT : lh > rh + 2
+  y : key
+  H : In y (Node ll lx ld lr lh)
+  ============================
+   (MapsTo y e' (Node ll lx ld lr lh) \/ In y rl)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  GT : lh > rh + 2
+  y : key
+  H : In y (Node ll lx ld lr lh)
+  ============================
+   (MapsTo y e' (Node ll lx ld lr lh) \/ In y rl)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  GT : lh > rh + 2
+  y : key
+  H : In y (Node ll lx ld lr lh)
+  ============================
+   (MapsTo y e' (Node ll lx ld lr lh) \/ In y rl)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  GT : lh > rh + 2
+  y : key
+  H : In y (Node ll lx ld lr lh)
+  ============================
+   (MapsTo y e' (Node ll lx ld lr lh) \/ In y rl)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  GT : lh > rh + 2
+  y : key
+  H : In y (Node ll lx ld lr lh)
+  ============================
+   (MapsTo y e' (Node ll lx ld lr lh) \/ In y rl)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+

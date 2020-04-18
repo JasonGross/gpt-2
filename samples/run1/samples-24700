@@ -1,0 +1,128 @@
+======== SAMPLE 1 ========
+)
+
+  U1 : U (Node ll lx ld lr _x)
+  U2 : U (Node rx rd rr _x)
+  U3 : forall _x : U, rd = rr -> _x = rx
+  U4 : rr = rb
+  e1 : (Node (Node ll lx ld lr _x) <=? 0 -> ?r = _x}
+ in ll
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x : int
+  r : int
+  _x0 : X.eq x rx
+  y : key
+  e : elt
+  l : list (key * elt)
+  x : key
+  d : elt
+  rr : t elt
+  _x1 : int
+  _x2 : X.eq x y
+  H : ~ (Node rx rd rr _x1)
+  u : key
+  H2 : In u r
+  H5 : In u (Node ll lx ld lr _x1)
+  H6 : In u (Node rx rd rr _x1)
+  H7 : In u r
+  ============================
+   (In u (Node ll lx ld lr _x1))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  _x2 : X.eq x y
+  H : ~ (Node rx rd rr _x1)
+  u : key
+  H2 : In u r
+  H5 : In u (Node ll lx ld lr _x1)
+  H6 : In u (Node rx rd rr _x1)
+  H7 : In u r
+  ============================
+   (In u (Node ll lx ld lr _x1))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  _x2 : X.eq x y
+  H : ~ (Node rx rd rr _x1)
+  u : key
+  H2 : In u r
+  H5 : In u (Node ll lx ld lr _x1)
+  H6 : In u (Node rx rd rr _x1)
+  H7 : In u r
+  ============================
+   (In u (Node ll lx ld lr _x1))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  _x2 : X.eq x y
+  H : ~ (Node rx rd rr _x1)
+  u : key
+  H2 : In u r
+  H5 : In u (Node ll lx ld lr _x1)
+  H6 : In u (Node rx rd rr _x1)
+  H7 : In u r
+  ============================
+   (In u (Node ll lx ld lr _x1))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.

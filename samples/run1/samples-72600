@@ -1,0 +1,172 @@
+======== SAMPLE 1 ========
+ 1: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Goal:
+  
+  elt : Type
+  k : E.t
+  k' : E.t
+  Hk : E.eq k k'
+  e : elt
+  H : MapsTo k e k'
+  H2 : False
+  H1 : E.eq k k'
+  ============================
+   False
+
+
+Debug: Going to execute:
+progress change_no_check E.eq with Logic.eq with F
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  k : E.t
+  k' : E.t
+  Hk : E.eq k k'
+  e : elt
+  H : MapsTo k e k'
+  H2 : False
+  H1 : E.eq k k'
+  ============================
+   False
+
+
+Debug: Going to execute:
+change_no_check E.eq with Logic.eq with F
+
+
+TcDebug (1) > 
+Debug: Evaluated term: E.eq
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Goal:
+  
+  elt : Type
+  k : E.t
+  k' : E.t
+  Hk : E.eq k k'
+  e : elt
+  H : MapsTo k e k'
+  H2 : False
+  H1 : E.eq k k'
+  ============================
+   False
+
+
+Debug: Going to execute:
+progress change_no_check E.eq with F
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  k : E.t
+  k' : E.t
+  Hk : E.eq k k'
+  e : elt
+  H : MapsTo k e k'
+  H2 : False
+  H1 : E.eq k k'
+  ============================
+   False
+
+
+Debug: Going to execute:
+change_no_check E.eq with F
+
+
+TcDebug (1) > 
+Debug: Evaluated term: E.eq
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Goal:
+  
+  elt : Type
+  k : E.t
+  k' : E.t
+  Hk : E.eq k k'
+  e : elt
+  H : MapsTo k e k'
+  H2 : False
+  H1 : E.eq k k'
+  ============================
+   False
+
+
+Debug: Going to execute:
+FSetDecideAuxiliary.no_logical_interdep
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  k : E.t
+  k' : E.t
+  Hk : E.eq k k'
+  e : elt
+  H : MapsTo k e k'
+  H2 : False
+  H1 : E.eq k k'
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+repeat
+ match goal with
+ | H:context [ ?P -> False ] |- _ => fold (~ P) in H
+ | |- context [ [?P -> False ] -> False ] => fold (~ P)
+ end
+
+
+TcDebug (1) > 
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  k : E.t
+  k' : E.t
+  Hk : E.eq k k'
+  e : elt
+  H : MapsTo k e k'
+  H2 : False
+  H1 : E.eq k k'
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match goal with
+| H:context [ ?P -> False ] |- _ => fold (~ P) in H
+| |- context [ [?P -> False ] -> False ] => fold (~ P)
+end
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  k : E.t
+  k' : E.t
+  Hk : E.eq k k'
+  e : elt
+  H : MapsTo k e k'
+ 

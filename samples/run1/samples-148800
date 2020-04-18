@@ -1,0 +1,123 @@
+======== SAMPLE 1 ========
+ < aa; Private_OrderTac.Tac.order_prepare
+
+
+TcDebug (0) > 
+Goal:
+    a : t  b : t  c : t  H0 : b == 0 -> False
+  ============================
+   (0 == 0 * 0)
+
+
+Debug:
+Going to execute:
+rewr H (Private_OrderTac.Tac.lt_irrefl H)
+
+
+TcDebug (0) > 
+Debug: Evaluated term: H
+
+Debug: Evaluated term: H
+
+Goal:
+    a : t  b : t  c : t  H0 : 0 == 0 -> False
+  ============================
+   (0 == 1 * 0)
+
+
+Debug: Going to execute:
+intro H
+
+
+TcDebug (0) > 
+Goal:
+    a : t  b : t  c : t  H0 : 0 == 0 -> False
+  ============================
+   (0 == 1 * 0)
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@1> $1
+
+
+TcDebug (0) > 
+Goal:
+  
+  ============================
+   (forall a b c (lt_aux c H0),
+    a == b * (c ^ c)%poly)
+
+
+Debug:
+Going to execute:
+rewrite <- (Private_OrderTac.Tac.lt_irrefl H) in (Private_OrderTac.Tac.lt_refl X) ->
+    rewrite <- (Private_OrderTac.Tac.le_refl H) in H 
+
+
+TcDebug (0) > 
+Goal:
+  
+  ============================
+   (forall a b c (lt_aux c H0),
+    a == b * (c ^ c)%poly)
+
+
+Debug:
+Going to execute:
+rewrite <- (Private_OrderTac.Tac.lt_irrefl H) in (Private_OrderTac.Tac.lt_refl X) ->
+    rewrite <- (Private_OrderTac.Tac.le_refl H) in H 
+
+
+TcDebug (0) > 
+Debug:
+Evaluated term: (Private_OrderTac.Tac.lt_irrefl H
+                   H0 <= 0)%Z
+
+Debug:
+Evaluated term: (Private_OrderTac.Tac.lt_irrefl H
+                    H0 <= 0)%Z
+
+Goal:
+  
+  ============================
+   (forall a b c l (lt_aux l H0),
+    a == b * (c ^ c))
+
+
+Debug: Going to execute:
+rewrite <- (Private_OrderTac.Tac.le_refl H) in (Private_OrderTac.Tac.lt_refl H)
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (Private_OrderTac.Tac.le_refl H)
+
+Debug: Evaluated term: (Private_OrderTac.Tac.le_refl H)
+
+Goal:
+    a : t  b : t  c : t  H0 : 0 == 0 -> False
+  ============================
+   (b * c == 0 -> False)
+
+
+Debug: Going to execute:
+rewrite <- (Private_OrderTac.Tac.le_refl H) in (Private_OrderTac.Tac.lt_refl H)
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (Private_OrderTac.Tac.l_refl H)
+
+Debug: Evaluated term: (Private_OrderTac.Tac.le_refl H)
+
+Debug: Evaluated term: (Private_OrderTac.Tac.le_refl H)
+
+Goal:
+    a : t  b : t  c : t  H0 : 0 == 0 -> False
+  ============================
+   (0 == 1 * 0)
+
+
+Debug: Going to execute:
+intros a c H H1 H2
+
+
+TcDebug (0

@@ -1,0 +1,80 @@
+======== SAMPLE 1 ========
+ to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                     eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+                unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                 deduce t t' = Some u ->
+                 forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : (Term' * Annot)%type
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  c : clause
+  H0 : ~ make_conj (eval_tt env) c ->
+       ~ (eval_tt env t /\ make_conj (eval_tt env) cl)
+  H1 : ~ (eval_tt env t /\ make_conj (eval_tt env) cl) ->
+       ~ make_conj (eval_tt env) c
+  H2 : eval_tt env a
+  H3 : ~ (eval_tt env t /\ eval_tt env c)
+  ============================
+   (~ make_conj (eval_tt env) cl \/ ~ make_conj (eval_tt env) c)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (4) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                     eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+                unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                 deduce t t' = Some u ->
+                 forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : (Term' * Annot)%type
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  c : clause
+  H0 : ~ make_conj (eval_tt env) c ->
+       ~ (eval_tt env t /\ make_conj (eval_tt env) cl)
+  H1 : ~ (eval_tt env t /\ make_conj (eval_tt env) cl) ->
+       ~ make_conj (eval_tt env) c
+  H2 : eval_tt env a
+  H3 : ~ (eval_tt env t /\ eval_tt env c)
+  ============================
+   (~ make_conj (eval

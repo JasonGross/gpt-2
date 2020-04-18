@@ -1,0 +1,90 @@
+======== SAMPLE 1 ========
+<Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+
+
+TcDebug (5) > 
+Goal:
+    i : Color.t  s : t  s' : t  a : E.t  H0 : E.eq x a
+  ============================
+   (((E.eq x a \/ In a s) \/ In a s' /\ In a s' ->
+     In a s \/ In a s' ->
+     In a s \/ In a s' ->
+     In a s \/ In a s') /\
+    In a s \/ In a s' ->
+     In a s /\ In a s' ->
+     In a s \/ In a s' /\ In a s'))
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (6) > 
+Goal:
+    i : Color.t  s : t  s' : t  a : E.t  H0 : E.eq x a
+  ============================
+   (((E.eq x a \/ In a s) \/ In a s' /\ In a s' ->
+     In a s \/ In a s' ->
+     In a s \/ In a s' ->
+     In a s \/ In a s' /\ In a s') /\
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (6) > 
+Debug: Level 6: evaluation returns
+<tactic closure>
+
+
+Goal:
+    i : Color.t  s : t  s' : t  a : E.t  H0 : E.eq x a
+  ============================
+   (((E.eq x a \/ In a s) \/ In a s' /\ In a s' ->
+     In a s \/ In a s' ->
+     In a s \/ In a s' ->
+     In a s \/ In a s' /\ In a s') /\
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+
+
+TcDebug (5) > 
+Goal:
+    i : Color.t  s : t  s' : t  a : E.t  H0 : E.eq x a
+  ============================
+   (((E.eq x a \/ In a s) \/ In a s' /\ In a s' ->
+     In a s \/ In a s' ->
+     In a s \/ In a s' ->
+     In a s \/ In a s' ->
+     In a s \/ In a s' /\ In a s') /\
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (6) > 
+Goal:
+    i : Color.t  s : t  s' : t  a : E.t  H0 : E.eq x a
+  ============================
+   (((E.eq x a \/ In a s) \/ In a s' /\ In a s' ->
+     In a s \/ In a s' ->
+     In a s \/ In a s' ->
+     In a s \/ In a s' /\ In a s') /\
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (6) > 
+Debug: Level 6: evaluation returns
+<tactic closure>
+
+
+Goal:
+    i : Color.t  s : t  s' : t  a : E.t  H0 : E.eq x a
+  ============================
+   (((E.eq x a \/ In a s) \

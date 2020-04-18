@@ -1,0 +1,75 @@
+======== SAMPLE 1 ========
+
+  e : elt
+  l : list (key * elt)
+  H1 : eq (fst (a, b)) (fst x)
+  H2 : snd (a, b) = snd x
+  ============================
+   (forall x y : key * elt,
+    e = d && (inter l snd (a, b)) ((k', e') :: combine (fun l' : list (key * elt) =>
+           match or_clause (p :: t) e with
+           | Some cl =>
+              fun R R' : autorewrite constr:(R'), intros l x y; or_clause e x
+           | None => fun R R' : autorewrite constr:(R'), intros l x y
+           end
+         | Some cl =>
+             match or_clause (p :: t) e with
+             | Some cl =>
+               fun R R' : autorewrite constr:(R'), intros l x y
+            end
+    | None => fun R R' : autorewrite constr:(R'), intros l x y
+    | (?x = ?y) =>
+        let ex := p2ep x in
+        match ex with
+        | Some cl =>
+            fun R R' : autorewrite constr:(R'), intros l x y
+           end
+    | None => fun R R' : autorewrite constr:(R'), intros l x y
+    | (?x > ?y)%poly
+     end
+  end
+
+
+TcDebug (13) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> A
+  Comp : Proper (E.eq ==> eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  i : A
+  s : t
+  s' : t
+  H : forall x : elt, ~ (In x s /\ In x s')
+  a : elt
+  H0 : In a s
+  ============================
+   (forall x y : key * elt,
+    e = d \/ eqA a x \/ InA a l <->
+    (inter l s ->
+    (if eqA a x \/ InA a l) ->
+     inter l s' ->
+     (if eqA a x \/ InA a l) ->
+     inter s s' ->
+     (if eqA a x \/ InA a l) ->
+     inter s s' ->
+     (if eqA a x \/ InA a l) ->
+     inter s s' ->
+     (if eqA a x \/ InA a l) ->
+     inter s s' ->
+     (if eqA a x \/ InA a l) ->
+     inter s s' ->
+     (if eqA a y \/ InA a l) ->
+     inter s s' ->
+     (if eqA a x \/ InA a l) ->
+     inter s s' ->
+     (if eqA a y \/ InA a l) ->
+     inter s s' ->
+     (if eqA a x \/ InA a l) ->
+     inter s s' ->
+     (if eqA a y \/ InA a l) ->
+     inter s s' ->
+     (if eqA a x \/ InA a

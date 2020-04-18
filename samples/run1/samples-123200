@@ -1,0 +1,100 @@
+======== SAMPLE 1 ========
+   True
+  H4 : a
+  H9 : ~ (In a s4)
+  H6 : In a s1 /\ ~ In a s4
+  H7 : In a s1
+  H8 : ~ In a s2
+  H13 : In a s1
+  H12 : ~ In a s4
+  ============================
+   (In a s1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  a : elt
+  s1 : (Term' * Annot)%type
+  s2 : list (key * elt)
+  H : forall k : Raw.key, Raw.In k m <-> Raw.In k m'
+  a : elt
+  s1' : (Term' * Annot)%type
+  s2' : list (key * elt)
+  H0 : forall k : Raw.key,
+       Raw.In k m <-> Raw.In k m'
+  a : elt
+  s1' : (Term' * Annot)%type
+  s2' : list (key * elt)
+  H1 : forall k : Raw.key, Raw.In k m <-> Raw.In k m'
+  a : elt
+  s1' : (Term' * Annot)%type
+  s2' : list (key * elt)
+  H2 : forall k : Raw.key, Raw.In k m -> key * elt
+  H3 : Raw.In k m'
+  H1 : forall k : Raw.key, Raw.In k s2' <-> Raw.In k s2'
+  k : key
+  H4 : a
+  H9 : ~ (In a s4)
+  H6 : In a s1 /\ ~ In a s4
+  H7 : In a s1
+  H8 : ~ In a s2
+  H13 : In a s1
+  H12 : ~ In a s4
+  ============================
+   (In a s1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  a : elt
+  s1 : (Term' * Annot)%type
+  s2 : list (key * elt)
+  H : forall k : Raw.key, Raw.In k m <-> Raw.In k m'
+  a : elt
+  s1' : (Term' * Annot)%type
+  s2' : list (key * elt)
+  H0 : forall k : Raw.key,
+       Raw.In k m <-> Raw.In k m'
+  a : elt
+  s1' : (Term' * Annot)%type
+  s2' : list (key * elt)
+  H1 : forall k : Raw.key, Raw.In k m <-> Raw.In k m'
+  a : elt
+  s1' : (Term' * Annot)%type
+  s2' : list (key * elt)
+  H2 : forall k : Raw.key, Raw.In k m -> key * elt
+  H3 : Raw.In k m'
+  H1 : forall k : Raw.key, Raw.In k s2' <-> Raw.In k s2'
+  k : key
+  H4 : a
+  H9 : ~ (In a s4)
+  H6 : In a s1 /\ ~ In a s4
+  H7 : In a s1
+  H8 : ~ In a s2
+  H13 : In a s1
+  H12 : ~ In a s4
+  ============================
+   (In a s1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  a : elt
+  s1 : (Term' * Annot)%type
+  s2 : list (key * elt)
+  H : forall k : Raw.key, Raw.In k m <-> Raw

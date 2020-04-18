@@ -1,0 +1,108 @@
+======== SAMPLE 1 ========
+ eval a b \/ X.eq x rx \/ InT x rr)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H3 : InT x rl -> InT x a \/ X.eq x y \/ InT x b
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x rx
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rl \/ X.eq x rx \/ InT x rr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H3 : InT x rl -> InT x a \/ X.eq x y \/ InT x b
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x rx
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rl \/ X.eq x rx \/ InT x rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H0 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H3 : InT x rl -> InT x a \/ X.eq x y \/ InT x b
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x rx
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rl \/ X.eq x rx \/ InT x rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+

@@ -1,0 +1,144 @@
+======== SAMPLE 1 ========
+<Coq.Init.Tauto.with_uniform_flags>
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s''
+  a : E.t
+  H3 : In x s'
+  H0 : In x s
+  H2 : In x s'
+  H5 : E.eq x a -> In a s'
+  H7 : In a s
+  H4 : In a s'
+  H1 : E.eq x a
+  ============================
+   (In a s /\ ~ E.eq x a)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s''
+  a : E.t
+  H3 : In x s'
+  H0 : In x s
+  H2 : In x s'
+  H5 : E.eq x a -> In a s'
+  H7 : In a s
+  H4 : In a s'
+  H1 : E.eq x a
+  ============================
+   (In a s /\ ~ E.eq x a)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s''
+  a : E.t
+  H3 : In x s'
+  H0 : In x s
+  H2 : In x s'
+  H5 : E.eq x a -> In a s'
+  H7 : In a s
+  H4 : In a s'
+  H1 : E.eq x a
+  ============================
+   (In a s /\ ~ E.eq x a)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s''
+  a : E.t
+  H3 : In x s'
+  H0 : In x s
+  H2 : In x s'
+  H5 : E.eq x a -> In a s'
+  H7 : In a s
+  H4 : In a s'
+  H1 : E.eq x a
+  ============================
+   (In a s /\ ~ E.eq x a)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s''
+  a : E.t
+  H3 : In x s'
+  H0 : In x s
+  H2 : In x s'
+  H5 : E.eq x a -> In a s'
+  H7 : In a s
+  H4 : In a s'
+  H1 : E.eq x a
+  ============================
+   (In a s /\ ~ E.eq x a)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s''
+  a : E.t
+  H3 : In x s'
+  H0 : In x s
+  H2 : In x s'
+  H5 : E.eq x a -> In a s'
+  H7 : In

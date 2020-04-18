@@ -1,0 +1,151 @@
+======== SAMPLE 1 ========
+  In t
+  f : elt -> bool
+  H : Proper (FEsub (FEsub (FEopp (FEX Q 3)) (FEX Q 2)) (FEX Q 1))
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  f : elt -> bool
+  H : Proper (FEsub (FEopp (FEX Q 3)) (FEX Q 2)) (FEX Q 1))
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  f : elt -> bool
+  H : Proper (FEsub (FEopp (FEX Q 3)) (FEX Q 2)) (FEX Q 1))
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  f : elt -> bool
+  H : Proper (FEsub (FEopp (FEX Q 3)) (FEX Q 2)) (FEX Q 1))
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  f : elt -> bool
+  H : Proper (FEsub (FEopp (FEX Q 3)) (FEX Q 2)) (FEX Q 1))
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  f : elt -> bool
+  H : Proper (FEsub (FEopp (FEX Q 3)) (FEX Q 2)) (FEX Q 1))
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  f : elt -> bool
+  H : Proper (FEsub (FEopp (FEX Q 3)) (FEX Q 2)) (FEX Q 1))
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  f : elt -> bool
+  H : Proper (FEsub (FEopp (FEX Q 3)) (FEX Q 2)) (FEX Q 1))
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  f : elt -> bool
+  H : Proper (FEsub (FEopp (FEX Q 3)) (FEX Q 2)) (FEX Q 1))
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  f : elt -> bool
+  H : Proper (FEsub (FEopp (FEX Q 3)) (FEX Q 2)) (FEX Q 1))
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  f : elt -> bool
+  H : Proper (FEsub (FEopp (FEX Q 3)) (FEX Q 2)) (FEX Q 1))
+  ============================
+   False
+
+
+Debug:
+Going

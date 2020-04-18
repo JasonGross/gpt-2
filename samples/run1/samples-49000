@@ -1,0 +1,97 @@
+======== SAMPLE 1 ========
+:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  x1 : elt
+  l1 : list elt
+  IH1 : forall l2 acc : list elt,
+        NoDupA (l1 ++ x1 :: l2) ->
+        forall [A] x1 (x :: l1) -> acc0
+  a : elt
+  H4 : NoDupA (l1 ++ l2)
+  H3 : NoDupA (l2 ++ x1)
+  H0 : forall acc : list elt,
+       InA (x :: l1) ->
+       NoDupA (l2 ++ l2) -> acc0
+  acc : list elt
+  H : InA x1 l1
+  H1 : InA x1 l2 -> False
+  ============================
+   (NoDupA (l1 ++ acc0)
+      (forall [A] x : elt,
+       Sorted (elements_aux acc l1 ++ x1 :: elements_aux acc l2) ->
+    false)
+
+
+Goal:
+  
+  x : X.t
+  x1 : elt
+  l1 : list elt
+  IH1 : forall l2 acc : list elt,
+        NoDupA (l1 ++ x1 :: l2) ->
+        forall [A] x1 (x :: l1) -> acc0
+  a : elt
+  H4 : NoDupA (l1 ++ x1)
+  H3 : NoDupA (l2 ++ x1)
+  H0 : forall acc : list elt,
+       InA (x :: l1) ->
+       NoDupA (l2 ++ l2) -> acc0
+  acc : list elt
+  H : InA x1 l1
+  H1 : InA x1 l2 -> False
+  ============================
+   (NoDupA (l1 ++ x1)
+     (forall [A] x : elt,
+      Sorted (elements_aux acc l1 ++ x1 :: elements_aux acc l2) ->
+    false)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  x1 : elt
+  l1 : list elt
+  IH1 : forall l2 acc : list elt,
+        NoDupA (l1 ++ x1 :: l2) ->
+        forall [A] x1 (x :: l1) -> acc0
+  a : elt
+  H4 : NoDupA (l1 ++ x1)
+  H3 : NoDupA (l2 ++ x1)
+  H0 : forall acc : list elt,
+       InA (x :: l1) ->
+       NoDupA (l2 ++ l2) -> acc0
+  acc : list elt
+  H : InA x1 l1
+  H1 : InA x1 l2 -> False
+  ============================
+   (NoDupA (l1 ++ x1)
+     (forall [A] x : elt,
+      Sorted (elements_aux acc l1 ++ x1 :: elements_aux acc l2) ->
+    false)
+
+
+Goal:
+  
+  x : X.t
+  x1 : elt
+  l1 : list elt
+  IH1 : forall l2 acc : list elt,
+        NoDupA (l1 ++ x1 :: l2) ->
+        forall [A] x1 (x :: l1) -> acc0
+

@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+  H7 : X.lt y0 x
+  H3 : In x r
+  ============================
+   (In x l \/ In x s)
+
+
+Debug: Going to execute:
+solve [ left; t_tauto_intuit | right; t_tauto_intuit ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  IHt : forall y : key, bst l -> In y (remove x l) <-> ~ X.eq y x /\ In y l
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : In y0 (remove x l) -> ~ X.eq y0 x /\ In y0 l
+  H : ~ X.eq y0 x -> In y0 l -> In y0 (remove x l)
+  H5 : In y0 (remove x l)
+  H7 : X.lt y0 x
+  H3 : In x r
+  ============================
+   (In x l \/ In x s)
+
+
+Debug: Going to execute:
+left; t_tauto_intuit
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  IHt : forall y : key, bst l -> In y (remove x l) <-> ~ X.eq y x /\ In y l
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : In y0 (remove x l) -> ~ X.eq y0 x /\ In y0 l
+  H : ~ X.eq y0 x -> In y0 l -> In y0 (remove x l)
+  H5 : In y0 (remove x l)
+  H7 : X.lt y0 x
+  H3 : In x r
+  ============================
+   (In x l \/ In x s)
+
+
+Debug: Going to execute:
+left
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  IHt : forall y : key, bst l -> In y (remove x l) <-> ~ X.eq y x /\ In y l
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : In y0 (remove x l) -> ~ X.eq y0 x /\ In y0 l
+  H : ~ X.eq y0 x -> In y0 l -> In y0 (remove x l)
+  H5 : In y0 (remove x l)
+  H7 : X.lt y0 x
+  H3 : In x r
+  ============================
+   (In x l \/ In x s)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::left@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  IHt : forall y : key, bst l -> In y (remove x l) <-> ~ X.eq y x /\ In y l
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l

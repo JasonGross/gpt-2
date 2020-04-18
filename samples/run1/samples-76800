@@ -1,0 +1,87 @@
+======== SAMPLE 1 ========
+   (forall s : t, nth 0 s -> nth 0 s' -> (forall a : elt, eq a a' -> In a s) -> true = false || s'
+             : forall x : elt, eq x a -> In x s -> In x (eq a x)
+               : eq a a -> In a s -> In a s' -> Prop
+  ============================
+   (forall x : elt, In x x s -> In x (eq a x))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  H : Proper (E.eq ==> eqA ==> eqA) f
+  H0 : Proper (E.eq ==> eqA ==> eqA) (fun x : A -> Prop => x) x
+  a : elt
+  s : list elt
+  IHs : forall x : elt, Some a = Some x -> In a s -> In x s'
+  H3 : In x s
+  H : True
+  H5 : f a = true
+  H4 : (exists x0 : A, e : E.t, t0 = true) -> In x0 s \/ In x s'
+  H7 : In a s'
+  H8 : f x1 d' = None
+  H1 : t0 = true
+  H3 : In x s'
+  H : t0 = true
+  H4 : (exists x0 : A, e : E.t, t0 = true) -> In x0 s \/ In x s'
+  H7 : In a s'
+  H8 : f x1 d' = None
+  H1 : t0 = true
+  H3 : In x s'
+  H : t0 = true
+  H4 : (exists x0 : A, e : E.t, t0 = true) -> In x0 s \/ In x s'
+  H7 : In a s'
+  H8 : f x1 d' = None
+  H1 : t0 = true
+  H3 : In x s'
+  H : t0 = true
+  H4 : (exists x0 : A, e : E.t, t0 = true) -> In x0 s \/ In x s'
+  H6 : bst l
+  H5 : bst r
+  H8 : lt_tree x l
+  H9 : gt_tree x r
+  H10 : bst lr
+  H11 : bst r
+  H12 : lt_tree x l
+  H13 : gt_tree x r
+  ============================
+   (forall x : elt, In x x s -> In x (eq a x))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  H : Proper (E.eq ==> eqA ==> eqA) f
+  H0 : Proper (E.eq ==> eqA ==> eqA) (fun x : A -> Prop => x) x
+  a : elt
+  s : list elt
+  IHs : forall x : elt, Some a = Some x -> In a s -> In x s'
+  H3 : In x s
+  H : True
+  H5 : f a = true
+  H4 : (exists x0 : A, e : E.t, t0 = true) -> In x0 s \/ In x s'
+  H7 : In a s'
+  H8 : f x1 d' = None
+  H1 : t0 = true
+  H3 : In x s'
+  H : t0 = true
+  H4 : (exists x0 : A, e : E.t, t0 = true) -> In x0 s \/ In x s'
+

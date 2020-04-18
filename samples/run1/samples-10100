@@ -1,0 +1,98 @@
+======== SAMPLE 1 ========
+_eval%list i2
+  H12 : b = 1 -> 0 <= fst i2
+  H1 : b = 1
+  H0 : d = max (PX i2) (PX i2) (p i1)
+  H2 :
+     (p = i2) ->
+      PX i3 ->
+      (1 # p) ->
+      PX i3 ->
+      (0 < p i2) ->
+      (p <= p i1) -> PX i3
+  H3 : ~ In x (p :: -1 # p) -> exists (fst i2) : X.eq x x1 -> False
+  H4 : forall n l y : X.t,
+       ~ (inter_list l y)#1 ->
+       exists (fst i2) : X.eq x x1
+  IHb1 : b = 1 -> 0 <= fst i2
+  Ih1 : b = 1 -> 0 <= fst i2
+  h1 : b = 1
+  Hc : b = 0
+  H3 : In x (fun x : X0 => y l)#1
+  ============================
+   ((2 # n) /\ (2 # n) @ l == 2 # l * x + (2 # n))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  p : X.t
+  i : I.t
+  l : tree
+  y : elt
+  H : InA X.eq x y
+  H0 : b = 1 -> 0 <= fst i2
+  H1 : b = 1
+  H0 : d = max (PX i2) (PX i2) (p i1)
+  H2 :
+     (p = i2) ->
+      PX i3 ->
+      (1 # p) ->
+      PX i3 ->
+      (0 < p i2) ->
+      (p <= p i1) -> PX i3
+  H3 : ~ In x (p :: -1 # p) -> exists (fst i2) : X.eq x x1 -> False
+  H4 : forall n l y : X.t,
+       ~ (inter_list l y)#1 ->
+      exists (fst i2) : X.eq x x1
+  IHb1 : b = 1 -> 0 <= fst i2
+  Ih1 : b = 1
+  Hc : b = 0
+  H3 : In x (fun x : X0 => y l)#1
+  ============================
+   ((2 # n) /\ (2 # n) @ l == 2 # l * x + (2 # n))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  p : X.t
+  i : I.t
+  l : tree
+  y : elt
+  H : InA X.eq x y
+  H0 : b = 1 -> 0 <= fst i2
+  H1 : b = 1
+  H0 : d = max (PX i2) (PX i2) (p i1)
+  H2 :
+     (p = i2) ->
+      PX i3 ->
+      (1 # p) ->
+      PX i3 ->
+      (0 < p i2) ->
+      ((p = i2) -> max (PX i2) (p i1) < PX i3))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  p : X.t
+  i : I.t
+  l

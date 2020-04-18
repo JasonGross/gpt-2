@@ -1,0 +1,151 @@
+======== SAMPLE 1 ========
+ m : t elt
+  m' : t elt
+  H : bst m'
+  H0 : bst m
+  H1 : In y m'
+  ============================
+   (In y m')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  m' : t elt
+  H : bst m'
+  H0 : bst m
+  H1 : In y m'
+  ============================
+   (In y m')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  m' : t elt
+  H : bst m'
+  H0 : bst m
+  H1 : In y m'
+  ============================
+   (In y m')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  m' : t elt
+  H : bst m'
+  H0 : bst m
+  H1 : In y m'
+  ============================
+   (In y m')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  m' : t elt
+  H : bst m'
+  H0 : bst m
+  H1 : In y m'
+  ============================
+   (In y m')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  m' : t elt
+  H : bst m'
+  H0 : bst m
+  H1 : In y m'
+  ============================
+   (In y m')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  m' : t elt
+  H : bst m'
+  H0 : bst m
+  H1 : In y m'
+  ============================
+   (In y m')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  m' : t elt
+  H : bst m'
+  H0 : bst m
+  H1 : In y m'
+  ============================
+   (In y m')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 =>

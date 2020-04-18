@@ -1,0 +1,92 @@
+======== SAMPLE 1 ========
+Goal:
+  
+  h : I.t
+  l : tree
+  x0 : X.t
+  r : tree
+  Hl : forall (x : elt) (f : X.t -> bool),
+       Proper (X.eq ==> Logic.eq) f ->
+       InT x (filter f l) <-> InT x l /\ f x = true
+  Hr : forall (x : elt) (f : X.t -> bool),
+       Proper (X.eq ==> Logic.eq) f ->
+       InT x (filter f r) <-> InT x r /\ f x = true
+  x : elt
+  f : X.t -> bool
+  Hf : Proper (X.eq ==> Logic.eq) f
+  Hx0 : f x0 = true
+  H0 : InT x (Node h l x0 r)
+  H1 : f x = true
+  ============================
+   (InT x l /\ f x = true -> InT x (Node h l x0 r))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  h : I.t
+  l : tree
+  x0 : X.t
+  r : tree
+  Hl : forall (x : elt) (f : X.t -> bool),
+       Proper (X.eq ==> Logic.eq) f ->
+       InT x (filter f l) <-> InT x l /\ f x = true
+  Hr : forall (x : elt) (f : X.t -> bool),
+       Proper (X.eq ==> Logic.eq) f ->
+       InT x (filter f r) <-> InT x r /\ f x = true
+  x : elt
+  f : X.t -> bool
+  Hf : Proper (X.eq ==> Logic.eq) f
+  Hx0 : f x0 = true
+  H0 : InT x (Node h l x0 r)
+  H1 : f x = true
+  ============================
+   (InT x l /\ f x = true -> InT x (Node h l x0 r))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  h : I.t
+  l : tree
+  x0 : X.t
+  r : tree
+  Hl : forall (x : elt) (f : X.t -> bool),
+       Proper (X.eq ==> Logic.eq) f ->
+       InT x (filter f l) <-> InT x l /\ f x = true
+  Hr : forall (x : elt) (f : X.t -> bool),
+       Proper (X.eq ==> Logic.eq) f ->
+       InT x (filter f r) <-> InT x r /\ f x = true
+  x : elt
+  f : X.t -> bool
+  Hf : Proper (X.eq ==> Logic.eq) f
+  Hx0 : f x0 = true
+  H0 : InT x (Node h l x0 r)
+  H1 : f x = true
+  ============================
+   (InT x l /\ f x = true -> InT x (Node h l x0 r))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  h : I.t
+  l : tree
+  x0 : X.t
+  r : tree
+  Hl : forall (x : elt) (f : X.t -> bool),
+       Proper (X.eq ==> Logic.eq) f ->
+       InT x (filter f l) <-> InT x l /\ f x = true
+

@@ -1,0 +1,99 @@
+======== SAMPLE 1 ========
+   [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+
+
+TcDebug (2) > 
+Goal:
+  
+  a : ascii
+  s : string
+  u : uint
+  IHs : forall d : uint, Some u = Some d -> string_of_uint d = s
+  d : uint
+  H : a = "4"%char /\ d = D4 u \/
+      a = "5"%char /\ d = D5 u \/
+      a = "6"%char /\ d = D6 u \/
+      a = "7"%char /\ d = D7 u \/
+      a = "8"%char /\ d = D8 u \/ a = "9"%char /\ d = D9 u
+  ============================
+   (string_of_uint d = String a s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  a : ascii
+  s : string
+  u : uint
+  IHs : forall d : uint, Some u = Some d -> string_of_uint d = s
+  d : uint
+  H : a = "4"%char /\ d = D4 u \/
+      a = "5"%char /\ d = D5 u \/
+      a = "6"%char /\ d = D6 u \/
+      a = "7"%char /\ d = D7 u \/
+      a = "8"%char /\ d = D8 u \/ a = "9"%char /\ d = D9 u
+  ============================
+   (string_of_uint d = String a s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  a : ascii
+  s : string
+  u : uint
+  IHs : forall d : uint, Some u = Some d -> string_of_uint d = s
+  d : uint
+  H : a = "4"%char /\ d = D4 u \/
+      a = "5"%char /\ d = D5 u \/
+      a = "6"%char /\ d = D6 u \/
+      a = "7"%char /\ d = D7 u \/
+      a = "8"%char /\ d = D8 u \/ a = "9"%char /\ d = D9 u
+  ============================
+   (string_of_uint d = String a s)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  a : ascii
+  s : string
+  u : uint
+  IHs : forall d : uint, Some u = Some d -> string_of_uint d = s
+  d : uint
+  H : a = "4"%char /\ d = D4 u \/
+      a = "5"%char /\ d = D5 u \/
+      a = "6"%char /\ d = D6 u \/
+      a = "7"%char /\ d = D7 u \/
+      a = "8"%char /\ d = D8 u \/ a = "9"%char /\ d = D9 u
+  ============================
+   (string_of_uint d = String a s)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  a : ascii
+  s : string
+  u : uint
+  IHs : forall d : uint, Some

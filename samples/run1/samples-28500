@@ -1,0 +1,134 @@
+======== SAMPLE 1 ========
+the-word "3" exists in the current environment.
+
+Goal:
+    x : t  y : t  H0 : y = x
+  ============================
+   (x <-> y -> False)
+
+
+Debug:
+Going to execute:
+generalize (H1 (lt (x0, y)) (lt (x0, x0)) as y); order_loop
+
+
+TcDebug (9) > 
+Goal:
+    x : t  y : t  H0 : y = x
+  ============================
+   (x <-> y -> False)
+
+
+Debug: Going to execute:
+generalize (H1 (lt (x0, y)) (lt (x0, x0)) as y)
+
+
+TcDebug (9) > 
+Debug: Evaluated term: (H1 (lt (x0, y)) (lt (x0, x0))
+    |- _ => generalize (H1 (lt (x0, y)) (lt (x0, x0)) as y)
+    end; order_loop
+
+
+TcDebug (10) > 
+Goal:
+    x : t  y : t  H : y = x
+  ============================
+   (x <-> y -> False)
+
+
+Debug: Going to execute:
+generalize (H1 (lt (x0, y)) (lt (x0, x0)) as y)
+
+
+TcDebug (10) > 
+Debug:
+Evaluated term: (H1 (lt (x0, y)) (lt (x0, x0))
+   |- _ => generalize (H1 (lt (x0, y)) (lt (x0, x0)) as y)
+   => generalize (H1 (lt (x0, y)) (lt (x0, x0)) as y)
+
+
+Goal:
+    x : t  y : t  H : x = x
+  ============================
+   (x <-> y -> False)
+
+
+Debug: Going to execute:
+generalize
+
+
+TcDebug (10) > 
+Debug: Evaluated term: (H1 (lt (x0, y)) (lt (x0, x0))
+   |- _ => generalize
+        (H1 (lt (x0, y)) (lt (x0, x0)) as y)
+   end; order_loop
+
+Debug: Going to execute:
+intros; OrderTac.order_loop; OrderTac.order_rewr
+
+
+TcDebug (10) > 
+Goal:
+    x : t  y : t  H : x = x
+  ============================
+   (x <-> y -> False)
+
+
+Debug: Going to execute:
+intros; OrderTac.order_loop
+
+
+TcDebug (10) > 
+Goal:
+    x : t  y : t  H : x = x
+  ============================
+   (x <-> y -> False)
+
+
+Debug: Going to execute:
+intros
+
+
+TcDebug (10) > 
+Goal:
+    x : t  y : t  H : x = x
+  ============================
+   (y = x)
+
+
+Debug: Going to execute:
+OrderTac.order_eq; OrderTac.order_rewr
+
+
+TcDebug (10) > 
+Goal:
+    x : t  y : t  H : x = x
+  ============================
+   (x <-> y -> False)
+
+
+Debug:
+Going to execute:
+match goal with
+| OrderTac.OTF.eq x _ => clear H || clear H
+| OrderTac.OTF.lt x _ => clear H
+| OrderTac.OTF.le x _ => elt
+| OrderTac.OTF.le _ _ _ _ => clear H || clear H
+end
+
+
+TcDebug (5) > 
+Goal:
+    x : t  y : t  H : x = x
+  ============================
+   (y = x)
+
+
+Debug: Going to execute:
+OrderTac.order_rewr x eqn
+
+
+TcDebug (6) > 
+Goal:
+    x : t  y : t  H : x = x
+ 

@@ -1,0 +1,49 @@
+======== SAMPLE 1 ========
+ ||
+                   Qeq_bool (triv_div 0 1 Qeq_bool) ring_subst_niter hyps'
+                    (num nfe))
+                 (Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp
+                    Qeq_bool (triv_div 0 1 Qeq_bool) ring_subst_niter hyps'
+                    (denum nfe)))%Q
+  res := {|
+        num := Ring_polynom.PEadd (Ring_polynom.PEX Q 1)
+                 (Ring_polynom.PEadd
+                    (Ring_polynom.PEopp (Ring_polynom.PEc 1))
+                    (Ring_polynom.PEX Q 1));
+        denum := Ring_polynom.PEc 1;
+        condition := nil |} : linear Q
+  res_eq : Fnorm 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+             (FEadd (FEX Q 1) (FEX Q 2))) = res
+  ============================
+   ((2 # p < wB -> goal) / 2 + (1 # p) < (1 # p) + (- (2 # p))%Q -> goal)
+
+
+Debug: Going to execute:
+f ltac:(())
+
+
+TcDebug (17) > 
+Goal:
+  
+  wB : Z.pos wB
+  q : Z
+  r : Z
+  H : (2 # p < q - r)%Q
+  Z.of_N (Qpower_positive p q) = Some (Qpower_positive p r)
+  H0 : (1 # p)%Q
+  H1 : (1 # p)%Q
+  list_hyp := nil : list (Ring_polynom.PExpr Q * Ring_polynom.PExpr Q)
+  list_hyp_norm := nil : list (Q * Ring_polynom.Mon * Ring_polynom.Pol Q)
+  ring_lemma : forall (pe : Ring_polynom.PExpr Q) (npe : Ring_polynom.Pol Q),
+               Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+                 (triv_div 0 1 Qeq_bool) ring_subst_niter list_hyp_norm pe =
+               npe ->
+               (Ring_polynom.PEeval 0 1 Qplus Qmult Qminus Qopp
+                  (IDphi (R:=Q)) Z.of_N Qpower
+                  ((2 # p)%Q
+                   :: 1 # p :: xn (Pos.to_nat p) :: xn (Pos.to_nat p) :: nil)
+                  pe ==
+                Ring_polynom.Pphi_pow 0 1 Qplus Qmult Qminus Qopp 0 1
+                   Qeq_bool (IDphi (R:=Q)) Z.of_N Qpower
+                   (get_sign_None (C:=Q))
+    

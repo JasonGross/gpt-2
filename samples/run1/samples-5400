@@ -1,0 +1,63 @@
+======== SAMPLE 1 ========
+'' /\ (X.eq x a \/ InA X.eq x l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.simplif> flags;
+ <Coq.Init.Tauto.axioms> flags ||
+   match reverse goal with
+   | id:(?X1 -> ?X2) -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (X1 -> X2);
+             [ exact
+             id
+             ||
+                   | substring; exact
+                 id
+                   | None => intro; clear
+                   id
+                   | Some =>
+                      match
+                 { | EQ, Heq => Some e => f (eq _ e)
+                     | Some => f (eq _ e)
+                     end;
+               match
+                 X1 -> X2 -> X3
+                      | S2 => f (eq _ e)
+                     end
+               end
+    | |- _ => intro; t_tauto_intuit
+   end
+  | _ => f (InA X.eq x l) || t_tauto_intuit
+ end
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x1 : I.l
+  t_x1 : Uint16
+  H : r <= x * x ^ 2
+  H0 : r < x * x ^ 3
+  IHr : forall t : Uint,
+         Add x (Node r0 r) as t fv lt_tree x t = fv lt_tree x r
+  IH1 : forall (x : X.t) (y : elt),
+         InT y (remove x (remove y l)) <->
+         InT y l /\ InT y (remove x l) \/ if fv (remove y l) <> None then None
+  H0 : fv (remove y l) <> None
+  H1 : forall t : Uint,
+         InT y (remove x (remove y l)) <->
+         InT y (x :: l) \/ if fv (remove y l) <> None then None
+  H2 : fv (remove y l) <> None
+  H3 : ~ InT y l /\ InT y r \/ InT y (remove x l) -> None
+  H4 : InT y l /\ InT y r
+  H3 : (Node t0 l) ->
+        InT y (Node t0 l) \/ InT y l -> None
+  H0 : forall x : X.t,
+        InT y r (remove x l) <->
+         InT y l /\ InT y (remove x l) \/ if fv (remove y l) <> None then None
+  H5 : (X.eq

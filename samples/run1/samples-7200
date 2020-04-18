@@ -1,0 +1,103 @@
+======== SAMPLE 1 ========
+1: eval_fst (fst l)
+| H:?M ?l => change_no_check (~ (l * rhs))@0
+  |- _ =>
+    match X with
+    | H:?M => change_no_check (~ (x * rhs)) @0
+    |- _ =>
+     change_no_check (~ (x * rhs) @ 1)
+    end
+| H:?M -> _ =>
+    match X with
+    | H:?MX ?l => change_no_check (~ (x * rhs) @ 1) @ l * rhs
+    end
+| H:?MX ?l => change_no_check (~ (x * rhs) @ x) @ l * rhs
+ end
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  t elt -> Type
+  e' : elt
+  h : interp_ord_comb Z.lt (e, e')) ->
+      forall y : key, In y l -> In y elt -> In y e' -> In y t
+  LT : list_hyp_norm_str
+  LT' : list_hyp_norm
+  EQ : Sorted l ->
+      forall x y z : key, In y l -> In y elt -> In y e' -> In y z
+  H2 : In y (e' :: l) -> Z.interp_ord_dec (elt:=elt'))
+  H3 : In y
+  env : Env
+  H0 : MX.TO.lt x y
+  l : list (MX.TO.lt x y)
+  H2 : (lt x y) -> False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+change_no_check (MX.TO.lt e e' :: nil)
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  t elt -> Type
+  e' : elt
+  h : interp_ord_comb Z.lt (e, e')) ->
+     forall y : key, In y l -> In y elt -> In y e' -> In y t
+  LT : list_hyp_norm_str
+  LT' : list_hyp_norm_str
+  EQ : Sorted l ->
+      forall x y z : key, In y l -> In y elt -> In y e' -> In y z
+  H2 : In y (e' :: l) -> Z.interp_ord_dec (elt:=elt'))
+  H3 : In y
+  env : Env
+  H0 : MX.TO.lt x y
+  l : list (MX.TO.lt x y)
+  H2 : (lt x y) -> False
+  ============================
+   False
+
+
+Debug: Going to execute:
+change_no_check (MX.TO.le e e' :: nil)
+
+
+TcDebug (3) > 
+Debug: Evaluated term: (MX.TO.lt x y)
+
+Debug: Evaluated term: (MX.TO.lt x y)
+
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  t elt -> Type
+  e' : elt
+  h : interp_ord_comb Z.lt (e, e')) ->
+     forall y : key, In y l -> In y elt -> In y e' -> In y t
+  LT : list_hyp_norm_str
+  LT' : list_hyp_norm_str
+  EQ : Sorted l ->
+      forall x y z : key, In y l -> In y elt -> In y e' -> In y z
+  H2 : In y (e' :: l) -> Z.interp_ord_dec (elt:=elt'))
+  H3 : In y
+  env : Env
+  H0 : MX.TO.lt x y
+  l : list (

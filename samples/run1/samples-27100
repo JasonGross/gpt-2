@@ -1,0 +1,132 @@
+======== SAMPLE 1 ========
+ z z0
+  ============================
+   (InT x (append l z e) /\ ~ X.eq x x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.lt y x
+  e1 : X.compare x y = GT _x
+  H : InT y r
+  ============================
+   (InT x r /\ ~ X.eq y x -> X.eq y x \/ X.eq y x \/ InT y r /\ ~ X.eq y x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.lt y x
+  e1 : X.compare x y = GT _x
+  H : InT y r
+  ============================
+   (InT x r /\ ~ X.eq y x -> X.eq y x \/ X.eq y x \/ InT y r /\ ~ X.eq y x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.lt y x
+  e1 : X.compare x y = GT _x
+  H : InT y r
+  ============================
+   (InT x r /\ ~ X.eq y x -> X.eq y x \/ X.eq y x \/ InT y r /\ ~ X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.lt y x
+  e1 : X.compare x y = GT _x
+  H : InT y r
+  ============================
+   (InT x r /\ ~ X.eq y x -> X.eq y x \/ X.eq y x \/ InT y r /\ ~ X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.lt y x
+  e1 : X.compare x y = GT _x
+  H : InT y r
+  ============================
+   (InT x r /\ ~ X.eq y x -> X.eq y x \/ X.eq y x \/ InT y r /\ ~ X.eq y x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r :

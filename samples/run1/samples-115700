@@ -1,0 +1,83 @@
+======== SAMPLE 1 ========
+  end
+  in
+  m1 : list (X.t * elt), B1 m1
+  B2 : list (X.t * elt)
+  IHm1 : forall (X.t * elt) (m2 : list (X.t * elt)) (H : b1 = e1 -> False) (_x : Compare X.lt X.eq x0 x')
+  IHm2 : forall (X.t * elt) (m2 : list (X.t * elt)) (H : b2 = e2 -> False)
+  ============================
+   (E1 == E2 -> In x (remove x s))
+
+
+Debug: Going to execute:
+<ltac_plugin::elimtype@0>
+
+
+TcDebug (6) > 
+Debug: Evaluated term: (b1.m1)
+
+Goal:
+  
+  elt : Type
+  eq_elt : elt -> elt -> Prop
+  x : X.t
+  e : elt
+  s1 : tree
+  t1 : X.t
+  s2 : tree
+  x' : X.t
+  e' : elt
+  s2 : tree
+  IHs1 : forall (x : X.t) (e : elt),
+         Ok (x :: l1) ->
+         Ok (x :: l2) ->
+         InA eqke (diff (x1 :: l1) l2 acc) <->
+         InA eqke (x1 :: l1) (x2 :: l2 acc)
+  IHs2 : forall acc : list X.t,
+         Ok (TheProof
+           (fold_right
+              (fun (pf : Z.pos z1 => negb (fst pf) z) (snd pf) t1)
+               acc) <->
+          InA eqke (diff (x1 :: l1) l2 acc)
+  acc : list X.t
+  H0 : b1 = true
+  H1 : Ok (Node c1 l1 x1 r1)
+  H2 : InA eqke (diff (x1 :: l1) l2 acc)
+  H3 : InA eqke (x1 :: l1) (x2 :: l2 acc)
+  acc' : list X.t
+  c2 : bool
+  c3 : Vector.t
+  l4 : tree
+  H6 : InA X.eq x l1
+  H7 : InA X.eq x l2
+  H5 : InA X.eq x l2
+  H4 : eqA a x2
+  H9 : eqA a y
+  H10 : eqA a x
+  H11 : False
+  ============================
+   (InA eqke (x1, e) (b2))
+
+
+Goal:
+  
+  elt : Type
+  eq_elt : elt -> elt -> Prop
+  x : X.t
+  e : elt
+  s1 : tree
+  t1 : X.t
+  s2 : tree
+  x' : X.t
+  e' : elt
+  s2 : tree
+  IHs1 : forall (x : X.t) (e : elt),
+         Ok (x :: l1) ->
+         Ok (x :: l2) ->
+         InA eqke (diff (x1 :: l1) l2 acc) <->
+         InA eqke (x1 :: l1) (x2 :: l2 acc)
+  IHs2 : forall acc : list X.t,
+         Ok (TheProof
+           (fold_right
+              (fun (pf : Z.pos z1 => negb (fst pf) z) (snd pf) t1)
+       

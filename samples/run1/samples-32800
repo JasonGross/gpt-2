@@ -1,0 +1,129 @@
+======== SAMPLE 1 ========
+OrderTac.OTF.lt x y
+  H2 : gtb_tree x b
+  H1 : gt_tree x r
+  H0 : gt_tree x lx
+  H3 : gt_tree X.lt x y
+  H : (gtb_tree x lx0 + X.lt y r) ^ 2
+  y : elt
+  H6 : InT y lx
+  ============================
+   (X.eq y x \/ InT y lx \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x0 : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H2 : gt_tree x b
+  H1 : gt_tree x r
+  H0 : gt_tree x lx
+  H3 : gt_tree X.lt x y
+  H : (gtb_tree x lx0 + X.lt y r) ^ 2
+  y : elt
+  H6 : InT y lx
+  ============================
+   (X.eq y x \/ InT y lx \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x0 : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H2 : gt_tree x b
+  H1 : gt_tree x r
+  H0 : gt_tree x lx
+  H3 : gt_tree X.lt x y
+  H : (gtb_tree x lx0 + X.lt y r) ^ 2
+  y : elt
+  H6 : InT y lx
+  ============================
+   (X.eq y x \/ InT y lx \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x0 : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H2 : gt_tree x b
+  H1 : gt_tree x r
+  H0 : gt_tree x lx
+  H3 : gt_tree X.lt x y
+  H : (gtb_tree x lx0 + X.lt y r) ^ 2
+  y : elt
+  H6 : InT y lx
+  ============================
+   (X.eq y x \/ InT y lx \/ InT y r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x0 : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H2 : gt_tree x b
+  H1 : gt_tree x r
+  H0 : gt_tree x l

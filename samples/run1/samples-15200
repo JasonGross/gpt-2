@@ -1,0 +1,139 @@
+======== SAMPLE 1 ========
+  P : Prop
+  Q : Prop
+  R : Prop
+  H : decidable P
+  H0 : decidable Q
+  H1 : False
+  H2 : True
+  H3 : P /\ Q -> R
+  H6 : R -> P /\ Q
+  H7 : P /\ Q -> R
+  H10 : R -> False
+  H11 : P
+  H12 : R -> False
+  H13 : Q
+  H14 : R -> False
+  H15 : R -> False
+  H16 : R -> False
+  H17 : P
+  H8 : Q -> R
+  H17' : Q
+  H16 : False
+  H18 : P
+  H9 : R -> False
+  H10 : Q
+  H13 : False
+  H0 : False
+  H1 : False
+  H2 : True
+  H3 : P /\ Q -> R
+  H6 : R -> P /\ Q
+  H7 : P /\ Q -> R
+  H10 : R -> False
+  H11 : P
+  H12 : R -> False
+  H13 : Q
+  H14 : R -> False
+  H15 : R -> False
+  H16 : R -> False
+  H17 : P
+  H8 : Q -> R
+  H17' : Q
+  H16 : False
+  H18 : P
+  H9 : R -> False
+  H10 : Q
+  H13 : False
+  H0 : False
+  H1 : False
+  H2 : True
+  H3 : P /\ Q -> R
+  H6 : R -> P /\ Q
+  H7 : P /\ Q -> R
+  H10 : R -> False
+  H11 : P
+  H12 : R -> False
+  H13 : Q
+  H14 : R -> False
+  H15 : R -> False
+  H16 : R -> False
+  H17 : P
+  H8 : Q -> R
+  H17' : Q
+  H16 : False
+  H18 : P
+  H9 : R -> False
+  H10 : Q
+  H13 : False
+  H0 : False
+  H1 : False
+  H2 : True
+  H3 : P /\ Q -> R
+  H6 : R -> P /\ Q
+  H7 : P /\ Q -> R
+  H10 : R -> False
+  H11 : P
+  H12 : R -> False
+  H13 : Q
+  H14 : R -> False
+  H15 : R -> False
+  H16 : R -> False
+  H17 : P
+  H8 : Q -> R
+  H17' : Q
+  H16 : False
+  H18 : P
+  H9 : R -> False
+  H10 : Q
+  H13 : False
+  H0 : False
+  H1 : False
+  H2 : True
+  H3 : P /\ Q -> R
+  H6 : R -> P /\ Q
+  H7 : P /\ Q -> R
+  H10 : R -> False
+  H11 : P
+  H12 : R -> False
+  H13 : Q
+  H14 : R -> False
+  H15 : R -> False
+  H16 : R -> False
+  H17 : P
+  H8 : Q -> R
+  H17' : Q
+  H16 : False
+  H18 : P
+  H9 : R -> False
+  H10 : Q
+  H13 : False
+  H0 : False
+  H1 : False
+  H2 : True
+  H3 : P /\ Q -> R
+  H6 : R -> P /\ Q
+  H7 : P /\ Q -> R
+  H10 : R -> False
+  H11 : P
+  H12 : R -> False
+  H13 : Q
+  H14 : R -> False
+  H15 : R -> False
+  H16 : R -> False
+  H17 : P
+  H8 : Q -> R
+  H17' : Q
+  H16 : False
+  H18 : P
+  H9 : R -> False
+  H10 : Q
+  H13 : False
+  H0 : False
+  H1 : False
+  H2 : True
+  H3 : P /\ Q -> R
+  H6 : R -> P /\ Q
+  H7 : P /\ Q -> R
+  H10 : R -> False
+  H11 : P

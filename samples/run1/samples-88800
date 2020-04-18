@@ -1,0 +1,106 @@
+======== SAMPLE 1 ========
+ heightA - heightA <= 1
+  ============================
+   (heightA - height A <= 1 + max (heightA) (height A) + 1 + 1)
+
+
+Debug: Going to execute:
+solve [ do_atom | use_hyps; do_ccl ]
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  eq1 : A -> A -> Prop
+  eq2 : A -> A -> Prop
+  eq3 : A -> A -> Prop
+  st : Equivalence eq1
+  st : Equivalence eq2
+  il : A -> A
+  H : eqA il k /\ eqA il m /\ ~ In k m
+  Hm : NoDupA (flip A)
+  Hm' : NoDupA (flip A)
+  H : eqA k m /\ ~ (flip A)
+  H0 : eqA k m' ->
+       eqk (flip A) m' ->
+       ~ eqA m (flip A) (flip A)
+  H1 : eqA k m -> False
+  H2 : NoDupA (flip A)
+  H3 : eqA k m'
+  ============================
+   (NoDupA (flip A) \/ NoDupA (flip A))
+
+
+Debug: Going to execute:
+do_atom
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  eq1 : A -> A -> Prop
+  eq2 : A -> A -> Prop
+  eq3 : A -> A -> Prop
+  st : Equivalence eq1
+  st : Equivalence eq2
+  il : A -> A
+  H : eqA il k /\ eqA il m /\ ~ In k m
+  Hm : NoDupA (flip A)
+  Hm' : NoDupA (flip A)
+  H : eqA k m /\ ~ (flip A)
+  H0 : eqA k m' ->
+       eqk (flip A) m' ->
+       ~ eqA m (flip A) (flip A)
+  H1 : eqA k m -> False
+  H2 : NoDupA (flip A)
+  H3 : eqA k m'
+  ============================
+   (NoDupA (flip A) \/ NoDupA (flip A))
+
+
+Debug: Going to execute:
+trivial with eq_true_true
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  eq1 : A -> A -> Prop
+  eq2 : A -> A -> Prop
+  eq3 : A -> A -> Prop
+  st : Equivalence eq1
+  st : Equivalence eq2
+  il : A -> A
+  H : eqA il k /\ eqA il m /\ ~ In k m
+  Hm : NoDupA (flip A)
+  Hm' : NoDupA (flip A)
+  H : eqA k m /\ ~ (flip A)
+  H0 : eqA k m' ->
+       eqk (flip A) m' ->
+       ~ eqA m (flip A) (flip A)
+  H1 : eqA k m -> False
+  H2 : NoDupA (flip A)
+  H3 : eqA k m'
+  ============================
+   (NoDupA (flip A) \/ NoDupA (flip A))
+
+
+Debug: Going to execute:
+<ltac_plugin::trivial@0> $1 $2
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  eq1 : A -> A -> Prop
+  eq2 : A -> A -> Prop
+  eq3 : A -> A -> Prop
+  st : Equivalence eq1
+  st0 : Equivalence eq2
+  ============================
+   (forall (a : tree A) (b : clause A) (flip B),
+    MapsToA A \/ InB A -> MapsToA A \/ InA B /\ ~ (flip B \/ InA B) \

@@ -1,0 +1,80 @@
+======== SAMPLE 1 ========
+.t
+  p' : nat
+  m' : nat
+  H0 : false = φ (i)
+  H1 : true = φ (m)
+  ============================
+   false = false + φ (i)
+
+
+Debug: Going to execute:
+order_prepare
+
+
+TcDebug (6) > 
+Goal:
+  
+  C : Type
+  R : Type
+  t : list X.t
+  x : X.t
+  e : elt
+  H : In x m -> False
+  H0 : R x e m
+  H1 : False
+  ============================
+   R
+
+
+Debug:
+Going to execute:
+match goal with
+| H:?A -> False |- _ => change_no_check (~ A) in H; order_prepare
+| H:~ ?R ?x ?y
+  |- _ =>
+      match R with
+      | OrderTac.OTF.eq => fail 1
+      | _ =>
+           change_no_check (~ OrderTac.OTF.eq x y) in H ||
+            apply OrderTac.not_gt_le in H ||
+              apply OrderTac.not_ge_lt in H || clear H || fail 1;
+           OrderTac.order_prepare
+      end
+| H:?R ?x ?y
+  |- _ =>
+      match R with
+      | OrderTac.OTF.eq => fail 1
+      | OrderTac.TO.le => fail 1
+      | _ =>
+           change_no_check (OrderTac.OTF.eq x y) in H ||
+             change_no_check (OrderTac.TO.le x y) in H ||
+               change_no_check (OrderTac.TO.le x y) in H || clear H || fail 1;
+           OrderTac.order_prepare
+      end
+| |- ~ _ => intro; OrderTac.order_prepare
+| H:?R ?x ?y
+  |- _ =>
+      match R with
+      | OrderTac.OTF.eq => fail 1
+      | OrderTac.TO.lt_trans H
+      | OrderTac.OTF.lt_trans H
+      | OrderTac.OTF.le_lt_trans H
+      | OrderTac.OTF.le_lt_trans H
+      | _ =>
+           change_no_check (OrderTac.OTF.eq x y) in H ||
+             change_no_check (OrderTac.TO.le x y) in H ||
+               change_no_check (OrderTac.TO.le x y) in H || clear H || fail 1;
+           OrderTac.order_prepare
+      end
+| |- ~ _ => intro; OrderTac.order_prepare
+| |- _ ?x ?x =>
+      match R with
+      | OrderTac.OTF.eq => fail 1
+      | OrderTac.TO.lt_trans H
+      | OrderTac.OTF.lt_trans H
+      | OrderTac.OTF.le_lt_trans H
+      | _ =>
+           change_no_check (OrderTac.OTF.eq x y) in H ||
+             change_no_check (OrderTac.TO.le x y) in H ||
+            

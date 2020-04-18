@@ -1,0 +1,97 @@
+======== SAMPLE 1 ========
+2 := rll rlx rld rlr _x3) + 2
+  rlr _x1 : int
+  rll _x3 : id
+  rlx _x0 : int
+  rld _x0 : height (Rd rll (Rd rlr _x3) _x2) > height rr + 2
+  e2 : (height (Node _x (Node _x0 Leaf _x0 _x1 _x2 _x3) rll rx rld rlr _x2) <=? height l)
+  IH2 : (height (Node _x0 Leaf _x0 _x1 _x2 _x3) rll rx rld rlr _x2) ==? height rr
+  y : key
+  H0 : (forall l : X.t, b : MX.TO.lt y0 x -> forall x : key, In y l <-> In y l /\ X.lt y x)
+  H2 : MX.TO.lt y0 x
+  LE : X.lt y0 x
+  ============================
+   (X.lt y0 x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node _x0 Leaf _x0 _x1 _x2 _x3) > height l + 2
+  _x : height l <= height (Node _x0 Leaf _x0 _x1 _x2 _x3) + 2
+  _x1 : int
+  y : key
+  H0 : (forall l : X.t, b : MX.TO.lt y0 x -> forall x : key, In y l <-> In y l /\ X.lt y x)
+  H2 : MX.TO.lt y0 x
+  LE : X.lt y0 x
+  ============================
+   (X.lt y0 x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node _x0 Leaf _x0 _x1 _x2 _x3) > height l + 2
+  _x : height l <= height (Node _x0 Leaf _x0 _x1 _x2 _x3) + 2
+  _x1 : int
+  y : key
+  H0 : (forall l : X.t, b : MX.TO.lt y0 x -> forall x : key, In y l <-> In y l /\ X.lt y x)
+  H2 : MX.TO.lt y0 x
+  LE : X.lt y0 x
+  ============================
+   (X.lt y0 x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node _x0 Leaf _x0 _x1 _x2 _x3) > height l + 2
+  _x : height l <= height (Node _x0 Leaf _x0 _x1 _x2 _x3) + 2
+  _x1 : int
+  y : key
+  H0 : (forall l : X.

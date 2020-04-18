@@ -1,0 +1,118 @@
+======== SAMPLE 1 ========
+  (r1 * Z.pos s2 * Z.pos q2 * Z.pos t2 <=
+    Z.pos q2 * Z.pos s2 * (p1 *
+    Z.pos p2 * Z.pos q2 * Z.pos t2))
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (14) > 
+Debug: Level 14: t
+ has value 
+7
+
+
+Goal:
+  
+  p1 : Z
+  p2 : positive
+  q1 : Z
+  q2 : positive
+  H : p1 * Z.pos q2 = q1 * Z.pos p2
+  r1 : Z
+  r2 : positive
+  s1 : Z
+  s2 : positive
+  H0 : r1 * Z.pos s2 * Z.pos q2 =
+        r1 * Z.pos p2 * Z.pos q2
+  ============================
+   (r1 * Z.pos s2 * Z.pos q2 * Z.pos t2 <=
+    Z.pos q2 * Z.pos s2 * (p1 *
+    Z.pos p2 * Z.pos q2 * Z.pos t2))
+
+
+Debug: Going to execute:
+isPcst p
+
+
+TcDebug (14) > 
+Goal:
+  
+  p1 : Z
+  p2 : positive
+  q1 : Z
+  q2 : positive
+  H : p1 * Z.pos q2 = q1 * Z.pos p2
+  r1 : Z
+  r2 : positive
+  s1 : Z
+  s2 : positive
+  H0 : r1 * Z.pos s2 * Z.pos q2 =
+        r1 * Z.pos p2 * Z.pos q2
+  ============================
+   (r1 * Z.pos s2 * Z.pos q2 * Z.pos t2 <=
+    Z.pos q2 * Z.pos s2 * (p1 *
+    Z.pos p2 * Z.pos q2 * Z.pos t2))
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | (?p~1)%positive => isPcst p
+  | (?p~0)%positive => isPcst p
+  | 1%positive => true
+  | Pos.of_succ_nat ?n => isnatcst n
+  | _ => false
+  end
+
+
+TcDebug (15) > 
+Goal:
+  
+  p1 : Z
+  p2 : positive
+  q1 : Z
+  q2 : positive
+  H : p1 * Z.pos q2 = q1 * Z.pos p2
+  r1 : Z
+  r2 : positive
+  s1 : Z
+  s2 : positive
+  H0 : r1 * Z.pos s2 * Z.pos q2 =
+        r1 * Z.pos p2 * Z.pos q2
+  ============================
+   (r1 * Z.pos s2 * Z.pos q2 * Z.pos t2 <=
+    Z.pos q2 * Z.pos s2 * (p1 *
+    Z.pos p2 * Z.pos q2 * Z.pos t2))
+
+
+Debug:
+Going to execute:
+match t with
+| (?p~1)%positive => isPcst p
+| (?p~0)%positive => isPcst p
+| 1%positive => true
+| Pos.of_succ_nat ?n => isnatcst n
+| _ => false
+end
+
+
+TcDebug (15) > 
+Goal:
+  
+  p1 : Z
+  p2 : positive
+  q1 : Z
+  q2 : positive
+  H : p1 * Z.pos q2 = q1 * Z.pos p2
+  r1 : Z
+  r2 : positive
+  s1 : Z
+  s2 : positive
+  H0 : r1 * Z.pos s2 * Z.pos q2 =
+        r1 * Z.pos p2 * Z.pos q2
+  ============================
+   (r1 * Z.pos s2 * Z.pos q2

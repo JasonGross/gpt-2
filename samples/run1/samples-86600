@@ -1,0 +1,65 @@
+======== SAMPLE 1 ========
+Pmul_0_l := ARopp_zero Rsth ARth : forall x : R, 1 * x == 0 -> x == 1
+  rmul_0_l := ARmul_0_l ARth : forall x : R, 0 * x == 0
+  rmul_comm := ARmul_comm ARth : forall x y : R, x * y == y * x
+  rmul_assoc := ARmul_assoc ARth : forall x y z : R, x * (y * z) == x * y * z
+  rdistr_l := ARdistr_l ARth : forall x y z : R, (x + y) * z == x * z + y * z
+  ropp_mul_l := ARopp_mul_l ARth : forall x y : R, - (x * y) == - x * y
+  ropp_add := ARopp_add ARth : forall x y : R, - (x + y) == - x + - y
+  rsub_def := ARsub_def ARth : forall x y : R, x - y == x + - y
+  radd_0_r := ARadd_0_r Rsth ARth : forall x : R, x + 0 == x
+  rmul_0_r := ARmul_0_r Rsth ARth : forall x : R, x * 0 == 0
+  rmul_1_r := ARmul_1_r Rsth ARth : forall x : R, x * 1 == x
+  ropp_0 := ARopp_zero Rsth Reqe ARth : - 0 == 0
+  rdistr_r := ARdistr_r Rsth Reqe ARth
+           : forall x y z : R, z * (x + y) == z * x + z * y
+  C : Type
+  cO : C
+  cI : C
+  cadd : C -> C -> C
+  cmul : C -> C -> C
+  csub : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  phi : C -> R
+  CRmorph : ring_morph 0 1 radd rmul rsub ropp req 0%coef 1%coef cadd cmul
+              csub copp ceqb phi
+  phi_0 := morph0 CRmorph : [0] == 0
+  phi_1 := morph1 CRmorph : [1] == 1
+  Cpow : Type
+  Cp_phi : N -> Cpow
+  rpow : R -> Cpow -> R
+  pow_th : power_theory 1 rmul req Cp_phi rpow
+  get_sign : C -> option C
+  get_sign_spec : sign_theory copp ceqb get_sign
+  cdiv : C -> C -> C * C
+  cdiv_th : div_theory req cadd cmul phi cdiv
+  rpow_pow := rpow_pow_N pow_th
+          : forall (r : R) (n : N), rpow r (Cp_phi n) == pow_N 1 rmul r n
+  p : positive
+  IHp : forall (r : R) (n : N),
+        mult_dev r (N.pos p) == rpow r (cdiv n) n
+  n : N
+  ============================
+   (rpow (mkPEO (Pc cdiv 0 p))) r (gcd n (gcd n p))) ==
+    rpow (mkPEO (Pc cdiv 0 p))) r (gcd n (gcd n p))
+
+
+Debug: Going to execute:
+Cst t
+
+
+TcDebug (16) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  rdiv : R -> R -> R
+  rinv : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence

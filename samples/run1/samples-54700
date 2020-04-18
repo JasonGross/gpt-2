@@ -1,0 +1,80 @@
+======== SAMPLE 1 ========
+
+ltk (x, e) (y, bb))
+
+
+Debug: Going to execute:
+<ltac_plugin::unify@0> $1 $2
+
+
+TcDebug (4) > 
+Debug:
+Level 4: In environment
+x, e, bb, x, a : t
+c : N.pos (x * e)
+IH : forall y : N.t, 0 <= lmp ?lpe := N.pos (x * e)
+y, bb, x, a : t
+c, n : N.pos (x * e)
+IH' : forall y : N.t, 0 <= rmp ?rmp := N.pos (x * e)
+H : 0 <= rmp ?x = e
+Unable to unify "?M623 == ?M 623" with "0 <= rmp ?rmp := N.pos (x * e)".
+
+Debug:
+Level 4: In environment
+x, e, bb, x, a : t
+c : N.pos (x * e)
+IH : forall y : N.t, 0 <= lmp ?lpe := N.pos (x * e)
+y, bb, x, a : t
+c, n : N.pos (x * e)
+IH' : forall y : N.t, 0 <= rmp ?rmp ?rmp := N.pos (x * e)
+H : 0 <= rmp ?x = e
+Unable to unify "?M624 < ?M625" with "0 <= rmp ?rmp := N.pos (x * e)".
+
+Debug:
+Level 4: In environment
+x, e, bb, x, a : t
+c : N.pos (x * e)
+IH' : forall y : N.t, 0 <= rmp ?rmp ?rmp := N.pos (x * e)
+H : 0 <= rmp ?x = e
+Unable to unify "?M625 == ?M 626" with "0 <= rmp ?rmp := N.pos (x * e)".
+
+Debug:
+Level 4: In environment
+x, e, bb, x, a : t
+c : N.pos (x * e)
+IH' : forall y : N.t, 0 <= rmp ?rmp ?rmp := N.pos (x * e)
+H : 0 <= rmp ?x = e
+Unable to unify "?M625 == ?M 626" with "0 <= rmp ?rmp := N.pos (x * e)".
+
+Debug:
+Level 3: In environment
+x, e, bb, x, a : t
+c : N.pos (x * e)
+IH' : forall y : N.t, 0 <= rmp ?rmp ?rmp := N.pos (x * e)
+H : 0 <= rmp ?x = e
+Unable to unify "?M625 == ?M 626" with "0 <= rmp ?rmp := N.pos (x * e)".
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  n : R
+  m : R
+  ============================
+   (N.pos (xI (xI (xI (xI (xO (xI (xO (xI (xO (xO (xI (xO m))))))) + 1 - (xI (xI (xI (xI (xI (xO (xO (xI (xO (xO (xO (xI (xP (xO (xO m)))))))))) <
+    N.pos (xI (xI (xI (xI (xI (xO (xO (xI (xP (xI (xO (xI (xO (xI (xO m)))))))))))))%N
+
+
+Debug:
+Going to execute:
+match H with
+| H

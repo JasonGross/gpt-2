@@ -1,0 +1,181 @@
+======== SAMPLE 1 ========
+ -> E
+  rl2 : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H : InT y rr
+  ============================
+   (InT y l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H : InT y rr
+  ============================
+   (InT y l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H : InT y rr
+  ============================
+   (InT y l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H : InT y rr
+  ============================
+   (InT y l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H : InT y rr
+  ============================
+   (InT y l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H : InT y rr
+  ============================
+   (InT y l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H : InT y rr
+  ============================
+   (InT y l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H : InT y rr
+  ============================
+   (InT y l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H : InT y rr
+  ============================
+   (InT y l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (4) > 
+Goal:
+

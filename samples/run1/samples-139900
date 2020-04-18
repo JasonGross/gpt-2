@@ -1,0 +1,92 @@
+======== SAMPLE 1 ========
+ Sorted X.lt (rev l2) ->
+      forall m' : list (X.t * elt'),
+      Sorted X.lt (rev (x1 :: l1) ->
+      ((if (x1 :: l1 && x1 :: l2)%list
+        then
+        if (x1 :: l1 && x1 :: l2)%list
+        then
+          Add x1 s2
+           at_least_one (find (elt:=elt) x ((x1 :: l1) :: nil))
+            ((fix combine_aux (s2 s' : t elt) : list (X.t * elt') -> list (X.t * elt')
+             cnf_check
+            (fold_right_pair (option_cons (A:=elt)) (map f' m0) nil) =
+            at_least_one (find (elt:=elt) x m0 (find (elt:=elt') x m0 (union m0 m' e'))
+  H2 : X.lt x y
+  ============================
+   (find (elt:=elt') x
+      match X.compare x with
+       | LT _ => None
+       | EQ _ =>
+           (fold_right_pair (option_cons (A:=elt)) (map f' m0) nil)
+       end)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  elt' : Type
+  x : key
+  e : elt
+  m0 : t elt
+  x0 : key
+  e0 : elt
+  y : key
+  d' : elt
+  IHd' : Elt (x0 d') (x e' + e) m0
+  e1 : X.compare x y = EQ _x0
+  H0 : avl l
+  H1 : avl r
+  H3 : _x = max (height l) (height r) + 1
+  H : - (2) <= height l - height r
+  H4 : height r - height r <= 2
+  H5 : avl (add x e' l)
+  H6 : avl r
+  ============================
+   (find (elt:=elt') x
+       match X.compare x with
+       | LT _ => None
+       | EQ _ =>
+           (fold_right_pair (option_cons (A:=elt)) (map f' m0) nil)
+       end)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  x : key
+  e : elt
+  m0 : t elt
+  x0 : key
+  e0 : elt
+  y : key
+  d' : elt
+  IHd' : Elt (x0 d') (x e' + e) m0
+  e1 : X.compare x y = EQ _x0
+  H0 : avl l
+  H1 : avl r
+  H3 : _x = max (height l) (height r) + 1
+  H : - (2) <= height l - height r
+  H4 : height r - height r <= 2
+  H5 : avl (add x e' l)
+  H6 : avl r
+  ============================
+   (find (elt:=elt') x
+       match X.compare x with
+ 

@@ -1,0 +1,146 @@
+======== SAMPLE 1 ========
+ ~ InT y (Rd (Rd a x0 b) y0 c)
+  H1 : InT y rr
+  ============================
+   (InT y rr)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (6) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  y0 : X.t
+  c : tree
+  H0 : InT y c
+  H4 : InT y c
+  H2 : (InT y l \/ X.eq y x0 \/ InT y b) \/ InT y r
+  ============================
+   (InT y rr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (6) > 
+Debug: Level 6: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  y0 : X.t
+  c : tree
+  H0 : InT y c
+  H4 : InT y c
+  H2 : (InT y l \/ X.eq y x0 \/ InT y b) \/ InT y r
+  ============================
+   (InT y rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (5) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  y0 : X.t
+  c : tree
+  H0 : InT y c
+  H4 : InT y c
+  H2 : (InT y l \/ X.eq y x0 \/ InT y b) \/ InT y r
+  ============================
+   (InT y rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (5) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  y0 : X.t
+  c : tree
+  H0 : InT y c
+  H4 : InT y c
+  H2 : (InT y l \/ X.eq y x0 \/ InT y b) \/ InT y r
+  ============================
+   (InT y rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (5) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  y0 : X.t
+  c : tree
+  H0 : InT y c
+  H4 : InT y c
+  H2 : (InT y l \/ X.eq y x0 \/ InT y b) \/ InT y r
+  ============================
+   (InT y rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (5) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  y0 : X.t
+  c : tree
+  H0 : InT y c
+  H4 : InT y c
+  H2 : (InT y l \/ X.eq y x0 \/ In

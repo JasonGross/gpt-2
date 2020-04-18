@@ -1,0 +1,68 @@
+======== SAMPLE 1 ========
+ x b
+  H4 : forall y0 : A, R_equal x0 y0 -> R' f a0
+  H5 : forall x : A, R' x x
+  H0 : eqA x a
+  H : forall x0 : A, R' x x0 -> R' (forall x v : A) (forall y : A) (forall v' : B), R' y -> R' (forall x0 v' : B) x0
+  H1 : eqA x x0
+  ============================
+   (R' (forall x : A) x0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  Hrec : forall A' : predicate A, R' (forall x : A) x -> R' (forall x0 : A) x0 -> R' (forall x v : A) x0
+  A : Type
+  R : relation A
+  Hrec : forall A' : predicate A, R' (forall x : A) x -> R' (forall x0 : A) x0 -> R' (forall x v : A) x0
+  A : Type
+  R : relation A
+  Hrec : forall A' : predicate A, R' (forall x : A) x -> R' (forall x0 : A) x0 -> R' (forall x v : A) x0
+  A : Type
+  R : relation A
+  Hrec : forall A' : predicate A, R' (forall x : A) x -> R' (forall x0 : A) x0 -> R' (forall x v : A) x0
+  A : Type
+  R : relation A
+  Hrec : forall A' : predicate A, R' (forall x : A) x -> R' (forall x0 : A) x0 -> R' (forall x v : A) x0
+  A : Type
+  R : relation A
+  Hrec : forall A' : predicate A, R' (forall x : A) x -> R' (forall x0 : A) x0 -> R' (forall x v : A) x0
+  A : Type
+  R : relation A
+  Hrec : forall A' : predicate A, R' (forall x : A) x -> R' (forall x0 : A) x0 -> R' (forall x v : A) x0
+  A : Type
+  R : relation A
+  Hrec : forall A' : predicate A, R' (forall x : A) x -> R' (forall x0 : A) x0 -> R' (forall x v : A) x0
+  A : Type
+  R : relation A
+  Hrec : forall A' : predicate A, R' (forall x : A) x -> R' (forall x0 : A) x0 -> R' (forall x v : A) x0
+  A : Type
+  R : relation A
+  Hrec : forall A' : predicate A, R' (forall x : A) x -> R' (forall x0 : A) x0 -> R' (forall x v : A) x0
+  A : Type
+  R : relation A
+  Hrec : forall A' : predicate A, R' (forall x : A) x -> R' (forall x0 : A) x0 -> R' (forall x v : A) x0
+  ============================
+   (R' (forall x : A) x0)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  Hrec : forall A' : predicate A, R' (forall x : A) x -> R' (forall x0 : A) x0 -> R' (forall x v : A) x0
+  A : Type
+  R : relation A
+  Hrec : forall A' : predicate A, R' (forall x : A) x -> R

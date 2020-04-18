@@ -1,0 +1,150 @@
+======== SAMPLE 1 ========
+ \/ x == x0 \/ x < x + y \/ x0 == y)
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (19) > 
+Debug: Level 19: t
+ has value 
+x0
+
+
+Goal:
+  
+  A : Type
+  B : Type
+  C : Type
+  RA : crelation A
+  RB : crelation B
+  RC : crelation C
+  x : B -> C
+  y : B -> C
+  X : (RB ==> RC) x y
+  x0 : A -> B
+  y0 : A -> B
+  X0 : (RA ==> RB) x0 y0
+  x1 : A
+  y1 : A
+  X1 : RA x1 y1
+  ============================
+   (RC (compose x x0 x1) (compose y y0 y1))
+
+
+Debug: Going to execute:
+isPcst p
+
+
+TcDebug (19) > 
+Goal:
+  
+  A : Type
+  B : Type
+  C : Type
+  RA : crelation A
+  RB : crelation B
+  RC : crelation C
+  x : B -> C
+  y : B -> C
+  X : (RB ==> RC) x y
+  x0 : A -> B
+  y0 : A -> B
+  X0 : (RA ==> RB) x0 y0
+  x1 : A
+  y1 : A
+  X1 : RA x1 y1
+  ============================
+   (RC (compose x x0 x1) (compose y y0 y1))
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | (eq ==> ?R')%signature =>
+      Tacticset ->
+      (forall d : A, Gd d = Gd d \/ Gd d = Gd d \/ RB d = RB d)
+  | (?x < ?y)%signature =>
+      change_no_check (Proper R (x && y) (Proper R (y && x) (Proper R y)) in d
+  | change_no_check (Proper R x) in d
+  end
+
+
+TcDebug (20) > 
+Goal:
+  
+  A : Type
+  B : Type
+  C : Type
+  RA : crelation A
+  RB : crelation B
+  RC : crelation C
+  x : B -> C
+  y : B -> C
+  X : (RB ==> RC) x y
+  x0 : A -> B
+  y0 : A -> B
+  X0 : (RA ==> RB) x0 y0
+  x1 : A
+  y1 : A
+  X1 : RA x1 y1
+  ============================
+   (RC (compose x x0 x1) (compose y y0 y1))
+
+
+Debug:
+Going to execute:
+match t with
+| (eq ==> ?R')%signature =>
+    Tacticset ->
+    refine (Proper R)
+| add (Proper R x) x
+end
+
+
+TcDebug (20) > 
+Goal:
+  
+  A : Type
+  B : Type
+  C : Type
+  RA : crelation A
+  RB : crelation B
+  RC : crelation C
+  x : B -> C
+  y : B -> C
+  X : (RB ==> RC) x y
+  x0 : A -> B
+  y0 : A -> B
+  X0 : (RA ==> RB) x0 y0
+  x1 : A
+  y1 : A
+  X1 : RA x1 y1
+  ============================
+   (RC (compose x x0 x1) (compose y y0 y1))
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (21) > 
+Debug: Level 21: t
+ has value 
+(RB x0 y0)
+
+
+Goal:
+  
+  A : Type
+  B : Type
+  C : Type
+  RA : crelation A
+  RB : crelation B
+  RC : crelation C
+  x : B -> C
+  y : B -> C
+  X : (RB ==> RC) x y
+  x0 : A

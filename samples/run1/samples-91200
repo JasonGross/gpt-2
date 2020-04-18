@@ -1,0 +1,137 @@
+======== SAMPLE 1 ========
+ : t
+  s4 : t
+  H2 : m <= n
+  H3 : m0 < 2 ->
+       m <= nm
+  H1 : (2 * S n) <= m
+  H : m <= m /\ (m <= m -> False))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+    n : t  m : t  H0 : m <= n  H1 : (2 * S n) <= m
+  H : m <= m /\ (m <= m -> False))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Goal:
+    n : t  m : t  H0 : m <= n  H1 : (2 * S n) <= m
+  H : m <= m /\ (m <= m -> False))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+    n : t  m : t  H0 : m <= n  H1 : (2 * S n) <= m
+  H : m <= m /\ (m <= m -> False))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; split
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+    n : t  m : t  H0 : m <= n  H1 : (2 * S n) <= m
+  H : m <= m /\ (m <= m -> False))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+    n : t  m : t  H0 : m <= n  H1 : (2 * S n) <= m
+  H : m <= m /\ (m <= m -> False))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (5) > 
+Goal:
+    n : t  m : t  H0 : m <= n  H1 : (2 * S n) <= m
+  H : m <= m /\ (m <= m -> False))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Debug: Level reprojection
+
+
+Goal:
+    n : t  m : t  H0 : m <= n  H1 : (2 * S n) <= m
+  H : m <= m /\ (m <= m -> False))
+
+
+Debug: Going to execute:
+gen_reflexivity Rsth
+
+
+TcDebug (0) > 
+Debug: Evaluated term: Rsth
+
+Debug: Evaluated term: Rsth
+
+Debug:
+Level 0: Found no subterm matching "?R{x1} + ?R{x0}" in the current goal.
+
+Goal:
+    n : t  m : t  H0 : m <= n  H1 : (2 * S n) <= m
+  H : m <= m /\ (m <= m -> False))
+
+
+Debug: Going to execute:
+<ltac_plugin::gen_reflexivity@0> $1
+
+
+TcDebug (0) > 
+Debug: Level 0: Included subterm H with it
+
+Debug:
+Level 0: Included subterm H with it
+
+Goal:
+    n : t  m : t  H0 : m <= n  H1 : m <= m
+  ============================
+   (true = true)
+
+
+Debug: Going to execute:
+fail "Cannot solve this goal"
+
+
+TcDebug (0) > 
+Goal:
+    n : t  m : t  H0 : m <- n
+  ============================
+

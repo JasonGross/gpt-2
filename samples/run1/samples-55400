@@ -1,0 +1,132 @@
+======== SAMPLE 1 ========
+::is_disj@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  s : t
+  s' : t
+  H : forall a : elt, In a s <-> In a s'
+  s'' : t
+  s''' : t
+  H0 : forall e : elt, ~ In a s \/ In a s'
+  ============================
+   ((In a s -> In a s') /\ (In a s' -> In a s''))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  H : forall a : elt, In a s <-> In a s'
+  s'' : t
+  s''' : t
+  H0 : forall e : elt, ~ In a s \/ In a s'
+  ============================
+   ((In a s -> In a s') /\ (In a s' -> In a s''))
+
+
+Debug: Going to execute:
+solve [ left; t_tauto_intuit | right; t_tauto_intuit ]
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  H : forall a : elt, In a s <-> In a s'
+  s'' : t
+  s''' : t
+  H0 : forall e : elt, ~ In a s \/ In a s'
+  ============================
+   ((In a s -> In a s') /\ (In a s' -> In a s''))
+
+
+Debug: Going to execute:
+left; t_tauto_intuit
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  H : forall a : elt, In a s <-> In a s'
+  s'' : t
+  s''' : t
+  H0 : forall e : elt, ~ In a s \/ In a s'
+  ============================
+   ((In a s -> In a s') /\ (In a s' -> In a s''))
+
+
+Debug: Going to execute:
+left
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  H : forall a : elt, In a s <-> In a s'
+  s'' : t
+  s''' : t
+  H0 : forall e : elt, ~ In a s \/ In a s'
+  ============================
+   ((In a s -> In a s') /\ (In a s' -> In a s''))
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::left@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  s : t
+  s' : t
+  H : forall a : elt, In a s <-> In a s'
+  s'' : t
+  s''' : t
+  H0 : forall e : elt, ~ In a s \/ In a s'
+  ============================
+   (In a s) /\ (In a s' -> In a s''))
+
+
+Debug: Going to execute:
+t_tauto_intuit
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  H : forall a : elt, In a s <-> In a s'
+  s'' : t
+  s''' : t
+  H0 : forall e : elt, ~ In a s \/ In a s'
+  ============================
+   (In a s) /\ (In a s' -> In a s''))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.simplif> flags;
+ <Coq.Init.Tauto.axioms> flags ||
+   match reverse goal with
+   | id:(?X1 -> ?X2) -> ?X3
+     |- _ =>
+         cut X3;
+  

@@ -1,0 +1,79 @@
+======== SAMPLE 1 ========
+
+  ded : C -> C -> bool
+  mul_iff : forall (x y : A) (b : B), cnf
+  mul_ff : forall x : A, make_impl (eval_tt env) cl -> cnf
+  sor : SOR 0 1 rplus rtimes rminus ropp req
+  EqDec0 : EqDec (eq_setoid EqDec)
+  mul_opp : forall x y : A, mul_up (eval_tt env) x <-> eval_tt env y
+  l : list A
+  t : list A
+  j : A
+  EqDec : forall x y : A, j == x + - y
+  Eq' : forall x y' : A,
+         mul_permut_rec x eq_refl x eq_refl' y = true ->
+         mul_permut_rec x eq_refl x eq_refl' y = true ->
+         make_conj (eval_clause env)
+          (fold_left
+             (fun (acc : list clause) (e : clause) =>
+              match or_clause (p :: t) e with
+              | Some cl => cl :: acc
+              | None => acc
+              end) f nil)
+  H2 : make_conj (eval_clause env) f ->
+       make_conj (eval_clause env) nil ->
+       make_conj (eval_clause env)
+         (fold_left
+           (fun (acc : list clause) (e : clause) =>
+            match or_clause (p :: t) e with
+            | Some cl => cl :: acc
+            | None => acc
+            end) f nil)
+  H3 : eval_clause env (p :: t)
+  ============================
+   ((eval_clause env (p :: t) \/ make_conj (eval_clause env) f) /\ True)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  a : A
+  a' : A
+  x : clause
+  f : A -> clause A
+ munion :emingow (a :: x) (a :: nil)
+ gate : A -> clause A
+ ceqb :cencec (fun x : A => x :: ceqb x x) ->
+          x == x
+  ev : A -> Type
+  ev' : A -> Type
+  f : A -> clause A
+ munionf : forall x : A -> clause A, ev' x -> ev f
+  ev'0 : forall x : A, ev' x <-> ev' x
+  f' := fun a : A => f a' = f x
+      :     Evaluated term: (f (fun x : A => x (f :: ev'0 x)) (fun x : A => ev f' x))
+      :      (fun x : A => x (f :: ev'0 x)))
+      :    (fun x : A => x (f :: ev'0 x)) (ev' a')
+  ============================
+   ((eval_clause env (p :: t) \/ make_conj (eval_clause env) f) /\ True)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+

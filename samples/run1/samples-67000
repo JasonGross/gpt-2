@@ -1,0 +1,78 @@
+======== SAMPLE 1 ========
+ -> R
+  rinv : R -> R
+  req : R -> R -> Prop
+  Rsth : PExpr
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory rO rI radd rmul rsub ropp req
+  C : Type
+  cO : C
+  cI : C
+  cadd : C -> C -> C
+  cmul : C -> C -> C
+  csub : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  phi : C -> R
+  CRmorph : ring_morph 0 1 radd rmul rsub ropp req cO cI cadd cmul csub copp
+               ceqb phi
+  Cpow : Type
+  Cp_phi : N -> Cpow
+  rpow : R -> Cpow -> R
+  pow_th : power_theory 1 rmul req Cp_phi rpow
+  cdiv : C -> C -> C * C
+  div_th : div_theory req cadd cmul phi cdiv
+  b : C
+  p : positive
+  P : Pol
+  IHP : forall P' : Pol,
+        (P ?== P') = true -> forall l : list R, P @ l == P' @ l
+  P2 : Pol
+  p0 : positive
+  P3 : Pol
+  IHP1 : forall P' : Pol,
+              PsubI Psub P' p1 p' = true ->
+              forall l : list R, P' @ l + P' @ l == P' @ l + P' @ (padd P' l)
+  IHP2 : forall P' : Pol,
+              PsubI Psub P' (padd P' (p2 l)) P2 : Pol
+  pI : Pol
+  pI' : Pol
+  p2 : positive
+  p1 : positive
+  p2 : positive
+  IHP1 : forall (l : list R) (P : Pol),
+         (PsubI Psub Psub (padd P2 p1 p2) P3) = (p1 + p2) @ l + (p2 @ l)
+  IHP2 : forall P' : Pol,
+          (PsubI Psub Psub P' (padd P2 p1 p2) P3) = (p1 + p2) @ l + P' @ l == P' @ l + (padd P' (p2 + p1 p2) P3)
+  l : list R
+  p1 : positive
+  ============================
+   (P2 @ l * hd l ^ p + (P' @ (p0 + p2) + P' @ (p) + P' @ (p) + P' @ (p2)) * hd l ^ p + P2 @ (tl l) ==
+    P2 @ l * hd l ^ p + P' @ (p2 + p2) + P' @ (p + P' @ (p0 + p2) + P' @ (p0 + p2)) +
+    P2 @ l * hd l ^ p + P3 @ (tl l) + P' @ (p + P' @ (p0 + p2) + P' @ (p + P' @ (p2)) + P' @ (p + P' @ (p + P' @ p0)) + P' @ (i + p2) @ (i + p1)))
+
+
+Debug: Going to execute:
+rewrite IHPadd
+
+
+TcDebug (0) > 
+Debug: Evaluated term: IHPadd
+
+Debug: Evaluated term: IHPadd
+
+Debug: Evaluated term: IHPadd
+
+Debug: Evaluated term: IHPadd
+
+Debug: Evaluated term: IHPadd
+
+Debug: Evaluated term: IHPadd
+
+Debug: Evaluated term: IHPadd
+
+Debug: Evaluated term: IHPadd
+
+Debug: Evaluated term: IHPadd
+
+Debug: Evaluated

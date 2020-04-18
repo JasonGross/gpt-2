@@ -1,0 +1,184 @@
+======== SAMPLE 1 ========
+   (R x y)
+
+
+Debug:
+Going to execute:
+match R with
+| R0 => R'
+| lt => ~ lt
+| ?R ?x => let R' := AddTail R' x in
+             | Some ?r => R'
+| _ => R'
+end
+
+
+TcDebug (25) > 
+Goal:
+    x : int  y : int  H : ~ b < a
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (26) > 
+Debug: Level 26: R
+ has value 
+elt
+
+
+Goal:
+    x : int  y : int  H : ~ b < a
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (26) > 
+Goal:
+    x : int  y : int  H : ~ b < a
+  ============================
+   (R x y)
+
+
+Debug:
+Going to execute:
+match R with
+| R0 => R'
+| lt => ~ lt
+| ?R ?x => let R' := AddTail R' x in
+             | Some ?r => R'
+| _ => R'
+end
+
+
+TcDebug (26) > 
+Goal:
+    x : int  y : int  H : ~ b < a
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (27) > 
+Debug: Level 27: R
+ has value 
+elt
+
+
+Goal:
+    x : int  y : int  H : ~ b < a
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (27) > 
+Goal:
+    x : int  y : int  H : ~ b < a
+  ============================
+   (R x y)
+
+
+Debug:
+Going to execute:
+match R with
+| R0 => R'
+| lt => ~ lt
+| ?R ?x => let R' := AddTail R' x in
+             | Some ?r => R'
+| _ => R'
+end
+
+
+TcDebug (26) > 
+Goal:
+    x : int  y : int  H : ~ b < a
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (27) > 
+Debug: Level 26: R
+ has value 
+elt
+
+
+Goal:
+    x : int  y : int  H : ~ b < a
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (26) > 
+Goal:
+    x : int  y : int  H : ~ b < a
+  ============================
+   (R x y)
+
+
+Debug:
+Going to execute:
+match R with
+| R0 => R'
+| lt => ~ lt
+| ?R ?x => let R' := AddTail R' x in
+            | Some ?r => R'
+| _ => R'
+end
+
+
+TcDebug (26) > 
+Goal:
+    x : int  y : int  H : ~ b < a
+  ============================
+   (R x y)
+
+
+Debug:
+Going to execute:
+match R with
+| R0 => R'
+| lt => ~ lt
+| ?R ?x => let R' := AddTail R' x in
+           | Some ?r => R'
+| _ => R'
+end
+
+
+TcDebug (27) > 
+Goal:
+    x : int  y : int  H : ~ b < a
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (28) > 
+Debug:
+Level 28: R
+ has value 
+elt

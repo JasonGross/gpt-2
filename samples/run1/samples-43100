@@ -1,0 +1,81 @@
+======== SAMPLE 1 ========
+ ee');
+            [ intro; clear id; t_tauto_intuit
+            | cut (~ X1);
+              [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+| |- ?X1 =>
+      <Coq.Init.Tauto.is_disj> flags X1; (solve
+       [ left; t_tauto_intuit | right; t_tauto_intuit ])
+end
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  e : elt
+  l : list (X.t * elt)
+  x' : X.t
+  e' : elt
+  l' : list (X.t * elt)
+  _x : X.eq x x'
+  e2 : X.compare x x' = EQ _x
+  IHb : Sort l -> Sort l' -> equal cmp l l' = true -> Equivb cmp l l'
+  H0 : Sort ((x, e) :: l)
+  H1 : forall (k : X.t) (e0 e'0 : elt),
+        (fun (cmp : elt -> elt -> bool) (m0 m'0)  : t -> elt -> bool =>
+         equal cmp m0 m'0 m'1 m = true) ->
+         Sort cmp m0 m'1 m' = true
+  H2 : (X.eq x x' \/ In x l') /\ (X.eq x' a \/ In a l -> X.eq x a \/ In a l')
+  H3 : (X.eq x x' \/ In x l') /\ (X.eq x' a \/ In a l)
+  H : X.eq x x' \/ In x l'
+  ============================
+   (X.eq x x')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; (solve
+ [ left; t_tauto_intuit | right; t_tauto_intuit ])
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  e : elt
+  l : list (X.t * elt)
+  x' : X.t
+  e' : elt
+  l' : list (X.t * elt)
+  _x : X.eq x x'
+  e2 : X.compare x x' = EQ _x
+  IHb : Sort l -> Sort l' -> equal cmp l l' = true -> Equivb cmp l l'
+  H0 : Sort ((x, e) :: l)
+  H1 : forall (k : X.t) (e0 e'0 : elt),
+         (fun (cmp : elt -> elt -> bool) (m0 m'0)  : t -> elt -> bool =>
+         equal cmp m0 m'0 m'1 m = true) ->
+         Sort cmp m0 m'1 m = true
+  H2 : (X.eq x x' \/ In x l') /\ (X.eq x' a \/ In a l -> X.eq x a \/ In a l)
+  H3 : (X.eq x x' \/ In x l') /\ (X.eq x' a \/ In a l)
+  H : X.eq x x' \/ In x l'
+  ============================
+   (X.eq x x')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  e : elt
+  l : list (X.t * elt)
+  x' : X.t
+  e' : elt
+  l

@@ -1,0 +1,138 @@
+======== SAMPLE 1 ========
+  s : t
+  s' : t
+  x : elt
+  Hs : s [<=] s'
+  a : elt
+  H2 : In a s'
+  H3 : In a s''
+  ============================
+   (E.eq x a)
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (6) > 
+Debug: Level 6: R
+ has value 
+eq
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  a : elt
+  Heq : s [<=] s'
+  IHs : forall (x x' : elt) (s'' : t),
+         mem x (add x s) = true <-> x = x' \/ mem x s' = true
+  m : t
+  x' : elt
+  s' : t
+  x'' : t
+  H : E.eq x a
+  x''0 : elt
+  x''1 : t
+  y : t
+  H2 : In a s'
+  H1 : E.eq x a
+  H3 : Empty s
+  H0 : E.eq x a
+  H5 : False
+  ============================
+   (MapsTo y e s' \/ In a s'')
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (6) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  a : elt
+  Heq : s [<=] s'
+  IHs : forall (x x' : elt) (s'' : t),
+         mem x (add x s) = true <-> x = x' \/ mem x s' = true
+  m : t
+  x' : elt
+  s' : t
+  x'' : t
+  H : E.eq x a
+  x''0 : elt
+  x''1 : t
+  y : t
+  H2 : In a s'
+  H1 : E.eq x a
+  H3 : Empty s
+  H0 : E.eq x a
+  H5 : False
+  ============================
+   (MapsTo y e s' \/ In a s'')
+
+
+Debug:
+Going to execute:
+match R with
+| OrderTac.OTF.eq => fail 1
+| OrderTac.OTF.lt => fail 1
+| OrderTac.OTF.le => fail 1
+| _ =>
+    change_no_check (OrderTac.OTF.eq x y) in H ||
+     change_no_check (OrderTac.OTF.lt x y) in H ||
+       change_no_check (OrderTac.OTF.le x y) in H || clear H || fail 1;
+    OrderTac.order_prepare
+end
+
+
+TcDebug (5) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  a : elt
+  Heq : s [<=] s'
+  IHs : forall (x x' : elt) (s'' : t),
+         mem x (add x s) = true <-> x = x' \/ mem x s' = true
+  m : t
+  x' : elt
+  s' : t
+  x'' : t
+  H : E.eq x a
+  x''0 : elt
+  x''1 : t
+  y : t
+  H2 : In a s'
+  H1 : E.eq x a
+  H3 : Empty s
+  H0 : E.eq x a
+  H5 : False
+  ============================
+   (MapsTo y e s' \/ In a s'')
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (6) > 
+Debug: Level 6: R
+ has value 
+(x' :: y :: m)
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  a : elt
+  Heq : s [<=] s'
+  IHs : forall (x x' : elt) (

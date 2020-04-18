@@ -1,0 +1,94 @@
+======== SAMPLE 1 ========
+ fun _ =>
+      rewr H (OrderTac.eq_le (OrderTac.eq_sym eqn) H);
+       OrderTac.order_rewr x eqn
+| H:x ~= _
+  |- _ =>
+      rewr H
+       (OrderTac.le_eq H eqn);
+       OrderTac.order_rewr x eqn
+| _ => clear eqn
+end
+
+
+TcDebug (3) > 
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+  n : positive
+  inf : (2 # n < yn (Pos.to_nat n) - xn (Pos.to_nat n))%Q
+  p : positive
+  H : (n <= p)%positive
+  ============================
+   (yn (Pos.to_nat n) - xn (Pos.to_nat n) + (1 # n) +
+    (1 # n) <
+    yn (Pos.to_nat n) - xn (Pos.to_nat n) + (1 # n) +
+    (yn (Pos.to_nat n) - xn (Pos.to_nat n)))%Q
+
+
+Debug: Going to execute:
+clear eqn
+
+
+TcDebug (4) > 
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+  n : positive
+  inf : (2 # n < yn (Pos.to_nat n) - xn (Pos.to_nat n))%Q
+  p : positive
+  H : (n <= p)%positive
+  ============================
+   (yn (Pos.to_nat n) - xn (Pos.to_nat n) + (1 # n) +
+    (1 # n) <
+    yn (Pos.to_nat n) - xn (Pos.to_nat n) + (1 # n) +
+    (yn (Pos.to_nat n) - xn (Pos.to_nat n)))%Q
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (4) > 
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+  n : positive
+  inf : (2 # n < yn (Pos.to_nat n) - xn (Pos.to_nat n))%Q
+  p : positive
+  H : (n <= p)%positive
+  ============================
+   (yn (Pos.to_nat n) - xn (Pos.to_nat n) + (1 # n) +
+    (1 # n) <
+    yn (Pos.to_nat n) - xn (Pos.to_nat n) + (1 # n) +
+    (yn (Pos.to_nat n) - xn (Pos.to_nat n)))%Q
+
+
+Debug: Going to execute:
+OrderTac.order_loop
+
+
+TcDebug (0) > 
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+  n : positive
+  inf : (2 # n < yn (Pos.to_nat n) - xn (Pos.to_nat n))%Q
+  p : positive
+  H : (n <= p)%positive
+  ============================
+   (yn (Pos.to_nat n) - xn (Pos.to_nat n) + (1 # n) +
+    (1 # n) <
+    yn (Pos.to_

@@ -1,0 +1,136 @@
+======== SAMPLE 1 ========
+  * rpow r (Cp_phi n)
+  IHof l : list R
+  rpow : R -> Cpow -> R
+  pow_th : power_theory 1 rmul req Cp_phi n
+  cdiv : C -> C -> C * C
+  div_th : div_theory req cadd cmul phi cdiv
+  ropp : R -> R
+  req : R -> R -> Prop
+  Ropp_set_Theory req cadd cmul phi
+  LE : forall x y : R, x < y
+  x0 : R
+  y0 : R
+  H0 : x0 = y0
+  ============================
+   (In x0 (Node l y d r h))
+
+
+Debug: Going to execute:
+fun _ => Set_Theory p phi
+
+
+TcDebug (18) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Ropp_set_Theory req cadd cmul phi
+  LE : forall x y : R, x < y
+  x0 : R
+  y0 : R
+  H0 : x0 = y0
+  ============================
+   (In x0 (Node l y d r h))
+
+
+Debug: Going to execute:
+Set_Theory
+
+
+TcDebug (18) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Ropp_set_Theory req cadd cmul phi
+  LE : forall x y : R, x < y
+  x0 : R
+  y0 : R
+  H0 : x0 = y0
+  ============================
+   (In x0 (Node l y d r h))
+
+
+Debug: Going to execute:
+fun _ => Set_Theory
+
+
+TcDebug (19) > 
+Debug: Level 19: evaluation returns
+Set_Theory
+
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Ropp_set_Theory req cadd cmul phi
+  LE : forall x y : R, x < y
+  x0 : R
+  y0 : R
+  H0 : x0 = y0
+  ============================
+   (In x0 (Node l y d r h))
+
+
+Debug:
+Going to execute:
+fun _ => set_In X x0 id; clear id0; intro; clear
+                (proper id)
+
+
+TcDebug (19) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Ropp_set_Theory req cadd cmul phi
+  LE : forall x y : R, x < y
+  x0 : R
+  y0 : R
+  H0 : x0 = y0
+  ============================
+   (In x0 (Node l y d r h))
+
+
+Debug: Going to execute:
+fun _ => set_In X x0 id; clear id0; intro
+
+
+TcDebug (19) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Ropp_set_Theory req cadd cmul ph

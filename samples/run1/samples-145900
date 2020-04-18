@@ -1,0 +1,184 @@
+======== SAMPLE 1 ========
+ (Node l x e r h)
+  s : t
+  H0 : In y r -> False
+  ============================
+   (In y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : key
+  H0 : In y r
+  ============================
+   (In y r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : key
+  H0 : In y r
+  ============================
+   (In y r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : key
+  H0 : In y r
+  ============================
+   (In y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : key
+  H0 : In y r
+  ============================
+   (In y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : key
+  H0 : In y r
+  ============================
+   (In y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : key
+  H0 : In y r
+  ============================
+   (In y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : key
+  H0 : In y r
+  ============================
+   (In y r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : key
+  H0 : In y r
+  ============================
+   (In y r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : key
+  H0 : In

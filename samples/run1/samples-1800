@@ -1,0 +1,75 @@
+======== SAMPLE 1 ========
+
+
+
+TcDebug (14) > 
+Goal:
+  
+  x : Z
+  r : Z
+  IH : forall x : Z,
+          Z.of_a <-> Z.to_z_0 >= Z.of_a
+  x' : Z
+  i : Z
+  z : Z
+  y : Z
+  H : forall y : Z,
+          Z.of_a <-> Z.to_z_0 >= Z.of_a
+  y' : Z
+  b : Z
+  H' : forall y : Z,
+          Z.of_a <-> Z.to_z_0 >= Z.of_a
+  y'' : Z
+  H'' : forall y : Z,
+          Z.of_a <-> Z.to_z_0 >= Z.of_a
+  x : Z
+  r : Z
+  IH : forall x : Z,
+          Z.of_a <-> Z.to_z_0 >= Z.of_a
+  x' : Z
+  i : Z
+  z : Z
+  y : Z
+  H'' : forall y : Z,
+          Z.of_a <-> Z.to_z_0 >= Z.of_a
+  y'' : Z
+  H''' : forall y : Z,
+          Z.of_a <-> Z.to_z_0 >= Z.of_a
+  x'' : Z
+  r : Z
+  IH'' : forall x : Z,
+           Z.of_a <-> Z.to_z_0 >= Z.of_a
+  x''' : Z
+  r' : Z
+  H' : forall x : Z,
+           Z.of_a <-> Z.to_z_0 >= Z.of_a
+  x''' : Z
+  r''' : Z
+  H'I' : forall x' : Z,
+           Z.of_a <-> Z.to_z_0 >= Z.of_a
+  x''''' : Z
+  IH''I' : forall x'' : Z,
+           Z.of_a <-> Z.to_z_0 >= Z.of_a
+  x'''''I' : forall x'' : Z,
+            Z.of_a <-> Z.to_z_0 >= Z.of_a
+  x'''''' : Z
+  H'l : x + y' + z
+  x''' : z < x''''' x''''' x''''' x''''' y' z
+  y''' : Z
+  H''l' : x''''''' z
+  y'''' : Z
+  H''l'I : forall x : Z,
+           Z.of_a <-> Z.to_z_0 >= Z.of_a
+  x'''''''' : Z
+  H''l''I' : forall x'' : Z,
+           Z.of_a <-> Z.to_z_0 >= Z.of_a
+  x'''''''' : Z
+  H''l''I'I' : forall x : Z,
+           Z.of_a <-> Z.to_z_0 >= Z.of_a
+  x'''''''' : Z
+  H''l''I'I'I' : forall x : Z,
+            Z.of_a <-> Z.to_z_0 >= Z.of_a
+  x'''''''' : Z
+  H''l''I'I' : forall x : Z,
+            Z.of_a >= z
+  x''''''''' : z <= x''''' x''''''' x''''' x'''''

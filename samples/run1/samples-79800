@@ -1,0 +1,106 @@
+======== SAMPLE 1 ========
+uce x2 x0
+  H1 : InA eqke (x, e0) acc
+  ============================
+   ((X.eq x x0 \/ InA eqke (x, e0) ((x, e) :: elements_aux acc r))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  acc : list (key * elt)
+  x0 : X.t
+  e0 : elt
+  H0 : InA eqke (x0, e0) (elements_aux acc r) ->
+       MapsTo x0 e0 r \/ InA eqke (x0, e0) acc
+  H1 : InA eqke (x, e0) acc
+  ============================
+   ((X.eq x x0 \/ InA eqke (x, e0) acc) <->
+    (X.eq x x0 \/ InA eqke (x, e0) acc) /\
+    (X.eq x e \/ InA eqke (x, e0) acc ->
+    InA eqke (x, e) (elements_aux acc r))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  acc : list (key * elt)
+  x0 : X.t
+  e0 : elt
+  H0 : InA eqke (x0, e0) (elements_aux acc r) ->
+       MapsTo x0 e0 r \/ InA eqke (x0, e0) acc
+  H1 : InA eqke (x, e0) acc
+  ============================
+   ((X.eq x x0 \/ InA eqke (x, e0) acc) <->
+    (X.eq x x0 \/ InA eqke (x, e0) acc) /\
+    (X.eq x e \/ InA eqke (x, e0) acc ->
+    InA eqke (x, e) (elements_aux acc r))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  acc : list (key * elt)
+  x0 : X.t
+  e0 : elt
+  H0 : InA eqke (x0, e0) (elements_aux acc r) ->
+       MapsTo x0 e0 r \/ InA eqke (x0, e0) acc
+  H1 : InA eqke (x, e0) acc
+  ============================
+   ((X.eq x x0 \/ InA eqke (x, e0) acc) <->
+    (X.eq x x0 \/ InA eqke (x, e0) acc) /\
+    (X.eq x e \/ InA eqke (x, e0) acc ->
+    InA eqke (x, e) (elements_aux acc r))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  acc : list (key * elt)
+  x0 : X.t
+ 

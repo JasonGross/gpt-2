@@ -1,0 +1,135 @@
+======== SAMPLE 1 ========
+
+
+TcDebug (3) > 
+Goal:
+    s2 : tree  l2 : list
+  ============================
+   (mem x' s2 = true <-> mem y s2 = true)
+
+
+Debug:
+Going to execute:
+fun flags =>
+  match reverse goal with
+  | |- ?X1 => <Coq.Init.Tauto.is_unit_or_eq> flags X1; constructor 1
+  | _:?X1 |- _ => <Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+  | _:?X1 |- ?X1 => assumption
+  end
+
+
+TcDebug (4) > 
+Goal:
+    s2 : tree  l2 : list
+  ============================
+   (mem x' s2 = true <-> mem y s2 = true)
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| |- ?X1 => <Coq.Init.Tauto.is_unit_or_eq> flags X1; constructor 1
+| _:?X1 |- _ => <Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+| _:?X1 |- ?X1 => assumption
+end
+
+
+TcDebug (4) > 
+Goal:
+    s2 : tree  l2 : list
+  ============================
+   (mem x' s2 = true <-> mem y s2 = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; constructor 1
+
+
+TcDebug (5) > 
+Goal:
+    s2 : tree  l2 : list
+  ============================
+   (mem x' s2 = true <-> mem y s2 = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1
+
+
+TcDebug (5) > 
+Goal:
+    s2 : tree  l2 : list
+  ============================
+   (mem x' s2 = true <-> mem y s2 = true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (6) > 
+Goal:
+    s2 : tree  l2 : list
+  ============================
+   (mem x' s2 = true <-> mem y s2 = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (6) > 
+Debug: Level 6: evaluation returns
+<tactic closure>
+
+
+Goal:
+    s2 : tree  l2 : list
+  ============================
+   (mem x' s2 = true <-> mem y s2 = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (5) > 
+Goal:
+    s2 : tree  l2 : list
+  ============================
+   (mem x' s2 = true <-> mem y s2 = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (5) > 
+Goal:
+    s2 : tree  l2 : list
+  ============================
+   (mem x' s2 = true <-> mem y s2 = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (5) > 
+Goal:
+    s2 : tree  l2 : list
+  ============================
+   (mem x' s2 = true <-> mem y s2 = true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (6) > 
+Goal:
+    s2 : tree  l2 : list
+  ============================
+   (mem x' s2 = true

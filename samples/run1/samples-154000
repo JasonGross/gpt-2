@@ -1,0 +1,147 @@
+======== SAMPLE 1 ========
+r')
+  e1 : X.eq x k
+  H1 :  k = e
+  H0 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  k : key
+  e : elt
+  acc : t elt
+  m1 : t elt
+  m2 : t elt
+  Hke : MapsTo k e m
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m2)
+  k' : key
+  e' : elt
+  Hfke : f k e = true
+  X : t elt
+  H1 :  k = e
+  H0 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  k : key
+  e : elt
+  acc : t elt
+  m1 : t elt
+  m2 : t elt
+  Hke : MapsTo k e m
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m2)
+  k' : key
+  e' : elt
+  Hfke : f k e = true
+  X : t elt
+  H1 :  k = e
+  H0 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  k : key
+  e : elt
+  acc : t elt
+  m1 : t elt
+  m2 : t elt
+  Hke : MapsTo k e m
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m2)
+  k' : key
+  e' : elt
+  Hfke : f k e = true
+  X : t elt
+  H1 :  k = e
+  H0 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  k : key
+  e : elt
+  acc : t elt
+  m1 : t elt
+  m2 : t elt
+  Hke : MapsTo k e m
+  Hn : In k m1 -> False
+  Hadd : Equal m2 (add k e m2)
+  k' : key
+  e' : elt
+  Hfke : f k e = true
+  X : t elt
+  H1 :  k = e
+  H0 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  m : t elt
+  k : key
+  e : elt
+  acc : t elt
+  m1 : t elt
+  m2 : t elt
+  Hke :

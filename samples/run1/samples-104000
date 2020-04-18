@@ -1,0 +1,76 @@
+======== SAMPLE 1 ========
+         deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  F := fun (acc : list clause) (e : clause) =>
+        match or_clause nil e with
+        | Some cl => cl :: acc
+        | None => acc
+        end : list clause -> clause -> list clause
+  f : cnf
+  H0 : make_conj (eval_clause env) (fold_left F f nil) ->
+       (eval_clause env nil \/ make_conj (eval_clause env) f) /\
+       make_conj (eval_clause env) nil
+  H : eval_clause env nil \/ make_conj (eval_clause env) f ->
+      make_conj (eval_clause env) nil ->
+      make_conj (eval_clause env)
+  ============================
+   (make_conj (fun cl : clause => ~ make_conj (eval_tt env) cl) f)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  F := fun (acc : list clause) (e : clause) =>
+        match or_clause nil e with
+        | Some cl => cl :: acc
+        | None => acc
+        end : list clause -> clause -> list clause
+  f : cnf
+  H0 : make_conj (eval_clause env) (fold_left F f nil) ->
+       (eval_clause env nil \/ make_conj (eval_clause env) f) /\
+       make_conj (eval_clause env) nil
+  H0 : make_conj (eval_clause env) (fold_left F f nil)
+  ============================
+   (make_conj (fun cl : clause => ~ make_conj (eval_tt env) cl) f)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                     eval'

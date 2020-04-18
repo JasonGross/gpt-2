@@ -1,0 +1,164 @@
+======== SAMPLE 1 ========
+ : key,
+        (eq_key (elt:=elt)) (x, e) (k, e0)%type
+  l : t elt
+  ============================
+   (MapsTo x e l <-> (E.eq x k /\ e <> true -> (e.eq x k /\ e == true -> False))
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  Hn : In k m -> False
+  k : key
+  e' : elt
+  H : MapsTo k e (_, e)
+  H0 : e = e'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  Hn : In k m -> False
+  k : key
+  e' : elt
+  H : MapsTo k e (_, e)
+  H0 : e = e'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  Hn : In k m -> False
+  k : key
+  e' : elt
+  H : MapsTo k e (_, e)
+  H0 : e = e'
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  Hn : In k m -> False
+  k : key
+  e' : elt
+  H : MapsTo k e (_, e)
+  H0 : e = e'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  Hn : In k m -> False
+  k : key
+  e' : elt
+  H : MapsTo k e (_, e)
+  H0 : e = e'
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  Hn : In k m -> False
+  k : key
+  e' : elt
+  H : MapsTo k e (_, e)
+  H0 : e = e'
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  Hn : In k m -> False
+  k : key
+  e' : elt
+  H : MapsTo k e (_, e)
+  H0 : e = e'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  Hn : In k m -> False
+  k : key
+  e' : elt
+  H : Maps

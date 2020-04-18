@@ -1,0 +1,147 @@
+======== SAMPLE 1 ========
+T x t
+  H1 : ~ InT x lr
+  H0 : InT x a
+  ============================
+   (InT x ll)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H5 : InT x rl
+  H4 : InT x b
+  H2 : X.eq x y
+  H1 : ~ InT x lr
+  H0 : InT x a
+  ============================
+   (InT x ll)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H5 : InT x rl
+  H4 : InT x b
+  H2 : X.eq x y
+  H1 : ~ InT x lr
+  H0 : InT x a
+  ============================
+   (InT x ll)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H5 : InT x rl
+  H4 : InT x b
+  H2 : X.eq x y
+  H1 : ~ InT x lr
+  H0 : InT x a
+  ============================
+   (InT x ll)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H5 : InT x rl
+  H4 : InT x b
+  H2 : X.eq x y
+  H1 : ~ InT x lr
+  H0 : InT x a
+  ============================
+   (InT x ll)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H5 : InT x rl
+  H4 : InT x b
+  H2 : X.eq x y
+  H1 : ~ InT x lr
+  H0 : InT x a
+  ============================
+   (InT x ll)
+
+
+Debug: Going to execute:
+<

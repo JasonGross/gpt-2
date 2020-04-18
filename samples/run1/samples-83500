@@ -1,0 +1,124 @@
+======== SAMPLE 1 ========
+2 p2) @ l * hd l ^ p == p @ l * hd l ^ p + P @ (tl l) ==
+    p @ l * hd l ^ p * P_tg n + P @ (tl l) * P' @ (tl l))
+
+
+Debug:
+Going to execute:
+match R with
+| eq => fail 1
+| lt => fail 1
+| le => fail 1
+| _ =>
+    change_no_check (x == y) in H ||
+      change_no_check (x < y) in H ||
+        change_no_check (x <= y) in H || clear H || fail 1;
+     Private_OrderTac.Tac.order_prepare
+end
+
+
+TcDebug (2) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  x : R
+  O : R
+  ============================
+   ((2 * (x ^ r) == 2 * x ^ r) -> 2 * (x ^ r) == 2 * x ^ r)
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (3) > 
+Debug: Level 3: R
+ has value 
+x
+
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  x : R
+  O : R
+  ============================
+   ((2 * (x ^ r) == 2 * x ^ r) -> 2 * (x ^ r) == 2 * x ^ r)
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (3) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  x : R
+  O : R
+  ============================
+   ((2 * (x ^ r) == 2 * x ^ r) -> 2 * (x ^ r) == 2 * x ^ r)
+
+
+Debug:
+Going to execute:
+match R with
+| eq => fail 1
+| lt => fail 1
+| le => fail 1
+| _ =>
+    change_no_check (x == y) in H ||
+      change_no_check (x < y) in H ||
+        change_no_check (x <= y) in H || clear H || fail 1;
+     Private_OrderTac.Tac.order_prepare
+end
+
+
+TcDebug (2) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  x : R
+  O : R
+  ============================
+   ((

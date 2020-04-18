@@ -1,0 +1,150 @@
+======== SAMPLE 1 ========
+   (In a s' \/ In a s'')
+
+
+Debug: Going to execute:
+intros; rewrite H1; rewrite H2; rewrite H3
+
+
+TcDebug (0) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s''
+  a : E.t
+  H1 : In a s -> In a s'
+  H3 : In a s'
+  H0 : In a s
+  H2 : In a s'
+  ============================
+   (In a s' \/ In a s'')
+
+
+Debug: Going to execute:
+intros
+
+
+TcDebug (0) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s''
+  a : E.t
+  H1 : In a s -> In a s'
+  H3 : In a s'
+  H0 : In a s
+  H2 : In a s'
+  ============================
+   (In a s' \/ In a s'')
+
+
+Debug: Going to execute:
+rewrite H1
+
+
+TcDebug (0) > 
+Debug: Evaluated term: H1
+
+Debug: Evaluated term: H1
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s''
+  a : E.t
+  H1 : In a s -> In a s'
+  H3 : In a s'
+  H0 : In a s
+  H2 : In a s'
+  ============================
+   (Eq
+              = In x s' \/ Eq (E.pos (E.eq x s'')) (E.eq x s'')))
+
+
+Debug: Going to execute:
+reflexivity
+
+
+TcDebug (0) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s''
+  a : E.t
+  H1 : In a s -> In a s'
+  H3 : In a s'
+  H0 : In a s
+  H2 : In a s'
+  ============================
+   (Eq
+             = In x s' \/ Eq (E.pos (E.eq x s'')) (E.eq x s'')))
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::reflexivity@0>
+
+
+TcDebug (1) > 
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s''
+  a : E.t
+  H1 : In a s -> In a s'
+  H3 : In a s'
+  H0 : In a s
+  H2 : In a s'
+  ============================
+   (Eq
+              = In x s' \/ Eq (E.pos (E.eq x s'') (E.eq x s'')))
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s''
+  a : E.t
+  H3 : In a s'
+  H0 : In a s
+  H2 : In a s'
+  ============================
+   (Eq
+              = In x s' \/ Eq (E.pos (E.eq x s'')) (E.eq x s'')))
+
+
+Debug: Going to execute:
+t_tauto_intuit
+
+
+TcDebug (0) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s''
+  a : E.t
+  H1 : In a s -> In a

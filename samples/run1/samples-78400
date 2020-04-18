@@ -1,0 +1,144 @@
+======== SAMPLE 1 ========
+atten_contravariant_conj> flags X1 X2 id
+| id:?X1 <-> ?X2 -> ?X3
+  |- _ =>
+      assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+       (do 2 intro; apply id; split; assumption); clear id
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+| |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+| |- _ <-> _ => split
+| |- ~ _ => red
+end
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  x1 : X.t
+  y0 : tree
+  y0 : tree
+  H3 : InT y r
+  H2 : InT y (add x r)
+  H : X.lt x x0
+  H0 : InT y l
+  ============================
+   (X.eq y x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  x1 : X.t
+  y0 : tree
+  y0 : tree
+  H3 : InT y r
+  H2 : InT y (add x r)
+  H : X.lt x x0
+  H0 : InT y l
+  ============================
+   (X.eq y x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  x1 : X.t
+  y0 : tree
+  y0 : tree
+  H3 : InT y r
+  H2 : InT y (add x r)
+  H : X.lt x x0
+  H0 : InT y l
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  x1 : X.t
+  y0 : tree
+  y0 : tree
+  H3 : InT y r
+  H2 : InT y (add x r)
+  H : X.lt x x0
+  H0 : InT y l
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  x1 : X.t
+  y0 : tree
+  y0 : tree
+  H3 : InT y r
+  H2 : InT y (add x r)
+  H : X.lt x x0
+  H0 : InT y l
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+ 

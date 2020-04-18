@@ -1,0 +1,135 @@
+======== SAMPLE 1 ========
+ elt
+  _x0 : I.t
+  ============================
+   (- E.eq x a \/ In a s /\ ~ E.eq x a)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  x : elt
+  H : Sorted X.lt s
+  H0 : Inf x s
+  H1 : Sorted X.lt s
+  C : X.eq x x'
+  y : elt
+  H4 : In y s
+  H6 : X.eq y x'
+  H5 : In y s'
+  H2 : In y s
+  H5 : X.eq y x'
+  H7 : X.eq y x'
+  H3 : In y s
+  ============================
+   (- E.eq x a \/ In a s /\ ~ E.eq x a)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  x : elt
+  H : Sorted X.lt s
+  H0 : Inf x s
+  H1 : Sorted X.lt s
+  C : X.eq x x'
+  y : elt
+  H4 : In y s
+  H6 : X.eq y x'
+  H5 : In y s'
+  H2 : In y s
+  H5 : X.eq y x'
+  H7 : X.eq y x'
+  H3 : In y s
+  ============================
+   (- E.eq x a \/ In a s /\ ~ E.eq x a)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  x : elt
+  H : Sorted X.lt s
+  H0 : Inf x s
+  H1 : Sorted X.lt s
+  C : X.eq x x'
+  y : elt
+  H4 : In y s
+  H6 : X.eq y x'
+  H5 : In y s'
+  H2 : In y s
+  H5 : X.eq y x'
+  H7 : X.eq y x'
+  H3 : In y s
+  ============================
+   (- E.eq x a \/ In a s /\ ~ E.eq x a)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  x : elt
+  H : Sorted X.lt s
+  H0 : Inf x s
+  H1 : Sorted X.lt s
+  C : X.eq x x'
+  y : elt
+  H4 : In y s
+  H6 : X.eq y x'
+  H5 : In y s'
+  H2 : In y s
+  H5 : X.eq y x'
+  H7 : X.eq y x'
+  H3 : In y s
+  ============================
+   (- E.eq x a \/ In a s /\ ~ E.eq x a)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  x : elt
+  H : Sorted X.lt s
+  H0 : Inf x s
+  H1 : Sorted X.lt s
+  C : X.eq x x'
+  y : elt
+  H4 : In y s
+  H6 : X.eq y x'
+  H5 : In y s'
+  H2 : In y s
+  H5 : X.eq y x'
+  H7 : X.eq y x'
+  H3 : In y s
+  ============================
+   (- E.eq x a

@@ -1,0 +1,101 @@
+======== SAMPLE 1 ========
+#1 /\ e' = m#2 \/ MapsTo y e' l'
+  H : MapsTo y e' (Node (Node ll lx ld lr _x) x d r h)
+  ============================
+   (X.eq y m#1 /\ e' = m#2 \/
+    MapsTo y e' (Node l' x d r (max (height l') (height r) + 1)))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall (h : int) (y : key) (e' : elt),
+        MapsTo y e' (Node ll lx ld lr h) <->
+        X.eq y m#1 /\ e' = m#2 \/ MapsTo y e' l'
+  h : int
+  y : key
+  e' : elt
+  H : MapsTo y e' (Node (Node ll lx ld lr _x) x d r h)
+  ============================
+   (X.eq y m#1 /\ e' = m#2 \/
+    MapsTo y e' (Node l' x d r (max (height l') (height r) + 1)))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall (h : int) (y : key) (e' : elt),
+        MapsTo y e' (Node ll lx ld lr h) <->
+        X.eq y m#1 /\ e' = m#2 \/ MapsTo y e' l'
+  h : int
+  y : key
+  e' : elt
+  H : MapsTo y e' (Node (Node ll lx ld lr _x) x d r h)
+  ============================
+   (X.eq y m#1 /\ e' = m#2 \/
+    MapsTo y e' (Node l' x d r (max (height l') (height r) + 1)))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall (h : int) (y : key) (e' : elt),
+        MapsTo y e' (Node ll lx ld lr h) <->
+        X.eq y m#1 /\ e' = m#2 \/ MapsTo y e' l'
+  h : int
+  y : key
+  e' : elt
+

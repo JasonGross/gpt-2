@@ -1,0 +1,129 @@
+======== SAMPLE 1 ========
+
+fun => <ltac_plugin::reflexivity@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  rll : tree
+  rlx : X.t
+  rlr : tree
+  e : (height (Node _x (Node _x0 rll rlx rlr) rx rr) + 2 <? height l) = false
+  e2 : (height (Node _x0 rll rlx rlr) <=? height rr) = false
+  y : elt
+  H : InT y rr
+  ============================
+   (InT y l \/ InT y rll)
+
+
+Debug: Going to execute:
+intros; apply ?lt_split; auto; redI rl_mult;
+ intros; auto
+
+
+TcDebug (0) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  rll : tree
+  rlx : X.t
+  rlr : tree
+  e : (height (Node _x (Node _x0 rll rlx rlr) rx rr) + 2 <? height l) = false
+  e2 : (height (Node _x0 rll rlx rlr) <=? height rr) = false
+  y : elt
+  H : InT y rr
+  ============================
+   (InT y l \/ InT y rll)
+
+
+Debug: Going to execute:
+intros; auto
+
+
+TcDebug (0) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  rll : tree
+  rlx : X.t
+  rlr : tree
+  e : (height (Node _x (Node _x0 rll rlx rlr) rx rr) + 2 <? height l) = false
+  e2 : (height (Node _x0 rll rlx rlr) <=? height rr) = false
+  y : elt
+  H : InT y rr
+  ============================
+   (InT y l \/ InT y rll)
+
+
+Debug: Going to execute:
+intros
+
+
+TcDebug (0) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  rll : tree
+  rlx : X.t
+  rlr : tree
+  e : (height (Node _x (Node _x0 rll rlx rlr) rx rr) + 2 <? height l) = false
+  e2 : (height (Node _x0 rll rlx rlr) <=? height rr) = false
+  y : elt
+  H : InT y rr
+  ============================
+   (InT y l \/ InT y rll)
+
+
+Debug: Going to execute:
+auto; red
+
+
+TcDebug (0) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  rll : tree
+  rlx : X.t
+  rlr : tree
+  e : (height (Node _x (Node _x0 rll rlx rlr) rx rr) + 2 <? height l) = false
+  e2 : (height (Node _x0 rll rlx rlr) <=? height rr) = false
+  y : elt
+  H : InT y rr
+  ============================
+   (InT y l \/ InT y rll)
+
+
+Debug: Going to execute:
+auto
+
+
+TcDebug (0) > 
+Goal:
+ 

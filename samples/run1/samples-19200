@@ -1,0 +1,142 @@
+======== SAMPLE 1 ========
+ this
+
+
+TcDebug (1) > 
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  R : forall l : t, NotConstantR x l (NodeR R y l) <-> NotConstantR y l (NodeR R x y l)
+  l : t
+  l0 : t
+  y : elt
+  H : R x y
+  ============================
+   (NotConstantR y l)
+
+
+Debug: Going to execute:
+assert X2; [ exact (id0 id1) | clear id0 ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : forall l : t, NotConstantR x l (NodeR R y l) <-> NotConstantR y l (NodeR R x y l)
+  l : t
+  l0 : t
+  y : elt
+  H : R x y
+  ============================
+   (NotConstantR y l)
+
+
+Debug: Going to execute:
+assert X2
+
+
+TcDebug (1) > 
+Debug: Evaluated term: NotConstantR
+
+Goal:
+    R : forall l : t, NotConstantR x l (NodeR R y l) <-> NotConstantR y l (NodeR R x y l)
+  ============================
+   (~ NotConstantR y l)
+
+
+Debug: Going to execute:
+exact (id0 id1)
+
+
+TcDebug (1) > 
+Debug: Evaluated term: NotConstantR
+
+Goal:
+    R : forall l : t, NotConstantR x l (NodeR R y l) <-> NotConstantR y l (NodeR R x y l)
+  ============================
+   (~ (NodeR R y l -> not (NodeR R y l)) (NodeR R y l)
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@1> $1
+
+
+TcDebug (1) > 
+Goal:
+    R : forall l : t, R x l \/ NotConstantR y l
+  ============================
+   (NodeR R y l)
+
+
+Debug: Going to execute:
+clear id0
+
+
+TcDebug (1) > 
+Goal:
+    R : forall l : t, R x ll \/ NotConstantR y ll
+  ============================
+   (NodeR R y ll -> not (NodeR R y ll) (NodeR R x ll)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (1) > 
+Goal:
+    R : forall l : t, R x ll \/ NotConstantR y ll
+  ============================
+   (NodeR R y ll -> not (NodeR R y ll) (NodeR R x ll)
+     rx : X.eq x y
+  rd : R
+  rr : R
+  l : t
+  l0 : t
+  y : elt
+  H : R x y
+  ============================
+   (Some l = Some rd)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (0) > 
+Goal:
+    R : forall l : t, R x ll \/ NotConstantR y ll
+  ============================
+   (NodeR R y ll -> not (NodeR R y ll) (NodeR R x ll)
+     rx : X.eq x y
+  rd : R
+  rr : R
+  l : t
+  l0 : t
+  y : elt
+  H : R x y
+  ============================
+   (Some l = Some rd)
+
+
+Debug:
+Going to execute:
+repeat
+ match goal with
+ | |- ?X1 -> ?X2 => intro
+ | |- ~ _ => unfold not at 1; intro
+ end
+
+
+TcDebug (1) > 
+Goal:
+    R : forall l : t, R x ll \/ NotConstantR y ll
+  ============================
+   (NodeR R

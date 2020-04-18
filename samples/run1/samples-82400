@@ -1,0 +1,154 @@
+======== SAMPLE 1 ========
+ : elt
+  rlm : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  LE : lh <= rh + 2
+  GT' : rh > lh + 2
+  y : key
+  H0 : In y rr
+  ============================
+   (In y (Node rl rx rd rr rh))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  LE : lh <= rh + 2
+  GT' : rh > lh + 2
+  y : key
+  H0 : In y rr
+  ============================
+   (In y (Node rl rx rd rr rh))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  LE : lh <= rh + 2
+  GT' : rh > lh + 2
+  y : key
+  H0 : In y rr
+  ============================
+   (In y (Node rl rx rd rr rh))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  LE : lh <= rh + 2
+  GT' : rh > lh + 2
+  y : key
+  H0 : In y rr
+  ============================
+   (In y (Node rl rx rd rr rh))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  LE : lh <= rh + 2
+  GT' : rh > lh + 2
+  y : key
+  H0 : In y rr
+  ============================
+   (In y (Node rl rx rd rr rh))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  LE : lh <= rh + 2
+  GT' : rh > lh + 2

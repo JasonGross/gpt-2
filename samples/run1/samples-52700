@@ -1,0 +1,107 @@
+======== SAMPLE 1 ========
+ r1
+  ============================
+   (InT x (Rd (Rd a x0 b) y0 (Rd r1 (Rd r2 (Rd r1 x y0 c)))
+     (InA X.eq x l1)
+     (X.eq x x0 \/ InA X.eq x l1) \/
+    InT x r1 \/ InA X.eq x r2 \/ InA X.eq x acc)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  r1 : tree
+  x0 : X.t
+  r2 : tree
+  y : elt
+  l : tree
+  H0 : InT y l
+  ============================
+   (InT x (Rd (Rd a x0 b) y0 (Rd r1 (Rd r2 (Rd r1 x y0 c)))
+     (InA X.eq x l1)
+     (X.eq x x0 \/ InA X.eq x l1) \/
+    InT x r1 \/ InA X.eq x r2 \/ InA X.eq x acc)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  r1 : tree
+  x0 : X.t
+  r2 : tree
+  y : elt
+  l : tree
+  H0 : InT y l
+  ============================
+   (InT x (Rd (Rd a x0 b) y0 (Rd r1 (Rd r2 (Rd r1 x y0 c)))
+     (InA X.eq x l1)
+     (X.eq x x0 \/ InA X.eq x l1) \/
+    InT x r1 \/ InA X.eq x r2 \/ InA X.eq x acc)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  r1 : tree
+  x0 : X.t
+  r2 : tree
+  y : elt
+  l : tree
+  H0 : InT y l
+  ============================
+   (InT x (Rd (Rd a x0 b) y0 (Rd r1 (Rd r2 (Rd r1 x y0 c)))
+     (InA X.eq x l1)
+     (X.eq x x0 \/ InA X.eq x l1) \/
+    InT x r1 \/ InA X.eq x r2 \/ InA X.eq x acc)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  r1 : tree
+  x0 : X.t
+  r2 : tree
+  y : elt
+  l : tree
+  H0 : InT y l
+  ============================
+   (InT x (Rd (Rd a x0 b) y0 (Rd r1 (Rd r2 (Rd r1 x y0 c)))
+     (InA X.eq x l1)
+     (X.eq x x0 \/ InA X.eq x l1) \/
+    InT x r1 \/ InA X.eq x r2 \/ InA X.eq x acc)
+
+
+Debug: Going

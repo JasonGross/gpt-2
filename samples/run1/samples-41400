@@ -1,0 +1,127 @@
+======== SAMPLE 1 ========
+ 
+  s1 : tree
+  s2 : tree
+  x : elt
+  H : Ok (split x s1)#l -> Ok (union l s2)#l
+  H0 : Ok (split x s2)#l
+  H1 : Ok (split x s1)#l
+  H2 : tree
+  H3 : Ok l
+  H4 : Ok r
+  H5 : X.lt x a
+  H6 : InT a s1
+  ============================
+   (X.eq x a \/ InT a s1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s1 : tree
+  s2 : tree
+  x : elt
+  H : Ok (split x s1)#l -> Ok (union l s2)#l
+  H0 : Ok (split x s2)#l
+  H1 : Ok (split x s1)#l
+  H2 : tree
+  H3 : Ok l
+  H4 : Ok r
+  H5 : X.lt x a
+  H6 : InT a s1
+  ============================
+   (X.eq x a \/ InT a s1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  s1 : tree
+  s2 : tree
+  x : elt
+  H : Ok (split x s1)#l -> Ok (union l s2)#l
+  H0 : Ok (split x s2)#l
+  H1 : Ok (split x s1)#l
+  H2 : tree
+  H3 : Ok l
+  H4 : Ok r
+  H5 : X.lt x a
+  H6 : InT a s1
+  ============================
+   (X.eq x a \/ InT a s1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s1 : tree
+  s2 : tree
+  x : elt
+  H : Ok (split x s1)#l -> Ok (union l s2)#l
+  H0 : Ok (split x s2)#l
+  H1 : Ok (split x s1)#l
+  H2 : tree
+  H3 : Ok l
+  H4 : Ok r
+  H5 : X.lt x a
+  H6 : InT a s1
+  ============================
+   (X.eq x a \/ InT a s1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  s1 : tree
+  s2 : tree
+  x : elt
+  H : Ok (split x s1)#l -> Ok (union l s2)#l
+  H0 : Ok (split x s2)#l
+  H1 : Ok (split x s1)#l
+  H2 : tree
+  H3 : Ok l
+  H4 : Ok r
+  H5 : X.lt x a
+  H6 : InT a s1
+  ============================
+   (X.eq x a \/ InT a s1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  s1 : tree
+  s2 : tree
+  x : elt
+  H : Ok (split x s1)#l -> Ok (union l s2)#l
+  H0 : Ok (split x s2)#l
+  H1 : Ok (split x s1)#l
+  H2 : tree
+  H3 : Ok l
+  H4 : Ok r
+  H5 : X.lt x a
+  H6 : InT a s1
+  ============================
+   (X.eq x

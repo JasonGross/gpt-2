@@ -1,0 +1,74 @@
+======== SAMPLE 1 ========
+ula r
+  H1 : forall (x : X.t) (m : t elt),
+           0 <= m ->
+           - (2) <= height m - height (add x e m) <= 1) ->
+         0 <= height (bal m) - max (height m) (height (add x e m))".
+
+Debug:
+Level 0: No matching clauses for match.
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  k : key
+  e0 : elt
+  t0 : E.t
+  e1 : elt
+  e2 : elt
+  i : E.t
+  j : t elt
+  H : forall y : key,
+      match X.compare x k with
+      | Eq => compare_map l x e j
+      | Lt => lbalS m (balS m)
+      | Gt => mbalS m (balS m)
+  lbal : list (X.t * D.t))
+  lbal0 : list (X.t * D.t)
+  H0 : equal l (bal0 m (add x e j)) = true
+  ============================
+   (M.subst x, Equal (lbalS m (add x e j)) s)
+
+
+Debug:
+Going to execute:
+match goal with
+| H:?x < ?x |- _ => exact (Private_OrderTac.Tac.lt_irrefl H)
+| H:?x ~= ?x |- _ => exact (H (Private_OrderTac.Tac.eq_refl x))
+| H:?x <= ?x |- _ => clear H; Private_OrderTac.Tac.order_loop
+| H:?x == ?y
+  |- _ =>
+      Private_OrderTac.Tac.order_eq x y H; Private_OrderTac.Tac.order_loop
+| H1:?x <= ?y, H2:?y <= ?x
+  |- _ =>
+      generalize (Private_OrderTac.Tac.le_antisym H1 H2); clear H1 H2; intro;
+       Private_OrderTac.Tac.order_loop
+| H1:?x <= ?y, H2:?x ~= ?y
+  |- _ =>
+      generalize (Private_OrderTac.Tac.le_neq_lt H1 H2); clear H1 H2; intro;
+       Private_OrderTac.Tac.order_loop
+| H1:?x <= ?y, H2:?y ~= ?x
+  |- _ =>
+      generalize
+       (Private_OrderTac.Tac.le_neq_lt H1 (Private_OrderTac.Tac.neq_sym H2));
+       clear H1 H2; intro; Private_OrderTac.Tac.order_loop
+| H1:?x < ?y, H2:?y < ?z
+  |- _ =>
+      match goal with
+      | H:x < z |- _ => fail 1
+      | _ =>
+          generalize (Private_OrderTac.Tac.lt_le_trans H1 H2); intro;
+           Private_OrderTac.Tac.order_loop
+      end
+| H1:?x <= ?y, H2:?y < ?z
+  |- _ =>
+      match goal with
+      | H:x < z |- _ => fail 1
+      | _ =>
+          generalize (Private_OrderTac.Tac.le_lt_trans H1 H2); intro;
+           Private_OrderTac.Tac.order_loop
+     

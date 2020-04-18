@@ -1,0 +1,129 @@
+======== SAMPLE 1 ========
+ IH : forall (x : X.t) (y : elt),
+       X.eq x y -> Find_at t fv = Some x ->
+       InT y (Node ll lx ld lr lh) <-> InT y (Node ll lx ld lr lh) /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        X.eq x y -> fv = Some x ->
+        InT y (Node ll lx ld lr lh) <-> InT y (Node ll lx ld lr lh) /\ ~ X.eq y x
+  x : X.t
+  d : elt
+  h : I.t
+  ============================
+   (InT y (Node ll lx ld lr lh) <-> X.eq y x \/ InT y lh)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : I.t
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : I.t
+  l : t elt
+  H : avl l
+  H1 : avl rl
+  H2 : avl rr
+  H3 : inversion l -> False
+  H0 : InT x l
+  ============================
+   (X.eq x lx \/ InT x lr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; split
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : I.t
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : I.t
+  l : t elt
+  H : avl l
+  H1 : avl rl
+  H2 : avl rr
+  H3 : inversion l -> False
+  H0 : InT x l
+  ============================
+   (X.eq x lx \/ InT x lr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : I.t
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : I.t
+  l : t elt
+  H : avl l
+  H1 : avl rl
+  H2 : avl rr
+  H3 : inversion l -> False
+  H0 : InT x l
+  ============================
+   (X.eq x lx \/ InT x lr)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : I.t
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : I.t
+ 

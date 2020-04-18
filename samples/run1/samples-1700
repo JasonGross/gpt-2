@@ -1,0 +1,169 @@
+======== SAMPLE 1 ========
+fun' ||
+    forall (fun (x y : X.t) (acc : list (SymmetricFormula :: 0) =>
+    fun x y :: nil -> False => acc :: acc) (height x)) +
+    (%Z \/ (height height - (height * height))%Z :: (X.t - height * height)) \/
+    (height * (height - (height * height))%Z) \/
+    0) <=
+    t0 &&
+    height < (height - (height * height))))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TC.Tauto.flatten_contravariant_conj
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : elt
+  y : elt
+  c : key
+  f : t
+  t : list elt
+  H : 0 <= f f = true
+  H0 : ff (f x)f
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : elt
+  y : elt
+  c : key
+  f : t
+  t : list elt
+  H : 0 <= f f = true
+  H0 : ff f
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : elt
+  y : elt
+  c : key
+  f : t
+  t : list elt
+  H : 0 <= f f = true
+  H0 : ff f
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : elt
+  y : elt
+  c : key
+  f : t
+  t : list t
+  H : 0 <= f f = true
+  H0 : ff f
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : elt
+  y : elt
+  c : key
+  f : t
+  t : list t
+  H : 0 <= f f = true
+  H0 : ff f
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : elt
+  y : elt
+  c : key
+  f : t
+  t : list t
+  H : 0 <= f f = true
+  H0 : ff f
+  (f x)f
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : elt
+  y : elt
+  c : key
+  f : t
+  t : list t
+  H : 0 <= f f = true
+  H0 : ff f
+  (f x)f
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : elt
+  y : elt
+  c : key
+  f : t
+  t

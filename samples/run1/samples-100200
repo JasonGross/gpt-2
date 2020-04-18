@@ -1,0 +1,158 @@
+======== SAMPLE 1 ========
+ ?k, x y) = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : E.t
+  y : E.t
+  H : E.lt y x
+  s : t
+  s' : t
+  H0 : forall a : elt, In a s <-> In a s'
+  a : elt
+  H2 : In a s
+  H4 : True
+  H1 : E.lt x y
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : E.t
+  y : E.t
+  H : E.lt y x
+  s : t
+  s' : t
+  H0 : forall a : elt, In a s <-> In a s'
+  a : elt
+  H2 : In a s
+  H4 : True
+  H1 : E.lt x y
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : E.t
+  y : E.t
+  H : E.lt y x
+  s : t
+  s' : t
+  H0 : forall a : elt, In a s <-> In a s'
+  a : elt
+  H2 : In a s
+  H4 : True
+  H1 : E.lt x y
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : E.t
+  y : E.t
+  H : E.lt y x
+  s : t
+  s' : t
+  H0 : forall a : elt, In a s <-> In a s'
+  a : elt
+  H2 : In a s
+  H4 : True
+  H1 : E.lt x y
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : E.t
+  y : E.t
+  H : E.lt y x
+  s : t
+  s' : t
+  H0 : forall a : elt, In a s <-> In a s'
+  a : elt
+  H2 : In a s
+  H4 : True
+  H1 : E.lt x y
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : E.t
+  y : E.t
+  H : E.lt y x
+  s : t
+  s' : t
+  H0 : forall a : elt, In a s <-> In a s'
+  a : elt
+  H2 : In a s
+  H4 : True
+  H1 : E.lt x y
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : E.t
+  y : E.t
+  H : E.lt y x
+  s : t
+  s' : t
+  H0 : forall a : elt, In a s <-> In a s'
+  a : elt
+  H2 : In a s
+  H4 : True
+  H1 : E.lt x y
+  ============================
+   False
+
+
+Debug: Going to execute:
+<

@@ -1,0 +1,148 @@
+======== SAMPLE 1 ========
+
+  H2 : X.eq x y
+  H1 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (InT x b)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H5 : InT x rl
+  H2 : X.eq x y
+  H1 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (InT x b)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H5 : InT x rl
+  H2 : X.eq x y
+  H1 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (InT x b)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H5 : InT x rl
+  H2 : X.eq x y
+  H1 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (InT x b)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H5 : InT x rl
+  H2 : X.eq x y
+  H1 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (InT x b)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H5 : InT x rl
+  H2 : X.eq x y
+  H1 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+ 

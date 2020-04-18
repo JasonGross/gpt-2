@@ -1,0 +1,77 @@
+======== SAMPLE 1 ========
+  H0 : gb_tree y)
+  H1 : gb_tree y \/ gb_tree y rx \/ InT y (map2_opt l1 l2')
+  x : X.t
+  y : elt
+  H0 : InT y s2
+  H3 : InA X.eq x (elements_aux nil s2) ->
+      InT y s2 -> ~ InA X.eq x (elements_aux nil s2)
+  H4 : Ok s2
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H4 : forall y : elt, InA X.lt x1 (elements_aux nil s2) -> InT y (Node _x Leaf x Leaf r2)
+  ============================
+   (forall (a : elt) (b : bool) (c : bool),
+    InT y x1 -> ~ InA X.eq x2 (x :: nil) ->
+    ~ InT y s2 /\ InA X.eq x (Node _x (Node _x Leaf x Leaf r2)) <->
+    ~ InT y (split x1 (elements_aux nil s2)#l)#l
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  IHt0 : forall y : elt,
+         Ok l1 ->
+         Ok (split x1 s2)#l ->
+         InT y (union l1 (split x1 s2)#l) <->
+         InT y l1 \/ InT y (split x1 s2)#l
+  IHt1 : forall y : elt,
+         Ok r1 ->
+         Ok (split x1 s2)#r ->
+         InT y (union r1 (split x1 s2)#r) <->
+         InT y r1 \/ InT y (split x1 s2)#r
+  y : elt
+  H0 : InT y s2
+  H3 : InA X.eq x (elements_aux nil s2) ->
+       InT y s2 -> ~ InA X.eq x (elements_aux nil s2)
+  H4 : Ok s2
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H4 : forall y : elt, InA X.lt x1 (elements_aux nil s2) -> InT y (Node _x Leaf x1 Leaf r1)
+  ============================
+   (forall (a : elt) (b : bool) (c : bool),
+    ~ InT y s2 /\ InA X.eq x2 (x :: nil) ->
+    ~ InT y s2 /\ InA X.eq x (Node _x Leaf x1 Leaf r1) ->
+    ~ InT y (split x1 x2)#l ->
+    ~ InT y s2 /\ InA X.eq x (Node _x Leaf x1 Leaf r1) ->
+    ~ InT y s2 /\ InA X.eq x (Node _x Leaf x1 Leaf r1) ->
+    ~ ~ InT y s2 /\ InA X.eq x (Node _x Leaf x1 Leaf r1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+ 

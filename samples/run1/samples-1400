@@ -1,0 +1,46 @@
+======== SAMPLE 1 ========
+ : : t
+  VAR : forall x y : elt ,
+        In y (diff by 0 <= In y (extract x y) <-> X.eq x x y) -> In y (diff by 0 <= In y (extract x y) <-> X.eq x x y
+  IHt1 : forall y : elt,
+         In y (diff by 0 <= In y (extract x y) <-> X.eq x x y) -> In y (diff by 0 <= x in In y (extract x y) <-> X.eq x x y
+  IHt0 : forall y : elt,
+         In y (diff by 0 <= In y (extract x y) <-> X.eq x x y) -> In y (diff by 0 <= x in In y (extract x y) <-> X.eq x x y
+  t : t
+  IHt1 : forall y : elt,
+         In y (diff by 0 <= In y (extract x y) <-> X.eq x x y) -> In y (diff by 0 <= x in In y (extract x y) <-> X.eq x x y
+  IHt1 : forall y : elt,
+         In y (diff by 0 <= In y (extract x y) <-> X.eq x x y) -> In y (diff by 0 <= x in In y (extract x y) <-> X.eq x x y
+  t0 : t
+  y : elt
+  H : In y (extract x y) <-> X.eq x x y -> In y (extract x y)
+  H0 : In y (extract x y)
+  H1 : In y (extract x y) <-> X.eq x x y
+  H3 : x y
+  H3 : In y (extract x y) -> In y (extract x y)
+  ============================
+   (x y == x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f0 : key -> option elt -> option elt' -> option elt''
+  f : key -> elt -> option elt' -> option elt''
+  mapl : t elt -> t elt''
+  mapr : t elt' -> t elt''
+  f0_f : forall (x : key) (m : t elt) (e : elt'),
+        f x m ->
+                   (mapr e
+                                                                                                    (f0 f e) ) =
+              (f0 mapl (mapr i) (mapl mapl (fold_left f0 e f1 e2)); f0 mapl (fold_right f0 e f2 e3))
+  f : key -> elt -> option elt -> option elt' -> option elt''
+  mapl_bst : forall t elt' : t elt',
+                                             (mapr mapl (mapl mapl (fold_left mapl (1) mapl (fold_right mapl (2) mapl (fold_left mapl (3) mapl (fold_right) (4) (fold_left) (5) (fold_left) (6) (fold_right) (7) (fold_left) (8) (fold_right) (9) (fold_left

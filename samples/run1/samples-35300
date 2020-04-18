@@ -1,0 +1,83 @@
+======== SAMPLE 1 ========
+ height
+  H4 : Ok l1 -> Ok (split x1 s2) -> Ok (union l1 (split x1 s2)#l)
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  IHb1 : Ok (diff l1 (split x1 s2)#l)
+  IHi1 : forall y : elt,
+         InT y (diff l1 (split x1 s2)#l) <->
+         InT y l1 /\ ~ InT y (split x1 s2)#l
+  IHb2 : Ok (diff r1 (split x1 s2)#r)
+  IHi2 : forall y : elt,
+         InT y (diff r1 (split x1 s2)#r) <->
+         InT y r1 /\ ~ InT y (split x1 s2)#r
+  y : elt
+  H2 : InT y s2 -> False
+  H3 : InT y l1
+  ============================
+   (X.eq y x1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H0 : (split x1 s2)#b = false
+  H4 : Ok l1 -> Ok (split x1 s2)#l -> Ok (union l1 (split x1 s2)#l)
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  IHb1 : Ok (diff l1 (split x1 s2)#l)
+  IHi1 : forall y : elt,
+         InT y (diff l1 (split x1 s2)#l) <->
+         InT y l1 /\ ~ InT y (split x1 s2)#l
+  IHb2 : Ok (diff r1 (split x1 s2)#r)
+  IHi2 : forall y : elt,
+         InT y (diff r1 (split x1 s2)#r) <->
+         InT y r1 /\ ~ InT y (split x1 s2)#r
+  y : elt
+  H2 : InT y s2 -> False
+  H3 : InT y l1
+  ============================
+   (X.eq y x1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H0 : (split x1 s2)#b = false
+  H4 : Ok l1 -> Ok (split x1 s2)#l -> Ok (union l1 (split x1 s2)#l)
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  IHb1 : Ok (diff l1 (split x1 s2)#l)
+  IHi1 : forall y : elt,
+         InT y (diff l1 (split x1 s2)#l) <->
+         InT y l1 /\ ~ InT y (split x1 s2)#l
+  IHb2 : Ok (diff r1 (split x1 s2)#r)
+  IHi2 : forall y : elt,
+         InT y (diff r1 (

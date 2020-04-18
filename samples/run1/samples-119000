@@ -1,0 +1,93 @@
+======== SAMPLE 1 ========
+ unfold_ok (fun x1 : key => ~ In x1 l)
+  H2; clear
+       H1 H2; intro; Private_OrderTac.Tac.order_loop
+          (H3) = (a0, b0)
+  H : a0 = b0 \/ In a (a0, b0)
+  ============================
+   (a0 = b0 \/ In a (a0, b0))
+
+
+Debug: Going to execute:
+intro; Private_OrderTac.Tac.order_loop
+
+
+TcDebug (4) > 
+Goal:
+  
+  a : t
+  b : t
+  Ha : 0 < a
+  Hb : 0 < b
+  H0 : 2 ^ log2 b * 2 ^ P b <= 2 ^ P b
+  ============================
+   (a0 = b0 \/ In a (a0, b0))
+
+
+Debug: Going to execute:
+intro
+
+
+TcDebug (4) > 
+Goal:
+  
+  a : t
+  b : t
+  Ha : 0 < a
+  Hb : 0 < b
+  H0 : 2 ^ log2 b * 2 ^ P b <= 2 ^ P b
+  ============================
+   (a0 = b0 \/ In a (a0, b0))
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@0>
+
+
+TcDebug (4) > 
+Goal:
+    a : t  b : t  Ha : 0 < a  Hb : 0 < b  H0 : 2 ^ log2 b * 2 ^ P b <= 2 ^ P b
+  ============================
+   False
+
+
+Debug: Going to execute:
+Private_OrderTac.Tac.order_loop
+
+
+TcDebug (4) > 
+Goal:
+    a : t  b : t  Ha : 0 < a  Hb : 0 < b  H0 : 2 ^ log2 b * 2 ^ P b <= 2 ^ P b
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match goal with
+| H:?x < ?x |- _ => exact (Private_OrderTac.Tac.lt_irrefl H)
+| H:?x ~= ?x |- _ => exact (H (Private_OrderTac.Tac.eq_refl x))
+| H:?x <= ?x |- _ => clear H; Private_OrderTac.Tac.order_loop
+| H:?x == ?y
+  |- _ =>
+      Private_OrderTac.Tac.order_eq x y H; Private_OrderTac.Tac.order_loop
+| H1:?x <= ?y, H2:?y <= ?x
+  |- _ =>
+      generalize (Private_OrderTac.Tac.le_antisym H1 H2); clear H1 H2; intro;
+       Private_OrderTac.Tac.order_loop
+| H1:?x <= ?y, H2:?x == ?y
+  |- _ =>
+      generalize (Private_OrderTac.Tac.le_neq_lt H1 H2); clear H1 H2; intro;
+       Private_OrderTac.Tac.order_loop
+| H1:?x <= ?y, H2:?y == ?x
+  |- _ =>
+      generalize
+       (Private_OrderTac.Tac.le_neq_lt H1 (Private_OrderTac.Tac.neq_sym H2));
+       clear H1 H2; intro; Private_OrderTac.Tac.order_loop
+| H1:?x < ?y, H2:?y < ?z
+  |- _ =>
+      match goal with
+      | H:x < z |- _ => fail 1
+      | _ =>
+          generalize (Private_OrderTac.Tac.lt_trans H1 H2); intro;
+           Private_

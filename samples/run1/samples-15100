@@ -1,0 +1,76 @@
+======== SAMPLE 1 ========
+ (PEX Z 1)
+  ============================
+   (X.eq y lx \/ InT y lrl)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  X.lt x1 y1
+  lm : list (X.t * elt)
+  x1 : elt
+  LO : list (X.t * elt)
+  EGT : forall lm' : list (X.t * elt),
+        InT y (add x (join lm) x1 <-> InT y (add x (join lm') x1)))
+  LO' : forall x2 : elt,
+        InT y (add x2 (join lm') x2 <-> InT y (add x2 (join lm') x2))
+  y2 : X.t
+  H2 : InT y lrr
+  H3 : InT y s2
+  ============================
+   (X.eq y lx \/ InT y lrl)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  X.lt x1 y1
+  lm : list (X.t * elt)
+  x1 : elt
+  LO : list (X.t * elt)
+  EGT : forall lm' : list (X.t * elt),
+        InT y (add x (join lm) x1 <-> InT y (add x2 (join lm') x2))
+  LO' : forall x2 : elt,
+        InT y (add x2 (join lm') x2 <-> InT y (add x2 (join lm') x2))
+  LO' : forall x2 : elt,
+        InT y (add x2 (join lm') x2 <-> InT y (add x2 (join lm') x2))
+  LO' : forall x2 : elt,
+        InT y (add x2 (join lm') x2 <-> InT y (add x2 (join lm') x2))
+  LO' : forall x2 : elt,
+        InT y (add x2 (join lm') x2 <-> InT y (add x2 (join lm') x2))
+  LO' : forall x2 : elt,
+        InT y (add x2 (join lm') x2 <-> InT y (add x2 (join lm') x2))
+  LO' :
+        InT y
+  ============================
+   (X.eq y lx \/ InT y lrl)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  X.lt x1 y1
+  lm : list (X.t * elt)
+  x1 : elt
+  LO : list (X.t * elt)
+  EGT : forall lm' : list (X.t * elt),
+        InT y (add x (join lm) x1 <-> InT y (add x2 (join lm') x2))
+  LO' : forall x2 : elt,
+        InT y (add x2 (join lm') x2 <-> InT y (add x2 (join lm') x2))
+  LO' : forall x2 : elt,
+        InT y (add x2 (join lm') x2 <-> InT y (add x2 (join lm') x2))
+  LO' : forall x2 : elt,
+         InT y (add x2 (join lm') x2 <-> InT y (add x

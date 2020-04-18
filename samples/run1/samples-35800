@@ -1,0 +1,138 @@
+======== SAMPLE 1 ========
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  r : tree
+  Hr : notred r
+  H1 : InT x (append lr r) -> InT x lr \/ InT x r
+  H2 : InT x r -> InT x (append lr r)
+  H : InT x lr
+  H3 : InT x ll
+  ============================
+   (InT x ll \/ InT x lr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  r : tree
+  Hr : notred r
+  H1 : InT x (append lr r) -> InT x lr \/ InT x r
+  H2 : InT x r -> InT x (append lr r)
+  H : InT x lr
+  H3 : InT x ll
+  ============================
+   (InT x ll \/ InT x lr)
+
+
+Debug: Going to execute:
+f x
+
+
+TcDebug (0) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  r : tree
+  Hr : notred r
+  H1 : InT x (append lr r) -> InT x lr \/ InT x r
+  H2 : InT x r -> InT x (append lr r)
+  H : InT x lr
+  H3 : InT x ll
+  ============================
+   (InT x ll \/ InT x lr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  r : tree
+  Hr : notred r
+  H1 : InT x (append lr r) -> InT x lr \/ InT x r
+  H2 : InT x r -> InT x (append lr r)
+  H : InT x lr
+  H3 : InT x ll
+  ============================
+   (InT x ll \/ InT x lr)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  r : tree
+  Hr : notred r
+  H1 : InT x (append lr r) -> InT x lr \/ InT x r
+  H2 : InT x r -> InT x (append lr r)
+  H : InT x lr
+  H3 : InT x ll
+  ============================
+   (InT x ll \/ InT x lr)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  r : tree
+  Hr : notred r
+  H1 : InT x (append lr r) -> InT x lr \/ InT x r
+  H2 : InT x r -> InT x (append lr r)
+  H : InT x lr
+  H3 : InT x ll
+  ============================
+   (InT x ll \/ InT x lr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.

@@ -1,0 +1,122 @@
+======== SAMPLE 1 ========
+ \Tauto_intuit> flags lemma1;
+    match goal with
+  | |- ~ _ => intro; t_tauto_intuit
+  | |- _ <-> _ => intro; t_tauto_intuit
+  | |- ~ _ => intro; t_tauto_intuit
+  | end = intro;
+    end;
+    t_tauto_intuit
+  ============================
+   (t_tauto_intuit <-> ~ t_tauto_intuit)
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : height (Node l y d r _x) > height None (Node e m r h)
+  e : X.eq y x
+  H : X.eq y e
+  ============================
+   (true = true)
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : height (Node l y d r _x) > height None (Node e m r h)
+  e : X.eq y x
+  H : ((false = true) /\ _x <= height (Node l y d r _x) + (true = true)) /\ _x = true)
+  ============================
+   (false = true)
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : height (Node l y d r _x) > height None (Node e m r h)
+  e : X.eq y x
+  H : (true = true) /\ _x <= height (Node l y d r _x) + (false = true)) /\ _x = true)
+  ============================
+   (false = true)
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : height (Node l y d r _x) > height None (Node e m r h)
+  e : X.eq y x
+  H : ((false = true) /\ _x <= height (Node l y d r _x) + (true = true)) /\ _x = true)
+  ============================
+   (false = true)
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : height (Node l y d r _x) > height None (Node e m r h)
+  e : X.eq y x
+  H : ((false = true) /\ _x <= height (Node l y d r _x) + (true = true)) /\ _x = true)
+  ============================
+   (false = true)
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : height (Node l y d r _x) > height None (Node e m r h)
+  e : X.eq y x
+  H : (true = true) /\ _x <= height (Node l y d r _x) + (true = true)) /\ _x = true)
+  H1 : X.eq y x
+  ============================
+   False
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : height (Node l y d r _x) > height None (Node e m r h)
+  e : X.eq y x
+  H : (true =

@@ -1,0 +1,83 @@
+======== SAMPLE 1 ========
+eval_cnf' ||
+         sign_phi0 (inter_refl qb) (inter_refl qn) = false ->
+         assert_phi0_eq (phi0_0 * pphi (inter_refl qb) * 0);
+               assert_eq_0 0 q * por_eq_0 (inter_refl qn);
+                   eq = sign_phi0_eq q;
+                 ceqb t0);
+                 assert (((sign_phi0_0 * pphi0 (inter_refl qb) * 0) = 0));
+                  end);
+   t_compat := 0; t_eq_compat_t t;
+              t_compat = 1; t_add; t_eval; t_resolve; t_lt
+                     || t_imp_t_bst t;
+                            || t_eq_uniptient t;
+                           
+                 | unsat_t_rp => fun _ => if t_eq_opponent false then t_eq_opponent else t_eq_opponent;
+                  end;
+         | t_reduce =>
+                 match t with
+                | Some d => t_reduce (Some d), None => t_reduce (None d), None d;
+                     end;
+            | None => t_compat (Some d), None d;
+               end;
+           | Some dld => t_compat dld dld;
+                 match dld d with
+                | Some dmk => t_compat dmk dmk dmk dmk dma mk dma;
+               dma mk dma
+           end;
+  cin :=?b : cnf
+  ============================
+   (c = ?c)
+
+
+Debug: Going to execute:
+match ltac:(Goal b cnf) with
+| |- _ => fail 1
+| |- _ => fail 0
+| |- ?elements => intro; cnf cnf
+| |- _ => _ => fail 1
+end
+
+
+TcDebug (0) > 
+Goal Info:
+Goal 1:
+  
+  l : tree
+  nPos : positive
+  ============================
+   (0 < l + 1)
+
+
+Debug: Evaluated term: (l + 1)
+
+Goal Info:
+   l : tree
+  nPos : positive
+  ============================
+   (0 < l + 1)
+
+
+Debug: Evaluated term: (l + 1)
+
+Goal Info:
+    l : tree
+  nPos : positive
+  ============================
+   (0 < l + 1)
+
+
+Debug: Evaluated term: (l + 1)
+
+Goal Info:
+    l : tree
+  nPos : positive
+  ============================
+   (0 < l + 1)
+
+
+Debug: Evaluated term: (l + 1)
+
+Goal Info:
+    l : tree
+  nPos

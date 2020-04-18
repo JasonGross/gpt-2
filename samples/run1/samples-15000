@@ -1,0 +1,102 @@
+======== SAMPLE 1 ========
+
+  IHr -> False
+  H0 : D.eq (fst (a, b)) -> False
+  H1 : eqA (fst (b, c)) -> bool
+  H3 : forall y : key,
+        In y rl_dec (fst (a, b)) -> bool
+  H5 : For y (a, b) -> bool
+  H6 : b == y
+  H7 : In y lr
+  H4 : eqA (fst (a, b))
+  ============================
+   (A
+       {x : lr x} <-> In y (a, b))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  AU : forall x1 x2 : X.t,
+        InA X.eq x1 (fst x1) -> InA X.eq x2 (fst x2)
+  l : list X.t
+  l1 : list X.t
+  H1 : eqA (fst l1) -> false = true
+  H3 : forall y : key,
+        In y l1 -> In y (fst (a, b)) -> In y l1
+  H6 : b == y
+  H7 : In y lr
+  H4 : eqA (fst (a, b))
+  ============================
+   (A
+     -> {x : lr x} <-> In y (a, b))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  AU : forall x1 x2 : X.t,
+        InA X.eq x1 (fst x1) -> InA X.eq x2 (fst x2)
+  l : list X.t
+  l1 : list X.t
+  H1 : eqA (fst l1) -> false = true
+  H3 : forall y : key,
+        In y l1 -> In y (fst (a, b)) -> In y l1
+  H6 : b == y
+  H7 : In y lr
+  H4 : eqA (fst (a, b))
+  ============================
+   (A
+    -> {x : lr x} <-> In y (a, b))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+  Hf : Proper (E.eq ==> eq ==> eq) f
+  AU : forall x1 x2 : X.t,
+        InA X.eq x1 (fst x1) -> InA X.eq x2 (fst x2)
+  l : list X.t
+  l1 : list X.t
+  H1 : eqA (fst l1) -> false = true
+  H3 : forall y : key,
+        In y l1 -> In y (fst (a, b)) -> In y l1
+  H6 : b == y
+  H7 : In y lr
+  H4 : eqA (fst (a, b))
+  ============================
+   (A
+    -> {x : lr x} <-> In y (a, b))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  f : key -> elt -> bool
+ 

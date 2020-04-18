@@ -1,0 +1,115 @@
+======== SAMPLE 1 ========
+   (X.eq x a)
+
+
+Debug:
+Level 3: In environment
+x, y : X.t
+H : X.eq x x'
+H1 : eq_setoid_to_luv y H1
+H2 : eq_setoid_to_luv y l'
+H3 : In y' r -> False
+H4 : In y' r
+Unable to unify "Y". "Y". " Y". " Y".
+
+Debug:
+Level 3: In environment
+x, y : X.t
+H : X.eq x x'
+H1 : eq_setoid_to_luv y H1
+H2 : eq_setoid_to_luv y l'
+H3 : In y' r -> False
+H4 : In y' r
+Unable to unify "Y". "Y". "Y".
+
+Debug:
+Level 3: In environment
+x, y : X.t
+H : X.eq x x'
+H1 : eq_setoid_to_luv y H1
+H2 : eq_setoid_to_luv y l'
+H3 : In y' r -> False
+H4 : In y' r
+Unable to unify "Y". "Y". "Y".
+
+Debug:
+Level 3: In environment
+x, y : X.t
+H : X.eq x x'
+H1 : eq_setoid_to_luv y H1
+H2 : eq_setoid_to_luv y l'
+H3 : In y' r -> False
+H4 : In y' r
+Unable to unify "Y". "Y". "Y".
+
+Debug:
+Level 3: In environment
+x, y : X.t
+H : X.eq x x'
+H1 : eq_setoid_to_luv y H1
+H2 : eq_setoid_to_luv y l'
+H3 : In y' r -> False
+H4 : In y' r
+Unable to unify "Y". "Y". "Y".
+
+Debug:
+Level 3: In environment
+x, y : X.t
+H : X.eq x x'
+H1 : eq_setoid_to_luv y H1
+H2 : eq_setoid_to_luv y l'
+H3 : In y' r -> False
+H4 : In y' r
+Unable to unify "Y". "Y". "Y".
+
+Debug:
+Level 5: In environment
+x, y : X.t
+H : X.eq x x'
+H1 : eq_setoid_to_luv y H1
+H2 : eq_setoid_to_luv y l'
+H3 : In y' r -> False
+H4 : In y' r
+Unable to unify "Y". "Y". "Y".
+
+Debug:
+Level 5: In environment
+x, y : X.t
+H : X.eq x x'
+H1 : eq_setoid_to_luv y H1
+H2 : eq_setoid_to_luv y l'
+H3 : In y' r -> False
+H4 : In y' r
+Unable to unify "Y". "Y". "Y".
+
+Debug:
+Level 1: In environment
+x, y : X.t
+H : X.eq x x'
+H1 : eq_setoid_to_luv y H1
+H2 : eq_setoid_to_luv y l'
+H3 : In y' r -> False
+H4 : In y' r
+Unable to unify "Y". "Y". "Y".
+
+Debug:
+Level 1: In environment
+x, y : X.t
+H : X.eq x x'
+H1 : eq_setoid_to_luv y H1
+H2 : eq_setoid_to_luv y l'
+H3 : In y' r -> False
+H4 : In y' r
+Unable to unify "Y". "Y". "Y".
+
+Debug:
+Level 1: In environment
+x, y : X.t
+H : X.eq x x'
+H1 : eq_setoid_to_luv y H1
+H2 : eq_setoid_to_luv y l'
+H3 : In y' r -> False
+H4 : In y' r
+Unable to unify "Y". "Y".
+
+

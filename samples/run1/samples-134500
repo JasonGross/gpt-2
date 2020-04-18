@@ -1,0 +1,87 @@
+======== SAMPLE 1 ========
+ => <tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  xs : X.t
+  x2 : elt
+  f : elt -> bool
+  P : Proper (X.eq ==> eq) f
+  H : forall y : elt, ~ X.eq y x
+  H0 : In x s -> False
+  H1 : NoDup s /\ ~ In x s
+  ============================
+   ((forall y : elt, In y s -> In y (add x s)) /\
+    (forall y : elt, In y s -> In y (add x s)) <->
+    (forall y : elt, In y s -> In y (add x s)) /\
+    (forall y : elt, In y (Node s s' s'' -> False) -> Add x s' s''))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Debug: Level 3: No matching clauses for match.
+
+Debug: Level 3: No matching clauses for match.
+
+Debug: Level 2: No matching clauses for match.
+
+Goal:
+    x : elt  s : t  H : forall y : elt, In y s -> In y (add x s)  H0 : In x s -> False
+  ============================
+   ((forall y : elt, In y s -> In y (add x s)) /\
+    (forall y : elt, In y s -> In y (add x s)) <->
+    (forall y : elt, In y s -> In y (add x s)) /\
+    (forall y : elt, In y (Node s s' s'' -> False) -> Add x s' s''))
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:(?X1 -> ?X2) -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (X1 -> X2);
+          [ exact
+          id
+          | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear id;
+             (solve [ t_tauto_intuit ]) ] ]
+| id:~ ?X1 -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (~ X1);
+          [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+| |- ?X1 =>
+      <Coq.Init.Tauto.is_disj> flags X1; (solve
+       [ left; t_tauto_intuit | right; t_tauto_intuit ])
+end ||
+  match goal with
+  | |- _ -> _ => intro; t_tauto_intuit
+  | |- _ => t_reduce; t_solver
+  end || t_solver
+
+
+TcDebug (2) > 
+Goal:
+    x : elt  s : t  H : forall y : elt, In y s -> In y (add x s)  H0 : In x s -> False
+  ============================
+   ((forall y : elt, In y s -> In y (add x s)) /\
+    (forall y : elt, In y s -> In y (add x s)) <->
+    (forall y : elt, In y s -> In y (add x s)) /\
+    (forall y : elt, In y (Node s s' s'' -> False) -> Add x s' s''))
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id

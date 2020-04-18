@@ -1,0 +1,76 @@
+======== SAMPLE 1 ========
+is_compat := AIs_compat : forall (c : field) (d : elt) (o : option elt'),
+             deduce_middle_eval (c c') ->
+              forall env : Env, eval' env t -> eval' env t \/ eval' env t
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  IHcl : forall (cl' : clause) (env : Env),
+         eval_opt_clause env (or_clause cl cl') <->
+         ~ make_conj (eval_tt env) cl \/ ~ make_conj (eval_tt env) cl'
+  cl' : clause
+  env : Env
+  c : clause
+  H2 : eval_tt env a
+  H3 : make_conj (eval_tt env) cl -> False
+  H : make_conj (eval_tt env) c -> False
+  H1 : eval_tt env a -> make_conj (eval_tt env) cl' -> False
+  H0 : make_conj (eval_tt env) cl' -> False
+  ============================
+   (~ make_conj (eval_tt env) cl \/ ~ make_conj (eval_tt env) c)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : elt) (o : option elt'),
+                  eval' env d o = Some (eval_tt env d) -> eval' env d o
+  unsat_prop : forall t : Term',
+              unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+               deduce t t' = Some u ->
+               forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  a : (Term' * Annot)%type
+  cl : list (Term' * Annot)
+  IHcl : forall (cl' : clause) (env : Env),
+         eval_opt_clause env (or_clause cl cl') <->
+         ~ make_conj (eval_tt env) cl \/ ~ make_conj (eval_tt env) cl'
+  cl' : clause
+  env : Env
+  c : clause
+  H2 : eval_tt env a
+  H3 : make_conj (eval_tt env) cl -> False
+  H : make_conj (eval_tt env) c -> False
+  H1 : eval_tt env a -> make_conj (eval_tt env) cl' -> False
+  H0 : make_conj (eval_tt env) cl' -> False
+  ============================
+   (~ make_conj (eval_tt env) cl \/ ~ make_conj (eval_tt env) c)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot

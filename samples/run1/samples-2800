@@ -1,0 +1,81 @@
+======== SAMPLE 1 ========
+ true eval' : Prop with term' : key, eval' : P2' -> False
+  a : key
+  y : key
+  Ceqb : a >= y
+  Ceqb' : a <= y
+  c : string
+  c' : hyphen c
+  ============================
+   (eval_opt_clause env (snd c' a) <->
+    make_conj (eval_tt env) c) /\
+    make_conj (eval_tt env) c) /\
+    make_conj (eval_tt env) c \/ make_conj (eval_tt env) c'
+  a0 : key
+  y0 : key
+  Ceqb : a0 >= y0
+  Ceqb' : a0 <= y0
+  Ceq : eval (eval_tt env) cl y0 /\
+    (eval_tt env) c \/ eval_tt env cl y0
+  a1 : key
+  y1 : key
+  Ceqb : a1 >= y1
+  Ceq : eval (eval_tt env) cl y1 /\
+    (eval_tt env) c \/ eval_tt env cl y1
+  a0_ : key
+  y0 : key
+  Ceqb : a0_ >= y0
+  Ceq : eval (eval_tt env) cl y0 /\
+    (eval_tt env) c \/ eval_tt env cl y0
+  a0_1 : key
+  y01 : key
+  Ceqb : a0_1 >= y0
+  Ceq : eval (eval_tt env) cl y1 /\
+    (eval_tt env) c \/ eval_tt env cl y1
+  ============================
+   (eval_tt env (snd c' a) <->
+    make_conj (eval_tt env) c /\
+    make_conj (eval_tt env) c) /\
+    make_conj (eval_tt env) c'
+  a0_ : key
+  y0_ : key
+  Ceqb : a0_ >= y0
+  Ceq : eval (eval_tt env) cl y0 /\
+    (eval_tt env) c \/ eval_tt env cl y0
+  a0_1 : key
+  y0_1 : key
+  Ceqb : a0_1 >= y0
+  Ceq : eval (eval_tt env) cl y1 /\
+    (eval_tt env) c \/ eval_tt env cl y1
+  a0a : key
+  yA : key
+  Ceqb : a0a >= yA
+  Ceq : eval (eval_tt env) cl yA /\
+    (eval_tt env) c \/ eval_tt env cl yA
+  ============================
+   (eval_tt env (snd c' a) <->
+    make_conj (eval_tt env) c /\
+    make_conj (eval_tt env) c) /\
+    make_conj (eval_tt env) c'
+  a0b : key
+  yA : key
+  Ceqb : a0b >= yA
+  Ceq : eval (eval_tt env) cl yA /\
+    (eval_tt env) c \/ eval_tt env cl yA
+  a0a0 : key
+  yA0 : key
+  Ceqb : a0b >= yA0
+  Ceq : eval (eval_tt env) cl yA0 /\
+    (eval_tt env) c \/ eval_tt env cl yA
+  ============================
+   (eval_tt env (snd c' a) <->
+    make_conj (eval_tt env) c /\
+    make_conj (eval_tt env) c) /\
+    make_conj (eval_tt env) c'
+  a0a0 : key
+  yA0 : key
+  Ceqb : a0a >= yA0
+  Ceq : eval (eval_tt env) cl yA /\
+    (eval_tt env) c \/ eval_tt env cl yA
+  a0a01 : key
+ 

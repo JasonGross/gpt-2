@@ -1,0 +1,118 @@
+======== SAMPLE 1 ========
+
+  H11 : In0 y r -> In0 y \/ X.eq y x /\ In0 y r
+  H : In a s -> In a s'
+  H0 : In a s -> In a s'
+  ============================
+   (In a s \/ In a s'')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : string
+  x : X.t
+  y : X.t
+  Hs1 : In y (extract_hyps s s' = true) -> X.lt X2 x
+  Hs2 : In y s -> X.lt X2 x -> False
+  H : In a s -> In a s'
+  H0 : In a s -> In a s'
+  H1 : In a s \/ X.eq y x \/ In a s'
+  ============================
+   (In a s \/ In a s'')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : string
+  x : X.t
+  y : X.t
+  Hs1 : In y (extract_hyps s s' = true) -> X.lt X2 x
+  Hs2 : In y s -> X.lt X2 x -> False
+  H : In a s -> In a s'
+  H0 : In a s -> In a s'
+  H1 : In a s \/ X.eq y x \/ In a s'
+  ============================
+   (In a s \/ In a s'')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : string
+  x : X.t
+  y : X.t
+  Hs1 : In y (extract_hyps s s' = true) -> X.lt X2 x
+  Hs2 : In y s -> X.lt X2 x -> False
+  H : In a s -> In a s'
+  H0 : In a s -> In a s'
+  H1 : In a s \/ X.eq y x \/ In a s'
+  ============================
+   (In a s \/ In a s'')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : string
+  x : X.t
+  y : X.t
+  Hs1 : In y (extract_hyps s s' = true) -> X.lt X2 x
+  Hs2 : In y s -> X.lt X2 x -> False
+  H : In a s -> In a s'
+  H0 : In a s -> In a s'
+  H1 : In a s \/ X.eq y x \/ In a s'
+  ============================
+   (In a s \/ In a s'')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : string
+  x : X.t
+  y : X.t
+  Hs1 : In y (extract_hyps s s' = true) -> X.lt X2 x
+  Hs2 : In y s -> X.lt X2 x -> False
+  H : In a s -> In a s'
+  H0 : In a s -> In a s'
+  H1 : In a s \/ X.eq y x \/ In a s'
+  ============================
+   (In a s \/ In a s'')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : string
+  x : X.t

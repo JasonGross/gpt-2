@@ -1,0 +1,51 @@
+======== SAMPLE 1 ========
+)                                                                                                            ~ H2)  H3 :                                                                                                                                   :        __CZ.Zinv.nform * __Pow_t  __cv  H0                                  __Pow_pow 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 if y : elt in
+
+                         __CZ.Zinv.nform * __Pow_t  __cv = true
+  ============================
+    (__CZ.Zinv.nform * __Pow_t __cv)
+     (P3.of_N 1 __CZ.Zinv __P4.of_N __R 1)
+     (H4.of_N 1 __CZ.Zinv __CZ.lec __P4.of_N __H1)))
+     ])
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (2) > 
+Goal:
+  
+  R : ConstructiveReals
+  x : nat -> X.t
+  y : nat -> X.t
+  H11 : forall a : V, X.eq y a * X.eq y x
+  a : V
+  H15 : ~ X.eq y x -> a ~ X.eq y x
+  ============================
+   (X.eq y y)
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:?X1
+  |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+| id:_ <-> _ |- _ => elim id; do 2 intro; clear id
+| id:~ _ |- _ => red in id
+| id:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+| id0:?X1 -> ?X2, id1:?X1
+  |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+| id:?X1 -> ?X2
+  |- _ =>
+      <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+       [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+| id:?X1 <-> ?X2 -> ?X3
+  |- _ =>
+      assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+       (do 2 intro; apply id; split; assumption); clear id
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+| |- ?X1 => <

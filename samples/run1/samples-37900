@@ -1,0 +1,36 @@
+======== SAMPLE 1 ========
+ e0 l'
+  ============================
+   (forall (x : X.t) (e1 : D.t) (e2 : D.t) (m' : t elt'),
+    D.eq (fst (a, b)) (e1, e2) ->
+    D.eq (fst (a, b)) (e1, e2) : D.t -> D.t)
+            (fun (cmp : elt -> elt -> bool) _ => check Cmp_nformula env (fst a, bdep cmp fst)))
+              (fun (cmp : elt -> elt -> bool) _ =>
+                match cmp_nformula env with
+               | Eq => fst y e0
+               | NoDup l' => idtac
+               | _ => fail 1
+               end
+              end) = f _ _
+            end) = fun (m, e0 : D.t) (h : D.t) (cmp : elt -> elt -> bool) =>
+           match m' with
+           | Some d => D.eq (fun e : elt => D.eq (fst (a, b)) (e0, e')) => get_e o'
+           | None => None
+           end) = D.eq (fun e : elt => D.eq (fst (a, b)) (e0, e'))
+          end = D.lt (fun e0 : elt => D.eq (fst e0) (e, e') l) /\
+          (D.eq (fst e) (fst e')) \/
+          (D.eq (fst e') (fst e')))
+          end)d = D.eq (fun e : elt => D.eq (fst e0) (e, e') l))
+           (D.lt (fun e0 : elt => D.lt (fst e0) (e, e')) l))
+           (D.eq (fst e' (f = a)) (fst e, e')) l'
+  ============================
+   (forall (x : X.t) (e1 : D.t) (e2 : D.t) (m' : t elt'),
+    D.eq (fst (a, b)) (e1, e2) ->
+    D.eq (fst (a, b)) (e1, e2) : D.t -> D.t)
+          (fun (cmp : elt -> elt -> bool) _ => check Cmp_nformula env (fst a, bdep l'))
+             (fst (a, b)) (e1, e2)) ->
+      D.eq (fst (a, b)) (e1, e2) : D.t -> D.t)
+            (fun (cmp : elt -> elt -> bool) _ => check Cmp_nformula env (fst a, bdep a l')
+               (fst (a, b)) (e1, e2)) =>
+              match cmp_nformula env with
+              | Some d => D.eq (fun e : elt => D.eq (fst (a, b)) (e0, e

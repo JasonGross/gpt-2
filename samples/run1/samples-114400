@@ -1,0 +1,115 @@
+======== SAMPLE 1 ========
+Going to execute:
+change_no_check (TO.le x y) in H || clear H || fail 1
+
+
+TcDebug (21) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  y : key
+  e : elt
+  H0 : X.eq y x
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+change_no_check (TO.le x y) in H
+
+
+TcDebug (21) > 
+Debug: Evaluated term: (TO.le y x)
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  H0 : TO.eq y x
+  ============================
+   (OrderTac.OrderTac.le x y)
+
+
+Debug: Going to execute:
+OrderTac.order_prepare
+
+
+TcDebug (21) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  H0 : TO.eq y x
+  ============================
+   (OrderTac.OrderTac.le x y)
+
+
+Debug:
+Going to execute:
+match goal with
+| H:?A -> False
+  |- _ => change_no_check (~ A) in H; OrderTac.order_prepare
+| H:~ ?R ?x ?y
+  |- _ =>
+      match R with
+      | TO.eq => fail 1
+      | _ =>
+          change_no_check (~ TO.eq x y) in H ||
+            apply OrderTac.not_gt_le in H ||
+              apply OrderTac.not_ge_lt in H || clear H || fail 1;
+           OrderTac.order_prepare
+      end
+| H:?R ?x ?y
+  |- _ =>
+      match R with
+      | TO.eq => fail 1
+      | TO.lt => fail 1
+      | TO.le => fail 1
+      | _ =>
+          change_no_check (TO.eq x y) in H ||
+            change_no_check (TO.lt x y) in H ||
+              change_no_check (TO.le x y) in H || clear H || fail 1;
+           OrderTac.order_prepare
+      end
+| |- ~ _ => intro; OrderTac.order_prepare
+| |- _ ?x ?x =>
+      exact (OrderTac.eq_refl x) || exact (OrderTac.le_refl x) || exfalso
+| _ =>
+    (apply OrderTac.not_neq_eq; intro) ||
+      (apply OrderTac.not_ge_lt; intro) ||
+        (apply OrderTac.not_gt_le; intro) || exfalso
+end
+
+
+TcDebug (22) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  H0 : TO.eq y x
+  ============================
+   (OrderTac.OrderTac.le x y)
+
+
+Debug:
+Going to execute:
+match R with
+| TO.eq => fail 1
+| TO.lt => fail 1
+| TO.le => fail 1
+| _ =>
+    change_no_check (TO.eq x y) in H ||
+      change_no_check (TO.lt x y) in H ||
+        change_no_check (TO.le x y) in H || clear H || fail 1;
+     OrderTac.order_prepare
+end
+
+
+TcDebug (23)

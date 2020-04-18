@@ -1,0 +1,118 @@
+======== SAMPLE 1 ========
+  s1 : tree  l1 : list A  s2 : tree  x1 : A  s2' : t
+  ============================
+   (InT y s2')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+    s1 : tree  l1 : list A  s2 : tree  x1 : A  s2' : t
+  ============================
+   (InT y s2')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (4) > 
+Goal:
+    s1 : tree  l1 : list A  s2 : tree  x1 : A  s2' : t
+  ============================
+   (InT y s2')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (4) > 
+Goal:
+    s1 : tree  l1 : list A  s2 : tree  x1 : A  s2' : t
+  ============================
+   (InT y s2')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (4) > 
+Goal:
+    s1 : tree  l1 : list A  s2 : tree  x1 : A  s2' : t
+  ============================
+   (InT y s2')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Goal:
+    s1 : tree  l1 : list A  s2 : tree  x1 : A  s2' : t
+  ============================
+   (InT y s2')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Debug: Level 3: No matching clauses for match.
+
+Debug: Level 3: No matching clauses for match.
+
+Debug: Level 2: No matching clauses for match.
+
+Goal:
+    s1 : tree  l1 : list A  s2 : tree  x1 : A  s2' : t
+  ============================
+   (InT y s2')
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:(?X1 -> ?X2) -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (X1 -> X2);
+          [ exact
+          id
+          | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear id;
+             (solve [ t_tauto_intuit ]) ] ]
+| id:~ ?X1 -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (~ X1);
+          [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+| |- ?X1 =>
+      <Coq.Init.Tauto.is_disj> flags X1; (solve
+       [ left; t_tauto_intuit | right; t_tauto_intuit ])
+end ||
+  match goal with
+  | |- _ -> _ => intro; t_tauto_intuit
+  | |- _ => t_reduce; t_solver
+  end || t_solver
+
+
+TcDebug (2) > 
+Goal:
+  

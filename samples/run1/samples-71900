@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+ ++ x') = of_lu (rev d) + N.pos acc * 10 ^ usize d
+  d' : uint
+  ============================
+   ((1 + 10 * of_lu d') * 10 ^ usize d =
+    1 * 10 ^ usize d + N.pos acc * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+fun t =>
+  match isnatcst t with
+  | true => BinNat.N.of_natNat (of_nat d)
+  | BinNat.N.of_nat (of_nat d) => BinNat.N.of_nat (of_nat d)
+  | _ => true
+  end
+
+
+TcDebug (12) > 
+Goal:
+  
+  d : uint
+  IHd : forall acc : positive,
+        positive ->
+        positive * 10 ^ usize d =
+        positive + 10 * of_lu d
+  acc : positive
+  ============================
+   ((1 + 10 * of_lu d') * 10 ^ usize d =
+    1 * 10 ^ usize d + N.pos acc * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+match isnatcst t with
+| true => BinNat.N.of_nat (of_nat d)
+| BinNat.N.of_nat (of_nat d) => BinNat.N.of_nat (of_nat d)
+| _ => true
+end
+
+
+TcDebug (12) > 
+Goal:
+  
+  d : uint
+  IHd : forall acc : positive,
+        positive ->
+        positive * 10 ^ usize d =
+        positive + 10 * of_lu d
+  acc : positive
+  ============================
+   ((1 + 10 * of_lu d') * 10 ^ usize d =
+    1 * 10 ^ usize d + N.pos acc * (10 * 10 ^ usize d))
+
+
+Debug: Going to execute:
+isnatcst t
+
+
+TcDebug (13) > 
+Goal:
+  
+  d : uint
+  IHd : forall acc : positive,
+        positive ->
+        positive * 10 ^ usize d =
+        positive + 10 * of_lu d
+  acc : positive
+  ============================
+   ((1 + 10 * of_lu d') * 10 ^ usize d =
+    1 * 10 ^ usize d + N.pos acc * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+fun t => match t with
+         | 0 => true
+         | N.pos ?p => isPcst p
+         | _ => false
+         end
+
+
+TcDebug (14) > 
+Goal:
+  
+  d : uint
+  IHd : forall acc : positive,
+        positive positive ->
+        positive * 10 ^ usize d =
+        positive + 10 * of_lu d
+  acc : positive
+  ============================
+   ((1 + 10 * of_lu d') * 10 ^ usize d =
+    1 * 10 ^ usize d + N.pos acc * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+match t with
+| 0 => true
+| N.pos ?p => isPcst p
+| _ => false
+end
+
+
+TcDebug (14) > 
+Goal:
+  
+  d : uint
+  IHd : forall acc : positive,
+        positive positive ->
+        positive * 10 ^ usize d =
+        positive + 10 * of_lu d
+  acc : positive
+  ============================
+   ((1 + 10 * of_lu d') * 10 ^ usize d =
+    1 * 10 ^ usize d + N.pos acc * (10 * 10 ^ us

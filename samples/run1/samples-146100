@@ -1,0 +1,138 @@
+======== SAMPLE 1 ========
+
+
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : X.t
+  rl1 : tree
+  t0 : X.t
+  rl2 : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H : InT y l
+  ============================
+   (InT y l \/ X.eq y x \/ False \/ X.eq y rx \/ InT y rr)
+
+
+Debug:
+Going to execute:
+match R with
+| MX.OrderTac.OTF.eq => fail 1
+| MX.OrderTac.OTF.lt => fail 1
+| MX.OrderTac.OTF.le => fail 1
+| _ =>
+    change_no_check (MX.OrderTac.OTF.eq x y) in H ||
+      change_no_check (MX.OrderTac.OTF.lt x y) in H ||
+        change_no_check (MX.OrderTac.OTF.le x y) in H || clear H || fail 1;
+     MX.OrderTac.order_prepare
+end
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : X.t
+  rl1 : tree
+  t0 : X.t
+  rl2 : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H : InT y l
+  ============================
+   (InT y l \/ X.eq y x \/ False \/ X.eq y rx \/ InT y rr)
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (4) > 
+Debug: Level 4: R
+ has value 
+(Q -> bool)
+
+
+Goal:
+  
+  x : X.t
+  rl1 : tree
+  t0 : X.t
+  rl2 : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H : InT y l
+  ============================
+   (InT y l \/ X.eq y x \/ False \/ X.eq y rx \/ InT y rr)
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : X.t
+  rl1 : tree
+  t0 : X.t
+  rl2 : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H : InT y l
+  ============================
+   (InT y l \/ X.eq y x \/ False \/ X.eq y rx \/ InT y rr)
+
+
+Debug:
+Going to execute:
+match R with
+| MX.OrderTac.OTF.eq => fail 1
+| MX.OrderTac.OTF.lt => fail 1
+| MX.OrderTac.OTF.le => fail 1
+| _ =>
+    change_no_check (MX.OrderTac.OTF.eq x y) in H ||
+      change_no_check (MX.OrderTac.OTF.lt x y) in H ||
+        change_no_check (MX.OrderTac.OTF.le x y) in H || clear H || fail 1;
+     MX.OrderTac.order_prepare
+end
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : X.t
+  rl1 : tree
+  t0 : X.t
+  rl2 : tree
+  rx : X.t
+  rr : tree
+  y : elt
+  l : tree
+  H : InT y l
+  ============================
+   (InT y l \/ X.eq y x \/ False \/ X.eq y rx \/ InT y rr)
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (4) > 
+Debug: Level 4: R
+ has value 
+(Q -> bool)

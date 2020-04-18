@@ -1,0 +1,77 @@
+======== SAMPLE 1 ========
+                     (EIsub (EIraw (height (bal ll lx ld j))))) EI1)) EI1)
+
+Debug:
+Level 25: evaluation returns
+EIraw (height (bal ll lx ld j))) 
+
+
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : I.t
+  Hlr : forall (x : key) (d : elt) (r : t elt),
+        avl lr ->
+        avl r ->
+        avl (join lr x d r) /\
+        0 < height (join lr x d r) <->
+        - (avl lr) + (0 - height (join lr x d r) <= 1)
+  x : key
+  d : elt
+  lr : t elt
+  lh : I.t
+  Hlr : forall (x : key) (d : elt) (r : t elt),
+        avl lr ->
+        avl r ->
+        avl (join lr x d r) /\
+        0 < height (join lr x d r) <->
+        - (avl lr) + (0 - height (join lr x d r) <= 1)
+  x : key
+  d : elt
+  lr : t elt
+  lh : I.t
+  Hlr : forall (x : key) (d : elt) (r : t elt),
+        avl lr ->
+        avl r ->
+        avl (join lr x d r) /\
+        0 < height (join lr x d r) <->
+        - (avl lr) + (0 - height (join lr x d r) <= 1)
+  x : key
+  d : elt
+  lr : t elt
+  lh : I.t
+  Hlr : forall (x : key) (d : elt) (r : t elt),
+        avl lr ->
+        avl r ->
+        avl (join lr x d r) /\
+        0 < height (join lr x d r) <->
+        - (avl lr) + (0 - height (join lr x d r) <= 1)
+  x : key
+  d : elt
+  lr : t elt
+  lh : I.t
+  Hlr : forall (x : key) (d : elt) (r : t elt),
+        avl lr ->
+        avl r ->
+        avl (join lr x d r) /\
+        0 < height (join lr x d r) <->
+        - (avl lr) + (0 - height (join lr x d r) <= 1)
+  x : key
+  d : elt
+  lr : t elt
+  lh : I.t
+  Hlr : forall (x : key) (d : elt) (r : t elt),
+        avl lr ->
+        avl r ->
+        avl (join lr x d r) /\
+        0 < height (join lr x d r) <->
+        - (avl lr) + (0 - height (join lr x d r) <= 1)
+  x : key
+  d : elt
+  lr : t elt
+  lh : I.t
+  Hlr : for

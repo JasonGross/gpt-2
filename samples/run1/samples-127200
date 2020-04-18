@@ -1,0 +1,143 @@
+======== SAMPLE 1 ========
+uated term: (x == x)
+
+Goal:
+    x : Prop  y : Prop  H : x == y  x0 : y  x00 : x x0  y : x  H0 : y == x0
+  ============================
+   (x /\ x0 == y \/ y /\ x0 == x \/ y /\ x)
+
+
+Debug: Going to execute:
+inversion H
+
+
+TcDebug (4) > 
+Goal:
+    x : Prop  y : Prop  H : x == y  x0 : y  x0 : x x0  y : x  H0 : y == x0
+  ============================
+   (x /\ x0 == y \/ y /\ x0 == x \/ y /\ x)
+
+
+Debug: Going to execute:
+inversion H
+
+
+TcDebug (4) > 
+Debug: Level 4: Proof is not complete.
+
+Debug: Level 4: No applicable tactic.
+
+Goal:
+    x : Prop  y : Prop  H : x == y  x0 : y  x0 : x x0  y : x  H0 : y == x0
+  ============================
+   (x == x)
+
+
+Goal:
+    x : Prop  y : Prop  H : x == y  x0 : y  x0 : x x0  y : x  H0 : y == x0
+  ============================
+   (x /\ x0 == y \/ y /\ x0 == x \/ y /\ x)
+
+
+Debug: Going to execute:
+idtac
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : Prop
+ y : Prop
+ H : x == y
+  x0 : y x0 : x x0
+  y : x
+  H0 : y == x0
+  ============================
+   (x /\ x0 == y \/ x /\ x /\ x /\ x)
+
+
+Debug: Going to execute:
+solve [ inversion H ]
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : Prop
+ y : Prop
+ H : x == y
+  x0 : y x0
+  y : x
+  H0 : y == x0
+  ============================
+   (x /\ x0 == y \/ x /\ x /\ x)
+
+
+Debug: Going to execute:
+inversion H
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : Prop
+ y : Prop
+ H : x == y
+  x0 : y x0
+  y : x
+  H0 : y == x0
+  ============================
+   (x /\ x0 == x \/ y /\ x /\ x)
+
+
+Goal:
+  
+  x : Prop
+ y : Prop
+ H : x == y
+  x0 : y x0
+  y : x
+  H0 : y == x0
+  ============================
+   (x /\ x0 == y \/ y /\ x /\ x)
+
+
+Debug: Going to execute:
+idtac
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : Prop
+ y : Prop
+ H : x == y
+  x0 : y x0
+  y : x
+  H0 : y == x0
+  ============================
+   (x /\ x0 == x \/ y /\ x /\ x)
+
+
+Goal:
+  
+  x : Prop
+ y : Prop
+ H : x == y
+  x0 : y x0
+  y : x
+  H0 : y == x0
+  ============================
+   (x /\ x0 == x \/ y /\ x /\ x)
+
+
+Debug:
+Going to execute:
+let pe1 := mkPol lhs fv in
+let pe2 := mkPol rhs fv in
+let lpe := mkHyp fv lH in
+let vlpe := fresh "hyp_list" in
+let vfv := fresh "fv_list" in
+pose (vlpe := lpe); pose (vfv := fv);
+ apply (lemma vfv vlpe pe1 pe2) || fail "typing error while applying ring";
+ [ (let prh := proofHyp_tac lH

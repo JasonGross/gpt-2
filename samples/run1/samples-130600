@@ -1,0 +1,51 @@
+======== SAMPLE 1 ========
+to_nat 0) ^ 2
+  nz : Z
+  H : 0 < nz
+  hyp_list := nil
+           : list
+             (Ring_polynom.PExpr Z 0)
+                (Ring_polynom.PExpr Z 1)
+  ============================
+   (Ring_polynom.interp_PElist 0 1 Qplus Qmult Qminus Qopp
+      (IDphi (R:=Q)) Z.of_N Qpower (x :: nil)
+      (Ring_polynom.PEmul (x :: nil) (Ring_polynom.PEmul (x :: nil) (Ring_polynom.PEc x))) ==
+    x :: nil)
+
+
+Debug: Going to execute:
+do 2 intro
+
+
+TcDebug (8) > 
+Goal:
+  
+  x : Q
+  H1 : 0 <= x
+  H2 : 0 <= x
+  list_hyp := nil : list (Ring_polynom.PExpr Z * Ring_polynom.PExpr Z)
+  list_hyp_norm := nil : list (Z * Ring_polynom.Mon * Ring_polynom.Pol Z)
+  list_hyp_norm_eq : Ring_polynom.mk_monpol_list 0 1 Z.add Z.mul Z.sub Z.opp
+                            Zeq_bool Z.quotrem list_hyp = list_hyp_norm_eq
+  p : positive
+  hyp_list := (p :: x) :: nil : list (Z * Ring_polynom.PExpr Z)
+  fv_list := (1 # p :: x :: nil) :: nil : list R
+           (Ring_polynom.PExpr Z)
+  ring_lemma : forall (pe : Ring_polynom.PExpr Z) (npe : Ring_polynom.Pol Z),
+              Ring_polynom.norm_subst 0 1 Z.add Z.mul Z.sub Z.opp Zeq_bool
+                Z.quotrem ring_subst_niter list_hyp_norm pe = npe ->
+               Ring_polynom.PEeval 0 1 Z.add Z.mul Z.sub Z.opp 
+                 (IDphi (R:=Z)) Z.of_N Z.pow
+                 (x :: nil) pe =
+               Ring_polynom.Pphi_pow 0 1 Z.add Z.mul Z.sub Z.opp 0 1 Zeq_bool
+                 (IDphi (R:=Z)) Z.of_N Z.pow get_signZ
+                 (x :: nil) npe
+  res := Ring_polynom.Pc 0 : Ring_polynom.Pol Z
+  res_eq : Ring_polynom.norm_subst 0 1 Z.add Z.mul Z.sub Z.opp Zeq_bool
+             Z.quotrem ring_subst_niter list_hyp_norm 
+             (Ring_polynom.PEc 0) = res
+  thm : Ring_polynom.PEeval 0 1 Z.add Z.mul Z.sub Z.opp 
+          (IDphi (R:=Z)) Z.of_N Z.pow
+          (x :: nil) 
+          (Ring_polynom.PEc 0) =
+         Ring_polynom.Pphi_pow 0 1 Z.add Z.mul

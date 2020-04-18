@@ -1,0 +1,122 @@
+======== SAMPLE 1 ========
+ (r : t elt) (i : int), lt_tree x (Node ll lx ld lr h)
+  h : int
+  y : key
+  H0 : In y r
+  ============================
+   (In y l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (6) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall (h : int) (y : key),
+       In y (Node ll lx ld lr h) <-> X.eq y ((l', m)#2)#1 \/ In y (l', m)#1
+  h : int
+  y : key
+  H0 : In y r
+  ============================
+   (In y l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (6) > 
+Debug: Level 6: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall (h : int) (y : key),
+       In y (Node ll lx ld lr h) <-> X.eq y ((l', m)#2)#1 \/ In y (l', m)#1
+  h : int
+  y : key
+  H0 : In y r
+  ============================
+   (In y l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (5) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall (h : int) (y : key),
+       In y (Node ll lx ld lr h) <-> X.eq y ((l', m)#2)#1 \/ In y (l', m)#1
+  h : int
+  y : key
+  H0 : In y r
+  ============================
+   (In y l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (5) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall (h : int) (y : key),
+       In y (Node ll lx ld lr h) <-> X.eq y ((l', m)#2)#1 \/ In y (l', m)#1
+  h : int
+  y : key
+  H0 :

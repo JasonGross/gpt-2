@@ -1,0 +1,134 @@
+======== SAMPLE 1 ========
+
+Debug: Going to execute:
+intr
+
+
+TcDebug (0) > 
+Goal:
+  
+  _x : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  m : elt
+  e1 : remove_min l2 x2 r2 = (s2', m)
+  s1 : tree
+  l2 : tree
+  H0 : InT x1 s1
+  ============================
+   (InT x1 s1 +/ InT x3 (remove x1 s2) <-> InT x1 s1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.with_uniform_flags>
+ ltac:(fun flags => <Coq.Init.Tauto.intuition_gen> flags ltac:(auto with *))
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  m : elt
+  e1 : remove_min l2 x2 r2 = (s2', m)
+  s1 : tree
+  l2 : tree
+  H0 : InT x1 s1
+  ============================
+   (InT x1 s1 +/ InT x3 (remove x1 s2) <-> InT x1 s1)
+
+
+Debug: Going to execute:
+fun f => <tauto_plugin::with_uniform_flags@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  m : elt
+  e1 : remove_min l2 x2 r2 = (s2', m)
+  s1 : tree
+  l2 : tree
+  H0 : InT x1 s1
+  ============================
+   (InT x1 s1 +/ InT x3 (remove x1 s2) <-> InT x1 s1)
+
+
+Debug:
+Going to execute:
+fun flags => <Coq.Init.Tauto.intuition_gen> flags ltac:(auto with *)
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  m : elt
+  e1 : remove_min l2 x2 r2 = (s2', m)
+  s1 : tree
+  l2 : tree
+  H0 : InT x1 s1
+  ============================
+   (InT x1 s1 +/ InT x3 (remove x1 s2) <-> InT x1 s1)
+
+
+Debug: Going to execute:
+<tauto_plugin::with_uniform_flags@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  _x : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  m : elt
+  e1 : remove_min l2 x2 r2 = (s2', m)
+  s1 : tree
+  l2 : tree
+  H0 : InT x1 s1
+  ============================
+   (InT x1 s1 +/ InT x3 (remove x1 s2) <-> InT x1 s1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.intuition_gen> flags ltac:(auto with *)
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  m : elt
+  e1 : remove_min l2 x2 r2 = (s2', m)
+  s1 : tree
+  l2 : tree
+  H0 : InT x1 s1
+  ============================
+   (InT x1 s1 +/ In

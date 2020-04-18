@@ -1,0 +1,105 @@
+======== SAMPLE 1 ========
+1
+  ============================
+   (X.eq x lx \/ In y ll \/ X.eq y x \/ In y lr \/ In y (Bk ll lx lr))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : elt
+  r : B
+  _x : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  l' : t
+  m : elt
+  e0 : remove_min ll lx lr = (l', m)
+  IHp : forall (y : elt) (h : I.t),
+        InT y (Node h ll lx lr) <->
+        X.eq y (remove_min ll lx lr)#2 \/ InT y (remove_min ll lx lr)#1
+  h : I.t
+  H0 : InT y ll
+  ============================
+   (X.eq x lx \/ In y ll \/ X.eq y x \/ In y lr \/ In y (Bk ll lx lr))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : elt
+  r : B
+  _x : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  l' : t
+  m : elt
+  e0 : remove_min ll lx lr = (l', m)
+  IHp : forall (y : elt) (h : I.t),
+        InT y (Node h ll lx lr) <->
+        X.eq y (remove_min ll lx lr)#2 \/ InT y (remove_min ll lx lr)#1
+  h : I.t
+  H0 : InT y ll
+  ============================
+   (X.eq x lx \/ In y ll \/ X.eq y x \/ In y lr \/ In y (Bk ll lx lr))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : elt
+  r : B
+  _x : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  l' : t
+  m : elt
+  e0 : remove_min ll lx lr = (l', m)
+  IHp : forall (y : elt) (h : I.t),
+        InT y (Node h ll lx lr) <->
+        X.eq y (remove_min ll lx lr)#2 \/ InT y (remove_min ll lx lr)#1
+  h : I.t
+  H0 : InT y ll
+  ============================
+   (X.eq x lx \/ In y ll \/ X.eq y x \/ In y lr \/ In y (Bk ll lx lr))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : elt
+  r : B
+  _x : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  l' : t
+  m : elt
+  e0 : remove_min ll lx lr = (l', m)
+  IHp : forall (y : elt) (h : I.t),
+        InT y (Node h ll lx lr) <->
+        X.eq y (remove_

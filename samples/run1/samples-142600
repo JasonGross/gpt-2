@@ -1,0 +1,128 @@
+======== SAMPLE 1 ========
+ m' ->
+         forall a : elt,
+         Inf a m -> Inf a m' -> Inf a (union (diff s' m') m')) ->
+        forall a : elt,
+        Inf a m' -> Inf a (union (diff s' m') m')) ->
+        forall a : t,
+        Inf a (Node cmp m0 m'0) ->
+        forall a : elt,
+        Inf a (Node cmp m0 m'0) ->
+        holds : t
+  y : elt
+  H1 : X.eq y x
+  ============================
+   (X.lt y x)
+
+
+Debug:
+Going to execute:
+repeat
+ match goal with
+ | |- ?X1 -> ?X2 => intro
+ | |- ~ _ => unfold not at 1; intro
+ end
+
+
+TcDebug (1) > 
+Goal:
+  
+  cmp : elt -> elt -> bool
+  ============================
+   (forall m : t elt,
+    (forall m' : t elt,
+     mem x (diff m m') = true <-> mem x m = true /\ mem x m' <> true)
+
+
+Debug:
+Going to execute:
+match goal with
+| |- ?X1 -> ?X2 => intro
+| |- ~ _ => unfold not at 1; intro
+end
+
+
+TcDebug (0) > 
+Goal:
+  
+  cmp : elt -> elt -> bool
+  ============================
+   (forall m : t elt,
+    (forall m' : t elt,
+     mem x (diff m m') = true <-> mem x m = true /\ mem x m' <> true)
+
+
+Debug: Going to execute:
+intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  cmp : elt -> elt -> bool
+  ============================
+   (forall m : t elt,
+    (forall m' : t elt,
+     mem x (diff m m') = true <-> mem x m = true /\ mem x m' <> true)
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@0>
+
+
+TcDebug (1) > 
+Goal:
+  
+  cmp : elt -> elt -> bool
+  H : forall m : t elt,
+      match m with
+      | Bk _ _ => false
+      | _ => intro
+      end
+  H0 : forall m m' : t elt,
+       match m' with
+       | Bk _ _ => false
+       | _ => intro
+       end
+  H1 : X.eq y x
+  ============================
+   (X.lt y x)
+
+
+Debug:
+Going to execute:
+match goal with
+| |- ?X1 -> ?X2 => intro
+| |- ~ _ => unfold not at 1; intro
+end
+
+
+TcDebug (0) > 
+Goal:
+  
+  cmp : elt -> elt -> bool
+  ============================
+   (forall m : t elt,
+    (forall m' : t elt,
+     mem x (diff m m') = true <-> mem x m = true /\ mem x m' <> true)
+
+
+Debug: Going to execute:
+intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  cmp : elt -> elt -> bool
+  ============================
+   (forall m : t elt,
+    (forall m' : t elt,
+     mem x (diff m m') = true <-> mem x m = true /\ mem x m' <> true)
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@0>
+
+
+Tc

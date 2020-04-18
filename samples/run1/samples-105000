@@ -1,0 +1,129 @@
+======== SAMPLE 1 ========
+ Going to execute:
+change_no_check (H x) in H
+
+
+TcDebug (14) > 
+Debug:
+Level 14: In environment
+U : Type
+R : Relation U
+H' : In U H' R
+H' : In U H'
+R : Relation U R
+H : relation U R
+H1 : Transitive R
+H0 : Transitive R H
+Unable to unify "Relation U R" with "Cpow R".
+
+Debug:
+Level 14: In environment
+U : Type
+R : Relation U
+H' : In U H' R
+H' : In U H'
+R : Relation U R
+H : relation U R
+H1 : Transitive R
+H0 : Transitive R H
+Unable to unify "Relation U R" with "Cpow R".
+
+Debug:
+Level 14: In environment
+U : Type
+R : Relation U
+H' : In U H' R
+H' : In U H'
+R : Relation U R
+H : relation U R
+H1 : Transitive R
+H0 : Transitive R H
+Unable to unify "Relation U R" with "Cpow R".
+
+Debug:
+Level 13: In environment
+U : Type
+R : Relation U
+H' : In U H' R
+H' : In U H'
+R : Relation U R
+H : relation U R
+H1 : Transitive R
+H0 : Transitive R H
+Unable to unify "Relation U R" with "Cpow R".
+
+Goal:
+  
+  U := Type : Type
+  A : U
+  B : U
+  C : U
+  R : Relation U R
+  H : relation U R
+  H' : In U H' R
+  R : Relation U R
+  H : relation U R
+  H1 : Transitive R
+  H0 : Transitive R H
+  ============================
+   ((?R0 ==> ?R0 ==> req)%signature (radd (Radd a b)))
+
+
+Debug:
+Going to execute:
+change_no_check (H x) in H ||
+  change_no_check (H x) in H ||
+    change_no_check (H x) in H || clear H || fail 1;
+ "Cannot solve this goal"
+
+
+TcDebug (13) > 
+Goal:
+  
+  U := Type : Type
+  A : U
+  B : U
+  C : U
+  R : Relation U R
+  H : relation U R
+  H' : In U H' R
+  R : Relation U R
+  H : relation U R
+  H1 : Transitive R
+  H0 : Transitive R H
+  ============================
+   ((?R0 ==> ?R0 ==> req)%signature (radd (Radd a b))
+      (radd a (Radd a l)) ->
+     (radd a (Radd a l) /\ (Radd (R0 ==> R) b)) ->
+     (radd a (Radd a l) /\ (Radd a (R0 ==> R) b)) ->
+     rsub_def (Rdiv_def) (Ropp_x :: l) y
+      (Radd a (Rsub_def b y))
+       (Radd b (Radd (Rdiv_def b x))
+          (Radd (Rdiv_def a x) x))
+         (Radd (Rdiv_def a x) y))
+
+
+Debug: Going to execute:
+change_no_check (H x) in H
+
+
+TcDebug (13) > 
+Debug: Evaluated term: (R0 ==> ?R0 ==> req)%signature
+
+Goal:
+  
+  U := Type : Type
+  A : U
+  B : U
+  C : U
+  R : Relation U R
+  H : relation U R
+  H' : In U H' R
+  R : Relation U R
+  H : relation U R
+  H1 : Transitive R
+  H0 : Transitive R H
+  ============================
+   (R0 ==> req ==> b)
+
+

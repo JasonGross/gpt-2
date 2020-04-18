@@ -1,0 +1,145 @@
+======== SAMPLE 1 ========
+
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match H with
+| H' => fail 2
+| _ => unify X Y; clear H' || clear H
+end
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  eqa : Equivalence R
+  B : Type
+  R' : relation B
+  eqb : Equivalence R'
+  x : A -> B
+  X4 : (R ==> R') x x
+  y : A -> B
+  X3 : (R ==> R') y y
+  z : A -> B
+  X2 : (R ==> R') z z
+  x : A -> B
+  X : (R ==> R') x x
+  y : A -> B
+  X4 : (R ==> R') y y
+  z : A -> B
+  X2 : (R ==> R') z z
+  x : A -> B
+  X : (R ==> R') x x
+  y : A -> B
+  X4 : (R ==> R') y y
+  z : A -> B
+  X2 : (R ==> R') z z
+  x : A -> B
+  X : (R ==> R') x x
+  y : A -> B
+  X4 : (R ==> R') y y
+  z : A -> B
+  X2 : (R ==> R') z z
+  x : A -> B
+  X : (R ==> R') x x
+  y : A -> B
+  X4 : (R ==> R') z z
+  x : A -> B
+  X : (R ==> R') x x
+  y : A -> B
+  X4 : (R ==> R') y y
+  z : A -> B
+  X2 : (R ==> R') z z
+  x : A -> B
+  X : (R ==> R') x x
+  y : A -> B
+  X4 : (R ==> R') z z
+  x : A -> B
+  X : (R ==> R') y y
+  y : A -> B
+  X4 : (R ==> R') z z
+  x : A -> B
+  X : (R ==> R') x x
+  y : A -> B
+  X4 : (R ==> R') z z
+  x : A -> B
+  X : (R ==> R') y y
+  y : A -> B
+  X4 : (R ==> R') z z
+  x0 : A
+  y0 : A
+  X1 : R x0 y0
+  ============================
+   False
+
+
+Debug: Going to execute:
+H
+
+
+TcDebug (4) > 
+Debug: Level 4: H
+ has value 
+x0
+
+
+Goal:
+  
+  A : Type
+  R : relation A
+  eqa : Equivalence R
+  B : Type
+  R' : relation B
+  eqb : Equivalence R'
+  x : A -> B
+  X4 : (R ==> R') x x
+  y : A -> B
+  X3 : (R ==> R') y y
+  z : A -> B
+  X2 : (R ==> R') z z
+  x : A -> B
+  X : (R ==> R') x x
+  y : A -> B
+  X4 : (R ==> R') z z
+  x0 : A
+  y0 : A
+  X1 : R x0 y0
+  ============================
+   False
+
+
+Debug: Going to execute:
+fail 2
+
+
+TcDebug (4) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  eqa : Equivalence R
+  B : Type
+  R' : relation B
+  eqb : Equivalence R'
+  x : A -> B
+  X4 : (R ==> R') x x
+  y : A -> B
+  X3 : (R ==> R') y y
+  z : A -> B
+  X2 : (R ==> R') z z
+  x0 : A
+  y0 : A
+  X1 : R x0 y0
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match goal with
+| H:

@@ -1,0 +1,98 @@
+======== SAMPLE 1 ========
+1
+  ============================
+   (X.eq y lx)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (del x l) <-> InT y l /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok (Bk rl rx rr) ->
+        InT y (del x (Bk rl rx rr)) <-> InT y (Bk rl rx rr) /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok l
+  H6 : Ok (Bk rl rx rr)
+  H7 : lt_tree x' l
+  H8 : gt_tree x' (Bk rl rx rr)
+  H2 : X.eq y x -> False
+  H : InT y rl
+  H1 : X.eq y x'
+  ============================
+   (X.eq y lx)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (del x l) <-> InT y l /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok (Bk rl rx rr) ->
+        InT y (del x (Bk rl rx rr)) <-> InT y (Bk rl rx rr) /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok l
+  H6 : Ok (Bk rl rx rr)
+  H7 : lt_tree x' l
+  H8 : gt_tree x' (Bk rl rx rr)
+  H2 : X.eq y x -> False
+  H : InT y rl
+  H1 : X.eq y x'
+  ============================
+   (X.eq y lx)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (del x l) <-> InT y l /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok (Bk rl rx rr) ->
+        InT y (del x (Bk rl rx rr)) <-> InT y (Bk rl rx rr) /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok l
+  H6 : Ok (Bk rl rx rr)

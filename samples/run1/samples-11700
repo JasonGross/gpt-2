@@ -1,0 +1,74 @@
+======== SAMPLE 1 ========
+ False (lt_list elt) f lH
+  Hf_cnf_lt : forall x y : C, equal x y = False -> equal x y in
+            (find y (join lt y in f f y = true) lH f = true <-> find y (f y = f y)
+  x : C
+  y : C
+  f : elt
+  Hf_cnf_lt : forall x y : C, equal x y = False -> equal x y in
+           (find y (join lt y in f f y = true) lH f = true <-> find y (f y = f y)
+  x0 : C
+  y0 : C
+  Hf_cnf_lt : forall x y0 : C, equal x y0 = False -> equal x y0 in
+           (find y0 (join lt y in f f y = true) lH f = true <-> find y0 (f y = f y)
+  Hf_cnf_lt : forall x y0 : C, equal x y0 = False
+  Hf_cnf_add : forall x y0 : C, equal x y0 = False
+  f' := fun x : C => if f' is None then True else False
+         forall x y : C, equal x y : C, equal x y0 : C -> equal x y0
+  Hcnf_lt : forall x y0 : C, equal x y0 : C, equal x y0 : C -> equal x y0
+  GT : (x == y0)
+  x0 : C
+  y0 : C
+  Hf_cnf_lt : forall x y0 : C, equal x y0 : C, equal x y0 : C -> equal x y0
+  x0' : C
+  y0' : C
+  Hf_cnf_lt : forall x y0' : C, equal x y0' : C, equal x y0' : C
+  x0'' : C
+  y : C
+  f : elt
+  Hf_cnf_le_le : forall x y : C, equal x y : C, equal x y0 : C -> equal x y0
+  x0' : C
+  y0' : C
+  Hf_cnf_le_le : forall x y0' : C, equal x y0' : C, equal x y0' : C
+  x0'' : C
+  y : C
+  f' : elt
+  Hf_cnf_le_le' : forall x y : C, equal x y : C, equal x y0 : C -> equal x y0
+  x0'' : C
+  y : C
+  f' : elt
+  Hf_cnf_le_le' : forall x y : C, equal x y : C, equal x y0 : C -> equal x y0
+  x0'' : C
+  y : C
+  f' : elt
+  Hf_cnf_le_le' : forall x y0 : C, equal x y0' : C, equal x y0' : C
+  x0' : C
+  y0' : C
+  Hf_cnf_le_le' : forall x y0' : C, equal x y0' : C, equal x y0' : C
+  x0'' : C
+  y : C
+  f' : elt
+  Hf_cnf_le_le' : forall x y0' : C, equal x y0' : C, equal x y0' : C
+  x' : C
+  y' : C
+  P : lhf x : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  C : Type
+  x : A -> Prop
+  y : A -> Prop
+  f : elt -> A -> A
+  Hf : compat_OTF t f
+  R : Type
+  R : relation
+  EQ : FTO x y
+  Hrec : forall (R : relation) (f : el

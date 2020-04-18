@@ -1,0 +1,75 @@
+======== SAMPLE 1 ========
+   False \/ mem x s1 = true
+  ============================
+   (true = mem
+      (true = mem' (Node ll lx ld lr lh)) x
+        (Node ll lx ld lr lh)))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Debug: Level 0: No matching clauses for match.
+
+Debug: Level 0: No matching clauses for match.
+
+Goal:
+  
+  x : positive
+  IHx : forall s s' : t,
+        mem x (diff s s') = true <-> mem x s = true /\ mem x s' <> true
+  s : t
+  H : false = true
+  H0 : false = true \/ mem x s = true
+  ============================
+   (true = mem' (Node ll lx ld lr lh))
+      (exists l : t,
+        ?X674@{__:=t; __:=IHl; __:=l; __:=i2z; __:=IHr; __:=H0;
+                 __:=H1; __:=H6; __:=u0; __:=s1; __:=u0; __:=s2;
+                __:=x1; __:=ih; __:=y} = false ->
+       forall (r : R_equal l s = true) (l : B * Mon) (u : R_equal l s) : PExpr Z,
+        (fun (pf : ZArithProof) (x : nat) => Nat.max (bdepth pf) x)
+            i2z_eq
+             (fun (pf : ZArithProof) (x : nat) => Nat.max (bdepth pf) x)
+               pf))%nat ->
+       forall l : list (NFormula Z),
+        ZChecker l y = true ->
+       forall env : PolEnv Z, make_impl (eval_nformula env) l False) ->
+       forall z1 z2 : Z,
+       FF pf z1 z2 = true ->
+       forall x : Z,
+       z1 <= x <= z2 ->
+       exists pr : ZArithProof,
+          In pr pf /\ ZChecker ((PsubC Z.sub p1 x, Equal) :: l) pr = true
+  z1 : Z
+  z2 : Z
+  x : Z
+  H0 : z1 <= x <= z2
+  H1 : ZChecker ((PsubC Z.sub p1 z1, Equal) :: l) a = true
+  H2 : FF pf (z1 + 1) z2 = true
+  LT : Z.succ z1 <= x
+  LE : Z.succ z1 <= x <= z2
+  y : positive
+  H3 : Z.succ z1 <= x <= y
+  H4 : z1 <= x <= y
+  ============================
+   (a = x \/ In z1)
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:(?X1 -> ?X2) -> ?X3
+  |- _ =>
+      cut X3;
+       [ intro; clear id; t_tauto_intuit
+       | cut (X1 -> X2);
+          [ exact
+          id
+          | generalize (fun y : X2 => id (fun x : X1

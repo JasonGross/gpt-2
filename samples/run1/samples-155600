@@ -1,0 +1,128 @@
+======== SAMPLE 1 ========
+ to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Goal:
+    elt : Type  elt' : Type  elt'' : Type  m : t elt  x : elt  y : elt  z : elt
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+    elt : Type  elt' : Type  elt'' : Type  m : t elt  x : elt  y : elt  z : elt
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (4) > 
+Goal:
+    elt : Type  elt' : Type  elt'' : Type  m : t elt  x : elt  y : elt  z : elt
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (4) > 
+Goal:
+    elt : Type  elt' : Type  elt'' : Type  m : t elt  x : elt  y : elt  z : elt
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+    elt : Type  elt' : Type  elt'' : Type  m : t elt  x : elt  y : elt  z : elt
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+    elt : Type  elt' : Type  elt'' : Type  m : t elt  x : elt  y : elt  z : elt
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Goal:
+    elt : Type  elt' : Type  elt'' : Type  m : t elt  x : elt  y : elt  z : elt
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+    elt : Type  elt' : Type  elt'' : Type  m : t elt  x : elt  y : elt  z : elt
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (4) > 
+Goal:
+    elt : Type  elt' : Type  elt'' : Type  m : t elt  x : elt  y : elt  z : elt
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (4) > 
+Goal:
+    elt : Type  elt' : Type  elt'' : Type  m : t elt  x : elt  y : elt  z : elt
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+    elt : Type  elt' :

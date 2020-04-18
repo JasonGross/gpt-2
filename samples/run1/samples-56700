@@ -1,0 +1,62 @@
+======== SAMPLE 1 ========
+ post2
+  ============================
+   (X.eq y x1 \/
+    (X.eq y x2 \/ InT y l1 -> InT y l2') ->
+    Z.quotrem l1 l2')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.simplif> flags;
+ <Coq.Init.Tauto.axioms> flags ||
+  match reverse goal with
+  | id:(?X1 -> ?X2) -> ?X3
+    |- _ =>
+        cut X3;
+         [ intro; clear id; t_tauto_intuit
+         | cut (~ X1);
+            [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+  | |- ?X1 =>
+        <Coq.Init.Tauto.is_disj> flags X1; (solve
+         [ left; t_tauto_intuit | right; t_tauto_intuit ])
+  end ||
+    match goal with
+    | |- _ -> _ => intro; t_tauto_intuit
+    | |- _ => t_reduce; t_solver
+    end || t_solver
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall (l2 : list X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (inter_list l1 l2') ->
+        InA X.eq x l1 /\ InA X.eq x l2 \/ InA X.eq x acc
+  x2 : X.t
+  l2 : list X.t
+  IH2 : forall acc : list elt,
+        Sorted X.lt (rev (x1 :: l1)) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (inter_list (x1 :: l1) l2') ->
+        InA X.eq x (inter_list (x1 :: l1) l2') ->
+        InA X.eq x (inter_list (x1 :: l1) l2') ->
+        InA X.eq x (inter_list (x1 :: l1) l2') ->
+        InA X.eq x (inter_list (x1 :: l1) l2') ->
+        InA X.eq x (inter_list (x1 :: l1) l2') ->
+        InA X.eq x (inter_list (x1 :: l1) l2') ->
+        InA X.eq x (inter_list (x1 :: l1) l2') ->
+        InA X.eq x (inter_list (x1 :: l1) l2') ->
+        InA X.eq x (inter_list (x1 :: l1) l2') ->
+        InA X.eq x (inter_list (x1 :: l1) l2') ->
+        InA X.eq x (inter_list (x1 :: l1) l2') ->
+        InA X.eq x (inter_list (x1 :: l1) l2') ->
+        InA X.eq x (inter_list (x1 :: l1) l2') ->
+         InA X.eq x (inter_list (x1 :: l1) l2'))
+  ============================
+   (X

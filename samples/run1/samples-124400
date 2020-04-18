@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+ ~ P -> False))
+
+
+Debug:
+Going to execute:
+match goal with
+| |- ?X1 -> ?X2 => intro
+| |- ~ _ => unfold not at 1; intro
+end
+
+
+TcDebug (0) > 
+Debug: Level 0: No matching clauses for match.
+
+Goal:
+  
+  P : Prop
+  Q : Prop
+  R : Prop
+  H : decidable P
+  H0 : decidable Q
+  H1 : False
+  H2 : True
+  H3 : P
+  H10 : ~ P
+  H13 : (P -> R) -> False
+  H14 : R
+  H4 : P
+  H15 : ~ (Q \/ R)
+  H6 : P /\ Q -> R
+  H11 : (R -> P) -> False
+  H16 : ~ (P -> R) -> False
+  H17 : (P -> R) -> False
+  ============================
+   (P -> False)
+
+
+Debug:
+Going to execute:
+match goal with
+| |- ?X1 -> ?X2 => intro
+| |- ~ _ => unfold not at 1; intro
+end
+
+
+TcDebug (0) > 
+Debug: Level 0: No matching clauses for match.
+
+Goal:
+  
+  P : Prop
+  Q : Prop
+  R : Prop
+  H : decidable P
+  H0 : decidable Q
+  H1 : False
+  H2 : True
+  H3 : P
+  H10 : ~ Q
+  H13 : (P -> R) -> False
+  H14 : R
+  H4 : P
+  H15 : ~ (Q \/ R)
+  H : ~ (P -> R)
+  H11 : (R -> P) -> False
+  H15 : ~ (P -> R)
+  H : (P -> R) -> False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:?X1
+  |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+| id:_ <-> _ |- _ => elim id; do 2 intro; clear id
+| id:~ _ |- _ => red in id
+| id:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+| id0:?X1 -> ?X2, id1:?X1 |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+| id:?X1 -> ?X2
+  |- _ =>
+      <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+       [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+| id:?X1 <-> ?X2 -> ?X3
+  |- _ =>
+      assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+       (do 2 intro; apply id; split; assumption); clear id
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+| |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+| |- _ <-> _ => split
+| |- ~ _ => red
+end; <Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (0) > 
+Goal:
+  
+  P : Prop
+  Q : Prop
+  R : Prop
+  H : decidable P
+  H0 : decidable Q
+  H1 : False
+  H2 : True
+  H3 : P
+  H10 : ~ Q
+  H13 : (P -> R) -> False
+  H14 : R
+  H4 : P
+  H15 : ~ (Q \/ R)
+  H : ~ (P -> R)
+

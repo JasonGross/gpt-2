@@ -1,0 +1,119 @@
+======== SAMPLE 1 ========
+\ (X.eq y x -> False)
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : X.eq y0 x -> False
+  H : X.eq y0 y
+  ============================
+   (In y0 l \/ X.eq y0 x -> In y0 (remove x r) \/ In y0 r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  IHt : forall y : key, bst r -> In y (remove x r) <-> ~ X.eq y x /\ In y r
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : X.eq y0 x -> False
+  H : X.eq y0 y
+  ============================
+   (In y0 l \/ X.eq y0 x -> In y0 (remove x r) \/ In y0 r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  IHt : forall y : key, bst r -> In y (remove x r) <-> ~ X.eq y x /\ In y r
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : X.eq y0 x -> False
+  H : X.eq y0 y
+  ============================
+   (In y0 l \/ X.eq y0 x -> In y0 (remove x r) \/ In y0 r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  IHt : forall y : key, bst r -> In y (remove x r) <-> ~ X.eq y x /\ In y r
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : X.eq y0 x -> False
+  H : X.eq y0 y
+  ============================
+   (In y0 l \/ X.eq y0 x -> In y0 (remove x r) \/ In y0 r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  IHt : forall y : key, bst r -> In y (remove x r) <-> ~ X.eq y x /\ In y r
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : g

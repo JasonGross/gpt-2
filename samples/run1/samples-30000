@@ -1,0 +1,120 @@
+======== SAMPLE 1 ========
+x lrx lrd bwr rlr _x3)
+  H10 : X.eq x y
+  H13 : X.eq y x
+  ============================
+   (InT y lrr \/ X.eq y x \/ InT y rl \/ X.eq y rx \/ InT y rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x y
+  H1 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (InT y lrr \/ X.eq y x \/ InT y rl \/ X.eq y rx \/ InT y rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x y
+  H1 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (InT y lrr \/ X.eq y x \/ InT y rl \/ X.eq y rx \/ InT y rr)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x y
+  H1 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (InT y lrr \/ X.eq y x \/ InT y rl \/ X.eq y rx \/ InT y rr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x y
+  H1 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (InT y lrr \/ X.eq y x \/ InT y rl \/ X.eq y rx \/ InT y rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x y
+  H1 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (InT y lrr \/ X.eq y x \/ InT y rl \/ X.eq y rx \/ InT y rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty>

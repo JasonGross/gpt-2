@@ -1,0 +1,82 @@
+======== SAMPLE 1 ========
+)
+  a : elt
+  H1 : MapsTo x0 e0 r -> InA eqke (x0, e0) (elements_aux acc r)
+  ============================
+   (MapsTo x0 e0 l \/ InA eqke (x0, e0) ((x, e) :: elements_aux acc r) <->
+    MapsTo x0 e0 (Node l x e r h) \/ InA eqke (x0, e0) acc)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : list (key * elt)
+  x : X.t
+  e : elt
+  r : t elt
+  h : int
+  acc : list (key * elt)
+  x0 : X.t
+  e0 : elt
+  H : InA eqke (x0, e0) (elements_aux acc r) ->
+      MapsTo x0 e0 r \/ InA eqke (x0, e0) acc
+  H2 : MapsTo x0 e0 r -> InA eqke (x0, e0) (elements_aux acc r)
+  H3 : InA eqke (x0, e0) acc -> InA eqke (x0, e0) (elements_aux acc r)
+  ============================
+   (MapsTo x0 e0 l \/ InA eqke (x0, e0) ((x, e) :: elements_aux acc r) <->
+    MapsTo x0 e0 (Node l x e r h) \/ InA eqke (x0, e0) acc)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : list (key * elt)
+  x : X.t
+  e : elt
+  r : t elt
+  h : int
+  acc : list (key * elt)
+  x0 : X.t
+  e0 : elt
+  H : InA eqke (x0, e0) (elements_aux acc r) ->
+      MapsTo x0 e0 r \/ InA eqke (x0, e0) acc
+  H2 : MapsTo x0 e0 r -> InA eqke (x0, e0) (elements_aux acc r)
+  H3 : InA eqke (x0, e0) acc -> InA eqke (x0, e0) (elements_aux acc r)
+  ============================
+   (MapsTo x0 e0 l \/ InA eqke (x0, e0) ((x, e) :: elements_aux acc r) <->
+    MapsTo x0 e0 (Node l x e r h) \/ InA eqke (x0, e0) acc)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : list (key * elt)
+  x : X.t
+  e : elt
+  r : t elt
+  h : int
+  acc : list (key * elt)
+  x0 : X.t
+  e0 : elt
+  H : InA eqke (x0, e0) (elements_aux acc r) ->
+      MapsTo x0 e0 r \/ InA eqke (x0, e0) acc
+  H2 : MapsTo x0 e0 r -> InA eqke (x0, e0) (elements_aux acc r)
+  H3 : InA eqke (x0, e0) acc -> InA eqke (x0, e0) (elements_aux acc r)
+  ============================
+   (MapsTo x0 e0 l \/ InA eqke (x0, e0) ((x, e) :: elements_aux acc r) <->
+    MapsTo x0 e0

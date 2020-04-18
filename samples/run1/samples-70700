@@ -1,0 +1,162 @@
+======== SAMPLE 1 ========
+1; elimtype X1; assumption
+
+
+TcDebug (3) > 
+Goal:
+    A : Prop  B : Prop  H : B -> False  H0 : B - X a  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (3) > 
+Goal:
+    A : Prop  B : Prop  H : B -> False  H0 : B - X a  H1 : False  H2 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+use_hyp H
+
+
+TcDebug (3) > 
+Goal:
+    A : Prop  B : Prop  H : B -> False  H0 : B - X a  H1 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+fun H =>
+  match goal with
+  | H:_ /\ _ |- _ => decompose record H; clear H
+  | H:_ |- _ => solve [ inversion H ]
+  | _ => idtac
+  end
+
+
+TcDebug (4) > 
+Goal:
+    A : Prop  B : Prop  H : B -> False  H0 : B - X a  H1 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match goal with
+| H:_ /\ _ |- _ => decompose record H; clear H
+end
+
+
+TcDebug (4) > 
+Goal:
+    A : Prop  B : Prop  H : B -> False  H0 : B - X a  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+solve [ inversion H ]
+
+
+TcDebug (5) > 
+Goal:
+    A : Prop  B : Prop  H : B -> False  H0 : B - X a  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+inversion H
+
+
+TcDebug (5) > 
+Debug: Going to execute:
+solve [ inversion H ]
+
+
+TcDebug (5) > 
+Goal:
+    A : Prop  B : Prop  H : B -> False  H0 : B - X a  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+idtac
+
+
+TcDebug (5) > 
+Goal:
+    A : Prop  B : Prop  H : B -> False  H0 : B - X a  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+decompose record H; intro H
+
+
+TcDebug (4) > 
+Goal:
+    A : Prop  B : Prop  H : B -> False  H0 : B - X a  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<ltac_plugin::decompose_record@0> $1
+
+
+TcDebug (4) > 
+Debug: Level 4: Failed to progress.
+
+Debug: Level 4: Failed to progress.
+
+Debug: Level 4: Failed to progress.
+
+Debug: Level 4: Failed to progress.
+
+Debug: Level 4: Failed to progress.
+
+Debug: Level 5: Failed to progress.
+
+Debug: Level 5: Failed to progress.
+
+Debug: Level 4: Failed to progress.
+
+Debug: Level 4: Failed to progress.
+
+Debug: Level 5: Failed to progress.
+
+Debug: Level 5: Failed to progress.
+
+Debug: Level 4: Failed to progress.
+
+Debug: Level 4: Failed to progress.
+
+Debug: Level 4: Failed to progress.
+
+Debug: Level 3: Failed to progress for IHb : x <> y.
+
+Goal:
+    A : Prop  B : Prop  H : B -> False  H0 : B - X a  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+intro
+
+
+TcDebug (4) > 
+Goal:
+    A : Prop  B : Prop  H : B -> False  H0 : B - X a  H1 : False
+

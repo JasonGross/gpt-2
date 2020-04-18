@@ -1,0 +1,112 @@
+======== SAMPLE 1 ========
+e' : C * D = (Qden y) * ((1 # 2) + ((1 # 2) * proj1_sig a (Pos.to_nat p)))
+
+Debug: Going to execute:
+eval compute in n
+
+
+TcDebug (28) > 
+Debug: Evaluated term: 3
+
+Debug: Evaluated term: 4
+
+Debug: Level 27: evaluation returns
+3
+
+
+Debug: Level 26: evaluation returns
+3
+
+
+Debug: Level 25: evaluation returns
+3
+
+
+Goal:
+  
+  a : CReal
+  bn : nat -> Q
+  bcau : QCauchySeq bn Pos.to_nat
+  p : positive
+  goal := (2 * (1 # 2) * bn (Pos.to_nat p) +
+              :: proj1_sig bn (Pos.to_nat p) :: proj1_sig a (Pos.to_nat p))%Q
+       : Prop
+  ============================
+   ((2 # bn (Pos.to_nat p) + (1 # 2) * proj1_sig a (Pos.to_nat p))%Q -> goal)
+
+
+Debug: Going to execute:
+Ring_polynom.PEX C p
+
+
+TcDebug (25) > 
+Debug: Evaluated term: (Ring_polynom.PEX Z 4)
+
+Debug:
+Level 23: evaluation returns
+Ring_polynom.PEX Z 4
+
+
+Debug:
+Level 21: evaluation returns
+Ring_polynom.PEX Z 4
+
+
+Debug:
+Level 19: evaluation returns
+Ring_polynom.PEX Z 4
+
+
+Debug:
+Level 17: evaluation returns
+Ring_polynom.PEX Z 4
+
+
+Goal:
+  
+  a : CReal
+  bn : nat -> Q
+  bcau : QCauchySeq bn Pos.to_nat
+  p : positive
+  goal := (2 * (1 # 2) * bn (Pos.to_nat p) +
+             :: proj1_sig bn (Pos.to_nat p) :: proj1_sig a (Pos.to_nat p))%Q
+       : Prop
+  ============================
+   ((2 # bn (Pos.to_nat p) + (1 # 2) * proj1_sig a (Pos.to_nat p))%Q -> goal)
+
+
+Debug: Going to execute:
+let e2 := mkP t2 in
+Ring_polynom.PEmul e1 e2
+
+
+TcDebug (17) > 
+Goal:
+  
+  a : CReal
+  bn : nat -> Q
+  bcau : QCauchySeq bn Pos.to_nat
+  p : positive
+  goal := (2 * (1 # 2) * bn (Pos.to_nat p) +
+              :: proj1_sig bn (Pos.to_nat p) :: proj1_sig a (Pos.to_nat p))%Q
+       : Prop
+  ============================
+   ((2 # bn (Pos.to_nat p) + (1 # 2) * proj1_sig a (Pos.to_nat p))%Q -> goal)
+
+
+Debug:
+Going to execute:
+fun t =>
+  let f :=
+   match Cst t with
+   | NotConstant =>
+       match t with
+       | rO => fun _ => Ring_polynom.PEO
+       | rI => fun _ => Ring_polynom.PEI
+       | radd ?t1 ?t2 =>
+           fun _ =>
+             let e1 := mkP t1 in
+             let e2 := mkP t2 in
+             Ring_polynom.PEadd e1 e2
+       | rmul ?t1 ?t2 =>
+          fun

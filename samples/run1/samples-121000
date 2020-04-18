@@ -1,0 +1,121 @@
+======== SAMPLE 1 ========
+                       (EPle (EZofI EI0)
+                       (EIsub (EIraw (height l)) (EIadd (EIsub (EIraw (height l)))))))) =
+    at_least_one_then_f (ep (add_field_theory e1))))
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : I.t
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : I.t
+  H : avl lrl
+  H3 : avl lrr
+  H1 : avl r
+  H0 : avl rll
+  H6 : avl rlr
+  u : key
+  u0 : elt
+  ============================
+   (- (3) <= _x0 - height r <= 3 ->
+    - (2) <= height lrl - _x0 <= 2 ->
+    - (2) <= height lrr - height rr <= 2 ->
+    _x0 > height r + 2 ->
+    height lrl == _x0 ->
+    _x0 == max (height ll) (height lrl) + 1 ->
+    - (2) <= height lrr - height rr <= 2 - height lrr <= 2)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : I.t
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : I.t
+  H : avl lrl
+  H3 : avl lrr
+  H1 : avl r
+  H0 : avl rll
+  H6 : avl rlr
+  u : key
+  u0 : elt
+  ============================
+   (- (3) <= _x0 - height r <= 3 ->
+    - (2) <= height lrl - _x0 <= 2 ->
+    - (2) <= height lrr - height rr <= 2 - height lrr <= 2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; split
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : I.t
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : I.t
+  H : avl lrl
+  H3 : avl lrr
+  H1 : avl r
+  H0 : avl rll
+  H6 : avl rlr
+  u : key
+  u0 : elt
+  ============================
+   (- (3) <= _x0 - height r <= 3 ->
+    - (2) <= height lrl - _x0 <= 2 ->
+    - (2) <= height lrr - height rr <= 2 - height lrr <= 2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+ 

@@ -1,0 +1,98 @@
+======== SAMPLE 1 ========
+          forall l' : list A,
+          bst l' -> In y (remove_min l l') -> ~ X.eq y x \/ In y l'
+  l : list A
+  H0 : bst l' -> In y (remove_min l l')
+  H : In y (Node l x d l' r)
+  H3 : In y l'
+  H0 : bst r'
+  H5 : bst r'
+  H6 : bst l
+  H7 : bst r
+  H8 : lt_tree x' l
+  H9 : gt_tree x' r
+  H1 : X.eq y x'
+  ============================
+   (In y l')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; split
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  l' : list (A * elt elt)
+  x : key
+  l : list (A * elt)
+  Hl : forall (x : A) (l0 : A * elt),
+        make_conj l l =
+         forall (x0 : A) (l : list A) (l' : list A),
+          bst l' -> In x0 (remove_min l l') -> ~ X.eq y x \/ In y l'
+  l : list A
+  H0 : bst l' -> In y (remove_min l l')
+  H : In y (Node l x d l' r)
+  H3 : In y l'
+  H0 : bst r'
+  H5 : bst r'
+  H6 : bst l
+  H7 : bst r
+  H8 : lt_tree x' l
+  H9 : gt_tree x' r
+  H1 : X.eq y x'
+  ============================
+   (In y l')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  l' : list (A * elt elt)
+  x : key
+  l : list A
+  Hl : forall (x : A) (l0 : A * elt),
+        make_conj l l =
+         forall (x0 : A) (l : list A) (l' : list A),
+          bst l' -> In x0 (remove_min l l') -> ~ X.eq y x \/ In y l'
+  l : list A
+  H0 : bst l' -> In y (remove_min l l')
+  H : In y (Node l x d l' r)
+  H3 : In y l'
+  H0 : bst r'
+  H5 : bst r'
+  H6 : bst l
+  H7 : bst r
+  H8 : lt_tree x' l
+  H9 : gt_tree x' r
+  H1 : X.eq y x'
+  ============================
+   (In y l')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  l' : list (A * elt elt)
+  x : key
+  l : list A
+  Hl : forall (x : A) (l0 : A * elt),
+        make_conj l l =
+         forall (x0 : A) (l : list A) (l' : list A),
+          bst l' -> In x0 (remove_min l l') -> ~ X.eq y x \/ In y l'
+  l : list A
+  H0 : bst l

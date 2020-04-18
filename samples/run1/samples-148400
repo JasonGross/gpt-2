@@ -1,0 +1,151 @@
+======== SAMPLE 1 ========
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  Aeq_dec : decidable A
+  g : A -> A -> bool
+  g_ : A -> A
+  H : forall x y : A,
+      F (g x) -> f x = g x
+  x : A
+  g : A
+  H0 : f x = g x
+  x0 : A
+  H1 : In x0 (x -> False)
+  ============================
+   (In x0 (x -> False))
+
+
+Debug: Going to execute:
+simpl_opp_r
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  Aeq_dec : decidable A
+  g : A -> A -> bool
+  g_ : A -> A
+  H : forall x y : A,
+      F (g x) -> f x = g x
+  x : A
+  g : A
+  H0 : f x = g x
+  x0 : A
+  H1 : In x0 (x -> False)
+  ============================
+   (In x0 (x -> False))
+
+
+Debug:
+Going to execute:
+try applicable (H H1); [ ]
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  Aeq_dec : decidable A
+  g : A -> A -> bool
+  g_ : A -> A
+  H : forall x y : A,
+      F (g x) -> f x = g x
+  x : A
+  g : A
+  H0 : f x = g x
+  x0 : A
+  H1 : In x0 (x -> False)
+  ============================
+   (In x0 (x -> False))
+
+
+Debug: Going to execute:
+try applicable (H H1)
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  Aeq_dec : decidable A
+  g : A -> A -> bool
+  g_ : A -> A
+  H : forall x y : A,
+      F (g x) -> f x = g x
+  x : A
+  g : A
+  H0 : f x = g x
+  x0 : A
+  H1 : In x0 (x -> False)
+  ============================
+   (In x0 (x -> False))
+
+
+Debug: Going to execute:
+[ ]
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  Aeq_dec : decidable A
+  g : A -> A -> bool
+  g_ : A -> A
+  H : forall x y : A,
+      F (g x) -> f x = g x
+  x : A
+  g : A
+  H0 : f x = g x
+  x0 : A
+  H1 : ~ In x0 (x -> False)
+  H2 : (f x = g x)
+  ============================
+   (In x0 (x -> False))
+
+
+Debug: Going to execute:
+apply F_eq_minus, H0; rewrite H0
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  Aeq_dec : decidable A
+  g : A -> A -> bool
+  g_ : A -> A
+  H : forall x y : A,
+      F (g x) -> f x = g x
+  x : A
+  g : A
+  H0 : f x = g x
+  x0 : A
+  H1 : ~ In x0 (x -> False)
+  H2 : (f x = g x)
+  ============================
+   (In x0 (x -> False))
+
+
+Debug: Going to execute:
+apply F_eq_minus, H0
+
+
+TcDebug (0) > 
+Debug: Evaluated term: F_eq_minus
+
+Debug: Evaluated term: F_eq_minus
+
+Goal:
+  
+  A : Type
+  Aeq_dec : decidable A
+  g : A -> A -> bool
+  g_ : A -> A
+  H : forall x y : A,
+      F (

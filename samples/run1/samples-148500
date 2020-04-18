@@ -1,0 +1,129 @@
+======== SAMPLE 1 ========
+ m2)#r
+  y : elt
+  H : X.lt x a1 y
+  H1 : X.eq y x1
+  ============================
+   (InT y l1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s1 : tree
+  IHr1 : Ok r1 -> Ok (split x1 s1)#r -> Ok (union r1 (split x1 s1)#r)
+  B2 : Ok s1
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  y : elt
+  H : X.lt x a1 y
+  H1 : X.eq y x1
+  ============================
+   (InT y l1)
+
+
+Debug: Going to execute:
+split
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s1 : tree
+  IHr1 : Ok r1 -> Ok (split x1 s1)#r -> Ok (union r1 (split x1 s1)#r)
+  B2 : Ok s1
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  y : elt
+  H : X.lt x a1 y
+  H1 : X.eq y x1
+  ============================
+   (InT y l1)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::split@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s1 : tree
+  IHr1 : Ok r1 -> Ok (split x1 s1)#r -> Ok (union r1 (split x1 s1)#r)
+  B2 : Ok s1
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  y : elt
+  H : X.lt x a1 y
+  H1 : X.eq y x1
+  ============================
+   (InT y l1)
+
+
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s1 : tree
+  IHr1 : Ok r1 -> Ok (split x1 s1)#r -> Ok (union r1 (split x1 s1)#r)
+  B2 : Ok s1
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  y : elt
+  H : X.lt a1 y
+  H1 : X.eq y x1
+  ============================
+   (InT y l1 s1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s1 : tree
+  IHr1 : Ok r1 -> Ok (split x1 s1)#r -> Ok (union r1 (split x1 s1)#r)
+  B2 : Ok s1
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  y : elt
+  H : X.lt x a1 y
+  H1 : X.

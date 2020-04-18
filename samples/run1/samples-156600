@@ -1,0 +1,96 @@
+======== SAMPLE 1 ========
+24) > 
+Debug: Evaluated term: B
+
+Debug: Level 12: trm
+ has value 
+B
+
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  C : Type
+  cO : C
+  cI : C
+  cadd : C -> C -> C
+  cmul : C -> C -> C
+  csub : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  phi : C -> R
+  CRmorph : ring_morph 0 1 radd rmul rsub ropp req cO cI cadd cmul csub copp
+              ceqb phi
+  Cpow : Type
+  Cp_phi : N -> Cpow
+  rpow : R -> Cpow -> R
+  pow_th : power_theory 1 rmul req Cp_phi rpow
+  P' : Pol
+  p : positive
+  P' : Pol
+  IHP' : forall (P : Pol) (l : Env R), (P -- P') @ l == P @ l - P' @ l
+  IHP : forall (p : positive) (l : Env R),
+        (PsubX Psub P' p P2) @ l == P2 @ l - P' @ l * hd l ^ p + P @ (tail l)
+  l : Env R
+  p1 : positive
+  ============================
+   (P2 @ l * hd l ^ (p + p1) + - P' @ (tail l) +
+    - (P' @ (tail l) + - P2 @ (tail l)) ==
+    P2 @ l * hd l ^ p + P2 @ l * hd l ^ p + P2 @ (tail l) + - P' @ (tail l))
+
+
+Debug:
+Going to execute:
+repeat (first
+ [ gen_reflexivity Rsth
+ | progress rewrite (ARopp_zero Rsth Reqe ARth)
+ | rewrite (ARadd_0_l ARth)
+ | rewrite (ARadd_0_r Rsth ARth)
+ | rewrite (ARmul_1_l ARth)
+ | rewrite (ARmul_1_r Rsth ARth)
+ | rewrite (ARmul_0_l ARth)
+ | rewrite (ARmul_0_r Rsth ARth)
+ | rewrite (ARdistr_l ARth)
+ | rewrite (ARdistr_r Rsth Reqe ARth)
+ | rewrite (ARadd_assoc ARth)
+ | rewrite (ARmul_assoc ARth)
+ | progress rewrite (ARopp_add ARth)
+ | progress rewrite (ARsub_def ARth)
+ | progress rewrite <- (ARopp_mul_l ARth)
+ | progress rewrite <- (ARopp_mul_r Rsth Reqe ARth) ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  C : Type
+  cO : C
+  cI : C
+  cadd : C -> C -> C
+  cmul : C -> C -> C
+  csub : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  phi : C -> R
+  CRmorph : ring_morph 0 1 radd rmul rsub ropp req cO

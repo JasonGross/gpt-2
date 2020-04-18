@@ -1,0 +1,125 @@
+======== SAMPLE 1 ========
+ list r2
+  H : bst ll
+  H4 : bst lr
+  H5 : lt_tree lx ll
+  H6 : gt_tree lx lr
+  y : key
+  H7 : InA y l
+  H9 : InA y lr
+  H8 : eqA y (Node lx ll lx lr)
+  H : InA y l -> False
+  H10 : InA y l' -> False
+  H13 : InA a l
+  H12 : eqA a y
+  H9 : eqA a x
+  H0 : InA a l'
+  ============================
+   (eqA a x \/ eqA a y \/ InA a l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  x' : key
+  l : list (X.t * elt)
+  l' : list (X.t * elt)
+  H : bst ll
+  H4 : bst lr
+  H5 : lt_tree lx ll
+  H6 : gt_tree lx lr
+  y : key
+  H7 : InA y l
+  H9 : InA y lr
+  H8 : eqA y (Node lx ll lx lr)
+  H : InA y l -> False
+  H10 : InA y l' -> False
+  H13 : InA a l
+  H12 : eqA a y
+  H9 : eqA a x
+  H0 : InA a l'
+  ============================
+   (eqA a x \/ eqA a y \/ InA a l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  x' : key
+  l : list (X.t * elt)
+  l' : list (X.t * elt)
+  H : bst ll
+  H4 : bst lr
+  H5 : lt_tree lx ll
+  H6 : gt_tree lx lr
+  y : key
+  H7 : InA y l
+  H9 : InA y lr
+  H8 : eqA y (Node lx ll lx lr)
+  H : InA y l -> False
+  H10 : InA y l' -> False
+  H13 : InA a l
+  H12 : eqA a y
+  H9 : eqA a x
+  H0 : InA a l'
+  ============================
+   (eqA a x \/ eqA a y \/ InA a l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  x' : key
+  l : list (X.t * elt)
+  l' : list (X.t * elt)
+  H : bst ll
+  H4 : bst lr
+  H5 : lt_tree lx ll
+  H6 : gt_tree lx lr
+  y : key
+  H7 : InA y l
+  H9 : InA y lr
+  H8 : eqA y (Node lx ll lx lr)
+  H : InA y l -> False
+  H10 : InA y l' -> False
+  H13 : InA a l
+  H12 : eqA a y
+  H9 : eqA a x
+  H0 : InA a l'
+  ============================
+   (eqA a x \/ eqA a y \/ InA a l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  x' : key
+  l : list

@@ -1,0 +1,106 @@
+======== SAMPLE 1 ========
+ - : elt
+  m : t elt
+  H : forall k : NFormula, NFormula Z.of_N (Formula k x) (m m)
+  z : nat
+  m : t elt
+  H : forall k : NFormula, NFormula Z.of_N (Formula k x) (m m)
+  H0 : is_Z 0 = true
+  ============================
+   (m * (Z.pos z - (n + m) * dec_dec))%nat
+
+
+Debug: Going to execute:
+apply m_hypo_l; hypow_r
+
+
+TcDebug (0) > 
+Debug: Evaluated term: hypow_r
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  k : NFormula
+  H : forall m : NFormula, NFormula Z.of_N (Formula k x) (m m)
+  hypow_m : forall (x : NFormula) (r : R)
+  hypow_r : forall x k : NFormula, hypow_r m = x
+  ============================
+   (forall x m n : NFormula, (NFormula Z.of_N m * n = 2)%Z = 2)%Z
+
+
+Goal:
+  
+  elt : Type
+  m : T elt
+  m' : t elt
+  k : NFormula
+  H : forall m : NFormula, NFormula Z.of_N (Formula k x) (m m)
+  hypow_m : forall (x : NFormula) (a : A)
+  hypow_r : forall x k : NFormula, hypow_r m = x
+  ============================
+   (forall y m p : NFormula, (NFormula Z.of_N m * n = y)%Z = z)%Z
+
+
+Goal:
+    elt : Type  k : NFormula  H : forall x : NFormula k x
+   ============================
+   (Z.pos x m = x)%Z
+
+
+Debug: Going to execute:
+apply m_hypo_l
+
+
+TcDebug (0) > 
+Debug: Evaluated term: m_hypo_l
+
+Goal:
+  
+  elt : Type
+  m : T elt
+  m' : t elt
+  k : NFormula
+  H : forall k : NFormula, NFormula Z.of_N (Formula k x) (m m)
+  hypow_m : forall (x : NFormula) (v : NFormula), hypow_rl = x /\ mem k v = v)
+  hypow_rl : R k hypow_r
+  hypow_rl' : R k hypow_r
+  k_x0 : (1 <= l - 1)%Z
+  k_x0 : (1 <= l - 1)%Z
+  ============================
+   (0 <=
+    forall k_x, k_x0 = z -> (2)%Z = (1)%Z)
+
+
+Debug: Going to execute:
+hypow_hyps
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  m : T elt
+  k : NFormula
+  h : In k k_x = false
+  Hk : 0 <= 1 - φ (nz - 1 <= k)%Z
+  ============================
+   (forall k_l y : NFormula, 0 <= l - Z.pos 0)%Z -> 0 = Z.pos y x)%Z
+    eq_refl
+      eq_refl
+      (Z.pos x k)%Z -> Z.pos y k = 0)%Z
+     
+       end)
+
+
+Debug:
+Going to execute:
+repeat
+ match goal with
+ | |- ~ _ => fun _ => Zelim _ _ Z.add k_z x at a - Z.pos a
+ | |- _ => fun _ => Zelim _ _ Z.add k_z x at a - Z.pos a
+ end
+
+
+T

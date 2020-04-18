@@ -1,0 +1,79 @@
+======== SAMPLE 1 ========
+ (disj@0> P) (solve [ dintuition ]) ] ]
+ | |- ?X1 =>
+        <Coq.Init.Tauto.is_disj> flags X1; (solve
+         [ left; t_tauto_intuit | right; t_tauto_intuit ])
+ end ||
+  match goal with
+  | |- _ -> _ => intro; t_tauto_intuit
+  | |- _ => t_reduce; t_solver
+  end || t_solver
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHo : forall (x : key) (d : elt) (r : t elt) (o : option elt'),
+         eq x (inter l l') <->
+         In x l'
+  x : key
+  d' : elt
+  r' : t elt
+  m' : (key * elt)%type
+  e1 : remove_min ll lx ld lr = (l', m)
+  IHo : forall (x : key) (d : elt) (r : t elt) (o : option elt'),
+         eq x (inter l l') <->
+         In x l'
+  x : key
+  d' : elt
+  r' : t elt
+  m' : (key * elt)%type
+  e1' : remove_min ll lx ld lr = (l', m)
+  IHo : forall (x : key) (d : elt) (r : t elt') (o : option elt'),
+         eq x (inter l l') <->
+         In x l'
+  x : key
+  d' : elt
+  r' : t elt
+  m' : (key * elt)%type
+  e1' : remove_min ll lx ld lr = (l', m)
+  IHo : forall (x : key) (d : elt) (r : t elt') (o : option elt'),
+         eq x (inter l l') <->
+         In x l'
+  x : key
+  d' : elt
+  r' : t elt
+  m' : (key * elt)%type
+  e1' : remove_min ll lx ld lr = (l', m)
+  IHo : forall (x : key) (d : elt) (r : t elt') (o : option elt'),
+         eq x (inter l l') <->
+         In x l'
+  x : key
+  d' : elt
+  r' : t elt
+  m' : (key * elt)%type
+  e1' : remove_min ll lx ld lr = (l', m)
+  IHo : forall (x : key) (d : elt) (r : t elt') (o : option elt'),
+         eq x (inter l l') <->
+         In x l'
+  x : key
+  d' : elt
+  r' : t elt
+  m' : (key * elt)%type
+  e1' : remove_min ll lx ld lr = (l', m)
+  IHo : forall (x : key) (d : elt) (r : t elt') (o : option elt'),
+        eq x (inter l l') <->
+         In x l'
+ 

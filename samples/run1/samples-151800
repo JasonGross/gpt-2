@@ -1,0 +1,27 @@
+======== SAMPLE 1 ========
+          (Ring_polynom.PEadd
+                         (Ring_polynom.PEmul (Ring_polynom.PEc 2)
+                           (Ring_polynom.PEadd (Ring_polynom.PEX 1)
+                             (Ring_polynom.PEX 5))
+                          (Ring_polynom.PEadd (Ring_polynom.PEX 1)
+                           (Ring_polynom.PEX 5),
+                       Ring_polynom.PEc 2
+                       Ring_polynom.PEadd (Ring_polynom.PEX 1)
+                          (Ring_polynom.PEX 5), Ring_polynom.PEmul (Ring_polynom.PEc 2)
+                          (Ring_polynom.PEadd
+                             (Ring_polynom.PEmul
+                                (Ring_polynom.PEc (1 # 2)%Q
+                                 (Ring_polynom.PEmul
+                                   (Ring_polynom.PEX Q 1)
+                                    (Ring_polynom.PEX 1))))%Q
+                         (gen_phiZ
+                          (2 # n
+                           :: 0%N
+                            :: 1 # p :: xn (Pos.to_nat n) :: nil)
+                        (Ring_polynom.PEadd
+                           (Ring_polynom.PEmul
+                              (Ring_polynom.PEc 2)
+                                (Ring_polynom.PEadd
+                                   (Ring_polynom.PEmul (Ring_polynom.PEc 2)
+                                    (Ring_polynom.PEadd (Ring_polynom.PEX Q 4)
+                       

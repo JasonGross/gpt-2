@@ -1,0 +1,71 @@
+======== SAMPLE 1 ========
+  H0 : In A A
+  H3 : In A (E.eq x a) -> In A P
+  H5 : In A A
+  H0 : In A (empty:=A)
+  H : In A (push_e A (P.In A A) P.C))
+  H3 : In A (E.eq l x)
+  ============================
+   (forall x : A, (In A A l /\ In A (P.In A A) P) -> In A P \/ In A (R.In A (P.In C P)) -> In A (push_e A A (P.In A (P.In A A))) \/
+    InA (P.In A A) P \/ In A (R.In A (P.In A A)))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  FunChoice : FunctionalChoice
+  SetoidFunRepr : ExtensionalFunctionRepresentative
+  EM : ExcludedMiddle
+  A : Type
+  Aeq_dec : forall x y : A, {x = y} + {x <> y}
+  a : A
+  l : list A
+  IHl : forall (l : list A) (comm : A -> A -> Prop),
+        (forall y : A, a = l + y -> A = l + y) -> In A (jump l l) -> In A (jump l l)
+  ============================
+   (forall y : A, a = l + y -> A = l + y) -> In A (jump l l) ->
+    (jump ((a, b) :: l) -> (jump (a, b)) :: l) ->
+     In A (jump (a, b) :: l) /\
+    In A P -> A \/ In A
+     (jump (a, b) :: l) ->
+     In A P \/ In A (jump (a, b) :: l) ->
+     (jump (a, b) :: l) ->
+     (jump (a, b) :: l) ->
+     (jump (a, b) :: l) ->
+     In A P ->
+     NoDupA (l ++ l) ->
+      NoDupA l' ->
+      forall x : A, In A (jump x l) -> In A P (jump p (jump l)))
+       (H : (a, b) ++ l) = (H -> h)
+  H2 : (InA (jump (a, b) :: l)) :: l = (H -> h)
+  x : A
+  y : A
+  H1 : In A A (jump (a, b) :: l)
+  PER := fun x : A => InA (jump x l) (a :: y :: l)
+  ============================
+   (forall x : A, (In A A l /\ In A (P.In A (P.In C P)) -> In A (push_e A P (P.In A A)) -> In A (jump (a, b) :: l))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  FunChoice : FunctionalChoice
+  SetoidFunRepr : ExtensionalFunctionRepresentative
+  EM : ExcludedMiddle
+  A : Type
+  Aeq_dec : forall x y : A, {x = y} + {x <> y}
+  a : A
+  l : list A
+  IHl : forall (l : list A) (comm : A -> A -> Prop),
+        (forall y : A, a = l + y -> A = l + y) -> In A (jump l l) -> In A (jump l l)
+  ============================
+   (forall y : A, a = l + y -> A = l + y) -> In A (jump l l) ->
+    (jump ((a, b) :: l) -> (jump (a, b)) :: l)

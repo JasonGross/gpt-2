@@ -1,0 +1,62 @@
+======== SAMPLE 1 ========
+/dtype l)#l -> Prop
+  IHr : forall (x : A) (lr : tree),
+         Proper (RA ==> RB ==> RC) ltac:(fun cst_tac Pow_tac r0 r1 r2 => sub req cst_tac pow_tac r0 r1 r2));
+           pow_pos rm r0 x
+  PEX C p :pr C
+  c : Type
+  l : list A
+  p1 : B
+  IHl1 : forall (lr : tree),
+         (proj1_sig lH : ForallR (proj1_sig x lr) (s2 : tree),
+          (proj1_sig rl : list A,
+           (proj1_sig rr : A, (proj1_sig lr0 x -> False),
+           (proj1_sig rr : A, (proj1_sig rr1 x -> False),
+           (proj1_sig lr : tree, (PEX N 2 * PEX N 1 * PEX N 0)) r = true)
+  lrr : tree
+  x : B
+  H0 : forall n : nat, (PEX N 2 * PEX N 1 * PEX N 0) /\
+       (proj1_sig rl : list A,
+          (proj1_sig lr : list A,
+            (proj1_sig rr : A, (proj1_sig lr0 x -> False),
+            (proj1_sig rr : A, (proj1_sig rr1 x -> False), (proj1_sig lr : tree, (PEX N 2 * PEX N 1 * PEX N 0)) = true) ->
+       forall n : nat,
+        (proj1_sig (Rd (Bk lrl lrx lrd lrr _x2) _x0)
+         H:Proj1_sig lR
+       : Pred
+       : pred p 0
+       : prepos l ll lx ld lr _x2
+        : nat
+        : N2
+        : N2 Rsth
+          : forall n : nat, (proj1_sig (Rd (Bk lrl lrx lrd lrr _x2) _x0 n)
+         : forall n : nat,
+         (proj1_sig (Rd (Bk lrl lrx lrd lrr _x2) _x0 n)
+           lrr _x2));
+       (exact
+       match goal with
+       | H:?R ?l |- _ => False
+       | _ => True
+       end
+    | _ => False
+ end
+ in
+ f -> goal
+
+
+TcDebug (10) > 
+Goal:
+  
+  A : Type
+  R : crelation A
+  P : Proper (RA ==> RB ==> RC) f
+  IHl : forall (l : list A, PEX ll) (r : tree),
+         Proper (RA ==> RB ==> RC) lr :: positive :: nil
+  l : tree
+  x : B
+  Hx : forall x0 : A, Type
+  Rxy : RAxy == x0
+  r : tree
+  Hr : forall x : tree, In x0 l -> In x0 r -> f x = true
+  rmul : A -> A -> bool
+  rlr : tree

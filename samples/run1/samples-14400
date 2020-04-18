@@ -1,0 +1,75 @@
+======== SAMPLE 1 ========
+ sn h2 = Hn h1 /\ X.lt y x
+  ============================
+   (false = true || false)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  h : I.t
+  l : tree
+  x0 : X.t
+  r : tree
+  Hrec : forall (x : elt) (f : X.t -> bool),
+         Proper (X.eq ==> Logic.eq) f -> InT x (filter f l) <-> InT x l /\ f x
+  Hpf : forall (x : elt) (f : X.t -> bool),
+        Proper (X.eq ==> Logic.eq) f -> InT x (filter f l) <-> InT x l /\ f x
+  l1 : tree
+  x0 : X.t
+  r1 : tree
+  Hrec : forall (x : elt) (f : X.t -> bool),
+        Proper (X.eq ==> Logic.eq) f -> InT x (filter f l) <-> InT x l /\ f x
+  l2 : tree
+  x0 : X.t
+  r2 : tree
+  Hrec : forall (x : elt) (f : X.t -> bool),
+        Proper (X.eq ==> Logic.eq) f -> InT x (filter f l) <-> InT x l /\ f x
+  l3 : tree
+  x0 : X.t
+  r3 : tree
+  Hrec : forall (x : elt) (f : X.t -> bool),
+        Proper (X.eq ==> Logic.eq) f -> InT x (filter f l) <-> InT x l /\ f x
+  l4 : tree
+  x0 : X.t
+  r4 : tree
+  Hrec : forall (x : elt) (f : X.t -> bool),
+        Proper (X.eq ==> Logic.eq) f -> InT x (filter f l) <-> InT x l /\ f x
+  l5 : tree
+  x0 : X.t
+  r5 : tree
+  Hrec : forall (x : elt) (f : X.t -> bool),
+        Proper (X.eq ==> Logic.eq) f -> InT x (filter f l) <-> InT x l /\ f x
+  l6 : tree
+  x0 : X.t
+  r6 : tree
+  Hrec : forall (x : elt) (f : X.t -> bool),
+        Proper (X.eq ==> Logic.eq) f -> InT x (filter f l) <-> InT x l /\ f x
+  l7 : tree
+  x0 : X.t
+  r7 : tree
+  Hrec : forall (x : elt) (f : X.t -> bool),
+        Proper (X.eq ==> Logic.eq) f -> InT x (filter f l) <-> InT x l /\ f x
+  l8 : tree
+  x0 : X.t
+  r8 : tree
+  Hrec : forall (x : elt) (f : X.t -> bool),
+        Proper (X.eq ==> Logic.eq) f -> InT x (filter f l) <-> InT x l /\ f x
+  l9 : tree
+  x0 : X.t
+  r9 : tree
+  Hrec : forall (x : elt) (f : X.t -> bool),
+        Proper (X.eq ==> Logic.eq) f -> InT x (filter f l) <-> InT x l /\ f x
+  l10 : tree
+  x0 : X.t
+  r10 : tree
+  Hrec : forall (x : elt) (f : X.t -> bool),
+        Proper (X

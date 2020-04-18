@@ -1,0 +1,125 @@
+======== SAMPLE 1 ========
+: X.t
+  r : tree
+  y : elt
+  c : Info.t
+  l : tree
+  H : Ok (Node c l y r)
+  H0 : Ok r
+  n : X.eq x y -> False
+  ============================
+   ((InT y l \/ X.eq y x \/ False) \/ X.eq y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : Info.t
+  l : tree
+  y : elt
+  c : Info.t
+  l : tree
+  y : elt
+  c : Info.t
+  r : tree
+  y : elt
+  c : Info.t
+  l : tree
+  y : elt
+  c : Info.t
+  r : tree
+  y : elt
+  c : Info.t
+  r : tree
+  y0 : X.t
+  H2 : X.eq y2 y
+  H1 : InT y0 (Node c l y r)
+  H3 : X.eq y0 x
+  H4 : X.eq y0 y3
+  H5 : X.eq y0 x \/ InT y0 l \/ InT y0 (Node c l y r)
+  ============================
+   ((InT y l \/ X.eq y x \/ False) \/ X.eq y r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : Info.t
+  l : tree
+  y : elt
+  c : Info.t
+  l : tree
+  y : elt
+  c : Info.t
+  r : tree
+  y0 : X.t
+  H2 : X.eq y2 y
+  H1 : InT y0 (Node c l y r)
+  H3 : X.eq y0 x
+  H4 : X.eq y0 y3
+  H5 : X.eq y0 x \/ InT y0 l \/ InT y0 (Node c l y r)
+  ============================
+   ((InT y l \/ X.eq y x \/ False) \/ X.eq y r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : Info.t
+  l : tree
+  y : elt
+  c : Info.t
+  l : tree
+  y : elt
+  c : Info.t
+  r : tree
+  y0 : X.t
+  H2 : X.eq y2 y
+  H1 : InT y0 (Node c l y r)
+  H3 : X.eq y0 x
+  H4 : X.eq y0 y3
+  H5 : X.eq y0 x \/ InT y0 l \/ InT y0 (Node c l y r)
+  ============================
+   ((InT y l \/ X.eq y x \/ False) \/ X.eq y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : Info.t
+  l : tree
+  y : elt
+  c : Info.t
+  l : tree
+  y : elt
+  c : Info.t
+  r : tree
+  y0 : X.t
+  H2 : X.eq y2 y
+  H1 : InT y0 (Node c l y r)
+  H3 : X.eq y0 x
+  H4 : X.eq y0 y3
+  H5 : X.eq y0 x \/ InT y0 l \/ InT y0 (Node c l y r)
+  ============================
+   ((InT y l \/ X.eq y x \/ False) \/ X.eq

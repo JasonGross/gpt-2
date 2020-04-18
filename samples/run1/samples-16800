@@ -1,0 +1,17 @@
+======== SAMPLE 1 ========
+ p) =
+         find 1 b in
+         find x in
+                 
+                            (Ring_polynom.PEadd
+                                                   (Ring_polynom.PEmul (Ring_polynom.PEc 1)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 x y : 
+                               l : 
+                   | Y ? x
+                   X y :: l
+                                 XSRord (SRsub_defINE (SRC (SRC (SRC_eq)))) :                                  eval_pow_th 0 1 id_phi_N 1 rmul
+                               (FEadd
+                               eval_pow_N 1 rmul
+                          (get_sign_Nformula env P 2
+                       list_hyp_norm 0%coef 1%hyp_N
+      

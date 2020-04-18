@@ -1,0 +1,137 @@
+======== SAMPLE 1 ========
+ H7 : X.lt x1 y
+  H : X.eq y x1 \/
+      InA X.eq x l2 \/ InA X.eq x acc
+  ============================
+   (X.lt y x1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  Hm1 : Sort m1
+  m2' : t elt
+  y : key
+  Hm1 : In y m2'
+  m3 : t elt
+  Hm3 : In y m3
+  H1 : X.eq y x1
+  H1 : NoDupA (l1 ++ l2)
+  H3 : InA X.eq x l2
+  H : X.eq y x1
+  ============================
+   (X.lt y x1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  Hm1 : Sort m1
+  m2' : t elt
+  y : key
+  Hm1 : In y m2'
+  m3 : t elt
+  Hm3 : In y m3
+  H1 : X.eq y x1
+  H1 : NoDupA (l1 ++ l2)
+  H3 : InA X.eq x l2
+  H : X.eq y x1
+  ============================
+   (X.lt y x1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  Hm1 : Sort m1
+  m2' : t elt
+  y : key
+  Hm1 : In y m2'
+  m3 : t elt
+  Hm3 : In y m3
+  H1 : X.eq y x1
+  H1 : NoDupA (l1 ++ l2)
+  H3 : InA X.eq x l2
+  H : X.eq y x1
+  ============================
+   (X.lt y x1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  Hm1 : Sort m1
+  m2' : t elt
+  y : key
+  Hm1 : In y m2'
+  m3 : t elt
+  Hm3 : In y m3
+  H1 : X.eq y x1
+  H1 : NoDupA (l1 ++ l2)
+  H3 : InA X.eq x l2
+  H : X.eq y x1
+  ============================
+   (X.lt y x1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  Hm1 : Sort m1
+  m2' : t elt
+  y : key
+  Hm1 : In y m2'
+  m3 : t elt
+  Hm3 : In y m3
+  H1 : X.eq y x1
+  H1 : NoDupA (l1 ++ l2)
+  H3 : InA X.eq x l2
+  H : X.eq y x1
+  ============================
+   (X.lt y x1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  Hm1 : Sort m1
+  m2' : t elt
+  y : key
+  Hm1 : In y m2'
+  m3

@@ -1,0 +1,115 @@
+======== SAMPLE 1 ========
+
+  H0 : bool
+  H1 : In a s
+  H2 : bool
+  H3 : forall x y : bool, In x s -> X.eq x y \/ In y s
+  ============================
+   ((forall x y : bool, In x (a, b)) -> In y s' -> X.eq y x \/ In y (a, b))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  a : elt
+  s : list elt
+  IHs : forall x y : bool, In x s -> In y s' -> X.eq y x \/ In y s
+  x : bool
+  y : bool
+  H : In x s
+  H0 : bool
+  H1 : In a s
+  H2 : bool
+  H3 : forall x y : bool, In x s -> X.eq x y \/ In y s
+  ============================
+   ((forall x y : bool, In x (a, b)) -> In y s' -> X.eq y x \/ In y (a, b))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  a : elt
+  s : list elt
+  IHs : forall x y : bool, In x s -> In y s' -> X.eq y x \/ In y s
+  x : bool
+  y : bool
+  H : In x s
+  H0 : bool
+  H1 : In a s
+  H2 : bool
+  H3 : forall x y : bool, In x s -> X.eq y x \/ In y s
+  ============================
+   ((forall x y : bool, In x (a, b)) -> In y s' -> X.eq y x \/ In y (a, b))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  a : elt
+  s : list elt
+  IHs : forall x y : bool, In x s -> In y s' -> X.eq y x \/ In y s
+  x : bool
+  y : bool
+  H : In x s
+  H0 : bool
+  H1 : In a s
+  H2 : bool
+  H3 : forall x y : bool, In x s -> X.eq y x \/ In y s
+  ============================
+   ((forall x y : bool, In x (a, b)) -> In y s' -> X.eq y x \/ In y (a, b))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  a : elt
+  s : list elt
+  IHs : forall x y : bool, In x s -> In y s' -> X.eq y x \/ In y s
+  x : bool
+  y : bool
+  H : In x s
+  H0 : bool
+  H1 : In a s
+  H2 : bool
+  H3 : forall x y : bool, In x s -> X.eq y x \/ In y s
+  ============================
+   ((forall x y : bool, In x (a, b)) -> In y s' -> X.eq y x \/ In y (a, b))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  a : elt
+  s : list elt
+  IHs : forall x y : bool, In x s -> In y s' -> X.eq y x \/ In y s
+  x : bool
+  y : bool
+  H : In x s
+  H0 : bool
+  H1 : In a s
+  H2 :

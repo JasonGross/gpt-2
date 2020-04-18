@@ -1,0 +1,160 @@
+======== SAMPLE 1 ========
+ H1 : E.eq x y
+  H2 : False
+  ============================
+   (MapsTo y d' (Rd (Bk l x a) x0 (Bk b y0 c)))
+
+
+Debug:
+Going to execute:
+match goal with
+| |- ?X1 -> ?X2 => intro
+| |- ~ _ => unfold not at 1; intro
+end
+
+
+TcDebug (2) > 
+Debug: Level 2: No matching clauses for match.
+
+Goal:
+  
+  x : E.t
+  y : E.t
+  c : t
+  l : t
+  H : y < x
+  Hc : snd x = Some y
+  r : t
+  H1 : E.eq x y
+  H2 : False
+  ============================
+   (MapsTo y d' (Rd (Bk l x a) x0 (Bk b y0 c)))
+
+
+Debug:
+Going to execute:
+repeat unfold not at 1; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : E.t
+  y : E.t
+  c : t
+  l : t
+  H : y < x
+  Hc : snd x = Some y
+  r : t
+  H1 : E.eq x y
+  H2 : False
+  ============================
+   (MapsTo y d' (Rd (Bk l x a) x0 (Bk b y0 c)))
+
+
+Debug: Going to execute:
+repeat fold set_add_eq in *
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : E.t
+  y : E.t
+  c : t
+  l : t
+  H : y < x
+  Hc : snd x = Some y
+  r : t
+  H1 : E.eq x y
+  H2 : False
+  ============================
+   (MapsTo y d' (Rd (Bk l x a) x0 (Bk b y0 c)))
+
+
+Debug: Going to execute:
+fold set_add_eq
+
+
+TcDebug (3) > 
+Debug: Level 3: No matching clauses for match.
+
+Goal:
+  
+  x : E.t
+  y : E.t
+  c : t
+  l : t
+  H : y < x
+  Hc : snd x = Some y
+  r : t
+  H1 : E.eq x y
+  H2 : False
+  ============================
+   (MapsTo y d' (Rd (Bk l x a) x0 (Bk b y0 c)))
+
+
+Debug:
+Going to execute:
+match goal with
+| |- ?X1 -> ?X2 => intro
+| |- ~ _ => unfold not at 1; intro
+end
+
+
+TcDebug (2) > 
+Debug: Level 2: No matching clauses for match.
+
+Goal:
+  
+  x : E.t
+  y : E.t
+  c : t
+  l : t
+  H : y < x
+  Hc : snd x = Some y
+  r : t
+  H1 : E.eq x y
+  H2 : False
+  ============================
+   (MapsTo y d' (Rd (Bk l x a) x0 (Bk b y0 c)))
+
+
+Debug:
+Going to execute:
+repeat fold set_add_eq in *
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : E.t
+  y : E.t
+  c : t
+  l : t
+  H : y < x
+  Hc : snd x = Some y
+  r : t
+  H1 : E.eq x y
+  H2 : False
+  ============================
+   (MapsTo y d' (Rd (Bk l x a) x0 (Bk b y0 c)))
+
+
+Debug:
+Going to execute:
+match goal with
+| |- ?X1 -> ?X2 => intro
+| |- ~ _ => unfold not at 1; intro
+end
+
+
+TcDebug (0) > 
+Debug: Level 0: No matching clauses for match.
+
+Goal:
+  
+  x : E.t
+  y : E.t
+  c : t
+  l : t

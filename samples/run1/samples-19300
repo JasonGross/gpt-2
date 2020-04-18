@@ -1,0 +1,116 @@
+======== SAMPLE 1 ========
+ if s1 is not None ]
+  | (?x + ?y => negb true x = true
+     | Some d => negb false x)
+  end
+
+
+Debug: Going to execute:
+solve [ this | _ | reflexivity; trivial | reflexivity | trivial ]
+
+
+TcDebug (0) > 
+Goal:
+    x : elt  r : t  s1 : t  s2 : t  x : elt  s1' : t  s2' : t  a : elt
+  ============================
+   (((a + s2)%type = None)%type ->
+    (b = -> False)%type ->
+    (x~0 =~ s1~0)%n)
+
+
+Debug: Going to execute:
+solve [ with_hyps reflexivity |- _ => trivial | reflexivity | reflexivity | reflexivity ]
+
+
+TcDebug (0) > 
+Goal:
+    x : elt  r : t  s1 : t  s2 : t  x : elt  s1' : t  s2' : t  a : elt
+  ============================
+   (((a + s2)%type = None)%type ->
+    (b = -> False)%type ->
+    (x~0 =~ s1~0)%n -> ~ E.eq x a \/ x~0 =~ s1~0)
+
+
+Debug: Going to execute:
+with_hyps reflexivity
+
+
+TcDebug (0) > 
+Goal:
+    x : elt  r : t  s1 : t  s2 : t  x : elt  s1' : t  s2' : t  a : elt
+  ============================
+   (((a + s2)%type = None)%type ->
+    (b = -> False)%type ->
+    (x~0 =~ s1~0)%n -> ~ E.eq x a \/ x~0 =~ s1~0)
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (0) > 
+Debug: Level 0: t
+ has value 
+(a)%type
+
+
+Goal:
+    x : elt  r : t  s1 : t  s2 : t  x : elt  s1' : t  s2' : t  a : elt
+  ============================
+   (((a + s2)%type = None)%type ->
+    (b = -> False)%type ->
+    (x~0 =~ s1~0)%n -> ~ E.eq x a \/ x~0 =~ s1~0)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::with_hyps_in_e_tac@0>
+
+
+TcDebug (1) > 
+Goal:
+    x : elt  r : t
+  ============================
+   (~ ~ (b = (x~0~0 =~ s1~0)) ~ E.eq x a)
+
+
+Debug: Going to execute:
+rewrite  s1_0_r_eq
+
+
+TcDebug (0) > 
+Debug:
+Going to execute:
+test_eq H; clear H || fail 1; subst; destruct_relation if not found
+
+
+TcDebug (0) > 
+Goal:
+    x : elt  r : t  s1 : t  s2 : t  x : elt  s2' : t  a : elt
+  ============================
+   (eq_mul_relation s1 s2)
+
+
+Debug:
+Going to execute:
+rewrite  s1_0_r_eq
+
+
+TcDebug (0) > 
+Debug: Evaluated term: s1_0_r_eq
+
+Debug:
+Going to execute:
+t;
+ try rewrite H; clear H
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+t'
+
+
+TcDebug (0) > 
+Goal:
+    x : elt  r : t  s1 : t  s2 : t  x : elt  s1' : t  s2' : t  a : elt
+  ============================
+

@@ -1,0 +1,54 @@
+======== SAMPLE 1 ========
+cnat t))%Q
+  ============================
+   (((2 # n)%Q - yn (Pos.to_nat n) - (2 # n) +
+     ((Qabs (xn (Pos.to_nat n) - yn (Pos.to_nat n))%Q -
+     abs
+        (proj1_sig
+            (exist (fun x : nat -> Q => QCauchySeq x Pos.to_nat) xn limx)
+            (Pos.to_nat n)) *
+         (proj1_sig
+            (exist (fun x : nat -> Q => QCauchySeq x Pos.to_nat) l xn limx)
+            (Pos.to_nat n))%Q ->
+     exist (fun x : nat -> Q => QCauchySeq x Pos.to_nat) l xn limx)
+  res := nil : list (Q * Ring_polynom.Mon * Ring_polynom.Pol Q)
+  res_eq : Ring_polynom.mk_monpol_list 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+              (triv_div 0 1 Qeq_bool) ring_subst_niter list_hyp_norm
+              (Ring_polynom.PEadd (Ring_polynom.PEX Q 1)
+                 (Ring_polynom.PEX Q 2)) = res
+  thm : (Ring_polynom.PEeval 0 1 Qplus Qmult Qminus Qopp 
+           (IDphi (R:=Q)) Z.of_N Qpower (2 # n :: xn (Pos.to_nat n :: nil) :: nil)
+          (Ring_polynom.PEadd (Ring_polynom.PEX Q 1) (Ring_polynom.PEX Q 2)) ==
+         Ring_polynom.Pphi_pow 0 1 Qplus Qmult Qminus Qopp 0 1 Qeq_bool
+           (IDphi (R:=Q)) Z.of_N Qpower (get_sign_None (C:=Q)) :: nil) res
+  ============================
+   (((2 # n)%Q - yn (Pos.to_nat n) + (1 # n) + (1 # n) +
+     ((Qabs (xn (Pos.to_nat n) + - yn (Pos.to_nat n))%Q) <
+     xn (Pos.to_nat n) - (2 # n) +
+     ((Qabs (xn (Pos.to_nat n) + - yn (Pos.to_nat n))%Q) ==
+     xn (Pos.to_nat n) - (2 # n) +
+     ((Qabs (xn (Pos.to_nat n) + - yn (Pos.to_nat n))%Q) + 1)%Q)
+
+
+Debug: Going to execute:
+pose proof (lemma res) as H
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (lemma res)
+
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+  cvmod : positive -> nat
+  k : positive
+  p : nat
+  H : (Qabs
+         (proj1_sig
+             (exist (fun x : nat -> Q => QCauchySeq x Pos.to_nat) xn limx)
+            (Pos.to_nat n)) -
+         proj1_sig
+

@@ -1,0 +1,132 @@
+======== SAMPLE 1 ========
+j@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x r = << rl, o, rr >>
+  IHt : bst r -> o = oI o
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  ============================
+   (bst (join (remove x rl) x y rr) /\
+    bst rr <-> bst (remove x rl)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x r = << rl, o, rr >>
+  IHt : bst r -> o = oI o
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  ============================
+   (bst (join (remove x rl) x y rr) /\
+    bst rr <-> bst (remove x rl)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x r = << rl, o, rr >>
+  IHt : bst r -> o = oI o
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  ============================
+   (bst (join (remove x rl) x y rr) /\
+    bst rr <-> bst (remove x rl)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x r = << rl, o, rr >>
+  IHt : bst r -> o = oI o
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  ============================
+   (bst (join (remove x rl) x y rr) /\
+    bst rr <-> bst (remove x rl)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l :

@@ -1,0 +1,155 @@
+======== SAMPLE 1 ========
+; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  eqA_equiv : Equivalence eqA
+  s1 : list A
+  s2 : list A
+  a : A
+  l : list A
+  H : eqA a a
+  H1 : eqlistA a l
+  H2 : InA a l
+  ============================
+   (eqA a a \/ eqlistA a l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  eqA_equiv : Equivalence eqA
+  s1 : list A
+  s2 : list A
+  a : A
+  l : list A
+  H : eqA a a
+  H1 : eqlistA a l
+  H2 : InA a l
+  ============================
+   (eqA a a \/ eqlistA a l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  eqA_equiv : Equivalence eqA
+  s1 : list A
+  s2 : list A
+  a : A
+  l : list A
+  H : eqA a a
+  H1 : eqlistA a l
+  H2 : InA a l
+  ============================
+   (eqA a a \/ eqlistA a l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  eqA_equiv : Equivalence eqA
+  s1 : list A
+  s2 : list A
+  a : A
+  l : list A
+  H : eqA a a
+  H1 : eqlistA a l
+  H2 : InA a l
+  ============================
+   (eqA a a \/ eqlistA a l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : relation A
+  eqA_equiv : Equivalence eqA
+  s1 : list A
+  s2 : list A
+  a : A
+  l : list A
+  H : eqA a a
+  H1 : eqlistA a l
+  H2 : InA a l
+  ============================
+   (eqA a a \/ eqlistA a l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  eqA_equiv : Equivalence eqA
+  s1 : list A
+  s2 : list A
+  a : A
+  l : list A
+  H : eqA a a
+  H1 : eqlistA a l
+  H2 : InA a l
+  ============================
+   (eqA a a \/ eqlistA a l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  eqA_equiv : Equivalence eqA
+  s1 : list A
+  s2 : list A
+  a : A
+  l : list A
+  H : eqA a a
+  H1 : eqlistA a l
+  H2 : InA a l
+  ============================
+   (eqA a a \/ eqlistA a l)
+
+
+Debug: Going to execute:
+<Coq.Init

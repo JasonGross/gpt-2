@@ -1,0 +1,119 @@
+======== SAMPLE 1 ========
+
+  H : In x l -> In x s
+  H0 : In x s' -> false = true
+  H6 : false = true -> In x s'
+  H1 : In x (diff s s') -> In x s /\ ~ In x s'
+  H7 : In x s /\ ~ In x s' -> In x (diff s s')
+  H2 : In x (diff s s')
+  H4 : true = true
+  ============================
+   (true = true)
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H3 : In x (diff s s') -> false = true
+  H5 : false = true -> In x (diff s s')
+  H : In x l -> In x s
+  H0 : In x s' -> false = true
+  H6 : false = true -> In x s'
+  H1 : In x (diff s s') -> In x s /\ ~ In x s'
+  H7 : In x s /\ ~ In x s' -> In x (diff s s')
+  H2 : In x (diff s s')
+  H4 : true = true
+  ============================
+   (true = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H3 : In x (diff s s') -> false = true
+  H5 : false = true -> In x (diff s s')
+  H : In x l -> In x s
+  H0 : In x s' -> false = true
+  H6 : false = true -> In x s'
+  H1 : In x (diff s s') -> In x s /\ ~ In x s'
+  H7 : In x s /\ ~ In x s' -> In x (diff s s')
+  H2 : In x (diff s s')
+  H4 : true = true
+  ============================
+   (true = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H3 : In x (diff s s') -> false = true
+  H5 : false = true -> In x (diff s s')
+  H : In x l -> In x s
+  H0 : In x s' -> false = true
+  H6 : false = true -> In x s'
+  H1 : In x (diff s s') -> In x s /\ ~ In x s'
+  H7 : In x s /\ ~ In x s' -> In x (diff s s')
+  H2 : In x (diff s s')
+  H4 : true = true
+  ============================
+   (true = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H3 : In x (diff s s') -> false = true
+  H5 : false = true -> In x (diff s s')
+  H : In x l -> In x s
+  H0 : In x s' -> false = true
+  H6 : false = true -> In x s'
+  H1 : In x (diff s s') -> In x s /\ ~ In x s'
+  H7 : In x s /\ ~ In x s' -> In x (diff s s')
+  H2 : In x (diff s s')
+  H4 : true = true
+  ============================
+   (true = true)
+
+
+Debug:

@@ -1,0 +1,173 @@
+======== SAMPLE 1 ========
+)
+
+
+Debug: Going to execute:
+l
+
+
+TcDebug (3) > 
+Debug: Level 3: l
+ has value 
+(InT x -> t))
+
+
+Debug: Level 1: l
+ has value 
+InT x
+
+
+Goal:
+  
+  w : E.t
+  x : E.t
+  y : E.t
+  z : E.t
+  r : E.t
+  s : t
+  H0 : s == y
+  H1 : s == z
+  H2 : s == z
+  H3 : x == y
+  H4 : z == x
+  ============================
+   (s == s)
+
+
+Goal:
+  
+  w : E.t
+  x : E.t
+  y : E.t
+  z : E.t
+  r : E.t
+  s : t
+  H0 : s == y
+  H1 : s == z
+  H2 : s == z
+  H3 : x == y
+  H4 : z == x
+  H5 : x == y
+  H6 : y == x
+  ============================
+   (s == s)
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  w : E.t
+  x : E.t
+  y : E.t
+  z : E.t
+  r : E.t
+  s : t
+  H0 : s == y
+  H1 : s == z
+  H2 : s == z
+  H3 : x == y
+  H4 : z == x
+  H5 : x == y
+  H6 : y == x
+  ============================
+   (s == s)
+
+
+Debug: Going to execute:
+clear H || fail 1
+
+
+TcDebug (1) > 
+Goal:
+  
+  w : E.t
+  x : E.t
+  y : E.t
+  z : E.t
+  r : E.t
+  s : t
+  H0 : s == y
+  H1 : s == z
+  H2 : s == z
+  H3 : x == y
+  H4 : z == x
+  H5 : x == y
+  H6 : y == x
+  ============================
+   (s == s)
+
+
+Debug: Going to execute:
+clear H
+
+
+TcDebug (1) > 
+Goal:
+  
+  w : E.t
+  x : E.t
+  y : E.t
+  z : E.t
+  r : E.t
+  s : t
+  H0 : s == y
+  H1 : s == z
+  H2 : s == z
+  H3 : x == y
+  H4 : z == x
+  H5 : x == y
+  H6 : y == x
+  ============================
+   (s == s)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  w : E.t
+  x : E.t
+  y : E.t
+  z : E.t
+  r : E.t
+  s : t
+  H0 : s == y
+  H1 : s == z
+  H2 : s == z
+  H3 : x == y
+  H4 : z == x
+  H5 : x == y
+  H6 : y == x
+  ============================
+   (s == s)
+
+
+Debug: Going to execute:
+progress rewrite (solve [ at_var z 1; recursion_clear_l | rewrite (solve [ f' ]) ]); hypothesis_ring_pow_2
+
+
+TcDebug (1) > 
+Goal:
+  
+  w : E.t
+  x : E.t
+  y : E.t
+  z : E.t
+  r : E.t
+  s : t
+  H0 : s == y
+  H1 : s == z
+  H2 : s == z
+  H3 : x == y
+  H4 : z == x
+  H5 : x == y
+  H6 : y == x
+  ============================
+   (s ==

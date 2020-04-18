@@ -1,0 +1,134 @@
+======== SAMPLE 1 ========
+
+  H : In y m2 -> In y eqn
+  H3 : NoDupA eqn
+  H1 : NoDupA eqn
+  H2 : InA eqn l
+  H6 : InA eqn1 l
+  ============================
+   (eqA x x' [x] <-> InA eqk (x :: nil))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  x : A
+  y : A
+  l : list A
+  H : In y m2 -> In y eqn
+  H3 : NoDupA eqn
+  H1 : NoDupA eqn
+  H2 : InA eqn l
+  H6 : InA eqn1 l
+  ============================
+   (eqA x x' [x] <-> InA eqk (x :: nil))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  x : A
+  y : A
+  l : list A
+  H : In y m2 -> In y eqn
+  H3 : NoDupA eqn
+  H1 : NoDupA eqn
+  H2 : InA eqn l
+  H6 : InA eqn1 l
+  ============================
+   (eqA x x' [x] <-> InA eqk (x :: nil))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  x : A
+  y : A
+  l : list A
+  H : In y m2 -> In y eqn
+  H3 : NoDupA eqn
+  H1 : NoDupA eqn
+  H2 : InA eqn l
+  H6 : InA eqn1 l
+  ============================
+   (eqA x x' [x] <-> InA eqk (x :: nil))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  x : A
+  y : A
+  l : list A
+  H : In y m2 -> In y eqn
+  H3 : NoDupA eqn
+  H1 : NoDupA eqn
+  H2 : InA eqn l
+  H6 : InA eqn1 l
+  ============================
+   (eqA x x' [x] <-> InA eqk (x :: nil))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  x : A
+  y : A
+  l : list A
+  H : In y m2 -> In y eqn
+  H3 : NoDupA eqn
+  H1 : NoDupA eqn
+  H2 : InA eqn l
+  H6 : InA eqn1 l
+  ============================
+   (eqA x x' [x] <-> InA eqk (x :: nil))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A

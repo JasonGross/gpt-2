@@ -1,0 +1,159 @@
+======== SAMPLE 1 ========
+   (p == n -> p - p)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H0 : 0 < n
+  H1 : n == 0
+  H : m == 0
+  ============================
+   (p == n -> p - p)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H0 : 0 < n
+  H1 : n == 0
+  H : m == 0
+  ============================
+   (p == n -> p - p)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H0 : 0 < n
+  H1 : n == 0
+  H : m == 0
+  ============================
+   (p == n -> p - p)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H0 : 0 < n
+  H1 : n == 0
+  H : m == 0
+  ============================
+   (p == n -> p - p)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H0 : 0 < n
+  H1 : n == 0
+  H : m == 0
+  ============================
+   (p == n -> p - p)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H0 : 0 < n
+  H1 : n == 0
+  H : m == 0
+  ============================
+   (p == n -> p - p)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H0 : 0 < n
+  H1 : n == 0
+  H : m == 0
+  ============================
+   (p == n -> p - p)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+  m : t
+  H0 : 0 < n
+  H1 : n == 0
+  H : m == 0
+  ============================
+   (p == n -> p - p)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  R : forall n : t, 0 == n <-> n == 0
+  n : t
+ 

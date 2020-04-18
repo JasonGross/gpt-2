@@ -1,0 +1,83 @@
+======== SAMPLE 1 ========
+)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  f : t -> t
+  g : E.t -> E.t -> bool
+  Hf : Proper (E.eq ==> Logic.eq) f
+  m : t
+  Hm : s1 [<=] m
+  s2 : t
+  Hs2 : s2 [<=] m
+  H : forall a : elt, In a (add x (add x s1) -> False) -> E.eq (f x) (f x)
+  H0 : forall a : elt,
+       In a s2 ->
+       E.eq (fst (a, b)) (fst (a0, b0)) ->
+       E.eq (fst (a0, b0)) (fst e) -> eval_f (map2_opt (add x e m) o fst)
+  H1 : (E.eq (fst (a, b)) e) (fst (a0, b0))
+  ============================
+   (In a (add e m) <->
+    (E.eq (fst (a, b)) (fst (a0, b0)) /\ eval_f (map2_opt (add x e m) o fst) (add e e'))
+
+
+Debug: Going to execute:
+elim id
+
+
+TcDebug (1) > 
+Debug: Evaluated term: H
+
+Goal:
+  
+  f : t -> t
+  g : E.t -> E.t -> bool
+  Hf : Proper (E.eq ==> Logic.eq) f
+  m : t
+  Hm : s1 [<=] m
+  s2 : t
+  Hs2 : s2 [<=] m
+  H : forall a : elt, In a (add x (add x s1) -> False) -> E.eq (f x) (f x)
+  H0 : forall a : elt,
+       In a s2 ->
+       E.eq (fst (a, b)) (fst (a0, b0)) ->
+       E.eq (fst (a0, b0)) (fst e) -> eval_f (map2_opt (add x e m) o fst)
+  H1 : (E.eq (fst (a, b)) e) (fst (a0, b0))
+  ============================
+   (E.eq (fst (a, b)) (fst (a0, b0)) ->
+    E.eq (fst (a, b)) (fst (a0, b0)) /\ eval_f (map2_opt (add x e m) o fst) (add e e'))
+
+
+Debug: Going to execute:
+do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  f : t -> t
+  g : E.t -> E.t -> bool
+  Hf : Proper (E.eq ==> Logic.eq) f
+  m : t
+  Hm : s1 [<=] m
+  s2 : t
+  Hs2 : s2 [<=] m
+  H : forall a : elt, In a (add x (add x s1) -> False) -> E.eq (f x) (f x)
+  H0 : forall a : elt,
+       In a s2 ->
+       E.eq (fst (a, b)) (fst (a0, b0)) ->
+       E.eq (fst (a, b)) (fst e) -> eval_f (map2_opt (add x e m) o fst) (add e e'))
+  H1 : (E.eq (fst (a, b)) e) (fst (a0, b0))
+  ============================
+   (E.eq (fst (a, b)) (fst (a0, b0)) ->
+    E.eq (f

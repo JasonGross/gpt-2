@@ -1,0 +1,152 @@
+======== SAMPLE 1 ========
+ m') f l
+  IHf : forall f' : t  l' -> bool
+  h : t  r : t  m0 : t  H0 : l
+  H1 : False
+  ============================
+   (- e = e0 - r + - e)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  n : t
+  l : t
+  _x : I.t
+  rl : t
+  rlr : t
+  rsub : t
+  rdiv : t
+  rinv : t
+  st : t
+  H0 : r
+  H : l
+  H2 : rl
+  H3 : rlr
+  H4 : st
+  H5 : r ==> l
+  x : elt
+  H6 : _
+  H7 : e = x
+  H10 : r ==> y
+  H9 : make_conj (l : t) l
+  H11 : l ==> x
+  H0 : r ==> y
+  H8 : r ==> x
+  ============================
+   (- e = e0 - r + - e)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (3) > 
+Goal:
+  
+  n : t
+  l : t
+  _x : I.t
+  rl : t
+  rlr : t
+  rsub : t
+  rdiv : t
+  rinv : t
+  st : t
+  H0 : r
+  H : l
+  H2 : rl
+  H3 : rlr
+  H4 : st
+  H5 : r ==> l
+  x : elt
+  H6 : _
+  H7 : e = x
+  H10 : r ==> y
+  H9 : make_conj (l : t) l
+  H11 : l ==> x
+  H0 : r ==> y
+  H8 : r ==> x
+  ============================
+   (- e = e0 - r + - e)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  n : t
+  l : t
+  _x : I.t
+  rl : t
+  rlr : t
+  rsub : t
+  rdiv : t
+  rinv : t
+  st : t
+  H0 : r
+  H : l
+  H2 : rl
+  H3 : rlr
+  H4 : st
+  H5 : r ==> l
+  x : elt
+  H6 : _
+  H7 : e = x
+  H10 : r ==> y
+  H9 : make_conj (l : t) l
+  H11 : l ==> x
+  H0 : r ==> y
+  H8 : r ==> x
+  ============================
+   (- e = e0 - r + - e)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  n : t
+  l : t
+  _x : I.t
+  rl : t
+  rlr : t
+  rsub : t
+  rdiv : t
+  rinv : t
+  st : t
+  H0 : r
+  H : l
+  H2 : rl
+  H3 : rlr
+  H4 : st
+  H5 : r ==> l
+  x : elt
+  H6 : _
+  H7 : e = x
+  H10 : r ==> y
+  H9 : make_conj (l : t) l
+  H11 : l ==> x
+  H0 : r ==> y
+  H8 : r ==> x
+  ============================
+   (- e = e0 - r + - e)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>

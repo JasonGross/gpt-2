@@ -1,0 +1,124 @@
+======== SAMPLE 1 ========
+_tree x1 r1
+  H : X.lt x2 x1
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 Leaf x1 r1) -> InT a (Node c2 l2 x2 r2)
+  a : elt
+  H4 : InT a r1
+  H10 : InT a l2
+  ============================
+   (InT a l2)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : InT x1 l2
+  H6 : InT x2 r2
+  H1 : X.eq x2 a
+  H : X.lt x2 x1
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 Leaf x1 r1) -> InT a (Node c2 l2 x2 r2)
+  a : elt
+  H4 : InT a r1
+  H10 : InT a l2
+  ============================
+   (InT a l2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : InT x1 l2
+  H6 : InT x2 r2
+  H1 : X.eq x2 a
+  H : X.lt x2 x1
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 Leaf x1 r1) -> InT a (Node c2 l2 x2 r2)
+  a : elt
+  H4 : InT a r1
+  H10 : InT a l2
+  ============================
+   (InT a l2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : InT x1 l2
+  H6 : InT x2 r2
+  H1 : X.eq x2 a
+  H : X.lt x2 x1
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 Leaf x1 r1) -> InT a (Node c2 l2 x2 r2)
+  a : elt
+  H4 : InT a r1
+  H10 : InT a l2
+  ============================
+   (InT a l2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : InT x1 l2
+  H6 : InT x2 r2
+  H1 : X.eq x2 a
+  H : X.lt x2 x1
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 Leaf x1 r1) -> InT a (Node c2 l2 x2 r2)
+  a : elt
+ 

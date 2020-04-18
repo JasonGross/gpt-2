@@ -1,0 +1,86 @@
+======== SAMPLE 1 ========
+ C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : BinNums.N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  T : Type
+  env : PolEnv
+  a : NFormula
+  l : list NFormula
+  tg : T
+  F := fun (x : NFormula) (acc : list (list (NFormula * T))) =>
+       if check_inconsistent x then acc else ((x, tg) :: nil) :: acc
+    : NFormula -> list (list (NFormula * T)) -> list (list (NFormula * T))
+  G := fun x : NFormula => eval_nformula env x -> False : NFormula -> Prop
+  EQ : check_inconsistent a = false
+  H : eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l) ->
+      make_conj G l
+  H2 : eval_nformula env a -> False
+  H3 : make_conj G l
+  H1 : eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l)
+  ============================
+   (make_conj G l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  C_of_nat ~= SOR 0 1 rplus rtimes rminus ropp
+  Cpow : Type
+  Cp_phi : BinNums.N -> Cpow
+  subst_l : PolC Cpow
+  Gpow : PExpr Z
+  Cp_phi_pow : R -> Cpow -> Cpow -> R
+  pow_th : power_theory 1 rmul req Cp_phi_pow
+  P : Pol
+  Pmul_th : PExpr Z -> forall (k : positive) (l : list NFormula) (f : NFormula),
+         pow_th (fun x : NFormula => eval_nformula env x -> False)
+  Pmul_th : PExpr Z -> forall (k : positive) (l : list NFormula) (f : NFormula),
+         pow_th (fun x : NFormula => eval_nformula env x -> False)
+  Pmul_th : PExpr Z -> forall (k : positive) (l : list NFormula) (f : NFormula),
+         pow_th (fun x : NFormula => eval_nformula env x -> False)
+  P2 : Pol
+  P3 : Pol
+  G : Pol
+  EQ : check_inconsistent a = false
+  H : eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l) ->
+      make_conj G l
+  H2 : eval_nformula env a -> False
+  H3 : make_conj G l
+  H1 : eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l)
+  ============================
+   (make_conj G l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  R : Type
+  rO : R
+

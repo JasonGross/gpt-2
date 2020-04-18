@@ -1,0 +1,173 @@
+======== SAMPLE 1 ========
+=
+    (forall b : t, b < 0 -> b - mem b = true ->
+    forall a : t, a < 2 ^ n -> a <= a + b -> n <= 0)
+
+
+Debug: Going to execute:
+intros a b l
+
+
+TcDebug (0) > 
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+   (n <= m)
+
+
+Debug: Going to execute:
+now rewrite pow_pos_th in m, 0, a
+
+
+TcDebug (0) > 
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+   (n <= m)
+
+
+Debug: Going to execute:
+rewrite pow_pos_th in m, 0, a
+
+
+TcDebug (0) > 
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+   (n <= m)
+
+
+Debug: Going to execute:
+now rewrite pow_pos_th in m, 0, a
+
+
+TcDebug (0) > 
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+   (n <= m)
+
+
+Debug: Going to execute:
+rewrite pow_pos_th in m, 0, a
+
+
+TcDebug (0) > 
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+   (n <= m)
+
+
+Debug: Going to execute:
+rewrite pow_pos_th in m, 0, a
+
+
+TcDebug (0) > 
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+   (n <= m)
+
+
+Debug: Going to execute:
+rewrite pow_pos_th in m, 0, a
+
+
+TcDebug (0) > 
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+   (n <= m)
+
+
+Debug: Going to execute:
+rewrite pow_pos_th in m, 0
+
+
+TcDebug (0) > 
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+   (n <= m)
+
+
+Debug: Going to execute:
+t; easy
+
+
+TcDebug (0) > 
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+   (n <= m)
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (0) > 
+Debug: Evaluated term: 0
+
+Debug: Evaluated term: 0
+
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+    (n <= m)
+
+
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+    (n <= m)
+
+
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+    (n <= m)
+
+
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+    (n <= m)
+
+
+Debug: Going to execute:
+easy
+
+
+TcDebug (0) > 
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+    (n <= m)
+
+
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+    (n <= m)
+
+
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+    (n <= m)
+
+
+Goal:
+    n : t  m : t  H : 1 => 1
+  ============================
+    (n <= m)
+
+
+Debug:
+Going to execute:
+let rec use_hyp :=
+ match type of lemma with
+ | context [ hypo_proof := ?ty ] =>
+     fun proj =>

@@ -1,0 +1,144 @@
+======== SAMPLE 1 ========
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  e : (height r + 2 <? height (Node _x ll lx Leaf)) = true
+  e1 : (height Leaf <=? height r) = false
+  y : elt
+  H : InT y (Node _x ll lx Leaf)
+  ============================
+   (InT y r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  e : (height r + 2 <? height (Node _x ll lx Leaf)) = true
+  e1 : (height Leaf <=? height r) = false
+  y : elt
+  H : InT y (Node _x ll lx Leaf)
+  ============================
+   (InT y r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  e : (height r + 2 <? height (Node _x ll lx Leaf)) = true
+  e1 : (height Leaf <=? height r) = false
+  y : elt
+  H : InT y (Node _x ll lx Leaf)
+  ============================
+   (InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; split
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  e : (height r + 2 <? height (Node _x ll lx Leaf)) = true
+  e1 : (height Leaf <=? height r) = false
+  y : elt
+  H : InT y (Node _x ll lx Leaf)
+  ============================
+   (InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  e : (height r + 2 <? height (Node _x ll lx Leaf)) = true
+  e1 : (height Leaf <=? height r) = false
+  y : elt
+  H : InT y (Node _x ll lx Leaf)
+  ============================
+   (InT y r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  e : (height r + 2 <? height (Node _x ll lx Leaf)) = true
+  e1 : (height Leaf <=? height r) = false
+  y : elt
+  H : InT y (Node _x ll lx Leaf)
+  ============================
+   (InT y r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  e : (height r +

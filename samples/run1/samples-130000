@@ -1,0 +1,123 @@
+======== SAMPLE 1 ========
+ nat,
+    Sorted (min_aux (x :: l)%list n = Some x ->
+    x <> 0 /\ min_aux nil l = true -> npe)
+
+
+Debug: Going to execute:
+fun _ => TFV t2 ltac:(TFV t1 fv)
+
+
+TcDebug (13) > 
+Goal:
+  
+  a : t
+  n : t
+  Hn : 0 <= n
+  EQ : a == n * (a / 2 ^ n))
+  LE : 0 <= a
+  LT : 0 < - n
+  y : t
+  H : 0 < 1
+  H0 : 1 < 2
+  H1 : 2 == 0
+  ============================
+   (0 < 2)
+
+
+Debug: Going to execute:
+f ltac:(())
+
+
+TcDebug (11) > 
+Goal:
+  
+  a : t
+  n : t
+  Hn : 0 <= n
+  EQ : a == n * (a / 2 ^ n))
+  LE : 0 <= a
+  LT : 0 < - n
+  y : t
+  H : 0 < 1
+  H0 : 1 < 2
+  H1 : 2 == 0
+  ============================
+   (0 < 2)
+
+
+Debug: Going to execute:
+TFV t2 ltac:(TFV t1 fv)
+
+
+TcDebug (12) > 
+Goal:
+  
+  a : t
+  n : t
+  Hn : 0 <= n
+  EQ : a == n * (a / 2 ^ n))
+  LE : 0 <= a
+  LT : 0 < - n
+  y : t
+  H : 0 < 1
+  H0 : 1 < 2
+  H1 : 2 == 0
+  ============================
+   (0 < 2)
+
+
+Debug:
+Going to execute:
+fun t fv =>
+  let f :=
+   match Cst t with
+   | NotConstant =>
+       match t with
+       | rO => fun _ => fv
+       | rI => fun _ => fv
+       | add ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+       | mul ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+       | sub ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+       | opp ?t1 => fun _ => TFV t1 fv
+       | pow ?t1 ?n =>
+           match CstPow n with
+           | NotConstant => fun _ => AddFvTail t fv
+           | _ => fun _ => TFV t1 fv
+           end
+       | _ => fun _ => AddFvTail t fv
+       end
+   | _ => fun _ => fv
+   end
+  in
+  f ltac:(())
+
+
+TcDebug (13) > 
+Goal:
+  
+  a : t
+  n : t
+  Hn : 0 <= n
+  EQ : a == n * (a / 2 ^ n))
+  LE : 0 <= a
+  LT : 0 < - n
+  y : t
+  H : 0 < 1
+  H0 : 1 < 2
+  H1 : 2 == 0
+  ============================
+   (0 < 2)
+
+
+Debug:
+Going to execute:
+fun t fv =>
+  let f :=
+   match Cst t with
+   | NotConstant =>
+       match t with
+       | rO => fun _ => fv
+       | rI => fun _ => fv
+       | add ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+       | mul ?t1 ?t2 => fun _ => TF

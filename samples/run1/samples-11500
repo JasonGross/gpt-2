@@ -1,0 +1,118 @@
+======== SAMPLE 1 ========
+ make a change X.lt x a
+  H5 : Ok l
+  H4 : Ok r
+  H2 : X.eq y x -> False
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (ins x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (ins x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok l
+  H4 : Ok r
+  H2 : X.eq y x -> False
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (ins x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (ins x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok l
+  H4 : Ok r
+  H2 : X.eq y x -> False
+  ============================
+   (X.eq y x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (ins x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (ins x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok l
+  H4 : Ok r
+  H2 : X.eq y x -> False
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (ins x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (ins x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok l
+  H4 : Ok r
+  H2 : X.eq y x -> False
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x

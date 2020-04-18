@@ -1,0 +1,120 @@
+======== SAMPLE 1 ========
+ forall x0 : X.t,
+         lt x0 x \/ InA X.eq x0 ltac:(NotConstant
+           lt x0 (Bk l x0 d s2)
+  H0 : InA X.eq x l
+  ============================
+   (InA X.eq x l1 /\ ~ (X.eq x x0 \/ InA X.eq x l2) \/
+    X.eq x0 x \/ InA X.eq x acc)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; split
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  d : elt
+  s2 : t
+  s1 : t
+  s2 : t
+  s3 : t
+  a : E.t
+  H : In a s2 ->
+       In a s3
+  H1 : In a s2
+  H2 : In a s2 ->
+       In a s3
+  E : In a s2
+  ============================
+   (InA X.eq x l1 /\ ~ (X.eq x x0 \/ InA X.eq x l2) \/
+    X.eq x0 x \/ InA X.eq x acc)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  d : elt
+  s2 : t
+  s1 : t
+  s2 : t
+  s3 : t
+  a : E.t
+  H : In a s2 ->
+       In a s3
+  H1 : In a s2
+  H2 : In a s2 ->
+       In a s3
+  E : In a s2
+  ============================
+   (InA X.eq x l1 /\ ~ (X.eq x x0 \/ InA X.eq x l2) \/
+    X.eq x0 x \/ InA X.eq x acc)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  d : elt
+  s2 : t
+  s1 : t
+  s2 : t
+  s3 : t
+  a : E.t
+  H : In a s2 ->
+       In a s3
+  H1 : In a s2
+  H2 : In a s2 ->
+       In a s3
+  E : In a s2
+  ============================
+   (InA X.eq x l1 /\ ~ (X.eq x x0 \/ InA X.eq x0 l2) \/
+    X.eq x0 x \/ InA X.eq x acc)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  d : elt
+  s2 : t
+  s1 : t
+  s2 : t
+  s3 : t
+  a : E.t
+  H : In a s2 ->
+       In a s3
+  H1 : In a s2
+  H2 : In a s2 ->
+       In a s3
+  E : In a s2
+  ============================
+   (InA X.eq x l1 /\ ~ (X.eq x x0 \/ InA X.eq x0 l2) \/
+    X.eq x0 x \/ InA X.eq x acc)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug

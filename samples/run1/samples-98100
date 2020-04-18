@@ -1,0 +1,124 @@
+======== SAMPLE 1 ========
+ <-> InT y l /\ X.lt x y
+  H5 : X.lt x y0
+  H : InT y0 l
+  ============================
+   (InT y0 l /\ X.lt x y0)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  ll : t elt
+  o : option elt
+  rl : t elt
+  e1 : split x l = << ll, o, rl >>
+  IHt : bst l -> forall y : key, In y rl <-> In y l /\ X.lt y x
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : In y0 (Node l y d r _x) /\ X.lt y0 x
+  H5 : X.lt x y0
+  H : InT y0 l
+  ============================
+   (InT y0 l /\ X.lt x y0)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  ll : t elt
+  o : option elt
+  rl : t elt
+  e1 : split x l = << ll, o, rl >>
+  IHt : bst l -> forall y : key, In y rl <-> In y l /\ X.lt y x
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : In y0 (Node l y d r _x) /\ X.lt y0 x
+  H5 : X.lt x y0
+  H : InT y0 l
+  ============================
+   (InT y0 l /\ X.lt x y0)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  ll : t elt
+  o : option elt
+  rl : t elt
+  e1 : split x l = << ll, o, rl >>
+  IHt : bst l -> forall y : key, In y rl <-> In y l /\ X.lt y x
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H2 : lt_tree y l
+  H3 : gt_tree y r
+  H4 : In y0 (Node l y d r _x) /\ X.lt y0 x
+  H5 : X.lt x y0
+  H : InT y0 l
+  ============================
+   (InT y0 l /\ X.lt x y0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x

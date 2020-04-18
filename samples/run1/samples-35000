@@ -1,0 +1,123 @@
+======== SAMPLE 1 ========
+ x y
+  H5 : (forall x0 : elt, In x0 (Sorted l1 l2') <->
+        In x0 (Sorted l1 l2')
+  y : elt
+  H6 : InA y (x1 :: l1) -> False
+  H7 : InA y l1 -> False
+  H10 : InA y l2' -> False
+  H8 : InA a l
+  H9 : eqA a y
+  H12 : eqA a x
+  H13 : False
+  H1 : InA a l1
+  ============================
+   (eqA a x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : elt
+  s : list elt
+  IH : forall s' : t, Ok s -> Ok s' -> equal s s' = true <-> Equal s s'
+  x' : elt
+  s' : list elt
+  H : Sorted X.lt s'
+  H0 : Inf x' s'
+  H2 : Sorted X.lt s
+  H1 : Inf x s
+  H3 : Inf x s
+  C : X.eq x x'
+  y : elt
+  H6 : InA y (x1 :: l1) -> False
+  H7 : InA y l1 -> False
+  H10 : InA y l2' -> False
+  H8 : InA a l
+  H9 : eqA a y
+  H12 : eqA a x
+  H13 : False
+  H1 : InA a l1
+  ============================
+   (eqA a x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : elt
+  s : list elt
+  IH : forall s' : t, Ok s -> Ok s' -> equal s s' = true <-> Equal s s'
+  x' : elt
+  s' : list elt
+  H : Sorted X.lt s'
+  H0 : Inf x' s'
+  H2 : Sorted X.lt s
+  H1 : Inf x s
+  H3 : Inf x s
+  C : X.eq x x'
+  y : elt
+  H6 : InA y (x1 :: l1) -> False
+  H7 : InA y l1 -> False
+  H10 : InA y l2' -> False
+  H8 : InA a l
+  H9 : eqA a y
+  H12 : eqA a x
+  H13 : False
+  H1 : InA a l1
+  ============================
+   (eqA a x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : elt
+  s : list elt
+  IH : forall s' : t, Ok s -> Ok s' -> equal s s' = true <-> Equal s s'
+  x' : elt
+  s' : list elt
+  H : Sorted X.lt s'
+  H0 : Inf x' s'
+  H2 : Sorted X.lt s
+  H1 : Inf x s
+  H3 : Inf x s
+  C : X.eq x x'
+  y : elt
+  H6 : InA y (x1 :: l1) -> False
+  H7 : InA y l1 -> False
+  H10 : InA y l2' -> False
+  H8 : InA a l
+  H9 : eqA a y
+  H12 : eqA a x
+  H13 : False
+  H1 : InA a l1
+  ============================
+   (eqA a x)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : elt
+  s :

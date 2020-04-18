@@ -1,0 +1,105 @@
+======== SAMPLE 1 ========
+ rl
+  ============================
+   ((X.eq x x0 \/ In x0 rl) \/
+    (X.eq x0 x \/ In x0 rr) \/ In x rl \/ X.eq x rx \/ In x rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  e : (height (Node _x rl rx rr) + 2 <? height l) = false
+  e2 : (height rl <=? height rr) = true
+  y : elt
+  H : X.eq y x \/ InT y rl \/ In y rr
+  ============================
+   ((X.eq x x0 \/ In x0 rl) \/
+    (X.eq x0 x \/ In x0 rr) \/ In x rl \/ X.eq x rx \/ In x rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  e : (height (Node _x rl rx rr) + 2 <? height l) = false
+  e2 : (height rl <=? height rr) = true
+  y : elt
+  H : X.eq y x \/ InT y rl \/ In y rr
+  ============================
+   ((X.eq x x0 \/ In x0 rl) \/
+    (X.eq x0 x \/ In x0 rr) \/ In x rl \/ X.eq x rx \/ In x rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  e : (height (Node _x rl rx rr) + 2 <? height l) = false
+  e2 : (height rl <=? height rr) = true
+  y : elt
+  H : X.eq y x \/ InT y rl \/ In y rr
+  ============================
+   ((X.eq x x0 \/ In x0 rl) \/
+    (X.eq x0 x \/ In x0 rr) \/ In x rl \/ X.eq x rx \/ In x rr)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  e : (height (Node _x rl rx rr) + 2 <? height l) = false
+  e2 : (height rl <=? height rr) = true
+  y : elt
+  H : X.eq y x \/ InT y rl \/ In y rr
+  ============================
+   ((X.eq x x0 \/ In x0 rl) \/
+    (X.eq x0 x \/ In x0 rr) \/ In x rl \/ X.eq x rx \/ In x rr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  e : (height (Node _x rl rx rr) + 2 <? height l) = false
+  e2 :

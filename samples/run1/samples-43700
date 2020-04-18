@@ -1,0 +1,154 @@
+======== SAMPLE 1 ========
+ : Prop
+  m1 : t elt
+  m2 : t elt
+  k : key
+  e : elt
+  i : A
+  H : E.eq k k' -> False
+  H0 : MapsTo k e m1
+  k' : key
+  e' : elt
+  H1 : MapsTo k' e' m2
+  H2 : In k' m1 -> False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  i : A
+  H : E.eq k k' -> False
+  H0 : MapsTo k e m1
+  k' : key
+  e' : elt
+  H1 : MapsTo k' e' m2
+  H2 : In k' m1 -> False
+  ============================
+   False
+
+
+Debug: Going to execute:
+assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  i : A
+  H : E.eq k k' -> False
+  H0 : MapsTo k e m1
+  k' : key
+  e' : elt
+  H1 : MapsTo k' e' m2
+  H2 : In k' m1 -> False
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::assumption@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  i : A
+  H : E.eq k k' -> False
+  H0 : MapsTo k e m1
+  k' : key
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  i : A
+  H : E.eq k k' -> False
+  H0 : MapsTo k e m1
+  k' : key
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  i : A
+  H : E.eq k k' -> False
+  H0 : MapsTo k e m1
+  k' : key
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  i : A
+  H : E.eq k k' -> False
+  H0 : MapsTo k e m1
+  k' : key
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  i : A
+  H : E.eq k k' -> False
+  H0 : MapsTo k e m1
+  k' : key
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  i : A
+  H : E.eq k k' -> False
+  H0 : MapsTo k e m1
+  k' : key
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  i : A
+  H : E.eq k k' -> False
+  H0 : MapsTo k e m1
+  k' : key
+  elt : Type
+  m : t elt
+  m' : t elt
+  x : key
+  e : elt
+  i : A
+  H : E.eq k k' -> False
+  H0 : MapsTo k e m1
+  k' : key
+  elt : Type
+  ============================
+   (MapsTo k' ((k, e) :: m'))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.axioms> flags
+

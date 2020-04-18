@@ -1,0 +1,41 @@
+======== SAMPLE 1 ========
+1:?x < Z.pos ?y
+  |- _ =>
+      match goal with
+      | H:x < Z.pos |- _ => fail 1
+      | _ => generalize (lt_le_monoise 0 1 Z.sgn)
+      end
+    | _ => generalize (le_lt_trans _ (x :: nil))
+    end
+| Z.max ?x ?y => let za := AddFvTail a in
+               xor za := AddFvTail a in
+               za := za'
+               xor za' : Z -> Z -> bool
+               xor za' : A -> Z -> bool
+               xor (lemma x' e' za)
+                :: x' :: nil => za'
+                  xor (lemma x' e' za)
+                  :: x' :: nil => za'
+                    :: x :: nil => x
+                       x'0 : A
+                        :: z1 :: Z :: Z2 :: Z.pos x2 :: nil),
+                (x' :: nil) 
+                 (x :: nil) => num (x'1 :: nil)
+                     :: z1 :: Z :: Z.pos x2 :: Z.pos y2 :: nil)
+                       (Ring_polynom.Pc 0))) 1 
+                   (Ring_polynom.Pc 0))
+                  (Ring_polynom.Pc 0))
+  res := Ring_polynom.PX (Ring_polynom.Pc 1) 1
+           (Ring_polynom.Pc 0) : Ring_polynom.Pol Z
+  res_eq : Ring_polynom.norm_subst 0 1 Z.add Z.mul Z.sub Z.opp Zeq_bool
+              Z.quotrem ring_subst_niter list_hyp_norm 
+              (Ring_polynom.PEX Z 1) = res
+  thm : Ring_polynom.PEeval 0 1 Z.add Z.mul Z.sub Z.opp 
+          (IDphi (R:=Z)) Z.of_N Z.pow
+          (x1 :: y1 :: Z.pos x2 :: Z.pos y2 :: Z.pos z2 :: Z.pos t2 :: nil)
+          (Ring_polynom.PEmul
+            (x1 :: y1 :: Z.pos x2 :: Z.pos y2 :: Z.pos z2 :: Z.pos t2 :: nil)
+           (Ring_polynom.PEmul
+             (x1 :: y1 :: Z.pos x2 :: Z.pos y2 :: Z.pos z2 :: Z.pos t2 :: nil)
+            (Ring_polynom.PEmul
+             

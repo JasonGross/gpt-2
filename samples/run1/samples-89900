@@ -1,0 +1,84 @@
+======== SAMPLE 1 ========
+        [ exact
+           id
+           | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear
+              id; (solve [ t_tauto_intuit ]) ] ]
+   | id:~ ?X1 -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (~ X1);
+             [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+   | |- ?X1 =>
+         <Coq.Init.Tauto.is_disj> flags X1; (solve
+          [ left; t_tauto_intuit | right; t_tauto_intuit ])
+   end ||
+     match goal with
+     | |- _ -> _ => intro; t_tauto_intuit
+     | |- _ => t_reduce; t_solver
+     end || t_solver
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  b : t
+  s' : t
+  H : 2 ^ s < z
+  z : t
+  H1 : 2 ^ s < z
+  H2 : 3 = Z
+  H3 : 1 = Z
+  H4 : z < z0
+  H5 : z0 = Z0
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.simplif> flags
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  b : t
+  s' : t
+  H : 2 ^ s < z
+  z : t
+  H1 : 2 ^ s < z
+  H2 : 3 = Z
+  H3 : 1 = Z
+  H4 : z < z0
+  H5 : z0 = Z0
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+fun flags =>
+  <Coq.Init.Tauto.not_dep_intros>;
+   repeat
+    (match reverse goal with
+     | id:?X1
+       |- _ =>
+           <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+     | id:_ <-> _ |- _ => elim id; do 2 intro; clear id
+     | id:~ _ |- _ => red in id
+     | id:?X1
+       |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+     | id0:?X1 -> ?X2, id1:?X1
+       |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+     | id:?X1 -> ?X2
+       |- _ =>
+           <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+            [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+     | id:?X1 -> ?X2
+       |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+     | id:?X1 <-> ?X2 -> ?X3
+       |- _ =>
+           assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+           

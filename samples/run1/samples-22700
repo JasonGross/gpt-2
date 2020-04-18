@@ -1,0 +1,143 @@
+======== SAMPLE 1 ========
+       | S -> D -> E -> EI -> P
+  ============================
+   ((D.eq D.eq E.eq nil) /\
+    ((D.eq D.eq E.eq nil) /\
+     (In a s -> In a s'))
+
+
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  x : A
+  x' : s
+  l : list s
+  H : E.eq x x'
+  H0 : In x s'
+  H2 : In x s
+  H3 : In x (map f s)
+  H0 : In x s
+  H2 : In x s'
+  H : In x s'
+  ============================
+   ((In a s -> In a s'))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  x : A
+  x' : s
+  l : list s
+  H : E.eq x x'
+  H0 : In x s'
+  H2 : In x s
+  H3 : In x (map f s)
+  H0 : In x s
+  H2 : In x s'
+  H : In x s'
+  ============================
+   ((In a s -> In a s'))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  x : A
+  x' : s
+  l : list s
+  H : E.eq x x'
+  H0 : In x s'
+  H2 : In x s
+  H3 : In x (map f s)
+  H0 : In x s
+  H2 : In x s'
+  H : In x s'
+  ============================
+   ((In a s -> In a s'))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  x : A
+  x' : s
+  l : list s
+  H : E.eq x x'
+  H0 : In x s'
+  H2 : In x s
+  H3 : In x (map f s)
+  H0 : In x s
+  H2 : In x s'
+  H : In x s'
+  ============================
+   ((In a s -> In a s'))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  x : A
+  x' : s
+  l : list s
+  H : E.eq x x'
+  H0 : In x s'
+  H2 : In x s
+  H3 : In x (map f s)
+  H0 : In x s
+  H2 : In x s'
+  H : In x s'
+  ============================
+   ((In a s -> In a s'))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  x : A
+  x' : s
+  l : list s
+  H : E.

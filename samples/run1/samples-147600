@@ -1,0 +1,140 @@
+======== SAMPLE 1 ========
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  f : elt -> bool
+  Comp : Proper (E.eq ==> Logic.eq) f
+  Comp' : Proper (E.eq ==> Logic.eq) (fun x : E.t => negb (f x))
+  s : t
+  x : elt
+  H : f x = false
+  a : elt
+  H0 : In a s
+  H2 : f a = true
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  f : elt -> bool
+  Comp : Proper (E.eq ==> Logic.eq) f
+  Comp' : Proper (E.eq ==> Logic.eq) (fun x : E.t => negb (f x))
+  s : t
+  x : elt
+  H : f x = false
+  a : elt
+  H0 : In a s
+  H2 : f a = true
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  f : elt -> bool
+  Comp : Proper (E.eq ==> Logic.eq) f
+  Comp' : Proper (E.eq ==> Logic.eq) (fun x : E.t => negb (f x))
+  s : t
+  x : elt
+  H : f x = false
+  a : elt
+  H0 : In a s
+  H2 : f a = true
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (4) > 
+Goal:
+  
+  f : elt -> bool
+  Comp : Proper (E.eq ==> Logic.eq) f
+  Comp' : Proper (E.eq ==> Logic.eq) (fun x : E.t => negb (f x))
+  s : t
+  x : elt
+  H : f x = false
+  a : elt
+  H0 : In a s
+  H2 : f a = true
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  f : elt -> bool
+  Comp : Proper (E.eq ==> Logic.eq) f
+  Comp' : Proper (E.eq ==> Logic.eq) (fun x : E.t => negb (f x))
+  s : t
+  x : elt
+  H : f x = false
+  a : elt
+  H0 : In a s
+  H2 : f a = true
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  f : elt -> bool
+  Comp : Proper (E.eq ==> Logic.eq) f
+  Comp' : Proper (E.eq ==> Logic.eq) (fun x : E.t => negb (f x))
+  s : t
+  x : elt
+  H : f x = false
+  a : elt
+  H0 : In a s
+  H2 : f a = true
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  f : elt -> bool
+  Comp : Proper (E.eq ==> Logic.eq) f
+  Comp' : Proper (E.eq ==> Logic.eq) (fun x : E.t => negb (f x))
+  s

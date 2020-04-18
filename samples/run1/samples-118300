@@ -1,0 +1,106 @@
+======== SAMPLE 1 ========
+ A
+  y : elt
+  H2 : InT y r
+  H5 : X.eq y x'
+  ============================
+   (X.eq y x' \/ InT y l \/ InT y r /\ X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (add x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (add x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H2 : InT y r
+  H5 : X.eq y x'
+  ============================
+   (X.eq y x' \/ InT y l \/ InT y r /\ X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (add x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (add x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H2 : InT y r
+  H5 : X.eq y x'
+  ============================
+   (X.eq y x' \/ InT y l \/ InT y r /\ X.eq y x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (add x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (add x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H2 : InT y r
+  H5 : X.eq y x'
+  ============================
+   (X.eq y x' \/ InT y l \/ InT y r /\ X.eq y x)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt), InT y (add x l) <-> X.eq y x \/ InT y l
+  IHr : forall (x : X.t) (y : elt), InT y (add x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H2 : InT y r
+  H5 : X.eq y x'
+  ============================
+   (X.eq y x' \/ InT y l \/ InT y r /\ X.eq y x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  i :

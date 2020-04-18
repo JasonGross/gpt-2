@@ -1,0 +1,120 @@
+======== SAMPLE 1 ========
+ forall (b : E.t) (a : A) (s' s'' : t),
+          InA x (a :: s) ->
+          ~ In x s' -> Add x s' s'' -> P s' a0 -> P s'' (f a0 a)) ->
+        NoDup l
+  x : A
+  H2 : In x s'
+  H6 : E.eq x a x \/ In x s
+  H5 : In x s'
+  H3 : In x s
+  H7 : ~ In x s'
+  H8 : eqb true x
+  H6 : False
+  ============================
+   (In a s' /\ In a s'')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  P : t -> A -> Type
+  f : elt -> A -> A
+  i : A
+  Pempty : forall s' : t, Empty s' -> P s' i
+  a : elt
+  H : In a s -> False
+  H0 : In a s -> False
+  H1 : In a s' -> In a s
+  H4 : In a s
+  H5 : In a s'
+  H7 : ~ In a s'
+  H10 : In a s
+  H9 : ~ In a s''
+  H2 : In x s'
+  H6 : E.eq x a x \/ In x s
+  H5 : In x s'
+  H3 : In x s
+  H7 : ~ In x s'
+  H8 : eqb true x
+  H6 : False
+  ============================
+   (In a s' /\ In a s'')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  P : t -> A -> Type
+  f : elt -> A -> A
+  i : A
+  Pempty : forall s' : t, Empty s' -> P s' i
+  a : elt
+  H : In a s -> False
+  H0 : In a s -> False
+  H1 : In a s' -> In a s
+  H4 : In a s
+  H5 : In a s'
+  H7 : ~ In a s'
+  H10 : In a s
+  H9 : ~ In a s''
+  H2 : In x s'
+  H6 : E.eq x a x \/ In x s
+  H5 : In x s'
+  H3 : In x s
+  H7 : ~ In x s'
+  H8 : eqb true x
+  H6 : False
+  ============================
+   (In a s' /\ In a s'')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  P : t -> A -> Type
+  f : elt -> A -> A
+  i : A
+  Pempty : forall s' : t, Empty s' -> P s' i
+  a : elt
+  H : In a s -> False
+  H0 : In a s -> False
+  H1 : In a s' -> In a s
+  H4 : In a s
+  H5 : In a s'
+  H7 : ~ In a s'
+  H10 : In a s
+  H9 : ~ In a s''
+  H2 : In x s'
+  H6 : E.eq x a x \/ In x s
+  H5 : In x s'
+  H3 : In x s
+  H7 : ~ In x s'
+  H8 : eqb true x
+  H6 : False
+  ============================
+   (In a s' /\ In a s'')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<

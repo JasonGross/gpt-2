@@ -1,0 +1,167 @@
+======== SAMPLE 1 ========
+   : In x ll  lr : list V
+  l : V x l
+  ============================
+   (In x l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::flatten_tauto_dist@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Debug: Level 2: In forall (f x) (x r) -> In x lr (f x r)
+ is the right evaluation
+
+Goal:
+  
+  a : tree
+  c : tree
+  l : tree
+  l2 : tree
+  x : X.t
+  r1 : tree
+  r2 : tree
+  P1 : X.eq x x = False
+  E : (P : tree)
+  H : ?X
+  ============================
+   (In x x r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  a : tree
+  c : tree
+  l : tree
+  l2 : tree
+  x : X.t
+  r1 : tree
+  r2 : tree
+  P1 : X.eq x x = False
+  E : (P : tree)
+  H : ?X
+  ============================
+   (In x x r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  a : tree
+  c : tree
+  l : tree
+  l2 : tree
+  x : X.t
+  r1 : tree
+  r2 : tree
+  P1 : X.eq x x = False
+  E : (P : tree)
+  H : ?X
+  ============================
+   (In x x r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  a : tree
+  c : tree
+  l : tree
+  l2 : tree
+  x : X.t
+  r1 : tree
+  r2 : tree
+  P1 : X.eq x x = False
+  E : (P : tree)
+  H : ?X
+  ============================
+   (In x x r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  a : tree
+  c : tree
+  l : tree
+  l2 : tree
+  x : X.t
+  r1 : tree
+  r2 : tree
+  P1 : X.eq x x = False
+  E : (P : tree)
+  H : ?X
+  ============================
+   (In x x r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Debug: Level 2: In forall (f x) (x r) -> In x lr (f x r)
+ is the right evaluation
+
+Goal:
+  
+  a : tree
+  c : tree
+  l : tree
+  l2 : tree
+  x : X.t
+  r1 : tree
+  r2 : tree
+  P1 : X.eq x x = False
+  E : (P : tree)
+  H : ?X
+  ============================
+   (In x x r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 2: Evaluated term: (foldr x r)
+
+Debug: Evaluated term: (foldr x r)
+
+Goal:
+  
+  a : tree
+  c : tree
+  l : tree
+  l2 : tree
+  x : X.t
+  r1 : tree
+  r2 : tree
+  P1 : X.eq x x =

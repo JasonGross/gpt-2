@@ -1,0 +1,111 @@
+======== SAMPLE 1 ========
+.lt l'
+  H1 : Inf x' l'
+  H2 : Sorted X.lt l
+  H3 : Inf x l
+  H4 : In x0 (x :: l)
+  ============================
+   (X.eq x0 x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  x : elt
+  l : list elt
+  Hrec : forall (s' : t) (x : elt),
+         Ok l -> Ok s' -> In x (union l s') <-> In x l \/ In x s'
+  s' : t
+  x' : elt
+  l' : list elt
+  Hrec' : forall x0 : elt,
+          Ok (x :: l) ->
+          Ok l' -> In x0 (union (x :: l) l') <-> In x0 (x :: l) \/ In x0 l'
+  H : X.lt x x'
+  x0 : elt
+  H0 : Sorted X.lt l'
+  H1 : Inf x' l'
+  H2 : Sorted X.lt l
+  H3 : Inf x l
+  H4 : In x0 (x :: l)
+  ============================
+   (X.eq x0 x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  x : elt
+  l : list elt
+  Hrec : forall (s' : t) (x : elt),
+         Ok l -> Ok s' -> In x (union l s') <-> In x l \/ In x s'
+  s' : t
+  x' : elt
+  l' : list elt
+  Hrec' : forall x0 : elt,
+          Ok (x :: l) ->
+          Ok l' -> In x0 (union (x :: l) l') <-> In x0 (x :: l) \/ In x0 l'
+  H : X.lt x x'
+  x0 : elt
+  H0 : Sorted X.lt l'
+  H1 : Inf x' l'
+  H2 : Sorted X.lt l
+  H3 : Inf x l
+  H4 : In x0 (x :: l)
+  ============================
+   (X.eq x0 x)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  x : elt
+  l : list elt
+  Hrec : forall (s' : t) (x : elt),
+         Ok l -> Ok s' -> In x (union l s') <-> In x l \/ In x s'
+  s' : t
+  x' : elt
+  l' : list elt
+  Hrec' : forall x0 : elt,
+          Ok (x :: l) ->
+          Ok l' -> In x0 (union (x :: l) l') <-> In x0 (x :: l) \/ In x0 l'
+  H : X.lt x x'
+  x0 : elt
+  H0 : Sorted X.lt l'
+  H1 : Inf x' l'
+  H2 : Sorted X.lt l
+  H3 : Inf x l
+  H4 : In x0 (x :: l)
+  ============================
+   (X.eq x0 x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+ 

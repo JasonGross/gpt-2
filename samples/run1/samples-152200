@@ -1,0 +1,88 @@
+======== SAMPLE 1 ========
+ H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  IHb1 : Ok (diff l1 (split x1 s2)#l)
+  IHi1 : forall y : elt,
+         InT y (diff l1 (split x1 s2)#l) <->
+         InT y l1 /\ ~ InT y (split x1 s2)#l
+  IHb2 : Ok (diff r1 (split x1 s2)#r)
+  IHi2 : forall y : elt,
+         InT y (diff r1 (split x1 s2)#r) <->
+         InT y r1 /\ ~ InT y (split x1 s2)#r
+  y : elt
+  H1 : InT y s2 ~= E.eq y x1
+  H : InT y s2
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H0 : (split x1 s2)#b = false
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  IHb1 : Ok (diff l1 (split x1 s2)#l)
+  IHi1 : forall y : elt,
+         InT y (diff l1 (split x1 s2)#l) <->
+         InT y l1 /\ ~ InT y (split x1 s2)#l
+  IHb2 : Ok (diff r1 (split x1 s2)#r)
+  IHi2 : forall y : elt,
+         InT y (diff r1 (split x1 s2)#r) <->
+         InT y r1 /\ ~ InT y (split x1 s2)#r
+  y : elt
+  H1 : InT y s2 ~= E.eq y x1
+  H : InT y s2
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H0 : (split x1 s2)#b = false
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  IHb1 : Ok (diff l1 (split x1 s2)#l)
+  IHi1 : forall y : elt,
+         InT y (diff l1 (split x1 s2)#l) <->
+         InT y l1 /\ ~ InT y (split x1 s2)#l
+  IHb2 : Ok (diff r1 (split x1 s2)#r)
+  IHi2 : forall y : elt,
+         InT y (diff r1 (split x1 s2)#r) <->
+         InT y r1 /\ ~ InT y (split x1 s2)#r
+  y : elt
+  H1 : InT y s2 ~= E.eq y x1
+  H : InT y s2
+  =========================

@@ -1,0 +1,39 @@
+======== SAMPLE 1 ========
+0 :: l0) l) (l1 ++ y :: l2 :: nil))
+          (Ring_polynom.PX (Ring_polynom.Pc 1) 1 (Ring_polynom.Pc 0))
+       : Ring_polynom.Pol Q
+  res_eq0 : Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+              (triv_div 0 1 Qeq_bool) ring_subst_niter list_hyp_norm
+              (Ring_polynom.PEX Q 1) = res0
+  thm0 : Ring_polynom.PEeval 0 1 Qplus Qmult Qminus Qopp 
+           (IDphi (R:=Q)) Z.of_N Qpower (1 # k :: nil) 
+           (Ring_polynom.PEX Q 1) ==
+        Ring_polynom.Pphi_pow 0 1 Qplus Qmult Qminus Qopp 0 1 Qeq_bool
+           (IDphi (R:=Q)) Z.of_N Qpower (get_sign_None (C:=Q)) 
+           (1 # k :: nil) res0
+  res1 := Ring_polynom.PX (Ring_polynom.Pc 1) 1 (Ring_polynom.Pc 0)
+       : Ring_polynom.Pol Q
+  res_eq1 : Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+              (triv_div 0 1 Qeq_bool) ring_subst_niter list_hyp_norm
+              (Ring_polynom.PEX Q 2) = res1
+  thm1 : Ring_polynom.PEeval 0 1 Qplus Qmult Qminus Qopp 
+           (IDphi (R:=Q)) Z.of_N Qpower (1 # k :: nil) 
+           (Ring_polynom.PEX Q 2) ==
+         Ring_polynom.Pphi_pow 0 1 Qplus Qmult Qminus Qopp 0 1 Qeq_bool
+           (IDphi (R:=Q)) Z.of_N Qpower (get_sign_None (C:=Q)) 
+           (1 # k :: nil) res1
+  res2 := Ring_polynom.PX (Ring_polynom.Pc 1) 1 (Ring_polynom.Pc 0)
+       : Ring_polynom.Pol Q
+  res_eq2 : Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+             (triv_div 0 1 Qeq_bool) ring_subst_niter list_hyp_norm
+             (Ring_polynom.PEX Q 3) = res2
+  thm2 : Ring_polynom.PEeval 0 1 Qplus Qmult Qminus Qopp 
+           (IDphi (R:=Q)) Z.of_N Qpower (1 # k :: nil) 
+           (Ring_polynom.PEX Q 3) ==
+         Ring_polynom.Pphi_pow 0 1 Qplus Qmult Qminus Qopp 0 1 Qeq_bool
+           (IDphi (R:=Q)) Z.of_N Qpower (get_sign_None (C:=Q)) 
+           (1 # k :: nil) res2
+  ============================
+   (1 # k == (1 # 3) * (1 # k) + (1 # 3) * (1 # k))%Q
+
+

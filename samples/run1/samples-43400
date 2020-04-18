@@ -1,0 +1,81 @@
+======== SAMPLE 1 ========
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+      [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+    | id:?X1 -> ?X2
+      |- _ => <Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+    | id:?X1 <-> ?X2 -> ?X3
+      |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+    | id:?X1 -> ?X2
+      |- _ =>
+          <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+           [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+    | id:?X1 -> ?X2
+      |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+    | id:?X1 <-> ?X2 -> ?X3
+      |- _ =>
+          assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+           (do 2 intro; apply id; split; assumption); clear id
+    | id:?X1 -> ?X2
+      |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+    | |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+    | |- _ <-> _ => split
+    | |- ~ _ => red
+    end; <Coq.Init.Tauto.not_dep_intros>)
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H3 : InT x rl -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x ll
+  H5 : InT x lr
+  H0 : InT x a
+  H : InT x lr
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x a) \/
+    X.eq x y \/ InT x b \/ X.eq x rx \/ InT x rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H3 : InT x rl -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x ll
+  H5 : InT x lr
+  H0 : InT x a
+  H : InT x lr
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x a) \/
+    X.eq x y \/ InT x b \/ X

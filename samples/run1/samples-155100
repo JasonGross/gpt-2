@@ -1,0 +1,86 @@
+======== SAMPLE 1 ========
+ (map f' m1) nil ->
+       (find (elt:=elt'') x0 (combine m1 m') =
+       at_least_one (find (elt:=elt) x m1) (find (elt:=elt') x0 (combine m1 m'))
+  H1 : OrderTac.interp_ord OEQ x x
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+fun x eqn =>
+  let rewr H t := generalize t; clear H; intro H in
+  match goal with
+  | H:x == _
+    |- _ =>
+        rewr H
+         (OrderTac.eq_trans (OrderTac.eq_sym eqn) H);
+         OrderTac.order_rewr x eqn
+  | H:_ == x
+    |- _ =>
+        rewr H (OrderTac.eq_trans H eqn);
+         OrderTac.order_rewr x eqn
+  | H:x ~= _
+    |- _ =>
+        rewr H
+         (OrderTac.eq_neq (OrderTac.eq_sym eqn) H);
+         OrderTac.order_rewr x eqn
+  | H:_ ~= x
+    |- _ =>
+        rewr H (OrderTac.neq_eq H eqn);
+         OrderTac.order_rewr x eqn
+  | H:x < _
+    |- _ =>
+        rewr H
+         (OrderTac.eq_le (OrderTac.eq_sym eqn) H);
+         OrderTac.order_rewr x eqn
+  | H:_ < x
+    |- _ => rewr H (OrderTac.le_eq H eqn); OrderTac.order_rewr x eqn
+  | _ => clear eqn
+  end
+
+
+TcDebug (12) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f : option elt -> option elt' -> option elt''
+  x : key
+  a : (X.t * oee')%type
+  m0 : list (X.t * oee')
+  o : option elt
+  o' : option elt'
+  H2 : Sorted (ltk (elt:=oee')) (a :: m0)
+  f' := fun p : oee' => f (fst p) (snd p) : oee' -> option elt''
+  H : (a :: m0)%type
+  H1 : OrderTac.OTF.le x k
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+let rewr H t := generalize t; clear H; intro H in
+match goal with
+| H:x == _
+  |- _ =>
+      rewr H
+       (OrderTac.eq_trans (OrderTac.eq_sym eqn) H);
+       OrderTac.order_rewr x eqn
+| H:_ == x
+  |- _ =>
+      rewr H (OrderTac.eq_trans H eqn);
+       OrderTac.order_rewr x eqn
+| H:x ~= _
+  |- _ =>
+      rewr H
+       (OrderTac.eq_neq (OrderTac.eq_sym eqn) H);
+       OrderTac.order_rewr x eqn
+| H:_ ~= x
+  |- _ => rewr H (OrderTac.neq_eq H eqn); OrderTac.order_rewr x eqn
+| H:x < _
+  |- _ =>
+   

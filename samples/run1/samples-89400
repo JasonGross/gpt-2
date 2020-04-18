@@ -1,0 +1,51 @@
+======== SAMPLE 1 ========
+2 ]) ] ]
+    | rmul ?t1 ?t2 =>
+         mkP t1 cmul l2 mkmul t2 @@ l2 @@ l1
+     | rsub ?t1 ?t2 =>
+         mkP t1 cmul l2 mkmul t2 @@ l2 @@ l1
+      | ropp ?t1 =>
+         mkP t1 cmul l2 mkmul t2 @@ ropp
+       | rpow ?t1 ?n =>
+         mkP t1 cmul l2 mkmul t2 @@ ropp
+        | rpow ?n =>
+         mkP t1 cmul l2 mkmul t2 @@ rpow
+        | pow ?t1 ?n =>
+         mkP t1 cmul l2 mkmul t2 @@ pow
+         | _ =>
+             let e1 := mkP t1 in
+             let e2 := mkP t2 in
+             Ring_polynom.PEopp e1
+      | rpow ?t1 ?n =>
+         mkP t1 cmul l2 mkmul t2 @@ l2 @@ r2 @@ (pow ?n ?n0)
+      | rpow ?n =>
+         mkP t1 cmul l2 mkmul t2 @@ r1 @@ r2 @@ (pow ?n0 ?n0)
+      | add ?t1 ?t2 =>
+         mkP t1 cmul l2 mkmul t2 @@ add (mkP t1 c1) l2 @@ add ?t3
+         in
+           {|
+          fun _ =>
+            let e1 := mkP t1 in
+            let e2 := mkP t2 in
+            Ring_polynom.PEadd e1 e2
+      | rmul ?t1 ?t2 =>
+         mkP t1 cmul l2 mkmul t2 @@ l2 @@ (pow ?t1 ?n0)
+       | rpow ?t1 ?n =>
+         mkP t1 cmul l2 mkmul t2 @@ rpow
+         | rpow ?t2 ?n =>
+          mkP t1 cmul l2 mkmul t2 @@ ropp
+         | rpow ?t3 ?n =>
+           mkP t1 cmul l2 mkmul t2 @@ rpow
+          | rpow ?t4 ?n =>
+           mkP t1 cmul l2 mkmul t2 @@ rpow
+          | rpow ?t5 ?n =>
+           lt_tree x1 l2 _x0 ->
+           InA X.eq x (inter_list l1 l2 acc) <->
+           InA X.eq x l1 /\ InA X.eq x l2 \/ InA X.eq x acc
+  ============================
+   (InA X.eq x (inter_list l1 l2 acc) <->
+    (X.eq x x1 \/ InA X.eq x l2) \/ InA X.eq x acc)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id;

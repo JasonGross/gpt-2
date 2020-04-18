@@ -1,0 +1,151 @@
+======== SAMPLE 1 ========
+' x y d (l', r') <->
+    ~ InT y (Node _x l' r) /\ ~ X.eq y x
+  y : elt
+  H0 : X.eq y x'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  l' : list X.t
+  r' : tree
+  x0 : I.t
+  H : InT x0 r
+  H1 : InT x0 (Node l x _x r)
+  H3 : InT x0 l
+  H4 : InT x0 r
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  l' : list X.t
+  r' : tree
+  x0 : I.t
+  H : InT x0 r
+  H1 : InT x0 (Node l x _x r)
+  H3 : InT x0 l
+  H4 : InT x0 r
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  l' : list X.t
+  r' : tree
+  x0 : I.t
+  H : InT x0 r
+  H1 : InT x0 (Node l x _x r)
+  H3 : InT x0 l
+  H4 : InT x0 r
+  ============================
+   False
+
+
+Debug: Going to execute:
+split
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  l' : list X.t
+  r' : tree
+  x0 : I.t
+  H : InT x0 r
+  H1 : InT x0 (Node l x _x r)
+  H3 : InT x0 l
+  H4 : InT x0 r
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::split@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  l' : list X.t
+  r' : tree
+  x0 : I.t
+  H : InT x0 r
+  H1 : InT x0 (Node l x _x r)
+  H3 : InT x0 l
+  H4 : InT x0 r
+  ============================
+   (InT x0 r /\ ~ X.eq x0 x \/ InT x0 r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (0) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  l' : list X.t
+  r' : tree
+  x0 : I.t
+  H : InT x0 r
+  H

@@ -1,0 +1,144 @@
+======== SAMPLE 1 ========
+  (Ok (filter_relation f b))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  f : A -> bool
+  H : compat_bool E.eq f
+  l : list A
+  acc : list A
+  x : A
+  H0 : In x l -> In x (filter_relation l l)
+  H2 : In x (filter_relation l)
+  H4 : true = true
+  H1 : In x l
+  H7 : In x (filter_relation l)
+  H3 : In x l
+  ============================
+   (Ok (filter_relation f b))
+
+
+Debug:
+Going to execute:
+match goal with
+| |- _ -> _ => intro; t_tauto_intuit
+| |- _ => t_reduce; t_solver
+end || t_solver
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  f : A -> bool
+  H : compat_bool E.eq f
+  l : list A
+  acc : list A
+  x : A
+  H0 : In x l -> In x (filter_relation l l)
+  H2 : In x (filter_relation l)
+  H4 : true = true
+  H1 : In x l
+  H7 : In x (filter_relation l)
+  H3 : In x l
+  ============================
+   (Ok (filter_relation f b))
+
+
+Debug:
+Going to execute:
+match goal with
+| |- _ -> _ => intro; t_tauto_intuit
+| |- _ => t_reduce; t_solver
+end
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  f : A -> bool
+  H : compat_bool E.eq f
+  l : list A
+  acc : list A
+  x : A
+  H0 : In x l -> In x (filter_relation l l)
+  H2 : In x (filter_relation l)
+  H4 : true = true
+  H1 : In x l
+  H7 : In x (filter_relation l)
+  H3 : In x l
+  ============================
+   (Ok (filter_relation f b))
+
+
+Debug: Going to execute:
+t_reduce; t_solver
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  f : A -> bool
+  H : compat_bool E.eq f
+  l : list A
+  acc : list A
+  x : A
+  H0 : In x l -> In x (filter_relation l l)
+  H2 : In x (filter_relation l)
+  H4 : true = true
+  H1 : In x l
+  H7 : In x (filter_relation l)
+  H3 : In x l
+  ============================
+   (Ok (filter_relation f b))
+
+
+Debug: Going to execute:
+t_reduce
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  f : A -> bool
+  H : compat_bool E.eq f
+  l : list A
+  acc : list A
+  x : A
+  H0 : In x l -> In x (filter_relation l l)
+  H2 : In x (filter_relation l)
+  H4 : true = true
+  H1 : In x l
+  H7 : In x (filter_relation l)
+  H3 : In x l
+  ============================
+   (Ok (filter_relation f b))
+
+
+Debug: Going to execute:
+unfold not in *
+

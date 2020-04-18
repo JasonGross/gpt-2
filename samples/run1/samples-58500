@@ -1,0 +1,115 @@
+======== SAMPLE 1 ========
+~ In y0 r)
+  ============================
+   (In y0 [<->> In y0 r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (6) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) + 2
+  _x2 : height rr < height (Node rll rlx rld rlr _x3)
+  y : key
+  H : In y (Node (Node rll rlx rld rlr _x3) rx rd rr _x1)
+  ============================
+   (In y0 r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (7) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) + 2
+  _x2 : height rr < height (Node rll rlx rld rlr _x3)
+  y : key
+  H : In y (Node (Node rll rlx rld rlr _x3) rx rd rr _x1)
+  ============================
+   (In y0 r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (7) > 
+Debug: Level 7: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) + 2
+  _x2 : height rr < height (Node rll rlx rld rlr _x3)
+  y : key
+  H : In y (Node (Node rll rlx rld rlr _x3) rx rd rr _x1)
+  ============================
+   (In y0 r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (6) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rl

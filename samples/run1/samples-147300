@@ -1,0 +1,72 @@
+======== SAMPLE 1 ========
+ H : forall x y : R,
+      R x y ->
+      R'
+        (projT1 (existT (fun morph : R -> R -> Prop) =>
+           if morph2_opt R'
+            then
+               if
+                 R eq x y
+                 then
+                  Equivalence eq
+     | eqA : A -> A -> Prop
+        ?X52@{__:=A; __:=R; __:=a; __:=y; __:=H; __:=x; __:=rhs; __:=H; __:=f;
+                 __:=H0; __:=H1; __:=H2} : relation A
+  ============================
+   ((forall x y0 : A, R x y0 -> R' (y x) y0) ->
+      R'' ->
+       forall x : A, [-> R' (x x) y] ->
+       forall H4 : forall y0 : A, R''' (y y0) -> R' (x x) y0)
+
+
+Debug: Going to execute:
+<ltac_plugin::unify@0> $1 $2
+
+
+TcDebug (4) > 
+Debug:
+Level 4: In environment
+A : Type
+R : relation A
+eqa : Equivalence R
+B : Type
+R' : relation B
+eqb : Equivalence R'
+f : A -> B
+H2 : True
+H1 : (R ==> R') f f
+H0 : (R ==> R') f f
+H : forall x y : R,
+     R x y ->
+     R'
+       (projT1 (existT (fun morph : R -> R -> Prop) f x)
+          (existT (fun morph : R -> R -> Prop) g x)
+          (projT1 (existT (fun morph : R -> R -> Prop) g y)
+           (projT1 (existT (fun morph : R -> R -> Prop) h)
+             (projT1 (existT (fun morph : R -> R -> Prop) a) f)
+  H4 : forall y0 : A, R''' (x y0) -> R' (y x) y0
+H3 : forall y : A, R''' (y y) -> R' (x y) y0
+Unable to unify "Type" with "Unable to unify "Type".
+
+Debug:
+Level 4: In environment
+A : Type
+R : relation A
+eqa : Equivalence R
+B : Type
+R' : relation B
+eqb : Equivalence R'
+f : A -> B
+H2 : True
+H1 : (R ==> R') f f
+H0 : (R ==> R') f f
+H : forall x y : R,
+     R x y ->
+     R'
+       (projT1 (existT (fun morph : R -> R -> Prop) f x)
+          (existT (fun morph : R -> R -> Prop) g x)
+          (projT1 (existT (fun morph : R -> R -> Prop) h)
+            (projT1 (existT (fun morph : R -> R -> Prop) a) f)
+  H4 : forall y : A, R''' (x y) -> R' (y x) y
+H3 : forall y : A, R''' (y y) -> R' (x y) y0
+Unable to un

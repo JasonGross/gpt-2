@@ -1,0 +1,69 @@
+======== SAMPLE 1 ========
+bool
+  f1 : GFormula
+  H : In x s1
+  H1 : f2 -> H2
+  H4 : In x s1
+  H0 : f1
+  H1' : In x s1
+  ============================
+   (In x (Node f1 s1 : T), In x s2
+     (MapsTo t1 f0 s2 = true))
+
+
+Debug:
+Going to execute:
+lt_tree IH with
+->
+          (Node ll lx ld lr lh)
+with
+          (Node ll lx ld lr lh)
+in
+with
+
+TFV t_tauto_intuit
+
+
+TcDebug (6) > 
+Debug:
+Going to execute:
+destruct_tree IH with
+ | find RNG = eqn_equal RNG
+| clear_in (eqn_sym RNG ?f)
+| forall x y : RNG, RNG = eqn_equal RNG
+| forall x y0 : RNG, RNG = eqn_equal RNG
+| forall x z : RNG, RNG = eqn_equal RNG
+| equal_to x y0 => eqn_equal RNG
+| equal_to y y0 => eqn_equal RNG
+| exact_left => equal_to x y0
+| exact_right => equal_to y0 y
+end
+
+
+TcDebug (6) > 
+Debug: Going to execute:
+clear_in (eqn_sym RNG
+        (Node ll lx ld lr lh)
+          (Node ll lx ld lr lh))
+
+
+Debug: Going to execute:
+assert X2; [ exact (id0 id1); clear (id0 id2 ]) | id1 |
+       assert X2; (set_Logical_OrderTac.fail
+        (set_Ring_polynom.Pol Z.pred_monpol_list ltac:(set_Ring_polynom.Pol Z.pos x ltac:(set_Ring_polynom.Pol Z.pos x ltac:(set_Ring_polynom.Pos Z.pos x ltac:(set_Logical_OrderTac.interp_lt 0 1 radd radd))
+       |-
+           (f0 (f :: b) :: ltac:(set_Z.pos x ltac:(get_Zacc_Theory ltac:(get_Zacc_Theory ltac:(get_Zacc_Theory ltac))
+         | apply P
+              | P
+               | P
+                | (fail) ]
+   (set_Logical_OrderTac.fail "set_Ring_polynom.max_add has value 
+          set_H_logical_order_not_eq
+                  ltac:(set_Z.pos x ltac:(get_Zacc_Theory ltac; fail); (get_Zacc_Theory ltac:(get_Zacc_Theory ltac),
+       
+                :: (get_Zacc_Theory ltac:(max_refl (apply_Zacc_Theory ltac);
+                   :: "plus";
+                    :: "neg";
+                       :: (apply_Pol_Zac ltac (get_Zacc_Theory ltac);
+                      :: nil));
+                     ltac:(apply_

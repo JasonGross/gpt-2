@@ -1,0 +1,80 @@
+======== SAMPLE 1 ========
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  eval : Env -> Term -> Prop
+  normalise_correct : forall (env : Env) (t : Term) (tg : Annot),
+                     eval_cnf env (normalise t tg) -> eval env t
+  negate_correct : forall (env : Env) (t : Term) (tg : Annot),
+                   eval_cnf env (negate t tg) -> ~ eval env t
+  Witness : Type
+  checker : list (Term' * Annot) -> Witness -> bool
+  checker_sound : forall (t : list (Term' * Annot))) (w : Witness),
+                  checker t w = true ->
+                  forall env : Env, make_impl (eval_tt env) t False
+  a : clause
+  c : clause
+  t : list clause
+  IHt : forall w : list Witness,
+        cnf_checker (c :: t) w = true ->
+        forall env : Env, make_conj (eval_clause env) (c :: t)
+  w : Witness
+  w0 : list Witness
+  H : checker a w = true
+  H0 : cnf_checker (c :: t) w0 = true
+  env : Env
+  H1 : make_conj (eval_clause env) (c :: t)
+  H2 : make_conj (eval_tt env) a -> False
+  H3 : make_conj (eval_tt env) a
+  H4 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+         

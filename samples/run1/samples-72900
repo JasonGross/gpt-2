@@ -1,0 +1,43 @@
+======== SAMPLE 1 ========
+ U_sgn (- (7 * - yn (Pos.to_nat (Pos.max Ay Az)~0 * n)%nat)) ==
+    cnpos xn p -
+    (yn (Pos.to_nat (Pos.max Ay Az)~0 * n)%nat *
+     Hu (Pos.to_nat (Pos.max Ay Az)~0 * n)%nat *
+      ((yn (Pos.to_nat (Pos.max Ay Az)~0 * n)%nat - yn (Pos.to_nat (Pos.max Ay Az)~0 * n)%nat))%Q
+
+
+Debug:
+Level 14: evaluation returns
+Qyn
+
+
+Goal:
+  
+  a : CReal
+  n : nat
+  nlt : nat -> Q
+  maj : (2 # n < a - (2 * n))%Q
+  list_hyp := nil : list (Ring_polynom.PExpr Q * Ring_polynom.PExpr Q)
+  field_lemma : forall lmp : list (Q * Ring_polynom.Mon * Ring_polynom.Pol Q),
+               Ring_polynom.mk_monpol_list 0 1 Qplus Qmult Qminus Qopp
+                 Qeq_bool (triv_div 0 1 Qeq_bool) list_hyp = lmp ->
+                forall nfe1 : linear Q,
+                Fnorm 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+                  (FEsub (FEX Q 1) (FEX Q 2)) = nfe1 ->
+                forall nfe2 : linear Q,
+                Fnorm 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+                  (FEsub (FEX Q 1) (FEX Q 2)) = nfe2 ->
+                Ring_polynom.Peq Qeq
+                  (Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp
+                     Qeq_bool (triv_div 0 1 Qeq_bool) ring_subst_niter lmp
+                     (Ring_polynom.PEmul (num npe)%N)))
+                  (Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp
+                     Qeq_bool (triv_div 0 1 Qeq_bool) ring_subst_niter lmp
+                     (Ring_polynom.PEmul (num nfe1)%N)))
+                   (Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp
+                     Qeq_bool (triv_div 0 1 Qeq_bool) ring_subst_niter lmp
+                     (Ring_polynom.PEmul (num nfe2)%N)))
+                  (Ring_polynom.PEadd (- (num nfe2)%positive)
+                    (Ring_polynom.PEmul (num nfe1)%positive)))%Q
+  ============================
+   (yn (Pos.to

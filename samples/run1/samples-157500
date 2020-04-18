@@ -1,0 +1,87 @@
+======== SAMPLE 1 ========
+ forallb l2 acc : list elt,
+        InA X.eq x (union_list (x1 :: l1) l2 acc) <->
+        InA X.eq x (x1 :: l1) \/ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  C : X.lt x2 x1
+  H : InA X.eq x l1
+  ============================
+   (X.eq x x1 \/ InA X.eq x l1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : X.t
+  x1 : elt
+  l1 : list elt
+  IH1 : forall l2 acc : list elt,
+        InA X.eq x (union_list l1 l2 acc) <->
+        InA X.eq x l1 \/ InA X.eq x l2 \/ InA X.eq x acc
+  x2 : elt
+  l2 : list elt
+  IH2 : forall acc : list elt,
+        InA X.eq x (union_list (x1 :: l1) l2 acc) <->
+        InA X.eq x (x1 :: l1) \/ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  C : X.lt x2 x1
+  H : InA X.eq x l1
+  ============================
+   (X.eq x x1 \/ InA X.eq x l1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  x1 : elt
+  l1 : list elt
+  IH1 : forall l2 acc : list elt,
+        InA X.eq x (union_list l1 l2 acc) <->
+        InA X.eq x l1 \/ InA X.eq x l2 \/ InA X.eq x acc
+  x2 : elt
+  l2 : list elt
+  IH2 : forall acc : list elt,
+        InA X.eq x (union_list (x1 :: l1) l2 acc) <->
+        InA X.eq x (x1 :: l1) \/ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  C : X.lt x2 x1
+  H : InA X.eq x l1
+  ============================
+   (X.eq x x1 \/ InA X.eq x l1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  x1 : elt
+  l1 : list elt
+  IH1 : forall l2 acc : list elt,
+        InA X.eq x (union_list l1 l2 acc) <->
+        InA X.eq x l1 \/ InA X.eq x l2 \/ InA X.eq x acc
+  x2 : elt
+  l2 : list elt
+  IH2 : forall acc : list elt,
+        InA X.eq x (union_list (x1 :: l1) l2 acc) <->
+        InA X.eq x (x1 :: l1) \/ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  C : X.lt x2 x1
+ 

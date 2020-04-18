@@ -1,0 +1,114 @@
+======== SAMPLE 1 ========
+T' -> Prop
+  ============================
+   (X.eq x lx)
+
+
+Debug: Going to execute:
+f l
+
+
+TcDebug (6) > 
+Debug: Evaluated term: (F (fun l : relation eq => F l' l') x l)
+
+Goal:
+  
+  a : Equivalence
+  b : E.t
+  acc : list (fun u : Equivalence => list (fun u) (Bb l) acc)
+  x : (f a * Bb l → (f a * Tlr a) + a * Bb l -> Bb (Z.pos y x)) <0
+  d : positive
+  u' : list (fun u : Equivalence => list (fun u) (Bb l) acc)
+  e0 : remove_nat (Bb l)
+  ============================
+   (X.eq x lx)
+
+
+Debug: Going to execute:
+OrderTac.order_prepare
+
+
+TcDebug (6) > 
+Goal:
+ 
+  a : Equivalence
+  b : E.t
+  acc : list (fun u : Equivalence => list (fun u) (Bb l) acc)
+  x : (f a * Bb l → (f a * Tlr a) + a * Bb l -> Bb (Z.pos y x)) <0
+  d : positive
+  u' : list (fun u : Equivalence => list (fun u) (Bb l) acc)
+  e0 : remove_nat (Bb l)
+  ============================
+   (X.eq x lx)
+
+
+Debug: Going to execute:
+order_prepare
+
+
+TcDebug (6) > 
+Goal:
+ 
+  a : Equivalence
+  b : E.t
+  acc : list (fun u : Equivalence => list (fun u) (Bb l) acc)
+  x : (f a * Bb l → (f a * Tlr a) + a * Bb l -> Bb (Z.pos y x)) <0
+  d : positive
+  u' : list (fun u : Equivalence => list (fun u) (Bb l) acc)
+  e0 : remove_nat (Bb l)
+  ============================
+   (X.eq x lx)
+
+
+Debug:
+Going to execute:
+fun
+ <Coq.Init.Tauto.OrderTac.order_prepare>
+ order_prepare
+
+
+TcDebug (5) > 
+Goal:
+ 
+  a : Equivalence
+  b : E.t
+  acc : list (fun u : Equivalence => list (fun u) (Bb l) acc)
+  x : (f a * Bb l → (f a * Tlr a) + a * Bb l -> Bb (Z.pos y x)) <0
+  d : positive
+  u' : list (fun u : Equivalence => list (fun u) (Bb l) acc)
+  e0 : remove_nat (Bb l)
+  ============================
+   (X.eq x lx)
+
+
+Debug: Going to execute:
+order_prepare
+
+
+TcDebug (5) > 
+Goal:
+ 
+  a : Equivalence
+  b : E.t
+  acc : list (fun u : Equivalence => list (fun u) (Bb l) acc)
+  x : (f a * Bb l → (f a * Tlr a) + a * Bb l -> Bb (Z.pos y x)) <0
+  d : positive
+  u' : list (fun u : Equivalence => list (fun u) (Bb l) acc)
+  e0 : remove_nat (Bb l)
+  ============================
+   (X.eq x lx)
+
+
+Debug:
+Going to execute:
+fun
+<Coq.Init.Tauto.OrderTac.order_disj>; OrderTac.order_prepare
+
+
+TcDebug (6) > 
+Goal:
+ 
+  a : Equivalence
+  b : E.t
+  acc : list (fun u : Equivalence => list (fun u) (Bb l) acc)
+  x : (f a * Bb l → (f a * Tlr a) + a * B

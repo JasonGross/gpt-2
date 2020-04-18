@@ -1,0 +1,106 @@
+======== SAMPLE 1 ========
+
+      | _ => t_solver
+      end
+| _ => fun _ => let p := Find_at t fv in
+                   PEX C p
+end
+
+
+TcDebug (15) > 
+Goal:
+    x : E.t  s1 : t  x' : E.t
+  ============================
+   (In x s' -> In x s /\ In x s')
+
+
+Debug: Going to execute:
+t_solver
+
+
+TcDebug (16) > 
+Goal:
+    x : E.t  s1 : t  x' : E.t
+  ============================
+   (In x s' -> In x (Some e) \/ In x s)
+
+
+Debug: Going to execute:
+right; t_tauto_intuit
+
+
+TcDebug (17) > 
+Goal:
+    x : E.t  s1 : t  x' : E.t
+  ============================
+   (In x s' -> In x (Some e) \/ In x s)
+
+
+Debug: Going to execute:
+right
+
+
+TcDebug (17) > 
+Goal:
+    x : E.t  s1 : t  x' : E.t
+  ============================
+   (In x s' -> In x (Some e) \/ In x s)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::right@0>
+
+
+TcDebug (18) > 
+Goal:
+    x : E.t  s1 : t  x' : E.t
+  ============================
+   (In x s' -> In x (Some e) \/ In x s)
+
+
+Debug: Going to execute:
+t_tauto_intuit
+
+
+TcDebug (18) > 
+Goal:
+    x : E.t  s1 : t  x' : E.t
+  ============================
+   (In x s' -> In x (Some e) \/ In x s)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.simplif> flags;
+ <Coq.Init.Tauto.axioms> flags ||
+   match reverse goal with
+   | id:(?X1 -> ?X2) -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (X1 -> X2);
+             [ exact
+             id
+             | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear
+                 id; (solve [ t_tauto_intuit ]) ] ]
+   | id:~ ?X1 -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (~ X1);
+             [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+   | |- ?X1 =>
+         <Coq.Init.Tauto.is_disj> flags X1; (solve
+          [ left; t_tauto_intuit | right; t_tauto_intuit ])
+   end ||
+     match goal with
+     | |- _ -> _ => intro; t_tauto_intuit
+     | |- _ => t_reduce; t_solver
+     end || t_solver
+
+
+TcDebug (19) > 
+Goal:
+    x : E.t  s1 : t  x' : E.t
+  ============================
+

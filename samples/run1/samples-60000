@@ -1,0 +1,116 @@
+======== SAMPLE 1 ========
+
+  a : elt
+  s : list elt
+  IHs : forall acc : list elt,
+        Ok acc ->
+        forall (x : elt) (s' : t),
+        Ok s ->
+        Ok s' ->
+        In x
+          (fold_left
+             (fun (x0 : t) (y : elt) => if mem y s' then add y x0 else x0) s
+             acc) <-> In x s /\ In x s' \/ In x acc
+  acc : list elt
+  Hacc : Ok acc
+  x : elt
+  s' : t
+  Hs' : Ok s'
+  H : X.eq x x1
+  H0 : In x s'
+  ============================
+   (In x s /\ In x s')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  ============================
+   (In x s /\ In x s')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  ============================
+   (In x s /\ In x s')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  ============================
+   (In x s /\ In x s')
+
+
+Debug: Going to execute:
+elim id
+
+
+TcDebug (2) > 
+Debug: Evaluated term: H
+
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  ============================
+   (forall (d : elt) (k : Raw.key) (a : elt) (s' : t),
+    In a ((a :: s) :: b : key) ->
+    In x s /\ In x s' \/ In x acc -> X.eq x a \/ In x s')
+
+
+Debug: Going to execute:
+<ltac_plugin::elim@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  ============================
+   (forall (k s : Raw.key) (a : elt) (s' : t),
+    In a ((a :: s) :: b : key) ->
+    In x s /\ In x s' \/ In x acc -> X.eq x a \/ In x s')
+
+
+Debug: Going to execute:
+destruct x; simpl; t_tauto_intuit
+
+
+TcDebug (0) > 
+Goal:
+  
+  eqr := Equ

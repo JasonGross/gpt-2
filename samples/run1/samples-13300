@@ -1,0 +1,108 @@
+======== SAMPLE 1 ========
+_disj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : E.t
+  x' : E.t
+  l : list X.t
+  IHx : forall (y : E.t) (e : elt),
+         Ok l -> InT y (del x l) <-> InT y l /\ ~ X.eq y x
+  x0 : X.t
+  e0 : X.eq x x'
+  l0 : list X.t
+  H : InT y l
+  ============================
+   (InT y l /\ ~ X.eq y x0 \/
+    X.eq y x -> X.eq y x0 \/ InT y (del x l))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : E.t
+  x' : E.t
+  l : list X.t
+  IHx : forall (y : E.t) (e : elt),
+         Ok l -> InT y (del x l) <-> InT y l /\ ~ X.eq y x
+  x0 : X.t
+  e0 : X.eq x x'
+  l0 : list X.t
+  H : InT y l
+  ============================
+   (InT y l /\ ~ X.eq y x0 \/
+    X.eq y x -> X.eq y x0 \/ InT y (del x l))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : E.t
+  x' : E.t
+  l : list X.t
+  IHx : forall (y : E.t) (e : elt),
+         Ok l -> InT y (del x l) <-> InT y l /\ ~ X.eq y x
+  x0 : X.t
+  e0 : X.eq x x'
+  l0 : list X.t
+  H : InT y l
+  ============================
+   (InT y l /\ ~ X.eq y x0 \/
+    X.eq y x -> X.eq y x0 \/ InT y (del x l))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : E.t
+  x' : E.t
+  l : list X.t
+  IHx : forall (y : E.t) (e : elt),
+         Ok l -> InT y (del x l) <-> InT y l /\ ~ X.eq y x
+  x0 : X.t
+  e0 : X.eq x x'
+  l0 : list X.t
+  H : InT y l
+  ============================
+   (InT y l /\ ~ X.eq y x0 \/
+    X.eq y x -> X.eq y x0 \/ InT y (del x l))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : E.t
+  x' : E.t
+  l : list X.t
+  IHx : forall (y : E.t) (e : elt),
+         Ok l -> InT y (del x l) <-> InT y l /\ ~ X.eq y x
+  x0 : X.t
+  e0 : X.eq x x'
+  l0 : list X.t
+  H : InT y l
+  ============================
+   (InT y l /\ ~ X.eq

@@ -1,0 +1,105 @@
+======== SAMPLE 1 ========
+ l1 \/ mem x l2' <> true
+  H1 : mem x l2' <> true -> P x
+  H2 : true = true
+  ============================
+   (true = true)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::reflexivity@0>
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : positive
+  l1 : tree
+  x1 : X.t
+  l2 : tree
+  x2 : X.t
+  l : tree
+  l' : list X.t
+  H : false = true -> P x
+  H0 : (forall x : elt, InT x l -> InT x l') /\
+       (forall x : elt, InT x l -> InT x l')
+  H2 : (forall x : elt, InT x l -> InT x l') -> (forall x : elt, InT x l -> InT x l'))
+
+
+Goal:
+  
+  x : positive
+  l1 : tree
+  x1 : X.t
+  l2 : tree
+  x2 : X.t
+  l : tree
+  l' : list X.t
+  H : false = true -> P x
+  H0 : (forall x : elt, InT x l -> InT x l') /\
+       (forall x : elt, InT x l -> InT x l')
+  H2 : (forall x : elt, InT x l -> InT x l') -> (forall x : elt, InT x l -> InT x l'))
+
+
+Goal:
+  
+  x : positive
+  l1 : tree
+  x1 : X.t
+  l2 : tree
+  x2 : X.t
+  l : tree
+  l' : list X.t
+  H : false = true -> P x
+  H0 : (forall x : elt, InT x l -> InT x l') /\
+       (forall x : elt, InT x l -> InT x l')
+  H2 : (forall x : elt, InT x l -> InT x l') -> (forall x : elt, InT x l -> InT x l'))
+
+
+Goal:
+  
+  x : positive
+  l1 : tree
+  x1 : X.t
+  l2 : tree
+  x2 : X.t
+  l : tree
+  l' : list X.t
+  H : false = true -> P x
+  H0 : (forall x : elt, InT x l -> InT x l') /\
+       (forall x : elt, InT x l -> InT x l')
+  H2 : forall x : elt, InT x l -> InT x l
+  ============================
+   (forall x : negb (rev_var x) /\
+    (forall x0 : X.t, InT x l -> X.lt x x0 -> i2z false x = true))
+
+
+Debug: Going to execute:
+revert l s
+
+
+TcDebug (0) > 
+Goal:
+  
+  x : positive
+  l1 : tree
+  x1 : X.t
+  l2 : tree
+  x2 : X.t
+  l : tree
+  l' : list X.t
+  H : false = true -> P x
+  H0 : (forall x : elt, InT x l -> InT x l') /\
+       (forall x : elt, InT x l -> InT x l')
+  H2 : (forall x : elt, InT x l -> InT x l') -> (forall x : elt, InT x l -> InT x l'))
+
+  ============================
+   (forall x : negb (rev_var x) /\
+    (forall x0 : X.t, InT x l -> X.lt x x0 -> i2z l' l = true))
+
+
+Debug: Going to execute:
+<ltac_plugin::revert_var_opt@0> $1
+
+
+TcDebug (0

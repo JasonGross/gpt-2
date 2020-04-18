@@ -1,0 +1,77 @@
+======== SAMPLE 1 ========
+           | Some d => f0 x (Some d) None
+            | None => None
+            end
+  mapr_f0 : forall (x : X.t) (m' : t elt'),
+            bst m' ->
+            find x (mapr m') =
+            match find x m' with
+            | Some d' => f0 x None (Some d')
+            | None => None
+            end
+  f0_compat : forall (x x' : X.t) (o : option elt) (o' : option elt'),
+              X.eq x x' -> f0 x o o' = f0 x' o o'
+  y : key
+  m1 : t elt
+  H : bst m1
+  H0 : bst (Leaf elt')
+  H1 : In y m1
+  H3 : False
+  ============================
+   (None = f0 y None (find y (Leaf elt')))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f0 : key -> option elt -> option elt' -> option elt''
+  f : key -> elt -> option elt' -> option elt''
+  mapl : t elt -> t elt''
+  mapr : t elt' -> t elt''
+  f0_f : forall (x : key) (d : elt) (o : option elt'),
+         f x d o = f0 x (Some d) o
+  mapl_bst : forall m : t elt, bst m -> bst (mapl m)
+  mapr_bst : forall m' : t elt', bst m' -> bst (mapr m')
+  mapl_f0 : forall (x : X.t) (m : t elt),
+            bst m ->
+            find x (mapl m) =
+            match find x m with
+            | Some d => f0 x (Some d) None
+            | None => None
+            end
+  mapr_f0 : forall (x : X.t) (m' : t elt'),
+            bst m' ->
+            find x (mapr m') =
+            match find x m' with
+            | Some d' => f0 x None (Some d')
+            | None => None
+            end
+  f0_compat : forall (x x' : X.t) (o : option elt) (o' : option elt'),
+              X.eq x x' -> f0 x o o' = f0 x' o o'
+  y : key
+  m1 : t elt
+  H : bst m1
+  H0 : bst (Leaf elt')
+  H1 : In y m1
+  H3 : False
+  ============================
+   (None = f0 y None (find y (Leaf elt')))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (

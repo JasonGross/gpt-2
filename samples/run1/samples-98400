@@ -1,0 +1,97 @@
+======== SAMPLE 1 ========
+  x : X.t
+  y : elt
+  H0 : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H1 : InT y (Node i l x' r)
+  H2 : X.eq y x -> False
+  ============================
+   (InT y (Node i l x' r) /\ ~ X.eq y x' \/ InT y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (remove x l) <-> InT y l /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (remove x r) <-> InT y r /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H1 : InT y (Node i l x' r)
+  H2 : X.eq y x -> False
+  ============================
+   (InT y (Node i l x' r) /\ ~ X.eq y x' \/ InT y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (remove x l) <-> InT y l /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (remove x r) <-> InT y r /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H1 : InT y (Node i l x' r)
+  H2 : X.eq y x -> False
+  ============================
+   (InT y (Node i l x' r) /\ ~ X.eq y x' \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (remove x l) <-> InT y l /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (remove x r) <-> InT y r /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  H1 : InT y (Node i l x' r)
+  H2 : X.eq y x -> False
+  =========================

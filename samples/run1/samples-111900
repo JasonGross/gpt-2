@@ -1,0 +1,98 @@
+======== SAMPLE 1 ========
+ : elt
+  r2 : t elt
+  y : elt
+  t : elt
+  H : avl l
+  H0 : avl (Node l2 x2 d2 r2 _x4)
+  H3 : -2 <= height l - height (Node x2 d2 r2 _x4) <= 2
+  H4 : height r2 >= height l
+  H5 : - _x4 <= height l - height (Node x2 d2 r2 _x4) <= 2
+  H6 : _x4 = max (height l) (height (Node x2 d2 r2 _x4)) + 1
+  ============================
+   (avl (join t m2) = true ->
+    height l >= 0 -> avl (join t m2) = true -> height l >= 0 -> avl (create x t m2) = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l2 : t elt
+  x2 : key
+  d2 : elt
+  r2 : t elt
+  y : elt
+  t : elt
+  H : avl l
+  H0 : avl (Node l2 x2 d2 r2 _x4)
+  H3 : -2 <= height l - height (Node x2 d2 r2 _x4) <= 2
+  H4 : height r2 >= height l
+  H5 : - _x4 <= height l - height (Node x2 d2 r2 _x4) <= 2
+  H6 : _x4 = max (height l) (height (Node x2 d2 r2 _x4)) + 1
+  H7 : - (2) <= height l - height (Node x2 d2 r2 _x4) <= 2
+  H4 : height r2 >= height l
+  H5 : - _x4 <= height l - height (Node x2 d2 r2 _x4) <= 2
+  H8 : - b < b
+  ============================
+   (avl (join t m2) = true ->
+    height l >= 0 -> avl (join t m2) = true -> height l >= 0 -> avl (create x t m2) = true)
+
+
+Debug:
+Going to execute:
+repeat
+ match goal with
+ | |- ?X1 -> ?X2 => intro
+ | |- ~ _ => unfold not at 1; intro
+ end
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l2 : t elt
+  x2 : key
+  d2 : elt
+  r2 : t elt
+  y : elt
+  t : elt
+  H : avl l
+  H0 : avl (Node l2 x2 d2 r2 _x4)
+  H3 : -2 <= height l - height (Node x2 d2 r2 _x4) <= 2
+  H4 : height r2 >= height l
+  H5 : - _x4 <= height l - height (Node x2 d2 r2 _x4) <= 2
+  H6 : _x4 = max (height l) (height (Node x2 d2 r2 _x4)) + 1
+  H7 : - (2) <= height l - height (Node x2 d2 r2 _x4) <= 2
+  H4 : height r2 >= height l
+  H5 : - _x4 <= height l - height (Node x2 d2 r2 _x4) <= 2
+  H8 : - b < b
+  ============================
+   (avl (join t m2) = true ->
+    height l >= 0 -> avl (join t m2) = true -> height l >= 0 -> avl (create x t m2) = true)
+
+
+Debug:
+Going to execute:
+match goal with
+| |- ?X1 -> ?X2 => intro
+| |- ~ _ => unfold not at 1; intro
+end
+
+
+TcDebug (1) > 
+Debug: Level 1: No matching clauses for match.
+
+Goal:
+  
+  elt : Type
+  l2 : t elt
+  x2 : key
+  d2 : elt
+  r2 : t elt
+  y :

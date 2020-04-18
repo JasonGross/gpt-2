@@ -1,0 +1,76 @@
+======== SAMPLE 1 ========
+) + (Pos.to_nat p) +
+    goal := False : Prop
+  ============================
+   (find (Pos.succ n) l + (Pos.to_nat p) - (2 # n) >= 0)
+
+
+Debug:
+Going to execute:
+fun trm =>
+  match trm with
+  | ?x <-> ?y => let ex := p2ep x with ey := p2ep y in
+                EPequiv ex ey
+  | ?x -> ?y => let ex := p2ep x with ey := p2ep y in
+                EPimpl ex ey
+  | ?x /\ ?y => let ex := p2ep x with ey := p2ep y in
+                 EPand ex ey
+  | ?x \/ ?y => let ex := p2ep x with ey := p2ep y in
+                 EPor ex ey
+  | ~ ?x => let ex := p2ep x in
+                EPneg ex
+  | ?x = ?y => let ex := z2ez x with ey := z2ez y in
+                 EPeq ex ey
+  | (?x < ?y)%Z =>
+      let ex := z2ez x with ey := z2ez y in
+       EPlt ex ey
+  | (?x <= ?y)%Z =>
+      let ex := z2ez x with ey := z2ez y in
+      EPle ex ey
+  | (?x > ?y)%Z =>
+      let ex := z2ez x with ey := z2ez y in
+      EPgt ex ey
+  | (?x >= ?y)%Z => let ex := z2ez x with ey := z2ez y in
+                      EPge ex ey
+  | ?x => EPraw x
+  end
+
+
+TcDebug (14) > 
+Goal:
+  
+  xn : nat -> Q
+  x : positive
+  p : positive
+  H : (2 # p < hn (Pos.to_nat p))%Q
+  yn : nat -> Q
+  yn : nat -> Q
+  z : positive
+  n : nat
+  Heqz : (zn (Pos.to_nat p) == (Pos.to_nat p) - (2 # n))%Q
+  n0 : nat
+  ============================
+   (xn Pos.to_nat p < zn (Pos.to_nat p))%Q
+
+
+Debug:
+Going to execute:
+match trm with
+| ?x <-> ?y => let ex := p2ep x with ey := p2ep y in
+               EPeq ex ey
+| (?x <= ?y)%Z =>
+    let ex := z2ez x with ey := z2ez y in
+    EPlt ex ey
+| (?x >= ?y)%Z =>
+    let ex := z2ez x with ey := z2ez y in
+    EPle ex ey
+| (?x > ?y)%Z =>
+    let ex := z2ez x with ey := z2ez y in
+    EPgt ex ey
+| (?x >= ?y)%Z => let ex := z2ez x with ey := z2ez y in
+                EPeq ex ey
+| (?x >= ?y)%Z => let ex := z2ez x with ey := z2ez y in
+                EZmul ex ey
+| Z.max ?x ?y => let ex := z2ez x with ey := z2ez y in
+                 EZmax ex ey
+| (- ?x)%Z => let ex := z2ez

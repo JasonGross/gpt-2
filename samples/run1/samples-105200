@@ -1,0 +1,44 @@
+======== SAMPLE 1 ========
+pos_2 : BinNums.N -> N -> Q
+  rpow : R -> N -> N -> R
+  addon : SORaddon
+  l : list NFormula
+  f : NFormula
+  IHf : forall f' : NFormula,
+        eval_Psatz l e = Some f' ->
+        (forall f : NFormula,
+          (forall f' : NFormula,
+           (forall f' : NFormula,
+            (forall f' : NFormula,
+             (forall f' : NFormula,
+              (p1
+                 :: r1
+                   :: Z.pos q2
+                     :: Z.pos s2
+                       :: q1 :: s1 :: Z.pos p2 :: Z.pos r2 :: nil)
+           (Ring_polynom.PEX Q 2
+             :: r1
+                 :: Z.pos q2 :: Z.pos s2 :: Z.pos p2 :: Z.pos r2 :: nil)
+            Ring_polynom.PEX Q 2
+                :: r1
+                   :: Z.pos q2 :: Z.pos s2 :: Z.pos p2 :: Z.pos r2 :: nil)
+            (Ring_polynom.PEX Q 1)
+  res := Ring_polynom.Pinj 1
+             (Ring_polynom.PX (Ring_polynom.Pc 1) 1 (Ring_polynom.Pc 0))
+       : Ring_polynom.Pol Q
+  res_eq : Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+             (triv_div 0 1 Qeq_bool) ring_subst_niter list_hyp_norm
+             (Ring_polynom.PEX Q 2) = res
+  thm : (Ring_polynom.PEeval 0 1 Qplus Qmult Qminus Qopp 
+           (IDphi (R:=Q)) Z.of_N Qpower (2 # n :: q :: r :: nil)
+           (Ring_polynom.PEX Q 2) ==
+         Ring_polynom.Pphi_pow 0 1 Qplus Qmult Qminus Qopp 0 1 Qeq_bool
+           (triv_div 0 1 Qeq_bool) ring_subst_niter list_hyp_norm
+           (Ring_polynom.PEadd
+              (Ring_polynom.PEmul (Ring_polynom.PEc 2)
+                 (Ring_polynom.PEX Q 3))
+              (Ring_polynom.PEopp (Ring_polynom.PEX Q 2))) =
+         Ring_polynom.Pphi_pow 0 1 Qplus Qmult Qminus Qopp 0 1
+           (IDphi (R:=Q)) Z.of_N Qpower (2 # n :: q :: r :: nil)
+           res)%Q
+ 

@@ -1,0 +1,71 @@
+======== SAMPLE 1 ========
+' | apply H; order_rewr x eqn
+| H:?X1 |- _ => generalize (lt_trans H1 H2); clear H1 H2; intro; order_rewr x eqn
+| H:?X0 |- _ => generalize (le_lt_trans H1 H2); clear H1 H2; intro; order_rewr x eqn
+| H:?X0 |- _ => generalize (lt_le_trans H1 H2); clear H1 H2; intro; order_rewr x eqn
+| H:?X0 |- _ => generalize (le_trans_trans H0 H2); clear H1 H2; intro; order_rewr x eqn
+| _ => clear eqn
+end
+
+
+TcDebug (6) > 
+Goal:
+  
+  U := Type : Type
+  A : U
+  B : U
+  C : U
+  RA : relation A
+  RB : relation B
+  RC : relation C
+  x : B -> C
+  y : B -> C
+  H : (RB ==> RC) x y
+  x0 : A -> B
+  y0 : A -> B
+  H0 : (RA ==> RB) x0 y0
+  x1 : A
+  y1 : A
+  H1 : RA x1 y1
+  ============================
+   (complement_theory (complement_theory (complement_theory (complement_theory x0 y0) x1))
+      (complement_theory (complement_theory (complement_theory (complement_theory x0 y0)) x1))
+      (complement_theory (complement_theory (complement_theory (complement_theory x0 y0)) x1))
+       (complement_theory (complement_theory (complement_theory (complement_theory x0 y0) y)))
+       (complement_theory (complement_theory (complement_theory (complement_theory x0 y0) y)) x1))
+
+
+Debug: Going to execute:
+clear eqn
+
+
+TcDebug (7) > 
+Goal:
+  
+  U := Type : Type
+  A : U
+  B : U
+  C : U
+  RA : relation A
+  RB : relation B
+  RC : relation C
+  x : B -> C
+  y : B -> C
+  H : (RB ==> RC) x y
+  x0 : A -> B
+  y0 : A -> B
+  H0 : (RA ==> RB) x0 y0
+  x1 : A
+  y1 : A
+  H1 : RA x1 y1
+  ============================
+   (complement_theory (complement_theory (complement_theory (complement_theory x0 y0) x1))
+      (complement_theory (complement_theory (complement_theory (complement_theory x0 y0)) x1))
+      (complement_theory (complement_theory (complement_theory (complement_theory x0 y0) x1))
+       (complement_theory (complement_theory (complement_theory (complement_theory x0 y0)) x1))
+       (complement_theory (complement_theory (complement_theory (complement_theory x0 y0)) x1))
+       (complement_theory (complement_theory (complement_theory (complement_theory x0 y0) y)))
+       (complement_theory (complement_theory (complement_theory (complement_theory (complement_theory (complement_theory (9) x0 y0) y)))) ||
+         (complement_theory (complement_theory (complement_theory (complement_theory (complement_theory (9) y0)) y)) y ||
+            match y with
+             | RA => destruct (RA

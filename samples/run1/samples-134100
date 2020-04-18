@@ -1,0 +1,93 @@
+======== SAMPLE 1 ========
+ tree
+  C : X.eq x y \/ InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rl
+  H5 : X.eq x y
+  H1 : InT x lr
+  H3 : InT x b
+  ============================
+   (X.eq x lx \/ InT x a)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H1 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rl
+  H5 : X.eq x y
+  H1 : InT x lr
+  H3 : InT x b
+  ============================
+   (X.eq x lx \/ InT x a)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H : InT x a -> InT x lr \/ InT x rl
+  H1 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rl
+  H5 : X.eq x y
+  H1 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rl
+  H5 : X.eq x y
+  H1 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rl
+  H5 : X.eq x y
+  H1 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rl
+  H5 : X.eq x y
+  H1 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rl
+  H5 : X.eq x y
+  H1 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rl
+  H5 : X.eq x y
+  H1 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT x rl
+  H5 : X.eq x y
+  H1 : InT x lr -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : InT

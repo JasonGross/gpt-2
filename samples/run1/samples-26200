@@ -1,0 +1,96 @@
+======== SAMPLE 1 ========
+   (0 /\ 0~0)
+
+
+Debug: Going to execute:
+progress decompose record H
+
+
+TcDebug (2) > 
+Goal:
+    p : positive
+  ============================
+   (0 /\ 0~0)
+
+
+Debug: Going to execute:
+decompose record H
+
+
+TcDebug (2) > 
+Debug: Evaluated term: H
+
+Debug: Evaluated term: H
+
+Goal:
+    p : positive
+  ============================
+   (0 /\ 0)
+
+
+Debug: Going to execute:
+decompose record H
+
+
+TcDebug (2) > 
+Debug:
+Level 2: In environment
+p, q : positive
+H : 0 < positive
+H0 : false = true
+universeProof : Proof (QArithProof p q)
+UnfoldEmpty : forall x y : positive, (0 < x) -> (0 < x)
+UnfoldEmpty : forall x : positive, (0 < x) -> exists (QArithProof x p) : positive, False : QArithProof, i ZisN x ! m
+UnfoldEmpty : forall x : positive, x = x -> False
+UnfoldEmpty : forall x : positive, False = x
+UnfoldEmpty : forall x : positive, ZisN x k p k
+UnfoldEmpty : forall x : positive, (i = x) -> exists (QArithProof i ZisN x k p) : positive, False : QArithProof, i ZisN x k k
+UnfoldEmpty : forall x : positive, (i = x) -> exists (QArithProof i ZisN x k p) : positive, False : QArithProof, i ZisN x k p
+UnfoldEmpty : forall x : positive, (x = x) -> exists (QArithProof x x)
+UnfoldEmpty : forall x : positive, (i = x) -> exists (QArithProof i ZisN x k p)
+UnfoldEmpty : forall x : positive, (i = x) -> exists (QArithProof i ZisN x k p)
+UnfoldEmpty : forall x : positive, (i = x) -> exists (QArithProof i ZisN x k p)
+UnfoldEmpty : forall x : positive, (i = x) -> exists (QArithProof i ZisN x k p)
+UnfoldEmpty : forall x : positive, (i = x) -> exists (QArithProof i ZisN x k p)
+UnfoldEmpty : forall x : positive,
+   (0 < p)
+
+Debug: Going to execute:
+<ltac_plugin::decompose_record H>
+
+
+TcDebug (2) > 
+Debug: Level 2: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 3: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 3: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 3: Failed to progress.
+
+H0 : False : H0
+UnfoldEmpty : forall x : positive, (x = x) -> p = 0
+UnfoldEmpty : forall x : positive, (x - x) -> q = 0
+UnfoldEmpty : forall x : positive, (x - x) -> ZisN x k k
+UnfoldEmpty : forall x : positive, (x = x) -> (q = x)
+UnfoldEmpty : forall x : positive, (i = x) -> ZisP x
+UnfoldEmpty : forall x : positive, (i = x) -> (Q = i Q)
+UnfoldEmpty : forall x : positive, (i = x) -> i
+UnfoldEmpty : forall x : positive, p = 0) \/
+UnfoldEmpty : forall x : positive, (q = (i + - (x = 0)) \/ (Q = (i + - x) + - (x - y))
+UnfoldEmpty : forall x : positive, (i < i) 
+UnfoldEmpty : forall x : positive, (i < j) 
+UnfoldEmpty : forall x : positive, (j < i) 
+UnfoldEmpty : forall x :

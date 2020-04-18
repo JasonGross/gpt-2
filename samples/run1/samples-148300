@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+
+
+TcDebug (3) > 
+Goal:
+    P : elt -> Prop
+  ============================
+   (~ InM P (F E) 
+
+
+Debug: Going to execute:
+fun flags => <Coq.Init.Tauto.tauto_gen> flags
+
+
+TcDebug (4) > 
+Goal:
+    P : elt -> Prop
+  ============================
+   (~ InM P (F E) 
+
+
+Debug: Going to execute:
+<tauto_plugin::with_uniform@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+    P : elt -> Prop
+  ============================
+   (~ InM P (F E) 
+
+
+Debug: Going to execute:
+f x
+
+
+TcDebug (3) > 
+Goal:
+    P : elt -> Prop
+  ============================
+   (~ InM P (F E) 
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.tauto_gen> flags;
+ <Coq.Init.Tauto.tauto_intuit> flags ||
+   match reverse goal with
+   | id:(?X1 -> ?X2) -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (X1 -> X2);
+             [ exact
+             id
+             | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear
+                id; (solve [ t_tauto_intuit ]) ] ]
+   | id:~ ?X1 -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (~ X1);
+             [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+   | |- ?X1 =>
+         <Coq.Init.Tauto.is_disj> flags X1; (solve
+          [ left; t_tauto_intuit | right; t_tauto_intuit ])
+   end ||
+     match goal with
+     | |- _ -> _ => intro; t_tauto_intuit
+     | |- _ => t_reduce; t_solver
+     end || t_solver
+
+
+TcDebug (4) > 
+Goal:
+    P : elt -> Prop
+  ============================
+   (~ InM P (F E) 
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.tauto_gen> flags
+
+
+TcDebug (3) > 
+Goal:
+    P : elt -> Prop
+  ============================
+   (~ InM P (F E) 
+
+
+Debug:
+Going to execute:
+fun flags =>
+  <Coq.Init.Tauto.tauto_intuit> flags ltac:(<Coq.Init.Tauto.reduction_not_iff>)
+   ltac:(<Coq.Init.Tauto.reduction_not_iff>) solver
+
+
+TcDebug (4) > 
+Goal:
+    P : elt -> Prop
+  ============================
+   (~ InM P (F E) 
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.tauto_intuit> flags ltac:(<Coq.Init.Tauto.reduction_not_iff>)
+ ltac:(<Coq.Init.Tauto.reduction_not_iff>)
+
+
+TcDebug (4) > 
+

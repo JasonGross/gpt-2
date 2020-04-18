@@ -1,0 +1,186 @@
+======== SAMPLE 1 ========
+ r
+Debug: Level 0: Failed to progress.
+
+Goal:
+    A : Prop  b : A  H : b ~= 0
+  ============================
+   (a == - a)
+
+
+Debug:
+Going to execute:
+match H with
+| H' => fail 2
+| _ => unify X Y; clear H' || clear H
+end
+
+
+TcDebug (0) > 
+Goal:
+    A : Prop  b : A  H : b ~= 0
+  ============================
+   (a == - a)
+
+
+Debug: Going to execute:
+H
+
+
+TcDebug (1) > 
+Debug: Level 1: H
+ has value 
+H
+
+
+Goal:
+    A : Prop  b : A  H : b ~= 0
+  ============================
+   (a == - a)
+
+
+Debug: Going to execute:
+unify X Y; clear H' || clear H
+
+
+TcDebug (1) > 
+Goal:
+    A : Prop  b : A  H : b ~= 0
+  ============================
+   (a == - a)
+
+
+Debug: Going to execute:
+unify X Y
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (A -> Prop)
+
+Debug: Evaluated term: (A -> Prop)
+
+Goal:
+    A : Prop  b : A  H : b ~= 0
+  ============================
+   (a == - a)
+
+
+Debug: Going to execute:
+<ltac_plugin::unify@0> $1 $2
+
+
+TcDebug (1) > 
+Goal:
+    (forall x : A, f x = g x)
+
+
+Debug:
+Going to execute:
+match H with
+| H' => fail 2
+| _ => unify X Y; clear H' || clear H
+end
+
+
+TcDebug (0) > 
+Goal:
+    (forall x : A, f x = g x)
+
+
+Debug: Going to execute:
+H
+
+
+TcDebug (1) > 
+Debug: Level 1: H
+ has value 
+eq
+
+
+Goal:
+    (forall x : A, f x = g x)
+
+
+Debug: Going to execute:
+fail 2
+
+
+TcDebug (1) > 
+Goal:
+    (forall x : A, f x = g x)
+
+
+Debug:
+Going to execute:
+match goal with
+| H':?Y
+  |- _ => match H with
+           | H' => fail 2
+           | _ => unify X Y; clear H' || clear H
+           end
+end
+
+
+TcDebug (0) > 
+Goal:
+    (forall x : A, f x = g x)
+
+
+Debug:
+Going to execute:
+match H with
+| H' => fail 2
+| _ => unify X Y; clear H' || clear H
+end
+
+
+TcDebug (1) > 
+Goal:
+    (forall x : A, f x = g x)
+
+
+Debug: Going to execute:
+H
+
+
+TcDebug (2) > 
+Debug: Level 2: H
+ has value 
+f
+
+
+Goal:
+    (forall x : A, f x = g x)
+
+
+Debug: Going to execute:
+unify X Y; clear H' || clear H
+
+
+TcDebug (2) > 
+Goal:
+    (forall x : A, f x = g x)
+
+
+Debug: Going to execute:
+unify X Y
+
+
+TcDebug (2) > 
+Debug: Evaluated term: Type
+
+Debug: Evaluated term: (forall x : A, f x = g x)
+
+Goal:
+    (forall x : A, f x = g x)
+
+
+Debug: Going to execute:
+<ltac_plugin::unify@0> $1 $2
+
+
+TcDebug (2) > 
+Goal:
+    x : A  H : 0 < x
+  ============================
+   (forall (a0 : A) (b0 : A

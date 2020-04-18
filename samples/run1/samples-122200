@@ -1,0 +1,140 @@
+======== SAMPLE 1 ========
+3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H5 : false = true -> In y s
+  H7 : In y s -> In y (add x s)
+  H2 : In y (add x s)
+  H4 : true = true
+  H3 : [fst (s' + 1) | option _]; auto
+  H6 : option _
+  H0 : In y s'
+  H1 : false = true
+  H2 : In y (add x s)
+  H4 : true = true
+  H3 : [fst (s' + 1) | option _]
+  ============================
+   (true = false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H5 : false = true -> In y s
+  H7 : In y s -> In y (add x s)
+  H2 : In y (add x s)
+  H4 : true = true
+  H3 : [fst (s' + 1) | option _]
+  ============================
+   (true = false)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H5 : false = true -> In y s
+  H7 : In y s -> In y (add x s)
+  H2 : In y (add x s)
+  H4 : true = true
+  H3 : [fst (s' + 1) | option _]
+  ============================
+   (true = false)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H5 : false = true -> In y s
+  H7 : In y s -> In y (add x s)
+  H2 : In y (add x s)
+  H4 : true = true
+  H3 : [fst (s' + 1) | option _]
+  ============================
+   (true = false)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H5 : false = true -> In y s
+  H7 : In y s -> In y (add x s)
+  H2 : In y (add x s)
+  H4 : true = true
+  H3 : [fst (s' + 1) | option _]
+  ============================
+   (true = false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H5 : false = true -> In y s
+  H7 : In y s -> In y (add x s)
+ 

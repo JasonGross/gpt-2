@@ -1,0 +1,71 @@
+======== SAMPLE 1 ========
+x : Z),
+         ZChecker l y = true ->
+         forall env : PolEnv Z, make_impl (eval_nformula env) l False) ->
+        forall z1 z2 : Z,
+        FF pf z1 z2 = true ->
+        forall x : Z,
+        z1 <= x <= z2 ->
+        exists pr : ZArithProof,
+          In pr pf /\ ZChecker ((PsubC Z.sub p1 x, Equal) :: l) pr = true
+  z1 : Z
+  z2 : Z
+  x : Z
+  H1 : ZChecker ((PsubC Z.sub p1 z1, Equal) :: l) a = true
+  H2 : FF pf (z1 + 1) z2 = true
+  LT : Z.succ z1 <= x
+  H3 : z1 <= x
+  H4 : x <= z2
+  ============================
+   (Z.succ z1 <= x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  w1 : ZWitness
+  w2 : ZWitness
+  a : ZArithProof
+  pf : list ZArithProof
+  H : forall y : ZArithProof,
+      ltof ZArithProof bdepth y (EnumProof w1 w2 (a :: pf)) ->
+      forall l : list (NFormula Z),
+      ZChecker l y = true ->
+      forall env : PolEnv Z, make_impl (eval_nformula env) l False
+  l : list (NFormula Z)
+  f1 : NFormula Z
+  Hf1 : eval_Psatz l w2 = Some f1
+  f2 : NFormula Z
+  Hf2 : eval_Psatz l w1 = Some f2
+  p1 : PolC Z
+  op1 : Op1
+  p2 : PolC Z
+  op2 : Op1
+  env : PolEnv Z
+  FF := fix label (pfs : list ZArithProof) (lb ub : Z) {struct pfs} : bool :=
+          match pfs with
+          | nil => if lb >? ub then true else false
+           | pf :: rsr =>
+               ZChecker ((PsubC Z.sub p1 lb, Equal) :: l) pf &&
+               label rsr (lb + 1) ub
+          end : list ZArithProof -> Z -> Z -> bool
+  IHpf : (forall y : ZArithProof,
+          ltof ZArithProof bdepth y (EnumProof w1 w2 pf) ->
+          forall l : list (NFormula Z),
+          ZChecker l y = true ->
+          forall env : PolEnv Z, make_impl (eval_nformula env) l False) ->
+         forall z1 z2 : Z,
+         FF pf z1 z2 = true ->
+         forall x : Z,
+         z1 <= x <= z2 ->
+         exists pr : ZArithProof,
+          In pr pf /\ ZChecker ((PsubC Z.sub p1 x, Equal) :: l) pr = true
+  z1 : Z
+  z2 : Z
+  x : Z
+  H1 : ZChecker ((PsubC Z.sub p1 z1, Equal) :: l) a = true
+

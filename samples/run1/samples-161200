@@ -1,0 +1,79 @@
+======== SAMPLE 1 ========
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+               deduce t t' = Some u ->
+               forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  cl' : clause
+  ============================
+   (None <> None -> eval_clause env (Some cl') <->
+    eval_clause env (fold_right F (cnf_tt ?c c) c') <->
+    (eval_clause env (fold_right F (cnf_tt c) cl') /\
+    make_conj (eval_clause env) acc <->
+    (eval_clause env (fold_right F (cnf_tt c) cl) /\
+    make_conj (eval_clause env) f)
+
+
+Debug: Going to execute:
+<ltac_plugin::split@0> $1
+
+
+TcDebug (2) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  F := fun (acc : list clause) (e : clause) =>
+       match or_clause nil e with
+       | Some cl => cl :: acc
+       | None => acc
+       end : list clause -> clause -> list clause
+  f : cnf
+  H0 : make_conj (eval_clause env) (fold_left F f nil) ->
+       (eval_clause env nil \/ make_conj (eval_clause env) f) /\
+       make_conj (eval_clause env) nil
+  H1 : eval_clause env nil ->
+       make_conj (eval_clause env) nil ->
+       make_conj (eval_clause env) (fold_left F f nil)
+  H3 : make_conj (fun cl : clause => ~ make_conj (eval_tt env) cl) f
+  H : make_conj (eval_clause env) nil ->
+      make_conj (eval_clause env) (fold_left F f nil)
+  ============================
+   (eval_clause env (fold_left F (cnf_tt c) nil) /\ True)
+
+
+Debug: Going to execute:
+<ltac_plugin::split@0> $1
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env

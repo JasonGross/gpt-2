@@ -1,0 +1,162 @@
+======== SAMPLE 1 ========
+2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : X.t
+  H2 : y < x
+  H3 : y <= x
+  H0 : y < y + x
+  H4 : y <= y + x
+  H5 : x <= y + y
+  ============================
+   (y + y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : X.t
+  H2 : y < x
+  H3 : y <= x
+  H0 : y < y + x
+  H4 : y <= y + y
+  H5 : x <= y + y
+  ============================
+   (y + y)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : X.t
+  H2 : y < x
+  H3 : y <= x
+  H0 : y < y + x
+  H4 : y <= y + y
+  H5 : x <= y + y
+  ============================
+   (y + y)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : X.t
+  H2 : y < x
+  H3 : y <= x
+  H0 : y < y + x
+  H4 : y <= y + y
+  H5 : x <= y + y
+  ============================
+   (y + y)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : X.t
+  H2 : y < x
+  H3 : y <= x
+  H0 : y < y + x
+  H4 : y <= y + y
+  H5 : x <= y + y
+  ============================
+   (y + y)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : X.t
+  H2 : y < x
+  H3 : y <= x
+  H0 : y < y + x
+  H4 : y <= y + y
+  H5 : x <= y + y
+  ============================
+   (y + y)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : X.t
+  H2 : y < x
+  H3 : y <= x
+  H0 : y < y + x
+  H4 : y <= y + y
+  H5 : x <= y + y
+  ============================
+   (y +

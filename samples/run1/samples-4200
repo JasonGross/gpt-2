@@ -1,0 +1,109 @@
+======== SAMPLE 1 ========
+To elt'
+  _x : I.t
+  l : tree
+  x' : X.t
+  r : tree
+  y : elt
+  H4 : InT x l -> InT x (filter f (x :: l)) -> InT x l \/ InT x r
+  H : InT x r -> InT x (filter f (x :: l) \/ InT x l \/ X.lt x y)
+  H5 : InT x l
+  H1 : InT x r
+  ============================
+   (X.lt x' x /\ l -> InT x l \/ (InT x l' -> X.lt x x))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : X.t
+  l : tree
+  x' : X.t
+  r : tree
+  y : elt
+  H4 : InT x l -> InT x (filter f (x :: l)) -> InT x l \/ InT x r
+  H : InT x r -> InT x (filter f (x :: l) \/ InT x r \/ X.lt x y)
+  H5 : InT x l
+  H1 : InT x r
+  ============================
+   (X.lt x' x /\ l -> InT x l \/ (InT x l' -> X.lt x x))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  x : X.t
+  l : tree
+  x' : X.t
+  r : tree
+  y : elt
+  H4 : InT x l -> InT x (filter f (x :: l)) -> InT x l \/ InT x r
+  H : InT x r -> InT x (filter f (x :: l) \/ InT x r \/ X.lt x y)
+  H5 : InT x l
+  H1 : InT x r
+  ============================
+   (X.lt x' x /\ l -> InT x l \/ (InT x l' -> X.lt x x))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  l : tree
+  x' : X.t
+  r : tree
+  y : elt
+  H4 : InT x l -> InT x (filter f (x :: l)) -> InT x l \/ InT x r
+  H : InT x r -> InT x (filter f (x :: l) \/ InT x r \/ X.lt x y)
+  H5 : InT x l
+  H1 : InT x r
+  ============================
+   (X.lt x' x /\ l -> InT x l \/ (InT x l' -> X.lt x x))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : X.t
+  l : tree
+  x' : X.t
+  r : tree
+  y : elt
+  H4 : InT x l -> InT x (filter f (x :: l)) -> InT x l \/ InT x r
+  H : InT x r -> InT x (filter f (x :: l) \/ InT x r \/ X.lt x y)
+  H5 : InT x l
+  H1 : InT x r
+  ============================
+   (X.lt x' x /\ l -> InT x l \/ (InT x l' -> X.lt x x))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : X.t
+

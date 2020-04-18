@@ -1,0 +1,105 @@
+======== SAMPLE 1 ========
+ cr r3
+  y : key
+  H3 : In y l1 /\ X.lt y x1
+  H4 : X.lt x1 y
+  H5 : In y r1 /\ X.lt x2 y -> In y l2'
+  H6 : In y r2 /\ X.lt y x1 -> In y l2'
+  H7 : X.lt x1 y
+  H8 : In y l1
+  H1 : In y (map2_opt l1 l2')
+  ============================
+   (In y (Node l1 x d r1 x2))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : int
+  lrrp : int
+  _xaj : I.t
+  lrrr : I.t
+  _x1 : height ll
+  _x0 : I.t
+  lrrr0 : I.t
+  _x10 : height r
+  IHo : Ok lrrr
+  IHi1 : forall (l : list X.t) (acc : list elt),
+       Sorted X.lt (rev lr) ->
+       Sorted X.lt (rev lr) ->
+       (if (is_empty d (id lr) ? In d lrx lrr) add x d r elseif (is_empty d lrr ? In d lrr) lrx acc) ->
+       In d lrr
+  H : In d (rev lr) -> Add x r (find y r) -> Add y r (find y r) -> X.lt y x
+  H1 : X.eq y x -> In y (Node l1 x d r1 x2)
+  ============================
+   (In y (Node l1 x d r1 x2))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : int
+  lrrp : int
+  _xaj : I.t
+  lrrr : I.t
+  _x1 : height ll
+  _x0 : I.t
+  lrrr0 : I.t
+  _x10 : height r
+  IHo : Ok lrrr
+  IHi1 : forall (l : list X.t) (acc : list elt),
+        Sorted X.lt (rev lr) ->
+        Sorted X.lt (rev lr) ->
+        (if (is_empty d (id lr) ? In d lrx lrr) add x d r elseif (is_empty d lrr ? In d lrr) lrx acc) ->
+        In d lrr
+  H : In d (rev lr) -> Add x r (find y r) -> Add y r (find y r) -> X.lt y x
+  H1 : X.eq y x -> In y (Node l1 x d r1 x2)
+  ============================
+   (In y (Node l1 x d r1 x2))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x :

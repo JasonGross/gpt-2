@@ -1,0 +1,125 @@
+======== SAMPLE 1 ========
+::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : elt -> A -> A
+  Comp : Proper (E.eq ==> eqA ==> eqA) f
+  Ass : transpose eqA f
+  i : A
+  s : t
+  s' : t
+  H : forall x : elt, ~ (In x s /\ In x s')
+  x : elt
+  H0 : In x s' -> False
+  H3 : In x s'
+  H1 : In x s
+  H2 : In x s'
+  H5 : E.eq x a -> In a s'
+  H6 : E.eq x a \/ In a s
+  H7 : In a s'
+  H8 : In a s''
+  H4 : E.eq x a \/ In a s
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : elt -> A -> A
+  Comp : Proper (E.eq ==> eqA ==> eqA) f
+  Ass : transpose eqA f
+  i : A
+  s : t
+  s' : t
+  H : forall x : elt, ~ (In x s /\ In x s')
+  x : elt
+  H0 : In x s' -> False
+  H3 : In x s'
+  H1 : In x s
+  H2 : In x s'
+  H5 : E.eq x a -> In a s'
+  H6 : E.eq x a \/ In a s
+  H7 : In a s'
+  H8 : In a s''
+  H4 : E.eq x a \/ In a s
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : elt -> A -> A
+  Comp : Proper (E.eq ==> eqA ==> eqA) f
+  Ass : transpose eqA f
+  i : A
+  s : t
+  s' : t
+  H : forall x : elt, ~ (In x s /\ In x s')
+  x : elt
+  H0 : In x s' -> False
+  H3 : In x s'
+  H1 : In x s
+  H2 : In x s'
+  H5 : E.eq x a -> In a s'
+  H6 : E.eq x a \/ In a s
+  H7 : In a s'
+  H8 : In a s''
+  H4 : E.eq x a \/ In a s
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : elt -> A -> A
+  Comp : Proper (E.eq ==> eqA ==> eqA) f
+  Ass : transpose eqA f
+  i : A
+  s : t
+  s' : t
+  H : forall x : elt, ~ (In x s /\ In x s')
+  x : elt
+  H0 : In x s' -> False
+  H3 : In x s'
+  H1 : In x s
+  H2 : In x s'
+  H5 : E.eq x a -> In a s'
+  H6 : E.eq x a \/ In a s
+  H7 : In a s'
+  H8 : In a s''
+  H4 :

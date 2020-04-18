@@ -1,0 +1,149 @@
+======== SAMPLE 1 ========
+ : H : P e'
+  ============================
+   (Bk l1 k2 ++ l1 k2)
+
+
+Debug: Going to execute:
+clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  e1 : ExprP e1
+  e2 : ExprP e2
+   H3 : (Bk l1 k2) {-# IN * --} expr pr k2
+  Hk2 : (Bk l1 k2)
+  t : list (EqDec r1 t2)
+  H : P e'
+  ============================
+   (Bk l1 k2 ++ l1 k2)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (1) > 
+Debug: Level 1: bst l1 is used in hypothesis sor.
+
+Debug: Level 1: bst l1 is used in hypothesis sor.
+
+Goal:
+  
+  e1 : ExprP e1
+  e2 : ExprP e2
+  H3 : (Bk l1 k2) {-# IN * --} expr pr k2
+  l1 : tree
+  k2 : uint
+  Hk1 : bst l1
+  l2 : tree
+  k3 : uint
+  Hk2 : bst l2
+  k4 : uint0
+  Hk3 : bst l2
+  k5 : uint
+  ============================
+   (Bk l1 k2)
+
+
+Debug: Going to execute:
+assert X2; [ exact (id0 id1) | clear id0 ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  e1 : ExprP e1
+  e2 : ExprP e2
+  H0 : Bst l1 k2
+  H2 : bst l1
+  H3 : l2
+  H2 : k2
+  l1 : tree
+  k2 : uint
+  Hk1 : bst l1
+  H3 : l2
+  H2 : k2
+  l1 : tree
+  k2 : uint
+  Hk2 : bst l2
+  k4 : uint0
+  Hk3 : bst l2
+  k5 : uint0
+  ============================
+   (Bk l1 k2)
+
+
+Debug: Going to execute:
+assert X2
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (Bk l1 k2)
+
+Goal:
+  
+  e1 : ExprP e1
+  e2 : ExprP e2
+  H2 : bst l1 k2
+  H3 : l2
+  H2 : k2
+  l1 : tree
+  k2 : uint
+  Hk1 : bst l1
+  H3 : l2
+  H2 : k2
+  l1 : tree
+  k2 : uint
+  Hk2 : bst l2
+  k4 : uint0
+  Hk3 : bst l2
+  k5 : uint
+  ============================
+   (Bk l1 k2)
+
+
+Debug: Going to execute:
+exact (id0 id1)
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (t1 t1)
+
+Goal:
+  
+  e1 : ExprP e1
+  e2 : ExprP e2
+  H2 : bst l1 k2
+  H3 : l2
+  H2 : k2
+  l1 : tree
+  k2 : uint
+  Hk1 : bst l1
+  H3 : l2
+  H2 : k2
+  l1 : tree
+  k2 : uint
+  Hk2 : bst l2
+  k4 : uint0
+  Hk3 : bst l2
+  k5 : uint
+  ============================
+   (EqDec (Bk l1 k2)
+
+)
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  e1 : ExprP e1
+  e2 : ExprP e2
+  H2 : bst l1 k2
+  H3 : l2
+  H2 : k

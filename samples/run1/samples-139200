@@ -1,0 +1,54 @@
+======== SAMPLE 1 ========
+v
+                 id
+                   (S
+                       (S
+                          (S
+                              (S
+                                 (S
+                                    (S
+                                        (S (S (S (S (S (S ...)))))))))))))))))))))%Q
+       (2 * ((1 # 2) * (1 # n) + (1 # n) <
+        2 * yn (Pos.to_nat (Pos.max n (3 * k))) +
+        - ((yn (Pos.to_nat (Pos.max n (3 * k))) + xn (Pos.to_nat (Pos.max n (3 * k))) -
+        max (yn (Pos.to_nat (Pos.max n (3 * k))) + xn (Pos.to_nat (Pos.max n (3 * k)))))) ==
+       - (yn (Pos.to_nat (Pos.max n (3 * k))) + xn (Pos.to_nat (Pos.max n (3 * k))) -
+       max (yn (Pos.to_nat (Pos.max n (3 * k))) + xn (Pos.to_nat (Pos.max n (3 * k))) + ()))%Q
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | QArith_base.inject_Z ?z => isZcst z
+  | (?n # ?d)%Q =>
+      match isZcst n with
+      | true => isPcst d
+      | _ => constr:false
+      end
+  | _ => constr:false
+  end
+
+
+TcDebug (24) > 
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+  zn : nat -> Q
+  limz : QCauchySeq zn Pos.to_nat
+  n : positive
+  inf : (2 # n < yn (Pos.to_nat (Pos.max n (3 * k)))%Q
+  eps : Q
+  Heqeps : eps = yn (Pos.to_nat (Pos.max n (3 * k))) - (2 # n) *
+         (1 # n)
+  epsPos : (0 < eps)%Q
+  H : forall n p : positive, (Pos.to_nat n <= Pos.to_nat (Pos.max n (3 * k)))%nat
+  k : positive
+  kmaj : (/ eps < Z.pos k # 1)%Q
+  decMiddle : (zn (Pos.to_nat (Pos.max n (3 * k))) <=
+               (yn (Pos.to_nat (Pos.max n (3 * k))) + xn (Pos.to_nat (Pos.max n (3 * k))) +
+                zn (Pos.to_nat (Pos.max n (3 * k))) <=
+                - (yn (Pos.to_nat (Pos.max n (3 * k))) + - zn (

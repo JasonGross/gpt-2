@@ -1,0 +1,119 @@
+======== SAMPLE 1 ========
+ l1 ++ X.lt y x1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (9) > 
+Goal:
+  
+  l1 : tree
+  x1 : X.t
+  c1 : Info.t
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H6 : Ok l2
+  H7 : Ok r2
+  H8 : lt_tree x2 l2
+  H9 : gt_tree x2 r2
+  H10 : Ok r1
+  H11 : lt_tree x1 Leaf
+  H12 : gt_tree x1 r1
+  H : X.lt x1 x2
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 l1 x1 r1) -> InT a (Node c2 l2 x2 r2)
+  a : elt
+  H3 : X.lt a x1
+  ============================
+   (X.eq a x1
+      (Node c2 l2 x2 r2) \/ InT a (Node c1 Leaf x1 r1))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (9) > 
+Debug: Level 9: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l1 : tree
+  x1 : X.t
+  c1 : Info.t
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H6 : Ok l2
+  H7 : Ok r2
+  H8 : lt_tree x2 l2
+  H9 : gt_tree x2 r2
+  H10 : Ok r1
+  H11 : lt_tree x1 Leaf
+  H12 : gt_tree x1 r1
+  H : X.lt x1 x2
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 l1 x1 r1) -> InT a (Node c2 l2 x2 r2)
+  a : elt
+  H3 : X.lt a x1
+  ============================
+   (X.eq a x1
+      (Node c2 l2 x2 r2) \/ InT a (Node c1 Leaf x1 r1))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (8) > 
+Goal:
+  
+  l1 : tree
+  x1 : X.t
+  c1 : Info.t
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H6 : Ok l2
+  H7 : Ok r2
+  H8 : lt_tree x2 l2
+  H9 : gt_tree x2 r2
+  H10 : Ok r1
+  H11 : lt_tree x1 Leaf
+  H12 : gt_tree x1 r1
+  H : X.lt x1 x2
+  H0 : bool
+  H1 : forall a : elt, InT a (Node c1 l1 x1 r1) -> InT a (Node c2 l2 x2 r2)
+  a : elt
+  H3 : X.lt a x1
+  ============================
+   (X.eq a x1
+      (Node c2 l2 x2 r2) \/ InT a (Node c1 Leaf x1 r1))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (8) > 
+Goal:
+  
+  l1 : tree
+  x1 : X.t
+  c1 : Info.t
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H6 : Ok l2
+  H7 : Ok r2
+

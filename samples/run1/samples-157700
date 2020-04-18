@@ -1,0 +1,61 @@
+======== SAMPLE 1 ========
+ P'0 : Pol' n0 m0 : list (X.t * D.t)
+  Hp3 : Pol' (m' :: p) n0 m0 : list (X.t * D.t)
+  Hp4 : Pol' (m' :: p) n0 m0 : list (X.t * D.t)
+  Hp5 : Pol' (D.eq p p') n0 m0 : list (X.t * D.t)
+  Hp6 : Pol' (D.eq p p') n0 m0 : list (X.t * D.t)
+  Hp7 : Pol' (D.eq p p') n0 m0 : list (X.t * D.t)
+  Hp8 : For_all (D.eq p p') m0 -> D.eq p p' \/ In x m0
+  ============================
+   (D.eq p n0 /\ For_all (fun p' m' : (D.t * D.t') (fun p : key * D.t => negb)))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  n : (D.t * D.t)%type
+  H : Proper (D.t * D.t)%type
+  p : X.t
+  H1 : forall (H0 : X.eq x0) (d : elt) (p : (X.t * D.t)) (H2 : forall m : list (X.t * D.t),
+       D.eq p ->
+       D.eq p ->
+       forall m : list (X.t * D.t),
+       D.eq p ->
+       forall m' : list (X.t * D.t),
+       D.eq p' ->
+       forall mll : list (X.t * D.t),
+       D.ll (D.eq x0 x') ->
+       D.eq (fun y : X.t => D.eq y x0) (D.eq y x) ->
+       D.eq p'
+        (dintuition
+           (fun (p : P.MX.TO.rem d : elt => D.eq d)
+             (momsize (D.t * D.t)) (D.eq (snd p) y d) <->
+       D.eq p \/ D.eq (snd p) y d) /\
+      (forall m' : list (X.t * D.t),
+       D.eq p ->
+       forall mll : list (X.t * D.t),
+       D.ll (D.eq x0 x') ->
+       D.eq (fun (p : P.MX.TO.rem d : elt => D.eq d) (momsize (D.t * D.t))
+          (dintuition
+            (fun (p : P.MX.TO.rem d : elt => D.eq d) (momsize (D.t * D.t))
+              (snd p) m'))
+  ============================
+   (D.eq p n0 /\ For_all (fun p' m' : (D.t * D.t') (fun p : key * D.t => negb)))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  n : (D.t * D.t)%type
+  H : Proper (D.t * D.t)%type
+  p : X

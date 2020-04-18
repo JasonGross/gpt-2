@@ -1,0 +1,147 @@
+======== SAMPLE 1 ========
+->
+        InA X.eq x (x1 :: l1) \/ InA X.eq x l2 \/ InA X.eq x acc
+| H:TO.eq x1 x2
+  |- _ =>
+      rewr H (OrderTac.eq_trans (OrderTac.eq_sym eqn) H);
+       OrderTac.order_rewr x eqn
+| H:TO.eq x1 x2
+  |- _ =>
+      rewr H (OrderTac.eq_trans H eqn);
+       OrderTac.order_rewr x eqn
+| H:TO.lt x1 x2
+  |- _ =>
+      rewr H (OrderTac.eq_lt (OrderTac.eq_sym eqn) H);
+       OrderTac.order_rewr x eqn
+| H:TO.lt x1 x2
+  |- _ =>
+      rewr H (OrderTac.eq_lt (OrderTac.eq_sym eqn) H);
+       OrderTac.order_rewr x eqn
+| H:TO.lt x1 x2
+  |- _ =>
+      rewr H (OrderTac.eq_lt (OrderTac.eq_sym eqn) H);
+       OrderTac.order_rewr x eqn
+| H:TO.lt x1 x2
+  |- _ =>
+      rewr H (OrderTac.eq_lt (OrderTac.eq_sym eqn) H);
+       OrderTac.order_rewr x eqn
+| H:TO.lt x1 x2
+  |- _ =>
+      rewr H (OrderTac.eq_lt (OrderTac.eq_sym eqn) H);
+       OrderTac.order_rewr x eqn
+| _ => clear eqn
+end
+
+
+TcDebug (8) > 
+Goal:
+  
+  x : l1
+  y : l1
+  H : TO.eq x y
+  ============================
+   False
+
+
+Debug: Going to execute:
+clear eqn
+
+
+TcDebug (9) > 
+Goal:
+  
+  x : l1
+  y : l1
+  H : TO.eq x y
+  ============================
+   False
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (9) > 
+Goal:
+  
+  x : l1
+  y : l1
+  H : TO.eq x y
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+cut(q); OrderTac.order_loop
+
+
+TcDebug (9) > 
+Goal:
+  
+  x : l1
+  y : l1
+  H : TO.eq x y
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+cut(q); OrderTac.order_loop
+
+
+TcDebug (9) > 
+Goal:
+  
+  x : l1
+  y : l1
+  H : TO.eq x y
+  ============================
+   False
+
+
+Debug: Going to execute:
+cut(q); OrderTac.order_loop
+
+
+TcDebug (9) > 
+Goal:
+  
+  x : l1
+  y : l1
+  H : TO.eq x y
+  ============================
+   False
+
+
+Debug: Going to execute:
+cut(q); OrderTac.order_loop
+
+
+TcDebug (9) > 
+Goal:
+  
+  x : l1
+  y : l1
+  H : TO.eq x y
+  ============================
+   False
+
+
+Debug: Going to execute:
+cut(q)
+
+
+TcDebug (9) > 
+Debug: Level 9: cut is used in hypothesis H0.
+
+Goal:
+  
+  x : l1
+  y : l1
+  H : TO.eq x y
+  ============================
+   False
+
+

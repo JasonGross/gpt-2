@@ -1,0 +1,137 @@
+======== SAMPLE 1 ========
+_conj (eval_tt env) a <-> InT a l2 \/ InT a l1
+  H4 : InT a r2
+  H2 : InT a l1
+  H5 : InT a l2
+  ============================
+   (InT a (Node c1 l1 x1 r1))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H4 : InT a r2
+  H2 : InT a l1
+  H5 : InT a l2
+  ============================
+   (InT a (Node c1 l1 x1 r1))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H4 : InT a r2
+  H2 : InT a l1
+  H5 : InT a l2
+  ============================
+   (InT a (Node c1 l1 x1 r1))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H4 : InT a r2
+  H2 : InT a l1
+  H5 : InT a l2
+  ============================
+   (InT a (Node c1 l1 x1 r1))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree x2 r2
+  H4 : InT a r2
+  H2 : InT a l1
+  H5 : InT a l2
+  ============================
+   (InT a (Node c1 l1 x1 r1))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : lt_tree x2 l2
+  H8 : gt_tree

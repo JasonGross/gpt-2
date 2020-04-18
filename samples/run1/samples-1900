@@ -1,0 +1,137 @@
+======== SAMPLE 1 ========
+f1) == nil)
+  H : /\ make_conj N make_impl N'
+  H0 : /\ make_impl N'
+  ============================
+   (make_impl N')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  s : t
+  ll : tree
+  x : X.t
+  H : deduce (s * A) (s == nil)
+  H0 : make_impl N make_cnf A ll
+  H1 : make_cnf nil -> make_cnf N
+  H : deduce (s * A) (s == nil)
+  H2 : make_cnf nil
+  ============================
+   (make_impl N')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  s : t
+  ll : tree
+  x : X.t
+  H : deduce (s * A) (s == nil)
+  H0 : make_impl N make_cnf A ll
+  H1 : make_cnf nil -> make_cnf N
+  H : deduce (s * A) (s == nil)
+  H2 : make_cnf nil
+  ============================
+   (make_impl N')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  s : t
+  ll : tree
+  x : X.t
+  H : deduce (s * A) (s == nil)
+  H0 : make_impl N make_cnf A ll
+  H1 : make_cnf nil -> make_cnf N
+  H : deduce (s * A) (s == nil)
+  H2 : make_cnf nil
+  ============================
+   (make_impl N')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  s : t
+  ll : tree
+  x : X.t
+  H : deduce (s * A) (s == nil)
+  H0 : make_impl N make_cnf A ll
+  H1 : make_cnf nil -> make_cnf N
+  H : deduce (s * A) (s == nil)
+  H2 : make_cnf nil
+  ============================
+   (Make_C Cst (CNode ll) nil)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  s : t
+  ll : tree
+  x : X.t
+  H : deduce (s * A) (s == nil)
+  H0 : make_impl N make_cnf A ll
+  H1 : make_cnf nil -> make_cnf N
+  H : deduce (s * A) (s == nil)
+  H2 : make_cnf nil
+  ============================
+   (make_impl N')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  s : t
+  ll : tree
+  x : X.t
+  H : deduce (s * A) (s == nil)
+  H0 : make_impl N make_cnf A ll
+  H1 : make_cnf nil -> make_cnf N
+  H : deduce (s * A) (s == nil)
+  H2 : make_cnf nil
+  ============================
+   (make_impl N')
+
+
+Debug:
+Going to execute:
+<Coq.Init

@@ -1,0 +1,136 @@
+======== SAMPLE 1 ========
+
+
+TcDebug (9) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : key
+  H : bst (Node l x e r)
+  l0 : X.lt x y
+  e1 : X.compare x y = bst (Node l x e r)
+  H0 : X.lt y x
+  ============================
+   (eq_list l l0)
+
+
+Debug:
+Going to execute:
+change_no_check (OrderTac.OTF.eq x y) in H ||
+  change_no_check (OrderTac.OTF.lt x y) in H ||
+    change_no_check (OrderTac.OTF.le x y) in H || clear H || fail 1)
+
+
+TcDebug (9) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : key
+  H : bst (Node l x e r)
+  l0 : X.lt x y
+  e1 : X.compare x y = bst (Node l x e r)
+  H0 : OrderTac.OTF.eq x y
+  ============================
+   (eq_list l l0)
+
+
+Debug: Going to execute:
+change_no_check (OrderTac.OTF.eq x y) in H
+
+
+TcDebug (9) > 
+Debug: Evaluated term: (OrderTac.OTF.eq x y)
+
+Debug: Level 9: Not convertible.
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : key
+  H : bst (Node l x e r)
+  l0 : X.lt x y
+  e1 : X.compare x y = bst (Node l x e r)
+  H0 : OrderTac.OTF.eq x y
+  ============================
+   (eq_list l l0)
+
+
+Debug:
+Going to execute:
+change_no_check (OrderTac.OTF.lt x y) in H ||
+  change_no_check (OrderTac.OTF.le x y) in H || clear H || fail 1
+
+
+TcDebug (9) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : key
+  H : bst (Node l x e r)
+  l0 : X.lt x y
+  e1 : X.compare x y = bst (Node l x e r)
+  H0 : OrderTac.OTF.eq x y
+  ============================
+   (eq_list l l0)
+
+
+Debug: Going to execute:
+change_no_check (OrderTac.OTF.lt x y) in H
+
+
+TcDebug (9) > 
+Debug:
+Level 9: In environment
+elt : Type
+l : t elt
+x : key
+e : elt
+r : t elt
+h : int
+y : key
+H : bst (Node l x e r)
+l0 : X.lt x y
+e1 : X.compare x y = bst (Node l x e r)
+H0 : OrderTac.OTF.eq x y
+The term "OrderTac.OTF.eq x y" has type "TO.t".
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  e : elt
+  r : t elt
+  h : int
+  y : key
+  H : bst (Node l x e r)
+  l0 : X.lt x y
+  e1 : X.compare x y = bst (Node l x e r)
+  H0 : OrderTac.OTF.eq x y
+  ============================
+   (eq_list l l0)
+
+
+Debug: Going to execute:
+clear H || fail 1
+

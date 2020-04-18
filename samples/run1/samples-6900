@@ -1,0 +1,165 @@
+======== SAMPLE 1 ========
+ elt'
+  m1 : t elt
+  m2 : t elt
+  H : m1 > m2
+  H1 : equal m1 m2
+  H2 : m1 < m2
+  H3 : m2 -> False
+  ============================
+   (False)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  m30 : m
+  m3 : m2
+  k : key
+  e : elt
+  m1 : t elt
+  m2 : t elt
+  H : m1 > m2
+  H1 : equal m1 m2
+  H2 : m1 < m2
+  H3 : m2 -> False
+  ============================
+   (False)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  m30 : m
+  m3 : m2
+  k : key
+  e : elt
+  m1 : t elt
+  m2 : t elt
+  H : m1 > m2
+  H1 : equal m1 m2
+  H2 : m1 < m2
+  H3 : m2 -> False
+  ============================
+   (False)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  m30 : m
+  m3 : m2
+  k : key
+  e : elt
+  m1 : t elt
+  m2 : t elt
+  H : m1 > m2
+  H1 : equal m1 m2
+  H2 : m1 < m2
+  H3 : m2 -> False
+  ============================
+   (False)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  m30 : m
+  m3 : m2
+  k : key
+  e : elt
+  m1 : t elt
+  m2 : t elt
+  H : m1 > m2
+  H1 : equal m1 m2
+  H2 : m1 < m2
+  H3 : m2 -> False
+  ============================
+   (false)
+
+
+Debug: Going to execute:
+assumption
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  m30 : m
+  m3 : m2
+  k : key
+  e : elt
+  m1 : t elt
+  m2 : t elt
+  H : m1 > m2
+  H1 : equal m1 m2
+  H2 : m1 < m2
+  H3 : m2 -> False
+  ============================
+   (false)
+
+
+Debug: Going to execute:
+construct_a l1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  m30 : m
+  m3 : m2
+  k : key
+  e : elt
+  m1 : t elt
+  m2 : t elt
+  H : m1 > m2
+  H1 : equal m1 m2
+  H2 : m1 < m2
+  H3 : m2 -> False
+  ============================
+   (false)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2)

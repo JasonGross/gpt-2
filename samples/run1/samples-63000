@@ -1,0 +1,103 @@
+======== SAMPLE 1 ========
+|- _ =>
+       rewrite <- (Node (length ll) rl')
+         inversion_clear _ (Node ll lx ld (Node ld (Node rl rx rd rr _x1) _x2) x d rl) ->
+        rewrite (Node ll lx ld (Node ld (Node rl rx rd rr _x1) _x2) x d rl')
+  ============================
+   (false =
+    (compare_diff l x d (Node ll lx ld (Node ld (Node rl rx rd rr _x1) _x2) x d rl))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  _x0 : height (Node ll lx ld (Node rl rx rd rr _x1) _x2) > height l + 2
+  _x : height l <= height (Node rl rx rd rr _x1) + 2
+  _x2 : height rr >= height rl
+  y : key
+  e' : elt
+  H0 : MapsTo y e' rr
+  ============================
+   (false =
+    (compare_diff l x d (Node ll lx ld (Node rl rx rd rr _x1) _x2) x d rl))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  _x0 : height (Node ll lx ld (Node rl rx rd rr _x1) _x2) > height l + 2
+  _x : height l <= height (Node rl rx rd rr _x1) + 2
+  _x2 : height rr >= height rl
+  y : key
+  e' : elt
+  H0 : MapsTo y e' rr
+  ============================
+   (false =
+    (compare_diff l x d (Node ll lx ld (Node rl rx rd rr _x1) _x2) x d rl))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  _x0 : height (Node ll lx ld (Node rl rx rd rr _x1) _x2) > height l + 2
+  _x : height l <= height (Node rl rx rd rr _x1) + 2
+  _x2 : height rr >= height rl
+  y : key
+  e' : elt
+  H0 : MapsTo y e' rr
+  ============================
+   (false =
+    (compare_diff l x d (Node ll lx ld (Node rl rx rd rr _x1) _x2) x d rl))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x

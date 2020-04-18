@@ -1,0 +1,157 @@
+======== SAMPLE 1 ========
+ introactic: InA a l -> False
+  H4 : E.eq x a -> False
+  H2 : E.eq x a
+  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  x : E.t
+  H : In x s
+  a : E.t
+  H1 : In a s /\ ~ E.eq x a
+  H3 : E.eq x a -> False
+  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  x : E.t
+  H : In x s
+  a : E.t
+  H1 : In a s /\ ~ E.eq x a
+  H3 : E.eq x a -> False
+  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  x : E.t
+  H : In x s
+  a : E.t
+  H1 : In a s /\ ~ E.eq x a
+  H3 : E.eq x a -> False
+  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  x : E.t
+  H : In x s
+  a : E.t
+  H1 : In a s /\ ~ E.eq x a
+  H3 : E.eq x a -> False
+  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  x : E.t
+  H : In x s
+  a : E.t
+  H1 : In a s /\ ~ E.eq x a
+  H3 : E.eq x a -> False
+  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  x : E.t
+  H : In x s
+  a : E.t
+  H1 : In a s /\ ~ E.eq x a
+  H3 : E.eq x a -> False
+  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  x : E.t
+  H : In x s
+  a : E.t
+  H1 : In a s /\ ~ E.eq x a
+  H3 : E.eq x a -> False
+  H0 : E.eq x a
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  x : E.t
+  H : In x s
+  a : E.t
+  H1 : In a s /\ ~ E.eq x a
+  H3 : E.eq x a -> False
+  H0 : E.eq x a
+  ============================
+

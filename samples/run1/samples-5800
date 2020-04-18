@@ -1,0 +1,135 @@
+======== SAMPLE 1 ========
+
+Goal:
+    c : Type  t0 : Termite l -> c -> t0 <-> c * 0
+  ============================
+   (1 + 1 * c <-> c * 0 <= 1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+    c : Type  t0 : Termite l -> c -> t0 <-> c * 0
+  ============================
+   (1 + 1 * c <-> c * 0 <= 1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+    c : Type  t0 : Termite l -> c -> t0 <-> c * 0
+  ============================
+   (1 + 1 * c <-> c * 0 <= 1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+    c : Type  t0 : Termite l -> c -> t0 <-> c * 0
+  ============================
+   (1 + 1 * c <-> c * 0 <= 1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+    c : Type  t0 : Termite l -> c -> t0 <-> c * 0
+  ============================
+   (1 + 1 * c <-> c * 0 <= 1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+    c : Type  t0 : Termite l -> c -> t0 <-> c * 0
+  ============================
+   (1 + 1 * c <-> c * 0 <= 1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+    c : Type  t0 : Termite l -> c -> t0 <-> c * 0
+  ============================
+   (1 + 1 * c <-> c * 0 <= 1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+    c : Type  t0 : Termite l -> c -> t0 <-> c * 0
+  ============================
+   (1 + 1 * c <-> c * 0 <= 1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+    c : Type  t0 : Termite l -> c -> t0 <-> c * 0
+  ============================
+   (1 + 1 * c <-> c * 0 <= 1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+    c : Type  t0 : Termite l -> c -> t0 <-> c * 0
+  ============================
+   (1 + 1 * c <-> c * 0 <= 1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+    c : Type  t0 : Termite l -> c -> t0 <-> c * 0
+  ============================
+   (1 + 1 * c <-> c * 0 <= 1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal

@@ -1,0 +1,111 @@
+======== SAMPLE 1 ========
+ a : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : int
+  _x : height (Node ll lx ld (Node lrl lrx lrd lrr _x2) _x0) > height r + 2
+  _x1 : height ll < height (Node lrl lrx lrd lrr _x2)
+  y : key
+  H0 : In y ll
+  ============================
+   ((X.eq y x \/ In y ll \/ In y lrl) \/ X.eq y x \/ In y lrr \/ X.eq y x \/ In y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : int
+  _x : height (Node ll lx ld (Node lrl lrx lrd lrr _x2) _x0) > height r + 2
+  _x1 : height ll < height (Node lrl lrx lrd lrr _x2)
+  y : key
+  H0 : In y ll
+  ============================
+   ((X.eq y x \/ In y ll \/ In y lrl) \/ X.eq y x \/ In y lrr \/ X.eq y x \/ In y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : int
+  _x : height (Node ll lx ld (Node lrl lrx lrd lrr _x2) _x0) > height r + 2
+  _x1 : height ll < height (Node lrl lrx lrd lrr _x2)
+  y : key
+  H0 : In y ll
+  ============================
+   ((X.eq y x \/ In y ll \/ In y lrl) \/ X.eq y x \/ In y lrr \/ X.eq y x \/ In y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : int
+  _x : height (Node ll lx ld (Node lrl lrx lrd lrr _x2) _x0) > height r + 2
+  _x1 : height ll < height (Node lrl lrx lrd lrr _x2)
+  y : key
+  H0 : In y ll
+  ============================
+   ((X.eq y x \/ In y ll \/ In y lrl) \/ X.eq y x \/ In y lrr \/ X.eq y x \/ In y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1

@@ -1,0 +1,88 @@
+======== SAMPLE 1 ========
+t := A * A" with "of_lu (rev d) + (1 + 10 * N.pos acc)%list".
+
+Debug:
+Level 6: evaluation returns
+(of_lu (rev d) + (1 + 10 * N.pos acc)%list)%list
+
+
+Debug:
+Level 5: evaluation returns
+(of_lu (rev d) + (1 + 10 * N.pos acc)%list)%list
+
+
+Debug:
+Level 2: evaluation returns
+(of_lu (rev d) + (1 + 10 * N.pos acc)%list)%list
+
+
+Goal:
+  
+  d : uint
+  IHd : forall acc : positive,
+        N.pos (Pos.of_uint_acc d acc) =
+        of_lu (rev d) + N.pos acc * 10 ^ usize d
+  acc : positive
+  ============================
+   (of_lu (rev d) + (1 + 10 * N.pos acc)%list ==
+    (of_lu (rev d) + (1 + 10 * N.pos acc)%list)%list ->
+    0 * 10 ^ usize d + N.pos acc * (10 * 10 ^ usize d + N.pos acc * (10 * 10 ^ usize d))%N ->
+    0 * 10 ^ usize d + (1 * 10 ^ usize d + N.pos acc * (10 * 10 ^ usize d))%N)
+
+
+Debug: Going to execute:
+trm
+
+
+TcDebug (8) > 
+Debug: Evaluated term: (of_lu (rev d) + (1 + 10 * N.pos acc)%list)%list
+
+Debug: Level 6: evaluation returns
+(of_lu (rev d) + (1 + 10 * N.pos acc)%list)%list
+
+
+Debug: Level 3: evaluation returns
+(of_lu (rev d) + (1 + 10 * N.pos acc)%list)%list
+
+
+Goal:
+  
+  d : uint
+  IHd : forall acc : positive,
+        N.pos (Pos.of_uint_acc d acc) =
+        of_lu (rev d) + N.pos acc * 10 ^ usize d
+  acc : positive
+  ============================
+   (of_lu (rev d) + (1 + 10 * N.pos acc)%list ==
+    (of_lu (rev d) + (1 + 10 * N.pos acc)%list)%list ->
+    0 * 10 ^ usize d + N.pos acc * (10 * 10 ^ usize d + N.pos acc * (10 * 10 ^ usize d))%N ->
+    0 * 10 ^ usize d + (1 * 10 ^ usize d + N.pos acc * (10 * 10 ^ usize d + N.pos acc * (10 * 10 ^ usize d)))%N)
+
+
+Debug: Going to execute:
+let l' := AddFvTail a l in
+(x :: l')%list
+
+
+TcDebug (2) > 
+Goal:
+  
+  d : uint
+  IHd : forall acc : positive,
+        N.pos (Pos.of_uint_acc d acc) =
+        of_lu (rev d) + N.pos acc * 10 ^ usize d
+  acc : positive
+  ============================
+   (of_lu (rev d) + (1 + 10 * N.pos acc)%list ==
+    (of_lu (rev d) + (1 + 10 * N.pos acc)%list)%list ->
+    0 * 10 ^ usize d + N.pos acc * (10 * 10 ^ usize d + N.pos acc * (10 * 10 ^ usize d))%N ->
+    0 * 10 ^ usize d + (1 * 10 ^ usize d + N.pos acc * (10 * 10 ^ usize d))%N)
+
+
+Debug:
+Going to execute:
+fun a l =>
+  match l with
+  | nil => (a :: nil)%list
+  | (a :: _)%list => l
+  | (?x :: ?l)

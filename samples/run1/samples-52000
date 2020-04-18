@@ -1,0 +1,95 @@
+======== SAMPLE 1 ========
+Tac.Tac.interp_ord OrdersTac.OEQ x x'
+  H : b ~= 0
+  H0 : 0 < 1
+  H1 : 1 < 2
+  H2 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@0>
+
+
+TcDebug (6) > 
+Goal:
+  
+  ============================
+   False
+
+
+Debug: Going to execute:
+OrderTac.order_rewr x eqn
+
+
+TcDebug (6) > 
+Goal:
+  
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+fun x eqn =>
+  let rewr H t := generalize t; clear H; intro H in
+  match goal with
+  | H:x == _
+     |- _ =>
+         rewr H
+          (Private_OrderTac.Tac.eq_trans (Private_OrderTac.Tac.eq_sym eqn) H);
+          Private_OrderTac.Tac.order_rewr x eqn
+  | H:_ == x
+     |- _ =>
+         rewr H (Private_OrderTac.Tac.eq_trans H eqn);
+          Private_OrderTac.Tac.order_rewr x eqn
+  | H:x ~= _
+     |- _ =>
+         rewr H
+          (Private_OrderTac.Tac.eq_neq (Private_OrderTac.Tac.eq_sym eqn) H);
+          Private_OrderTac.Tac.order_rewr x eqn
+  | H:_ ~= x
+     |- _ =>
+         rewr H (Private_OrderTac.Tac.neq_eq H eqn);
+          Private_OrderTac.Tac.order_rewr x eqn
+  | H:x < _
+     |- _ =>
+         rewr H
+          (Private_OrderTac.Tac.eq_lt (Private_OrderTac.Tac.eq_sym eqn) H);
+          Private_OrderTac.Tac.order_rewr x eqn
+  | H:_ < x
+     |- _ =>
+         rewr H (Private_OrderTac.Tac.lt_eq H eqn);
+          Private_OrderTac.Tac.order_rewr x eqn
+  | H:x <= _
+     |- _ =>
+         rewr H (Private_OrderTac.Tac.eq_le (Private_OrderTac.Tac.eq_sym eqn) H);
+          Private_OrderTac.Tac.order_rewr x eqn
+  | H:_ <= x
+     |- _ =>
+         rewr H (Private_OrderTac.Tac.le_eq H eqn);
+          Private_OrderTac.Tac.order_rewr x eqn
+  | _ => clear eqn
+  end
+
+
+TcDebug (7) > 
+Goal:
+  
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+let rewr H t := generalize t; clear H; intro H in
+match goal with
+| H:x == _
+  |- _ =>
+      rewr H
+       (Private_OrderTac.Tac.eq_trans (Private_OrderTac.Tac.eq_sym eqn) H);
+       Private_OrderTac.Tac.order_rewr x eqn
+| H:_ == x
+  |- _ =>
+  

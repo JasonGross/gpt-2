@@ -1,0 +1,131 @@
+======== SAMPLE 1 ========
+2 ->
+          lsym 0 1 a = true :: lsym 0 1 b = false :: lsym 0 1 c = true :: lsym 0 1 d = true :: rsub lsym 0 1 z = true :: z :: lsym 0 1
+  z0 : int
+  z1 : int
+  a0 : X.lt x1 a
+  b0 : X.lt x1 b
+  Hm : In x lsym a0 ~= None
+  Hm1 : In x a0
+  Hm2 : In x lsym a0
+  Cmul x a -> False
+  Hm3 : (X.eq x x'') -> False
+  Hm0 : In x (0..Z.lt b))
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  lsym1 : list X.t
+  x' : X.t
+  rsub_elt : forall (l : list X.t) (e : option elt),
+         Sorted X.lt (rev l)
+  x0 : X.t
+  lsym0 : list X.t
+  x1 : X.t
+  d : elt
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  lsym1 : list X.t
+  x' : X.t
+  rsub_elt : forall (l : list X.t) (e : option elt),
+         Sorted X.lt (rev l)
+  x0 : X.t
+  lsym0 : list X.t
+  x1 : X.t
+  d : elt
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  lsym1 : list X.t
+  x' : X.t
+  rsub_elt : forall (l : list X.t) (e : option elt),
+         Sorted X.lt (rev l)
+  x0 : X.t
+  lsym0 : list X.t
+  x1 : X.t
+  d : elt
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  lsym1 : list X.t
+  x' : X.t
+  rsub_elt : forall (l : list X.t) (e : option elt),
+         Sorted X.lt (rev l)
+  x0 : X.t
+  lsym0 : list X.t
+  x1 : X.t
+  d : elt
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  lsym1 : list X.t
+  x' : X.t
+  rsub_elt : forall (l : list X.t) (e : option elt),
+         Sorted X.lt (rev l)
+  x0 : X.t
+  lsym0 : list X.t
+  x1 : X.t
+  d : elt
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+ 

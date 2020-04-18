@@ -1,0 +1,83 @@
+======== SAMPLE 1 ========
+
+           elt
+             (fun (acc : list clause) (e : clause) =>
+               match or_clause (p :: t) e with
+              | Some cl => cl :: acc
+              | None => acc
+              end) f nil)
+  ============================
+   (In a (x :: t) 
+     (fold_left
+         (fun (acc : list clause) (e : clause) =>
+           match or_clause (p :: t) e with
+           | Some cl => cl :: acc
+            | None => acc
+            end) f nil)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+ [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  p : positive
+  IHp : forall (x : Expr) (f : list clause) (e : clause),
+        lt := Ring_polynom.PEsub p ltk f (Ring_polynom.PEc 0)
+            (Ring_polynom.PEc 0) = res
+  x : Expr
+  y : Expr
+  H : In x (x :: y) -> false = true
+  H1 : false = true -> In x (y :: lt)
+  H2 : In x (y :: lt) -> False
+  H0 : In x (x :: y) -> False
+  H3 : In x (y :: lt)
+  ============================
+   (In a (x :: t) 
+     (fold_left
+         (fun (acc : list clause) (e : clause) =>
+           match or_clause (p :: t) e with
+          | Some cl => cl :: acc
+           | None => acc
+           end) f nil)
+
+
+TcDebug (1) > 
+Goal:
+  
+  p : positive
+  IHp : forall (x : Expr) (f : list clause) (e : clause),
+        lt := Ring_polynom.PEsub p ltk f (Ring_polynom.PEc 0)
+           (Ring_polynom.PEc 0) = res
+  x : Expr
+  y : Expr
+  H : In x (x :: y) -> false = true
+  H1 : false = true -> In x (y :: lt)
+  H2 : In x (y :: lt) -> False
+  H0 : In x (x :: y) -> False
+  H3 : In x (y :: lt)
+  ============================
+   (In a (x :: t) 
+     (fold_left
+         (fun (acc : list clause) (e : clause) =>
+           match or_clause (p :: t) e with
+           | Some cl => cl :: acc
+           | None => acc
+           end) f nil)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+ [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  p : positive
+  IHp : forall (x : Expr) (f : list clause) (e

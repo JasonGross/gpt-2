@@ -1,0 +1,162 @@
+======== SAMPLE 1 ========
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+rewrite <- (ARopp_lt_0_l ARth rl ARth)
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (ARopp_lt_0_l ARth rl ARth)
+
+Goal:
+  
+  ============================
+   (ARopp_lt_0_l ARth rr ARth)
+
+
+Debug: Going to execute:
+rewrite (ARopp_assertion (ARdistr_l ARth rr) (ARdistr_r Rsth ARth)
+           (ARopp_assertion ARth)
+           (ARopp_assertion ARth)
+            (ARopp_assertion ARth))
+
+
+Debug: Going to execute:
+intro H
+
+
+TcDebug (0) > 
+Goal:
+  
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+<tauto_plugin::rewrite@0>
+
+
+TcDebug (0) > 
+Debug: Level 0: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  ============================
+   (InA a l1 \/ InA a l2)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) >

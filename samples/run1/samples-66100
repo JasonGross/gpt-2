@@ -1,0 +1,148 @@
+======== SAMPLE 1 ========
+ elt
+  R : Type
+  rO : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  x : R
+  y : R
+  z : R
+  H : x <= y
+  ============================
+   (y <= z)
+
+
+Debug: Going to execute:
+progress subst
+
+
+TcDebug (0) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  x : R
+  y : R
+  z : R
+  H : x <= y
+  ============================
+   (y <= z)
+
+
+Debug: Going to execute:
+subst
+
+
+TcDebug (0) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  x : R
+  y : R
+  z : R
+  H : x <= y
+  ============================
+   (y <= z)
+
+
+Debug: Going to execute:
+<ltac_plugin::subst@0> $1
+
+
+TcDebug (0) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  x : R
+  y : R
+  z : R
+  H : x <= y
+  ============================
+   (y <= z)
+
+
+Debug: Going to execute:
+subst
+
+
+TcDebug (0) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  x : R
+  y : R
+  z : R
+  H : x <= y
+  ============================
+   (y <= z)
+
+
+Debug: Going to execute:
+<ltac_plugin::subst@0> $1
+
+
+TcDebug (0) > 
+Goal:
+    R : Type  rO : R  rI : R  rI0 : R
+  ============================
+   (forall x y : R, R x <> R + x)
+
+
+Debug: Going to execute:
+intros y
+
+
+TcDebug (0) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R

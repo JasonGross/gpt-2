@@ -1,0 +1,78 @@
+======== SAMPLE 1 ========
+ a m -> False
+  H1 : compat_bool E.eq (fun x : E.t => negb (f x))
+  H2 : InA eqke (x, e) m -> False
+  H0 : compat_bool E.eq (fun x : E.t => (f x = f x))
+  ============================
+   (InA eqke (x, e) (elements m))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f : option elt -> option elt' -> option elt''
+  x : key
+  k : X.t
+  oo : option elt
+  oo' : option elt'
+  m0 : list (X.t * oee')
+  o : option elt
+  o' : option elt'
+  f' := fun p : oee' => f (fst p) (snd p) : oee' -> option elt''
+  IHm0 : Sorted (ltk (elt:=oee')) m0 ->
+         (find (elt:=oee') x m0 = at_least_one o o' ->
+         find (elt:=elt'') x
+            (fold_right_pair (option_cons (A:=elt'')) (map f' m0) nil) =
+         at_least_one_then_f o o') /\
+         (find (elt:=oee') x m0 = None ->
+         find (elt:=elt'') x
+           (fold_right_pair (option_cons (A:=elt'')) (map f' m0) nil) = None)
+  Heq : X.eq x k
+  H : Some (oo, oo') = at_least_one o'
+  H1 : compat_bool E.eq (fun x : E.t => negb (f x))
+  H2 : InA eqke (x, e) m -> False
+  H0 : compat_bool E.eq (fun x : E.t => (f x = f x))
+  ============================
+   (InA eqke (x, e) (elements m))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f : option elt -> option elt' -> option elt''
+  x : key
+  k : X.t
+  oo : option elt
+  oo' : option elt'
+  m0 : list (X.t * oee')
+  o : option elt
+  o' : option elt'
+  f' := fun p : oee' => f (fst p) (snd p) : oee' -> option elt''
+  IHm0 : Sorted (ltk (elt:=oee')) m0 ->
+         (find (elt:=oee') x m0 = at_least_one o o' ->
+         find (elt:=elt'') x
+           (fold_right_pair (option_cons (A:=elt'')) (map f' m0) nil) =
+         at_least_one_then_f o o') /\
+         (find (elt:=oee') x m0 = None ->
+         find (elt:=elt'') x
+           (fold_right_pair (option_cons (A:=elt'')) (map f' m0) nil) = None)
+  Heq

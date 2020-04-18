@@ -1,0 +1,34 @@
+======== SAMPLE 1 ========
+                     (Ring_polynom.PEmul (Ring_polynom.PEX Q 1)
+                      (Ring_polynom.PEX Q 2)) (Ring_polynom.PEX Q 3))
+        (Ring_polynom.PEmul (Ring_polynom.PEX Q 2) (Ring_polynom.PEX Q 1))) =
+         (Ring_polynom.Pinj 1
+            (Ring_polynom.PX (Ring_polynom.Pc 1)
+              (Ring_polynom.Pc (-1))
+               (Ring_polynom.Pc (0 # 2)%Q))) =>
+            (let lmp :=
+              mk_monpol_list 0%Z (Ring_polynom.PEX Q 1)
+                 (Ring_polynom.PEmul (Ring_polynom.PEX Q 1)
+                    (Ring_polynom.PEX Q 2)))
+               (Ring_polynom.Pinj 1
+                (Ring_polynom.PX (Ring_polynom.Pc 1)
+                   (Ring_polynom.Pc (-1))
+                  (Ring_polynom.Pc (0 # 2)%Q))) =>
+             (let lmp :=
+              mk_monpol_list 0%Z (Ring_polynom.PEX Q 1)
+                (Ring_polynom.PEmul (Ring_polynom.PEX Q 2)
+                   (Ring_polynom.PEX Q 3))
+               (Ring_polynom.PEmul (Ring_polynom.PEX Q 2)
+                   (Ring_polynom.PEX Q 1));
+                (Ring_polynom.PEmul (Ring_polynom.PEX Q 2)
+                   (Ring_polynom.PEX Q 1));
+                  Ring_polynom.Pinj 2
+                (Ring_polynom.PEX Q 3);
+                Ring_polynom.PEmul (Ring_polynom.PEX Q 2)
+                  (Ring_polynom.PEX Q 1));
+                 Ring_polynom.PEmul (Ring_polynom.PEX Q 3)
+                  (Ring_polynom.PEX Q 1));
+                 Ring_polynom.PEmul (Ring_polynom.PEX Q 2)
+                  (Ring_polynom.PEX Q 1);
+                 Ring_polynom.PEmul (Ring_polynom.PEX Q 3)
+                   (Ring

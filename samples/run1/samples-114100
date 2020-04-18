@@ -1,0 +1,78 @@
+======== SAMPLE 1 ========
+Tac.Tac.eq_sym H eqn); MX.OrderTac.order_rewr x eqn
+| H:MX.TO.eq _ x
+  |- _ => rewr H (MX.OrderTac.eq_trans H eqn); MX.OrderTac.order_rewr x eqn
+| H:~ MX.TO.eq x _
+  |- _ =>
+      rewr H (MX.OrderTac.eq_neq (MX.OrderTac.eq_sym eqn) H);
+       MX.OrderTac.order_rewr x eqn
+| H:~ MX.TO.eq _ x
+  |- _ => rewr H (MX.OrderTac.neq_eq H eqn); MX.OrderTac.order_rewr x eqn
+| H:MX.TO.lt x _
+  |- _ =>
+      rewr H (MX.OrderTac.eq_lt (MX.OrderTac.eq_sym eqn) H);
+       MX.OrderTac.order_rewr x eqn
+| H:MX.TO.lt _ x
+  |- _ => rewr H (MX.OrderTac.lt_eq H eqn); MX.OrderTac.order_rewr x eqn
+| H:MX.TO.le x _
+  |- _ =>
+      rewr H (MX.OrderTac.eq_le (MX.OrderTac.eq_sym eqn) H);
+       MX.OrderTac.order_rewr x eqn
+| H:MX.TO.le _ x
+  |- _ => rewr H (MX.OrderTac.le_eq H eqn); MX.OrderTac.order_rewr x eqn
+| _ => clear eqn
+end
+
+
+TcDebug (10) > 
+Goal:
+  
+  x : X.t
+  e : D.t
+  m1 : list (X.t * D.t)
+  Hm1 : Sorted (Raw.PX.ltk (elt:=D.t)) ((x, e) :: m1)
+  IHm1 : forall (Hm1 : Sorted (Raw.PX.ltk (elt:=D.t)) m1) (m2 m3 : t),
+         eq {| this := m1; sorted := Hm1 |} m2 ->
+         eq m2 m3 -> eq {| this := m1; sorted := Hm1 |} m3
+  x' : X.t
+  e' : D.t
+  m2 : list (X.t * D.t)
+  Hm2 : Sorted (Raw.PX.ltk (elt:=D.t)) ((x', e') :: m2)
+  x'' : X.t
+  e'' : D.t
+  m3 : list (X.t * D.t)
+  Hm3 : Sorted (Raw.PX.ltk (elt:=D.t)) ((x'', e'') :: m3)
+  Heq : X.eq x x'
+  Heq' : X.eq x' x''
+  H : X.eq x x''
+  H1 : D.eq e e'
+  H2 : eq_list m1 m2
+  H3 : eq_list m2 m3
+  H0 : D.eq e' e''
+  H4 : eq_list m2 m3
+  ============================
+   (D.eq e e'')
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (11) > 
+Debug: Level 11: R
+ has value 
+X.lt
+
+
+Debug: Level 9: R
+ has value 
+X.lt
+
+
+Goal:
+  
+  x : X.t
+  e : D.t
+  m1 : list (X.t * D.t)
+  Hm1 : Sorted (Raw.PX.ltk (elt:=D.t)) ((x, e) :: m1)
+  IHm1 : forall (Hm1 : Sorted (Raw.PX.ltk (elt:=D.t)) m1) (m2 m3

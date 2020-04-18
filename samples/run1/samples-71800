@@ -1,0 +1,88 @@
+======== SAMPLE 1 ========
+   (X.eq y x \/ InT y l \/
+    (X.eq y x' \/ InT y rl \/ X.eq y rx \/ InT y rr) \/ InT y rr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (del x l) <-> InT y l /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok (Rd rl rx rr) ->
+        InT y (del x (Rd rl rx rr)) <-> InT y (Rd rl rx rr) /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok l
+  H6 : Ok (Rd rl rx rr)
+  H7 : lt_tree x' l
+  H8 : gt_tree x' (Rd rl rx rr)
+  H : X.eq y x' \/ InT y l \/ InT y (Rd rl rx rr) /\ ~ X.eq y x
+  ============================
+   (X.eq y x \/ InT y l \/
+    (X.eq y x' \/ InT y rl \/ X.eq y rx \/ InT y rr) \/ InT y rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (del x l) <-> InT y l /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok (Rd rl rx rr) ->
+        InT y (del x (Rd rl rx rr)) <-> InT y (Rd rl rx rr) /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok l
+  H6 : Ok (Rd rl rx rr)
+  H7 : lt_tree x' l
+  H8 : gt_tree x' (Rd rl rx rr)
+  H : X.eq y x' \/ InT y l \/
+    (X.eq y x' \/ InT y rl \/ X.eq y rx \/ InT y rr) \/ InT y rr
+  ============================
+   (X.eq y x \/ InT y l \/
+    (X.eq y x' \/ InT y rl \/ X.eq y rx \/ InT y rr) \/ InT y rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  IHl : forall (x : X.

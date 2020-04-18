@@ -1,0 +1,102 @@
+======== SAMPLE 1 ========
+                           (P2
+                                 (FV
+                                   (S
+                                     (Ring
+                                           (Ring_polynom.PEX Z 8)
+                                      (Ring_polynom.PEX Z 5)))))
+
+Debug:
+Level 3: evaluation returns
+<tactic closure>
+
+
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = of_lu (rev d) + n * 10 ^ usize d
+  n : nat
+  ============================
+   (of_lu (rev d) + (3 + 10 * n) * 10 ^ usize d =
+    of_lu (rev d) + 3 * 10 ^ usize d + n * (10 * 10 ^ usize d))
+
+
+Debug: Going to execute:
+Ring_polynom.PEX C p
+
+
+TcDebug (2) > 
+Debug: Evaluated term: (Ring_polynom.PEX Z 7)
+
+Debug: Level 1: evaluation returns
+Ring_polynom.PEX Z 7
+
+
+Debug: Level 0: evaluation returns
+Ring_polynom.PEX Z 7
+
+
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+        Nat.of_uint_acc d n = of_lu (rev d) + n * 10 ^ usize d
+  n : nat
+  ============================
+   (of_lu (rev d) + (3 + 10 * n) * 10 ^ usize d =
+    of_lu (rev d) + 3 * 10 ^ usize d + n * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+Ring_polynom.PEX C p
+
+
+TcDebug (0) > 
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+       Nat.of_uint_acc d n = of_lu (rev d) + n * 10 ^ usize d
+  n : nat
+  ============================
+   (of_lu (rev d) + (3 + 10 * n) * 10 ^ usize d =
+    of_lu (rev d) + 3 * 10 ^ usize d + n * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+Ring_polynom.PEX C p
+
+
+TcDebug (0) > 
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+       Nat.of_uint_acc d n = of_lu (rev d) + n * 10 ^ usize d
+  n : nat
+  ============================
+   (of_lu (rev d) + (3 + 10 * n) * 10 ^ usize d =
+    of_lu (rev d) + 3 * 10 ^ usize d + n * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+Ring_polynom.PEadd e1 e2
+
+
+TcDebug (0) > 
+Goal:
+  
+  d : uint
+  IHd : forall n : nat,
+       Nat.of_uint_acc d n = of_lu (rev d) + n * 10 ^ usize d
+  n : nat
+  ============================
+   (of_

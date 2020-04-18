@@ -1,0 +1,151 @@
+======== SAMPLE 1 ========
+ A : Type
+  Aeq0 : A -> A -> Prop
+  Aequiv3 : Equivalence eqA
+  a : A
+  b : A
+  a0 : A
+  H2 : NoDupA eqke (a0 b)
+  H3 : NoDupA eqke (a1 b)
+  H : Equal
+  ============================
+   False
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  Aeq0 : A -> A -> Prop
+  Aequiv3 : Equivalence eqA
+  a : A
+  b : A
+  a0 : A
+  H2 : NoDupA eqke (a0 b)
+  H3 : NoDupA eqke (a1 b)
+  H : Equal
+  ============================
+   False
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  Aeq0 : A -> A -> Prop
+  Aequiv3 : Equivalence eqA
+  a : A
+  b : A
+  a0 : A
+  H2 : NoDupA eqke (a0 b)
+  H3 : NoDupA eqke (a1 b)
+  H : Equal
+  ============================
+   False
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  Aeq0 : A -> A -> Prop
+  Aequiv3 : Equivalence eqA
+  a : A
+  b : A
+  a0 : A
+  H2 : NoDupA eqke (a0 b)
+  H3 : NoDupA eqke (a1 b)
+  H : Equal
+  ============================
+   False
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  Aeq0 : A -> A -> Prop
+  Aequiv3 : Equivalence eqA
+  a : A
+  b : A
+  a0 : A
+  H2 : NoDupA eqke (a0 b)
+  H3 : NoDupA eqke (a1 b)
+  H : Equal
+  ============================
+   False
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  Aeq0 : A -> A -> Prop
+  Aequiv3 : Equivalence eqA
+  a : A
+  b : A
+  a0 : A
+  H2 : NoDupA eqke (a0 b)
+  H3 : NoDupA eqke (a1 b)
+  H : Equal
+  ============================
+   False
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  Aeq0 : A -> A -> Prop
+  Aequiv3 : Equivalence eqA
+  a : A
+  b : A
+  a0 : A
+  H2 : NoDupA eqke (a0 b)
+  H3 : NoDupA eqke (a1 b)
+  H : Equal
+  ============================
+   False
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  Aeq0 : A -> A -> Prop
+  Aequiv3 : Equivalence eqA
+  a : A
+  b : A
+  a0 : A
+  H2 : NoDupA

@@ -1,0 +1,128 @@
+======== SAMPLE 1 ========
+ eq (diff_decidable d rb rd rir rs)) \/
+    eq_Leaf lr h) \/
+    lem : tree  H0 : bool = false  H1 : tree  H : True = false
+  ============================
+   (((forall d : elt, in t e rd ri rl rx rr) > height (height lr h)) /\ (x == y \/ (r + b == x)) # l == x \/ (r + b == r) < (x + y) # r + (b + r))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+ [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  l' : t elt
+  ============================
+   (forall (e : elt) : t elt,
+    lt_tree x : key -> elt -> option elt' -> option elt'')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  ============================
+   (forall (e : elt) : t elt,
+    lt_tree x : key -> elt -> option elt' -> option elt'')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  ============================
+   (forall (e : elt) : t elt,
+    lt_tree x : key -> elt -> option elt' -> option elt'')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  ============================
+   (forall (e : elt) : t elt,
+    lt_tree x : key -> elt -> option elt' -> option elt'')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  ============================
+   (forall (e : elt) : t elt,
+    lt_tree x : key -> elt -> option elt' -> option elt'')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_unit_or_eq> flags X

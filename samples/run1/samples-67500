@@ -1,0 +1,75 @@
+======== SAMPLE 1 ========
+ EIraw (triv_div 0 1 Qeq_bool) ring_subst_niter hyps'
+                    (num nfe))
+  ============================
+   (Ring_polynom.interp_PElist 0 1 Qplus Qmult Qminus Qopp Qeq 
+       (IDphi (R:=Q)) Z.of_N Qpower (get_sign_None (C:=Q))
+      (proj1_sig a (Pos.to_nat p)
+        :: (1 # p)%Q :: proj1_sig b (Pos.to_nat p) :: nil)
+      (condition res_eq)
+
+
+Debug: Going to execute:
+fun f => f l => rew e l
+
+
+TcDebug (2) > 
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  a : CReal
+  b : CReal
+  p : positive
+  pmaj : (2 # p < proj1_sig b (Pos.to_nat p) - proj1_sig a (Pos.to_nat p))%Q
+  ============================
+   (((2 # p) < proj1_sig b (Pos.to_nat p) - proj1_sig a (Pos.to_nat p))%Q)
+
+
+Debug:
+Going to execute:
+let f :=
+ match Cst t with
+ | NotConstant =>
+     match t with
+     | rO => fun _ => Ring_polynom.PEO
+     | rI => fun _ => Ring_polynom.PEI
+     | radd ?t1 ?t2 =>
+         fun _ =>
+           let e1 := mkP t1 in
+           let e2 := mkP t2 in
+           Ring_polynom.PEadd e1 e2
+     | rmul ?t1 ?t2 =>
+         fun _ =>
+           let e1 := mkP t1 in
+           let e2 := mkP t2 in
+           Ring_polynom.PEmul e1 e2
+     | rsub ?t1 ?t2 =>
+         fun _ =>
+           let e1 := mkP t1 in
+           let e2 := mkP t2 in
+           Ring_polynom.PEsub e1 e2
+     | ropp ?t1 =>
+         fun _ => let e1 := mkP t1 in
+                   Ring_polynom.PEopp e1
+     | rpow ?t1 ?n =>
+         match CstPow n with
+         | NotConstant =>
+             fun _ => let p := Find_at t fv in
+                       Ring_polynom.PEX C p
+         | ?c => fun _ => let e1 := mkP t1 in
+                           Ring_polynom.PEpow e1 c
+         end
+     | _ => fun _ => let p := Find_at t fv in
+                       Ring_polynom.PEX C p
+     end
+ | ?c => fun _ => Ring_polynom.PEc c
+ end
+in
+f ltac:(())
+
+
+TcDebug (1) > 
+Goal

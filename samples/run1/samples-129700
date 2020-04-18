@@ -1,0 +1,131 @@
+======== SAMPLE 1 ========
+q_def: bst rl
+           | None => fail 100 "anomaly: built an ill-typed list"
+           | _ => fail 100 "anomaly: failed to build a canonical list"
+           end
+ | (a :: _)%list => eval compute in n
+ | (_ :: ?l)%list => match l with
+           | nil => fail 100 "anomaly: Find_at"
+           | _ => eval compute in n
+           end
+ end
+in
+f ltac:(())
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec A eq
+  B : Type
+  equiv1 : Equivalence eq
+  H0 : EqDec B eq
+  B0 : EqDec A eq
+  a0 : A
+  b0 : B
+  a : A
+  b : B
+  y1 : A
+  y2 : B
+  Heq_x : (y1, y2) = (a0, b0)
+  Heq_y : (y1, y2) = (a, b)
+  ============================
+   (y1 = (y1, y2))
+
+
+Debug:
+Going to execute:
+match l with
+| nil => fail 100 "anomaly: Find_at"
+| (_ :: ?l)%list => eval compute in n
+| (_ :: ?l)%list => find (BinPos.Pos.succ n) l
+end
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec A eq
+  B : Type
+  equiv1 : Equivalence eq
+  H0 : EqDec B eq
+  B0 : EqDec B eq
+  a0 : A
+  b0 : B
+  a : A
+  b : B
+  y1 : A
+  y2 : B
+  Heq_x : (y1, y2) = (a0, b0)
+  Heq_y : (y1, y2) = (a, b)
+  ============================
+   (y1 = (y1, y2))
+
+
+Debug: Going to execute:
+l
+
+
+TcDebug (2) > 
+Debug: Level 2: l
+ has value 
+(y1 :: y2 :: B :: nil)%list
+
+
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec A eq
+  B : Type
+  equiv1 : Equivalence eq
+  H0 : EqDec B eq
+  B0 : EqDec B eq
+  a0 : A
+  b0 : B
+  a : A
+  b : B
+  y1 : A
+  y2 : B
+  Heq_x : (y1, y2) = (a0, b0)
+  Heq_y : (y1, y2) = (a, b)
+  ============================
+   (y1 = (y1, y2))
+
+
+Debug: Going to execute:
+find (BinPos.Pos.succ n) l
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec A eq
+  B : Type
+  equiv1 : Equivalence eq
+  H0 : EqDec B eq
+  B0 : EqDec B eq
+  a0 : A
+  b0 : B
+  a : A
+  b : B
+  y1 : A
+  y2 : B
+  Heq_x : (y1, y2) = (a0, b0)
+  Heq_y : (y1, y2) = (a, b)
+  ============================
+   (y1 = (y1, y2))
+
+
+Debug:
+Going to execute:
+fun n l =>
+  match l with
+  | nil => fail 100 "anomaly: Find_at"
+  | (_ :: ?l)%list

@@ -1,0 +1,115 @@
+======== SAMPLE 1 ========
+_nat n) + of_nat (S n) + xn (Pos.to_nat n) -
+    (yn k <= 3 + 10 * k)%nat)
+
+
+Debug: Going to execute:
+rewrite ring_add_0_nth_l
+
+
+TcDebug (0) > 
+Debug: Evaluated term: ring_add_0_nth_l
+
+Debug: Evaluated term: ring_add_0_nth_l
+
+Goal:
+  
+  C : Type
+  R' : relation C  x : NFormula  y : NFormula  H : relation_conjunction R' x y
+  ============================
+   (~yn (Pos.to_nat n) - y + (0 - 1) + (1 - (Pos.to_nat n + 1)) ==
+    y)
+
+
+Goal:
+  
+  C : Type
+  R' : relation C  x : NFormula
+  y : NFormula
+  H : relation_conjunction R' x y
+  e : PolC
+  r : R
+  H0 : ~ (R' (Pos.succ p) x)
+  H1 : ~ (R' (Pos.succ p) y)
+  ============================
+   (NFormula (Pos.to_nat n) + 1 + (0 - 1 + NFormula (Pos.to_nat n) - 1))
+
+
+Debug: Going to execute:
+progress rewrite <- ring_opp_mul_r
+
+
+TcDebug (0) > 
+Goal:
+  
+  C : Type
+  R' : relation C  x : NFormula  y : NFormula  H : relation_conjunction R' x y
+  ============================
+   (~yn (Pos.to_nat n) - y + (0 - 1) + (1 - (Pos.to_nat n + 1)) ==
+    y)
+
+
+Goal:
+  
+  C : Type
+  R' : relation C  x : NFormula  y : NFormula  H : relation_conjunction R' x y
+  e : PolC
+  r : R
+  H0 : ~ (R' (Pos.succ p) x)
+  H1 : ~ (R' (Pos.succ p) y)
+  ============================
+   (NFormula (Pos.to_nat n) + 1 + (0 - 1 + NFormula (Pos.to_nat n) - 1))
+
+
+Debug:
+Going to execute:
+rewrite <- ring_opp_mul_r
+
+
+TcDebug (0) > 
+Goal:
+  
+  C : Type
+  R' : relation C  x : NFormula  y : NFormula  H : relation_conjunction R' x y
+  ============================
+   (~yn (Pos.to_nat n) - y + (0 - 1) + (1 - (Pos.to_nat n + 1)) ==
+    y)
+
+
+Debug: Going to execute:
+progress rewrite <- ring_opp_mul_r
+
+
+TcDebug (0) > 
+Goal:
+  
+  C : Type
+  R' : relation C  x : NFormula  y : NFormula  H : relation_conjunction R' x y
+  ============================
+   (~yn (Pos.to_nat n) - y + (0 - 1) + (1 - (Pos.to_nat n + 1)) ==
+    y)
+
+
+Debug: Going to execute:
+rewrite <- ring_opp_mul_r
+
+
+TcDebug (0) > 
+Debug: Evaluated term: ring_opp_mul_r
+
+Debug: Level 0: Found no subterm matching "- ?y * ?y0" in the current goal.
+
+Goal:
+  
+  C : Type
+  R' : relation C  x : NFormula  y : NFormula  H : relation_conjunction R' x y
+  ============================
+   (~yn (Pos.to_nat n) - y + (0 - 1) + (1 - (Pos.to_nat n + 1)) ==
+    y)
+
+
+Debug: Going to execute:
+rewrite <- ring_opp_mul_r
+
+
+TcDebug (0) >

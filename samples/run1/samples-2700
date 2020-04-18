@@ -1,0 +1,118 @@
+======== SAMPLE 1 ========
+Ex1) ->
+     m2 -> eqA m (fun x : A => x)) -> eqA x (fun y : A => y) \/ InA A m'
+  H3 : InA a m' -> eqA (fun x : A => x) /\ InA A m'
+  H5 : InA (fun x : A => x) \/ eqA m'
+  H : InA a (x)
+  ============================
+   (Equiv | eqA x \/ eqA m')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  eqA := A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  m1 : list A
+  m2 : list A
+  eqAm : eqA eqm -> A eqA m1
+  m3 : list A
+  m4 : list A
+  eqAeq : eqA eqm -> A eqA m1
+  m5 : list A
+  eqAeqm : eqA eqm -> A eqA m1
+  rh1 : A
+  rm1 : tree A
+  rd1 : tree A
+  rl1 : tree A
+  rl2 : tree A
+  f1 : Goto F1
+  f2 : Goto F2
+  m1 : list A
+  m2 : list A
+  m5 : list A
+  H4 : f1 f2 rl1
+  H5 : f1 m1
+  H3 : f1 m2
+  H4 : f1 f2 rl1
+  H5 : f1 m2
+  ============================
+   (Equiv | eqA x \/ eqA m')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  eqA := A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  m1 : list A
+  m2 : list A
+  eqAm : eqA eqm -> A eqA m1
+  m3 : list A
+  m4 : list A
+  eqAeq : eqA eqm -> A eqA m1
+  m5 : list A
+  eqAeqm : eqA eqm -> A eqA m1
+  rh1 : A
+  rm1 : tree A
+  rd1 : tree A
+  rl1 : tree A
+  rl2 : tree A
+  f1 : Goto F1
+  f2 : Goto F2
+  m1 : list A
+  m2 : list A
+  m5 : list A
+  H4 : f1 f2 rl1
+  H5 : f1 m1
+  H3 : f1 m2
+  H4 : f1 f2 rl1
+  H5 : f1 m2
+  H3 : f1 m2
+  ============================
+   (Equiv | eqA x \/ eqA m')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  A : Type
+  eqA := A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  m1 : list A
+  m2 : list A
+  eqAm : eqA eqm -> A eqA m1
+  m3 : list A
+  m4 : list A
+  eqAeq : eqA eqm -> A eqA m1
+  m5 : list A
+  eqAeqm : eqA eqm -> A eqA m1
+  rh1 : A
+  rm1 : tree A
+  rd1 : tree A
+  rl1 : tree A
+  rl2 : tree A
+  f1 : Goto F1
+  f2 : Goto F2
+  m1 : list A
+  m2 : list A
+  m5 : list A
+  H4 : f1 f2 rl1
+  H5 : f1 m1
+  H3 : f1 m2
+  H4 : f1 f2 rl1
+  H5

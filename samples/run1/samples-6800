@@ -1,0 +1,105 @@
+======== SAMPLE 1 ========
+             ((e0 == 1)%nat)%poly
+  c : Info.t
+  l : tree
+  y : X.t
+  c0 : Info.t
+  H : InT y (Node c l y d r i s) ->
+        X.eq y x -> InT y l \/ InT y (remove x s)
+  H0 : X.eq y x
+  ============================
+   (InT y (Node c l y d r i s) /\ InT y (remove x s) \/ X.eq y x \/ InT y r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  l : tree
+  y : X.t
+  c0 : Info.t
+  H : InT y (Node c l y d r i s) ->
+       X.eq y x -> InT y l \/ InT y (remove x s)
+  H0 : X.eq y x
+  ============================
+   (InT y (Node c l y d r i s) /\ InT y (remove x s) \/ X.eq y x \/ InT y r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l : tree
+  y : X.t
+  c0 : Info.t
+  H : InT y (Node c l y d r i s) ->
+       X.eq y x -> InT y l \/ InT y (remove x s)
+  H0 : X.eq y x
+  ============================
+   (InT y (Node c l y d r i s) /\ InT y (remove x s) \/ X.eq y x \/ InT y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  y : X.t
+  c0 : Info.t
+  H : InT y (Node c l y d r i s) ->
+       X.eq y x -> InT y l \/ InT y (remove x s)
+  H0 : X.eq y x
+  ============================
+   (InT y (Node c l y d r i s) /\ InT y (remove x s) \/ X.eq y x \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  y : X.t
+  c0 : Info.t
+  H : InT y (Node c l y d r i s) ->
+       X.eq y x -> InT y l \/ InT y (remove x s)
+  H0 : X.eq y x
+  ============================
+   (InT y (Node c l y d r i s) /\ InT y (remove x s) \/ X.eq y x \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  y : X.t
+  c0 : Info.t
+  H : InT y (Node c l y d r i s) ->
+       X.eq y x -> InT y l \/ InT y (remove x s)
+  H0 : X.eq y x
+  ============================
+   (InT y (Node c l y d r i s) /\ InT y (remove x s) \/ X.eq y x \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.

@@ -1,0 +1,109 @@
+======== SAMPLE 1 ========
+ False, id) ->
+       forall env : PolEnv R, make_impl (eval_nformula env) l False
+  l : bool
+  a : NFormula Z
+  H2 : eval_Psatz l w = Some a
+  H : forall f' : NFormula Z,
+      0 <= f' u -> NFormula Z u ->reality = true
+  f' u : NFormula Z
+  H3 : NFormula Z u
+  H1 : eval_Psatz l w = Some f'
+  H2 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  w : positive
+  IHl : forall w' : positive,
+        (Proj1_st w -> False) ->
+        forall env : PolEnv Z, make_impl (eval_nformula env) l False
+  l : bool
+  a : NFormula Z
+  H2 : eval_Psatz l w = Some a
+  H : forall f' : NFormula Z u ->
+       0 <= f' u -> NFormula Z u ->reality = true
+  f' u : NFormula Z u
+  H3 : NFormula Z u
+  H1 : eval_Psatz l w = Some f'
+  H2 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  w : positive
+  IHl : forall w' : positive,
+        (Proj1_st w -> False) ->
+        forall env : PolEnv Z, make_impl (eval_nformula env) l False
+  l : bool
+  a : NFormula Z
+  H2 : eval_Psatz l w = Some a
+  H : forall f' : NFormula Z u ->
+       0 <= f' u -> NFormula Z u ->reality = true
+  f' u : NFormula Z u
+  H3 : NFormula Z u
+  H1 : eval_Psatz l w = Some f'
+  H2 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  w : positive
+  IHl : forall w' : positive,
+        (Proj1_st w -> False) ->
+        forall env : PolEnv Z, make_impl (eval_nformula env) l False
+  l : bool
+  a : NFormula Z
+  H2 : eval_Psatz l w = Some a
+  H : forall f' : NFormula Z u ->
+       0 <= f' u -> NFormula Z u ->reality = true
+  f' u : NFormula Z u
+  H3 : NFormula Z u
+  H1 : eval_Psatz l w = Some f'
+  H2 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  w : positive
+  IHl : forall w' : positive,
+        (Proj1_st w -> False) ->
+        forall env : PolEnv Z, make_impl (eval_nformula env) l False
+  l : bool
+  a : NFormula Z
+  H2 : eval_Psatz l w = Some a
+  H : forall f' : NFormula Z u ->
+       0 <= f' u -> NFormula Z

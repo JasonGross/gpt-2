@@ -1,0 +1,93 @@
+======== SAMPLE 1 ========
+ rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  Hrl : forall y : X.t,
+        bst (Node ll lx ld lr lh) ->
+        bst rl ->
+        lt_tree x (Node ll lx ld lr lh) ->
+        gt_tree x rl ->
+        find y (join (Node ll lx ld lr lh) x d rl) =
+        find y (create (Node ll lx ld lr lh) x d rl)
+  LE : lh <= rh + 2
+  y : X.t
+  H : MX.TO.lt lx x
+  H10 : MX.TO.lt x rx
+  u : key
+  H9 : MX.TO.lt lx rx
+  H0 : MX.TO.le lx x
+  H5 : MX.TO.lt x rx
+  e : MX.TO.eq y rx
+  ============================
+   (X.lt rx rx)
+
+
+Debug: Going to execute:
+generalize (MX.OrderTac.eq_trans H1 H2); intro
+
+
+TcDebug (11) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  Hlr : forall (x : X.t) (d : elt) (r : t elt) (y : X.t),
+        bst lr ->
+        bst r ->
+        lt_tree x lr ->
+        gt_tree x r -> find y (join lr x d r) = find y (create lr x d r)
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  Hrl : forall y : X.t,
+        bst (Node ll lx ld lr lh) ->
+        bst rl ->
+        lt_tree x (Node ll lx ld lr lh) ->
+        gt_tree x rl ->
+        find y (join (Node ll lx ld lr lh) x d rl) =
+        find y (create (Node ll lx ld lr lh) x d rl)
+  LE : lh <= rh + 2
+  y : X.t
+  H : MX.TO.lt lx x
+  H10 : MX.TO.lt x rx
+  u : key
+  H9 : MX.TO.lt lx x
+  H0 : MX.TO.lt lx x
+  H5 : MX.TO.lt x rx
+  e : MX.TO.eq y rx
+  ============================
+   (X.lt rx rx)
+
+
+Debug: Going to execute:
+generalize (MX.OrderTac.eq_trans H1 H2); intro
+
+
+TcDebug (11) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  Hlr : forall (x : X.t) (d : elt) (r : t elt) (y : X.t),
+        bst lr ->
+        bst r ->
+        lt_tree x lr ->
+        gt_tree x r -> find y (join lr x d r) = find y (create lr x d r)
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  r

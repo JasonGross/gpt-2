@@ -1,0 +1,80 @@
+======== SAMPLE 1 ========
+ (x :: l) \/ In x0 p p'
+  H : X.eq x x'
+  x0 : elt
+  H0 : Sorted X.lt l'
+  H1 : Inf x' l'
+  H2 : Sorted X.lt l
+  H3 : Inf x l
+  H4 : In x0 p'
+  ============================
+   (X.eq x0 x \/ In x0 p' \/ In x0 p)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.simplif> flags;
+ <Coq.Init.Tauto.axioms> flags ||
+   match reverse goal with
+   | id:(?X1 -> ?X2) -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (X1 -> X2);
+             [ exact
+             id
+             | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear
+                id; (solve [ t_tauto_intuit ]) ] ]
+   | id:~ ?X1 -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (~ X1);
+             [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+   | |- ?X1 =>
+         <Coq.Init.Tauto.is_disj> flags X1; (solve
+          [ left; t_tauto_intuit | right; t_tauto_intuit ])
+   end ||
+     match goal with
+     | |- _ -> _ => intro; t_tauto_intuit
+     | |- _ => t_reduce; t_solver
+     end || t_solver
+
+
+TcDebug (5) > 
+Goal:
+  
+  s : t
+  x : elt
+  l : list elt
+  Hrec : forall (s' : t) (x : elt),
+         Ok l -> Ok s' -> In x (inter l s') <-> In x l /\ In x s'
+  s' : t
+  x' : elt
+  l' : list elt
+  Hrec' : forall x0 : elt,
+          Ok (x :: l) ->
+          Ok l' -> In x0 (inter (x :: l) l') <-> In x0 (x :: l) /\ In x0 (x :: l)
+  H1 : X.eq x x'
+  x0 : elt
+  H0 : Sorted X.lt l'
+  H1 : Inf x' l'
+  H2 : Sorted X.lt l
+  H3 : Inf x l
+  H4 : In x0 p'
+  ============================
+   (X.eq x0 x \/ In x0 p' \/ In x0 p)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.simplif> flags;
+ <Coq.Init.Tauto.axioms> flags ||
+   match reverse goal with
+   | id:(?X1 -> ?X2) -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (X1 -> X2);
+             [ exact
+         

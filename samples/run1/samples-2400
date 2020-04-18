@@ -1,0 +1,88 @@
+======== SAMPLE 1 ========
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  e1 : Zel e1
+  s1 : Zel e1
+  Z : forall a : Z,
+        f0 (x :: 0) @ b = true @ x
+  z : Zel e1
+  x : Zel e1
+  H : f0 (x :: 0) @ b = true
+  H0 : True =>
+        add f0 z (Z.pos x :: a) x (Z.pos z :: a)
+  lhs : Z :: positive
+  Z : Zel E1
+  H5 : true <= Z.pos ZE2 /\ (Z.pos ZE1) :: Z.pos ZE0 (z /\ z)
+  H6 : true <= Z.pos ZE1 /\ (Z.pos ZE0) :: Z.pos ZE0 (Z.pos ZE1)
+  b : Zel e1
+  IH1 : (e1, e2)%positive = true
+  IH2 : e1 < x
+  H2 : x == x
+  H0 :  x = y
+  H3 :  y == y
+  H1 : (e1, e2)%positive = true
+  H3 :  ~ (_, y)%positive = true
+  H4 : (e1, e2)%positive = true
+  H5 : true <= Z.pos ZE1 /\ v == x * y * z * lhs
+  H7 : (e1, e2)%positive == y
+  H8 : v == y -> (e1, x)%positive
+  H12 : (e1, x)%positive = true
+  H9 : (e1, x)%positive = true
+  H11 : (e1, x)%positive = true
+  H15 : v < x
+  H10 : v == y
+  H10' : v < z
+  H12 : v < x
+  ============================
+   (v epsilon eps)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  e1 : Zel e1
+  s1 : Zel e1
+  Z : forall a : Z,
+         f0 (x :: 0) @ b = true @ x
+  z : Zel e1
+  x : Zel e1
+  H : f0 (x :: 0) @ b = true
+  H0 : True =>
+          add f0 z (Z.pos x :: a) x (Z.pos z :: a)
+  lhs : Z :: positive
+  Z : Zel E1
+  H5 : true <= Z.pos ZE2 /\ (Z.pos ZE1) :: Z.pos ZE0 (z /\ z)
+  H6 : true <= Z.pos ZE1 /\ (Z.pos ZE0) :: Z.pos ZE0 (Z.pos ZE1)
+  b : Zel e1
+  IH1 : (e1, e2)%positive = true
+  IH2 : e1 < x
+  H2 : x == x
+  H0 :  x = y
+  H3 :  y == y
+  H1 : (e1, e2)%positive = true
+  H3 :  ~ (_, y)%positive = true
+  H4 : (e1, e2)%positive = true
+  H5 :  true <= Z.pos ZE1 /\ v == x * y * z * lhs
+  H7 : (e1, e2)%positive == y
+  H8 : v == y -> (e1, x)%positive
+  H12 : (e1, x)%positive = true
+  H9 : (e1, x)%positive = true
+  H15 : v == y -> (e1, x)%positive
+  H8 : v == y -> (e1, x)%positive
+  H16 : v < x
+  H17 : v < x

@@ -1,0 +1,130 @@
+======== SAMPLE 1 ========
+ : X.eq y x -> In y s'
+  H3 : false = true
+  H1 : In y s'
+  ============================
+   (false = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H0 : In y s' -> false = true
+  H6 : false = true -> In y s'
+  H7 : In y s' -> In y (remove x s)
+  H2 : In y (remove x s)
+  H4 : true = true
+  H8 : In y s
+  H9 : (E.eq x y \/ In y s) /\ In y s'
+  H10 : In y s -> In y (remove x s)
+  H3 : false = true
+  H1 : In y s'
+  ============================
+   (false = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H0 : In y s' -> false = true
+  H6 : false = true -> In y s'
+  H7 : In y s' -> In y (remove x s)
+  H2 : In y (remove x s)
+  H4 : true = true
+  H8 : In y s
+  H9 : (E.eq x y \/ In y s) /\ In y s'
+  H10 : In y s -> In y (remove x s)
+  H3 : false = true
+  H1 : In y s'
+  ============================
+   (false = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H0 : In y s' -> false = true
+  H6 : false = true -> In y s'
+  H7 : In y s' -> In y (remove x s)
+  H2 : In y (remove x s)
+  H4 : true = true
+  H8 : In y s
+  H9 : (E.eq x y \/ In y s) /\ In y s'
+  H10 : In y s -> In y (remove x s)
+  H3 : false = true
+  H1 : In y s'
+  ============================
+   (false = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : E.eq x y -> False
+  H0 : In y s' -> false = true
+  H6 : false = true -> In y s'
+  H7 : In y s' -> In y (remove x s)
+  H2 : In y (remove x s)
+  H4 : true = true
+  H8 : In y s
+  H9 : (E.eq x y \/ In y s) /\ In y s'
+  H10 : In y s -> In y (remove x s)
+  H3 : false = true
+  H1 : In y s'
+  ============================
+   (false = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+

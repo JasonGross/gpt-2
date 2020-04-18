@@ -1,0 +1,194 @@
+======== SAMPLE 1 ========
+'
+  y : E.t
+  H2 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : t
+  x : E.t
+  r : tree
+  H : E.lt x y
+  H2 : false
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : t
+  x : E.t
+  r : tree
+  H : E.lt x y
+  H2 : false
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : t
+  x : E.t
+  r : tree
+  H : E.lt x y
+  H2 : false
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : t
+  x : E.t
+  r : tree
+  H : E.lt x y
+  H2 : false
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : t
+  x : E.t
+  r : tree
+  H : E.lt x y
+  H2 : false
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : t
+  x : E.t
+  r : tree
+  H : E.lt x y
+  H2 : false
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : t
+  x : E.t
+  r : tree
+  H : E.lt x y
+  H2 : false
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : t
+  x : E.t
+  r : tree
+  H : E.lt x y
+  H2 : false
+  ============================
+   True
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : t
+  x : E.t
+  r : tree
+  H : E.lt x y
+  H2 : false
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : t
+  x : E.t
+  r : tree
+  H : E.lt x y
+  H2 : false
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : t
+  x : E.t
+  r : tree
+  H : E.lt x y
+  H2 : false
+  ============================
+   False
+

@@ -1,0 +1,157 @@
+======== SAMPLE 1 ========
+ Going to execute:
+clear id0
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  H1 : bst l
+  H2 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : is_empty l = true
+  ============================
+   (In y l)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  H0 : bst r
+  H1 : bst r
+  H2 : bst l
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : is_empty l = true
+  H2 : In y r
+  ============================
+   (In y l)
+
+
+Debug: Going to execute:
+fail
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  H1 : bst l
+  H2 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : is_empty l = true
+  H2 : In y r
+  ============================
+   (In y l)
+
+
+Debug:
+Going to execute:
+tryif match goal with
+           | |- _ => fail 1
+           end
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  H1 : bst l
+  H2 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : is_empty l = true
+  H2 : In y r
+  ============================
+   (In y l)
+
+
+Debug:
+Going to execute:
+tryif match goal with
+           | |- _ => fail 1
+           end
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  H1 : bst l
+  H2 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : is_empty l = true
+  H2 : In y r
+  ============================
+   (In y l)
+
+
+Debug: Going to execute:
+tryif match goal with
+           | |- _ => fail 1
+           end
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  H1 : bst l
+  H2 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : is_empty l = true
+  H2 : In y r
+  ============================
+   (In y l)

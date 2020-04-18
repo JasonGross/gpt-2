@@ -1,0 +1,83 @@
+======== SAMPLE 1 ========
+ =>
+      match goal with
+      | H:context [ (?P -> False) -> False ]
+        |- _ => rewrite (Decidable.not_not_iff P) in H by dec
+      | H:context [ (?P -> False) -> False ]
+        |- _ => reify (Decidable.not_not_iff P) in H
+      | H:context [ (?P -> False) -> False ]
+        |- _ => Decidable.not_not_iff P
+      | H:context [ (?P -> False) -> False ]
+        |- _ => Decidable.not_not_iff P
+      | H:context [ (?P -> False) -> False ]
+        |- _ => rewrite Decidable.not_not_iff P
+      | H:context [ (?P -> False) -> False ]
+        |- _ => rewrite Decidable.not_not_iff P
+      | H:context [ (?P -> False) \/ False ]
+        |- _ => rewrite Decidable.not_not_iff P
+      | H:context [ (?P -> False) -> False ]
+        |- _ => rewrite Decidable.not_not_iff P
+      | H:context [ (?P -> False) -> False ]
+        |- _ => rewrite Decidable.not_not_iff P
+      | H:context [ ?P -> False ]
+        |- _ => rewrite (Decidable.not_not_iff P) in H by dec
+      | H:context [ (?P -> False) -> False ]
+        |- _ => rewrite (Decidable.not_not_iff P) in H
+      | H:context [ (?P -> False) -> False ]
+        |- _ => rewrite (Decidable.not_not_iff P) in H
+      | _ => rewrite
+      end
+  | H:context [ (?M. Notable. u nil) -> False ]
+    | H:context [ (?M. Notable. u nil) -> False ]
+     | H:context [ nil -> False ]
+     | H:context [ (?M. Notable. u nil) -> False ]
+     | H:context [ (?M. Notable. u nil) -> False ]
+     | H:context [ (?M. Notable. u nil) -> False ]
+     | _ => rewrite (Decidable.not_not_iff P) in H by dec
+     end
+  end
+
+
+TcDebug (1) > 
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : E.t
+  y : E.t
+  H : E.eq x y
+  H0 : (E.eq y x \/ False) /\ (E.eq y x \/ False)
+  ============================
+   (E.eq y x \/ False)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+
+
+TcDebug (0) > 
+Goal:
+  
+  x : E.t
+  y : E.t
+  H : E.eq x y
+  H0 : (E.eq y x \/ False) /\ (E.eq y x \/ False)
+  ============================
+   (E.eq y x \/ False)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : E.t
+  y : E.t
+  H : E.eq x y
+  H0 : (E.eq y x

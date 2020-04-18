@@ -1,0 +1,62 @@
+======== SAMPLE 1 ========
+sub_norm_subst 0 1 Qplus Qmult Qminus Qopp
+                  Qeq_bool (triv_div 0 1 Qeq_bool) pow_subst 0 1 Qplus Qmult Qminus Qopp
+                    Qeq_bool (triv_div 0 1 Qeq_bool) pow_subst
+                     Qeq_bool (triv_div 0 1 Qeq_bool) pow_subst
+                     (triv_div 0 1 Qeq_bool) pow_subst
+                    (triv_div 0 1 Qeq_bool)
+                   (Qmult_div 0 1 Qeq_bool)
+                  (Qeq_bool (triv_div 0 1 Qeq_bool)
+                 (Qeq_bool (triv_div 0 1 Qeq_bool)
+                 (Qeq_bool (triv_div 0 1 Qeq_bool)
+                 (Qsub_bool (triv_div 0 1 Qeq_bool) Z.subtracts (Qsub_bool (trem_gecl 0 1 Qeq_bool)
+                 (Qsub_bool (triv_div 0 1 Qeq_bool) Z.subtracts 0 Qplus Qmult Qminus Qopp))
+
+
+TcDebug (0) > 
+Goal:
+  
+  a : Z
+  b : Z
+  q : Z
+  H : c == 0 # 1
+  H3 : BinQ a b = BinQ a q -> c == 0 # 1
+  H1 : BinQ b == BinQ b q
+  H2 : 0 == 2 < Z.pos z2 # 1
+  ============================
+   ((0 < Z.pos z2 # 1 -> 0 < Z.pos z2 # 1)%Q >=
+    0 < Z.pos z2 # 1 -> 0 == 2 < Z.pos z2 # 1)
+
+
+Debug:
+Going to execute:
+match R with
+| eq => fail 1
+| lt => fail 1
+| le => fail 1
+| _ =>
+    change_no_check (?P => P) in H ||
+       change_no_check (?Q => Q) in H || clear H || fail 1;
+      exact_var_req (fun cl : clause => cl * clause);
+       FVARprop_decompose (let p := mkFV t := mkVar p) lH ||
+         exact mkFV (fVARprop_decompose lH && fv) lH ||
+          exact vfH (mkVar p lH) ||
+           exact H (fVARprop_decompose (let p := mkFV t := mkVar p) lH) || (FVARprop_decompose p lH || FVARprop_decompose p (fVARprop_decompose lH)) || orderFV
+end with
+TcDebug (1) > 
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  a : Z
+  b : Z
+  q : Z
+  H : c == 0 # 1
+  H3 : BinQ a b = BinQ a q -> c == 0 # 1
+  H1 : BinQ b == BinQ b q
+  H2 : 0 == 2 < Z.pos z2 # 1
+  ============================
+   ((0 < Z.pos z2 # 1 -> 0 < Z.pos z2 # 1)%Q >=
+    0 < Z.pos z2 # 1 -> 0 == 2

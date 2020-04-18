@@ -1,0 +1,99 @@
+======== SAMPLE 1 ========
+ x1 X.t)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y' : X.t),
+       Ok l -> InT y (remove x l) <-> X.eq y x \/ InT y l \/ InT y r
+  IHr : forall (x : X.t) (y' : X.t),
+       Ok (Rd r) ->
+       InT y (remove x (Rd r) -> X.eq y x') <->
+       X.eq y x' \/ InT y (Rd r) \/ X.eq y x # l
+  x : X.t
+  y : elt
+  H : X.lt X.eq x x'
+  x0 : elt
+  H0 : X.eq y x
+  H1 : InT y l
+  ============================
+   (X.eq y x' \/ InT y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y' : X.t),
+       Ok l -> InT y (remove x l) <-> X.eq y x \/ InT y l \/ InT y r
+  IHr : forall (x : X.t) (y' : X.t),
+       Ok (Rd r) ->
+       InT y (remove x (Rd r) -> X.eq y x') <->
+       X.eq y x' \/ InT y (Rd r) \/ X.eq y x # l
+  x : X.t
+  y : elt
+  H : X.lt X.eq x x'
+  x0 : elt
+  H0 : X.eq y x
+  H1 : InT y l
+  ============================
+   (X.eq y x' \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y' : X.t),
+       Ok l -> InT y (remove x l) <-> X.eq y x \/ InT y l \/ InT y r
+  IHr : forall (x : X.t) (y' : X.t),
+       Ok (Rd r) ->
+       InT y (remove x (Rd r) -> X.eq y x' \/ InT y (Rd r) \/ X.eq y x # l
+  x : X.t
+  y : elt
+  H : X.lt X.eq x x'
+  x0 : elt
+  H0 : X.eq y x
+  H1 : InT y l
+  ============================
+   (X.eq y x' \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y' : X.t),
+       Ok l -> InT y (remove x l) <-> X.eq y x \

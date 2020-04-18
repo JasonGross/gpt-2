@@ -1,0 +1,100 @@
+======== SAMPLE 1 ========
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IHs : forall f : elt -> bool,
+        Proper (X.eq ==> eq) f ->
+        for_all f s = true <-> X.eq x a \/ In f f
+  a0 : elt
+  IHs0 : Proper (X.eq ==> eq) f ->
+        for_all f s = true <-> X.eq x a \/ In f f
+  f : elt -> bool
+  H : Proper (X.eq ==> eq) f
+  F : X.eq x a
+  H1 : X.eq y a0
+  ============================
+   (~ X.eq x a)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IHs : forall f : elt -> bool,
+        Proper (X.eq ==> eq) f ->
+        for_all f s = true <-> X.eq x a \/ In f f
+  a0 : elt
+  IHs0 : Proper (X.eq ==> eq) f ->
+        for_all f s = true <-> X.eq x a \/ In f f
+  f : elt -> bool
+  H : Proper (X.eq ==> eq) f
+  F : X.eq x a
+  H1 : X.eq y a0
+  ============================
+   (~ X.eq x a)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IHs : forall f : elt -> bool,
+        Proper (X.eq ==> eq) f ->
+        for_all f s = true <-> X.eq x a \/ In f f f
+  a0 : elt
+  IHs0 : Proper (X.eq ==> eq) f ->
+        for_all f s = true <-> X.eq x a \/ In f f f
+  a0 : elt
+  IHs0 : Proper (X.eq ==> eq) f ->
+        for_all f s = true <-> X.eq y a \/ In f f f
+  f : elt -> bool
+  H : Proper (X.eq ==> eq) f
+  F : X.eq x a
+  H1 : X.eq y a0
+  ============================
+   (~ X.eq x a)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a :

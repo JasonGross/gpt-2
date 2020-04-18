@@ -1,0 +1,86 @@
+======== SAMPLE 1 ========
+ : forall (x : X.t) (y : elt),
+        Ok l -> InT y (del x l) <-> InT y l /\ (X.eq y x -> False)
+  IHr : forall (x : X.t) (y : elt),
+        Ok (Rd rl rx rr) ->
+        InT y (del x (Rd rl rx rr)) <->
+        InT y (Rd rl rx rr) /\ (X.eq y x -> False)
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok l
+  H6 : Ok (Rd rl rx rr)
+  H7 : lt_tree x' l
+  H8 : gt_tree x' (Rd rl rx rr)
+  H : InT y (Rd rl rx rr)
+  H2 : X.eq y x -> False
+  ============================
+   (InT y l')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (del x l) <-> InT y l /\ (X.eq y x -> False)
+  IHr : forall (x : X.t) (y : elt),
+        Ok (Rd rl rx rr) ->
+        InT y (del x (Rd rl rx rr)) <->
+        InT y (Rd rl rx rr) /\ (X.eq y x -> False)
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok l
+  H6 : Ok (Rd rl rx rr)
+  H7 : lt_tree x' l
+  H8 : gt_tree x' (Rd rl rx rr)
+  H : InT y (Rd rl rx rr)
+  H2 : X.eq y x -> False
+  ============================
+   (InT y l')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (del x l) <-> InT y l /\ (X.eq y x -> False)
+  IHr : forall (x : X.t) (y : elt),
+        Ok (Rd rl rx rr) ->
+        InT y (del x (Rd rl rx rr)) <->
+        InT y (Rd rl rx rr) /\ (X.eq y x -> False)
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok l
+  H6 : Ok (Rd rl rx rr)
+  H7 : lt_tree x' l
+  H8 : gt_tree x' (Rd rl rx rr)
+  H : InT y (Rd rl rx rr)
+  H2 : X.eq y x -> False
+  ============================
+   (InT y l')
+
+
+Debug: Going to execute:
+<Coq.Init.

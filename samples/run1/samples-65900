@@ -1,0 +1,114 @@
+======== SAMPLE 1 ========
+ In x
+  x : elt
+  H0 : In x s /\ ~ In x s'
+  ============================
+   (In x (fold_right (fun (x : X.t) (y : elt) => if mem y s' then add y x else x) s
+            true = true
+             ============================
+    False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : elt
+  s : list elt
+  IH : forall s' : t, Ok s -> Ok s' -> equal s s' = true <-> Equal s s'
+  x' : elt
+  s' : list elt
+  H : Sorted X.lt s'
+  H0 : Inf x' s'
+  H1 : Sorted X.lt s
+  H2 : Inf x s
+  C : X.lt x' x
+  H3 : X.eq x x'
+  H5 : Ok s'
+  H6 : Ok s
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  ============================
+   (In x s /\ ~ In x s' -> true = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : elt
+  s : list elt
+  IH : forall s' : t, Ok s -> Ok s' -> equal s s' = true <-> Equal s s'
+  x' : elt
+  s' : list elt
+  H : Sorted X.lt s'
+  H0 : Inf x' s'
+  H1 : Sorted X.lt s
+  H2 : Inf x s
+  C : X.lt x' x
+  H3 : X.eq x x'
+  H5 : Ok s'
+  H6 : Ok s
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  ============================
+   (In x s /\ ~ In x s' -> true = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : elt
+  s : list elt
+  IH : forall s' : t, Ok s -> Ok s' -> equal s s' = true <-> Equal s s'
+  x' : elt
+  s' : list elt
+  H : Sorted X.lt s'
+  H0 : Inf x' s'
+  H1 : Sorted X.lt s
+  H2 : Inf x s
+  C : X.lt x' x
+  H3 : X.eq x x'
+  H5 : Ok s'
+  H6 : Ok s
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  ============================
+   (In x s /\ ~ In x s' -> true = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : elt
+  s : list elt
+  IH : forall s' : t, Ok s -> Ok s' -> equal s s' = true <-> Equal s s'
+  x' : elt
+  s' : list elt
+  H : Sorted X.lt s'
+  H0 : Inf x' s'
+  H1 : Sorted X.lt s
+  H2 : Inf x s
+  C : X.lt x' x
+  H3 : X.eq x x'
+  H5 : Ok s'
+  H6 : Ok s
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  ============================
+   (In x s /\ ~ In x s' ->

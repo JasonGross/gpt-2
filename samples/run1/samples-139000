@@ -1,0 +1,100 @@
+======== SAMPLE 1 ========
+ : t => negb (f y) s) x0)
+       : t => negb (f x0) s
+  x0 : t
+  H1 : negb (f x0) (f y0) -> (forall x : t, x x0 <-> f y y = y -> negb (f x) s)
+  H2 : negb (f x) (f y)
+  H3 : x0 <-> h0 x = h0 x0
+  ============================
+   (forall y0 : t,
+    y0 -> negb (f y0) (f y y0) -> negb x x0)
+
+
+Debug: Going to execute:
+<ground_plugin::auto_with@0>
+
+
+TcDebug (0) > 
+Debug: Level 0: Proof is not complete.
+
+Debug:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IHs : forall x y : elt, Ok s -> In y (diff l s) <-> In y s /\ ~ X.eq y x
+  x : elt
+  y : elt
+  Hnot : X.eq x a -> False
+  H : In a s -> False
+  H0 : Ok s
+  H3 : x0 <-> h0 x = h0 x0
+  ============================
+   (forall y0 : t,
+    y0 -> negb (f y0) (f y0) -> negb x x0)
+
+
+Debug: Going to execute:
+<ground_plugin::auto_with@0>
+
+
+TcDebug (0) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IHs : forall x y : elt, Ok s -> In y (diff l s) <-> In y s /\ ~ X.eq y x
+  x : elt
+  y : elt
+  Hnot : X.eq x a -> False
+  H : In a s -> False
+  H0 : Ok s
+  H3 : x0 <-> h0 x = h0 x0
+  ============================
+   ((forall x : elt, Ok s -> In y (diff l s)) -> False)
+
+
+Debug:
+Going to execute:
+<ground_plugin::auto_with@0>
+ t; [ reflexivity_plugin::auto_with_id | reflexivity_plugin::auto_with_id ]
+
+
+TcDebug (0) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list elt
+  IHs : forall x y : elt, Ok s -> In y (diff l s) <-> In y s /\ ~ X.eq y x
+  x : elt
+  y : elt
+  Hnot : X.eq x a -> False
+  H : In a s -> False
+  H0 : Ok s
+  H3 : x0 <-> h0 x = h0 x0
+  ============================
+   ((forall x : elt, Ok s -> In y (diff l s)) -> False)
+
+
+Debug:
+Going to execute:
+<ground_plugin::auto_with@0>
+ t; [ reflexivity_plugin::auto_with_id | reflexivity_plugin::auto_with_id ]
+
+
+TcDebug (0) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s : list el

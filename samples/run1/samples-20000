@@ -1,0 +1,156 @@
+======== SAMPLE 1 ========
+  
+  A : Type
+  eqA : relation A
+  equ : Equivalence eqA
+  R : Prop
+  st : Equivalence eqA
+  f : list A
+  k : A
+  e : A
+  m : list A
+  n : negbA k m ->
+      eqA_dec k e m = true
+  p : list A
+  n0 : negbA k m ->
+      eqA_dec k e m = true
+  ============================
+   (eqA 0 [ f m ] = true)
+
+
+Debug: Going to execute:
+auto
+
+
+TcDebug (-2) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  equ : Equivalence eqA
+  R : Prop
+  st : Equivalence eqA
+  f : list A
+  k : A
+  e : A
+  m : list A
+  n : negbA k m ->
+      eqA_dec k e m = true
+  p : list A
+  n0 : negbA k m ->
+      eqA_dec k e m = true
+  ============================
+   (eqA 0 [ f m ] = true)
+
+
+Debug: Going to execute:
+<ltac_plugin::auto@0> $1 $2 $3
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  equ : Equivalence eqA
+  R : Prop
+  st : Equivalence eqA
+  f : list A
+  k : A
+  e : A
+  m : list A
+  n : negbA k m ->
+      eqA_dec k e m = true
+  p : list A
+  n0 : negbA k m ->
+      eqA_dec k e m = true
+  m : list A
+  ============================
+   (eqA 0 [ f m ] = true)
+
+
+Debug: Going to execute:
+intros; clear records in H
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  equ : Equivalence eqA
+  R : Prop
+  st : Equivalence eqA
+  f : list A
+  k : A
+  e : A
+  m : list A
+  n : negbA k m ->
+      eqA_dec k e m = true
+  p : list A
+  n0 : negbA k m ->
+      eqA_dec k e m = true
+  m : list A
+  ============================
+   (eqA 0 [ f m ] = true)
+
+
+Debug: Going to execute:
+intros
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  equ : Equivalence eqA
+  R : Prop
+  st : Equivalence eqA
+  f : list A
+  k : A
+  e : A
+  m : list A
+  n : negbA k m ->
+      eqA_dec k e m = true
+  p : list A
+  n0 : negbA k m ->
+      eqA_dec k e m = true
+  ============================
+   (eqA 0 [ f m ] = true)
+
+
+Debug: Going to execute:
+auto
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  equ : Equivalence eqA
+  R : Prop
+  st : Equivalence eqA
+  f : list A
+  k : A
+  e : A
+  m : list A
+  n : negbA k m ->
+      eqA_dec k e m = true
+  p : list A
+  n0 : negbA k m ->
+      eqA_dec k e m = true
+  ============================
+   (eqA 0 [ f m ] = true)
+
+
+Debug: Going to execute:
+<ltac_plugin::auto@0> $1 $2 $3
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+ 

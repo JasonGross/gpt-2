@@ -1,0 +1,107 @@
+======== SAMPLE 1 ========
+ elt'),
+         Ok s ->
+         Ok s' ->
+         In x
+          y' ->
+          In x s ->
+          In x s' ->
+          In x (diff s s')
+  ============================
+   (In x s <-> In x s')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s' : list elt
+  IHs' : forall (s : t) (x : elt),
+         Ok s -> Ok s' -> In x (fold remove s' s) <-> In x s /\ ~ In x s'
+  s : t
+  x : elt
+  Hs : Ok s
+  H : In a s' -> False
+  H0 : Ok s'
+  H2 : X.eq x a
+  H1 : X.eq x a
+  ============================
+   (In x s <-> In x s')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (3) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s' : list elt
+  IHs' : forall (s : t) (x : elt),
+         Ok s -> Ok s' -> In x (fold remove s' s) <-> In x s /\ ~ In x s'
+  s : t
+  x : elt
+  Hs : Ok s
+  H : In a s' -> False
+  H0 : Ok s'
+  H2 : X.eq x a
+  H1 : X.eq x a
+  ============================
+   (In x s <-> In x s')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s' : list elt
+  IHs' : forall (s : t) (x : elt),
+         Ok s -> Ok s' -> In x (fold remove s' s) <-> In x s /\ ~ In x s'
+  s : t
+  x : elt
+  Hs : Ok s
+  H : In a s' -> False
+  H0 : Ok s'
+  H2 : X.eq x a
+  H1 : X.eq x a
+  ============================
+   (In x s <-> In x s')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  a : elt
+  s' : list elt
+  IHs' : forall (s : t) (x : elt),
+         Ok s -> Ok s' -> In x (fold remove s' s) <

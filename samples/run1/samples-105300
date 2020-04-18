@@ -1,0 +1,101 @@
+======== SAMPLE 1 ========
+.l y0 l /\ X.lt y0 x
+  H7 : X.lt y0 x
+  ============================
+   (X.lt y y0)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : elt
+  y : elt
+  l : list elt
+  Hrec : forall (s' : t) (x : elt),
+         Ok l -> Ok s' -> In x (diff l s') <-> In x l /\ ~ In x s'
+  s' : t
+  x' : elt
+  l' : list elt
+  Hrec' : forall x0 : elt,
+          Ok (x :: l) ->
+          Ok l' -> In x0 (diff (x :: l) l') <-> In x0 (x :: l) /\ ~ In x0 l'
+  H : X.lt x x'
+  x0 : elt
+  H0 : Sorted X.lt l'
+  H1 : Inf x' l'
+  H2 : Sorted X.lt l
+  H3 : Inf x l
+  H5 : X.eq x0 x
+  H6 : X.eq x0 x' -> False
+  H4 : In x0 l
+  X : elt
+  H7 : X.lt y x'
+  ============================
+   (X.lt y y0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : elt
+  y : elt
+  l : list elt
+  Hrec : forall (s' : t) (x : elt),
+         Ok l -> Ok s' -> In x (diff l s') <-> In x l /\ ~ In x s'
+  s' : t
+  x' : elt
+  l' : list elt
+  Hrec' : forall x0 : elt,
+          Ok (x :: l) ->
+          Ok l' -> In x0 (diff (x :: l) l') <-> In x0 (x :: l) /\ ~ In x0 l'
+  H : X.lt x x'
+  x0 : elt
+  H0 : Sorted X.lt l'
+  H1 : Inf x' l'
+  H2 : Sorted X.lt l
+  H3 : Inf x l
+  H5 : X.eq x0 x
+  H6 : X.eq x0 x' -> False
+  H4 : In x0 l
+  X : elt
+  H7 : X.lt y x'
+  ============================
+   (X.lt y y0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : elt
+  y : elt
+  l : list elt
+  Hrec : forall (s' : t) (x : elt),
+         Ok l -> Ok s' -> In x (diff l s') <-> In x l /\ ~ In x s'
+  s' : t
+  x' : elt
+  l' : list elt
+  Hrec' : forall x0 : elt,
+          Ok (x :: l) ->
+          Ok l' -> In x0 (diff (x :: l) l') <-> In x0 (x :: l) /\ ~ In x0 l'
+  H : X.lt x x'
+  x0 : elt
+  H0 : Sorted X.lt l'
+  H1 : Inf x' l'
+  H2 : Sorted X.lt l
+  H3 : Inf x l
+  H5 : X.eq x0 x
+  H6 : X.eq x0 x' -> False
+

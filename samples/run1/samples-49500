@@ -1,0 +1,123 @@
+======== SAMPLE 1 ========
+ a
+  ============================
+   (In y (mapi b n))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> A
+  Comp : Proper (E.eq ==> eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  k : key
+  e : elt
+  i : A
+  H : In k m1 -> False
+  H0 : Add k e m1 m2
+  H1 : NoDupA eqk (rev (elements m1))
+  H2 : NoDupA eqk (rev (elements m2))
+  X0 : A
+  a : key
+  b : elt
+  y : (key * elt)%type
+  H4 : E.eq (fst (a, b)) (fst y)
+  H5 : snd (a, b) = snd y
+  a0 : key
+  b0 : elt
+  ============================
+   (In y (mapi b n))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> A
+  Comp : Proper (E.eq ==> eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  k : key
+  e : elt
+  i : A
+  H : In k m1 -> False
+  H0 : Add k e m1 m2
+  H1 : NoDupA eqk (rev (elements m1))
+  H2 : NoDupA eqk (rev (elements m2))
+  X0 : A
+  a : key
+  b : elt
+  y : (key * elt)%type
+  H4 : E.eq (fst (a, b)) (fst y)
+  H5 : snd (a, b) = snd y
+  a0 : key
+  b0 : elt
+  ============================
+   (In y (mapi b n))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> A
+  Comp : Proper (E.eq ==> eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  k : key
+  e : elt
+  i : A
+  H : In k m1 -> False
+  H0 : Add k e m1 m2
+  H1 : NoDupA eqk (rev (elements m1))
+  H2 : NoDupA eqk (rev (elements m2))
+  X0 : A
+  a : key
+  b : elt
+  y : (key * elt)%type
+  H4 : E.eq (fst (a, b)) (fst y)
+  H5 : snd (a, b) = snd y
+  a0 : key
+  b0 : elt
+  ============================
+   (In y (mapi b n))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eq

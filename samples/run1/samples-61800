@@ -1,0 +1,51 @@
+======== SAMPLE 1 ========
+rev (x, y)) -> eval (fst r) -> eval (fst (a0, b0)) -> eval (fst r) /\ snd (a0, b0) = snd r
+  a0 : t
+  b0 : bool
+  snd : t
+  H : Proper (E.eq ==> Logic.eq) fst
+  d0 : elt
+  H0 : In d (list_fold_right fst (t d0 a0 b0))
+  H1 : ~ (ep2p (Pos.to_nat p2p) > n)%nat
+  k : X.t
+  ============================
+   (xn k * yn k * zn k + (xn (Pos.to_nat p2p) + yn (Pos.to_nat p1) + (1 # p1)))
+
+
+Debug:
+Going to execute:
+fun fst t_injectory =>
+  let FV_hypo_tac FV_compat X1 FV_simplify
+   ltac:(fun C1 =>
+         let FV_hypo_tac := get_FV_tac FV_compat X1 FV_simplify inlov_l H;
+          repeat
+           match goal with
+           | H:context [ True ])
+          | _ => fv
+          end
+         | _ => fv
+          end
+         end
+   | _ => fail 1
+    end
+  in
+  FV_compat : Type
+  FV_hypo_tac : Proper (E.eq ==> Logic.eq) FV_limax
+  FV_plugin::fail_by
+  FV_plugin::with_logical_refl
+  FV_compat := fun R1 R2 => FV_hypo_tac FV_hypo_tac
+          : FEeval 0 R1 R2 R3 => FV_hypo_tac FV_hypo_tac
+            : FEsub (FEdiv (FEadd (FEX Q 1) (FEX Q 2)) (FEadd (FEX Q 2) (FEX Q 1)))
+            : FEdiv (FEdiv (FEadd (FEX Q 1) (FEX Q 2)) (FEadd (FEX Q 2) (FEX Q 1)))
+  fv_th
+           : FV_op R1 R2 R3 r2 =>
+           FEeval 0 R1 R2 R3 r2 * FEadd (FEdiv (FEopp (FEX Q 1)) (FEX Q 2))
+             : FF (FEsub (FEX Q 1) (FEX Q 2))
+                (FEsub (FEopp (FEX Q 1)) (FEX Q 2)) =>
+              FV_hypo_tac FEsub (FEopp (FEX Q 1))
+                   (FEdiv (FEadd (FEX Q 1) (FEX Q 2)) (FEadd (FEX Q 2) (FEX Q 1)))
+                   (FEdiv (FEsub (FEX Q 1) (FEX Q 2)) (FEdiv (FEX Q 1) (FEX Q 2)))
+                   (FEmul (FEopp (FEX Q 1)))
+                      (FEmul (FEopp (FEX Q 1)))
+                        (FEmul (FEopp (FEX Q 1)))
+  

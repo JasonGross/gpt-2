@@ -1,0 +1,135 @@
+======== SAMPLE 1 ========
+             [ exact (H (hd l) _ ] = f0 y (add x l) x0
+  H1 : False
+  H2 : f0 x (add x l) y
+  ============================
+   (X.eq y x0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : elt
+  l : tree
+  y : elt
+  r : tree
+  i : Info.t
+  H : forall y : elt, InT y r -> X.lt y x
+  H0 : forall y : elt, InT y r -> X.lt y x
+  H1 : False
+  H2 : f0 x (add x l) y
+  ============================
+   (X.eq y x0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : elt
+  l : tree
+  y : elt
+  r : tree
+  i : Info.t
+  H : forall y : elt, InT y r -> X.lt y x
+  H0 : forall y : elt, InT y r -> X.lt y x
+  H1 : False
+  H2 : f0 x (add x l) y
+  ============================
+   (X.eq y x0)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : elt
+  l : tree
+  y : elt
+  r : tree
+  i : Info.t
+  H : forall y : elt, InT y r -> X.lt y x
+  H0 : forall y : elt, InT y r -> X.lt y x
+  H1 : False
+  H2 : f0 x (add x l) y
+  ============================
+   (X.eq y x0)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : elt
+  l : tree
+  y : elt
+  r : tree
+  i : Info.t
+  H : forall y : elt, InT y r -> X.lt y x
+  H0 : forall y : elt, InT y r -> X.lt y x
+  H1 : False
+  H2 : f0 x (add x l) y
+  ============================
+   (X.eq y x0)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : elt
+  l : tree
+  y : elt
+  r : tree
+  i : Info.t
+  H : forall y : elt, InT y r -> X.lt y x
+  H0 : forall y : elt, InT y r -> X.lt y x
+  H1 : False
+  H2 : f0 x (add x l) y
+  ============================
+   (X.eq y x0)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : elt
+  l : tree
+  y : elt
+  r : tree
+  i : Info.t
+  H : forall y : elt, InT y r -> X.lt y x
+  H0 : forall y : elt, InT y r -> X.lt y x
+  H1 : False
+  H2 : f0 x (add x l) y
+  ============================
+   (X.eq y x0)
+
+
+Debug: Going to execute:
+

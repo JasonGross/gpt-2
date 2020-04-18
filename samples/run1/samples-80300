@@ -1,0 +1,120 @@
+======== SAMPLE 1 ========
+j> flags X1 X2 id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x (diff s s')
+  H4 : true = true
+  H1 : In x s
+  H3 : In x s'
+  H6 : true = true
+  H0 : False
+  H : false = true
+  H8 : In x s
+  H8 : In x s' -> In x (diff s s')
+  ============================
+   (true = false)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x (diff s s')
+  H4 : true = true
+  H1 : In x s
+  H3 : In x s'
+  H6 : true = true
+  H0 : False
+  H : false = true
+  H8 : In x s
+  H8 : In x s' -> In x (diff s s')
+  ============================
+   (true = false)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Debug: Level 0: No matching clauses for match.
+
+Debug: Level 0: No matching clauses for match.
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x s -> true = true
+  H : In x s' -> true = true
+  H0 : In x (diff s s')
+  ============================
+   (true = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.axioms> flags ||
+  match reverse goal with
+  | id:(?X1 -> ?X2) -> ?X3
+    |- _ =>
+        cut X3;
+         [ intro; clear id; t_tauto_intuit
+         | cut (X1 -> X2);
+            [ exact
+            id
+            | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear
+               id; (solve [ t_tauto_intuit ]) ] ]
+  | id:~ ?X1 -> ?X3
+    |- _ =>
+        cut X3;
+         [ intro; clear id; t_tauto_intuit
+         | cut (~ X1);
+            [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+  | |- ?X1 =>
+        <Coq.Init.Tauto.is_disj> flags X1; (solve
+         [ left; t_tauto_intuit | right; t_tauto_intuit ])
+  end ||
+    match goal with
+    | |- _ -> _ => intro; t_tauto_intuit
+    | |- _ => t_reduce; t_solver
+    end || t_solver
+
+
+TcDebug (0) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x s -> true = true
+  H : In x s' -> true

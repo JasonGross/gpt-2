@@ -1,0 +1,104 @@
+======== SAMPLE 1 ========
+ elt,
+        Ok (x :: l) ->
+        Ok l' -> In x0 (union (x :: l) l') <-> In x0 (x :: l) \/ In x0 l'
+  H : X.eq x x'
+  x0 : elt
+  H0 : Sorted X.lt l'
+  H1 : Inf x' l'
+  H2 : Sorted X.lt l'
+  H3 : Inf x l'
+  H4 : In x0 l'
+  H6 : In x0 (x :: l) -> False
+  H7 : In x0 l'
+  H8 : X.eq x0 x' \/ In x0 l'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  x : elt
+  l : list elt
+  Hrec : forall (s' : t) (x : elt),
+        Ok l -> Ok s' -> In x (union l s') <-> In x l \/ In x s'
+  s' : t
+  x' : elt
+  l' : list elt
+  Hrec' : forall x0 : elt,
+         Ok (x :: l) ->
+         Ok l' -> In x0 (union (x :: l) l') <-> In x0 (x :: l) \/ In x0 l'
+  H : X.eq x x'
+  x0 : elt
+  H0 : Sorted X.lt l'
+  H1 : Inf x' l'
+  H2 : Sorted X.lt l'
+  H3 : Inf x l'
+  H4 : In x0 l'
+  H6 : In x0 (x :: l) -> False
+  H7 : In x0 l'
+  H8 : X.eq x0 x' \/ In x0 l'
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  x : elt
+  l : list elt
+  Hrec : forall (s' : t) (x : elt),
+        Ok l -> Ok s' -> In x (union l s') <-> In x l \/ In x s'
+  s' : t
+  x' : elt
+  l' : list elt
+  Hrec' : forall x0 : elt,
+         Ok (x :: l) ->
+         Ok l' -> In x0 (union (x :: l) l') <-> In x0 (x :: l) \/ In x0 l'
+  H : X.eq x x'
+  x0 : elt
+  H0 : Sorted X.lt l'
+  H1 : Inf x' l'
+  H2 : Sorted X.lt l'
+  H3 : Inf x l'
+  H4 : In x0 l'
+  H6 : In x0 (x :: l) -> False
+  H7 : In x0 l'
+  H8 : X.eq x0 x' \/ In x0 l'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  x : elt
+  l : list elt
+  Hrec : forall (s' : t) (x : elt),
+        Ok l -> Ok s' -> In x (union l s') <-> In x l \/ In x s'
+  s' : t
+  x' : elt
+  l' : list elt
+  Hrec' : forall x0 : elt,
+         Ok (

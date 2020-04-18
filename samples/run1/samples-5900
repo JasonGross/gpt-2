@@ -1,0 +1,101 @@
+======== SAMPLE 1 ========
+ 
+        lt {| this := m1; sorted := H; order := Hmul; sorted_lemma = true |} p
+  x : elt
+  z : elt
+  H : forall l : t elt,
+         bst l ->
+         forall (x : elt) (z : elt),
+         (forall x : elt, In x l -> In x l) ->
+         x l = Some x ->
+         (forall x : elt, In x l -> In x l) ->
+         _ _ _ _ => x
+  H0 : bst l
+  H2 : bst l
+  H3 : bst l
+  H6 : bst r
+  H7 : bst r
+  ============================
+   (In x ll \/ In x l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : elt -> elt -> bool
+  l : list elt
+  x' : key
+  e' : elt -> bool
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall (y : key) (d : elt) (r : t elt),
+         bst r ->
+         bst r' ->
+         In y r
+  IHp : forall (y : key) (d' : elt) (r' : t elt'),
+          bst r' ->
+          bst r' ->
+          In y r
+  y : key
+  e0' : remove_min ll lx ld lr = (l', m)
+  e0' : remove_min ll lx ld lr' = (l', m)
+  H0 : bst l
+  H2 : bst l
+  H3 : bst l
+  H6 : bst r
+  H7 : bst r
+  ============================
+   (In x ll \/ In x l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : elt -> elt -> bool
+  l : list elt
+  x' : key
+  e' : elt -> bool
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  E0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall (y : key) (d : elt) (r : t elt),
+         bst r ->
+         bst r' ->
+         In y r
+  IHp : forall (y : key) (d' : elt) (r' : t elt'),
+          bst r' ->
+          bst r' ->
+          In y r
+  y : key
+  e0' : remove_min ll lx ld lr = (l', m)
+  e0' : remove_min ll lx ld lr' = (l', m)
+  H0 : bst l
+

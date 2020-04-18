@@ -1,0 +1,155 @@
+======== SAMPLE 1 ========
+X : Transitive R
+y : A
+H0 : R x y
+x0 : A
+H1 : R x y
+The term "lax R" has type "R x0 y"
+while it is expected to have type "T".
+
+Goal:
+  
+  A : Type
+  R : relation A
+  eqa : Equivalence R
+  B : Type
+  R' : relation B
+  eqb : Equivalence R'
+  x : (R ==> R') x x
+  y : (R ==> R') y y
+  z : (R ==> R') z z
+  x0 : A
+  y0 : A
+  H : R x0 y0
+  ============================
+   (R' (x x0) (z y0))
+
+
+Debug: Going to execute:
+type of x
+
+
+TcDebug (2) > 
+Debug: Evaluated term: (eqb x0 y)
+
+Debug: Going to execute:
+clear H' || fail 1
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  eqa : Equivalence R
+  B : Type
+  R' : relation B
+  eqb : Equivalence R'
+  x : (R ==> R') x x
+  y : (R ==> R') y y
+  z : (R ==> R') z z
+  x0 : A
+  y0 : A
+  H : R x0 y0
+  ============================
+   (R' (x x0) (z y0))
+
+
+Debug: Going to execute:
+clear H'
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  eqa : Equivalence R
+  B : Type
+  R' : relation B
+  eqb : Equivalence R'
+  x : (R ==> R') x x
+  y : (R ==> R') y y
+  z : (R ==> R') z z
+  x0 : A
+  y0 : A
+  H : R x0 y0
+  ============================
+   (R' (x x0) (z y0))
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  R : relation A
+  eqa : Equivalence R
+  B : Type
+  R' : relation B
+  eqb : Equivalence R'
+  x : (R ==> R') x x
+  y : (R ==> R') y y
+  z : (R ==> R') z z
+  x0 : A
+  y0 : A
+  H : R x0 y0
+  ============================
+   (R' (x x0) (z y0))
+
+
+Debug: Going to execute:
+cut X1; [ exact id | constructor 1; fail ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  eqa : Equivalence R
+  B : Type
+  R' : relation B
+  eqb : Equivalence R'
+  x : (R ==> R') x x
+  y : (R ==> R') y y
+  z : (R ==> R') z z
+  x0 : A
+  y0 : A
+  H : R x0 y0
+  ============================
+   (R' (x x0) (z y0))
+
+
+Debug: Going to execute:
+cut X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  R : relation A
+  eqa : Equivalence R
+  B : Type
+  R' : relation B
+  eqb : Equivalence R'
+  x : (R ==> R') x x
+  y : (R ==> R') y y
+  z : (R ==> R') z z
+  x0 : A
+  y0 : A
+  H : R x0 y0
+  ============================
+   (R' (x x0) (z y0))
+
+
+Debug: Going to execute:
+fun $1 => <ltac

@@ -1,0 +1,65 @@
+======== SAMPLE 1 ========
+Tac.Tac.lt_tree x' X.eq x' X0;
+              [ exact
+             id
+             | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear id;
+               (solve [ t_tauto_intuit ]) ] ]
+  | id:~ ?X1 -> ?X3
+    |- _ =>
+        <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+         | id0:?X1 -> ?X3
+       |- _ => <Coq.Init.Tauto.is_unit_or_eq> flags X1; elim id; intro; clear id
+         | id:?X1 -> ?X2
+       |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+        | id:?X1 -> ?X3
+       |- _ =>
+            <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X3;
+            [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+        | id:?X1 -> ?X2
+       |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+        | id:?X1 <-> ?X2 -> ?X3
+       |- _ =>
+            assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+             (do 2 intro; apply id; split; assumption); clear id
+         | id:?X1 -> ?X2
+       |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+        | |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+        | |- _ <-> _ => split
+        | |- ~ _ => red
+        end; <Coq.Init.Tauto.not_dep_intros>)
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : X.t
+  x' : X.t
+  IHx : forall (y : X.t) (s : t),
+         mem y (add y s) = true <-> x = y' \/ In y s
+  y' : X.t
+  y'' : X.t
+  IHy : forall (y : X.t) (s : t),
+         mem y (add y s) = true <-> x = y' \/ In y s
+  y'' : X.t
+  y'' : X.t
+  e'' : X.compare x y = EQ _ x'
+  GT : y = x' * e' + y
+  H1 : X.eq y x'
+  H10 : In y (add y s) <-> In y s
+  H2 : X.eq y x'
+  H11 : X.eq y x'
+  ============================
+   (In y s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : X.t
+  x' : X.t
+  IHx : forall (y : X.t) (s : t),
+         mem y (add y s) = true <-> x

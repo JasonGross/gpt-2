@@ -1,0 +1,41 @@
+======== SAMPLE 1 ========
+ rox, radd_bool, is_conj, is_disj, is_unit_or_eq, is_transitive, x0_bool
+  x2 : positive
+  maj : (1 # x1) < 2 # r
+  Rsth : forall x : positive,
+                  x0 ->
+                       (IDphi (R:=Q)) p3 x3 y1
+  l : tree
+  x1 : positive
+  maj : (1 # x1) < 2 # r
+  Rsth : forall x : positive,
+                    x1 ->
+                         (IDphi (R:=Q)) p3 x3 y1
+  ============================
+   (Qpower_positive_zero Qpower_zero (R:=Q))
+
+
+Debug: Going to execute:
+rewrite (E.eq)_f y
+
+
+TcDebug (5) > 
+Debug: Evaluated term: (eqf (Hf (Hf (Hf (Hf (Hf (Hf (Hf (Hf (Hf (Hf (Hf ive q1_1 s1 1  1  1  1  i)))  hfe)) (get_f_list
+           (Hf (Hf (Hf (Hf (Hf (Hf (Hf (Hf (Hf (Ho ive ive (2   1 ))) (i)) :: 1)
+          (Goal.to_nat (h_f (Ho ive (Ho ive (3  1  1  i)) :: 1)))
+               (IDphi (R:=Q)) p3 x3 y1 :: nil)
+  x2 : positive
+  maj : (1 # x1) < 2 # r
+  Rsth : forall x : positive,
+                    x0 ->
+                         (IDphi (R:=Q)) p1 x2 y1
+  x0 : positive
+  maj : positive
+  Rsth : forall x : positive,
+               (IDphi (R:=Q)) p3 x0 x
+  H1 : (x :: idt
+                  (get_pow (ih x1 :: nil) (get_sign_conj (S_t * T)) x
+                  (Ring_polynom.norm_pow 0 1 Qplus Qmult
+                         (Ring_polynom.norm_pow 1 Qplus Qmult
+                                (Ring_polynom.norm_pow 0 1 Qplus Qmult                                         (Ring_polynom.PEX Q 1 Qplus Q ); Ring_polynom.norm_pow 2
+                                    (Ring_polynom.PEX Q 1 Qplus Qmult                                                   (Ring_polynom.PEX Q 1 Qplus Qmult                                          

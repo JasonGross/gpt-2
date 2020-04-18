@@ -1,0 +1,79 @@
+======== SAMPLE 1 ========
+  x' : elt
+  l' : list elt
+  r' : rlyak'
+  y : elt
+  H3 : X.eq x x' -> False
+  H0 : Ok (ins x l)
+  H1 : Ok l' -> In x l
+  H7 : In x l' -> 0%coef
+  ============================
+   (X.eq x x' -> False)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  o : bool
+  r : tree
+  Hl : forall acc : list (key * elt),
+       Ok l ->
+       Sorted ltk acc ->
+       forall acc : list (key * elt),
+       Ok (ins x l) ->
+       Sorted ltk acc ->
+       (forall (x : elt) (l : tree),
+        Ok (ins x l) ->
+       Sorted ltk acc ->
+       (forall x0 : key * elt,
+        Ok (ins x0 l) ->
+        Sorted ltk acc ->
+        (forall x : key * elt,
+        Ok (ins x0 l) ->
+        Sorted ltk acc ->
+        (forall x0 : key * elt,
+        Ok _ ->
+        Sorted ltk acc ->
+        (forall x0 : key * elt,
+        Ok (ins x0 l) ->
+        Sorted ltk acc ->
+        (forall x : key * elt,
+        Ok (ins x0 l) ->
+        Sorted ltk acc ->
+        (forall x : key * elt,
+        Ok (ins x0 l) ->
+        Sorted ltk acc ->
+        (forall x0 : key * elt,
+        Ok (ins x0 l) ->
+        Sorted ltk acc ->
+        (forall x : key * elt,
+        Ok (ins x0 l) ->
+        Sorted ltk acc ->
+        (forall x0 : key * elt,
+        Ok (ins x0 l) ->
+        Sorted ltk acc ->
+        (forall x : key * elt,
+        Ok (ins x0 l) ->
+        Sorted ltk acc ->
+        (forall x0 : key * elt,
+        Ok (ins x0 l) ->
+        Sorted ltk acc ->
+        (forall x : key * elt,
+        Ok (ins x0 l) ->
+        Sorted ltk acc ->
+        (forall x : key * elt,
+        Ok (ins x0 l) ->
+        Sorted ltk acc ->
+        (forall x : key * elt,
+        Ok _ ->
+        Sorted ltk acc ->
+        (forall x : key * elt,
+        Ok _ ->
+        Sorted ltk acc ->
+        (forall x0 : key * el

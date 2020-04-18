@@ -1,0 +1,121 @@
+======== SAMPLE 1 ========
+=== ============================
+   ((<= E.eq x y \/ In y l) \/ In y (Node l y0)) \/ In y r
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  y0 : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt y0 x
+  e1 : X.compare x y0 = LT _x
+  H1 : In y (add x e l) -> X.eq y x \/ In y l
+  H2 : In y l -> In y (add x e l)
+  H3 : In y (Node l y0)
+  H : In y r
+  H1 : In y (add x e l)
+  ============================
+   ((<= E.eq x y \/ In y l) \/ In y (Node l y0)) \/ In y r
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  y0 : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt y0 x
+  e1 : X.compare x y0 = LT _x
+  H1 : In y (add x e l) -> X.eq y x \/ In y l
+  H2 : In y l -> In y (add x e l)
+  H3 : In y (Node l y0)
+  H : In y r
+  H1 : In y (add x e l)
+  ============================
+   ((<= E.eq x y \/ In y l) \/ In y (Node l y0)) \/ In y r
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  y0 : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt y0 x
+  e1 : X.compare x y0 = LT _x
+  H1 : In y (add x e l) -> X.eq y x \/ In y l
+  H2 : In y l -> In y (add x e l)
+  H3 : In y (Node l y0)
+  H : In y r
+  H1 : In y (add x e l)
+  ============================
+   ((<= E.eq x y \/ In y l) \/ In y (Node l y0)) \/ In y r
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  y0 : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt y0 x
+  e1 : X.compare x y0 = LT _x
+  H1 : In y (add x e l) -> X.eq y x \/ In y l
+  H2 : In y l -> In y (add x e l)
+  H3 : In y (Node l y0)
+  H : In y r
+  H1 : In y (add x e l)
+  ============================
+   ((<= E.eq x y \/ In y l) \/ In y (Node l y0)) \/ In y r
+
+
+Debug:
+Going to execute:
+<Coq.Init.

@@ -1,0 +1,89 @@
+======== SAMPLE 1 ========
+r r)
+  H2 : r < X.eq y x
+  H3 : z <= x
+  ============================
+   (z0 <= x)
+
+
+Debug: Going to execute:
+constr:NotConstant
+
+
+TcDebug (19) > 
+Debug: Evaluated term: NotConstant
+
+Debug: Evaluated term: NotConstant
+
+Debug: Level 18: evaluation returns
+NotConstant
+
+
+Debug: Level 17: Cst t
+ has value 
+NotConstant
+
+
+Goal:
+  
+  ih : int
+  il : int
+  Hih : wB / 4 <= φ (ih)
+  Hbin : ∀ s : Z, s * s + 2 * s + 1 = (s + 1) ^ 2
+  Hb : 0 <= wB
+  Hi2 : [||WW ih il||] < (φ (max_int) + 1) ^ 2
+  s := iter2_sqrt size (λ _ _ j : int, j) ih il max_int : int
+  Hs1 : φ (s) ^ 2 <= [||WW ih il||]
+  Hs2 : [||WW ih il||] < (φ (s) + 1) ^ 2
+  ih1 : int
+  il1 : int
+  Hihl1 : φ (s) * φ (s) = φ (ih1) * wB + φ (il1)
+  il2 : int
+  Hil2 : φ (il2) = φ (il) - φ (il1)
+  Heq : φ (ih1) < φ (ih)
+  H2 : φ (ih) < φ (φ (il) - φ (il1)
+  ============================
+   (z0 <= x)
+
+
+Debug:
+Going to execute:
+match t with
+| rO => fun _ => Ring_polynom.PEO
+| rI => fun _ => Ring_polynom.PEI
+| radd ?t1 ?t2 =>
+    fun _ => let e1 := mkP t1 in
+             let e2 := mkP t2 in
+             Ring_polynom.PEadd e1 e2
+| rmul ?t1 ?t2 =>
+    fun _ => let e1 := mkP t1 in
+             let e2 := mkP t2 in
+             Ring_polynom.PEmul e1 e2
+| rsub ?t1 ?t2 =>
+    fun _ => let e1 := mkP t1 in
+             let e2 := mkP t2 in
+             Ring_polynom.PEsub e1 e2
+| ropp ?t1 => fun _ => let e1 := mkP t1 in
+                            Ring_polynom.PEopp e1
+| rpow ?t1 ?n =>
+    match CstPow n with
+    | NotConstant =>
+        fun _ => let p := Find_at t fv in
+                  Ring_polynom.PEX C p
+    | ?c => fun _ => let e1 := mkP t1 in
+                       EIsub c
+    end
+| _ => fun _ => let p := Find_at t fv in
+                 Ring_polynom.PEpow e1 c
+end
+
+
+TcDebug (20) > 
+Goal:
+  
+  ih : int
+  il : int
+  Hih : wB / 4 <= φ (ih)
+  Hbin : ∀ s : Z, s * s + 2 * s + 1 = (s + 1) ^ 2
+  Hb : 0 <= wB
+  Hi2 : [||WW ih il||] < (φ (max

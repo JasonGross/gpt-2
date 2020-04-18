@@ -1,0 +1,152 @@
+======== SAMPLE 1 ========
+   (MapsTo k e0 l' \/ In k m2)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  m'' : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H0 : Add x e m m'
+  t0 : E.t
+  e0 : elt
+  l : E.lt x t0
+  H1 : MapsTo t0 e0 m
+  ============================
+   (MapsTo t0 e0 m)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  m'' : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H0 : Add x e m m'
+  t0 : E.t
+  e0 : elt
+  l : E.lt x t0
+  H1 : MapsTo t0 e0 m
+  ============================
+   (MapsTo t0 e0 m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  m'' : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H0 : Add x e m m'
+  t0 : E.t
+  e0 : elt
+  l : E.lt x t0
+  H1 : MapsTo t0 e0 m
+  ============================
+   (MapsTo t0 e0 m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  m'' : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H0 : Add x e m m'
+  t0 : E.t
+  e0 : elt
+  l : E.lt x t0
+  H1 : MapsTo t0 e0 m
+  ============================
+   (MapsTo t0 e0 m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  m'' : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H0 : Add x e m m'
+  t0 : E.t
+  e0 : elt
+  l : E.lt x t0
+  H1 : MapsTo t0 e0 m
+  ============================
+   (MapsTo t0 e0 m)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m' : t elt
+  m'' : t elt
+  x : key
+  e : elt
+  H : In x m -> False
+  H0 : Add x e m m'
+  t0 : E.t
+  e0 : elt
+  l : E.lt x t0
+  H1 : MapsTo t0 e0 m
+  ============================
+   (MapsTo t0 e0 m)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+

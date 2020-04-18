@@ -1,0 +1,96 @@
+======== SAMPLE 1 ========
+> In x l
+
+
+TcDebug (16) > 
+Goal:
+    s : t  s' : t  s'' : t  a : E.t  H0 : In a s''  H : In a s''
+  ============================
+   ((In a s /\ In a s'') /\ (In a s -> In a s) \/
+    (In a s /\ In a s'') /\ (In a s' -> In a s'')))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (16) > 
+Goal:
+    s : t  s' : t  s'' : t  a : E.t  H0 : In a s''  H : In a s''
+  ============================
+   ((In a s /\ In a s'') /\ (In a s -> In a s) \/
+    (In a s /\ In a s'') /\ (In a s' -> In a s'')))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (17) > 
+Goal:
+    s : t  s' : t  s'' : t  a : E.t  H0 : In a s''  H : In a s''
+  ============================
+   ((In a s /\ In a s'') /\ (In a s -> In a s) \/
+    (In a s /\ In a s'') /\ (In a s' -> In a s'')))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (17) > 
+Debug: Level 17: evaluation returns
+<tactic closure>
+
+
+Init: (s' : t) <-> t' <> t'
+
+
+Goal:
+    s : t  s' : t  s'' : t  a : E.t  H0 : In a s''  H : In a s''
+  ============================
+   ((In a s /\ In a s'') /\ (In a s -> In a s) \/
+    (In a s /\ In a s'') /\ (In a s' -> In a s'')))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (18) > 
+Goal:
+    s : t  s' : t  s'' : t  a : E.t  H0 : In a s''  H : In a s''
+  ============================
+   ((In a s /\ In a s'') /\ (In a s -> In a s) \/
+    (In a s /\ In a s'') /\ (In a s' -> In a s'')))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (18) > 
+Goal:
+    s : t  s' : t  s'' : t  a : E.t  H0 : In a s''  H : In a s''
+  ============================
+   ((In a s /\ In a s'') /\ (In a s -> In a s) \/
+    (In a s /\ In a s'') /\ (In a s' -> In a s'')))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (18) > 
+Goal:
+    s : t  s' : t  s'' : t  a : E.t  H0 : In a s''  H : In a s''
+  ============================
+   ((In a s /\ In a s'') /\ (In a s -> In a s) \/
+    (In a s /\ In a s'') /\ (In a s' -> In a s'')))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+

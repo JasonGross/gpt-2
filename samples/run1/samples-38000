@@ -1,0 +1,104 @@
+======== SAMPLE 1 ========
+ he s1 : tree  Hs1 : Ok s2
+  Ht0 : Ok s2
+  Ht1 : Ok l1
+  Ht2 : Ok s2
+  H1 : Ok l2
+  H : X.eq x a
+  ============================
+   (InT x (Node _x l1 s2))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H0 : InB2 l2
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  IHb2 : Ok (diff l2 (split x1 s2)#l)
+  IHi2 : forall y : elt,
+         InT y (diff l2 (split x1 s2)#l) <->
+         InT y l1 /\ ~ InT y (split x1 s2)#l
+  y : elt
+  H2 : InT y s2 -> InT y (split x1 s2)#l
+  H3 : InT y s2
+  H8 : InT y s2 /\ X.lt y x1
+  ============================
+   (InT x (Node _x l1 s2))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H0 : InB2 l2
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  IHb2 : Ok (diff l2 (split x1 s2)#l)
+  IHi2 : forall y : elt,
+         InT y (diff l2 (split x1 s2)#l) <->
+         InT y l1 /\ ~ InT y (split x1 s2)#l
+  y : elt
+  H2 : InT y s2 -> InT y (split x1 s2)#l
+  H3 : InT y s2
+  H8 : InT y s2 /\ X.lt y x1
+  ============================
+   (InT x (Node _x l1 s2))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H0 : InB2 l2
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  IHb2 : Ok (diff l2 (split x1 s2)#l)
+  IHi2 : forall y : elt,
+         InT y (diff l2 (split x1 s2)#l) <->
+         InT y l1 /\ ~ InT y (split x1 s2)#l
+  y : elt
+  H2 : InT y s2 -> InT y (split x1 s2)#l
+  H3 : InT y s2
+  H8 : InT y s2 /\ X.lt y x1
+  ============================
+   (InT x (Node _x

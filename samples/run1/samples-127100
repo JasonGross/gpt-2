@@ -1,0 +1,96 @@
+======== SAMPLE 1 ========
+ ^P : Pol
+  IHP2 : forall (P : Pol) (l : Env R), (P ++ P) @ l == P @ l
+  P2 : Pol
+  p0 : positive
+  P3 : Pol
+  l : Env R
+  ============================
+   (P2 @ l * hd l ^ p0 + (P3 ++ P) @ (tail l) ==
+    P2 @ l * hd l ^ p0 + P3 @ (tail l))
+
+
+Debug: Going to execute:
+rewrite (ARsub_def ARth)
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (ARsub_def ARth)
+
+Debug: Level 0: Found no subterm matching "?r - ?r0" in the current goal.
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  C : Type
+  cO : C
+  cI : C
+  cadd : C -> C -> C
+  cmul : C -> C -> C
+  csub : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  phi : C -> R
+  CRmorph : ring_morph 0 1 radd rmul rsub ropp req cO cI cadd cmul csub copp
+              ceqb phi
+  Cpow : Type
+  Cp_phi : N -> Cpow
+  rpow : R -> Cpow -> R
+  pow_th : power_theory 1 rmul req Cp_phi rpow
+  cdiv : C -> C -> C * C
+  div_th : div_theory req cadd cmul phi cdiv
+  n : nat
+  lmp : list (C * Mon * Pol)
+  subst_l := fun P : Pol => PNSubstL P lmp n n : Pol -> Pol
+  Pmul_subst := fun P2 : Pol => subst_l (P2 ** P2) : Pol -> Pol -> Pol
+  Ppow_subst := Ppow_N subst_l : Pol -> N -> Pol
+  l : Env R
+  subst_l_eq : P x : R, P2_up_subst l (P3 ** P3)
+  p : positive
+  p0 : positive
+  P3 : Pol
+  match p with
+  | P0 :: P1 :: M1 =>
+        match P2 with
+        | P2 ?l => fun _ => PEc cO
+        | ?c => fun _ => PEc lO
+        | p0 ?= p1 ?= p0
+        | p1 ?= p2 => fun _ => PEc cO
+        | _ => fun _ => PEc cO (cadd cmul csub copp csub)
+        end : list R
+  P2 : Pol
+  p : positive
+  P3 : Pol
+  l : Env R
+  ============================
+   (P2 @ l * hd l ^ p0 + (P3 ++ P) @ (tail l) ==
+    P2 @ l * hd l ^ p0 + P3 @ (tail l))
+
+
+Debug: Going to execute:
+progress rewrite (ARopp_zero Rsth Reqe ARth)
+
+
+TcDebug (0) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext rad

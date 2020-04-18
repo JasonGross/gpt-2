@@ -1,0 +1,122 @@
+======== SAMPLE 1 ========
+
+  l2 : list A
+  res0 : red
+  s : list A
+  H0 : E.eq (fst (a, b)) ->
+       forall y : A,
+       lt {| this := m1; sorted := H0 |} m1 ->
+       lt {| this := m2; sorted := H1 |} (fst (a, b)) ->
+       forall y : A,
+       lt
+  l : list A
+  H : equivlist l (a, b)
+  x : list A
+  H2 : equivlist r (a, b)
+  H3 : InA x l
+  ============================
+   (eqA x l)
+
+
+Debug: Going to execute:
+<rl::with_simpl@0>
+
+
+TcDebug (0) > 
+Debug: Level 0: C is used in conclusion.
+
+Debug: Level 0: C is used in conclusion.
+
+Goal:
+  
+  A : Type
+  eval : A -> Prop
+  a : A
+  a0 : A
+  b : B
+  l : list A
+  H0 : E.eq (fst (a, b)) ->
+       forall y : A,
+       lt {| this := m1; sorted := H0 |} m1 ->
+       lt {| this := m2; sorted := H1 |} (fst (a, b)) ->
+       forall y : A,
+       lt
+  l : list A
+  H : equivlist l (a, b)
+  x : list A
+  H2 : equivlist r (a, b)
+  H3 : InA x l
+  ============================
+   (eqA x l)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::with_simpl@0>
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eval : A -> Prop
+  a : A
+  a0 : A
+  b : B
+  l : list A
+  H0 : E.eq (fst (a, b)) ->
+       forall y : A,
+       lt {| this := m1; sorted := H0 |} m1 ->
+       lt {| this := m2; sorted := H1 |} (fst (a, b)) ->
+       forall y : A,
+       lt
+  l : list A
+  H : equivlist l (a, b)
+  x : list A
+  H2 : equivlist r (a, b)
+  H3 : InA x l
+  H4 : InA x l -> InA x l
+  ============================
+   (eqA x l)
+
+
+Debug: Going to execute:
+<ltac_plugin::with_simpl@0>
+
+
+TcDebug (0) > 
+Debug: Level 0: Cannot apply linear inversion.
+
+Debug: Level 0: Cannot apply linear inversion.
+
+Goal:
+  
+  A : Type
+  eval : A -> Prop
+  a : A
+  a0 : A
+  b : B
+  l : list A
+  H0 : E.eq (fst (a, b)) ->
+       forall y : A,
+       lt {| this := m1; sorted := H0 |} m1 ->
+       lt {| this := m2; sorted := H1 |} (fst (a, b)) ->
+       forall y : A,
+       lt
+  l : list A
+  H : equivlist l (a, b)
+  x : list A
+  H3 : InA x l
+  ============================
+   (fst (a, b))
+
+
+Debug: Going to execute:
+use_hyps; do_ccl
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  eval : A -> Prop
+ 

@@ -1,0 +1,62 @@
+======== SAMPLE 1 ========
+ 1%positive *
+     (nth 0 k (jump p0 l) (Pos.to_nat p) :: nth 0 k y) :: zn (Pos.to_nat p) :: nil)
+           (FEeval 0 1 Qplus Qmult Qminus Qopp Qdiv Qinv 
+             (IDphi (R:=Q)) Z.of_N Qpower
+             (yn (Pos.to_nat k ^ 2 * k)%nat :: yn (Pos.to_nat k * k)%nat :: 1 # n :: yn (Pos.to_nat k * k) :: nil)
+              fe1 : FExpr Q
+               (FEmul (FEX Q 1) (FEX Q 2)) =
+                res0
+  n : (Pos.to_nat k < k * 1)%nat
+  H1 : 0 <= n
+  H2 : 0 <= k
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:?X1
+  |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+| id:_ <-> _ |- _ => elim id; do 2 intro; clear id
+| id:~ _ |- _ => red in id
+| id:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+| id0:?X1 -> ?X2, id1:?X1 |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+| id:?X1 -> ?X2
+  |- _ =>
+      <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+       [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+| id:?X1 <-> ?X2 -> ?X3
+  |- _ =>
+      assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+       (do 2 intro; apply id; split; assumption); clear id
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+| |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+| |- _ <-> _ => split
+| |- ~ _ => red
+end; <Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (0) > 
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+  zn : nat -> Q
+  limz : QCauchySeq zn Pos.to_nat
+  n : positive
+  inf : (2 # n < yn (Pos.to_nat n) - xn (Pos.to_nat n))%Q
+  eps : Q
+  Heqeps : eps = yn (Pos.to_nat n) - xn (Pos.to_nat n) - (2 # n)
+  epsPos : (0 < eps)%Q
+  Hn : ~ eps < 0
+  H : forall n p : positive,
+      gen_reflexivity 1 (lmp (Pos.to_nat n)) == gen_lexivity 1 (jump p0 l) ^ 2
+  hyp_list := nil : list r
+  fv_list := (xn (Pos.max (elt:=elt))%nat :: nil)%

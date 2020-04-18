@@ -1,0 +1,91 @@
+======== SAMPLE 1 ========
+ b
+  H1 : lt_tree rx rl
+  H2 : gt_tree rx (Rd rl rx rr)
+  H3 : bst rl
+  H4 : bst rr
+  H5 : lt_tree rx rl
+  H6 : gt_tree rx rr
+  ============================
+   (InT y (Node i l x r) \/ InT y rl \/ X.eq y rx \/ InT y rr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (del x l) <-> InT y l /\ (X.eq y x -> False)
+  IHr : forall (x : X.t) (y : elt),
+        Ok (Rd rl rx rr) ->
+        InT y (del x (Rd rl rx rr)) <->
+        InT y (Rd rl rx rr) /\ (X.eq y x -> False)
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok l
+  H7 : lt_tree x' l
+  H8 : gt_tree x' (Rd rl rx rr)
+  H2 : gt_tree l
+  H4 : bst l
+  H9 : bst rl
+  H10 : lt_tree l
+  H11 : gt_tree rl
+  H0 : InT y (Rd rl rx rr) /\ (X.eq y x -> False)
+  a : elt
+  H13 : X.eq a x'
+  H11 : X.eq b rx \/ InT y rr
+  ============================
+   (InT y (Node i l x r) \/ InT y rl \/ X.eq y rx \/ InT y rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  rl : tree
+  rx : X.t
+  rr : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (del x l) <-> InT y l /\ (X.eq y x -> False)
+  IHr : forall (x : X.t) (y : elt),
+        Ok (Rd rl rx rr) ->
+        InT y (del x (Rd rl rx rr)) <->
+        InT y (Rd rl rx rr) /\ (X.eq y x -> False)
+  x : X.t
+  y : elt
+  H0 : X.lt x' x
+  H5 : Ok l
+  H7 : lt_tree x' l
+  H8 : gt_tree x' (Rd rl rx rr)
+  H2 : gt_tree l
+  H4 : bst l
+  H9 : bst rl
+  H10 : lt_tree l
+  H11 : gt_tree rl
+  H0 : InT y (Rd rl rx rr) /\ (X.eq y x -> False)
+  a : elt
+  H13 : X.eq a x'
+  H11 : X.eq b rx \/ InT y rr
+  ============================
+

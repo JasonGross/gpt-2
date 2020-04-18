@@ -1,0 +1,96 @@
+======== SAMPLE 1 ========
+Debug' -> False) /\
+    [X.eq x x' \/ In x0 (Expr (rll lx ld lr)r) /\
+     (In x0 (Expr (rll lx ld lr)r)) ] ]
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  d : elt
+  rll : tree
+  rlx : X.t
+  rlr : tree
+  copp : tree
+  E : forall (x : X.t) (x' : X.t),
+        assert ((Coq.Init.Leaf (Node lx ld lr)#r) @ l <= rhd rl) @ l) /\
+       (forall x : elt,
+         Ok r1,
+          Ok r2) /\
+         InA X.eq x (diff lx ld rl)#l
+  x : elt
+  d : elt
+  rlr : tree
+  CRmorph : forall (x : X.t) (d : elt) (r : tree),
+          In x (diff d rl)#l <->
+         InA X.eq x (diff d rl)#r
+  x0 : elt
+  H0 : MX.T
+  ============================
+   (MX.MX.lt "1" x "2" \/ InA X.eq x lx \/ InA X.eq x lr)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  d : elt
+  rll : tree
+  rlx : X.t
+  rlr : tree
+  copp : tree
+  E : forall (x : X.t) (x' : X.t),
+        assert ((Coq.Init.Leaf (Node lx ld lr)#r) @ l <= rhd rl) @ l) /\
+       InA X.eq x (diff lx ld rl)#l
+  x : elt
+  d : elt
+  rlr : tree
+  CRmorph : forall (x : X.t) (d : elt) (r : tree),
+         In x (diff d rl)#l <->
+         InA X.eq x (diff d rl)#r
+  x0 : elt
+  H0 : MX.T
+  ============================
+   (MX.MX.lt "1" x "2" \/ InA X.eq x lx \/ InA X.eq x lr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : Color.t
+  l : tree
+  x' : X.t
+  d : elt
+  rll : tree
+  rlx : X.t
+  rlr : tree
+  copp : tree
+  E : forall (x : X.t) (x' : X.t),
+        assert ((Coq.Init.Leaf (Node lx ld lr)#r) @ l <= rhd rl) @ l) /\
+       InA X.eq x (diff lx ld rl)#l
+  x : elt
+  d : elt
+  rlr : tree
+  CRmorph : forall (x : X.t) (d : elt) (r : tree),
+         assert ((Co

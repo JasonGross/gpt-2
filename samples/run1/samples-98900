@@ -1,0 +1,210 @@
+======== SAMPLE 1 ========
+1, e' <> 0
+  ============================
+   (~ a ==> 0)
+
+
+Debug: Going to execute:
+progress rewrite <- (ARopp_mul_l ARth)
+
+
+TcDebug (0) > 
+Goal:
+  
+  ============================
+   (~ a ==> 0)
+
+
+Debug: Going to execute:
+rewrite <- (ARopp_mul_l ARth)
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (ARopp_mul_l ARth)
+
+Debug: Level 0: Found no subterm matching "@?r".
+
+Debug: Level 0: Found no subterm matching "@?r".
+
+Debug: Level 0: No applicable tactic.
+
+Goal:
+  
+  ============================
+   (~ a ==> 0)
+
+
+Debug: Going to execute:
+try do_atom;zaq_spec;zmod_l
+
+
+TcDebug (0) > 
+Goal:
+  
+  ============================
+   (~ a ==> 0)
+
+
+Debug: Going to execute:
+try do_atom;zaq_spec;zmod_l
+
+
+TcDebug (0) > 
+Goal:
+  
+  ============================
+   (~ a ==> 0)
+
+
+Debug: Going to execute:
+try do_atom;zaq_spec;zmod_l
+
+
+TcDebug (0) > 
+Goal:
+  
+  ============================
+   (~ a ==> 0)
+
+
+Debug: Going to execute:
+try do_atom
+
+
+TcDebug (0) > 
+Goal:
+  
+  ============================
+   (~ a ==> 0)
+
+
+Debug: Going to execute:
+do_atom
+
+
+TcDebug (0) > 
+Goal:
+  
+  ============================
+   (~ a ==> 0)
+
+
+Debug: Going to execute:
+trivial with eq_true
+
+
+TcDebug (0) > 
+Goal:
+  
+  ============================
+   (~ a ==> 0)
+
+
+Debug: Going to execute:
+<ltac_plugin::trivial@0> $1 $2
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+destruct H0 as [Z]; trivial
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+destruct H0 as [Z]
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+trivial
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+trivial
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+apply destruct_1_l
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+trivial
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+apply destruct_1_l
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+apply destruct_1_l
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+apply destruct_v_l
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+trivial
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+apply destruct_v_l
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+trivial
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+apply destruct_v_l
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+trivial
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+apply destruct_v_l
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+trivial
+
+
+Goal:
+  
+  ============================
+   (~ a ==> 0)
+
+
+Debug: Going to execute:
+trivial with eq_true
+
+
+TcDebug (0) > 
+Goal:
+  
+  ============================
+   (~ a ==> 0)
+
+
+Debug: Going to execute:
+<ltac_plugin::trivial@0> $1 $2
+
+
+TcDebug (0) > 
+Debug: Going to execute:
+destruct_v_

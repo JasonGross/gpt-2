@@ -1,0 +1,128 @@
+======== SAMPLE 1 ========
+
+  b : tree
+  H : InT y rl1
+  ============================
+   (X.eq y x \/ InT y rl1 \/ InT y (Node rh rl2 x2 r2))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  x2 : X.t
+  r2 : tree
+  y : elt
+  B2 : Ok (Node _x (Node _x0 rx r2) y0))
+  H0 : InT y (Node _x0 rx r2)
+  ============================
+   (X.eq y x \/ InT y rl1 \/ InT y (Node rh rl2 x2 r2))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  x2 : X.t
+  r2 : tree
+  y : elt
+  B2 : Ok (Node _x (Node _x0 rx r2) y0))
+  H0 : InT y (Node _x0 rx r2)
+  ============================
+   (X.eq y x \/ InT y rl1 \/ InT y (Node rh rl2 x2 r2))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  x2 : X.t
+  r2 : tree
+  y : elt
+  B2 : Ok (Node _x (Node _x0 rx r2) y0))
+  H0 : InT y (Node _x0 rx r2)
+  ============================
+   (X.eq y x \/ InT y rl1 \/ InT y (Node rh rl2 x2 r2))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  x2 : X.t
+  r2 : tree
+  y : elt
+  B2 : Ok (Node _x (Node _x0 rx r2) y0))
+  H0 : InT y (Node _x0 rx r2)
+  ============================
+   (X.eq y x \/ InT y rl1 \/ InT y (Node rh rl2 x2 r2))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  x2 : X.t
+  r2 : tree
+  y : elt
+  B2 : Ok (Node _x (Node _x0 rx r2) y0))
+  H0 : InT y (Node _x0 rx r2)
+  ============================
+   (X.eq y x \/ InT y rl1 \/ InT y (Node rh rl2 x2 r2))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  x2 : X.t
+  r2 : tree
+  y : elt
+

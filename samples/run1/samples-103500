@@ -1,0 +1,110 @@
+======== SAMPLE 1 ========
+Debug (1) | rewrite (NFormula Z) in H; MX.OrderTac.order_prepare
+
+
+TcDebug (2) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : BinNums.N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  env : PolEnv
+  e : PolC
+  o : Op1
+  Op : o = NonStrict
+  x : R
+  H0 : 0 < x
+  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+MX.OrderTac.order_prepare
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : BinNums.N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  env : PolEnv
+  e : PolC
+  o : Op1
+  Op : o = NonStrict
+  x : R
+  H0 : 0 < x
+  H1 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match goal with
+| H:?A -> False
+  |- _ => change_no_check (~ A) in H; MX.OrderTac.order_prepare
+| H:~ ?R ?x ?y
+  |- _ =>
+      match R with
+      | MX.OrderTac.OTF.eq => fail 1
+      | _ =>
+          change_no_check (~ MX.OrderTac.OTF.eq x y) in H ||
+            apply MX.OrderTac.not_gt_le in H ||
+              apply MX.OrderTac.not_ge_lt in H || clear H || fail 1;
+           MX.OrderTac.order_prepare
+      end
+| H:?R ?x ?y
+  |- _ =>
+      match R with
+      | MX.OrderTac.OTF.eq => fail 1
+      | MX.OrderTac.OTF.lt => fail 1
+      | MX.OrderTac.OTF.le => fail 1
+      | _ =>
+          change_no_check (MX.OrderTac.OTF.eq x y) in H ||
+            change_no_check (MX.OrderTac.OTF.lt x y)

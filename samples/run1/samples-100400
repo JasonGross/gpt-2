@@ -1,0 +1,125 @@
+======== SAMPLE 1 ========
+ R x x0
+  ============================
+   (OrderTac.OTF.lt x y)
+
+
+Debug: Going to execute:
+right; OrderTac.order_loop
+
+
+TcDebug (4) > 
+Goal:
+    x : t  y : t  H : l x <> x  H0 : l x - y == y
+  ============================
+   (Lt = Lt)
+
+
+Debug: Going to execute:
+right
+
+
+TcDebug (4) > 
+Goal:
+    x : t  y : t  H : l x <> x  H0 : l x - y == y
+  ============================
+   (Lt = Lt)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::right@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  x : t
+  y : t
+  H : l x <> x
+  H0 : l x - y == y
+  H1 : l x - y == l x
+  d : (max (height l) (height r) + 1)%positive
+  d' : (max (height r) (height d') + 1)%positive
+  H3 : l x - y == l x
+  H2 : l y - y == l y
+  ============================
+   (nyn (max (height l) (height r) + 1) + - nyn (max (height r) (height r)) ==
+    l y)
+
+
+Debug: Going to execute:
+intros; OrderTac.order_prepare; OrderTac.order_loop
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : t
+  y : t
+  H : l x <> x
+  H0 : l x - y == y
+  H1 : l x - y == l x
+  d : (max (height l) (height r) + 1)%positive
+  d' : (max (height r) (height d') + 1)%positive
+  H3 : l x - y == l x
+  H2 : l y - y == l y
+  ============================
+   (nyn (max (height l) (height r) + 1) + - nyn (max (height r) (height r)) ==
+    l y)
+
+
+Debug: Going to execute:
+intros; OrderTac.order_prepare
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : t
+  y : t
+  H : l x <> x
+  H0 : l x - y == y
+  H1 : l x - y == l x
+  d : (max (height l) (height r) + 1)%positive
+  d' : (max (height r) (height d') + 1)%positive
+  H3 : l x - y == l x
+  H2 : l y - y == l y
+  ============================
+   (nyn (max (height l) (height r) + 1) + - nyn (max (height r) (height r)) ==
+    l y)
+
+
+Debug: Going to execute:
+intros
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : t
+  y : t
+  H : l x <> x
+  H0 : l x - y == y
+  H1 : l x - y == l x
+  d : (max (height l) (height r) + 1)%positive
+  d' : (max (height r) (height d') + 1)%positive
+  H3 : l x - y == l x
+  H2 : l y - y == l y
+  ============================
+   (nyn (max (height l) (height r) + 1) + - nyn (max (height r) (height r)) ==
+    l y)
+
+
+Debug: Going to execute:
+intuition FSetDecideAuxiliary.fsetdec_rec
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : t
+  y : t
+  H : l x <> x
+  H0 : l x - y == y
+  H1 : l x - y == l x
+  d : (max (height l) (height r) + 1)

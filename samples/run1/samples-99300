@@ -1,0 +1,64 @@
+======== SAMPLE 1 ========
+        (fun x0 p : E.t * oee' => Some e'
+                 (FEd (FEd rll rlx rlr) -
+                 (FEmul (FEX Q 3) (FEX Q 5))
+                 (FEmul (FEX Q 4) (FEX Q 6))) = res
+  thm : (FEeval rr - FEdiv (FEdiv (FEX Q 3) (FEX Q 6))) ==
+         display_pow_linear 0 1 Qplus Qmult Qminus Qopp Qdiv 0 1 Qeq_bool
+           (IDphi (R:=Q)) Z.of_N Qpower (get_sign_None (C:=Q))
+           (1 # p)
+           (1 # p)%Q
+  ============================
+   ((2 # p <
+     (2 # n) + (1 # p) + - (1 # p) < (1 # p) + (- (1 # p))%Q
+           (2 # n) + (- (1 # p))%Q -> goal)
+
+
+Debug:
+Going to execute:
+change_no_check (MX.TO.le x y) in H || clear H || fail 1
+
+
+TcDebug (10) > 
+Goal:
+  
+  x : E.t
+  r : t
+  x0 : E.t
+  rll : t
+  rlx : E.t
+  rlr : t
+  rr : t
+  _x1 : int
+  rll : t
+  rlx0 : key
+  rlr : t
+  rr : t
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) + 2
+  _x2 : height rr < height (Node rll rlx rld rlr _x3)
+  y : key
+  H0 : X.eq y rlx
+  ============================
+   ((2 # n <
+     (2 # n ->
+      forall l : list (NFormula Z),
+      ZChecker ((PsubC Z.sub p1 lb, Equal) :: l) l = true <->
+      Z.Private_OrderTac.Tac.OTF
+       (Z.Private_OrderTac.Tac.order_prepare (fun x : NFormula Z => mkPZ k l) y l)
+       (fun x0 p : E.t * oee' => Some e' = Some e')
+       (FEadd (FEmul (FEc 0) (FEX Q 3)) (FEsub (FEX Q 2) (FEX Q 1)))
+        (FEadd (FEX Q 4) (FEsub (FEX Q 2) (FEX Q 6))) ==
+       display_pow_linear 0 1 Qplus Qmult Qminus Qopp Qdiv 0 1 Qeq_bool
+         (IDphi (R:=Q)) Z.of_N Qpower (get_sign_None (C:=Q))
+         (1 # p)
+         (Qabs (x0, y) :: Z.pos (Z.pos (Z.neg c))) :: nil)
+         (Ring_polynom.PEadd (Ring_polynom.PEX Q 1)
+           (Ring_polynom.PEX Q 2)) = true)
+
+
+Debug: Going to execute:
+change_no_check (MX.TO.le x y) in H
+
+

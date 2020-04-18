@@ -1,0 +1,146 @@
+======== SAMPLE 1 ========
+
+  elt : Type
+  a : key
+  b : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt x y
+  e1 : X.compare x y = LT _x
+  H0 : In y (add x e l)
+  H1 : X.eq y x
+  H3 : In y l
+  H : In y (add x e l)
+  H4 : In y (add x e l)
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  a : key
+  b : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt x y
+  e1 : X.compare x y = LT _x
+  H0 : In y (add x e l)
+  H1 : X.eq y x
+  H3 : In y l
+  H : In y (add x e l)
+  H4 : In y (add x e l)
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  a : key
+  b : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt x y
+  e1 : X.compare x y = LT _x
+  H0 : In y (add x e l)
+  H1 : X.eq y x
+  H3 : In y l
+  H : In y (add x e l)
+  H4 : In y (add x e l)
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  a : key
+  b : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt x y
+  e1 : X.compare x y = LT _x
+  H0 : In y (add x e l)
+  H1 : X.eq y x
+  H3 : In y l
+  H : In y (add x e l)
+  H4 : In y (add x e l)
+  ============================
+   (X.eq y x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  a : key
+  b : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt x y
+  e1 : X.compare x y = LT _x
+  H0 : In y (add x e l)
+  H1 : X.eq y x
+  H3 : In y l
+  H : In y (add x e l)
+  H4 : In y (add x e l)
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  a : key
+  b : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X

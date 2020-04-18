@@ -1,0 +1,101 @@
+======== SAMPLE 1 ========
+
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H3 : InT x rl -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x lx \/ InT x a
+  H : InT x lr
+  H5 : InT x a \/ X.eq x y \/ InT x b
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rl \/ X.eq x rx \/ InT x rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H3 : InT x rl -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x lx \/ InT x a
+  H : InT x lr
+  H5 : InT x a \/ X.eq x y \/ InT x b
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rl \/ X.eq x rx \/ InT x rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H3 : InT x rl -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x lx \/ InT x a
+  H : InT x lr
+  H5 : InT x a \/ X.eq x y \/ InT x b
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rl \/ X.eq x rx \/ InT x rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H3 : InT x rl -> InT x a \/ X.eq x y \/ InT x b
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x lx \/ InT x a
+  H : InT x lr
+  H5

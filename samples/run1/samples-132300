@@ -1,0 +1,53 @@
+======== SAMPLE 1 ========
+o_1 : Op1
+  op2 : Op3
+  limy : interp_ctx op2 id_op limy Op1
+          (fun [| Op1 => Op2| Op3| Op4| Op5| Op6| Op7| Op8| Op9| Op10|} o2)
+  limx : almost_pol _ (interp_ctx op2 id_op limx Op1) : Op1
+  hyp_proof := (op1, o1) :: [1] :: nil : list _
+  _ : Op1
+  ============================
+   ((let (_, _) := f _, Equal)
+      ((let (_, _) := f _, Equal) := let (_, _) := p1, p2)
+      (fun p => let (y', e') := p1, true)) x nil)
+
+
+Debug:
+Going to execute:
+fun Cst_tac Pow_tac lemma1 lemma2 =>
+  let mkPol := mkHyp fv in
+  let mkHyp fv := mkPow_pos_pos_nonneg in
+  let fv := FV_hypo_tac fv in
+  let fv := mkFV fv in
+  let lpe := mkHyp fv lH in
+  let vlpe := fresh "hyp_list" in
+  let vlmp := fresh "list_hyp_norm" in
+  let vlmp_eq := fresh "list_hyp_norm_eq" in
+  let prh := proofHyp_tac lH in
+  pose (vlpe := lpe); compute_assertion vlmp_eq vlmp (mk_monpol vlpe);
+   (let H := fresh "ring_lemma" in
+     pose proof (lemma vlpe fv prh vlmp vlmp_eq) as H ||
+      fail "field anomaly:failed to build a canonical list" "(let prh := proofHyp_tac lH in
+                   Ring_polynom.PEI
+                    (Ring_polynom.PEI
+                       (Ring_polynom.PEadd (Ring_polynom.PEX Q 2)
+                          (Ring_polynom.PEX Q 2)) as H1; clear vlmp_eq
+                     id_phi_N (pow_N 1 Qum)
+                     (PEpow (PEpow 1 Qum)) (PEpow 0 Qum)) = true
+  prh : (ring_lemma
+          (Ring_polynom.PEeval 0 1 Qplus Qmult Qminus Qopp
+            (IDphi (R:=Q)) Z.of_N Qpower
+            (2 # n :: q :: r :: -2 # n :: nil)
+            (Ring_polynom.PEsub (Ring_polynom.PEX Q 2)
+               (Ring_polynom.PEX Q 3)) ==
+         Ring_polynom.Pphi_pow 0 1 Qplus Qmult Qminus Qopp
+           (IDphi (R:=Q)) Z.of_N Qpower (2 # n :: q :: r :: -2 # n :: nil)
+           (Ring_polynom.PEsub (Ring_polynom.PEX Q 2)
+              (Ring_polynom.PEX Q 3)) res
+  ============================
+   ((2 # n < - q - - q)%Q -> goal)
+
+
+Debug:
+Going to execute:
+let mkPol := mkPolexpr

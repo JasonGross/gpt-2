@@ -1,0 +1,90 @@
+======== SAMPLE 1 ========
+add_trans RNG
+  R : Type
+  env : PolEnv
+  t : NFormula
+  tg : T
+  F := fun (x : NFormula) (acc : list (list (NFormula * T))) =>
+       if check_inconsistent x then acc else ((x, tg) :: nil) :: acc
+    : NFormula -> list (list (NFormula * T)) -> list (list (NFormula * T))
+  G := fun x : NFormula => eval_nformula env x -> False : NFormula -> Prop
+  EQ : check_inconsistent a = false
+  H : eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l) ->
+      make_conj G l
+  H0 : make_conj G l ->
+       eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l)
+  H1 : eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l)
+  H2 : make_conj G l
+  ============================
+   (eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l))
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  env : PolEnv
+  t : NFormula
+  tg : T
+  F := fun (x : NFormula) (acc : list (list (NFormula * T)) =>
+       if check_inconsistent x then acc else ((x, tg) :: nil) :: acc
+    : NFormula -> list (list (NFormula * T)) -> list (list (NFormula * T))
+  G := fun x : NFormula => eval_nformula env x -> False : NFormula -> Prop
+  EQ : check_inconsistent a = false
+  H : eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l) ->
+      make_conj G l
+  H0 : make_conj G l ->
+       eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l)
+  H1 : eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l)
+  H2 : make_conj G l
+  ============================
+   (eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R

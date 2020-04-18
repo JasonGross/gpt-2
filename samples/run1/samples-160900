@@ -1,0 +1,149 @@
+======== SAMPLE 1 ========
+5 : InT x lr
+  H1 : InT x rl
+  H3 : InT x b
+  H4 : InT x rl
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H5 : InT x lr
+  H1 : InT x rl
+  H3 : InT x b
+  H4 : InT x rl
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H5 : InT x lr
+  H1 : InT x rl
+  H3 : InT x b
+  H4 : InT x rl
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H5 : InT x lr
+  H1 : InT x rl
+  H3 : InT x b
+  H4 : InT x rl
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H5 : InT x lr
+  H1 : InT x rl
+  H3 : InT x b
+  H4 : InT x rl
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H5 : InT x lr
+  H1 : InT x rl
+  H3 : InT x b
+  H4 : InT x rl
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr :

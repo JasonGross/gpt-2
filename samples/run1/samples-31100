@@ -1,0 +1,78 @@
+======== SAMPLE 1 ========
+ x y)
+
+
+Debug: Going to execute:
+right
+
+
+TcDebug (28) > 
+Goal:
+  
+  ih : int
+  il : int
+  Hih : wB / 4 <= φ (ih)
+  Hbin : ∀ s : Z, s * s + 2 * s + 1 = (s + 1) ^ 2
+  Hb : 0 <= wB
+  Hi2 : [||WW ih il||] < (φ (max_int) + 1) ^ 2
+  s := iter2_sqrt size (λ _ _ j : int, j) ih il max_int : int
+  Hs1 : φ (s) ^ 2 <= [||WW ih il||]
+  Hs2 : [||WW ih il||] < (φ (s) + 1) ^ 2
+  ih1 : int
+  il1 : int
+  Hihl1 : φ (s) * φ (s) = φ (ih1) * wB + φ (il1) * wB + φ (il2)
+  il2 : int
+  Hil2 : φ (il2) = φ (il) - φ (il1)
+  Heq : φ (ih1) < φ (ih)
+  H2 : φ (ih1) + 1 < φ (ih)
+  ============================
+   (φ (ih) * wB + φ (il) + (- φ (il) - φ (il1)) =
+    wB * wB + φ (il1))
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::assumption@0>
+
+
+TcDebug (29) > 
+Goal:
+  
+  ih : int
+  il : int
+  Hih : wB / 4 <= φ (ih)
+  Hbin : ∀ s : Z, s * s + 2 * s + 1 = (s + 1) ^ 2
+  Hb : 0 <= wB
+  Hi2 : [||WW ih il||] < (φ (max_int) + 1) ^ 2
+  s := iter2_sqrt size (λ _ _ j : int, j) ih il max_int : int
+  Hs1 : φ (s) ^ 2 <= [||WW ih il||]
+  Hs2 : [||WW ih il||] < (φ (s) + 1) ^ 2
+  ih1 : int
+  il1 : int
+  Hihl1 : φ (s) * φ (s) = φ (ih1) * wB + φ (il1) * wB + φ (il2)
+  il2 : int
+  Hil2 : φ (il2) = φ (il) - φ (il1)
+  Heq : φ (ih1) < φ (ih)
+  H2 : φ (ih1) + 1 < φ (ih)
+  ============================
+   (φ (ih) * wB + (φ ((ih1) + 1) + 1) = (φ (ih1) * wB + φ (il) - φ (il1)) * wB + φ (il2)))
+
+
+Debug: Going to execute:
+intros s
+
+
+TcDebug (29) > 
+Goal:
+  
+  ih : int
+  il : int
+  Hih : wB / 4 <= φ (ih)
+  Hbin : ∀ s : Z, s * s + 2 * s + 1 = (s + 1) ^ 2
+  Hb : 0 <= wB
+  Hi2 : [||WW ih il||] < (φ (max_int) + 1) ^ 2
+  s := iter2_sqrt size (λ _ _ j : int, j) ih il max_int : int
+  Hs1 : φ (s) ^ 2 <= [||WW ih il||]
+  Hs2 : [||WW ih il||] < (φ (max_int) + 1) ^ 2
+  ih1 : int
+  il1 : int
+  Hihl1 : φ (s) * φ (s) = φ (ih1) * wB + φ (il1) * wB + φ (il

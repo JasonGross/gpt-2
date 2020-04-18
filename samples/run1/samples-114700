@@ -1,0 +1,117 @@
+======== SAMPLE 1 ========
+ lx_tree
+  rld : elt
+  rr : t elt
+  rh : int
+  GT : lh > rh + 2
+  y : X.t
+  H1 : lt_tree x (Node ll lx ld lr lh)
+  H2 : gt_tree x (Node rl rx rd rr rh)
+  H7 : Ok rl
+  H8 : Ok rr
+  H9 : lt_tree rx rl
+  H10 : lt_tree rx rr
+  H11 : gt_tree rx rr
+  ============================
+   (X.eq y rx \/ (X.eq y x \/ In y (Node rl rx rd rr rh) \/ In y rr)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  GT : lh > rh + 2
+  y : X.t
+  H1 : lt_tree x (Node ll lx ld lr lh)
+  H2 : gt_tree x (Node rl rx rd rr rh)
+  H7 : Ok rl
+  H8 : Ok rr
+  H9 : lt_tree rx rl
+  H10 : lt_tree rx rr
+  H11 : gt_tree rx rr
+  ============================
+   (X.eq y rx \/ (X.eq y x \/ In y (Node rl rx rd rr rh) \/ In y rr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  GT : lh > rh + 2
+  y : X.t
+  H1 : lt_tree x (Node ll lx ld lr lh)
+  H2 : gt_tree x (Node rl rx rd rr rh)
+  H7 : Ok rl
+  H8 : Ok rr
+  H9 : lt_tree rx rl
+  H10 : lt_tree rx rr
+  H11 : gt_tree rx rr
+  ============================
+   (X.eq y rx \/ (X.eq y x \/ In y (Node rl rx rd rr rh) \/ In y rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : int
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  rh : int
+  GT : lh > rh + 2
+  y : X.t
+  H1 : lt_tree x (Node ll lx ld lr lh)
+  H2 : gt_tree x (Node rl rx rd rr rh)
+  H7 : Ok rl
+  H8 : Ok rr
+  H9 : lt_tree rx rl
+  H10

@@ -1,0 +1,110 @@
+======== SAMPLE 1 ========
+ : (X.t * B) -> (X.eq x0 x' \/ In x0 l) \/ In x0 l'
+  H : X.eq x x' \/ In x0 l'
+  ============================
+   ((X.eq x x' \/ In x0 l \/ In x0 l' ->
+    (X.eq x x' \/ In x0 l \/ In x0 l')) \/ False)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  B : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> B
+  Comp : Proper (E.eq ==> eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  i : A
+  H : Equal m1 m2
+  H0 : NoDupA eqk (rev (elements m1))
+  H1 : NoDupA eqk (rev (elements m2))
+  a : key
+  b : elt
+  y : (X.t * b = y)%type
+  X0 : A -> A
+  ============================
+   ((X.eq x x' \/ In x0 l \/ In x0 l' ->
+    (X.eq x x' \/ In x0 l \/ In x0 l')) \/ False)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  B : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> B
+  Comp : Proper (E.eq ==> eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  i : A
+  H : Equal m1 m2
+  H0 : NoDupA eqk (rev (elements m1))
+  H1 : NoDupA eqk (rev (elements m2))
+  a : key
+  b : elt
+  y : (X.t * b = y)%type
+  X0 : A -> A
+  ============================
+   ((X.eq x x' \/ In x0 l \/ In x0 l' ->
+    (X.eq x x' \/ In x0 l \/ In x0 l')) \/ False)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  B : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> B
+  Comp : Proper (E.eq ==> eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  i : A
+  H : Equal m1 m2
+  H0 : NoDupA eqk (rev (elements m1))
+  H1 : NoDupA eqk (rev (elements m2))
+  a : key
+  b : elt
+  y : (X.t * b = y)%type
+  X0 : A -> A
+  ============================
+   ((X.eq x x' \/ In x0 l \/ In x0 l' ->
+    (X.eq x x' \/ In x0 l \/ In x0 l')) \/ False)
+
+
+Debug: Going to execute:
+assert X2; [ exact (id0 id1) | clear id0 ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  B : Type
+  eqA : A -> A -> Prop
+  st : Equivalence

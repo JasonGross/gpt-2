@@ -1,0 +1,94 @@
+======== SAMPLE 1 ========
+ bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                    eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+              unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+               deduce t t' = Some u ->
+               forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  f : cnf
+  TF : is_cnf_tt f = false
+  H : True
+  ============================
+   True
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                   eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+              unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+               deduce t t' = Some u ->
+               forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  f : cnf
+  TF : is_cnf_tt f = false
+  H : True
+  ============================
+   True
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                   eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+              unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+               deduce t t' = Some u ->
+               forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  f : cnf
+  TF : is_cnf_tt f = false
+  H : True
+  ============================
+   True
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  An

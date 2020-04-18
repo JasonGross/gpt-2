@@ -1,0 +1,153 @@
+======== SAMPLE 1 ========
+ t
+  Ht : notred t
+  H : InT x lr -> InT x t
+  H2 : InT x rl -> InT x t
+  H1 : X.eq x lx
+  ============================
+   (InT x t)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t : tree
+  Ht : notred t
+  H : InT x lr -> InT x t
+  H2 : InT x rl -> InT x t
+  H1 : X.eq x lx
+  ============================
+   (InT x t)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t : tree
+  Ht : notred t
+  H : InT x lr -> InT x t
+  H2 : InT x rl -> InT x t
+  H1 : X.eq x lx
+  ============================
+   (InT x t)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t : tree
+  Ht : notred t
+  H : InT x lr -> InT x t
+  H2 : InT x rl -> InT x t
+  H1 : X.eq x lx
+  ============================
+   (InT x t)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t : tree
+  Ht : notred t
+  H : InT x lr -> InT x t
+  H2 : InT x rl -> InT x t
+  H1 : X.eq x lx
+  ============================
+   (InT x t)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; split
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t : tree
+  Ht : notred t
+  H : InT x lr -> InT x t
+  H2 : InT x rl -> InT x t
+  H1 : X.eq x lx
+  ============================
+   (InT x t)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t : tree
+  Ht : notred t
+  H : InT x lr -> InT x t
+  H2 : InT x rl -> InT x t
+  H1 : X.eq x lx
+  ============================
+   (InT x t)
+
+
+Debug

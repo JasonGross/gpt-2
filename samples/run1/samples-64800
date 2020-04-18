@@ -1,0 +1,95 @@
+======== SAMPLE 1 ========
+
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t : tree
+  Ht : notred t
+  H0 : InT x t -> InT x lr \/ InT x rl
+  IHl : forall (x : elt) (r : tree),
+         Ok lr -> InT x t -> InT x lr \/ InT x rl
+  IHr : forall (x : elt) (r : tree),
+         Ok r -> InT x t -> InT x lr \/ InT x rl
+  x : elt
+  rr : tree
+  H : InT x rl -> InT x t
+  H1 : InT x t -> exists_carrier ltac:(fun _ : t => idtac) x l
+  H2 : InT x rl -> InT x t
+  H3 : InT x ll
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x t \/ X.eq x rx \/ InT x rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t : tree
+  Ht : notred t
+  H0 : InT x t -> InT x lr \/ InT x rl
+  IHl : forall (x : elt) (r : tree),
+        Ok lr -> InT x t -> InT x lr \/ InT x rl
+  IHr : forall (x : elt) (r : tree),
+        Ok r -> InT x t -> InT x lr \/ InT x rl
+  x : elt
+  rr : tree
+  H : InT x rl -> InT x t
+  H1 : InT x t -> exists_carrier ltac:(fun _ : t => idtac
+         Ok lr -> InT x t -> InT x lr \/ InT x rl
+  H2 : InT x rl -> InT x t
+  H3 : InT x ll
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x t \/ X.eq x rx \/ InT x rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t : tree
+  Ht : notred t
+  H0 : InT x t -> InT x lr \/ InT x rl
+  IHl : forall (x : elt) (r : tree),
+        Ok lr -> InT x t -> InT x lr \/ InT x rl
+  IHr : forall (x : elt) (r : tree),
+        Ok r -> InT x t -> InT x lr \/ InT x rl
+  x : elt
+  rr : tree
+  H : InT x rl -> InT x t
+  H1 : InT x t -> exists_carrier ltac:(fun _ : t => idtac
+         Ok lr -> InT x t -> InT x lr \/

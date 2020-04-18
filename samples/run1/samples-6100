@@ -1,0 +1,149 @@
+======== SAMPLE 1 ========
+ r2
+  wb : b'
+  Heqd : b' wb
+  r2 : wb
+  r0 : b'
+  H : b' = lr
+  ============================
+   (x = r2)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : b' -> b'
+  H5 : b' = lr
+  H6 : e' \/ lr
+  H7 : c'
+  H8 : e' \/ lr
+  H1 : g' = rl
+  H10 : lr
+  H11 : e' \/ lr
+  H12 : e' \/ lr
+  H13 : c'
+  H14 : c'
+  H15 : c'
+  H16 : e'
+  ============================
+   (x = r2)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : b' -> b'
+  H5 : b' = lr
+  H6 : e' \/ lr
+  H7 : c'
+  H8 : e' \/ lr
+  H1 : g' = rl
+  H10 : lr
+  H11 : e' \/ lr
+  H12 : e' \/ lr
+  H13 : c'
+  H14 : c'
+  H15 : c'
+  H16 : e'
+  ============================
+   (x = r2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : b' -> b'
+  H5 : b' = lr
+  H6 : e' \/ lr
+  H7 : c'
+  H8 : e' \/ lr
+  H1 : g' = rl
+  H10 : lr
+  H11 : e' \/ lr
+  H12 : e' \/ lr
+  H13 : c'
+  H14 : c'
+  H15 : c'
+  H16 : e'
+  ============================
+   (x = r2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : b' -> b'
+  H5 : b' = lr
+  H6 : e' \/ lr
+  H7 : c'
+  H8 : e' \/ lr
+  H1 : g' = rl
+  H10 : lr
+  H11 : e' \/ lr
+  H12 : e' \/ lr
+  H3 : g' = rl
+  H10 : lr
+  H12 : e' \/ lr
+  H

@@ -1,0 +1,149 @@
+======== SAMPLE 1 ========
+t
+  z : elt
+  H : In x m -> False
+  H' : NoDupA m
+  H0 : InA a l
+  H2 : NoDupA a l
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : In x m -> False
+  H' : NoDupA m
+  H0 : InA a l
+  H2 : NoDupA a l
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : In x m -> False
+  H' : NoDupA m
+  H0 : InA a l
+  H2 : NoDupA a l
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : In x m -> False
+  H' : NoDupA m
+  H0 : InA a l
+  H2 : NoDupA a l
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : In x m -> False
+  H' : NoDupA m
+  H0 : InA a l
+  H2 : NoDupA a l
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : In x m -> False
+  H' : NoDupA m
+  H0 : InA a l
+  H2 : NoDupA a l
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : In x m -> False
+  H'

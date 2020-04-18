@@ -1,0 +1,55 @@
+======== SAMPLE 1 ========
+ * 10 ^ usize d :: nil)
+                      :: 1 # p :: proj1_sig a (Pos.to_nat p :: proj1_sig b) :: nil)
+                       npe
+  res := Ring_polynom.PX
+             (Ring_polynom.Pinj 1
+                (Ring_polynom.PX
+                  (Ring_polynom.Pinj 3
+                     (Ring_polynom.PX
+                         (Ring_polynom.Pinj 1
+                            (Ring_polynom.PX 
+                               (Ring_polynom.Pinj 1
+                                  (Ring_polynom.PX 
+                                    (Ring_polynom.Pc 1) 1
+                                     (Ring_polynom.Pc 0))) 1 
+                          (Ring_polynom.Pc 0))) 1 (Ring_polynom.Pc 0))) 1
+           (Ring_polynom.Pc 0) : Ring_polynom.Pol Q
+  res_eq : Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+             (triv_div 0 1 Qeq_bool) ring_subst_niter list_hyp_norm
+             (Ring_polynom.PEadd
+                (Ring_polynom.PEmul (Ring_polynom.PEc 2)
+                   (Ring_polynom.PEadd
+                      (Ring_polynom.PEmul (Ring_polynom.PEc 1)
+                         (Ring_polynom.PEX Q 1)))
+                 (Ring_polynom.PEc 0)) = res
+  thm : (x + y) * z == x * z + y * z
+  ============================
+   (x * z * (y * z) = (x - y) * z)
+
+
+Debug:
+Going to execute:
+let Spec := eval unfold S, ZifyClasses.USpec in ZifyClasses.USpec in
+repeat
+ match goal with
+ | H:context [ Op ?X ] |- _ => Zify.zify_unop Op Spec X
+ | |- context [ Op ?X ] => Zify.zify_unop Op Spec X
+ end
+
+
+TcDebug (3) > 
+Debug: Evaluated term: ZifyClasses.USpec
+
+Debug: Evaluated term: Z.add_spec
+
+Goal:
+  
+  x : Z
+  y : Z
+  z : Z
+  H : Z.abs x <= z
+  H0 : Z.max x y = z
+  H1 : Z.max x y = z
+  ============================
+   (x * z

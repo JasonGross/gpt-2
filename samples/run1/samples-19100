@@ -1,0 +1,69 @@
+======== SAMPLE 1 ========
+clause (env: Env) acc
+  acc : list clause
+  c : clause
+  t : list clause
+  H : make_conj (eval_clause env) c ->
+       make_conj (eval_clause env) nil ->
+       make_conj (eval_clause env)
+  H0 : eval_clause env t
+  H1 : True
+  H4 : make_conj (eval_clause env) acc
+  H2 : make_conj (eval_clause env) c
+  H3 : eval_clause env t
+  H4 : make_conj (eval_clause env) nil
+  ============================
+   ((eval_clause env t \/ make_conj (eval_clause env) f) /\
+    make_conj (eval_clause env) nil ->
+    make_conj (eval_clause env) f) /\
+    make_conj (eval_clause env) nil ->
+    make_conj (eval_clause env) f) /\
+    make_conj (eval_clause env) nil ->
+    make_conj (eval_clause env) nil
+  H5 : make_conj (eval_clause env) nil
+  H4 : False
+  H7 : eval_clause env t
+  H0 : eval_clause env a
+  H6 : eval_clause env c
+  H5 : make_conj (eval_clause env) f
+  H : eval_clause env t /\ make_conj (eval_clause env) f
+  H4 : False
+  ============================
+   ((eval_clause env t \/ make_conj (eval_clause env) f) /\
+    make_conj (eval_clause env) f) /\
+    make_conj (eval_clause env) nil ->
+    make_conj (eval_clause env) f) /\
+    make_conj (eval_clause env) nil ->
+    make_conj (eval_clause env) f) /\
+    make_conj (eval_clause env) nil ->
+    make_conj (eval_clause env) f) /\
+    make_conj (eval_clause env) nil ->
+    make_conj (eval_clause env) f
+  H3 : eval_clause env t
+  H4 : False
+  H7 : eval_clause env t /\ make_conj (eval_clause env) f
+  H1 : True
+  H4 : make_conj (eval_clause env) acc
+  H2 : make_conj (eval_clause env) c
+  H3 : eval_clause env t
+  H4 : make_conj (eval_clause env) nil
+  ============================
+   ((eval_clause env t \/ make_conj (eval_clause env) f) /\
+    make_conj (eval_clause env) f) /\
+    make_conj (eval_clause env) nil ->
+    make_conj (eval_clause env) f) /\
+    make_conj (eval_clause env) nil ->
+    make_conj ( eval_clause env) nil
+  H5 : make_conj (eval_clause env) nil
+  H4 : False
+  H7 : eval_clause env t /\ make_conj (eval_clause env) f
+  H1 : True
+  H4 : make_conj (eval_clause env) acc
+  H2 : make_conj (eval_clause env) c
+  H3 : eval_clause env t
+  H4 : make_conj (eval_clause env) nil
+  ============================
+   ((eval_clause env t \/ make_conj (eval_clause env) f) /\
+    make_conj (eval_clause env) f) /\
+    make_conj (eval_clause env) nil ->
+    make_conj (eval_clause env) f) /

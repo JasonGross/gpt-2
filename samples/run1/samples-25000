@@ -1,0 +1,92 @@
+======== SAMPLE 1 ========
+list_hyp H; compute H H1; rewrite H in H; compute H H2; compute H H
+  H5 : true = true
+  H12 : Hfalse = true
+  H1 : H0 <= Z.pos H1
+  H6 : Z.pos H1 > Z.pos H2
+  H2 : Z.pos H2 <= Z.pos H1
+  H3 : Z.pos H2 <= Z.pos H2
+  H4 : H1 ==> Zeq_bool
+  H5 : true = true
+  H12 : Hfalse = true
+  H1 : Failed to progress.
+       H13 : Hfalse = true
+  ============================
+   (true = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  H : int
+  H' : 8%int
+  H'1 : 18%int
+  H'2 : 16%int
+  H'3 : 10%int
+  H'4 : 9%int
+  H'5 : 5%int
+  H'6 : 10%int
+  H0 : true = true -> False
+  H1 : In H1 s2
+  H2 : In H0 s2
+  H3 : In H3 s2
+  H5 : true = true
+  H12 : Hfalse = true
+  H1 : Failed to progress.
+        H13 : Hfalse = true
+       | Z.pos H1:=Z.succ
+        | Z.pos H2:=Z.succ
+        | Z.pos H3:=Z.succ
+        | Z.pos H4:=Z.pos H5:=Z.succ
+        | Z.pos H6:=Z.pos H7:=Z.succ
+        | Z.pos H8:=Z.pos H9:=Z.succ
+        | Z.pos H10:=Z.pos H11:=Z.pos H12 :=true] =
+       true
+  H13 : In H1 s2
+  H3 : In H3 s2
+  H5 : true = true
+  H12 : Hfalse = true
+  H1 : Failed to progress.
+        H13 : In H3 s2
+  H3 : In H3 s2
+  H5 : true = true
+  H12 : Hfalse = true
+  H1 : Failed to progress.
+        H13 : In H3 s2
+  H3 : In H3 s2
+  H5 : true = true
+  H12 : Hfalse = true
+  H1 : Failed to progress.
+        H13 : In H4 s2
+  H4 : In H5 s2
+  H6 : true = true
+  H0 : true = true
+  H7 : Z.pos H0:=Z.succ
+  H8 : Z.pos H0 :=Z.succ
+  H9 :=Z.succ
+  H10 : Z.pos H10 :=Z.pos H11 :=Z.pos H12 :=true
+  H8 :=Z.pos H0 :=Z.pos H12 :=true
+  H11 : Z.pos H11 : H12 :=True
+  H : Z.pos H1 : = Z.succ
+  H11 : = Z.succ
+  H12 : In H0 s2
+  H11 : Z.pos H12 :=Z.pos H13 :=In H10 s2
+  H0 : false = true
+  H12 : Z.pos H12 :=Z.succ
+  H12 : In H0 s2
+  H11 : Z.pos H13 :=In H10 s2
+  H0 : false = true
+  H13 : In H10 s2
+  H11 : In H13 s2
+  H12 : In H0 s2
+  H0 : false = true
+  ============================
+   (true = true)
+
+
+Debug: Going to execute:
+<Coq

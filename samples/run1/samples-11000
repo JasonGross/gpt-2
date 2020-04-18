@@ -1,0 +1,139 @@
+======== SAMPLE 1 ========
+=== 
+  x : elt
+  l : list elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : X.eq y0 x
+  H5 : X.eq y0 y
+  ============================
+   (X.eq y0 x \/ In y0 l -> X.eq y0 x \/ In y0 r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : elt
+  l : list elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : X.eq y0 x
+  H5 : X.eq y0 y
+  ============================
+   (X.eq y0 x \/ In y0 l -> X.eq y0 x \/ In y0 r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : elt
+  l : list elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : X.eq y0 x
+  H5 : X.eq y0 y
+  ============================
+   (X.eq y0 x \/ In y0 l -> X.eq y0 x \/ In y0 r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : elt
+  l : list elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : X.eq y0 x
+  H5 : X.eq y0 y
+  ============================
+   (X.eq y0 x \/ In y0 l -> X.eq y0 x \/ In y0 r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : elt
+  l : list elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt y x
+  y0 : key
+  H0 : bst l
+  H1 : bst r
+  H3 : lt_tree y l
+  H4 : gt_tree y r
+  H : X.eq y0 x
+  H5 : X.eq y0 y
+  ============================
+   (X.eq y0 x \/ In y0 l -> X.eq y0 x \/ In y0 r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : elt
+ 

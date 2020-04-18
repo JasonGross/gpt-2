@@ -1,0 +1,161 @@
+======== SAMPLE 1 ========
+1
+
+
+TcDebug (0) > 
+Goal:
+    s1  H : false = true
+  ============================
+   (s1 = false)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (0) > 
+Goal:
+  
+  s1 : t
+  s1' : t
+  s2 : t
+  H : false = true
+  ============================
+   (equivlist s1 s2)
+
+
+Debug: Going to execute:
+intro
+
+
+TcDebug (0) > 
+Goal:
+    s1  H : false = true
+  ============================
+   (equivlist s1 s2)
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@0>
+
+
+TcDebug (0) > 
+Goal:
+  
+  s1 : t
+  s1' : t
+  s2 : t
+  H : false = true
+  H0 : false = true
+  ============================
+   (s1 = false)
+
+
+Debug: Going to execute:
+clear id
+
+
+TcDebug (0) > 
+Goal:
+  
+  s1 : t
+  s1' : t
+  s2 : t
+  H : false = true
+  H0 : false = true
+  ============================
+   (s1 = false)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (0) > 
+Goal:
+    s1  s2  H : false = true  H0 : false = true
+  ============================
+   (s1 = false)
+
+
+Debug: Going to execute:
+subst
+
+
+TcDebug (0) > 
+Goal:
+    s1  s2  H : false = true  H0 : false = true
+  ============================
+   (s1 = false)
+
+
+Debug: Going to execute:
+<ltac_plugin::subst@1>
+
+
+TcDebug (0) > 
+Goal:
+    s1 : t  s1' : t  s2 : t  H : false = true  H0 : false = true
+  ============================
+   (s1 = false)
+
+
+Debug: Going to execute:
+<ltac_plugin::subst@1>
+
+
+TcDebug (0) > 
+Goal:
+    s1 : t  s1' : t  s2 : t  H : false = true <-> true = false
+  ============================
+   (s1 = false)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+    s1 : t  s1' : t  s2 : t  H : false = true <-> true = false
+  ============================
+   (s1 = false)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+    s1 : t  s1' : t  s2 : t  H : false = true <-> true = false
+  ============================
+   (s1 = false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+    s1 : t  s1' : t  s2 : t  H : false = true <-> true = false
+  ============================
+   (s1 = false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+    s1 : t  s1' : t  s2 : t  H : false = true <-> true = false
+  ============================
+   (s1 = false)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_con

@@ -1,0 +1,129 @@
+======== SAMPLE 1 ========
+: X.eq y lrx
+  H7 : gt_tree x (Node rl rx rr)
+  H8 : gt_tree x rr
+  H : MX.TO.lt k x
+  H10 : MX.TO.lt x rx
+  e : MX.TO.eq y lx
+  ============================
+   (find y rr = find y (Node ll lx ld (Node rl rx rr)) /\
+    find y rr = find y rr)
+
+
+Debug:
+Going to execute:
+match goal with
+| H':?Y
+  |- _ => match H with
+         | H' => fail 2
+         | _ => unify X Y; clear H' || clear H
+         end
+end
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rlx rld rlr _x3) rx rd rr _x1) + 2
+  _x2 : height rr < height (Node rll rlx rld rlr _x3)
+  y : key
+  H0 : In y rr
+  ============================
+   (X.eq y x)
+
+
+Debug:
+Going to execute:
+match H with
+| H' => fail 2
+| _ => unify X Y; clear H' || clear H
+end
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rl x d rr _x1) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rl x d rr _x1) rll _x3)
+  y : key
+  H0 : In y rr
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+H
+
+
+TcDebug (4) > 
+Debug: Level 4: H
+ has value 
+X.eq
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node rll rl x d rr _x1) rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node (Node rll rl x d rr _x1) rll _x3)
+  y : key
+  H0 : In y rr
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+unify X Y; clear H' || clear H
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _

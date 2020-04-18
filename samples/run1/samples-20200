@@ -1,0 +1,136 @@
+======== SAMPLE 1 ========
+  c -> False
+  H0 : In x s' -> f x = true
+  H4 : f x = true -> In x (diff s s')
+  H1 : In x (diff s s')
+  ============================
+   (In x s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  f : elt -> bool
+  H : compat_bool E.eq f
+  H2 : In x (diff s s')
+  H3 : true = true
+  H0 : In x s' -> f x = true
+  H5 : true = true -> In x (diff s s')
+  H : f x = true
+  H6 : true = true -> In x s'
+  H7 : In x s \/ In x s' -> In x (diff s s')
+  ============================
+   (In x s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  f : elt -> bool
+  H : compat_bool E.eq f
+  H2 : In x (diff s s')
+  H3 : true = true
+  H0 : In x s' -> f x = true
+  H5 : true = true -> In x (diff s s')
+  H : f x = true
+  H6 : true = true -> In x s'
+  H7 : In x s \/ In x s' -> In x (diff s s')
+  ============================
+   (In x s)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  f : elt -> bool
+  H : compat_bool E.eq f
+  H2 : In x (diff s s')
+  H3 : true = true
+  H0 : In x s' -> f x = true
+  H5 : true = true -> In x (diff s s')
+  H : f x = true
+  H6 : true = true -> In x s'
+  H7 : In x s \/ In x s' -> In x (diff s s')
+  ============================
+   (In x s)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  f : elt -> bool
+  H : compat_bool E.eq f
+  H2 : In x (diff s s')
+  H3 : true = true
+  H0 : In x s' -> f x = true
+  H5 : true = true -> In x (diff s s')
+  H : f x = true
+  H6 : true = true -> In x s'
+  H7 : In x s \/ In x s' -> In x (diff s s')
+  ============================
+   (In x s)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  f : elt -> bool
+  H : compat_bool E.eq f
+  H2 : In x (diff s s')
+  H3 : true = true
+ 

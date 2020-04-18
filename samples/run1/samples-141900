@@ -1,0 +1,157 @@
+======== SAMPLE 1 ========
+ x : tree
+  y : X.t
+  b : tree
+  H5 : InT x lr
+  H2 : InT x b
+  H4 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (X.eq x lx)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  b : tree
+  H5 : InT x lr
+  H2 : InT x b
+  H4 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (X.eq x lx)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  b : tree
+  H5 : InT x lr
+  H2 : InT x b
+  H4 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (X.eq x lx)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  b : tree
+  H5 : InT x lr
+  H2 : InT x b
+  H4 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (X.eq x lx)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  b : tree
+  H5 : InT x lr
+  H2 : InT x b
+  H4 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (X.eq x lx)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  b : tree
+  H5 : InT x lr
+  H2 : InT x b
+  H4 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (X.eq x lx)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.t
+  b : tree
+  H5 : InT x lr
+  H2 : InT x b
+  H4 : InT x rl
+  H3 : InT x a
+  H : InT x rl
+  ============================
+   (X.eq x lx)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (4) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : X.

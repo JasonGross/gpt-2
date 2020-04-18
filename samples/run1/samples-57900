@@ -1,0 +1,141 @@
+======== SAMPLE 1 ========
+)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  y0 : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt y0 x
+  e1 : X.compare x y0 = GT _x
+  H2 : In y r -> In y (add x e r)
+  H3 : X.eq y x
+  H0 : In y (add x e r)
+  H : X.eq y x
+  ============================
+   (In y (Node l y0 d' r h))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  y0 : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt y0 x
+  e1 : X.compare x y0 = GT _x
+  H2 : In y r -> In y (add x e r)
+  H3 : X.eq y x
+  H0 : In y (add x e r)
+  H : X.eq y x
+  ============================
+   (In y (Node l y0 d' r h))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  y0 : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt y0 x
+  e1 : X.compare x y0 = GT _x
+  H2 : In y r -> In y (add x e r)
+  H3 : X.eq y x
+  H0 : In y (add x e r)
+  H : X.eq y x
+  ============================
+   (In y (Node l y0 d' r h))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  y0 : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt y0 x
+  e1 : X.compare x y0 = GT _x
+  H2 : In y r -> In y (add x e r)
+  H3 : X.eq y x
+  H0 : In y (add x e r)
+  H : X.eq y x
+  ============================
+   (In y (Node l y0 d' r h))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  e : elt
+  l : t elt
+  y0 : key
+  d' : elt
+  r : t elt
+  h : int
+  _x : X.lt y0 x
+  e1 : X.compare x y0 = GT _x
+  H2 : In y r -> In y (add x e r)
+  H3 : X.eq y x
+  H0 : In y (add x e r)
+  H : X.eq y x
+  ============================
+   (In y (Node l y0 d' r h))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto

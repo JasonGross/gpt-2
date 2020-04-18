@@ -1,0 +1,136 @@
+======== SAMPLE 1 ========
+ epp : gt_tree y s
+  H0 : In y s
+  ============================
+   (y = y -> false = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x3 : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  p : elt
+  s1' : Sorted X.lt s2'
+  H1 : InT x (Node s1 r1 x1 r2)
+  H2 : InT x s2'
+  H3 : InT x r2
+  H : InT x (Node s1 r1 x1 r2)
+  ============================
+   (y = y -> false = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x3 : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  p : elt
+  s1' : Sorted X.lt s2'
+  H1 : InT x (Node s1 r1 x1 r2)
+  H2 : InT x s2'
+  H3 : InT x r2
+  H : InT x (Node s1 r1 x1 r2)
+  ============================
+   (y = y -> false = true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  _x3 : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  p : elt
+  s1' : Sorted X.lt s2'
+  H1 : InT x (Node s1 r1 x1 r2)
+  H2 : InT x s2'
+  H3 : InT x r2
+  H : InT x (Node s1 r1 x1 r2)
+  ============================
+   (y = y -> false = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  _x3 : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  p : elt
+  s1' : Sorted X.lt s2'
+  H1 : InT x (Node s1 r1 x1 r2)
+  H2 : InT x s2'
+  H3 : InT x r2
+  H : InT x (Node s1 r1 x1 r2)
+  ============================
+   (y = y -> false = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x3 : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  p : elt
+  s1' : Sorted X.lt s2'
+  H1 : InT x (Node s1 r1 x1 r2)
+  H2 : InT x s2'
+  H3 : InT x r2
+  H : InT x (Node s1 r1 x1 r2)
+  ============================
+   (y = y -> false = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x3 : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  p : elt
+

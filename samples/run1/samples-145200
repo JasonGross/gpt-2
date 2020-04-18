@@ -1,0 +1,62 @@
+======== SAMPLE 1 ========
+x \/ InA X.eq x l2 \/ InA X.eq x acc
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall (l2 : list X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (diff_list l1 l2 acc) <->
+        InA X.eq x l1 /\ ~ InA X.eq x l2 \/ InA X.eq x acc
+  x2 : X.t
+  l2 : list X.t
+  IH2 : forall acc : list elt,
+        Sorted X.lt (rev (x1 :: l1)) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (diff_list (x1 :: l1) l2 acc) <->
+        InA X.eq x (x1 :: l1) /\ ~ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  U : Sorted X.lt (rev l1 ++ x1 :: nil)
+  V : Sorted X.lt (rev l2 ++ x2 :: nil)
+  U1 : Sorted X.lt (rev l1)
+  U2 : Sorted X.lt (x1 :: nil)
+  U3 : forall x2 x3 : X.t,
+       InA X.eq x2 (rev l1) -> InA X.eq x3 (x1 :: nil) -> X.lt x2 x3
+  V1 : Sorted X.lt (rev l2)
+  V2 : Sorted X.lt (x2 :: nil)
+  V3 : forall x1 x3 : X.t,
+       InA X.eq x1 (rev l2) -> InA X.eq x3 (x2 :: nil) -> X.lt x1 x3
+  C : X.lt x2 x1
+  H0 : InA X.eq x acc
+  ============================
+   (InA X.eq x l2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall (l2 : list X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (diff_list l1 l2 acc) <->
+        InA X.eq x l1 /\ ~ InA X.eq x l2 \/ InA X.eq x acc
+  x2 : X.t
+  l2 : list X.t
+  IH2 : forall acc : list elt,
+        Sorted X.lt (rev (x1 :: l1)) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (diff_list (x1 :: l1) l2 acc) <->
+        InA X.eq x (x1 :: l1) /\ ~ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  U : Sorted X.lt (rev l1 ++ x1 :: nil)
+  V : Sorted X.lt (rev l2 ++ x2 :: nil)
+  U1 : Sorted X.lt (rev l1)
+  U2 : Sorted X.lt (x1 :: nil)
+  U3 : forall x2 x3 : X.t,
+       InA X.eq x2 (rev l1) -> InA X

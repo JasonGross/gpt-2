@@ -1,0 +1,72 @@
+======== SAMPLE 1 ========
+ deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : clause
+  a : clause
+  f : list clause
+  IHf : forall acc : list clause,
+        make_conj (eval_clause env)
+          (fold_left
+             (fun (acc0 : list clause) (e : clause) =>
+              match or_clause t e with
+              | Some cl => cl :: acc0
+              | None => acc0
+              end) f acc) <->
+        (eval_clause env t \/ make_conj (eval_clause env) f) /\
+        make_conj (eval_clause env) acc
+  acc : list clause
+  c : clause
+  H4 : make_conj (eval_clause env) acc
+  H1 : eval_clause env t
+  H3 : eval_clause env c
+  H0 : eval_clause env t
+  H0a : eval_clause env c
+  H2 : eval_clause env a
+  ============================
+   ((eval_clause env t \/ make_conj (eval_clause env) f) /\
+    eval_clause env c /\ make_conj (eval_clause env) acc)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                     eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+               unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+                deduce t t' = Some u ->
+                forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  t : clause
+  a : clause
+  f : list clause
+  IHf : forall acc : list clause,
+        make_conj (eval_clause env)
+          (fold_left
+             (fun (acc0 : list clause) (e : clause) =>
+              match or_clause t e with
+              | Some cl => cl :: acc0
+              | None => acc0
+              end) f acc) <->
+        (eval_clause env t \/ make_conj (eval_clause env) f) /\
+        make_conj (eval_clause env) acc
+  acc : list clause
+  c : clause
+  H4 : make_conj (eval_clause env) acc
+  H1 : eval_

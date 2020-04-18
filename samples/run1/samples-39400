@@ -1,0 +1,99 @@
+======== SAMPLE 1 ========
+ k : forall d : R, ~ d d = gen_eq ==> R ==> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  n : R
+  m : R
+  P2j : Pol * T
+  nN2 : Pol * (RnRepo (N2j)) - m <-> P2j
+  mR : Pol * T
+  mU : N2j R
+  mR0 : Pol
+  p : positive
+  IHP1 : forall n : R, P2j < N2j R
+  IHP2 : forall n : R, P2j + nBinj
+   l : list R
+  p1 : positive
+  ============================
+   (forall n1~0 : R, P2j + nBinj + P2j <-> P2j + (P2j + P2j) + (P2j) ==
+    P2j -> P2j + (N2j + P2j))
+
+
+Debug:
+Going to execute:
+match goal with
+| |- context [ match ?x with
+                -          | _ => clear_inversion x with ey | _ => rewrite DREAM_trivial; apply (SOR_pow l l₁) at 1
+                      (SOR_pow l l₂A) l₂ in
+                      (FEX C p0)
+                         (with_pol, env)
+        end
+end
+
+
+TcDebug (28) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  n : R
+  m : R
+  IHP1 : forall n : R, P2j < N2j R
+  IHP2 : forall n : R, P2j + nBinj
+  l : list R
+  p1 : positive
+  ============================
+   (forall n1~0 : R, P2j + nBinj + P2j <-> P2j + (P2j + P2j) + (P2j + P2j))
+
+
+Debug: Going to execute:
+clear_inversion x in *
+
+
+TcDebug (29) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  n : R
+  m : R
+  IHP1 : forall n : R, P2j < N2j R
+  IHP2 : forall n : R, P2j + nBinj
+  l : list R
+  p1 : positive
+  ============================
+   (forall n1~0 : R, P2j + nBinj + P2j <-> P2j + (P2j + P2j) + (P2j + P2j))
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (29) > 
+Debug: Level 28: evaluation returns
+<tactic closure>
+
+
+Goal:
+

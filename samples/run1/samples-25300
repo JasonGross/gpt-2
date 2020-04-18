@@ -1,0 +1,120 @@
+======== SAMPLE 1 ========
+     (Z.pos b * S (S n * s2)) = S (S n * s2)
+  e2 : Z.pos b * Z.pos s2 = s2 * a)
+  cadd : (option_map TO.eq (Little.le x e1)) -> (Z.pos (x + d) == (x + d) * Z.pos s2) * (Z.pos s2 * s1))
+  mapprotect : * (forall (x : X.t) (b : TO.t) (s : t),
+            b ->
+            (smerge (fun x : t => x) (if (x =? BrittB then x0)) else (smerge (fun x : t => y0 => y0)) s2)
+             b))
+  Leaf : (TO.eq b x1)
+  l : TO.lt a x
+  H2 : TO.lt a x
+  ============================
+   (Z.pos b * S (S n * s2))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+
+
+TcDebug (3) > 
+Goal:
+  
+  s1 : Color.t
+  s2 : t
+  s3 : t
+  s4 : t
+  x : X.t
+  H : In x s2 -> False
+  a : E.t
+  H5 : In x s3
+  H4 : In a s1 -> False
+  H7 : In a s1 -> False
+  H3 : In x s2
+  H0 : In x s3
+  H2 : False
+  ============================
+   (Z.pos b * S (S n * s2))
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  s1 : Color.t
+  s2 : t
+  s3 : t
+  s4 : t
+  x : X.t
+  H : In x s2 -> False
+  a : E.t
+  H5 : In x s3
+  H4 : In a s1 -> False
+  H7 : In a s1 -> False
+  H3 : In x s2
+  H0 : In x s3
+  H2 : False
+  ============================
+   (Z.pos b * S (S n * s2))
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Debug: Level 2: No matching clauses for match.
+
+Debug: Level 2: No matching clauses for match.
+
+Goal:
+  
+  s1 : Color.t
+  s2 : t
+  s3 : t
+  s4 : t
+  x : X.t
+  H : In x s2 -> False
+  a : E.t
+  H5 : In x s3
+  H4 : In a s1 -> False
+  H7 : In a s1 -> False
+  H3 : In x s2
+  H0 : In x s3
+  H2 : False
+  ============================
+   (Z.pos b * S (S n * s2))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s1 : Color.t
+  s2 : t
+  s3 : t
+  s4 : t
+  x : X.t
+  H : In x s2 -> False
+  a : E.t
+  H5 : In x s3
+  H4 : In a s1 -> False
+  H7 : In a s1 -> False
+  H3 : In x s2
+  H0 : In x s3
+  H2 : False
+  ============================
+   (Z.pos b * S (

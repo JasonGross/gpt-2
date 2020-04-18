@@ -1,0 +1,166 @@
+======== SAMPLE 1 ========
+ :: False
+  H : In x s
+  H3 : In x s'
+  H1 : X.eq x a
+  ============================
+   (X.eq x a \/ In x s)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s
+  H3 : In x s'
+  H1 : X.eq x a
+  ============================
+   (X.eq x a \/ In x s)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s
+  H3 : In x s'
+  H1 : X.eq x a
+  ============================
+   (X.eq x a \/ In x s)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s
+  H3 : In x s'
+  H1 : X.eq x a
+  ============================
+   (X.eq x a \/ In x s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s
+  H3 : In x s'
+  H1 : X.eq x a
+  ============================
+   (X.eq x a \/ In x s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s
+  H3 : In x s'
+  H1 : X.eq x a
+  ============================
+   (X.eq x a \/ In x s)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s
+  H3 : In x s'
+  H1 : X.eq x a
+  ============================
+   (X.eq x a \/ In x s)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s
+  H3 : In x s'
+  H1 : X.eq x a
+  ============================
+   (X.eq x a \/ In x s)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal

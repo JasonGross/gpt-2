@@ -1,0 +1,135 @@
+======== SAMPLE 1 ========
+is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+    p : positive
+  ============================
+   (1 * (pos p + (pos p + (pos p + (pos p)) -> 1 * (2 * abs p)) = 2 * abs p + 1 * (neg p + neg p))
+
+
+Debug:
+Going to execute:
+match isnatcst p with
+| true => fail 1
+| false => let v := Ss_to_add p 1 in
+           fold v; natprering
+end
+
+
+TcDebug (4) > 
+Goal:
+    p : positive
+  ============================
+   (1 * (pos p + (pos p + (pos p)) -> 1 * (2 * abs p)) = 2 * abs p + 1 * (neg p + neg p))
+
+
+Debug: Going to execute:
+isnatcst p
+
+
+TcDebug (5) > 
+Goal:
+    p : positive
+  ============================
+   (1 * (pos p + (pos p + (pos p)) -> 1 * (2 * abs p)) = 2 * abs p + 1 * (neg p + neg p))
+
+
+Debug:
+Going to execute:
+fun t => match t with
+         | 0 => true
+         | S ?P ?p => isnatcst p
+         | _ => false
+         end
+
+
+TcDebug (6) > 
+Goal:
+    p : positive
+  ============================
+   (1 * (pos p + (pos p + (pos p)) -> 1 * (2 * abs p)) = 2 * abs p + 1 * (neg p + neg p))
+
+
+Debug:
+Going to execute:
+match isnatcst p with
+| true => fail 1
+| false => let v := Ss_to_add p 1 in
+          fold v; natprering
+end
+
+
+TcDebug (6) > 
+Goal:
+    p : positive
+  ============================
+   (1 * (pos p + (pos p + (pos p)) -> 1 * (2 * abs p)) = 2 * abs p + 1 * (neg p + neg p))
+
+
+Debug: Going to execute:
+isnatcst p
+
+
+TcDebug (7) > 
+Goal:
+    p : positive
+  ============================
+   (1 * (pos p + (pos p + (pos p)) -> 1 * (2 * abs p)) = 2 * abs p + 1 * (neg p + neg p))
+
+
+Debug:
+Going to execute:
+fun t => match t with
+         | 0 => true
+         | S ?P ?p => isnatcst p
+         | _ => false
+         end
+
+
+TcDebug (8) > 
+Goal:
+    p : positive
+  ============================
+   (1 * (pos p + (pos p + (pos p)) -> 1 * (2 * abs p)) = 2 * abs p + 1 * (neg p + neg p))
+
+
+Debug:
+Going to execute:
+match t with
+| 0 => true
+| S ?P ?p => isnatcst p
+| _ => false
+end
+
+
+TcDebug (8) > 
+Goal:
+    p : positive
+  ============================
+   (1 * (pos p + (pos p + (pos p)) -> 1 * (2 * abs p)) = 2 * abs p + 1 * (neg p + neg p))
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (9) > 
+Debug: Level 9: t
+ has value 
+(2 * (2 * abs p) + 1)
+
+
+Goal:
+    p : positive
+  ============================
+   (1 * (pos p + (pos p + (pos p)) -> 1 * (2 * abs p)) = 2 * abs p + 1 * (neg p + neg p))
+
+
+Debug: Going to execute:
+isnatcst

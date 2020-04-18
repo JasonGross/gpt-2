@@ -1,0 +1,97 @@
+======== SAMPLE 1 ========
+  (InT y l1 \/ InT y s2 /\ X.lt y x1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H0 : (split x1 s2)#b = true
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  IHo1 : Ok (inter l1 (split x1 s2)#l)
+  IHi1 : forall y : elt,
+         InT y (inter l1 (split x1 s2)#l) <->
+         InT y l1 /\ InT y (split x1 s2)#l
+  IHo2 : Ok (inter r1 (split x1 s2)#r)
+  IHi2 : forall y : elt,
+         InT y (inter r1 (split x1 s2)#r) <->
+         InT y r1 /\ InT y (split x1 s2)#r
+  y : elt
+  H2 : InT y s2
+  H3 : InT y r1
+  ============================
+   (InT y l1 \/ InT y s2 /\ X.lt y x1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H0 : (split x1 s2)#b = true
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  IHo1 : Ok (inter l1 (split x1 s2)#l)
+  IHi1 : forall y : elt,
+         InT y (inter l1 (split x1 s2)#l) <->
+         InT y l1 /\ InT y (split x1 s2)#l
+  IHo2 : Ok (inter r1 (split x1 s2)#r)
+  IHi2 : forall y : elt,
+         InT y (inter r1 (split x1 s2)#r) <->
+         InT y r1 /\ InT y (split x1 s2)#r
+  y : elt
+  H2 : InT y s2
+  H3 : InT y r1
+  ============================
+   (InT y l1 \/ InT y s2 /\ X.lt y x1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  s2 : tree
+  B2 : Ok s2
+  H0 : (split x1 s2)#b = true
+  H4 : Ok l1
+  H5 : Ok r1
+  H6 : lt_tree x1 l1
+  H7 : gt_tree x1 r1
+  IHo1 : Ok (inter l1 (split x1 s2)#l)
+  IHi1 : forall y : elt,
+         InT y (inter l1 (split x1 s2)#l) <->
+         InT y l

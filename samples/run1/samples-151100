@@ -1,0 +1,126 @@
+======== SAMPLE 1 ========
+destruct b
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m1 : t elt
+  m2 : t elt
+  H : Disjoint m1 m2
+  H' : forall (k : key) (e : elt),
+       MapsTo k e m <-> MapsTo k e m1 \/ MapsTo k e m2
+  k : key
+  e : elt
+  H1 : MapsTo k e m2
+  ============================
+   (MapsTo k e m1 \/ MapsTo k e m2)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m1 : t elt
+  m2 : t elt
+  H : Disjoint m1 m2
+  H' : forall (k : key) (e : elt),
+       MapsTo k e m <-> MapsTo k e m1 \/ MapsTo k e m2
+  k : key
+  e : elt
+  H1 : MapsTo k e m2
+  ============================
+   (MapsTo k e m1 \/ MapsTo k e m2)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  m1 : t elt
+  m2 : t elt
+  H : Disjoint m1 m2
+  H' : forall (k : key) (e : elt),
+       MapsTo k e m <-> MapsTo k e m1 \/ MapsTo k e m2
+  k : key
+  e : elt
+  H1 : MapsTo k e m2
+  ============================
+   (MapsTo k e m1 \/ MapsTo k e m2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m1 : t elt
+  m2 : t elt
+  H : Disjoint m1 m2
+  H' : forall (k : key) (e : elt),
+       MapsTo k e m <-> MapsTo k e m1 \/ MapsTo k e m2
+  k : key
+  e : elt
+  H1 : MapsTo k e m2
+  ============================
+   (MapsTo k e m1 \/ MapsTo k e m2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m1 : t elt
+  m2 : t elt
+  H : Disjoint m1 m2
+  H' : forall (k : key) (e : elt),
+       MapsTo k e m <-> MapsTo k e m1 \/ MapsTo k e m2
+  k : key
+  e : elt
+  H1 : MapsTo k e m2
+  ============================
+   (MapsTo k e m1 \/ MapsTo k e m2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  m1 : t elt
+  m2 : t elt
+  H : Disjoint m1 m2
+  H' : forall (k : key) (e : elt),
+       MapsTo k e m <-> MapsTo k e m1 \/ MapsTo k e m2
+  k : key
+

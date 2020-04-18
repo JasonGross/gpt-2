@@ -1,0 +1,95 @@
+======== SAMPLE 1 ========
+ a s.to_nat s2'
+  s1 : t
+  s2' : t
+  s' : t
+  mapl : t, s1 :: t
+  mapr := t_map f m1 : t -> t -> bool
+  m1 : t
+  s2' : t
+  lim : bool
+  phi : CToZ C
+  limp : CToZ C
+  eps : bool
+  memb : CToZ C
+  IHp : forall (m : list (t * t)) (h : Sorted (BinOp (BinOp m)) :: p :: s),
+             pec x = true <= memb y m) (s1 :: m)
+  eps0 := morph : list (t * t)
+  IHp0 : forall (m : list (t * t)) (h : Sorted (BinOp (BinOp m)) :: p :: s),
+             pec x = true <->
+              pec y = true <->
+                pec z = true
+                     = pec x s1
+  eps1 : list (t * t)
+  EPS1 : forall (m1 : list (t * t))) (h : Sorted (BinOp (BinOp (BinOp m1)) :: p :: s)) (e : Mins m1 :: nil) (m2 :: list (t * t)))
+  phi1 : CToZ C
+  phi2 : CToZ C
+  lim : bool
+  phi3 : CToZ C
+  limp : CTOz C
+  hyp_list := nil : list (list (t * t)) * hyp_list
+  eps1 := morph : list (list t * t)
+  EPS1 : forall (m1 : list (t * t))) (h : Sorted (BinOp (BinOp (BinOp m1)))
+  phi2 := morph2 : list (list t * list)
+  phi := morph1 : list (list t *list)
+  H : morph1 * morph2 * morph3 = morph1 * morph2 * morph3
+   H0 : morph1 * morph2 * morph4 = morph1 * morph2 * morph4
+  H1 : morph1 * morph2 * morph5 = morph1 * morph2 * morph5
+  H3 : morph1 * morph2 * morph8 = morph1 * morph2 * morph8
+  ============================
+   (forall x in morph1:list (t * t) * (k :: nil),
+    morph1 * (1 :: f) = morph2 * (1 :: k))%list
+
+
+Debug: Going to execute:
+change_no_check for ltac:(?x <?y)
+
+
+TcDebug (4) > 
+Debug: Evaluated term: nil
+
+Goal:
+  
+  p : Z
+  p2 : t
+  p2' : t
+  ============================
+   (((max_conj :: max_hyp ::   H (max (p1 :: l1 :: k)))) =
+    (max_hyp ::   H (max (p2 :: l1 :: k))))%list)
+
+
+Debug: Going to execute:
+change_no_check for ltac:(?x < ?y)
+
+
+TcDebug (5) > 
+Debug: Evaluated term: nil
+
+Goal:
+  
+  p : Z
+  p2 : t
+  p2' : t
+  ============================
+   (((max_conj :: max_hyp ::   H (max (p1 :: l1 :: k)))) =
+    (max_hyp ::   H (max (p2 :: l1 :: k))))%list)
+
+
+Debug: Going to execute:
+change_no_check for t
+
+
+TcDebug (5) > 
+Debug: Evaluated term: t
+
+Debug: Evaluated term: nil
+
+Debug: Evaluated term: nil
+
+Goal:
+  
+  p : Z
+  p2 : t
+  p2' : t
+  ============================
+  

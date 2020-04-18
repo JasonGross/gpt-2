@@ -1,0 +1,116 @@
+======== SAMPLE 1 ========
+ (X.eq y x \/ ~ X.eq y rx \/ In y rl \/ X.eq y rx \/ In y rr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_unit_or_eq@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  _x0 : height (Node rl rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node rl rx rd rr _x1) + 2
+  _x2 : height rr >= height rl
+  y : key
+  H : In y (Node rl rx rd rr _x1)
+  ============================
+   (In y rl \/ X.eq y rx \/ In y rr)
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  _x0 : height (Node rl rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node rl rx rd rr _x1) + 2
+  _x2 : height rr >= height rl
+  y : key
+  H : In y (Node rl rx rd rr _x1)
+  ============================
+   (In y rl \/ X.eq y rx \/ In y rr)
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  _x0 : height (Node rl rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node rl rx rd rr _x1) + 2
+  _x2 : height rr >= height rl
+  y : key
+  H : In y (Node rl rx rd rr _x1)
+  ============================
+   (In y rl \/ X.eq y rx \/ In y rr)
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  _x0 : height (Node rl rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node rl rx rd rr _x1) + 2
+  _x2 : height rr >= height rl
+  y : key
+  H : In y (Node rl rx rd rr _x1)
+  ============================
+   (In y rl \/ X.eq y rx \/ In y rr)
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  _x0 : height (Node rl rx rd rr _x1) > height l + 2
+  _x : height l <= height (Node rl rx rd rr _x1) + 2
+  _x2 : height rr >= height rl
+  y : key
+  H : In y (Node rl rx rd rr _x1)
+  ============================
+   (In y rl \/ X.eq y rx \/ In y rr)
+
+
+Goal:
+  
+  elt

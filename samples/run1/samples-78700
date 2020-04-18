@@ -1,0 +1,114 @@
+======== SAMPLE 1 ========
+       match b with
+                | 0 => False
+                | Z.pos ?m => isnatcst m
+                | Z.mod ?m => isnformula m
+                 | Z.mod ?p => isnatcst p
+                 | _ => False
+                 end
+  ============================
+   False
+
+
+Debug: Going to execute:
+isZcst t
+
+
+TcDebug (8) > 
+Goal:
+  
+  a : Z
+  b : Z
+  c : Z
+  H : Zis_gcd a b c
+  H0 : (c | a)
+  H1 : (c | a)
+  H2 : forall x : Z, (x | a) -> (x | a) -> (x | c)
+  g : Zis_gcd a b c
+  Hg1 : Zis_gcd a b c
+  Hg2 : g = (x | a)
+  aa : Z
+  bb : Z
+  H : isnatcst (a | a)
+  H4 : isnatcst (b | a)
+  H3 : isnatcst b
+  H6 : 0 <= g
+  H7 : a = g * aa
+  H2 : 2 ^ cc + 0 < 2 ^ G
+  H5 : 1 < 2
+  H0 : 2 ^ cc > 2 ^ G
+  H1 : φ (g) * aa
+  Hb : 0 <= g * aa
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | 0 => true
+  | Z.pos ?p => isPcst p
+  | Z.neg ?p => isPcst p
+  | Z.of_nat ?n => isnatcst n
+  | Z.of_N ?n => isNcst n
+  | _ => false
+  end
+
+
+TcDebug (9) > 
+Goal:
+  
+  a : Z
+  b : Z
+  c : Z
+  H : Zis_gcd a b c
+  H0 : (c | a)
+  H1 : (c | a)
+  H2 : forall x : Z, (x | a) -> (x | a) -> (x | c)
+  g : Zis_gcd a b c
+  Hg1 : Zis_gcd a b c
+  Hg2 : g = (x | a)
+  aa : Z
+  bb : Z
+  H : isnatcst (a | a)
+  H4 : isnatcst (b | a)
+  H3 : isnatcst b
+  H6 : 0 <= g
+  H7 : a = g * aa
+  H2 : 2 ^ cc + 0 < 2 ^ G
+  H5 : 1 < 2
+  H0 : 2 ^ cc > 2 ^ G
+  H1 : φ (g) * aa
+  Hb : 0 <= g * aa
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match t with
+| 0 => true
+| Z.pos ?p => isPcst p
+| Z.neg ?p => isPcst n
+| Z.of_nat ?n => isnatcst n
+| Z.of_N ?n => isNcst n
+| _ => false
+end
+
+
+TcDebug (9) > 
+Goal:
+  
+  a : Z
+  b : Z
+  c : Z
+  H : Zis_gcd a b c
+  H0 : (c | a)
+  H1 : (c | a)
+  H2 : forall x : Z, (x | a) -> (x | a) -> (x | c)
+  g : Zis_gcd a b c
+  Hg1 : Zis_gcd a b c
+  Hg2 : g = (x | a)
+  aa : Z
+ 

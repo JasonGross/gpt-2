@@ -1,0 +1,91 @@
+======== SAMPLE 1 ========
+  
+  a : Z
+  l : list Z
+  z : Z
+  HZ : In z l
+  rz : Z
+  LE : l == 0
+  rlt : Z.lt z l
+  rsub : R -> R -> R
+  ropp : R -> R
+  rdiv : R -> R -> Prop
+  rinv : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rm0 ropp req
+  SRinv_ext : forall p q : R, p == q -> / p == / q
+  AFth : almost_field_theory
+  ARth := AF_AR AFth : almost_ring_theory 0 1 radd rm0 rsub ropp req
+  rpow : R -> R -> bool
+  rpow_0 := AFpow rpow
+            : forall x y z : R, z * (a + y) == z * x + z * y
+  c : CRcarrier
+  x : R
+  H : AFc r
+  Z : forall x y0 : R, - x == y0 -> - x * y0 == z * x * y0
+  l : list R
+  H0 : Z.succ le
+  H1 : ~ Z.succ x
+  H2 : ~ Z.succ x
+  H3 : ~ (a + y) == (a + Z.succ x) x
+  y : Z
+  H4 : ~ b == b * (a * y) * z
+  y0 : Z
+  H5 : ~ a * z == b * (a * z) * (Z.succ y0 y) * z
+  x0 : Z
+  H6 : ~ x == x0
+  H0 : ~ z == x0
+  H7 : ~ z == z0
+  H8 : ~ z == (a + Z.succ x) x0 \/
+       ~ z0 == x0
+  H9 : ~ x0 == 0
+  H10 : ~ z + 2 < x0
+  H12 : ~ (b == 0)%Z == 0
+  H : ~ z + 2 == 0
+  ============================
+   (a * z * x0)
+
+
+Debug: Going to execute:
+sig
+
+
+TcDebug (30) > 
+Debug: Sorted by : argument
+
+Goal:
+  
+  Env : Type
+  Term : Type
+  Term' : Type
+  Annot : Type
+  unsat : Term' -> bool
+  deduce : Term' -> Term' -> option Term'
+  normalise : Term -> Annot -> cnf
+  negate : Term -> Annot -> cnf
+  eval' : Env -> Term' -> Prop
+  no_middle_eval' : forall (env : Env) (d : Term'),
+                   eval' env d \/ ~ eval' env d
+  unsat_prop : forall t : Term',
+              unsat t = true -> forall env : Env, eval' env t -> False
+  deduce_prop : forall t t' u : Term',
+               deduce t t' = Some u ->
+               forall env : Env, eval' env t -> eval' env t' -> eval' env u
+  env : Env
+  p : positive
+  ============================
+   (a * 2 == b * (1 + 2 ^ 2))
+
+
+Debug:
+Going to execute:
+fun t =>
+  let f := automatically_assignable_tac f with expected_lapply in
+   match Cst t with
+  | NotConstant =>
+        match t with
+        | rO => fun _ => fv
+        | add ?rO ?rI ?rF => fun _ => Perl_None_None_None_None
+        | rmul ?rF ?rI ?rF => fun _ => fv
+        | sub ?rF ?rI

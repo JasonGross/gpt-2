@@ -1,0 +1,102 @@
+======== SAMPLE 1 ========
+ (fun n : nat => yn (Pos.to_nat n)
+                 (Pos.to_nat (Pos.max Ay Az)~0 * n)%nat
+  limy : CSeqEquiv
+  xn : nat -> Q
+  limz : Ay.ez * xn n
+  yn : nat -> Q
+  limz : Ay.ez * yn n
+  n : positive
+  Ay : (2 # yn (Pos.to_nat n) < S xn yn)%Q
+  Az : (0 # n)%Q
+  majz : forall n : nat, (Qabs (xn n) < Z.pos Ax # 1)%Q
+  ============================
+   (0 <= Z.pos Ax # 1 - Z.pos Ay # 1 <= 1 # 1)%Q
+
+
+Debug: Going to execute:
+clear H
+
+
+TcDebug (4) > 
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+  n : positive
+  Ay : (2 # yn (Pos.to_nat n) < S xn yn)%Q
+  Az : (0 # n)%Q
+  majz : forall n : nat, (Qabs (xn n) < Z.pos Ax # 1)%Q
+  ============================
+   (0 <= Z.pos Ay # 1 - Z.pos Ay # 1 <= 1 # 1)%Q
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+  n : positive
+  Ay : (2 # yn (Pos.to_nat n) < S xn yn)%Q
+  Az : (0 # n)%Q
+  majz : forall n : nat, (Qabs (xn n) < Z.pos Ax # 1)%Q
+  ============================
+   (0 <= Z.pos Ay # 1 - Z.pos Ay # 1 <= 1 # 1)%Q
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (2) > 
+Debug: Level 1: rP -> rI
+
+Debug: Level 1: rI -> rplus
+
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+  n : positive
+  Ay : (2 # yn (Pos.to_nat n) < S xn yn)%Q
+  Az : (0 # n)%Q
+  majz : forall n : nat, (Qabs (xn n) < Z.pos Ax # 1)%Q
+  ============================
+   (0 <= Z.pos Ay # 1 - Z.pos Ay # 1 <= 1 # 1)%Q
+
+
+Debug: Going to execute:
+setoid (rpow (Pos.le_le_list l1 l2))
+
+
+TcDebug (0) > 
+Debug:
+Evaluated term: 
+                 (rpow (Pos.le_le_list l1 l2))
+                     (rpow (Pos.le_nonceq_pos _ L1) (rpow (Pos.le_nonceq_pos _ L2))))
+
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+ 

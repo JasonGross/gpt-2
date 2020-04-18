@@ -1,0 +1,128 @@
+======== SAMPLE 1 ========
+ s m))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  H0 : In x m -> False
+  H2 : Add x e m m'
+  l : list (key * elt)
+  l' : list (key * elt)
+  H : eq_list (x l) (list (key * elt))
+  H4 : false = true ->
+       exists x0 : E.t, List.In x0 (elements m) /\ eqb x x0 = true
+  ============================
+   (false = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  H0 : In x m -> False
+  H2 : Add x e m m'
+  l : list (key * elt)
+  l' : list (key * elt)
+  H : eq_list (x l) (list (key * elt))
+  H4 : false = true ->
+       exists x0 : E.t, List.In x0 (elements m) /\ eqb x x0 = true
+  ============================
+   (false = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  H0 : In x m -> False
+  H2 : Add x e m m'
+  l : list (key * elt)
+  l' : list (key * elt)
+  H : eq_list (x l) (list (key * elt))
+  H4 : false = true ->
+       exists x0 : E.t, List.In x0 (elements m) /\ eqb x x0 = true
+  ============================
+   (false = true)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  H0 : In x m -> False
+  H2 : Add x e m m'
+  l : list (key * elt)
+  l' : list (key * elt)
+  H : eq_list (x l) (list (key * elt))
+  H4 : false = true ->
+       exists x0 : E.t, List.In x0 (elements m) /\ eqb x x0 = true
+  ============================
+   (false = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  x : key
+  e : elt
+  H0 : In x m -> False
+  H2 : Add x e m m'
+  l : list (key * elt)
+  l' : list (key * elt)
+  H : eq_list (x l) (list (key * elt))
+  H4 : false = true ->
+       exists x0 : E.t, List.In x0 (elements m) /\ eqb x x0 = true
+  ============================
+   (false = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt

@@ -1,0 +1,137 @@
+======== SAMPLE 1 ========
+ |- _ -> InT x l1 \/ InT x s2
+  H1 : InT x s2 -> InT x (Node _x l1 x1 Leaf)
+  ============================
+   (InT x (Node _x l1 x2 r2))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  B1 : Ok (Node _x l1 x1 Leaf)
+  B2 : Ok Leaf
+  y : elt
+  H0 : InT y b
+  ============================
+   (InT x (Node _x l1 x1 Leaf) /\ ~ InT y (Node _x Leaf))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  B1 : Ok (Node _x l1 x1 Leaf)
+  B2 : Ok Leaf
+  y : elt
+  H0 : InT y b
+  ============================
+   (InT x (Node _x l1 x1 Leaf) /\ ~ InT y (Node _x Leaf))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  B1 : Ok (Node _x l1 x1 Leaf)
+  B2 : Ok Leaf
+  y : elt
+  H0 : InT y b
+  ============================
+   (InT x (Node _x l1 x1 Leaf) /\ ~ InT y (Node _x Leaf))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  B1 : Ok (Node _x l1 x1 Leaf)
+  B2 : Ok Leaf
+  y : elt
+  H0 : InT y b
+  ============================
+   (InT x (Node _x l1 x1 Leaf) /\ ~ InT y (Node _x Leaf))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  B1 : Ok (Node _x l1 x1 Leaf)
+  B2 : Ok Leaf
+  y : elt
+  H0 : InT y b
+  ============================
+   (InT x (Node _x l1 x1 Leaf) /\ ~ InT y (Node _x Leaf))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  B1 : Ok (Node _x l1 x1 Leaf)
+  B2 : Ok Leaf
+  y : elt
+  H0 : InT y b
+  ============================
+   (InT x (Node _x l1 x1 Leaf) /\ ~ InT y (Node _x Leaf))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  _x : I.t
+  l1 : tree
+

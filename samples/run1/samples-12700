@@ -1,0 +1,64 @@
+======== SAMPLE 1 ========
+   (match reverse goal with
+    | id:?X1
+      |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+   | id:_ <-> _ |- _ => elim id; do 2 intro; clear id
+   | id:~ _ |- _ => red in id
+   | id:?X1
+      |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+   | id0:?X1 -> ?X2, id1:?X1 |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+   | id:?X1 -> ?X2
+      |- _ =>
+         <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+          [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+   | id:?X1 -> ?X2
+      |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+   | id:?X1 <-> ?X2 -> ?X3
+      |- _ =>
+         <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+   | id:?X1 <-> ?X3 -> ?X4
+      |- _ =>
+         display_goal; display_conj; display_nonzero
+   | id:?X1 -> ?X2
+      |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+   | |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+   | |- _ <-> _ => split
+   | |- ~ _ => red
+   end; <Coq.Init.Tauto.not_dep_intros>)
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : eqA_equiv
+  t : list A
+  IH : forall a : A, {eqA@neq_eq} + {eqA@neq_eq}
+  a : A
+  H : existsadd a : A, existadd a : A
+  a0 : A
+  listA : listA
+  H' : a0
+  H'' : a0
+  H0 : existsadd a : A, existadd a : A
+  a : A
+  H1 : existsadd a @ existsadd a0 : A, existadd a : A
+  H2 : existsadd a @@ existsadd a : A, existsadd a : A
+  H3 : existsadd a [ existsadd a0 ]
+  ============================
+   (existadd a <-> ~ (eqA a /\ eqA a0) /\ ~ (eqA a / \/ eqA a0 \/ eqA a0)
+     (eqA a /\ eqA a0 \/ match reverse goal with
+       (filter (a -> b) l') <->
+     existsadd a @ existsadd a0 : A, existsadd a : A
+  existsadd a0 : A, existsadd a : A
+  existsadd a : A
+  existsadd a0 : A, existsadd a : A
+  existsadd a : A
+  existsadd a : a0
+  ============================
+   (existadd a <-> ~ (eqA a /\ eqA a0) /\ ~ (eqA a / \/ eqA a0 \/ eqA a0)
+    * ~ (a0 /\ a /\ a0 -> eqA a /\ eqA a0 /\ eqA a0) /\ eqA a <-> eqA a0 /\ eqA a /\ eqA a0 /\ eqA a0 /\ fail

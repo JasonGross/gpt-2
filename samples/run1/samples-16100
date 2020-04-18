@@ -1,0 +1,113 @@
+======== SAMPLE 1 ========
+1) > 
+Goal:
+  
+  ============================
+   (forall (r1 (Q1R1 Rsth:=Q) (Q0R1 Rsth:=Q) (Q1R1 Rsth:=Q) (Q2R1 Rsth:=Q))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ============================
+   (forall (r1 (Q1R1 Rsth:=Q) (Q0R1 Rsth:=Q) (Q2R1 Rsth:=Q) (Q2R1 Rsth:=Q))
+
+
+Debug:
+Going to execute:
+constructor 1
+
+
+TcDebug (1) > 
+Debug: Evaluated term: 1; try 2
+
+Goal:
+  
+  ============================
+   (forall (r1 (Q1R1 Rsth:=Q) (Q0R1 Rsth:=Q) (Q2R1 Rsth:=Q) (Q2R1 Rsth:=Q))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.tauto_gen> flags ltac:(auto with *)
+
+
+TcDebug (0) > 
+Goal:
+  
+  ============================
+   (forall (r1 (Q1R1 Rsth:=Q) (Q0R1 Rsth:=Q) (Q2R1 Rsth:=Q) (Q2R1 Rsth:=Q))
+
+
+Debug:
+Going to execute:
+fun flags ltac:(auto with *) =>
+  let rec t_tauto_intuit :=
+   <Coq.Init.Tauto.tauto_intuit> flags ltac:(auto with *)
+
+
+TcDebug (1) > 
+Goal:
+  
+  ============================
+   (forall (r1 (Q1R1 Rsth:=Q) (Q0R1 Rsth:=Q) (Q2R1 Rsth:=Q) (Q2R1 Rsth:=Q))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.tauto_intuit> flags
+
+
+TcDebug (0) > 
+Goal:
+  
+  ============================
+   (forall (r1 (Q1R1 Rsth:=Q) (Q0R1 Rsth:=Q) (Q2R1 Rsth:=Q) (Q2R1 Rsth:=Q))
+
+
+Debug:
+Going to execute:
+fun flags t_tauto_intuit =>
+  let rewr H t_tauto_intuit :=
+   <Coq.Init.Tauto.tauto_intuit> flags ltac:(auto with *)
+
+
+TcDebug (1) > 
+Goal:
+  
+  ============================
+   (forall (r1 (Q1R1 Rsth:=Q) (Q0R1 Rsth:=Q) (Q2R1 Rsth:=Q) (Q2R1 Rsth:=Q))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.tauto_intuit> flags
+
+
+TcDebug (0) > 
+Goal:
+  
+  ============================
+   (forall (r1 (Q1R1 Rsth:=Q) (Q0R1 Rsth:=Q) (Q2R1 Rsth:=Q) (Q2R1 Rsth:=Q) (Q2R1 Rsth:=Q))
+
+
+Debug:
+Going to execute:
+fun flags t_tauto_intuit =>
+  let rewr H t_tauto_intuit :=
+   <Coq.Init.Tauto.tauto_intuit> flags ltac:(auto with *)
+
+
+TcDebug (1) > 
+Goal:
+  
+  ============================
+   (forall (r1 (Q1R1 Rsth:=Q) (Q0R1 Rsth:=Q) (Q2R1 Rsth:=Q) (Q2R1 Rsth:=Q) (Q2R1 Rsth:=Q))
+
+
+Debug

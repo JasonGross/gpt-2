@@ -1,0 +1,109 @@
+======== SAMPLE 1 ========
+ ] (FEX Q 3)
+
+
+Debug: Going to execute:
+<newring_plugin::ring_lookup@0> $1 $2 $3
+
+
+TcDebug (0) > 
+Goal:
+  
+  a : Q
+  b : Q
+  Q : (a | b * q + q * b)
+  H0 : (a | b)
+  H1 : (a | q * b)
+  H2 : forall y : Q, (y | a * b) -> (y | a * q * b)
+  H3 : forall z : Q, (z | a) -> (z | a * q * b)
+  H4 : (z | a) -> (z | a * q * b)
+  H : (z | a)
+  ============================
+   (x + z + (y + z) * b = x + z * b)
+
+
+Debug: Going to execute:
+easy
+
+
+TcDebug (0) > 
+Goal:
+  
+  a : Q
+  b : Q
+  Q : (a | b * q + q * b)
+  H0 : (a | b)
+  H1 : (a | q * b)
+  H2 : forall y : Q, (y | a * b) -> (y | a * q * b)
+  H3 : forall z : Q, (z | a) -> (z | a * q * b)
+  H4 : (z | a) -> (z | a * q * b)
+  H : (z | a)
+  ============================
+   (x + z + (y + z) * b = x + z * b)
+
+
+Debug:
+Going to execute:
+let rec use_hyp H :=
+ match type of H with
+ | _ /\ _ => exact H || destruct_hyp H
+ | _ => try (solve [ inversion H ])
+ end
+with do_intro := let H := fresh in
+                intro H; use_hyp H
+with destruct_hyp H := case H; clear H; do_intro; do_intro
+in
+let rec use_hyps :=
+ match goal with
+ | H:_ /\ _ |- _ => exact H || (destruct_hyp H; use_hyps)
+ | H:_ |- _ => solve [ inversion H ]
+ | _ => idtac
+ end
+in
+let do_atom := solve
+[ trivial with eq_true | reflexivity | symmetry; trivial | contradiction ]
+in
+let rec do_ccl :=
+ try do_atom; repeat (do_intro; try do_atom); (solve [ split; do_ccl ])
+in
+(solve [ do_atom | use_hyps; do_ccl ]) || fail "Cannot solve this goal"
+
+
+TcDebug (1) > 
+Goal:
+  
+  a : Q
+  b : Q
+  Q : (a | b * q + q * b)
+  H0 : (a | b)
+  H1 : (a | q * b)
+  H2 : forall y : Q, (y | a * b) -> (y | a * q * b)
+  H3 : forall z : Q, (z | a) -> (z | a * q * b)
+  H4 : (z | a) -> (z | a * q * b)
+  H : (z | a)
+  ============================
+   (x + z + (y + z) * b = x + z * b)
+
+
+Debug:
+Going to execute:
+let rec use_hyps :=
+ match goal with
+ | H:_ /\ _ |- _ => exact H || (destruct_hyp H; use_hyps)
+ | H:_ |- _ => solve [ inversion H ]
+ | _ => idtac
+ end
+in
+let do_atom := solve
+[ trivial with eq_true | reflexivity | symmetry; trivial | contradiction ]
+in
+let rec do_ccl :=
+ try do_atom; repeat (do_intro; try do_atom); (solve [ split; do_ccl ])
+in
+(solve [ do_atom | use_hyps; do_ccl ]) || fail "Cannot solve this goal"
+
+
+TcDebug (2) > 
+Goal:
+  
+ 

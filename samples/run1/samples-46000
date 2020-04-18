@@ -1,0 +1,110 @@
+======== SAMPLE 1 ========
+ m' : t elt
+  y : match elt with
+      | nil => match is_nistent with
+           | nil => false
+           | _ :: _ => false
+           end
+  H : false = true
+  ============================
+   (X.lt y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  l : list (key * elt)
+  Hm : Sort m l
+  Hm' : Sort m'
+  H0 : forall k : key, In k m <-> In k m /\ X.lt k x
+  H1 : forall (k : key) (e e' : elt),
+       MapsTo k e m -> MapsTo k e' m' -> cmp e e' = true
+  k : Raw.key
+  k' : Raw.key
+  e'' : elt
+  m0 : Raw.key
+  H : Raw.In k m0
+  H2 : m0 == - Raw.In k m
+  H3 : Raw.In k' m0
+  ============================
+   (((k', e') /\ (cmp e m0) = true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  l : list (key * elt)
+  Hm : Sort m l
+  Hm' : Sort m'
+  H0 : forall k : key, In k m <-> In k m /\ X.lt k x
+  H1 : forall (k : key) (e e' : elt),
+      MapsTo k e m -> MapsTo k e' m' -> cmp e e' = true
+  k : Raw.key
+  k' : Raw.key
+  e'' : elt
+  m0 : Raw.key
+  H : Raw.In k m0
+  H2 : m0 == - Raw.In k m
+  H3 : Raw.In k' m0
+  ============================
+   (((k', e') /\ (cmp e m0) = true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  m : t elt
+  l : list (key * elt)
+  Hm : Sort m l
+  Hm' : Sort m'
+  H0 : forall k : key, In k m <-> In k m /\ X.lt k x
+  H1 : forall (k : key) (e e' : elt),
+      MapsTo k e m -> MapsTo k e' m' -> cmp e e' = true
+  k : Raw.key
+  k' : Raw.key
+  e'' : elt
+  m0 : Raw.key
+  H : Raw.In k m0
+  H2 : m0 == - Raw.In k m
+  H3 : Raw.In k' m0
+  ============================
+   (((k', e') /\ (cmp e m0) = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  m : t elt
+  l : list (key * elt)
+  Hm : Sort m l
+  Hm' : Sort m'
+  H0 : forall k : key, In k m <-> In k m /\ X.lt k x
+  H1 : forall (k : key) (e e' : elt),
+      MapsTo k e m -> MapsTo k e' m' -> cmp e e' = true
+

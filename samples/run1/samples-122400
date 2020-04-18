@@ -1,0 +1,32 @@
+======== SAMPLE 1 ========
+ H : compat_bool E.eq f
+  H0 : In x l
+  H2 : f x
+  H4 : (exists x0 : E.t * elt,
+        InA (elt:=elt) (x :: l)
+           ((fun x0 : E.t * elt =>
+             match X.compare x0 x with
+             | LT_tree m0 e0 l' =>
+                  let g := A in
+                        l' =>
+                       l''
+                          (match X.compare x0 x with
+                              | LT_tree m0 e0 l' =>
+                              l''
+                              (match X.compare x0 x with
+                                 | LT_tree m1 e1 l' =>
+                               l''
+                               (x :: l) -> l''
+                             | E.eq m1 k' r
+                                 (x :: l) /\
+                                (e1 k' r))
+                                   E.eq m2 k'
+                                  (e2 e' r)
+                                    (k, e1 e' r)
+                                   (e1, e' r) = true
+                                  (l1 e2 m)
+                                      (eq e1 e2) : E.eq e1
+                                      (eq e2 e'
+                                        (eq e1 m)
+                                            (E.eq e2 e'
+                           

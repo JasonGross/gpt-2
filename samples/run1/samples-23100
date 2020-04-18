@@ -1,0 +1,121 @@
+======== SAMPLE 1 ========
+
+  H3 : In (x1, x2) <-> In x1 /\ ~ In x2
+  y : elt
+  H : X.lt x1 x2
+  H0 : InT y l
+  ============================
+   (In x1 ((x1, x2) = [1] -> In x1 l) \/ In x2 l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x1 : elt
+  x2 : elt
+  x3 : elt
+  H2 : X.eq x x2
+  H5 : In x2 (remove x2 l)
+  H0 : InT y l
+  H1 : InT y l
+  H8 : X.lt x1 x2
+  H4 : X.lt x3 y
+  H6 : X.eq y x1
+  ============================
+   (In x1 ((x1, x2) = [1] -> In x1 l) \/ In x2 l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x1 : elt
+  x2 : elt
+  x3 : elt
+  H2 : X.eq x x2
+  H5 : In x2 (remove x2 l)
+  H0 : InT y l
+  H1 : InT y l
+  H8 : X.lt x1 x2
+  H4 : X.lt x3 y
+  H6 : X.eq y x1
+  ============================
+   (In x1 ((x1, x2) = [1] -> In x1 l) \/ In x2 l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x1 : elt
+  x2 : elt
+  x3 : elt
+  H2 : X.eq x x2
+  H5 : In x2 (remove x2 l)
+  H0 : InT y l
+  H1 : InT y l
+  H8 : X.lt x1 x2
+  H4 : X.lt x3 y
+  H6 : X.eq y x1
+  ============================
+   (In x1 ((x1, x2) = [1] -> In x1 l) \/ In x2 l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x1 : elt
+  x2 : elt
+  x3 : elt
+  H2 : X.eq x x2
+  H5 : In x2 (remove x2 l)
+  H0 : InT y l
+  H1 : InT y l
+  H8 : X.lt x1 x2
+  H4 : X.lt x3 y
+  H6 : X.eq y x1
+  ============================
+   (In x1 ((x1, x2) = [1] -> In x1 l) \/ In x2 l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x1 : elt
+  x2 : elt
+  x3 : elt
+  H2 : X.eq x x2
+  H5 : In x2 (remove x2 l)
+  H0 : InT y l
+  H1 : InT y l
+  H8 : X.lt x1 x2
+  H4 : X.lt x3 y
+  H6 : X.eq y x1
+  ============================
+   (In x1 ((x1, x2) = [1] -> In x1 l) \/ In x2 l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj>

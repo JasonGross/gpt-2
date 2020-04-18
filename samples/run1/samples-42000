@@ -1,0 +1,121 @@
+======== SAMPLE 1 ========
+
+  Hf1 : True
+  Hf2 : True
+  H0 : bst m2
+  H3 : ZChecker ((PX P2 v1 :: Z.pos p2) v1 :: Z.pos p3)
+  Hbf1 : MPcond LM2 l
+  ============================
+   ([0] == [0] * (v1 * P2.sub p2 p) @ l + 1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  b : Z
+  H : 0 <= b
+  H2 : 0 <= 2 ^ b
+  LT : 0 <= b
+  LE : 0 < 2 ^ positive
+  H0 : bst m2
+  H3 : ZChecker ((PX P2 v1 :: Z.pos p2) v1 :: Z.pos p3)
+  Hbf1 : MPcond LM2 l
+  ============================
+   ([0] == [0] * (v1 * P2.sub p2 p) @ l + 1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  b : Z
+  H : 0 <= b
+  H2 : 0 <= 2 ^ b
+  LT : 0 <= b
+  LE : 0 < 2 ^ positive
+  H0 : bst m2
+  H3 : ZChecker ((PX P2 v1 :: Z.pos p2) v1 :: Z.pos p3)
+  Hbf1 : MPcond LM2 l
+  ============================
+   ([0] == [0] * (v1 * P2.sub p2 p) @ l + 1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  b : Z
+  H : 0 <= b
+  H2 : 0 <= 2 ^ b
+  LT : 0 <= b
+  LE : 0 < 2 ^ positive
+  H0 : bst m2
+  H3 : ZChecker ((PX P2 v1 :: Z.pos p2) v1 :: Z.pos p3)
+  Hbf1 : MPcond LM2 l
+  ============================
+   ([0] == [0] * (v1 * P2.sub p2 p) @ l + 1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  b : Z
+  H : 0 <= b
+  H2 : 0 <= 2 ^ b
+  LT : 0 <= b
+  LE : 0 < 2 ^ positive
+  H0 : bst m2
+  H3 : ZChecker ((PX P2 v1 :: Z.pos p2) v1 :: Z.pos p3)
+  Hbf1 : MPcond LM2 l
+  ============================
+   ([0] == [0] * (v1 * P2.sub p2 p) @ l + 1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  b : Z
+  H : 0 <= b
+  H2 : 0 <= 2 ^ b
+  LT : 0 <= b
+  LE : 0 < 2 ^ positive
+  H0 : bst m2
+  H3 : ZChecker ((PX P2 v1 :: Z.pos p2) v1 :: Z.pos p3)
+  Hbf1 : MPcond LM2 l
+  ============================
+   ([0] == [0] * (v1 * P2.sub p2 p) @ l + 1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  b : Z
+  H : 0 <= b
+  H2 : 0 <=

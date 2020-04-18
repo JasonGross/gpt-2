@@ -1,0 +1,76 @@
+======== SAMPLE 1 ========
+ H3 : InT y rr
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  rll : tree
+  rlx : X.t
+  rlr : tree
+  e : (height rr + 2 <? height (Node _x ll lx (Node _x0 rll rlx rlr)) = true) ->
+       forall x : elt, InT x l -> InT x (Node _x ll lx (Node _x0 rll rlx rlr)) <-> InT x l \/ InT x rll
+  e1 : InT x l -> InT x (Node _x ll lx (Node _x0 rll rlx rlr) <=? height l -> False) -> InT x l \/ InT x rll
+  H : InT x (Node _x ll lx (Node _x0 rll rlx rlr))
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  rll : tree
+  rlx : X.t
+  rlr : tree
+  e : (height rr + 2 <? height (Node _x ll lx (Node _x0 rll rlx rlr)) = true) ->
+       forall x : elt, InT x l -> InT x (Node _x ll lx (Node _x0 rll rlx rlr)) <-> InT x l \/ InT x rll
+  e1 : InT x l -> InT x (Node _x ll lx (Node _x0 rll rlx rlr)) <=? height l -> False) ->
+       forall x : elt, InT x l -> InT x (Node _x ll lx (Node _x0 rll rlx rlr)) <-> InT x l \/ InT x rll
+  e1 : InT x l -> InT x (Node _x ll lx (Node _x0 rll rlx rlr)) <=? height l -> False) ->
+       forall x : elt, InT x l -> InT x (Node _x ll lx (Node _x0 rll rlx rlr)) <-> InT x l \/ InT x rll
+  e1 : InT x l -> InT x (Node _x ll lx (Node _x0 rll rlx rlr)) <=? height l -> False
+       forall x : elt, InT x l -> InT x (Node _x ll lx (Node _x0 rll rlx rlr)) <-> InT x l \/ InT x rll
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : t
+  x : X.t
+  _x : I.t
+  rx : X.t
+  rr : tree
+  _x0 : I.t
+  rll : tree
+  rlx : X.t
+  rlr : tree
+  e : (height rr + 2 <? height (Node _x ll lx (Node _x0 rll rlx rlr)) = true) ->
+       forall x : elt, InT x l -> InT x (Node _x ll lx (Node _x0 rll rlx rlr)) <-> InT x l \/ InT x

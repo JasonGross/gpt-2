@@ -1,0 +1,155 @@
+======== SAMPLE 1 ========
+ P
+  H11 : s [=] s
+  H3 : In a s'
+  H0 : In a s -> False
+  H12 : In a s
+  H4 : In a s'
+  ============================
+   (In a s)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  H : forall a : elt, In a s <-> In a s'
+  s' : t
+  i : int
+  H1 : Some (x <-> x / i)
+  H2 : Some x
+  H3 : In a s'
+  H0 : In a s -> False
+  H12 : In a s
+  H4 : In a s'
+  ============================
+   (In a s)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  H : forall a : elt, In a s <-> In a s'
+  s' : t
+  i : int
+  H1 : Some (x <-> x / i)
+  H2 : Some x
+  H3 : In a s'
+  H0 : In a s -> False
+  H12 : In a s
+  H4 : In a s'
+  ============================
+   (In a s)
+
+
+Debug: Going to execute:
+<ltac_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: No such contradiction
+
+Debug: Level 4: No such contradiction
+
+Goal:
+  
+  s : t
+  s' : t
+  H : forall a : elt, In a s <-> In a s'
+  s' : t
+  H4 : In a s'
+  H0 : In a s -> False
+  H12 : In a s
+  H4 : In a s'
+  ============================
+   ((None -> False) -> False)
+
+
+Debug: Going to execute:
+refine_lazy_add
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  H : forall a : elt, In a s <-> In a s'
+  s' : t
+  H4 : In a s'
+  H0 : In a s -> False
+  H12 : In a s
+  H4 : In a s'
+  ============================
+   ((None -> False) -> False)
+
+
+Debug: Going to execute:
+destruct_lazy_add
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  H : forall a : elt, In a s <-> In a s'
+  s' : t
+  H4 : In a s'
+  H0 : In a s -> False
+  H12 : In a s
+  H4 : In a s'
+  ============================
+   ((None -> False) -> False)
+
+
+Debug: Going to execute:
+<ltac_plugin::destruct_lazy_add@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: No such contradiction
+
+Debug: Level 4: No such contradiction
+
+Debug: Level 3: No matching clauses for lemma.
+
+Debug: Level 3: No matching clauses for lemma.
+
+Debug: Level 2: No matching clauses for lemma.
+
+Goal:
+  
+  s : t
+  s' : t
+  H : forall a : elt, In a s <-> In a s'
+  s' : t
+  H4 : In a s'
+  H0 : In a s -> False
+  H12 : In a s
+  H4 : In a s'
+  ============================
+   (In a s)
+
+
+Debug:
+Going to execute:
+match goal with
+| H:?Y| ?Y
+  |- _ => match H

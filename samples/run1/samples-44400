@@ -1,0 +1,148 @@
+======== SAMPLE 1 ========
+  (true = false -> false = true /\ false = true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+    s : t  s' : t  s1 : t  s2 : t  s3 : t  x : elt  H : false = true
+  ============================
+   (true = false -> false = true /\ false = true)
+
+
+Debug: Going to execute:
+assumption
+
+
+TcDebug (2) > 
+Goal:
+    s : t  s' : t  s1 : t  s2 : t  s3 : t  x : elt  H : false = true
+  ============================
+   (true = false -> true = true /\ false = true)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::assumption@0>
+
+
+TcDebug (3) > 
+Goal:
+    s : t  s' : t  s1 : t  s2 : t  s3 : t  x : elt  H0 : false = true
+  ============================
+   (true = false -> false = true /\ false = true)
+
+
+Debug: Going to execute:
+unify X Y
+
+
+TcDebug (2) > 
+Debug: Evaluated term: Y
+
+Debug: Evaluated term: (true = false)
+
+Debug: Level 2: Not an empty list.
+
+Debug: Level 2: Not an empty list.
+
+Goal:
+    s : t  s' : t  s1 : t  s2 : t  s3 : t  x : elt  H : false = true
+  ============================
+   (true = false)
+
+
+Debug: Going to execute:
+<ltac_plugin::unify@0> $1 $2
+
+
+TcDebug (2) > 
+Debug:
+Level 2: In environment
+s, s', s2 : t
+x : elt
+H : false = true
+Unable to unify "Y1 y2" with "true".
+
+Debug:
+Level 2: In environment
+s, s', s2 : t
+x : elt
+H : false = true
+Unable to unify "Y1 y2" with "true".
+
+Debug:
+Level 2: In environment
+s, s', s2 : t
+x : elt
+H : false = true
+Unable to unify "Y1 y2" with "true".
+
+Debug:
+Level 3: In environment
+s, s', s2 : t
+x : elt
+H : false = true
+Unable to unify "Y1 y2" with "true".
+
+Debug:
+Level 3: In environment
+s, s', s2 : t
+x : elt
+H : false = true
+Unable to unify "Y1 y2" with "true".
+
+Debug:
+Level 2: In environment
+s, s', s2 : t
+x : elt
+H : false = true
+Unable to unify "Y1 y2" with "true".
+
+Debug:
+Level 2: In environment
+s, s', s2 : t
+x : elt
+H : false = true
+Unable to unify "Y1 y2" with "true".
+
+Debug:
+Level 1: In environment
+s, s', s2 : t
+x : elt
+H : false = true
+Unable to unify "Y1 y2" with "true".
+
+Goal:
+    s : t  s' : t  s1 : t  s2 : t  s3 : t  x : elt  H0 : false = true
+  ============================
+   (true = false)
+
+
+Debug:
+Going to execute:
+match H with
+| H' => fail 2
+| _ => unify X Y; clear H' || clear H
+end
+
+
+TcDebug (1) > 
+Goal:
+    s : t  s' : t  s1 : t  s2 : t  s3 : t  x : elt  H0 : false = true
+  ============================
+   (true = false)
+
+
+Debug: Going to execute:
+H
+
+
+TcDebug (2) > 
+Debug:

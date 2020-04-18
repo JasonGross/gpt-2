@@ -1,0 +1,102 @@
+======== SAMPLE 1 ========
+ x1 a2
+  x3 : key
+  y : key
+  y' : key
+  H : In y x1 \/ In y' x2 \/ In y'2' -> In y'1 \/ In y'2'
+  H1 : In y'1 \/ In y'2' -> In y'2' -> In y'1'
+  ============================
+   (X.lt x1 y')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> A
+  Comp : Proper (E.eq ==> eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  k : key
+  e : elt
+  i : A
+  H1 : NoDupA (k, e)
+  H0 : NoDupA m1
+  H3 : NoDupA (k, e)
+  H4 : In k m2 ->
+        In k m1 ->
+        NoDupA (k, e) ->
+         NoDupA m2 ->
+         NoDupA (k, e) /\ NoDupA (k, e) =
+         In k m1 \/ In k m2
+  H5 : In k m2
+  H6 : NoDupA (k, e)
+  H1 : NoDupA (k, e)
+  ============================
+   (In k m1 \/ In k m2 ->
+    In k m2 /\ In k m1 \/ In k (e = e' \/ (e' = e''))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> A
+  Comp : Proper (E.eq ==> eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  k : key
+  e : elt
+  i : A
+  H1 : NoDupA (k, e)
+  H0 : NoDupA m1
+  H3 : NoDupA (k, e)
+  H4 : In k m2 ->
+        In k m1 ->
+        NoDupA (k, e) ->
+         NoDupA m2 ->
+         NoDupA (k, e) /\ NoDupA (k, e) =
+         In k m1 \/ In k m2
+  H5 : In k m2
+  H6 : NoDupA (k, e)
+  H1 : NoDupA (k, e)
+  ============================
+   (In k m1 \/ In k m2 ->
+    In k m2 /\ In k m1 \/ In k (e = e' \/ (e' = e''))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> A
+  Comp : Proper (E.eq ==> eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  k : key
+  e : elt
+  i : A

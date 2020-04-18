@@ -1,0 +1,181 @@
+======== SAMPLE 1 ========
+ : elt
+  s : t
+  x : elt
+  l : tree
+  H : s [=] add x s
+  H0 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : tree
+  H : aux x s [=] add x s
+  H0 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : tree
+  H : aux x s [=] add x s
+  H0 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : tree
+  H : aux x s [=] add x s
+  H0 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : tree
+  H : aux x s [=] add x s
+  H0 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : tree
+  H : aux x s [=] add x s
+  H0 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : tree
+  H : aux x s [=] add x s
+  H0 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : tree
+  H : aux x s [=] add x s
+  H0 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : tree
+  H : aux x s [=] add x s
+  H0 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Debug: Level 2: No matching clauses for match.
+
+Debug: Level 2: No matching clauses for match.
+
+Debug: Level 1: No matching clauses for match.
+
+Debug: Level 0: No matching clauses for match.
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : tree
+  H : aux x s [=] add x s
+  H0 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.axioms> flags ||
+  match reverse goal with
+  | id:(?X1 -> ?X2) -> ?X3
+    |- _ =>
+        cut X3;
+   

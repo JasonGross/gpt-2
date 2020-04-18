@@ -1,0 +1,79 @@
+======== SAMPLE 1 ========
+ cmul : C -> C -> C
+  cmsub : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  phi : C -> R
+  CRmorph : ring_morph 0 1 radd rmul rsub ropp req cO cI cadd cmul csub copp
+               ceqb phi
+  Cpow : Type
+  Cp_phi : N -> Cpow
+  rpow : R -> Cpow -> R
+  pow_th : power_theory 1 rmul req Cp_phi rpow
+  cdiv : C -> C -> C * C
+  div_th : div_theory req cadd cmul phi cdiv
+  get_sign : C -> option C
+  get_sign_spec : sign_theory copp ceqb get_sign
+  mkpow : R -> positive -> R
+  mkopp_pow : R -> positive -> R
+  mkmult_pow : R -> R -> positive -> R
+  mkpow_spec : forall (r : R) (p : positive), mkpow r p == r ^ p
+  mkopp_pow_spec : forall (r : R) (p : positive), mkopp_pow r p == - r ^ p
+  mkmult_pow_spec : forall (r x : R) (p : positive),
+                    mkmult_pow r x p == r * x ^ p
+  p : positive
+  lm : list (R * positive)
+  ============================
+   (mkmult_pow (mkpow p p) p == p * hd lm)
+
+
+Debug:
+Going to execute:
+rewrite (ARdistr_l ARth)
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (ARdistr_l ARth)
+
+Debug:
+Level 0: Found no subterm matching "?r * (?r0 ** ?r1)" in the current goal.
+
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  Rsth : Equivalence req
+  Reqe : ring_eq_ext radd rmul ropp req
+  ARth : almost_ring_theory 0 1 radd rmul rsub ropp req
+  C : Type
+  cO : C
+  cI : C
+  cadd : C -> C -> C
+  cmul : C -> C -> C
+  csub : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  phi : C -> R
+  CRmorph : ring_morph 0 1 radd rmul rsub ropp req cO cI cadd cmul csub copp
+               ceqb phi
+  Cpow : Type
+  Cp_phi : N -> Cpow
+  rpow : R -> Cpow -> R
+  pow_th : power_theory 1 rmul req Cp_phi rpow
+  cdiv : C -> C -> C * C
+  div_th : div_theory req cadd cmul phi cdiv
+  get_sign : C -> option C
+  get_sign_spec : sign_theory copp ceqb get_sign
+  mkpow : R -> positive -> R
+  mkopp_pow : R -> positive -> R
+  mkmult_pow : R -> R -> positive -> R
+  mkpow_spec : forall (r : R) (p : positive), mkpow r p == r ^ p
+  mkopp_pow_spec : forall (r : R) (p : positive), mkopp_pow r p == - r ^ p
+  mkmult_pow_spec : forall (r x : R) (p : positive),
+                    mkmult_pow r x p == r * x

@@ -1,0 +1,113 @@
+======== SAMPLE 1 ========
+ y ==> l1)
+
+
+Debug:
+Going to execute:
+match w1 with H |- _ => fail 1
+| _ =>
+    change_no_check (OrderTac.OTF.le_nat ?spec) in H ||
+    change_no_check (OrderTac.OTF.le_nat ?nat) in H || invok H req
+end
+
+
+TcDebug (0) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t_left0 : t
+  t_in0 : bool
+  t_in1 : t_right0
+  y : elt
+  e1 : X.compare x lx with
+        InT y (OrderTac.USize_Logical_N (Node lx rl rd rr rh))
+       InT y rll
+  ============================
+   (OrderTac.OTF.lt y (Node lx rl rd rr rh) + E.eq y rlr)
+
+
+Debug:
+Going to execute:
+change_no_check (OrderTac.OTF.lt y (Node ll lx ll rl rd rr rh) + E.eq y ll) in H ||
+    change_no_check (OrderTac.OTF.le_nat ?spec) in H ||
+     change_no_check (OrderTac.OTF.le_nat ?nat) in H || invok H req
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t_left0 : t
+  t_in0 : bool
+  t_in1 : t_right0
+  y : elt
+  e1 : X.compare x lx with
+        InT y (OrderTac.USize_Logical_N (Node lx rl rd rr rh))
+        InT y rll
+  ============================
+   (OrderTac.OTF.le y (Node ll lx ll rl rd rr rh) + E.eq y llr)
+
+
+Debug: Going to execute:
+change_no_check (OrderTac.OTF.lt y (Node ll lx ll rl rd rr rh) + E.eq y ll) in H
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (OrderTac.OTF.le_nat ?spec)
+
+Debug: Evaluated term: (OrderTac.OTF.lt y (Node ll lx ll rl rd rr rh) + E.eq y ll)
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t_left0 : t
+  t_in0 : bool
+  t_in1 : t_right0
+  y : elt
+  e1 : X.compare x lx with
+        InT y (OrderTac.USize_Logical_N (Node lx rl rd rr rh))
+        InT y rll
+  ============================
+   (OrderTac.OTF.lt y (Node ll lx ll rl rd rr rh) + E.eq y llr)
+
+
+Debug: Going to execute:
+OrderTac.OTF.le_nat ?spec
+
+
+Debug:
+Going to execute:
+let l_sym := mk_sym x lx in
+OrderTac.OTF.le_nat lx _x
+
+
+TcDebug (0) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t_left0 : t
+  t

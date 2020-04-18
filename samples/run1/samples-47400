@@ -1,0 +1,70 @@
+======== SAMPLE 1 ========
+  end
+
+
+TcDebug (2) > 
+Goal:
+  
+  b : t
+  q1 : t
+  q2 : t
+  r1 : t
+  r2 : t
+  EQ : b * q1 + r1 == b * q2 + r2
+  GT : q1 = q2 + r1
+  y : t
+  H : x = y
+  H1 : y = x -> False
+  H2 : r1 = r2 -> False
+  ============================
+   (y = x)
+
+
+Debug:
+Going to execute:
+match goal with
+| H:?Z -> False
+  |- _ => change_no_check (~ Z.of_nat Z.pos (Pos.of_nat n)) in H; Raw.MX.OrderTac.order_prepare
+| H:~ ?Z -> False
+ |- _ => change_no_check (~ Z.of_nat Z.pos (Pos.of_nat n)) in H; Raw.MX.OrderTac.order_prepare
+| H:?Z -> False
+ |- _ => change_no_check (~ Z.of_nat Z.pos (Pos.of_nat n)) in H; Raw.MX.OrderTac.order_prepare
+| H:?Z /\ ?M -> False
+  |- _ =>
+     match goal with
+     | H':?Z -> False
+      |- _ => change_no_check (and (eq_sym Z.pos (Pos.of_nat n)) in H; Raw.MX.OrderTac.order_prepare
+             (Raw.MX.OrderTac.eq_sym H'0) by dec
+              (Raw.MX.OrderTac.order_prepare
+                (Raw.MX.OrderTac.eq_sym H'1))
+        end
+| H':?Z -> False
+  |- _ =>
+     match goal with
+     | H':?Z -> False
+      |- _ => change_no_check (and (eq_sym Z.pos (Pos.of_nat n)) in H; Raw.MX.OrderTac.order_prepare
+             (Raw.MX.OrderTac.eq_sym H'0) by dec
+              (Raw.MX.OrderTac.order_prepare
+                (Raw.MX.OrderTac.eq_sym H'1))
+       end
+| H':?Z \/ ?M -> False
+  |- _ =>
+     match goal with
+     | H':?Z -> False
+      |- _ => change_no_check (and (eq_sym Z.pos (Pos.of_nat n)) in H; Raw.MX.OrderTac.order_prepare
+             (Raw.MX.OrderTac.eq_sym H'0) by dec
+        end
+| H':?Z /\ ?M -> False
+  |- _ =>
+     match goal with
+     | H':?Z -> False
+      |- _ => change_no_check (and (eq_sym Z.pos (Pos.of_nat n)) in H; Raw.MX.OrderTac.order_prepare
+              (Raw.MX.OrderTac.eq_sym H'0) by dec
+      end
+| H':?Z \/ ?M -> False
+  |- _ =>
+     match goal with
+     | H':?Z -> False
+      |- _ => change_no_check (and (eq_sym Z.pos (Pos.of_nat n)) in H; Raw.MX.OrderTac.order_prepare
+             (Raw.MX.OrderTac.eq_sym H'0) by dec
+   

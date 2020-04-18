@@ -1,0 +1,77 @@
+======== SAMPLE 1 ========
+ eq *
+        ring_mul_true_r := ring_proper_r Rsth ARth : forall x y : R, x * y == x * y
+  rmul_1_l := ARmul_1_l ARth : forall x : R, 1 * x == x
+  rmul_0_l := ARmul_0_l ARth : forall x : R, 0 * x == 0
+  rmul_comm := ARmul_comm ARth : forall x y : R, x * y == y * x
+  rmul_assoc := ARmul_assoc ARth : forall x y z : R, x * (y * z) == x * y * z
+  rdistr_l := ARdistr_l ARth : forall x y z : R, (x + y) * z == x * z + y * z
+  ropp_mul_l := ARopp_mul_l ARth : forall x y : R, - (x * y) == - x * y
+  ropp_add := ARopp_add ARth : forall x y : R, - (x + y) == - x + - y
+  rsub_def := ARsub_def ARth : forall x y : R, x - y == x + - y
+  radd_0_r := ARadd_0_r Rsth ARth : forall x : R, x + 0 == x
+  rmul_0_r := ARmul_0_r Rsth ARth : forall x : R, x * 0 == 0
+  rmul_1_r := ARmul_1_r Rsth ARth : forall x : R, x * 1 == x
+  ropp_0 := ARopp_zero Rsth Reqe ARth : - 0 == 0
+  rdistr_r := ARdistr_r Rsth Reqe ARth
+           : forall x y z : R, z * (x + y) == z * x + z * y
+  C : X.lt x x
+  H0 : In x (r + 2)
+  ============================
+   (In x r + 2)
+
+
+Debug: Going to execute:
+right; t_tauto_intuit
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : X.t
+  c : Info.t
+  l : tree
+  y : X.t
+  r : tree
+  Hl : forall acc : list X.t,
+       Ok l ->
+       Sorted X.lt acc ->
+       (forall x y : elt, InA X.eq x acc -> In y l -> X.lt y x)
+  Hr : forall acc : list X.t,
+       Ok r ->
+       Sorted X.lt acc ->
+       (forall x y : elt, InA X.eq x acc -> In y r -> X.lt y x)
+  acc : list X.t
+  H0 : Sorted X.lt acc
+  H1 : forall x y0 : elt,
+       InA X.eq x acc -> In y0 (Node c l y r) -> X.lt y0 x
+  H4 : Ok l
+  H5 : Ok r
+  H6 : lt_tree y l
+  H7 : gt_tree y r
+  y0 : X.t
+  H8 : InA X.eq x (Some d) ->
+       X.eq y0 x
+  H2 : InA X.eq x (Some d)
+  H3 : InA X.eq x (0 + d)
+  H : InA X.eq x d
+  ============================
+   (In x r + 2)
+
+
+Debug: Going to execute:
+right
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : X.t
+  c : Info.t
+  l : tree
+  y : X.t
+  r : tree
+  Hl : forall acc : list X.t,
+       Ok l ->
+       Sorted X.lt acc ->
+ 

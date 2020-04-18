@@ -1,0 +1,145 @@
+======== SAMPLE 1 ========
+v
+  s2 : tree
+  H0 : tree
+  H1 : height s2 <= tree
+  H4 : tree
+  H5 : height b < tree
+  H2 : height s2 <= height b
+  ============================
+   (s2 = empty, height b < height (Node l x H0 y d r) + 1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  y0 : X.t
+  c : tree
+  H0 : height (Node l x a) <= height l - height a <= height l - 1
+  H1 : height l >= 0
+  H2 : height a <= height l
+  ============================
+   (s2 = empty, height b < height (Node l x a) + 1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  y0 : X.t
+  c : tree
+  H0 : height (Node l x a) <= height l - height a <= height l - 1
+  H1 : height l >= 0
+  H2 : height a <= height l
+  ============================
+   (s2 = empty, height b < height (Node l x a) + 1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  y0 : X.t
+  c : tree
+  H0 : height (Node l x a) <= height l - height a <= height l - 1
+  H1 : height l >= 0
+  H2 : height a <= height l
+  ============================
+   (s2 = empty, height b < height (Node l x a) + 1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  y0 : X.t
+  c : tree
+  H0 : height (Node l x a) <= height l - height a <= height l - 1
+  H1 : height l >= 0
+  H2 : height a <= height l
+  ============================
+   (s2 = empty, height b < height (Node l x a) + 1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  y0 : X.t
+  c : tree
+  H0 : height (Node l x a) <= height l - height a <= height l - 1
+  H1 : height l >= 0
+  H2 : height a <= height l
+  ============================
+   (s2 = empty, height b < height (Node l x a) + 1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a :

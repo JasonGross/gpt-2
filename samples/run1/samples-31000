@@ -1,0 +1,143 @@
+======== SAMPLE 1 ========
+ 0 s2))
+  H0 : 0 == 0
+  H1 : pos (s2, b) -> False
+  ============================
+   False
+
+
+Debug: Going to execute:
+exact eq_revert
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (s2, b)
+
+Goal:
+  
+  a : elt
+  s2 : Info.t elt
+  b : elt
+  s1 : list (key * elt)
+  c : elt
+  H : forall y : key, In y s2 <-> In y s1 /\ ~ In y (rev (b s1))
+  a0 : elt
+  b0 : elt
+  s1 : list (key * elt)
+  H0 : 0 == 0
+  H1 : pos (s2, b) -> False
+  ============================
+   False
+
+
+Debug: Going to execute:
+clear H
+
+
+TcDebug (0) > 
+Goal:
+  
+  a : elt
+  s2 : Info.t elt
+  b : elt
+  s1 : list (key * elt)
+  c : elt
+  H : forall y : key, In y s2 <-> In y s1 /\ ~ In y (rev (b s1))
+  a0 : elt
+  b0 : elt
+  s1 : list (key * elt)
+  H0 : 0 == 0
+  H1 : pos (s2, b) -> False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (0) > 
+Debug: Level 0: Proof is not complete.
+
+Debug: Level 0: Proof is not complete.
+
+Goal:
+  
+  a : elt
+  s2 : Info.t elt
+  b : elt
+  s1 : list (key * elt)
+  c : elt
+  H : forall y : key, In y s2 <-> In y s1 /\ ~ In y (rev (b s1))
+  a0 : elt
+  b0 : elt
+  s1 : list (key * elt)
+  H0 : 0 == 0
+  H1 : pos (s2, b) -> False
+  ============================
+   False
+
+
+Debug: Going to execute:
+contradiction
+
+
+TcDebug (0) > 
+Goal:
+  
+  a : elt
+  s2 : Info.t elt
+  b : elt
+  s1 : list (key * elt)
+  c : elt
+  H : forall y : key, In y s2 <-> In y s1 /\ ~ In y (rev (b s1))
+  a0 : elt
+  b0 : elt
+  s1 : list (key * elt)
+  H0 : 0 == 0
+  H1 : pos (s2, b) -> False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<ltac_plugin::contradiction@0> $1
+
+
+TcDebug (0) > 
+Debug: Level 0: No such contradiction
+
+Debug: Level 0: No such contradiction
+
+Debug: Level 0: No applicable tactic.
+
+Goal:
+  
+  a : elt
+  s2 : Info.t elt
+  b : elt
+  s1 : list (key * elt)
+  c : elt
+  H : forall y : key, In y s2 <-> In y s1 /\ ~ In y (rev (b s1))
+  a0 : elt
+  b0 : elt
+  s1 : list (key * elt)
+  H0 : 0 == 0
+  H1 : pos (s2, b) -> False
+  ============================
+   (s2, b)
+
+
+Debug: Going to execute:
+generalize t; clear H
+
+
+TcDebug (0) > 
+Goal:
+  
+  a : elt
+  s2 : Info.t elt
+  b : elt
+  s1 : list (key * elt)
+  c : elt
+  H : forall y : key, In y s2 <-> In y s1 /\ ~ In y

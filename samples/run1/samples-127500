@@ -1,0 +1,152 @@
+======== SAMPLE 1 ========
+ not -> false = true
+  H5 : true = true -> In x s
+  H6 : In y s -> In x s -> In y (add x s)
+  ============================
+   (true = false && false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x s
+  H5 : true = true -> In x s
+  H6 : In y s -> In x s -> In y (add x s)
+  ============================
+   (true = false && false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x s
+  H5 : true = true -> In x s
+  H6 : In y s -> In x s -> In y (add x s)
+  ============================
+   (true = false && false)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x s
+  H5 : true = true -> In x s
+  H6 : In y s -> In x s -> In y (add x s)
+  ============================
+   (true = false && false)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x s
+  H5 : true = true -> In x s
+  H6 : In y s -> In x s -> In y (add x s)
+  ============================
+   (true = false && false)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x s
+  H5 : true = true -> In x s
+  H6 : In y s -> In x s -> In y (add x s)
+  ============================
+   (true = false && false)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x s
+  H5 : true = true -> In x s
+  H6 : In y s -> In x s -> In y (add x s)
+  ============================
+   (true = false && false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x s
+  H5 : true = true -> In x s
+  H6 : In y s -> In x s -> In y (add x s)
+  ============================
+  

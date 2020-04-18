@@ -1,0 +1,82 @@
+======== SAMPLE 1 ========
+d ll lx lr)) = find (Pos.succ n) lr \/ X.eq y x /\ Pos.succ (yn (N.pos p) :: Pos.to_nat n) ::
+        min_elt r = Some (n, m) ->
+        find (Pos.MiddleDup lr x d r) =
+        match find x l with
+        | Some d => f0 x (Some d) None
+        | None => None
+        end
+    | None => None
+    end = at_least_one_then_f o o' ->
+       find (Pos.succ n) l = Some (n, m)
+  H0 : find (Pos.succ n) l = None
+  ============================
+   (find (Pos.succ n) l = Some (n, m) ->
+    find (Pos.MiddleDup lr x d r) =
+    at_least_one_then_f o o' ->
+    find (Pos.succ n) l = None)
+
+
+Goal:
+  
+  l : tree
+  o : bool
+  r : tree
+  IHl : forall l : tree,
+        min_elt l = Some (Node l lx lr) ->
+        find (Pos.lt_tree ll lx lr) =
+        match lx ll with
+        | Some d => f0 x (Some d) None
+        | None => None
+        end
+  IHr : forall (x : X.t) (y : elt),
+        r <xx ?<->esity ?lx} =
+        find (elt:=oee') x (combine x l) =
+        match find x l with
+        | Some d => f0 x None (Some d)
+        | None => None
+        end
+  x : elt
+  y : elt
+  c : I.t
+  l : tree
+  r : tree
+  n0 : tree
+  y0 : X.t
+  H1 : ltb_tree x (Node l x r) = find y0 (create l x r)
+  H2 : rbt n0 r
+  H3 : min_elt l = Some (n, m)
+  H4 : find (Pos.succ n) l = None
+  H : None = at_least_one o o'
+  H5 : Some (Node l x r) = None
+  ============================
+   (find (Pos.succ n) l = None)
+
+
+Goal:
+  
+  l : tree
+  o : bool
+  r : tree
+  IHl : forall l : tree,
+        min_elt l = Some (Node l lx lr) ->
+        find (Pos.lt_tree ll lx lr) =
+        match lx ll with
+        | Some d => f0 x (Some d) None
+        | None => None
+        end
+  IHr : forall (x : X.t) (y : elt),
+        r <xx ?<-> obesity ?lx} =
+        find (elt:=oee') x (combine x l) =
+        match find x l with
+        | Some d => f0 x None (Some d)
+        | None => None
+        end
+  x : elt
+  y : elt
+  c : I.t
+  l : tree
+  r : tree
+  n0 : tree
+  y0 : X.t
+  H1 : ltb_tree x (Node l x r) = find y0 (create l

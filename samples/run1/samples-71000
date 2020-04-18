@@ -1,0 +1,177 @@
+======== SAMPLE 1 ========
+  a : E.t
+  H : In a s''
+  ============================
+   (E.eq x a \/ In a s)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : In x s''
+  ============================
+   (E.eq x a \/ In a s)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : In x s''
+  ============================
+   (E.eq x a \/ In a s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : In x s''
+  ============================
+   (E.eq x a \/ In a s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : In x s''
+  ============================
+   (E.eq x a \/ In a s)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : In x s''
+  ============================
+   (E.eq x a \/ In a s)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : In x s''
+  ============================
+   (E.eq x a \/ In a s)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : In x s''
+  ============================
+   (E.eq x a \/ In a s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : In x s''
+  ============================
+   (E.eq x a \/ In a s)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : In x s''
+  ============================
+   (E.eq x a \/ In a s)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  H : In x s''
+  ============================
+   (E.eq x a \/ In a s)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:

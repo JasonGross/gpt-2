@@ -1,0 +1,36 @@
+======== SAMPLE 1 ========
+ change c' with
+        | Cp_phi => pow_N 1 rmul (mk_eq_pos x m' / cmp e e' / cmp e r)
+        | sub_pos : sub_neq bool
+        | opp_neg_neg_ep_pred : forall P : Pol, (x :: y) -> (P :: y :: cmp p0 e0 cmp e0 pe),
+           In * (jump p pe ->
+           (PEO ==> PEO)%signature (jump p pe -> False) pe)
+  lpe : P
+  H : P - PEO
+  x : nat
+  y : nat
+  cmp : PExpr C
+  H0 : (jump p pe ->
+         (PEO ==> PEO)%signature pe ->
+          (PEO ==> PEO)%signature (PEpow_permut_rec y pe)
+  list_hyp := nil : list (Ring_polynom.PExpr N * Ring_polynom.PExpr N)
+  list_hyp_norm := nil : list (N * Ring_polynom.Mon * Ring_polynom.Pol Z)
+  ring_lemma : forall (pe : Ring_polynom.PExpr N) (npe : Ring_polynom.Pol Z),
+              Ring_polynom.norm_subst 0 1 R 1 R+1 R+2
+                (triv_div 0 1 R 1 R) ring_subst_niter list_hyp_norm pe =
+               npe ->
+              Ring_polynom.PEeval 0 1 R 1 R+1 R+2
+                (Ring_polynom.PEadd (Ring_polynom.PEX Z 1)
+                    pe ==
+                Ring_polynom.PEmul (Ring_polynom.PEX Z 2)
+                   (Ring_polynom.PEopp (Ring_polynom.PEX Z 3))
+                     (Ring_polynom.PEc (-1))%CReal
+                        pe ==
+                 Ring_polynom.PEmul (Ring_polynom.PEX Z 4)
+                       (Ring_polynom.PEc (-1))%CReal
+                         (Ring_polynom.PEp ceqb lmp e = false)
+                                pe ==
+                     Ring_polynom.PEpow
+                                                 Ring_polynom.PEX C c
+                                                               Ring_polynom.PEX Z 5
+                                                  

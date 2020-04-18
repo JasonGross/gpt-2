@@ -1,0 +1,123 @@
+======== SAMPLE 1 ========
+
+  x : X.t
+  l : t elt
+  o : option elt
+  rl : t elt
+  m : t elt
+  e1 : split x l = << l, o, rl << l, o, rl >>
+  IHm : bst m -> bst (mapl m)
+  Hm : In y (mapl m)
+  H0 : MX.TO.lt y x
+  ============================
+   (In y l \/
+    MX.OrderTac.OTF.eq y :: y0)
+
+
+Debug: Going to execute:
+change_no_check (MX.TO.lt x y) in H
+
+
+TcDebug (20) > 
+Debug: Evaluated term: MX.TO.lt
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : MX.TO.lt y x
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x l = << l, o, rl >>
+  IHm : bst m -> bst (mapl m)
+  Hm : In y (mapl m)
+  H0 : MX.TO.lt y x
+  ============================
+   (In y l \/
+    MX.OrderTac.OTF.eq y :: y0)
+
+
+Debug: Going to execute:
+apply MX.TO.ltr_lemma
+
+
+TcDebug (20) > 
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : MX.TO.lt y x
+  rl : t elt
+  o : option elt
+  rr : t elt
+  e1 : split x l = << l, o, rl >>
+  IHm : bst m -> bst (mapl m)
+  Hm : In y (mapl m)
+  H0 : MX.TO.lt y x
+  ============================
+   (In y l \/
+    MX.OrderTac.OTF.eq y :: y0)
+
+
+Debug: Going to execute:
+change_no_check (MX.TO.lt x y) in H
+
+
+TcDebug (20) > 
+Debug:
+Level 20: In environment
+x, y : key
+d, r : t elt
+_x : MX.TO.lt y x
+l : t elt
+o : option elt
+r r : t elt
+e1 : split x l = << l, o, rl >>
+IHm : bst m -> bst (mapl m)
+Hm : In y (mapl m)
+H0 : MX.TO.lt y x
+Unable to unify "In y (MX.TO.lt y x)" with "MX.TO.lt r".
+
+Debug:
+Level 19: In environment
+x, y : key
+d, r : t elt
+_x : MX.TO.lt y x
+l : t elt
+o : option elt
+r r : t elt
+e1 : split x l = << l, o, rl >>
+IHm : bst m -> bst (mapl m)
+Hm : In y (mapl m)
+H0 : MX.TO.lt y x
+Unable to unify "In y (MX.TO.lt y x)" with "MX.TO.lt r".
+
+Debug:
+Level 18: In environment
+x, y : key
+d, r : t elt
+_x : MX.TO.lt y x
+l : t elt
+o : option elt
+r r : t elt
+e1 : split x l = << l, o, rl >>
+IHm : bst m -> bst (mapl m)
+Hm : In y (mapl m)
+H0 : MX.TO.lt y x
+Unable to unify "In y (MX.TO.lt y x)" with "MX.TO.lt r".
+
+Goal:
+  
+  elt : Type
+  x : X.t
+  l : t elt
+

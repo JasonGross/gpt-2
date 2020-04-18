@@ -1,0 +1,92 @@
+======== SAMPLE 1 ========
+ (H3) ->
+        forall B : Prop,
+        (forall c1 : MonC Pmon c1 c2 : MonC Pmon c2 : C),
+         forall y z1 : MonC Pmon z2 : PZ,
+         (forall y : Z,
+          Zgcd y (Zgcd z1 y) ->
+         forall y : MonC Pmon z y,
+         Zgdiv y (Zgdiv z1 z2) ->
+         forall y : MonC Pmon z y,
+         Zgdiv c2 d1 d2 nil -> Zgdiv x d2 nil)
+
+Debug: Going to execute:
+inversion_clear H3
+
+
+TcDebug (3) > 
+Goal:
+  
+  env : PolEnv Z
+  e : PolC Z
+  o : Op1
+  Op : o = Strict
+  x : Z
+  H0 : 0 <= x
+  H1 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+inv_ok
+
+
+TcDebug (3) > 
+Goal:
+  
+  env : PolEnv Z
+  e : PolC Z
+  o : Op1
+  Op : o = Strict
+  x : Z
+  H0 : 0 <= x
+  H1 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match goal with
+| H:Ok (_ :: _) |- _ => inversion_clear H; inv_ok
+| H:Ok nil |- _ => clear H; inv_ok
+| H:NoDup_Equiv |- _ => rewr H (eq_trans (eq_1 H1) (eq_2 H2)); order_rewr x eqn
+| H:forall y : ?T, _
+  |- _ =>
+      rewr H (eq_trans (eq_1 H1) (eq_2 H2);
+       order_rewr x eqn (eq_1 H1) (eq_2 H2);
+       order_rewr x eqn (eq_2 H2) (eq_1 H3)
+| H:forall y : ?T, _
+  |- _ => rewr H (eq_trans (eq_1 H1) (eq_2 H2);
+       order_rewr x eqn (eq_1 H1) (eq_2 H2)
+| H:forall y : ?T, _
+  |- _ => rewr H (eq_trans (eq_1 H1) (eq_2 H2);
+       order_rewr x eqn (eq_1 H1) (eq_2 H2)
+| H:eq ==> ?T
+  |- _ => rewr H (eq_eq H eq); order_rewr x eqn
+| H:eq ==> ?T
+  |- _ => rewr H (eq_eq H eq); order_rewr x eqn
+| H:ex ==> eq
+  |- _ =>
+      rewr H (eq_eq (eq_1 H1) (eq_2 H2));
+       order_rewr x eqn (eq_1 H1) (eq_2 H2)
+| H:ex ==> ?T
+  |- _ => rewr H (eq_eq (eq_1 H1) (eq_2 H2); order_rewr x eqn
+| H:ex ==> ?T
+  |- _ => rewr H (eq_eq (eq_1 H1) (eq_2 H2); order_rewr x eqn
+| _ => negb (eq_1 H1) || (exists_1, exists_2)
+end
+
+
+TcDebug (3) > 
+Goal:
+  
+  env : PolEnv Z
+  e : PolC Z
+  o : Op1
+  Op : o = Strict
+  x : Z
+  H0 : 0 <= x
+  H1 : False
+  =================

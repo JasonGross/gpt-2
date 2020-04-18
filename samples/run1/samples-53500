@@ -1,0 +1,152 @@
+======== SAMPLE 1 ========
+ = b  H : ~ find x (a mod b) = Some a
+  ============================
+   (find x (a * b) = Some a -> find x a <-> find x a mod b = find x a mod b)
+
+
+Debug:
+Going to execute:
+let x' := fresh "res" in
+let H := fresh in
+pose proof by transpose H in H; clear H; clear H; lt_hyps ltac:(())
+
+
+TcDebug (8) > 
+Goal:
+  
+  a : t
+  b : t
+  Ha : 0 <= a
+  Hb : b < 0
+  Hc : 0 <= c
+  LE : 0 <= a
+  LT : 0 < - b
+  ============================
+   (find x (a mod b) = Some a -> find x (a * b) = Some a -> find x a <-> find x a mod b = find x a mod b)
+
+
+Debug:
+Going to execute:
+pose proof by transpose H in H; clear H; lt_hyps ltac:(())
+
+
+TcDebug (9) > 
+Goal:
+  
+  a : t
+  b : t
+  Ha : 0 <= a
+  Hb : b < 0
+  Hc : 0 <= c
+  LE : 0 <= a
+  LT : 0 < - b
+  ============================
+   (find x (a mod b) = Some a -> find x (a * b) = Some a -> find x a <-> find x a mod b = find x a mod b)
+
+
+Debug:
+Going to execute:
+pose proof by transpose H in H; clear H; lt_hyps ltac:(())
+
+
+TcDebug (10) > 
+Debug: Level 10: evaluation returns
+<ltac_plugin::pose@0>
+
+
+Debug: Level 9: evaluation returns
+<tactic closure>
+
+
+Debug: Level 8: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  a : t
+  b : t
+  Ha : 0 <= a
+  Hb : b < 0
+  Hc : 0 <= c
+  LE : 0 <= a
+  LT : 0 < - b
+  ============================
+   (find x (a mod b) = Some a -> find x (a * b) = Some a -> find x a <-> find x a mod b = find x a mod b)
+
+
+Debug: Going to execute:
+pose proof by transpose H in H
+
+
+TcDebug (8) > 
+Goal:
+  
+  a : t
+  b : t
+  Ha : 0 <= a
+  Hb : b < 0
+  Hc : 0 <= c
+  LE : 0 <= a
+  LT : 0 < - b
+  ============================
+   (find x (a mod b) = Some a -> find x (a * b) = Some a -> find x a <-> find x a mod b = find x a mod b)
+
+
+Debug: Going to execute:
+pose proof by transpose H in H
+
+
+TcDebug (8) > 
+Debug: Evaluated term: (find x (a mod b) = Some a)
+
+Goal:
+  
+  a : t
+  b : t
+  Ha : 0 <= a
+  Hb : b < 0
+  Hc : 0 <= c
+  LE : 0 <= a
+  LT : 0 < - b
+  ============================
+   (find x (a mod b) = Some a)
+
+
+Debug: Going to execute:
+intro H
+
+
+TcDebug (8) > 
+Goal:
+  
+  a : t
+  b : t
+  Ha : 0 <= a
+  Hb : b < 0
+  Hc : 0 <= c
+  LE : 0 <= a
+  LT : 0 < - b
+  ============================
+   (find x (a mod b) = Some a)
+
+
+Debug: Going to execute:
+<ltac_plugin::intro@0>
+
+
+TcDebug (8) > 
+Goal:
+  
+  a : t
+  b : t
+  Ha : 0 <= a
+  Hb : b < 0
+  Hc : 0 <= c
+  LE : 0 <= a
+  LT : 0 < - b
+  ============================
+   (find x (a mod b) = Some a)
+
+
+

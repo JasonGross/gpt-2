@@ -1,0 +1,132 @@
+======== SAMPLE 1 ========
+ x : elt
+  y : elt
+  z : elt
+  H5 : false = true -> In x s
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H6 : In x s'
+  H8 : In x s' -> In x (inter s s')
+  H7 : In x s /\ In x s'
+  H9 : In x s' -> In x (inter s s')
+  ============================
+   (true = false && false)
+
+
+Debug: Going to execute:
+assert X2; [ exact (id0 id1) | clear id0 ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H5 : false = true -> In x s
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H6 : In x s'
+  H8 : In x s' -> In x (inter s s')
+  H7 : In x s /\ In x s'
+  H9 : In x s' -> In x (inter s s')
+  ============================
+   (true = false && false)
+
+
+Debug: Going to execute:
+assert X2
+
+
+TcDebug (1) > 
+Debug: Evaluated term: bool
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H5 : false = true -> In x s
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H6 : In x s'
+  H8 : In x s' -> In x (inter s s')
+  H7 : In x s /\ In x s'
+  H9 : In x s' -> In x (inter s s')
+  ============================
+   bool
+
+
+Debug: Going to execute:
+exact (id0 id1)
+
+
+TcDebug (1) > 
+Debug: Evaluated term: (f x)
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H5 : false = true -> In x s
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H6 : In x s'
+  H8 : In x s' -> In x (inter s s')
+  H7 : In x s /\ In x s'
+  H9 : In x s' -> In x (inter s s')
+  ============================
+   bool
+
+
+Debug: Going to execute:
+<ltac_plugin::exact@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H5 : false = true -> In x s
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H6 : In x s'
+  H8 : In x s' -> In x (inter s s')
+  H7 : In x s /\ In x s'
+  H9 : In x s' -> In x (inter s s')
+  H0 : bool
+  H : In x s
+  H6 : In x s -> In x s'
+  ============================
+   (true = false && false)
+
+
+Debug: Going to execute:
+clear id0
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H5 : false = true -> In x s
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H6 : In x s'
+  H8 : In x s' -> In x (inter s s')
+  H7 : In x s /\ In x s'
+  H9 : In x s' -> In x (inter s

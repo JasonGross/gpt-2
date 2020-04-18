@@ -1,0 +1,68 @@
+======== SAMPLE 1 ========
+ E.t
+  e' : elt
+  m2 : t elt
+  Heq : is_list_hyp H1 = E.eq
+  H : is_list_hyp H1 = None ->
+      forall e1 : elt,
+      None = None ->
+      None = Some e1 ->
+      forall e2 : elt, Some e0 = Some e2 ->
+      None = Some e ->
+      forall e1 : elt,
+      Some e = Some e1 ->
+      Some e0 = Some e ->
+      None = None ->
+      Ring_polynom.Peq N.eqb
+        (Ring_polynom.norm_subst 0 1 N.add N.mul 
+           (SRsub N.add) (SRopp (R:=N)) N.eqb N.div_eucl hyp_list
+         (SRsub N.add) (SRopp (R:=N)) N.eqb N.div_eucl H1 H2) ->
+       (forall e : N, Some e = Some e) ->
+      (forall env : PolEnv, PolEnv.norm_subst 0 1 N.add N.mul 
+          (SRsub N.add) (SRopp (R:=N)) N.eqb N.div_eucl hyp_list
+         (SRsub N.add) (SRopp (R:=N)) N.eqb N.div_eucl H1 H2)
+  x : N
+  H1 : Some (E.eq x (elements s) = None ->
+       forall env : PolEnv, PolEnv.pol_neq_hyp H1 -> False
+  H2 : Some (E.eq x (elements s) = None)
+  ============================
+   ( None = Some e)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.simplif> flags;
+ <Coq.Init.Tauto.axioms> flags ||
+   match reverse goal with
+   | id:(?X1 -> ?X2) -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (X1 -> X2);
+             [ exact
+             id
+             | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear
+                 id; (solve [ t_tauto_intuit ]) ] ]
+   | id:~ ?X1 -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (~ X1);
+             [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+   | |- ?X1 =>
+         <Coq.Init.Tauto.is_disj> flags X1; (solve
+          [ left; t_tauto_intuit | right; t_tauto_intuit ])
+   end ||
+     match goal with
+     | |- _ -> _ => intro; t_tauto_intuit
+     | |- _ => t_reduce; t_solver
+     end || t_solver
+in
+t_tauto_intuit
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x :

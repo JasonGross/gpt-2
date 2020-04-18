@@ -1,0 +1,70 @@
+======== SAMPLE 1 ========
+'
+  k' : X.t
+  e' : elt
+  l' : list (X.t * elt)
+  m : list (X.t * elt)
+  IHm : Sorted (ltk (elt:=elt')) m ->
+        forall m' : list (X.t * elt'),
+        Sorted (ltk (elt:=elt')) m' ->
+        forall x : key,
+        find (elt:=oee') x (combine m m') =
+        at_least_one (find (elt:=elt) x m) (find (elt:=elt') x m')
+  Hm : Sorted (ltk (elt:=elt)) ((k, e) :: m)
+  k' : X.t
+  e' : elt'
+  l' : list (X.t * elt)
+  m' : list (X.t * elt')
+  x : key
+  e : elt
+  e'0 : X.eq x k'
+  H : MapsTo k' e' (add k e m)
+  ============================
+   (Some e = Some k')
+
+
+Debug: Going to execute:
+assert X2; [ exact (id0 id1) | clear id0 ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  elt'' : Type
+  f : option elt -> option elt' -> option elt''
+  k : X.t
+  e : elt
+  m : list (X.t * elt)
+  IHm : Sorted (ltk (elt:=elt)) m ->
+        forall m' : list (X.t * elt'),
+        Sorted (ltk (elt:=elt')) m' ->
+        forall x : key,
+        find (elt:=oee') x (combine m m') =
+        at_least_one (find (elt:=elt) x m) (find (elt:=elt') x m')
+  Hm : Sorted (ltk (elt:=elt)) ((k, e) :: m)
+  k' : X.t
+  e' : elt'
+  l' : list (X.t * elt')
+  m' : list (X.t * elt')
+  x : key
+  e0 : elt
+  e1 : remove_min l' = None
+  H4 : False
+  H2 : at_least_one_then_f o o' = Some e0
+  H3 : at_least_one_then_f x o = None
+  H0 : find (elt:=oee') x (combine m m') = find (elt:=elt') x (combine m m')
+  H : find (elt:=elt') x (combine m m') = None
+  forall env : PolEnv, make_impl (eval_nformula env) l False)
+  X : option elt -> option elt' -> option elt''
+  X0 : option elt -> option elt''
+  H1 : ~ (eval_elt (elt:=elt) (elt':=elt'')) /\
+       (eval_elt (elt:=elt'') (combine_elt' : PEX 1 (Some e'0))
+          (fold_right_pair (option_cons (A:=elt'')) (map fst (a, e') =>
+            match True ->
+             InA X.eq x (e, e') -> X.eq x a
+              InA X.eq x r1 -> False)
+            (triv_hyp_norm
+               (fun (_ : t) (y : X.t
+             

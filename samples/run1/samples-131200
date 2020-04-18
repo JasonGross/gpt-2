@@ -1,0 +1,94 @@
+======== SAMPLE 1 ========
+ : InT a r1
+  H7 : InT a r2
+  ============================
+   (InT a r2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : InT a r2
+  H8 : eqb x1 x2 = true
+  H9 : eqb x2 x3 = true
+  H10 : eqb x1 x2 = true
+  H11 : X.eq x1 x2
+  H12 : InT x1 r1 -> InT x3 (append l2 r2)
+  H13 : InT x1 l2 -> InT x1 r2
+  H10 : InT x1 r1
+  H11 : X.eq x1 x2
+  H12 : InT x1 r1 -> InT x3 (append l2 r2)
+  H13 : InT x1 l2 -> InT x1 r2
+  H10 : InT x1 r1
+  H11 : X.eq x1 x2
+  H12 : InT x1 r1 -> InT x3 (append l2 r2)
+  H13 : InT x1 l2 -> InT x1 r2
+  H10 : InT x1 r1
+  H11 : X.eq x1 x2
+  H12 : InT x1 r1 -> InT x3 (append l2 r2)
+  H13 : InT x1 l2 -> InT x1 r2
+  H10 : InT x1 r1
+  H11 : X.eq x1 x2
+  H12 : InT x1 r1 -> InT x3 (append l2 r2)
+  H13 : InT x1 l2 -> InT x1 r2
+  H10 : InT x1 r1
+  H11 : X.eq x1 x2
+  H12 : InT x1 r1 -> InT x3 (append l2 r2)
+  H13 : InT x1 l2 -> InT x1 r2
+  H10 : InT x1 r1
+  H11 : X.eq x1 x2
+  H12 : InT x1 r1 -> InT x3 (append l2 r2)
+  H13 : InT x1 l2 -> InT x1 r2
+  H10 : InT x1 r1
+  H11 : X.eq x1 x2
+  H12 : InT x1 r1 -> InT x3 (append l2 r2)
+  H13 : InT x1 l2 -> InT x1 r2
+  H10 : InT x1 r1
+  ============================
+   (InT a r2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  c1 : Info.t
+  l1 : tree
+  x1 : X.t
+  r1 : tree
+  c2 : Info.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  H5 : Ok l2
+  H6 : Ok r2
+  H7 : InT a r2
+  H8 : eqb x1 x2 = true
+  H9 : eqb x2 x3 = true
+  H10 : eqb x1 x2 = true
+  H11 : X.eq x1 x2
+  H12 : InT x1 r1 -> InT x3 (append l2 r2)
+  H13 : InT x1 l2 -> InT x1 r2
+  H10 : InT x1 r1
+  H11 : X.eq x1 x2
+  H12 : InT x1 r1 -> InT x3 (append l2 r2)
+  H13 : InT x1 l2 -> InT x1 r2
+  H10 : InT x1 r1
+  H11 :

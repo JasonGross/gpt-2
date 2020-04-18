@@ -1,0 +1,79 @@
+======== SAMPLE 1 ========
+     | rI => fun _ => FEO
+     | rplus => fun _ => FEI
+     | rtimes => fun _ => FPEopp (rplus i n) (f y n)
+     | rtimes => fun _ => FEI
+     | _ => let p := Find_at t fv in
+                 PEX C p
+     end
+ | ?c => fun _ => FEc c
+ end
+in
+f ltac:(())
+
+
+TcDebug (15) > 
+Goal:
+  
+  n : t
+  m : t
+  p : t
+  H0 : p + n <= m + p
+  H1 : min n p == m + p
+  H2 : p <= m
+  H : min n p <= p
+  ============================
+   (min n p + p <= p)
+
+
+Debug:
+Going to execute:
+match Cst t with
+| NotConstant =>
+    match t with
+    | rO => fun _ => FEO
+    | rI => fun _ => FEI
+    | radd ?t1 ?t2 =>
+        fun _ => let e1 := mkP t1 in
+                  let e2 := mkP t2 in
+                  FEadd e1 e2
+    | rmul ?t1 ?t2 =>
+        fun _ => let e1 := mkP t1 in
+                   let e2 := mkP t2 in
+                   FEmul e1 e2
+    | rsub ?t1 ?t2 =>
+        fun _ => let e1 := mkP t1 in
+                   let e2 := mkP t2 in
+                   FEsub e1 e2
+    | ropp ?t1 => fun _ => let e1 := mkP t1 in
+                            FEopp e1
+    | rdiv ?t1 ?t2 =>
+        fun _ => let e1 := mkP t1 in
+                  let e2 := mkP t2 in
+                  FEdiv e1 e2
+    | rinv ?t1 => fun _ => let e1 := mkP t1 in
+                             FEinv e1
+    | rpow ?t1 ?n =>
+        match CstPow n with
+        | NotConstant => fun _ => let p := Find_at t fv in
+                                  FEX C p
+        | ?c => fun _ => let e1 := mkP t1 in
+                          FEpow e1 c
+        end
+    | _ => fun _ => let p := Find_at t fv in
+                    FEX C p
+    end
+| ?c => fun _ => FEc c
+end
+
+
+TcDebug (16) > 
+Goal:
+  
+  n : t
+  m : t
+  p : t
+  H0 : p + n <= m + p
+  H1 : min n p == m + p
+  H2 : p <= m
+  H : min

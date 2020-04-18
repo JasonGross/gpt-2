@@ -1,0 +1,57 @@
+======== SAMPLE 1 ========
+
+            (FEadd (FEadd (FEadd (FEopp (FEX Q 1) (FEX Q 2))) (FEX G)); maj > fv
+  ============================
+   (n <= fv)
+
+
+Debug: Going to execute:
+invlist (FEX Q 1)
+
+
+TcDebug (5) > 
+Goal:
+  
+  n : nat
+  H1 : (nat (2 # n) < fv)%nat
+  H : (n <= fv)%nat
+  list_hyp := nil : list (Ring_polynom.PExpr Q * Ring_polynom.PExpr Q)
+  list_hyp_norm := nil : list (Q * Ring_polynom.Mon * Ring_polynom.Pol Q)
+  field_lemma : forall lmp : list (Q * Ring_polynom.Mon * Ring_polynom.Pol Q),
+               Ring_polynom.mk_monpol_list 0 1 Qplus Qmult Qminus Qopp
+                 Qeq_bool (triv_div 0 1 Qeq_bool) list_hyp = lmp ->
+                forall nfe1 : linear Q,
+                Fnorm 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+                  (FEadd (FEadd (FEopp (FEX Q 3)) (FEX Q 2))) = nfe1 ->
+                forall nfe2 : linear Q,
+                Fnorm 0 1 Qplus Qmult Qminus Qopp Qeq_bool
+                  (FEadd (FEopp (FEX Q 3)) (FEX Q 2))) = nfe2 ->
+               Ring_polynom.Peq Qeq_bool
+                 (Ring_polynom.norm_subst 0 1 Qplus Qmult Qminus Qopp
+                    Qeq_bool (triv_div 0 1 Qeq_bool) ring_subst_niter lmp
+                   (Ring_polynom.PEmul (num nfe1) (denum nfe2))) = true ->
+               PCond 0 1 Qplus Qmult Qminus Qopp Qeq 
+                 (IDphi (R:=Q)) Z.of_N Qpower
+                 (n # 1 :: (n # 1) ** 1 :: nil) (Ring_polynom.PEc 0) = n
+  res := {|
+         num_polynom.PEX Q 1,
+         num_polynom.PEadd
+               (FEadd (FEopp (FEX Q 3)) (FEX Q 2))
+                (FEsub (FEadd (FEX Q 3) (FEX Q 2)))) = res
+  ============================
+   (n <= fv)
+
+
+Debug: Going to execute:
+invlist (FEX Q 1)
+
+
+TcDebug (5) > 
+Goal:
+  
+  n : nat
+  H1 : (nat (2 # n) < fv)%nat
+  H : (n <= fv)%nat
+  list_hyp := nil : list (Ring_polynom.PExpr Q * Ring_polynom.PExpr Q)
+  list_hyp_norm := nil : list (Q * Ring_polynom.Mon * Ring_polynom.Pol Q)
+  field_lemma : forall lmp : list (Q * Ring_

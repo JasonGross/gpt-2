@@ -1,0 +1,141 @@
+======== SAMPLE 1 ========
+  ============================
+   (false = false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s -> true = true
+  H0 : In x s' -> true = true
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H2 : In x (inter s s')
+  H4 : true = true
+  H1 : In x s
+  H8 : In x s'
+  H3 : In x s
+  H5 : true = true
+  H0 : In x s'
+  ============================
+   (false = false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s -> true = true
+  H0 : In x s' -> true = true
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H2 : In x (inter s s')
+  H4 : true = true
+  H1 : In x s
+  H8 : In x s'
+  H3 : In x s
+  H5 : true = true
+  H0 : In x s'
+  ============================
+   (false = false)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s -> true = true
+  H0 : In x s' -> true = true
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H2 : In x (inter s s')
+  H4 : true = true
+  H1 : In x s
+  H8 : In x s'
+  H3 : In x s
+  H5 : true = true
+  H0 : In x s'
+  ============================
+   (false = false)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s -> true = true
+  H0 : In x s' -> true = true
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H2 : In x (inter s s')
+  H4 : true = true
+  H1 : In x s
+  H8 : In x s'
+  H3 : In x s
+  H5 : true = true
+  H0 : In x s'
+  ============================
+   (false = false)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H : In x s -> true = true
+  H0 : In x s' -> true = true
+  H7 : In x s /\ In x s' -> In x (inter s s')
+  H2 : In x (inter s s')
+  H4 : true = true
+  H1 : In x s
+  H8 : In x s'
+  H3 : In x s
+  H5 : true = true
+  H0 : In x s'
+

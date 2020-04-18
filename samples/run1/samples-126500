@@ -1,0 +1,136 @@
+======== SAMPLE 1 ========
+   (In y s1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : positive
+  IHx : forall s s' : t,
+        mem x (diff s s') = true <-> mem x s = true /\ mem x s' <> true
+  s1 : tree
+  b : bool
+  s2 : tree
+  H : mem x s1 = true
+  H0 : false = true
+  ============================
+   (In y s1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : positive
+  IHx : forall s s' : t,
+        mem x (diff s s') = true <-> mem x s = true /\ mem x s' <> true
+  s1 : tree
+  b : bool
+  s2 : tree
+  H : mem x s1 = true
+  H0 : false = true
+  ============================
+   (In y s1)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : positive
+  IHx : forall s s' : t,
+        mem x (diff s s') = true <-> mem x s = true /\ mem x s' <> true
+  s1 : tree
+  b : bool
+  s2 : tree
+  H : mem x s1 = true
+  H0 : false = true
+  ============================
+   (In y s1)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : positive
+  IHx : forall s s' : t,
+        mem x (diff s s') = true <-> mem x s = true /\ mem x s' <> true
+  s1 : tree
+  b : bool
+  s2 : tree
+  H : mem x s1 = true
+  H0 : false = true
+  ============================
+   (In y s1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : positive
+  IHx : forall s s' : t,
+        mem x (diff s s') = true <-> mem x s = true /\ mem x s' <> true
+  s1 : tree
+  b : bool
+  s2 : tree
+  H : mem x s1 = true
+  H0 : false = true
+  ============================
+   (In y s1)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : positive
+  IHx : forall s s' : t,
+        mem x (diff s s') = true <-> mem x s = true /\ mem x s' <> true
+  s1 : tree
+  b : bool
+  s2 : tree
+  H : mem x s1 = true
+  H0 : false = true
+  ============================
+   (In y s1)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : positive
+  IHx : forall s s' : t,
+        mem x (diff s s') = true <-> mem x s = true /\ mem x s' <> true
+  s1 : tree
+  b

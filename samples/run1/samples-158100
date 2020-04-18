@@ -1,0 +1,47 @@
+======== SAMPLE 1 ========
+; (srewrite (ARdistr_r Rsth Reqe ARth) ->
+             end) f f') <->
+         (eval_clause env (ARdistr_l ARth) /\
+           (fold_right
+              (fun (acc : list clause) (e : clause) =>
+               match or_clause (p :: t) e with
+               | Some cl => cl :: acc
+               | None => acc
+               end) f f') <->
+         (eval_clause env (ARdistr_r Rsth Reqe ARth) /\
+          (fold_right
+             (fun (acc : list clause) (e : clause) =>
+              match or_clause (p :: t) e with
+              | Some cl => cl :: acc
+              | None => acc
+              end) f f') <->
+         (eval_clause env (ARdistr_r Rsth Reqe ARth) /\
+          (fold_right
+             (fun (acc : list clause) (e : clause) =>
+              match or_clause (p :: t) e with
+              | Some cl => cl :: acc
+              | None => acc
+              end) f f') <->
+         (eval_clause env (ARdistr_r Rsth Reqe ARth) /\
+          (fold_right
+             (fun (acc : list clause) (e : clause) =>
+              match or_clause (p :: t) e with
+              | Some cl => cl :: acc
+              | None => acc
+              end) f f') <->
+         (eval_clause env (ARdistr_r Rsth Reqe ARth) /\
+          (fold_right
+             (fun (acc : list clause) (e : clause) =>
+              match or_clause (p :: t) e with
+              | Some cl => cl :: acc
+              | None => acc
+              end) f f') <->
+         (eval_clause env (ARdistr_r Rsth Reqe ARth) /\
+          (fold_right
+             (fun (acc : list clause) (e : clause) =>
+              match or_clause (p :: t) e with
+              | Some cl => cl :: acc
+              | None => acc
+              end) f f') <->
+         (eval_clause env (ARdistr_r Rsth Reqe ARth) /\
+   

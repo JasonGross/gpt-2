@@ -1,0 +1,130 @@
+======== SAMPLE 1 ========
+ : option_or_eq@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rr : tree
+  Hr : notred rr
+  H1 : InT x rl
+  H3 : InT x (append lr rl)
+  H : InT x lr
+  H6 : InT x (append lr rl)
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rr : tree
+  Hr : notred rr
+  H1 : InT x rl
+  H3 : InT x (append lr rl)
+  H : InT x lr
+  H6 : InT x (append lr rl)
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rr : tree
+  Hr : notred rr
+  H1 : InT x rl
+  H3 : InT x (append lr rl)
+  H : InT x lr
+  H6 : InT x (append lr rl)
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rr : tree
+  Hr : notred rr
+  H1 : InT x rl
+  H3 : InT x (append lr rl)
+  H : InT x lr
+  H6 : InT x (append lr rl)
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rr : tree
+  Hr : notred rr
+  H1 : InT x rl
+  H3 : InT x (append lr rl)
+  H : InT x lr
+  H6 : InT x (append lr rl)
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rr : tree
+  Hr : notred rr
+  H1 : InT x rl
+  H3 : InT x (append lr rl)
+  H : InT x lr
+  H6 : InT x (append lr rl)
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT

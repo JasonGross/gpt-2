@@ -1,0 +1,132 @@
+======== SAMPLE 1 ========
+ H : In x s'
+  H0 : exists x0 : key, e' s'
+  H1 : E' s'
+  H3 : E' s
+  H6 : E E' s
+  H7 : E' s'
+  H4 : In x s
+  ============================
+   (E' s' /\ E' s'')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s'
+  H0 : exists x0 : key, e' s'
+  H1 : E' s'
+  H3 : E' s
+  H6 : E E' s
+  H7 : E' s'
+  H4 : In x s
+  H0 : exists x0 : key, e' s'
+  H1 : E' s'
+  H3 : E' s
+  H6 : E E' s
+  H7 : E' s'
+  H4 : In x s
+  H0 : exists x0 : key, e' s'
+  H1 : E' s'
+  H3 : E' s
+  H6 : E E' s
+  H7 : E' s'
+  H5 : E'
+  H4 : E' : In x s'
+  H2 : E'' : In x s' -> E'
+  ============================
+   (E' s' /\ E' s'')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s'
+  H0 : exists x0 : key, e' s'
+  H1 : E' s'
+  H3 : E' s
+  H6 : E E' s
+  H7 : E' s'
+  H4 : In x s
+  H0 : exists x0 : key, e' s'
+  H1 : E' s'
+  H3 : E' s
+  H6 : E E' s
+  H7 : E' s'
+  H5 : E'
+  H4 : E' : In x s'
+  H2 : E'' : In x s' -> E'
+  ============================
+   (E' s' /\ E' s'')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s'
+  H0 : exists x0 : key, e' s'
+  H1 : E' s'
+  H3 : E' s
+  H6 : E E' s
+  H7 : E' s'
+  H4 : In x s
+  H0 : exists x0 : key, e' s'
+  H1 : E' s'
+  H3 : E' s
+  H6 : E E' s
+  H7 : E' s'
+  H5 : E'
+  H4 : E' : In x s'
+  H2 : E'' : In x s' -> E'
+  ============================
+   (E' s' /\ E' s'')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (4) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : E.t
+  H : In x s'
+  H0 : exists x0 : key, e' s'
+  H1 : E' s'
+  H3 : E' s
+  H6 : E E' s
+  H7 : E' s'
+  H4 : In x

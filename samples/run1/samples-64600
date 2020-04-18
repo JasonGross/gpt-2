@@ -1,0 +1,104 @@
+======== SAMPLE 1 ========
+ y l1)
+  ============================
+   (In y ll1 \/ In y l2')
+
+
+Debug: Going to execute:
+right
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x0 : int
+  _x : height (Node ll lx ld lr _x0) > height r + 2
+  _x1 : height ll >= height lr
+  y : key
+  H0 : X.eq y x \/ In y (Node ll lx ld lr _x0) \/ In y r
+  l : X.t
+  ============================
+   (X.eq y x \/ In y (Node ll lx ld lr _x0) \/ In y r \/ In y r)
+
+
+Debug: Going to execute:
+fun => <ltac_plugin::right@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x0 : int
+  _x : height (Node ll lx ld lr _x0) > height r + 2
+  _x1 : height ll >= height lr
+  y : key
+  H0 : X.eq y x \/ In y (Node ll lx ld lr _x0) \/ In y r
+  l : X.t
+  ============================
+   (In y ll1 \/ In y l2')
+
+
+Debug: Going to execute:
+t_tauto_intuit
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x0 : int
+  _x : height (Node ll lx ld lr _x0) > height r + 2
+  _x1 : height ll >= height lr
+  y : key
+  H0 : X.eq y x \/ In y (Node ll lx ld lr _x0) \/ In y r
+  l : X.t
+  ============================
+   (In y ll1 \/ In y l2')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.simplif> flags;
+ <Coq.Init.Tauto.axioms> flags ||
+   match reverse goal with
+   | id:(?X1 -> ?X2) -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (X1 -> X2);
+             [ exact
+             id
+             | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear
+                id; (solve [ t_tauto_intuit ]) ] ]
+   | id:~ ?X1 -> ?X3
+     |- _ =>
+         cut X3;
+          [ intro; clear id; t_tauto_intuit
+          | cut (~ X1);
+             [ exact id | clear id; intro; (solve [ t_tauto_intuit ]) ] ]
+   | |- ?X1 =>
+         <Coq.Init.Tauto.is_disj> flags X1; (solve
+          [ left; t_tauto_intuit |

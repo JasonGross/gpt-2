@@ -1,0 +1,90 @@
+======== SAMPLE 1 ========
+<tactic closure>
+
+
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  s : t
+  x : elt
+  l : list elt
+  f : elt -> bool
+  Hf : Proper (X.eq ==> eq) f
+  s1, s2 : t
+  H : forall a : elt, MapsTo a f s2 <-> In a (fold f (singleton x)))
+  x0 : elt
+  H0 : MapsTo x0 s2
+  H1 : forall x : elt, In x s2 <-> In x (filter f (x1 :: l1))
+  ============================
+   (MapsTo x0 (x :: s2) ->
+    In x0 s2 ->
+    (f x = gt (s2 x -> s2 x0)) x0 \/ In x (a :: s2 x0) /\ f x = s2 x0 \/
+    (x :: s2 x -> X.eq x0 x \/ In x0 s2))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  s : t
+  x : elt
+  l : list elt
+  f : elt -> bool
+  Hf : Proper (X.eq ==> eq) f
+  s1, s2 : t
+  H : forall a : elt, MapsTo a f s2 <-> In a (fold f (singleton x)))
+  x0 : elt
+  H0 : MapsTo x0 s2
+  H1 : forall x : elt, In x s2 <-> In x (filter f (x1 :: l1))
+  ============================
+   (MapsTo x0 (x :: s2) ->
+    In x0 s2 ->
+    (f x = gt (s2 x -> s2 x0)) x0 \/ In x (a :: s2 x0) /\ f x = s2 x0 \/ x0 s2))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_Transitive : Transitive X.eq
+  s : t
+  x : elt
+  l : list elt
+  f : elt -> bool
+  Hf : Proper (X.eq ==> eq) f
+  s1, s2 : t
+  H : forall a : elt, MapsTo a f s2 <-> In a (fold f (singleton x)))
+  x0 : elt
+  H0 : MapsTo x0 s2
+  H1 : forall x : elt, In x s2 <-> In x (filter f (x1 :: l1))
+  ============================
+   (MapsTo x0 (x :: s2) ->
+    In x0 s2 ->
+    (f x = gt (s2 x -> s2 x0)) x0 \/ In x (a :: s2 x0) /\ f x = s2 x0 \/
+    (x :: s2 x -> X.eq x0 x \/ In x0 s2))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Reflexive X.eq
+  eqsym := Equivalence_Symmetric : Symmetric X.eq
+  eqtrans := Equivalence_

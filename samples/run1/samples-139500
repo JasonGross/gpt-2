@@ -1,0 +1,150 @@
+======== SAMPLE 1 ========
+?Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x (union s s')
+  H4 : true = true
+  H1 : In x s'
+  H3 : In x s
+  H5 : In x s'
+  H7 : false = true
+  H0 : true = true
+  H : In x s
+  H8 : In x s' -> In x (union s s')
+  ============================
+   (true = false && true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x (union s s')
+  H4 : true = true
+  H1 : In x s'
+  H3 : In x s
+  H5 : In x s'
+  H7 : false = true
+  H0 : true = true
+  H : In x s
+  H8 : In x s' -> In x (union s s')
+  ============================
+   (true = false && true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x (union s s')
+  H4 : true = true
+  H1 : In x s'
+  H3 : In x s
+  H5 : In x s'
+  H7 : false = true
+  H0 : true = true
+  H : In x s
+  H8 : In x s' -> In x (union s s')
+  ============================
+   (true = false && true)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x (union s s')
+  H4 : true = true
+  H1 : In x s'
+  H3 : In x s
+  H5 : In x s'
+  H7 : false = true
+  H0 : true = true
+  H : In x s
+  H8 : In x s' -> In x (union s s')
+  ============================
+   (true = false && true)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x (union s s')
+  H4 : true = true
+  H1 : In x s'
+  H3 : In x s
+  H5 : In x s'
+  H7 : false = true
+  H0 : true = true
+  H : In x s
+  H8 : In x s' -> In x (union s s')
+  ============================
+   (true = false && true)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H2 : In x (union s s')
+  H4 : true = true
+  H

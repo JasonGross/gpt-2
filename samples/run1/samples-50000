@@ -1,0 +1,146 @@
+======== SAMPLE 1 ========
+ 4) > 
+Goal:
+    x : Q  Hx : x <= 0  H : False  H0 : x <= 0 + - x
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+    x : Q  Hx : x <= 0  H : False  H0 : x <= 0 + - x
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+    x : Q  Hx : x <= 0  H : False  H0 : x <= 0 + - x
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+    x : Q  Hx : x <= 0  H : False  H0 : x <= 0 + - x
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+    x : Q  Hx : x <= 0  H : False  H0 : x <= 0 + - x
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+    x : Q  Hx : x <= 0  H : False  H0 : x <= 0 + - x
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+    x : Q  Hx : x <= 0  H : False  H0 : x <= 0 + - x
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+    x : Q  Hx : x <= 0  H : False  H0 : x <= 0 + - x
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+    x : Q  Hx : x <= 0  H : False  H0 : x <= 0 + - x
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+    x : Q  Hx : x <= 0  H : False  H0 : x <= 0 + - x
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+    x : Q  Hx : x <= 0  H : False  H0 : x <= 0 + - x
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+    x : Q  Hx : x <= 0  H : False  H0 : x <= 0 + - x
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+    x : Q  Hx : x <= 0 

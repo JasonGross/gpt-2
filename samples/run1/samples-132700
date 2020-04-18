@@ -1,0 +1,134 @@
+======== SAMPLE 1 ========
+
+   False
+
+
+Debug:
+Going to execute:
+match R with
+| eq => fail 1
+| lt => fail 1
+| le => fail 1
+| _ =>
+    change_no_check (x == y) in H ||
+      change_no_check (x < y) in H ||
+        change_no_check (x <= y) in H || clear H || fail 1;
+     Private_OrderTac.Tac.order_prepare
+end
+
+
+TcDebug (15) > 
+Goal:
+    n : t  m : t  H : n ~= 0  Ha : m == max n m  H0 : n ~= max m n  H1 : height m == m  H : n == m
+  ============================
+   False
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (16) > 
+Debug: Level 16: R
+ has value 
+lt
+
+
+Goal:
+    n : t  m : t  H : n ~= 0  Ha : m == max n m  H0 : n ~= max m n  H1 : height m == m  H : n == m
+  ============================
+   False
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (16) > 
+Goal:
+    n : t  m : t  H : n ~= 0  Ha : m == max n m  H0 : n ~= max m n  H1 : height m == m  H : n == m
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match R with
+| eq => fail 1
+| lt => fail 1
+| le => fail 1
+| _ =>
+    change_no_check (x == y) in H ||
+      change_no_check (x < y) in H ||
+        change_no_check (x <= y) in H || clear H || fail 1;
+     Private_OrderTac.Tac.order_prepare
+end
+
+
+TcDebug (15) > 
+Goal:
+    n : t  m : t  H : n ~= 0  Ha : m == max n m  H0 : n ~= max m n  H1 : height m == m  H : n == m
+  ============================
+   False
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (16) > 
+Debug: Level 16: R
+ has value 
+le
+
+
+Goal:
+    n : t  m : t  H : n ~= 0  Ha : m == max n m  H0 : n ~= max m n  H1 : height m == m  H : n == m
+  ============================
+   False
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (16) > 
+Goal:
+    n : t  m : t  H : n ~= 0  Ha : m == max n m  H0 : n ~= max m n  H1 : height m == m  H : n == m
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match R with
+| eq => fail 1
+| lt => fail 1
+| le => fail 1
+| _ =>
+    change_no_check (x == y) in H ||
+      change_no_check (x < y) in H ||
+        change_no_check (x <= y) in H || clear H || fail 1;
+     Private_OrderTac.Tac.order_prepare
+end
+
+
+TcDebug (15) > 
+Goal:
+    n : t  m : t  H : n ~= 0  Ha : m == max n m  H0 : n ~= max m n  H1 : height m == m  H : n == m
+  ============================
+   False
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (16) > 
+Debug: Level 16: R
+ has value 
+le
+
+
+Goal:
+    n : t  m : t  H : n ~= 0  Ha : m == max n m  H0 : n ~=

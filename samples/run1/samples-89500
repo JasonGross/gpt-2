@@ -1,0 +1,163 @@
+======== SAMPLE 1 ========
+  H2 : In a s'
+  H4 : E.eq x a
+  H5 : False
+  H3 : In a s'
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  a : E.t
+  H0 : In a s -> False
+  H1 : In a s'
+  H0 : E.eq x a
+  H : False
+  H2 : In a s'
+  H4 : E.eq x a
+  H5 : False
+  H3 : In a s'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  a : E.t
+  H0 : In a s -> False
+  H1 : In a s'
+  H0 : E.eq x a
+  H : False
+  H2 : In a s'
+  H4 : E.eq x a
+  H5 : False
+  H3 : In a s'
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  a : E.t
+  H0 : In a s -> False
+  H1 : In a s'
+  H0 : E.eq x a
+  H : False
+  H2 : In a s'
+  H4 : E.eq x a
+  H5 : False
+  H3 : In a s'
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  a : E.t
+  H0 : In a s -> False
+  H1 : In a s'
+  H0 : E.eq x a
+  H : False
+  H2 : In a s'
+  H4 : E.eq x a
+  H5 : False
+  H3 : In a s'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  a : E.t
+  H0 : In a s -> False
+  H1 : In a s'
+  H0 : E.eq x a
+  H : False
+  H2 : In a s'
+  H4 : E.eq x a
+  H5 : False
+  H3 : In a s'
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  a : E.t
+  H0 : In a s -> False
+  H1 : In a s'
+  H0 : E.eq x a
+  H : False
+  H2 : In a s'
+  H4 : E.eq x a
+  H5 : False
+  H3 : In a s'
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  s : t
+  s' : t
+  a : E.t
+  H0 : In a s -> False
+  H1 : In a s'
+  H0 : E.eq x a
+  H : False
+  H2 : In a s'
+

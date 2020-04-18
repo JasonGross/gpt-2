@@ -1,0 +1,124 @@
+======== SAMPLE 1 ========
+       (eval_nformula env' f) ->
+         eval_nformula env' (extract_Z 1, 2)
+  IHf : forall (pol : bool) (env : Env),
+        eval_cnf env (xcnf pol f1) \/
+        eval_f (fun x : Prop => x) (eval env) (if pol then f1 else NFormula f1)
+  env : Env
+  H0 : eval_cnf env (xcnf true f1)
+  H1 : eval_cnf env (xcnf false f2)
+  H3 : eval_f (fun x : Prop => x) (eval env) f1
+  H6 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : BinNums.N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  T : Type
+  env : PolEnv
+  a : R
+  b : R
+  c : R
+  d : R
+  f : R
+  H : ~ b * c == 0 + - e
+  H0 : ~ b * c == 0 + - e
+  H : ~ d * f == 0
+  H1 : ~ b == 0
+  H3 : ~ d == 0
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : BinNums.N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  T : Type
+  env : PolEnv
+  a : R
+  b : R
+  c : R
+  d : R
+  f : R
+  H : ~ b * c == 0 + - e
+  H0 : ~ b * c == 0 + - e
+  H : ~ d * f == 0
+  H1 : ~ b == 0
+  H3 : ~ d == 0
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+ 

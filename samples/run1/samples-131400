@@ -1,0 +1,128 @@
+======== SAMPLE 1 ========
+tree x' r
+  H : X.eq y x
+  ============================
+   (X.eq y x')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x' : X.t
+  r : tree
+  IHr : forall (x : X.t) (y : elt), InT y (ins x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x x'
+  H0 : X.eq y x \/ InT y r
+  ============================
+   (X.eq y x')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x' : X.t
+  r : tree
+  IHr : forall (x : X.t) (y : elt), InT y (ins x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x x'
+  H0 : X.eq y x \/ InT y r
+  ============================
+   (X.eq y x')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  l : tree
+  x' : X.t
+  r : tree
+  IHr : forall (x : X.t) (y : elt), InT y (ins x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x x'
+  H0 : X.eq y x \/ InT y r
+  ============================
+   (X.eq y x')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l : tree
+  x' : X.t
+  r : tree
+  IHr : forall (x : X.t) (y : elt), InT y (ins x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x x'
+  H0 : X.eq y x \/ InT y r
+  ============================
+   (X.eq y x')
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x' : X.t
+  r : tree
+  IHr : forall (x : X.t) (y : elt), InT y (ins x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x x'
+  H0 : X.eq y x \/ InT y r
+  ============================
+   (X.eq y x')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x' : X.t
+  r : tree
+  IHr : forall (x : X.t) (y : elt), InT y (ins x r) <-> X.eq y x \/ InT y r
+  x : X.t
+  y : elt
+  H : X.lt x x'
+  H0 : X.eq y x \/ InT y r
+  ============================
+   (X.eq y x')
+
+
+Debug: Going to execute:
+<Coq.Init

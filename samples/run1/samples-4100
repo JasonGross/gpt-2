@@ -1,0 +1,105 @@
+======== SAMPLE 1 ========
+ b: (e -> m)
+  H : (m -> (f :: m * n)) ->
+       exact (B k a m)
+  ============================
+   (InTermN b m =
+     ?In a k (f c) ->
+     ?Trans l _x \/ In a k m <->
+     (e -> m)
+  ============================
+   (InTermN b m =
+     ?Trans l _x \/ In a k (f c) ->
+     ?Trans l _x \/ In a k m <->
+     (e -> m)
+ 
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  _x : I.t
+  l : tree
+  f : list (LeafExpr LeafExpr)
+  f0 : list (LeafExpr LeafExpr -> Private -> In x m l)
+  H0 : equivlistM (f l) m0
+  H1 : In a (e, f) -> In a m0
+  ============================
+   (InTermN b _x \/ In a k (f c) ->
+     ~ (e, e' * elt) <-> In a k (e, e') * LeafExpr e m)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x : I.t
+  l : tree
+  f : list (LeafExpr LeafExpr -> Private -> In x m l)
+  f0 : list (LeafExpr LeafExpr -> Private -> In x m0 l)
+  H0 : equivlistM (f l) m0
+  H1 : In a (e, f) -> In a m0
+  ============================
+   (InTermN b _x \/ In a k (f c) ->
+    ~ (e, e' * elt) <-> In a k (e, e') * LeafExpr e m)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x : I.t
+  l : tree
+  f : list (LeafExpr LeafExpr -> Private -> In x m l)
+  f0 : list (LeafExpr LeafExpr -> Private -> In x m0 l)
+  H0 : equivlistM (f l) m0
+  H1 : In a (e, f) -> In a m0
+  ============================
+   (InTermN b _x \/ In a k (f c) ->
+    ~ (e, e' * elt) <-> In a k (e, e') * LeafExpr e m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x : I.t
+  l : tree
+  f : list (LeafExpr LeafExpr -> Private -> In x m l)
+  f0 : list (LeafExpr LeafExpr -> Private -> In x m0 l)
+  H0 : equivlistM (f l) m0
+  H1 : In a (e, f) -> In a m0
+  ============================
+   (InTermN b _x \/ In a k (f c) ->
+    ~ (e, e' * elt) <-> In a k (e, e') * LeafExpr e m)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  _x : I.t
+  l : tree
+  f : list (LeafExpr LeafExpr -> Private -> In x m l)
+  f0 : list (LeafEx

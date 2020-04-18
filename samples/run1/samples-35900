@@ -1,0 +1,103 @@
+======== SAMPLE 1 ========
+ f : list (NFormula * T) -> list (list (NFormula * T))
+  G := fun x : NFormula => eval_nformula env x -> False : NFormula -> Prop
+  EQ : check_inconsistent (p, o) = true
+  H : eval_op1 o (eval_pol env p) -> False
+  H0 : eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l) ->
+      make_conj G l
+  H3 : eval_op1 o (eval_pol env p) -> False
+  H4 : make_conj (fun x : NFormula => eval_nformula env x -> False) l
+  H2 : eval_cnf eval_nformula env (fold_right F (cnf_tt NFormula T) l)
+  ============================
+   ((eval_op1 o (eval_pol env p) -> False) /\
+    make_conj (fun x : NFormula => eval_nformula env x -> False) l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  env : PolEnv
+  p : PolC
+  o : Op1
+  Op : o = Equal
+  x : NFormula
+  y : NFormula
+  H : ~ (x ^~ 0 -> False)%positive
+  H1 : 0%positive = true
+  ============================
+   ((eval_op1 o (eval_pol env p) -> False) /\
+    make_conj (fun x : NFormula => eval_nformula env x -> False) l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  rplus : R -> R -> R
+  rtimes : R -> R -> R
+  rminus : R -> R -> R
+  ropp : R -> R
+  req : R -> R -> Prop
+  rle : R -> R -> Prop
+  rlt : R -> R -> Prop
+  sor : SOR 0 1 rplus rtimes rminus ropp req rle rlt
+  C : Type
+  cO : C
+  cI : C
+  cplus : C -> C -> C
+  ctimes : C -> C -> C
+  cminus : C -> C -> C
+  copp : C -> C
+  ceqb : C -> C -> bool
+  cleb : C -> C -> bool
+  phi : C -> R
+  E : Type
+  pow_phi : N -> E
+  rpow : R -> E -> R
+  addon : SORaddon
+  env : PolEnv
+  p : PolC
+  o : Op1
+  Op : o = Equal
+  x : NFormula
+  y : NFormula
+  H : ~ (x ^~ 0 -> False)%positive
+  H1 : 0%positive = true
+  ============================
+   ((eval_op1 o (eval_pol env p) -> False) /\
+    make_conj (fun x : NFormula => eval_nformula env

@@ -1,0 +1,156 @@
+======== SAMPLE 1 ========
+ to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  H0 : InT y a
+  ============================
+   (InT y (Rd (Bk l x a) x0 (Rd l y a)))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  H0 : InT y a
+  ============================
+   (InT y (Rd (Bk l x a) x0 (Rd l y a)))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  H0 : InT y a
+  ============================
+   (InT y (Rd (Bk l x a) x0 (Rd l y a)))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  H0 : InT y a
+  ============================
+   (InT y (Rd (Bk l x a) x0 (Rd l y a)))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  H0 : InT y a
+  ============================
+   (InT y (Rd (Bk l x a) x0 (Rd l y a)))
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  H0 : InT y a
+  ============================
+   (InT y (Rd (Bk l x a) x0 (Rd l y a)))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  H0 : InT y a
+  ============================
+   (InT y (Rd (Bk l x a) x0 (Rd l y a)))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (4) > 
+Goal:
+  
+  l : tree
+  x : X.t
+  r : tree
+  y : elt
+  a : tree
+  x0 : X.t
+  b : tree
+  H0 : InT y a
+  ============================
+   (InT y (

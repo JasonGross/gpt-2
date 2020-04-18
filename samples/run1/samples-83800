@@ -1,0 +1,99 @@
+======== SAMPLE 1 ========
+ fun => let (x : X.t) := z in
+                  let (x : X.t) := t in
+                  (x | t))
+   end =
+    (if (f x
+      then None else (t | t) ->
+       else z) ->
+      forall x y : Z,
+      Zgcd_pol x y = (g + - z) * (g + - y))%Z ->
+     forall x0 : Z,
+     Zgc_pol z0 = (Zgcd_pol x0 y + Zgcd_pol z0 (g + - y))%Z ->
+     forall y : Z, Zgc_pol (Zgc z0) = (Zgcd_pol x z0) ->
+     forall x0 : Z,
+     Zgc_pol (Zgc x0) = (Zgcd_pol x0 (g + - y))%Z ->
+     (if g + - z
+      then Some 0
+       else None
+        else
+          match or_clause (p :: t) e with
+          | Some cl => cl :: acc1
+          | None => acc2
+          end) f nil)
+  ============================
+   (1 + 1 = (g + - z) * (k + - y))
+
+
+Debug: Going to execute:
+f x
+
+
+TcDebug (7) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  _x : height (Leaf elt) > height r + 2
+  y : key
+  H : bst (Leaf elt) r
+  z : height r >= 0
+  H0 : In z (remove x r) <-> In z r /\ ~ In z r
+  H2 : In z r
+  H3 : 0 <= height (remove x r) - z
+  H4 : avl l
+  H5 : avl r
+  H1 : avl (remove x r)
+  H6 : avl l
+  ============================
+   (0 <= height l - height (remove x r) <= 1 ->
+    avl (remove x r) - height l <= 1 ->
+    avl (bal l y d' r))
+
+
+Debug: Going to execute:
+<ltac_plugin::f_equiv@0> $1
+
+
+TcDebug (7) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  _x : height (Leaf elt) > height r + 2
+  y : key
+  H : bst (Leaf elt) r
+  z : height r >= 0
+  H0 : In z (remove x r) <-> In z r /\ ~ In z r
+  H2 : In z r
+  H3 : 0 <= height (remove x r) - z
+  H4 : avl l
+  H5 : avl r
+  H1 : avl (remove x r)
+  H6 : avl l
+  ============================
+   (Z.to_left (height l) = left _x)
+
+
+Debug: Going to execute:
+destruct (height_true_iff) as [madd_rec_l _x_]; simpl; simpl
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  _x : height (Leaf elt) > height r + 2
+  y : key
+  H : bst (Leaf elt) r
+  z : height r >= 0
+  H0 : In z (remove x r) <-> In z r /\ ~ In z r
+  H2 : In z r
+  H3 : 0 <= height (remove x r) - z

@@ -1,0 +1,119 @@
+======== SAMPLE 1 ========
+j
+  b : positive
+  H : 0 <= positive -> False
+  H0 : forall k : key * elt, In k l -> In k l' <-> In k l /\ X.lt k' x
+  ============================
+   False
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (7) > 
+Debug: Level 7: R
+ has value 
+lt
+
+
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Equivalence eqA
+  e : Equivalence eqA
+  l : list A
+  H : 0 <= positive -> False
+  H0 : forall k : key * elt, In k l -> In k l' <-> In k l /\ X.lt k' x
+  b : positive
+  H : 0 <= positive -> False
+  H0 : forall k : key * elt, In k l -> In k l' <-> In k l /\ X.lt k' x
+  ============================
+   False
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (7) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Equivalence eqA
+  e : Equivalence eqA
+  l : list A
+  H : 0 <= positive -> False
+  H0 : forall k : key * elt, In k l -> In k l' <-> In k l /\ X.lt k' x
+  b : positive
+  H : 0 <= positive -> False
+  H0 : forall k : key * elt, In k l -> In k l' <-> In k l /\ X.lt k' x
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+(apply Private_OrderTac.Tac.not_ge_lt; intro) ||
+  (apply Private_OrderTac.Tac.not_gt_le; intro) ||
+    (apply Private_OrderTac.Tac.not_ge_le; intro) ||
+     (apply Private_OrderTac.Tac.not_ge_lt; intro) || exfalso
+
+
+TcDebug (7) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Equivalence eqA
+  e : Equivalence eqA
+  l : list A
+  H : 0 <= positive -> False
+  H0 : forall k : key * elt, In k l -> In k l' <-> In k l /\ X.lt k' x
+  b : positive
+  H : 0 <= positive -> False
+  H0 : forall k : key * elt, In k l -> In k l' <-> In k l /\ X.lt k' x
+  H1 : 0 <= positive
+  ============================
+   False
+
+
+Debug: Going to execute:
+apply Private_OrderTac.Tac.not_gt_le; intro
+
+
+TcDebug (7) > 
+Goal:
+  
+  elt : Type
+  A : Type
+  eqA : A -> A -> Equivalence eqA
+  e : Equivalence eqA
+  l : list A
+  H : 0 <= positive -> False
+  H0 : forall k : key * elt, In k l -> In k l' <-> In k l /\ X.lt k' x
+  b : positive
+  H : 0 <= positive -> False
+  H0 : forall k : key * elt, In k l -> In k l' <-> In k l /\ X.lt k' x
+  ============================
+   False
+
+
+Debug: Going to execute:
+apply Private_OrderTac.Tac.not_gt_le
+
+
+TcDebug (7) > 
+Debug: Evaluated term: Private_OrderTac.Tac.not_gt_le
+
+Debug: Level 7: In environment
+elt : Type
+, eqA : A -> A -> Equivalence eqA
+e : Equivalence eqA
+l : list A
+H : 0 <= positive -> False
+H0 : forall k : key * elt, In k l -> In k l' <-> In k l /\ X.lt k' x
+b : positive
+H : 0 <= positive -> False

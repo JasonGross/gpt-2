@@ -1,0 +1,153 @@
+======== SAMPLE 1 ========
+t -> bool
+  g : B -> B
+  phi : B -> B
+  E : (b = E)%positive -> (b = G)%positive
+  phi_inc : forall (p : positive) (a : B),
+             b phi_inc r = phi_inc r -> (b = G)%positive
+  mapr_bst : forall (a : A) (b : B),
+             b b -> (a = G)%positive
+  f0_compat : forall (x x' : X.t) (a : A),
+             b b -> (x' = G')%G -> (a = G')%G -> False
+  H : (b = B)%positive
+  l : list A
+  l' : list B
+  l''' : list B
+  H0 : forall x : A, a = x -> False
+  H1 : (Z.pos a l /\ (b = l') -> False)
+  H2 : (Z.pos a l' /\ b = l')
+  H4 : b = l
+  H3 : l' = b
+  ============================
+   False
+
+
+Debug: Going to execute:
+auto
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  B : Type
+  a : A
+  x : A
+  a' : A
+  l : list A
+  l' : list B
+  l'' : list A
+  H : (b = LT)%positive
+  l : list A
+  l' : list B
+  l''' : list B
+  ============================
+   False
+
+
+Debug: Going to execute:
+<ltac_plugin::auto@0> $1 $2 $3
+
+
+TcDebug (0) > 
+Debug: Level 0: Failed to progress.
+
+Goal:
+  
+  A : Type
+  B : Type
+  a : A
+  x : A
+  a' : A
+  l : list A
+  l'' : list A
+  H : (b = LT)%positive
+  l : list A
+  l' : list B
+  l''' : list B
+  ============================
+   False
+
+
+Debug: Going to execute:
+t; easy
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  B : Type
+  a : A
+  x : A
+  a' : A
+  l : list A
+  l'' : list A
+  H : (b = LT)%positive
+  l : list A
+  l' : list B
+  l''' : list B
+  ============================
+   False
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (b = LT)
+
+Goal:
+  
+  A : Type
+  B : Type
+  a : A
+  x : A
+  a' : A
+  l : list A
+  l'' : list A
+  H : (b = LT)%positive
+  l : list A
+  l' : list B
+  l''' : list B
+  ============================
+   False
+
+
+Debug: Going to execute:
+easy
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  B : Type
+  a : A
+  x : A
+  a' : A
+  l : list A
+  l'' : list A
+  H : (b = LT)%positive
+  l : list A
+  l' : list B
+  l''' : list B
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+let rec use_hyp H :=
+ match type of H with
+ | _ /\ _ => exact H || destruct_hyp H
+ | _ => try (solve [ inversion H ])
+ end
+with do_intro := let H := fresh in
+                 intro H; use_hyp H
+with destruct_hyp H := case H; clear H; do_intro; do_intro
+in
+let rec use_hyps :=
+ match goal with
+ | H:_ -> _

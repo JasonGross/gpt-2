@@ -1,0 +1,154 @@
+======== SAMPLE 1 ========
+ to execute:
+Cst t
+
+
+TcDebug (7) > 
+Goal:
+  
+  p : Z
+  H : 1 < p ->
+      0 <= p ->
+      forall n : Z, 1 <= n < p -> rel_prime n p
+  a : Z
+  H1 : (a | p)
+  H2 : p >= 0
+  H3 : a <= 0
+  ============================
+   (a = -1)
+
+
+Debug: Going to execute:
+Zcst
+
+
+TcDebug (8) > 
+Goal:
+  
+  p : Z
+  H : 1 < p ->
+      0 <= p ->
+      forall n : Z, 1 <= n < p -> rel_prime n p
+  a : Z
+  H1 : (a | p)
+  H2 : p >= 0
+  H3 : a <= 0
+  ============================
+   (a = -1)
+
+
+Debug:
+Going to execute:
+fun t => match isZcst t with
+         | true => t
+         | _ => NotConstant
+         end
+
+
+TcDebug (9) > 
+Debug: Level 8: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  p : Z
+  H : 1 < p ->
+      0 <= p ->
+      forall n : Z, 1 <= n < p -> rel_prime n p
+  a : Z
+  H1 : (a | p)
+  H2 : p >= 0
+  H3 : a <= 0
+  ============================
+   (a = -1)
+
+
+Debug: Going to execute:
+match isZcst t with
+| true => t
+| _ => NotConstant
+end
+
+
+TcDebug (8) > 
+Goal:
+  
+  p : Z
+  H : 1 < p ->
+      0 <= p ->
+      forall n : Z, 1 <= n < p -> rel_prime n p
+  a : Z
+  H1 : (a | p)
+  H2 : p >= 0
+  H3 : a <= 0
+  ============================
+   (a = -1)
+
+
+Debug: Going to execute:
+isZcst t
+
+
+TcDebug (9) > 
+Goal:
+  
+  p : Z
+  H : 1 < p ->
+      0 <= p ->
+      forall n : Z, 1 <= n < p -> rel_prime n p
+  a : Z
+  H1 : (a | p)
+  H2 : p >= 0
+  H3 : a <= 0
+  ============================
+   (a = -1)
+
+
+Debug:
+Going to execute:
+fun t =>
+  match t with
+  | 0 => true
+  | Z.pos ?p => isPcst p
+  | Z.neg ?p => isPcst p
+  | Z.of_nat ?n => isnatcst n
+  | Z.of_N ?n => isNcst n
+  | _ => false
+  end
+
+
+TcDebug (10) > 
+Goal:
+  
+  p : Z
+  H : 1 < p ->
+      0 <= p ->
+      forall n : Z, 1 <= n < p -> rel_prime n p
+  a : Z
+  H1 : (a | p)
+  H2 : p >= 0
+  H3 : a <= 0
+  ============================
+   (a = -1)
+
+
+Debug:
+Going to execute:
+match t with
+| 0 => true
+| Z.pos ?p => isPcst p
+| Z.neg ?p => isPcst p
+| Z.of_nat ?n => isnatcst n
+| Z.of_N ?n => isNcst n
+| _ => false
+end
+
+
+TcDebug (10) > 
+Goal:
+  
+  p : Z
+  H : 1 < p ->
+      0 <= p ->
+      forall n : Z, 1 <= n < p -> rel

@@ -1,0 +1,130 @@
+======== SAMPLE 1 ========
+T;
+     match goal with
+    | H:x < _ |- _ => solve
+    | _ => fail
+    end
+| _ => idtac
+end
+
+
+TcDebug (1) > 
+Goal:
+  
+  lh : uint
+  ll : uint
+  lx : uint
+  _x0 : I.t
+  l' : string
+  l'' : string
+  H : lh <= rh + 2
+  H2 : lh <= rh + 2
+  H3 : lh <= rh + 2
+  H0 : lh <= rh + 2
+  ============================
+   (lh ll = rh)
+
+
+Debug:
+Going to execute:
+fun f =>
+  match goal with
+  | H:x < _ |- _ => solve
+   | _ => fail
+   | _ : equiv
+   end = generalize :f x; t; (let f :=
+       match goal with
+      | H:x ~= _ |- _ => solve
+     | _ => fail
+    end = generalize :f x; t; (let f :=
+       match goal with
+      | H:x < _ |- _ => solve
+     | _ => fail
+    end = generalize :f x; t; (let f :=
+       match goal with
+      | H:x ~= x |- _ => solve
+     | _ => fail
+    end = generalize :f x; t; (let f :=
+       match goal with
+      | H:x < _ |- _ => solve
+     | _ => fail
+    end = generalize :f x; t; (let f :=
+       match goal with
+      | H:x <= _ |- _ => solve
+     | _ => fail
+    end = generalize :f x; t; (let f :=
+       match goal with
+      | H:x <= _ |- _ => solve
+     | _ => fail
+    end = generalize :f x; t; (let f :=
+        match goal with
+      | H:x ~= _ |- _ => solve
+     | _ => fail
+    end = generalize :f x; t; (let f :=
+        match goal with
+      | H:_ >_ _ |- _ => solve
+     | _ => fail
+    end = generalize :f x; t;
+   ============================
+   (x < rh)
+
+
+Debug:
+Going to execute:
+match goal with
+| H:x < _ |- _ => solve
+| _ => fail
+end
+
+
+TcDebug (1) > 
+Debug: Level 1: No applicable tactic.
+
+Goal:
+  
+  lh : uint
+  ll : uint
+  lx : uint
+  _x0 : I.t
+  l' : string
+  l' : string
+  H : lh <= rh + 2
+  H2 : lh <= rh + 2
+  H3 : lh <= rh + 2
+  H0 : lh <= rh + 2
+  ============================
+   (x < rh)
+
+
+Debug: Going to execute:
+idtac
+
+
+TcDebug (1) > 
+Goal:
+  
+  lh : uint
+  ll : uint
+  lx : uint
+  _x0 : I.t
+  l' : string
+  l' : string
+  H : lh <= rh + 2
+  H2 : lh <= rh + 2
+  H3 : lh <= rh + 2
+  H0 : lh <= rh + 2
+  ============================
+   (x < rh)
+
+
+Debug:
+Going to execute:
+fun $1 => <ltac_plugin::idtac_plugin@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 2: Failed to progress.

@@ -1,0 +1,103 @@
+======== SAMPLE 1 ========
+ P req l
+  x0 : Z
+  H : X.eq x0 x
+  ============================
+   (Z.eq x0 x \/ In x0 l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> A
+  Comp : Proper (E.eq ==> eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  i : A
+  j : A
+  H : Equal m1 m2
+  H0 : eqA i j
+  H1 : NoDupA eqk (rev (elements m1))
+  H2 : NoDupA eqk (rev (elements m2))
+  a : key
+  b : elt
+  y : (key * elt)%type
+  H4 : E.eq (fst (a, b)) (fst y)
+  H5 : snd (a, b) = snd y
+  a0 : key
+  b0 : elt
+  y0 : (key * elt)%type
+  H6 : E.eq (fst (a0, b0)) (fst y0)
+  H7 : snd (a0, b0) = snd y0
+  H3 : E.eq (fst (a, b)) (fst (a0, b0)) -> False
+  H8 : E.eq (fst y) (fst y0)
+  ============================
+   (Z.eq x0 x \/ In x0 l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> A
+  Comp : Proper (E.eq ==> eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  i : A
+  j : A
+  H : Equal m1 m2
+  H0 : eqA i j
+  H1 : NoDupA eqk (rev (elements m1))
+  H2 : NoDupA eqk (rev (elements m2))
+  a : key
+  b : elt
+  y : (key * elt)%type
+  H4 : E.eq (fst (a, b)) (fst y)
+  H5 : snd (a, b) = snd y
+  a0 : key
+  b0 : elt
+  y0 : (key * elt)%type
+  H6 : E.eq (fst (a0, b0)) (fst y0)
+  H7 : snd (a0, b0) = snd y0
+  H3 : E.eq (fst (a, b)) (fst (a0, b0)) -> False
+  H8 : E.eq (fst y) (fst y0)
+  ============================
+   (Z.eq x0 x \/ In x0 l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  f : key -> elt -> A -> A
+  Comp : Proper (E.eq ==> eq ==> eqA ==> eqA) f
+  Tra : transpose_neqkey
+  m1 : t elt
+  m2 : t elt
+  i : A
+  j : A
+  H : Equal m1 m2
+  H0 : eqA i j
+  H1 : NoDupA eqk (rev (elements m1))
+  H2 : NoDupA eqk (rev (elements

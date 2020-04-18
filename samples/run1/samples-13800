@@ -1,0 +1,80 @@
+======== SAMPLE 1 ========
+ elt,
+          Ok (inter s s') -> Ok s' -> equal s s' = true = true -> subst s s' s' = true) /\
+        In y (inter s s') <-> In y s /\ In y s' -> subst s s' = true
+  y' : elt'
+  H1 : In y s' -> subst s' s'' = true
+  H7 : In y s' <-> In y s /\ In y s'
+  ============================
+   (In y s')
+
+
+Debug: Going to execute:
+<SRD_plugin::exact@0> $1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : elt
+  IH : forall s' : t,
+        bst l ->
+        find y (inter s' a) =
+        exact (find y s) (inter s' a) ->
+        find y (inter s s') =
+        find y s' = find y s'
+  s : t
+  x' : elt
+  IH' : forall s' : t, bst (inter s s') -> find y s' = find y s'
+  s' : t
+  H0 : S s'
+  H3 : (In y s') /\ False
+  H4 : In y' s
+  H' : (In a s') /\ False
+  H5 : In a s'
+  IH2 : In y s -> In y s'
+  ============================
+   (In y s')
+
+
+Debug: Going to execute:
+f ltac:(())
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : elt
+  IH : forall s' : t,
+        bst l ->
+        find y (inter s' a) =
+        exact (find y s) (inter s' a) ->
+        find y (inter s s') =
+        find y s' = find y s'
+  s : t
+  x' : elt
+  IH' : forall s' : t, bst (inter s' a) -> find y s' = find y s'
+  s' : t
+  H0 : S s'
+  H3 : (In y s') /\ False
+  H4 : In y' s
+  H' : (In a s') /\ False
+  H5 : In a s'
+  IH2 : In y s -> In y s'
+  ============================
+   (In y s')
+
+
+Debug: Going to execute:
+t elt
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : elt
+  IH : forall s' : t,
+        bst l ->
+        find y (inter s' a) =
+        ?X63@{__:=i18n; constructor intros}
+  id : (In a s' -> eqA (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _ : elt => negb (fun _

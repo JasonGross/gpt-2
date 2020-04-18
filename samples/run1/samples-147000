@@ -1,0 +1,116 @@
+======== SAMPLE 1 ========
+ s' : t, Ok s -> Ok s' -> equal s s' = true <-> Equal s s'
+  x' : elt
+  s' : list elt
+  H : Sorted X.lt s'
+  H0 : Inf x' s'
+  H1 : Sorted X.lt s
+  H2 : Inf x s
+  C : X.eq x x'
+  y : elt
+  H3 : In y s -> In y s'
+  H4 : In y s' -> In y s
+  H6 : In y s'
+  ============================
+   (X.eq y x' \/ In y s')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : elt
+  s : list elt
+  IH : forall s' : t, Ok s -> Ok s' -> equal s s' = true <-> Equal s s'
+  x' : elt
+  s' : list elt
+  H : Sorted X.lt s'
+  H0 : Inf x' s'
+  H1 : Sorted X.lt s
+  H2 : Inf x s
+  C : X.eq x x'
+  y : elt
+  H3 : In y s -> In y s'
+  H4 : In y s' -> In y s
+  H6 : In y s'
+  ============================
+   (X.eq y x' \/ In y s')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : elt
+  s : list elt
+  IH : forall s' : t, Ok s -> Ok s' -> equal s s' = true <-> Equal s s'
+  x' : elt
+  s' : list elt
+  H : Sorted X.lt s'
+  H0 : Inf x' s'
+  H1 : Sorted X.lt s
+  H2 : Inf x s
+  C : X.eq x x'
+  y : elt
+  H3 : In y s -> In y s'
+  H4 : In y s' -> In y s
+  H6 : In y s'
+  ============================
+   (X.eq y x' \/ In y s')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : elt
+  s : list elt
+  IH : forall s' : t, Ok s -> Ok s' -> equal s s' = true <-> Equal s s'
+  x' : elt
+  s' : list elt
+  H : Sorted X.lt s'
+  H0 : Inf x' s'
+  H1 : Sorted X.lt s
+  H2 : Inf x s
+  C : X.eq x x'
+  y : elt
+  H3 : In y s -> In y s'
+  H4 : In y s' -> In y s
+  H6 : In y s'
+  ============================
+   (X.eq y x' \/ In y s')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : elt
+  s : list elt
+  IH : forall s' : t, Ok s -> Ok s' -> equal s s' = true <-> Equal s s'
+  x' : elt
+  s' : list elt
+  H : Sorted X.lt s'
+  H0 : Inf x' s'
+  H1 : Sorted X.lt s
+  H2 : Inf x s
+  C : X.eq x x'
+  y : elt
+  H3 : In y s -> In y s'
+  H4 : In y s' -> In y s
+  H6 : In y s'
+  ============================
+   (X.eq y x' \/ In y s')
+

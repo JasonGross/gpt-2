@@ -1,0 +1,108 @@
+======== SAMPLE 1 ========
+
+
+?>
+
+?>
+
+<coq id="#contrib.lt.repeat#<C-> id>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  H : positive :: nil
+  H2 : nil :: false
+  H1 : positive :: nil
+  H : nil :: true
+  h : X.t
+  t : option elt
+  H0 : X.genQ b' -> False ->
+         H0 = H0 -> t
+           H1 : positive :: nil
+  H1 : nil :: true
+  h0 : X.eq x y
+  H0 : X.eq x y -> False
+           H2 : positive :: nil
+  H2 : nil :: truth
+  H : x :: nil -> H2 :: positive :: nil
+  ============================
+   (b' ? b')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  y : key
+  H : positive :: nil
+  H2 : positive :: nil
+  H1 : positive :: nil
+  H : nil :: true
+  H : x :: nil -> H1 :: positive :: nil
+  H : x :: nil -> H1 :: positive :: nil
+           H2 : positive :: nil
+  H2 : nil :: truth
+  H : x :: nil -> H2 :: positive :: nil
+          H3 : positive :: nil
+  H3 : true :: nil
+  H : x :: nil -> H3 :: positive :: nil
+           H : positive :: nil
+            H4 : positive :: nil
+  H4 : false :: nil
+              H : positive :: nil
+                H5 : positive :: nil
+  H : positive :: nil
+              H5 : true :: nil
+  Hf : X.the_phi
+  Hg : X.lt x x
+  H0 : X.eq x y
+  H0 : X.eq x y -> False
+  H : x :: nil
+  H0 : X.eq x y
+  H0 : X.eq x nil
+  H0 : X.eq x nil
+  H : positive :: nil
+  H : true :: nil
+  H : positive :: nil
+            H1 : positive :: nil
+              H2 : positive :: nil
+               H2 : positive :: nil
+  H : nil :: true
+  H : true :: nil
+  Hg : X.lt x x
+  H0 : X.eq x y
+  H0 : X.eq x y
+  H0 : X.eq x nil
+  H0 : X.eq x nil
+  H1 : positive :: nil
+  H : nil :: true
+  H6 : X.the_phi
+  H7 : X.eq x y
+  H8 : X.eq y
+  H9 : X.eq x nil
+  H10 : X.eq y
+  H11 : X.eq x nil
+  H12 : X.eq y
+  H13 : X.eq x nil
+  H14 : X.eq x nil
+  H2 : positive :: nil
+  H : positive :: nil
+           H2 : positive :: nil
+              H3 : positive :: nil
+               ~ H3 : positive :: nil
+               ~ H4 : positive :: nil
+                 H : positive :: nil
+                ============================
+   (b' ? b')
+
+
+Debug: Going to execute:
+<Coq.Init.

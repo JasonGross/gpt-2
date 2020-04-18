@@ -1,0 +1,36 @@
+======== SAMPLE 1 ========
+
+  
+  H1 : True
+  H2 :ez2 ==>
+          (EZofI (EIraw (height rr)))
+             (EPimpl
+                 (EPeq (EZofI (EIraw _x1))
+                     (EZofI
+                        (EIadd
+                          (EImax (EIraw (height l)) (EIraw _x1))) EI1)))
+             (EPimpl
+               (EPint (EZofI (EIraw (height rr)))
+                    (EZofI
+                       (EIadd
+                           (EImax (EIraw
+                               (EIraw (height l)) 
+                                (EIadd
+                                  (EImax (EIraw (height rlr)) 
+                                 (EIraw (height l)))))
+                    EPand
+                    (EPle
+                        (EZofI
+                           (EIsub
+                              (EIadd (EImax
+                                 (EIraw (height rr)
+                                 (EIraw e1)))))
+                     (EPle
+                          (EZofI
+                             (EIsub
+                               (EIraw (height rr)))
+                              (EIraw e1))
+                             (EZofI
+                               (EIsub (EIraw (height l))
+                                   (EIraw (height ri))) EI1))) EI1)))) =
+     

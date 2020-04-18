@@ -1,0 +1,94 @@
+======== SAMPLE 1 ========
+ x  acc : list elt
+  U1 : Sorted X.lt (x1 :: nil)
+  U2 : Sorted X.lt (x2 :: nil)
+  U3 : forall x1 x3 : X.t,
+       InA X.eq x1 (rev (x) :: l) -> InA X.eq x3 (x2 :: nil) -> X.lt x1 x3
+  C : X.lt x1 x2
+  H0 : InA X.eq x acc
+  ============================
+   (X.eq x x2 \/ InA X.eq x acc)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall (l2 : list X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (inter_list l1 l2 acc) <->
+        InA X.eq x l1 /\ InA X.eq x l2 \/ InA X.eq x acc
+  x2 : X.t
+  l2 : list X.t
+  make : Pops
+  f : elt -> Pops
+  x1 : X.t
+  H0 : Pops.make l1 ((X.eq x1 :: nil) :: acc)
+  o : Op
+  P : O.eq x1
+  ============================
+   (InA X.eq x l1 /\ InA X.eq x acc)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall (l2 : list X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (inter_list l1 l2 acc) <->
+        InA X.eq x l1 /\ InA X.eq x l2 \/ InA X.eq x acc
+  x2 : X.t
+  l2 : list X.t
+  make : Pops
+  f : elt -> Pops
+  x1 : X.t
+  H0 : Pops.make l1 ((X.eq x1 :: nil) :: acc)
+  o : Op
+  P : O.eq x1
+  ============================
+   (InA X.eq x l1 /\ InA X.eq x acc)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall (l2 : list X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (inter_list l1 l2 acc) <->
+        InA X.eq x l1 /\ InA X.eq x l2 \/ InA X.eq x acc
+  x2 : X.t
+  l2 : list X.t
+  make : Pops
+  f : elt -> Pops
+  x1 : X.t
+  H0 : Pops.make l1 ((X.eq x1 :: nil) :: acc)
+  o : Op
+ 

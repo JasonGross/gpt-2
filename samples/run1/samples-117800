@@ -1,0 +1,138 @@
+======== SAMPLE 1 ========
+  False
+
+
+Debug: Going to execute:
+f ltac:(())
+
+
+TcDebug (10) > 
+Goal:
+  
+  _x3 : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  m : elt
+  e1 : remove_min l2 x2 r2 = (s2', m)
+  y : elt
+  s1 : tree
+  H : X.eq y m
+  ============================
+   False
+
+
+Debug: Going to execute:
+f ltac:(())
+
+
+TcDebug (11) > 
+Goal:
+  
+  _x3 : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  m : elt
+  e1 : remove_min l2 x2 r2 = (s2', m)
+  y : elt
+  s1 : tree
+  H : X.eq y m
+  ============================
+   False
+
+
+Debug: Going to execute:
+f ltac:(())
+
+
+TcDebug (12) > 
+Goal:
+  
+  _x3 : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  m : elt
+  e1 : remove_min l2 x2 r2 = (s2', m)
+  y : elt
+  s1 : tree
+  H : X.eq y m
+  ============================
+   False
+
+
+Debug: Going to execute:
+TFV t2 ltac:(TFV t1 fv)
+
+
+TcDebug (13) > 
+Goal:
+  
+  _x3 : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  m : elt
+  e1 : remove_min l2 x2 r2 = (s2', m)
+  y : elt
+  s1 : tree
+  H : X.eq y m
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+fun t fv =>
+  let f :=
+   match Cst t with
+   | NotConstant =>
+       match t with
+       | rO => fun _ => fv
+       | rI => fun _ => fv
+       | add ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+       | mul ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+       | sub ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+       | opp ?t1 => fun _ => TFV t1 fv
+       | pow ?t1 ?n =>
+           match CstPow n with
+           | NotConstant => fun _ => AddFvTail t fv
+           | _ => fun _ => TFV t1 fv
+           end
+       | _ => fun _ => AddFvTail t fv
+       end
+   | _ => fun _ => fv
+   end
+  in
+  f ltac:(())
+
+
+TcDebug (14) > 
+Goal:
+  
+  _x3 : I.t
+  l2 : tree
+  x2 : X.t
+  r2 : tree
+  s2' : t
+  m : elt
+  e1 : remove_min l2 x2 r2 = (s2', m)
+  y : elt
+  s1 : tree
+  H : X.eq y m
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+fun t fv =>
+  let f :=
+   match Cst t with
+   | NotConstant =>
+      match t with

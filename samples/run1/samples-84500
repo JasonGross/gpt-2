@@ -1,0 +1,134 @@
+======== SAMPLE 1 ========
+ intro; (solve [ t_tauto_intuit ]) ] ]
+| |- ?X1 =>
+      <Coq.Init.Tauto.is_disj> flags X1; (solve
+       [ left; t_tauto_intuit | right; t_tauto_intuit ])
+end
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  x : key
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  IHo : forall e : elt, bst l -> MapsTo x e r -> find x l = Some e
+  e : elt
+  H0 : X.eq x y
+  ============================
+   (forall e : elt, MapsTo x e r -> MapsTo x e r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; (solve
+ [ left; t_tauto_intuit | right; t_tauto_intuit ])
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  IHo : forall e : elt, bst l -> MapsTo x e r -> find x l = Some e
+  e : elt
+  H0 : X.eq x y
+  ============================
+   (forall e : elt, MapsTo x e r -> MapsTo x e r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  IHo : forall e : elt, bst l -> MapsTo x e r -> find x l = Some e
+  e : elt
+  H0 : X.eq x y
+  ============================
+   (forall e : elt, MapsTo x e r -> MapsTo x e r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  IHo : forall e : elt, bst l -> MapsTo x e r -> find x l = Some e
+  e : elt
+  H0 : X.eq x y
+  ============================
+   (forall e : elt, MapsTo x e r -> MapsTo x e r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  l : t elt
+  y : key
+  d : elt
+  r : t elt
+  _x : int
+  _x0 : X.lt x y
+  IHo : forall e : elt, bst l -> MapsTo x e r -> find x l = Some e
+  e : elt
+  H0 : X.eq x y
+  ============================
+   (forall e : elt, MapsTo x e r -> MapsTo x e r)
+
+
+Debug:
+Going to execute:
+match goal with
+| |- _ -> _ => intro; t_tauto_intuit
+| |- _ => t_reduce; t_solver
+end || t_solver
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  x : key
+

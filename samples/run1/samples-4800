@@ -1,0 +1,94 @@
+======== SAMPLE 1 ========
+' : Type
+  s : t
+  x : elt
+  l : list elt
+  Hrec : forall (x : elt) (d : I.t),
+         Ok d -> Ok d -> In x (del x l) <-> In x l /\ In x (del x l)
+  H : X.eq x x
+  x0 : elt
+  l0 : list elt
+  H2 : In x0 (del x l) -> X.eq x0 x0
+  ============================
+   (X.eq x0 x0)
+
+
+Debug: Going to execute:
+fun f => intro f
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l : tree
+  H0 : In x0 (del x0 (Pos.le (Node l)) l) -> False
+  H1 : (X.eq x0 x0 \/ In x0 (Node l)) -> False
+  l2 : tree
+  H3 : In x0 (del x0 (Pos.le l2)) -> False
+  H1 : (X.eq x0 x0 \/ In x0 (Node l) \/ In x0 l2) -> False
+  l3 : tree
+  H4 : In x0 l1 -> False
+  H0 : (X.eq x0 x0 \/ In x0 (Node l2)) -> False
+  H2 : In x0 (del x0 l1) -> X.eq x0 x1
+  ============================
+   (X.eq x0 x0)
+
+
+Debug: Going to execute:
+unfold not in *
+
+
+TcDebug (2) > 
+Goal:
+  
+  _x : I.t
+  l : tree
+  H0 : In x0 (del x0 (Pos.le (Node l)) l) -> False
+  H1 : (X.eq x0 x0 \/ In x0 (Node l) \/ In x0 l2) -> False
+  l3 : tree
+  H4 : In x0 l1 -> False
+  H0 : (X.eq x0 x0 \/ In x0 (Node l2)) -> False
+  H2 : In x0 (del x0 l1) -> X.eq x0 x1
+  ============================
+   (X.eq x0 x0)
+
+
+Debug: Going to execute:
+<ltac_plugin::unfold@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: "Goal" has value 
+Debug: Level 2: "Goal" has value 
+Debug: Level 1: "Debug: Level 1" has value 
+Debug: Level 1: "Debug: Level 1" has value 
+Debug: Level 1: "Debug: Level 1" has value 
+Debug: Level 1: "Debug: Level 1" has value 
+Debug: Level 1: "Debug: Level 1" has value 
+TcDebug (3) > 
+Debug: Level 3: "Goal"' is a positive term. 
+Debug: Level 3: "Goal"' is a positive term. 
+Debug: Level 3: "Goal"' is a positive term. 
+Debug: Level 3: "Goal"' is a positive term. 
+Debug: Level 3: "Goal"' is a positive term. 
+Debug: Level 3: "Goal"' is a positive term. 
+Debug: Level 3: "Goal"' is a positive term. 
+Debug: Level 3: "Goal"' is a positive term. 
+Debug: Level 3: "Goal"' is a positive term. 
+Debug: Level 3: "Goal"' is a positive term. 
+Debug: Level 3: "Goal"' is a positive term. 
+Debug: Level 3: "Goal"' is a positive term. 
+Debug: Level 3: "Goal"' is a positive term. 
+Debug: Level 3: "Goal"' is a positive term. 
+Debug: Level 7: "Goal" has value "0"
+
+Debug: Level 7: "Goal" has value "0"
+
+Debug: Level 7: "Goal" has value "0"
+Debug: Level 6: "Goal" has value "1"
+Debug: Level 6: "Goal" has value "1"
+Debug: Level 6: "Goal" has value "1"
+Debug: Level 6: "Goal" has value "1"
+Debug: Level 7: "Goal" has value "1"
+Debug

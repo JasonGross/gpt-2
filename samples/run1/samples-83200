@@ -1,0 +1,133 @@
+======== SAMPLE 1 ========
+
+   ((InT x ll \/ X.eq x lx \/ InT x lr) \/ InT x rl \/ X.eq x rx \/ InT x rr)
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  H0 : InT x a
+  H : InT x rl
+  H5 : X.eq x y
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  H0 : InT x a
+  H : InT x rl
+  H5 : X.eq x y
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  H0 : InT x a
+  H : InT x rl
+  H5 : X.eq x y
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  H0 : InT x a
+  H : InT x rl
+  H5 : X.eq x y
+  ============================
+   (InT x ll \/ X.eq x lx \/ InT x a)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H2 : X.eq x y
+  H1 : InT x lr
+  H0 : InT x a
+  H : InT x rl
+  H5 : X.eq x y
+  =========================

@@ -1,0 +1,123 @@
+======== SAMPLE 1 ========
+ t r1 -> ~ InT x a /\ rld l1
+  H1 : eqA a y -> InT x l1 \/ eqA a a y \/ InT x r1
+  H2 : eqA a x -> False
+  H3 : False
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  IH : eqA x y -> InA y l1 \/ eqA x y \/ InA y l2 /\ NoDupA (elements l1 ++ y :: l2)
+  y0 : A
+  H : NoDupA (elements l1 ++ elements y0)
+  H0 : NoDupA (elements l2 ++ elements y0)
+  l : list A
+  x0 : A
+  H1 : eqA x x0
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  IH : eqA x y -> InA y l1 \/ eqA x y \/ InA y l2 /\ NoDupA (elements l1 ++ elements y0)
+  y0 : A
+  H : NoDupA (elements l2 ++ elements y0)
+  H0 : NoDupA (elements l2 ++ elements y0)
+  l : list A
+  x0 : A
+  H1 : eqA x x0
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  IH : eqA x y -> InA y l1 \/ eqA x y \/ InA y l2 /\ NoDupA (elements l1 ++ elements y0)
+  y0 : A
+  H : NoDupA (elements l2 ++ elements y0)
+  H0 : NoDupA (elements l2 ++ elements y0)
+  l : list A
+  x0 : A
+  H1 : eqA x x0
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  IH : eqA x y -> InA y l1 \/ eqA x y \/ InA y l2 /\ NoDupA (elements l1 ++ elements y0)
+  y0 : A
+  H : NoDupA (elements l2 ++ elements y0)
+  H0 : NoDupA (elements l2 ++ elements y0)
+  l : list A
+  x0 : A
+  H1 : eqA x x0
+  ============================
+   False
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  A

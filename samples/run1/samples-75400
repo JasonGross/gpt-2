@@ -1,0 +1,121 @@
+======== SAMPLE 1 ========
+ l'
+  H : forall y : key, In y rl <-> In y r /\ X.lt y x
+  H1 : X.eq y rx
+  ============================
+   (X.lt y x)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node l x d rll (max (height l) (height rll) + 1)) + 1)) > height l + 2
+  _x : height l <= height (Node (Node l x d rll (max (height l) (height rll) + 1)) + 1) + 2
+  _x1 : height rr < height (Node rll rlx rld
+  ll : t elt
+  _x0 : height r < height (Node rlr rlx rld
+  ============================
+   (X.lt y x)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node l x d rll (max (height l) (height rll) + 1)) > height l + 2
+  _x : height l <= height (Node (Node l x d rll (max (height l) (height rll) + 1)) + 1) + 2
+  _x1 : height rr < height (Node rll rlx rld
+  ll : t elt
+  _x0 : height r < height (Node rlr rlx rld
+  ============================
+   (X.lt y x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 : height (Node (Node l x d rll (max (height l) (height rll) + 1)) > height l + 2
+  _x : height l <= height (Node (Node l x d rll (max (height l) (height rll) + 1)) + 1) + 2
+  _x1 : height rr < height (Node rll rlx rld
+  ll : t elt
+  _x0 : height r < height (Node rlr rlx rld
+  ============================
+   (X.lt y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (3) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  rx : key
+  rd : elt
+  rr : t elt
+  _x1 : int
+  rll : t elt
+  rlx : key
+  rld : elt
+  rlr : t elt
+  _x3 : int
+  _x0 :

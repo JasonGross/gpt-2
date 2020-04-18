@@ -1,0 +1,48 @@
+======== SAMPLE 1 ========
+
+                       :: acc0 :: nil) pe ==
+              Ring_polynom.Pphi_pow 0 1 Z.add Z.mul Z.sub Z.opp 0 1 Zeq_bool
+                 (IDphi (R:=Z)) Z.of_N Z.pow get_signZ
+                 (p1
+                  :: r1
+                     :: Z.pos q2
+                        :: Z.pos s2
+                           :: q1 :: s1 :: Z.pos p2 :: Z.pos r2 :: nil) res)
+
+Debug: Going to execute:
+reflexivity
+
+
+TcDebug (0) > 
+Goal:
+  
+  p1 : Z
+  p2 : positive
+  q1 : Z
+  q2 : positive
+  H : p1 * Z.pos q2 = q1 * Z.pos p2
+  r1 : Z
+  r2 : positive
+  s1 : Z
+  s2 : positive
+  H0 : r1 * Z.pos s2 = s1 * Z.pos r2
+  list_hyp := nil : list (Ring_polynom.PExpr Z * Ring_polynom.PExpr Z)
+  list_hyp_norm := nil : list (Z * Ring_polynom.Mon * Ring_polynom.Pol Z)
+  ring_lemma : forall (pe : Ring_polynom.PExpr Z) (npe : Ring_polynom.Pol Z),
+               Ring_polynom.norm_subst 0 1 Z.add Z.mul Z.sub Z.opp Zeq_bool
+                 Z.quotrem ring_subst_niter list_hyp_norm pe = npe ->
+               Ring_polynom.PEeval 0 1 Z.add Z.mul Z.sub Z.opp 
+                 (IDphi (R:=Z)) Z.of_N Z.pow
+                 (p1
+                  :: r1
+                     :: Z.pos q2
+                        :: Z.pos s2
+                           :: q1 :: s1 :: Z.pos p2 :: Z.pos r2 :: nil) pe =
+              Ring_polynom.Pphi_pow 0 1 Z.add Z.mul Z.sub Z.opp 0 1 Zeq_bool
+                (IDphi (R:=Z)) Z.of_N Z.pow get_signZ
+                (p1
+                 :: r1
+                    :: Z.pos q2
+                      :: Z.pos s2
+                        :: q1 :: s1 :: Z.pos p2 :: Z.pos r2 :: nil) npe
+  res := Ring_polynom.PX (Ring_polynom.Pc 1) 1

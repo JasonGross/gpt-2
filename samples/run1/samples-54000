@@ -1,0 +1,108 @@
+======== SAMPLE 1 ========
+))
+  Hle : Equivalence_Reflexive : Reflexive X.eq
+  l = Eq
+  l0 : list X.t
+  l1 : list X.t
+  Hl1 : in l2 @ l1 (remove x l)
+  H : In x0 l
+  ============================
+   (false = true ->
+    In x0 l1 \/ In x0 (remove x l) /\ In x0 l2 \/ In x0 (remove x l1))
+
+
+Debug: Going to execute:
+rewrite (PX Pc c)
+
+
+TcDebug (2) > 
+Debug: Evaluated term: (PX Pc c)
+
+Debug: Evaluated term: (PX Pc c)
+
+Goal:
+  
+  P : t -> Type
+  Pdec : forall x : A, {P x} + {~ P x}
+  H : In x0 l
+  ============================
+   (In x0 l1 -> P x = true ->
+    In x0 l1 -> P x = true -> In x0 (remove x l) /\ (false = true) /\ In x0 l2)
+
+
+Goal:
+  
+  P : t -> Type
+  Pdec : forall x : A, {P x} + {~ P x}
+  H : ~ P x x = true ->
+    ~ P x = true -> In x0 (remove x l) /\ (false = true) /\ In x0 l2)
+
+
+Goal:
+  
+  P : t -> Type
+  Pdec : forall x : A, {P x} + {~ P x}
+  H : ~ P x x = true ->
+    ~ P x = true -> In x0 (remove x l) /\ (false = true) /\ In x0 l2)
+
+
+Goal:
+  
+  P : t -> Type
+  Pdec : forall x : A, {P x} + {~ P x}
+  H : ~ P x x = true ->
+    ~ P x = true -> In x0 (remove x l) /\ (false = true) /\ In x0 l2)
+
+
+Goal:
+  
+  P : t -> Type
+  Pdec : forall x : A, {P x} + {~ P x}
+  H : ~ P x x = true ->
+    ~ P x = true -> In x0 (remove x l) /\ (false = true) /\ In x0 l2)
+
+
+Goal:
+  
+  P : t -> Type
+  Pdec : forall x : A, {P x} + {~ P x}
+  H : ~ P x x = true ->
+    ~ P x = true -> In x0 (remove x l) /\ (false = true) /\ In x0 l2)
+
+
+Goal:
+  
+  P : t -> Type
+  Pdec : forall x : A, {P x} + {~ P x}
+  H : ~ P x x = true ->
+    ~ P x = true -> In x0 (remove x l) /\ (false = true) /\ In x0 l2)
+
+
+Goal:
+  
+  P : t -> Type
+  Pdec : forall x : A, {P x} + {~ P x}
+  H : ~ P x x = true ->
+    ~ P x = true -> In x0 (remove x l) /\ (false = true) /\ In x0 l2)
+
+
+Goal:
+  
+  P : t -> Type
+  Pdec : forall x : A, {P x} + {~ P x}
+  H : ~ P x x = true ->
+    ~ P x = true -> In x0 (remove x l) /\ (false = true) /\ In x0 l2)
+
+
+Goal:
+  
+  P : t -> Type
+  Pdec : forall x : A, {P x} + {~ P x}
+  H : ~ P x x = true ->
+    ~ P x = true -> In x0 (remove x l) /\ (false = true) /\ Inx0 l2)
+
+
+Goal:
+  
+  P : t -> Type
+  Pdec : forall x : A,

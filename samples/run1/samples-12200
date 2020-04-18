@@ -1,0 +1,121 @@
+======== SAMPLE 1 ========
+H1 : InT p
+  H2 : p
+  ============================
+   (InT p (fun x : E.t => ~ E.eq x p \/ InT x lr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  p : Z
+  H : 1 < φ (zn (genz zn) * xn zn)
+  H0 : (1 < n == (n == zn zn))%Z
+  H1 : InT p
+  H2 : p
+  ============================
+   (InT p (fun x : E.t => ~ E.eq x p \/ InT x lr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  p : Z
+  H : 1 < φ (zn (genz zn) * xn zn)
+  H0 : (1 < n == (n == zn zn))%Z
+  H1 : InT p
+  H2 : p
+  ============================
+   (InT p (fun x : E.t => ~ E.eq x p \/ InT x lr)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  p : Z
+  H : 1 < φ (zn (genz zn) * xn zn)
+  H0 : (1 < n == (n == zn zn))%Z
+  H1 : InT p
+  H2 : p
+  ============================
+   (InT p (fun x : E.t => ~ E.eq x p \/ InT x lr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  p : Z
+  H : 1 < φ (zn (genz zn) * xn zn)
+  H0 : (1 < n == (n == zn zn))%Z
+  H1 : InT p
+  H2 : p
+  ============================
+   (InT p (fun x : E.t => ~ E.eq x p \/ InT x lr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  p : Z
+  H : 1 < φ (zn (genz zn) * xn zn)
+  H0 : (1 < n == (n == zn zn))%Z
+  H1 : InT p
+  H2 : p
+  ============================
+   (InT p (fun x : E.t => ~ E.eq x p \/ InT x lr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  p : Z
+  H : 1 < φ (zn (genz zn) * xn zn)
+  H0 : (1 < n == (n == zn zn))%Z
+  H1 : InT p
+  H2 : p
+  ============================
+   (InT p (fun x : E.t => ~ E.eq x p \/ InT x lr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  p : Z
+  H : 1 < φ (zn (genz zn) * xn zn)
+  H0 : (1 < n == (n == zn zn))%Z
+  H1 : InT p
+  H2

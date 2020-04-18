@@ -1,0 +1,104 @@
+======== SAMPLE 1 ========
+ = false || true)
+a = x
+H0 : bool
+H1 : E.eq x a -> In x s
+H2 : In x s'
+H4 : true = true
+H0 : In x (union s s')
+Unable to unify "false || true" with "false".
+
+Debug:
+Level 2: In environment
+s : t
+IH : forall a : elt, false = true -> In x (union s s')
+a : elt
+Hs : Sorted X.lt s
+H : (In x s -> false = true) -> In x s'
+H0 : false = true -> In x s'
+H1 : In x (union s s') -> In x s \/ In x s'
+H2 : In x s'
+H4 : true = true
+H0 : In x (union s s')
+Unable to unify "false || true" with "false".
+
+Debug:
+Level 2: In environment
+s : t
+IH : forall a : elt, false = true -> In x (union s s')
+a : elt
+Hs : Sorted X.lt s
+H : (In x s -> false = true) -> In x s'
+H0 : false = true -> In x s'
+H1 : In x (union s s') -> In x s \/ In x s'
+H2 : In x s'
+H4 : true = true
+H0 : In x (union s s')
+Unable to unify "false || true" with "false".
+
+Debug:
+Level 2: In environment
+s : t
+IH : forall a : elt, false = true -> In x (union s s')
+a : elt
+Hs : Sorted X.lt s
+H : (In x s -> false = true) -> In x s'
+H0 : false = true -> In x s'
+H1 : In x (union s s') -> In x s \/ In x s'
+H2 : In x s'
+H4 : true = true
+H0 : In x (union s s')
+Unable to unify "false || true" with "false".
+
+Debug:
+Level 1: In environment
+s : t
+IH : forall a : elt, false = true -> In x (union s s')
+a : elt
+Hs : Sorted X.lt s
+H : (In x s -> false = true) -> In x s'
+H0 : false = true -> In x s'
+H1 : In x (union s s') -> In x s \/ In x s'
+H2 : In x s'
+H4 : true = true
+H0 : In x (union s s')
+Unable to unify "false || true" with "false".
+
+Debug:
+Level 1: In environment
+s : t
+IH : forall a : elt, false = true -> In x (union s s')
+a : elt
+Hs : Sorted X.lt s
+H : (In x s -> false = true) -> In x s'
+H0 : false = true -> In x s'
+H1 : In x (union s s') -> In x s \/ In x s'
+H2 : In x s'
+H4 : true = true
+H0 : In x (union s s')
+Unable to unify "false || true" with "false".
+
+Debug:
+Level 2: In environment
+s : t
+IH : forall a : elt, false = true -> In x (union s s')
+a : elt
+Hs : Sorted X.lt s
+H : (In x s -> false = true) -> In x s'
+H0 : false = true -> In x s'
+H1 : In x (union s s') -> In x s \/ In x s'
+H2 : In x s'
+H4 : true = true
+H0 : In x (union s s')
+Unable to unify "false || true" with "false".
+
+Debug:
+Level 2: In environment
+s : t
+IH : forall a : elt, false = true -> In x (union s s')
+a : elt
+Hs : Sorted X.lt s
+H : (In x s -> false = true) -> In x s'
+H0 : false = true -> In x s'
+H1 : In x (union s s') -> In x s \/ In x s'
+H2

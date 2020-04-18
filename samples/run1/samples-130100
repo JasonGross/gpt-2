@@ -1,0 +1,113 @@
+======== SAMPLE 1 ========
+ e0 : remove_min ll lx lr = (l', m)
+  IHp : forall (y : elt) (h : I.t),
+        InT y (Node h ll lx lr) <->
+        X.eq y (remove_min ll lx lr)#2 \/ InT y (remove_min ll lx lr)#1
+  y : elt
+  h : I.t
+  H : X.eq y x
+  ============================
+   (InT y l' \/ InT y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : elt
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  l' : t
+  m : elt
+  e0 : remove_min ll lx lr = (l', m)
+  IHp : forall (y : elt) (h : I.t),
+        InT y (Node h ll lx lr) <->
+        X.eq y (remove_min ll lx lr)#2 \/ InT y (remove_min ll lx lr)#1
+  y : elt
+  h : I.t
+  H : X.eq y x
+  ============================
+   (InT y l' \/ InT y r)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Goal:
+  
+  x : elt
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  l' : t
+  m : elt
+  e0 : remove_min ll lx lr = (l', m)
+  IHp : forall (y : elt) (h : I.t),
+        InT y (Node h ll lx lr) <->
+        X.eq y (remove_min ll lx lr)#2 \/ InT y (remove_min ll lx lr)#1
+  y : elt
+  h : I.t
+  H : X.eq y x
+  ============================
+   (InT y l' \/ InT y r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (5) > 
+Debug: Level 5: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : elt
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  l' : t
+  m : elt
+  e0 : remove_min ll lx lr = (l', m)
+  IHp : forall (y : elt) (h : I.t),
+        InT y (Node h ll lx lr) <->
+        X.eq y (remove_min ll lx lr)#2 \/ InT y (remove_min ll lx lr)#1
+  y : elt
+  h : I.t
+  H : X.eq y x
+  ============================
+   (InT y l' \/ InT y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : elt
+  r : t
+  _x : I.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  l' : t
+  m : elt
+  e0 : remove_min ll lx lr = (l', m)
+  IHp : forall (y : elt) (h : I.t),
+

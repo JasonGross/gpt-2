@@ -1,0 +1,81 @@
+======== SAMPLE 1 ========
+ const Q -> Q
+  limz : QCauchySeq zn Pos.to_nat
+  ============================
+   (~ 0 < 0)%Q
+
+
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+  zn : nat -> Q
+  limz : QCauchySeq zn Pos.to_nat
+  n : positive
+  inf : (2 # n < yn (Pos.to_nat n) - xn (Pos.to_nat n))%Q
+  eps : Q
+  Heqeps : eps = yn (Pos.to_nat n) - xn (Pos.to_nat n) - (2 # n)
+  epsPos : (0 < eps)%Q
+  H : forall n p : positive, (Pos.to_nat n <= Pos.to_nat (Pos.max n p))%nat
+  k : positive
+  kmaj : (/ eps < Z.pos k # 1)%Q
+  decMiddle : (yn (Pos.to_nat n) +
+               - ((yn (Pos.to_nat n) + xn (Pos.to_nat n)) / 2) < 1 # k)%Q
+  ============================
+   True
+
+
+Debug:
+Going to execute:
+let FV_hypo_r_tac h :=
+ match h with
+ | {| hypo_type := req _ ?pe; hypo_proof := _ |} => mkFV pe
+ end
+in
+let fv := list_fold_right FV_hypo_l_tac nil lH in
+list_fold_right FV_hypo_r_tac fv lH
+
+
+TcDebug (15) > 
+Goal:
+  
+  xn : nat -> Q
+  limx : QCauchySeq xn Pos.to_nat
+  yn : nat -> Q
+  limy : QCauchySeq yn Pos.to_nat
+  zn : nat -> Q
+  limz : QCauchySeq zn Pos.to_nat
+  n : positive
+  inf : (2 # n < yn (Pos.to_nat n) - xn (Pos.to_nat n))%Q
+  eps : Q
+  Heqeps : eps = yn (Pos.to_nat n) - xn (Pos.to_nat n) - (2 # n)
+  epsPos : (0 < eps)%Q
+  H : forall n p : positive, (Pos.to_nat n <= Pos.to_nat (Pos.max n p))%nat
+  k : positive
+  kmaj : (/ eps < Z.pos k # 1)%Q
+  decMiddle : (yn (Pos.to_nat n) +
+               - ((yn (Pos.to_nat n) + xn (Pos.to_nat n)) / 2) <
+                id_phi_N (pow_N 1 decillion)
+  ============================
+   True
+
+
+Debug:
+Going to execute:
+fun h =>
+ hmm : nat -> Prop
+  hyp_list := nil : list (Ring_polynom.PExpr Q * Ring_polynom.PExpr Q)
+  fv_list := (let l := Ring_polynom.PExpr Q in
+                  let r := Ring_polynom.PEc 0 in
+                  let fv := FV_hypo_list_hyp_norm fv l;
+                  Ring_polynom.PEc 1)
+                   (Ring_polynom.PEX Q 1)) = res0
+  ============================
+   True
+
+
+TcDebug (16) > 
+Debug:
+Evaluated term: (Ring_polynom.mk_monpol_list 0 1 Qplus

@@ -1,0 +1,133 @@
+======== SAMPLE 1 ========
+         end) f nil)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+    s : t  s' : t  a : E.t  H : In a s'
+  ============================
+   (a = e')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+    s : t  s' : t  a : E.t  H : In a s'
+  ============================
+   (a = e')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+    s : t  s' : t  a : E.t  H : In a s'
+  ============================
+   (a = e')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; split
+
+
+TcDebug (1) > 
+Goal:
+    s : t  s' : t  a : E.t  H : In a s'
+  ============================
+   (a = e')
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+    s : t  s' : t  a : E.t  H : In a s'
+  ============================
+   (a = e')
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+    s : t  s' : t  a : E.t  H : In a s'
+  ============================
+   (a = e')
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Debug: Level 0: No matching clauses for match.
+
+Debug: Level 0: No matching clauses for match.
+
+Goal:
+    s : t  s' : t  a : E.t  H : In a s'  H0 : In a s
+  ============================
+   (E.eq a x)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+    s : t  s' : t  a : E.t  H : In a s'  H0 : In a s
+  ============================
+   (E.eq a x)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+    s : t  s' : t  a : E.t  H : In a s'  H0 : In a s
+  ============================
+   (E.eq a x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.axioms> flags ||
+  match reverse goal with
+  | id:(?X1 -> ?X2) -> ?X3
+    |- _ =>
+        cut X3;
+         [ intro; clear id; t_tauto_intuit
+         | cut (X1 -> X2);
+            [ exact
+            id
+            | generalize (fun y : X2 => id (fun x : X1 => y)); intro; clear
+               id; (solve [ t_tauto

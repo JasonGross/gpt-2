@@ -1,0 +1,111 @@
+======== SAMPLE 1 ========
+
+  
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (del x l) <-> InT y l /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (del x r) <-> InT y r /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  ============================
+   (Ok l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (del x l) <-> InT y l /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (del x r) <-> InT y r /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  ============================
+   (Ok l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (del x l) <-> InT y l /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (del x r) <-> InT y r /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  ============================
+   (Ok l)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok l -> InT y (del x l) <-> InT y l /\ ~ X.eq y x
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (del x r) <-> InT y r /\ ~ X.eq y x
+  x : X.t
+  y : elt
+  H0 : X.eq x x'
+  H5 : Ok l
+  H6 : Ok r
+  H7 : lt_tree x' l
+  H8 : gt_tree x' r
+  ============================
+   (Ok l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  l : tree
+  x' : X.t
+  r : tree
+  IHl : forall

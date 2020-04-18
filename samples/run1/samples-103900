@@ -1,0 +1,106 @@
+======== SAMPLE 1 ========
+2 : A
+  H'1 : A -> False
+  H'2 : A -> Type
+  H'3 : X1 -> B
+  H'4 : X1 -> B
+  H'0 : A -> False
+  H'5 : x1 -> A
+  ============================
+   False
+
+
+Debug: Going to execute:
+<ltac_plugin::unify@0> $1 $2
+
+
+TcDebug (4) > 
+Debug:
+Level 4: In environment
+A : Type
+equiv0 : Equivalence eq
+equiv1 : Equivalence eq
+dec : forall x y : A, {equiv1 x y} + {equiv1 y + {equiv1 y + {equiv1 x y} * x + {equiv1 y + {equiv1 x y + x} * x0
+x, y : A
+H : x === y
+Unable to unify "Type" with "A -> False".
+
+Debug:
+Level 4: In environment
+A : Type
+equiv0 : Equivalence eq
+equiv1 : Equivalence eq
+dec : forall x y : A, {equiv1 x y} + {equiv1 y + {equiv1 x y} * x + {equiv1 y + {equiv1 x y + x} * x0
+x, y : A
+H : x === y
+Unable to unify "Type" with "A -> False".
+
+Debug:
+Level 4: In environment
+A : Type
+equiv0 : Equivalence eq
+equiv1 : Equivalence eq
+dec : forall x y : A, {equiv1 x y} + {equiv1 y + {equiv1 x y} * x + {equiv1 y + {equiv1 x y + x} * x0
+x, y : A
+H : x === y
+Unable to unify "Type" with "A -> False".
+
+Debug:
+Level 4: In environment
+A : Type
+equiv0 : Equivalence eq
+equiv1 : Equivalence eq
+dec : forall x y : A, {equiv1 x y} + {equiv1 y + {equiv1 x y} * x + {equiv1 y + {equiv1 x y + x} * x0
+x, y : A
+H : x === y
+Unable to unify "Type" with "A -> False".
+
+Debug:
+Level 4: In environment
+A : Type
+equiv0 : Equivalence eq
+equiv1 : Equivalence eq
+dec : forall x y : A, {equiv1 x y} + {equiv1 y + {equiv1 x y} * x + {equiv1 y + {equiv1 x y + x} * x0
+x, y : A
+H : x === y
+Unable to unify "Type" with "A -> False".
+
+Debug:
+Level 3: In environment
+A : Type
+equiv0 : Equivalence eq
+equiv1 : Equivalence eq
+dec : forall x y : A, {equiv1 x y} + {equiv1 y + {equiv1 x y} * x + {equiv1 y + {equiv1 x y + x} * x0
+x, y : A
+H : x === y
+Unable to unify "Type" with "A -> False".
+
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  equiv1 : Equivalence eq
+  dec : forall x y : A, {equiv1 x y} + {equiv1 y + {equiv1 x y} * x + {equiv1 y + {equiv1 x y + x} * x0
+  x : A
+  y : A
+  H : x === y
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+match H with
+| H' => fail 2
+| _ => unify X Y; clear H' || clear H
+end
+
+
+TcDebug (3) > 
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  equiv1 : Equivalence eq
+  dec : forall x y : A, {equiv1 x y} + {equiv1 y + {equiv1 y + x} * x + {equiv1 y + {equiv1 x y + x} * x0
+  x

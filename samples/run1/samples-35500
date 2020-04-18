@@ -1,0 +1,82 @@
+======== SAMPLE 1 ========
+Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+       [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+  | id:?X1 -> ?X2
+    |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+  | id:?X1 <-> ?X2 -> ?X3
+    |- _ =>
+        assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+         (do 2 intro; apply id; split; assumption); clear id
+  | id:?X1 -> ?X2
+    |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+  | |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+  | |- _ <-> _ => split
+  | |- ~ _ => red
+  end; <Coq.Init.Tauto.not_dep_intros>)
+
+
+TcDebug (1) > 
+Goal:
+  
+  p : Z
+  H : 1 < p
+  H0 : forall n : Z, 1 <= n < p -> rel_prime n p
+  n : Z
+  H1 : rel_prime n p
+  u : Z
+  H2 : u < a
+  u' : Z
+  H3 : u' < a
+  H4 : u' < a
+  H5 : a < a
+  H6 : a < b
+  H7 : a <= b
+  H8 : a < b
+  ============================
+   (a < b)
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| id:?X1
+  |- _ => <Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+| id:_ <-> _ |- _ => elim id; do 2 intro; clear id
+| id:~ _ |- _ => red in id
+| id:?X1 |- _ => <Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+| id0:?X1 -> ?X2, id1:?X1 |- _ => assert X2; [ exact (id0 id1) | clear id0 ]
+| id:?X1 -> ?X2
+  |- _ =>
+      <Coq.Init.Tauto.is_unit_or_eq> flags X1; cut X2;
+       [ intro; clear id | cut X1; [ exact id | constructor 1; fail ] ]
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+| id:?X1 <-> ?X2 -> ?X3
+  |- _ =>
+      assert ((X1 -> X2) -> (X2 -> X1) -> X3) by
+       (do 2 intro; apply id; split; assumption); clear id
+| id:?X1 -> ?X2
+  |- _ => <Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+| |- ?X1 => <Coq.Init.Tauto.is_conj> flags X1; split
+| |- _ <-> _ => split
+| |- ~ _ => red
+end; <Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (1) > 
+Goal:
+  
+  p : Z
+  H : 1 < p
+  H0 : forall n : Z, 1 <= n < p -> rel_prime n p
+  n : Z
+  H1 : rel_prime n p
+  u : Z
+  H2 : u < a
+  u' : Z
+  H3 : u' < a
+  H4 : u' < a
+  H5 : a < a
+  H6 : a < b
+  H7 : a <= b
+  H8

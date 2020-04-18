@@ -1,0 +1,83 @@
+======== SAMPLE 1 ========
+  l' : list A
+  l : list A
+  l'0 : list A
+  H : Equal
+  ============================
+   (EmptyListA_eq l (tail l))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (7) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_dec : forall x y : A, {eqA x y} + {~ eqA x y}
+  eqA_dec0 : forall x y : A, {eqA x y} + {~ eqA x y}
+  eqA_dec1 : forall x y : A, x = eqA x y -> eqA x y
+  eqA_dec2 : forall x y : A, x = eqA x y -> eqA x y
+  eqA_dec3 : forall x y : A, a = eqA x y -> eqA x y
+  eqA_trans : Transitive eqA
+  eqA_dec4 : forall x y : A, A = eqA x y -> eqA x y
+  eqA_trans0 : Transitive eqA
+  eqA_dec5 : forall x y : A, A = eqA x y -> eqA x y
+  eqA_dec : forall x y : A, a = eqA x y -> eqA x y
+  eqA1_1 : forall x y : A, A = eqA x y -> A1 x
+  eqA_1_2 : forall x y : A, a = eqA x y -> A1 x
+  eqA_1_3 : forall x y : A, a = eqA x y -> A1 x
+  eqA1_3 : A * A = new A
+  eqA_1_4 : A * eqA = eqA1_F
+  eqA1_4 : eqA1_0_1 A
+  ============================
+   (EmptyListA_eq l (tail l))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (8) > 
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_dec : forall x y : A, {eqA x y} + {~ eqA x y}
+  eqA_dec0 : forall x y : A, {eqA x y} + {~ eqA x y}
+  eqA_dec1 : forall x y : A, x = eqA x y -> eqA x y
+  eqA_dec2 : forall x y : A, x = eqA x y -> eqA x y
+  eqA_dec3 : forall x y : A, a = eqA x y -> eqA x y
+  eqA_dec4 : forall x y : A, a = eqA x y -> eqA x y
+  eqA_dec5 : forall x y : A, a = eqA x y -> eqA x y
+  eqA_dec : forall x y : A, a = eqA x y -> eqA x y
+  eqA_dec2 : forall x y : A, x= eqA x y -> eqA x y
+  eqA_dec3 : forall x y : A, a = eqA x y -> eqA x y
+  eqA_dec4 : forall x y : A, a = eqA x y -> eqA x y
+  eqA_dec5 : forall x y : A, a = eqA x y -> eqA x y
+  eqA_dec_r := ARthm r
+  eqA_r := ARthm a
+  eqA_r_b := ARthm b
+  eqA_r_c := ARthm c
+  eqA_r_a : A
+  eqA_r_b : A
+  ============================
+   (EmptyListA_eq l (tail l))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (8) > 
+Debug: Level 8: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  eqA : A -> A -> Prop
+  eqA_

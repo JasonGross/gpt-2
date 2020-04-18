@@ -1,0 +1,80 @@
+======== SAMPLE 1 ========
+q := mkPol a - Z.pos k : positive
+  p : positive
+  l : list R
+  q : PolC Z
+  h : (Z / 2)%Z = (Z.pos p + 10 * Z.pos h)%Z
+  H0 : (zmon (p - p)mon) <= l
+  H1 : (zmon (p - p)mon) <= h)%Z
+  ============================
+   (2 * ((pmon (p - p)Mon) (Pmul_subst 0 p - h))))
+
+
+Debug:
+Going to execute:
+match trm with
+| ?x <-> ?y => let ex := p2ep x with ey := p2ep y in
+               EPequiv ex ey
+| ?x -> ?y => let ex := p2ep x with ey := p2ep y in
+              EPimpl ex ey
+| ?x /\ ?y => let ex := p2ep x with ey := p2ep y in
+              EPand ex ey
+| ?x \/ ?y => let ex := p2ep x with ey := p2ep y in
+              EPor ex ey
+| ~ ?x => let ex := p2ep x in
+          EPneg ex
+| ?x = ?y => let ex := z2ez x with ey := z2ez y in
+             EPeq ex ey
+| (?x < ?y)%Z =>
+    let ex := z2ez x with ey := z2ez y in
+    EPlt ex ey
+| (?x <= ?y)%Z => let ex := z2ez x with ey := z2ez y in
+                  EPge ex ey
+| (?x <= ?y)%Z => let ex := z2ez x with ey := z2ez y in
+                   EPge ex ey
+| ?x => EPraw x
+end
+
+
+TcDebug (14) > 
+Goal:
+  
+  ex1 : forall x y z : Q, (x + y) * z == x * z + y * z
+  ex2 : forall x y : Q, x + y == y + x
+  ex3 : forall x y z : Q, x + y + z == x + (y + z)
+  ex4 : inject_Z 1 + inject_Z 1 == inject_Z 2
+  ex5 : 1 + 1 == 2
+  ex6 : 1 + 1 == 2
+  ex7 : forall x : Q, x - x == 0
+  x : Q
+  ============================
+   (1 * x <= 1 * x + 1 * x == 1 * x)
+
+
+Debug:
+Going to execute:
+fun trm =>
+  match trm with
+  | (?x + ?y)%Z =>
+      let ex := z2ez x with ey := z2ez y in
+      EZadd ex ey
+  | (?x - ?y)%Z =>
+      let ex := z2ez x with ey := z2ez y in
+      EZsub ex ey
+  | (?x * ?y)%Z =>
+      let ex := z2ez x with ey := z2ez y in
+      EZmul ex ey
+  | Z.max ?x ?y => let ex := z2ez x with ey := z2ez y in
+                   EPge ex ey
+  | (- ?x)%Z => let ex := z2ez x in
+               EPopp ex
+  | i2z ?x => let ex := i2ei x in
+              EPlt ex i2z
+  | ?x => EPraw x
+  end
+
+
+TcDebug (15) > 
+Goal:
+  
+  ex1 : forall x y z : Q, (

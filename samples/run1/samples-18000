@@ -1,0 +1,122 @@
+======== SAMPLE 1 ========
+
+
+Goal:
+  
+  A : Type
+  eqA : relation A
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : eqA x y
+  H1 : NoDupA (l1 ++ y :: l2)
+  H2 : equivlistA (x :: l) (l1 ++ y :: l2)
+  a : A
+  H3 : InA x l -> False
+  H4 : NoDupA l
+  H5 : NoDupA (l1 ++ l2)
+  H6 : InA a l1 -> False
+  H7 : InA y l1 -> False
+  H12 : eqA a y
+  H0 : InA a l2 -> eqA a x \/ InA a l
+  H13 : eqA a x
+  H10 : InA (fst a) (fst l)
+  H14 : eqA a x
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug:
+Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : eqA x y
+  H1 : NoDupA (l1 ++ y :: l2)
+  H2 : equivlistA (x :: l) (l1 ++ y :: l2)
+  a : A
+  H3 : InA x l -> False
+  H4 : NoDupA l
+  H5 : NoDupA (l1 ++ l2)
+  H6 : InA a l1 -> False
+  H7 : InA y l1 -> False
+  H12 : eqA a y
+  H0 : InA a l2 -> eqA a x \/ InA a l
+  H14 : eqA a x
+  H10 : NoDupA (fst a) (fst l)
+  H15 : InA (fst a) l2
+  l2 : fst l1
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.not_dep_intros>
+
+
+TcDebug (0) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : eqA x y
+  H1 : NoDupA (l1 ++ y :: l2)
+  H2 : equivlistA (x :: l) (l1 ++ y :: l2)
+  a : A
+  H3 : InA x l -> False
+  H4 : NoDupA l
+  H5 : NoDupA (l1 ++ l2)
+  H6 : InA a l1 -> False
+  H7 : InA y l1 -> False
+  H12 : eqA a y
+  H0 : InA a l2 -> eqA a x \/ InA a l
+  H14 : eqA a x
+  H10 : NoDupA (fst a) (fst l)
+  H15 : InA (fst a) l2
+  l2 : fst l1
+  ============================
+   (eqA a x \/ InA a l)
+
+
+Debug:
+Going to execute:
+repeat
+ match goal with
+ | |- ?X1 -> ?X2 => intro
+ | |- ~ _ => unfold not at 1; intro
+ end
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  eqA : relation A
+  eqA_equiv : Equivalence eqA
+  l : list A
+  l1 : list A
+  l2 : list A
+  x : A
+  y : A
+  H : eqA x y
+  H1 : NoDupA (l1 ++

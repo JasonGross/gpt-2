@@ -1,0 +1,94 @@
+======== SAMPLE 1 ========
+tree lx (tail lr)
+  H8 : gt_tree x' r
+  H : InA X.eq x lr
+  ============================
+   (InT y (Node c lx ld lr x' (Node c (Node rll rlx rld rlr _x3) rx rd rr _x1))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  ld : tree
+  lr : tree
+  x' : X.t
+  r : tree
+  IHlr : forall (x : X.t) (d : tree),
+        bst lr ->
+        Sorted lr ->
+        (forall (x : X.t) (d : tree) (y : X.t),
+         InT y (del x (Bk ll lx ld lr lr)) <->
+        InT y (Bk ll lx ld lr lr) /\ (X.eq y x -> False)
+  x : X.t
+  d : tree
+  y : X.t
+  H0 : InT y r
+  H3 : InT y r
+  ============================
+   (InT y (Node c lx ld lr x' (Node c (Node rll rlx rld rlr _x3) rx rd rr _x1))
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  ld : tree
+  lr : tree
+  x' : X.t
+  r : tree
+  IHlr : forall (x : X.t) (d : tree),
+        bst lr ->
+        Sorted lr ->
+        (forall (x : X.t) (d : tree) (y : X.t),
+         InT y (del x (Bk ll lx ld lr lr)) <->
+        InT y (Bk ll lx ld lr lr) /\ (X.eq y x -> False)
+  x : X.t
+  d : tree
+  y : X.t
+  H0 : InT y r
+  H3 : InT y r
+  ============================
+   (InT y (Node c lx ld lr x' (Node c (Node rll rlx rld rlr _x3) rx rd rr _x1))
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  ld : tree
+  lr : tree
+  x' : X.t
+  r : tree
+  IHlr : forall (x : X.t) (d : tree),
+        bst lr ->
+        Sorted lr ->
+        (forall (x : X.t) (d : tree) (y : X.t),
+         InT y (del x (Bk ll lx ld lr lr)) <->
+        InT y (Bk ll lx ld lr lr) /\ (X.eq y x -> False)
+  x : X.t
+  d : tree
+  y : X.t
+  H0 : InT y r
+  H3 : InT y r
+  ============================
+   (InT y (Node c lx ld lr x' (Node c (Node rll rlx rld rlr _x3) rx

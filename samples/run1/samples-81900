@@ -1,0 +1,148 @@
+======== SAMPLE 1 ========
+ _x3 : int
+  _X2 : height (Node ll lx ld lr _x0) > height r + 2
+  _x : height ll >= height lr
+  y : key
+  H : In y r
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : int
+  _x : height (Node ll lx ld lr _x0) > height r + 2
+  _x1 : height ll >= height lr
+  y : key
+  H : In y r
+  ============================
+   (X.eq y x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : int
+  _x : height (Node ll lx ld lr _x0) > height r + 2
+  _x1 : height ll >= height lr
+  y : key
+  H : In y r
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : int
+  _x : height (Node ll lx ld lr _x0) > height r + 2
+  _x1 : height ll >= height lr
+  y : key
+  H : In y r
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : int
+  _x : height (Node ll lx ld lr _x0) > height r + 2
+  _x1 : height ll >= height lr
+  y : key
+  H : In y r
+  ============================
+   (X.eq y x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  _x0 : int
+  lrl : t elt
+  lrx : key
+  lrd : elt
+  lrr : t elt
+  _x2 : int
+  _x : height (Node ll lx ld lr _x0) >

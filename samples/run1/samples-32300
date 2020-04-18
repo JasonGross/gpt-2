@@ -1,0 +1,112 @@
+======== SAMPLE 1 ========
+
+  C : X.lt x2 x1
+  H5 : c = s -> False
+  H : forall a : elt, InT a (Node c c') -> InT a (Node c c')
+  ============================
+   ((InT a (Node c c)) /\ ~ InT a l <-> InT a (Node c c))
+
+
+Debug: Going to execute:
+<ltac_plugin::decompose_spec@0> $1 $2
+
+
+TcDebug (4) > 
+Debug: Level 4: Failed to progress.
+
+Debug: Level 3: Failed to progress.
+
+Debug: Level 2: Failed to progress.
+
+Debug: Level 1: Failed to progress.
+
+Debug: Level 0: Failed to progress.
+
+Debug: Level 0: Failed to progress.
+
+Goal:
+  
+  s : t
+  x : elt
+  c : Info.t
+  l : tree
+  x' : X.t
+  r : tree
+  x : elt
+  B : Ok s
+  H1 : (forall a : elt, InT a (Node c c') -> InT a (Node c c')
+  H2 : X.lt x a
+  H3 : InT a l -> InT a m \/ X.eq x a \/ InT a r -> False
+  H4 : X.eq x a \/ InT a m
+  H0 : InT a r
+  H : InT a l
+  H6 : InT a (Node c c')
+  H5 : c = s -> False
+  H : forall a : elt, InT a (Node c c') -> InT a (Node c c')
+  ============================
+   ((InT a (Node c c)) /\ ~ InT a l <-> InT a (Node c c))
+
+
+Debug: Going to execute:
+progress decompose Tst, Subtract
+
+
+TcDebug (0) > 
+Goal:
+  
+  s : t
+  x : elt
+  c : Info.t
+  l : tree
+  x' : X.t
+  r : tree
+  x : elt
+  B : Ok s
+  H1 : (forall a : elt, InT a (Node c c') -> InT a (Node c c')
+  H2 : X.lt x a
+  H3 : InT a l -> InT a m \/ X.eq x a \/ InT a r -> False
+  H4 : X.eq x a \/ InT a m
+  H0 : InT a r
+  H : InT a l
+  H6 : InT a (Node c c')
+  H5 : c = s -> False
+  H : forall a : elt, InT a (Node c c') -> InT a (Node c c')
+  ============================
+   ((InT a (Node c c)) /\ ~ InT a l <-> InT a (Node c c))
+
+
+Debug: Going to execute:
+decompose Tst, Subtract
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (subtract t (Node c c))
+
+Goal:
+  
+  s : t
+  x : elt
+  c : Info.t
+  l : tree
+  x' : X.t
+  r : tree
+  x : elt
+  b : bool
+  H1 : InT a (Node c c') \/ InT a (Node c c') -> False
+  H2 : X.lt x a
+  H3 : InT a l -> InT a m \/ X.eq x a \/ InT a r -> False
+  H4 : X.eq x a \/ InT a m
+  H0 : InT a r
+  H : InT a l
+  H6 : InT a (Node c c')
+  H5 : c = s -> False
+  H : forall a : elt, InT a (Node c c') -> InT a (Node c c')
+  ============================
+   ((X.eq x a \/ InT a m) /\ ~ InT a (Node c c) \/ InT a m)
+
+
+Debug: Going to execute:
+<ltac_plugin::decompose_spec@0> $1 $2
+
+
+TcDebug (0

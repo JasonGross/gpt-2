@@ -1,0 +1,139 @@
+======== SAMPLE 1 ========
+
+  
+  TA : Type
+  TX : Type
+  AA : Type
+  AF : Type
+  ex : TX -> Prop
+  ev : TA -> Prop
+  ev' : TA -> Prop
+  f1 : GFormula
+  f2 : GFormula
+  IHe1 : eval1 ev f1 = eval1 ev f1
+  IHe2 : eval2 ev' f2 = eval2 ev' f2
+  ============================
+   (eval1 ev' f1)
+
+
+Debug: Going to execute:
+generalize t; clear H
+
+
+TcDebug (3) > 
+Goal:
+  
+  TA : Type
+  TX : Type
+  AA : Type
+  AF : Type
+  ex : TX -> Prop
+  ev : TA -> Prop
+  ev' : TA -> Prop
+  f1 : GFormula
+  f2 : GFormula
+  IHe1 : eval1 ev f1 = eval1 ev f1
+  IHe2 : eval2 ev' f2 = eval2 ev' f2
+  ============================
+   (eval1 ev' f1)
+
+
+Debug: Going to execute:
+generalize t
+
+
+TcDebug (3) > 
+Debug: Evaluated term: (Hf _ H)
+
+Goal:
+  
+  TA : Type
+  TX : Type
+  AA : Type
+  AF : Type
+  ex : TX -> Prop
+  ev : TA -> Prop
+  ev' : TA -> Prop
+  f1 : GFormula
+  f2 : GFormula
+  IHe1 : eval1 ev f1 = eval1 ev f1
+  IHe2 : eval2 ev' f2 = eval2 ev' f2
+  b : TA
+  f2 : GFormula
+  f1 : GFormula
+  IHe1 : eval1 ev f1 = eval1 ev f1
+  IHe2 : eval2 ev' f2 = eval2 ev' f2
+  ============================
+   (eval1 ev' f1)
+
+
+Goal:
+  
+  TA : Type
+  TX : Type
+  AA : Type
+  AF : Type
+  ex : TX -> Prop
+  ev : TA -> Prop
+  ev' : TA -> Prop
+  f1 : GFormula
+  f2 : GFormula
+  IHe1 : eval1 ev f1 = eval1 ev f1
+  IHe2 : eval2 ev' f2 = eval2 ev' f2
+  f1 : GFormula
+  f2 : GFormula
+  IHe1 : eval1 ev f1 = eval1 ev f1
+  IHe2 : eval2 ev' f2 = eval2 ev' f2
+  f1 : GFormula
+  f2 : GFormula
+  IHe1 : eval1 ev f1 = eval1 ev f1
+  IHe2 : eval2 ev' f2 = eval2 ev' f2
+  ============================
+   ( eval1 ev' f1)
+
+
+Debug: Going to execute:
+clear H
+
+
+TcDebug (3) > 
+Goal:
+  
+  TA : Type
+  TX : Type
+  AA : Type
+  AF : Type
+  ex : TX -> Prop
+  ev : TA -> Prop
+  ev' : TA -> Prop
+  f1 : GFormula
+  f2 : GFormula
+  IHe1 : eval1 ev f1 = eval1 ev f1
+  IHe2 : eval2 ev' f2 = eval2 ev' f2
+  f1 : GFormula
+  f2 : GFormula
+  IHe1 : eval1 ev f1 = eval1 ev f1
+  IHe2 : eval2 ev' f2 = eval2 ev' f2
+  ============================
+   (eval1 ev' f1)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (3) > 
+Goal:
+  
+  TA : Type
+  TX : Type
+  AA : Type
+  AF : Type
+  ex : TX -> Prop
+  ev : TA -> Prop
+  ev' : TA -> Prop
+  f1 : GFormula
+  f2 : GFormula
+  IHe1 : eval1 ev f1 = eval1 ev f1
+  IHe2 : eval2 ev' f2 = eval2 ev' f2
+  IHf1 : eval1 ev f

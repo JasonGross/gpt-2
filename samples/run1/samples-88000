@@ -1,0 +1,110 @@
+======== SAMPLE 1 ========
+; x, y' : A
+  x0 : A
+  H0 : R x0 y'
+  x' : A
+  H1 : R x x0 y'
+  ============================
+   (R' (proj1_sig x x0) (proj1_sig x y'))
+
+
+Debug: Going to execute:
+<ltac_plugin::le_not_iff@0> $1 $2
+
+
+TcDebug (9) > 
+Goal:
+  
+  A : Type
+  B : Type
+  R : relation A
+  r' : A
+  x : A
+  y : A
+  H : exists x0 : A, R' x0 y /\ In x0 (R' x x0)
+  H0 : forall x : A, R' x x0 -> R' (proj1_sig x x0) (proj1_sig y y'))
+        (exists x0 : A, R' x x0) -> R x (proj1_sig y x0)
+  x0 : A
+  H0 : R x0 y'
+  x' : A
+  H1 : R x x0 y'
+  ============================
+   (R' (proj1_sig x x0) (proj1_sig x y'))
+
+
+Debug: Going to execute:
+clear H' || fail
+
+
+TcDebug (9) > 
+Goal:
+  
+  A : Type
+  B : Type
+  R : relation A
+  r' : A
+  x : A
+  y : A
+  H : exists x0 : A, R' x0 y /\ In x0 (R' x x0)
+  H0 : forall x : A, R' x x0 -> R' (proj1_sig x x0) (proj1_sig y y'))
+        (exists x0 : A, R' x x0) -> R x (proj1_sig y x0)
+  x0 : A
+  H0 : R x0 y'
+  x' : A
+  H1 : R x x0 y'
+  ============================
+   (R' (proj1_sig x x0) (proj1_sig x y'))
+
+
+Debug: Going to execute:
+clear H'
+
+
+TcDebug (9) > 
+Goal:
+  
+  A : Type
+  B : Type
+  R : relation A
+  r' : A
+  x : A
+  y : A
+  H : exists x0 : A, R' x0 y /\ In x0 (R' x x0)
+  H0 : forall x : A, R' x x0 -> R' (proj1_sig x x0) (proj1_sig y y'))
+        (exists x0 : A, R' x x0) -> R x (proj1_sig y x0)
+  x0 : A
+  H0 : R x0 y'
+  x' : A
+  H1 : R x x0 y'
+  ============================
+   (R' (proj1_sig x x0) (proj1_sig x y'))
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (9) > 
+Goal:
+  
+  A : Type
+  B : Type
+  R : relation A
+  r' : A
+  x : A
+  y : A
+  H : exists x0 : A, R' x0 y /\ In x0 (R' x x0)
+  H0 : forall x : A, R' x x0 -> R' (proj1_sig x x0) (proj1_sig y y'))
+        (exists x0 : A, R' x x0) -> R' x (proj1_sig y x0)
+  ============================
+   (R' (proj1_sig x x0) (proj1_sig y y'))
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (9) > 
+Goal:
+  
+

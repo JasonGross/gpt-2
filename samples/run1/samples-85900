@@ -1,0 +1,129 @@
+======== SAMPLE 1 ========
+
+
+
+Goal:
+  
+  d : uint
+  IHd : forall l' : tree,
+        mem d (empty (Nd l')) = true <-> n = 10 ^ usize d
+  d' : uint
+  ============================
+   (of_lu (rev d) + (2 + 10 * n) * 10 ^ usize d =
+    of_lu (rev d) + 2 * 10 ^ usize d + n * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+match t with
+| 0 => true
+| S ?p => isnatcst p
+| _ => false
+end
+
+
+TcDebug (10) > 
+Goal:
+  
+  d : uint
+  IHd : forall l' : tree,
+        mem d (empty (Nd l')) = true <-> n = 10 ^ usize d
+  d' : uint
+  ============================
+   (of_lu (rev d) + (2 + 10 * n) * 10 ^ usize d =
+    of_lu (rev d) + 2 * 10 ^ usize d + n * (10 * 10 ^ usize d))
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (11) > 
+Debug: Level 11: t
+ has value 
+1
+
+
+Goal:
+  
+  d : uint
+  IHd : forall l' : tree,
+        mem d (empty (Nd l')) = true <-> n = 10 ^ usize d
+  d' : uint
+  ============================
+   (of_lu (rev d) + (2 + 10 * n) * 10 ^ usize d =
+    of_lu (rev d) + 2 * 10 ^ usize d + n * (10 * 10 ^ usize d))
+
+
+Debug: Going to execute:
+isnatcst p
+
+
+TcDebug (11) > 
+Goal:
+  
+  d : uint
+  IHd : forall l' : tree,
+        mem d (empty (Nd l')) = true <-> n = 10 ^ usize d
+  d' : uint
+  ============================
+   (of_lu (rev d) + (2 + 10 * n) * 10 ^ usize d =
+    of_lu (rev d) + 2 * 10 ^ usize d + n * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+fun t => match t with
+          | 0 => true
+          | S ?p => isnatcst p
+          | _ => false
+          end
+
+
+TcDebug (12) > 
+Goal:
+  
+  d : uint
+  IHd : forall l' : tree,
+        mem d (empty (Nd l')) = true <-> n = 10 ^ usize d
+  d' : uint
+  ============================
+   (of_lu (rev d) + (2 + 10 * n) * 10 ^ usize d =
+    of_lu (rev d) + 2 * 10 ^ usize d + n * (10 * 10 ^ usize d))
+
+
+Debug:
+Going to execute:
+match t with
+| 0 => true
+| S ?p => isnatcst p
+| _ => false
+end
+
+
+TcDebug (12) > 
+Goal:
+  
+  d : uint
+  IHd : forall l' : tree,
+        mem d (empty (Nd l')) = true <-> n = 10 ^ usize d
+  d' : uint
+  ============================
+   (of_lu (rev d) + (2 + 10 * n) * 10 ^ usize d =
+    of_lu (rev d) + 2 * 10 ^ usize d + n * (10 * 10 ^ usize d))
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (13) > 
+Debug: Level 13: t
+ has value 
+1
+
+
+Goal:
+  
+  d : uint
+ 

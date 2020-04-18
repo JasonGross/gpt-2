@@ -1,0 +1,129 @@
+======== SAMPLE 1 ========
+) > 
+Debug: Level 6: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H7 : In x (union s s') <-> false = true
+  H8 : In x s <-> In x s'
+  H3 : In x (union s s') -> false = true
+  H4 : false = true -> In x s
+  H : In x s -> true = true
+  H5 : true = true -> In x s
+  H0 : In x s' -> false = true
+  H6 : false = true -> In x s'
+  H1 : In x (union s s') -> In x s \/ In x s'
+  H7 : In x s' -> In x (union s s')
+  H8 : In x s -> In x s'
+  ============================
+   (false = true || false)
+
+
+Debug: Going to execute:
+elim id; do 2 intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H7 : In x (union s s') <-> false = true
+  H8 : In x s <-> In x s'
+  H3 : In x (union s s') -> false = true
+  H4 : false = true -> In x s
+  H : In x s -> true = true
+  H5 : true = true -> In x s
+  H0 : In x s' -> false = true
+  H6 : false = true -> In x s'
+  H1 : In x (union s s') -> In x s \/ In x s'
+  H7 : In x s' -> In x (union s s')
+  H8 : In x s -> In x s'
+  ============================
+   (false = true || false)
+
+
+Debug: Going to execute:
+elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H7 : In x (union s s') <-> false = true
+  H8 : In x s <-> In x s'
+  H3 : In x (union s s') -> false = true
+  H4 : false = true -> In x s
+  H : In x s -> true = true
+  H5 : true = true -> In x s
+  H0 : In x s' -> false = true
+  H6 : false = true -> In x s'
+  H1 : In x (union s s') -> In x s \/ In x s'
+  H7 : In x s' -> In x (union s s')
+  H8 : In x s -> In x s'
+  ============================
+   (false = true || false)
+
+
+Debug: Going to execute:
+elim id
+
+
+TcDebug (1) > 
+Debug: Evaluated term: H
+
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H7 : In x (union s s') <-> false = true
+  H8 : In x s <-> In x s'
+  H3 : In x (union s s') -> false = true
+  H4 : false = true -> In x s
+  H : In x s -> true = true
+  H5 : true = true -> In x s
+  H0 : In x s' -> false = true
+  H6 : False
+  H1 : In x (union s s')
+  H5 : In x s
+  H2 : In x s'
+  ============================
+   (false = true || false)
+
+
+Debug: Going to execute:
+do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  s : t
+  s' : t
+  s'' : t
+  x : elt
+  y : elt
+  z : elt
+  H7 : In x (union s s') <->

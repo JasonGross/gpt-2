@@ -1,0 +1,109 @@
+======== SAMPLE 1 ========
+PE_true
+  H1 : In x s'
+  H3 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : E.t
+  q : t
+  r : t
+  s : t
+  H : forall x y : E.t,
+       (fun x' : E.t => f x = true) ->
+       exists pr : t,
+       (fun x' : E.t => s' (f x) = true) ->
+        exists pr' : t,
+                      X.eq x pr -> f x = true
+                      (x == q) /\ f q = true)
+  H2 : f x = true
+  H1 : In x s'
+  H3 : False
+  ============================
+   False
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_conj> flags X1 X2 id
+
+
+TcDebug (2) > 
+Goal:
+  
+  x : E.t
+  q : t
+  r : t
+  s : t
+  H : forall x y : E.t,
+       (fun x' : E.t => f x = true) ->
+       exists pr : t,
+                    X.eq x pr -> f x = true
+                      (x == q) /\ f q = true
+  j : t
+  H : forall x y : E.t,
+       (fun x' : E.t => s' (f x) = true) ->
+        exists pr : t,
+                    X.eq x pr -> f x = true
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : E.t
+  q : t
+  r : t
+  s : t
+  H : forall x y : E.t,
+       (fun x' : E.t => s' (f x) = true) ->
+       exists pr : t,
+                   X.eq x pr -> f x = true
+  j : t
+  H : forall x y : E.t,
+       (fun x' : E.t => s' (f x) = true) ->
+        exists pr' : t,
+                  X.eq x pr -> f x = true
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : E.t
+  q : t
+  r : t
+  s : t
+  H : forall x y : E.t,
+       (fun x' : E.t => s' (f x) = true) ->
+       exists pr : t,
+                  X.eq x pr -> f x = true
+  j : t
+  H : forall x y : E.t,
+       (fun x

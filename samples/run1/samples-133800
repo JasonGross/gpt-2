@@ -1,0 +1,78 @@
+======== SAMPLE 1 ========
+ : list elt,
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (diff_list l1 l2 acc) <->
+        InA X.eq x l1 /\ ~ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  H : Sorted X.lt (rev l1 ++ x1 :: nil)
+  H0 : Sorted X.lt (rev l2 ++ x2 :: nil)
+  H1 : X.eq x x1
+  ============================
+   (InA X.eq x l1 /\ ~ InA X.eq x l2 \/ X.eq x x1 \/ InA X.eq x acc)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall (l2 : list X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (diff_list l1 l2 acc) <->
+        InA X.eq x l1 /\ ~ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  H : Sorted X.lt (rev l1 ++ x1 :: nil)
+  H0 : Sorted X.lt (rev l2 ++ x2 :: nil)
+  H1 : X.eq x x1
+  ============================
+   (InA X.eq x l1 /\ ~ InA X.eq x l2 \/ X.eq x x1 \/ InA X.eq x acc)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall (l2 : list X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (diff_list l1 l2 acc) <->
+        InA X.eq x l1 /\ ~ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  H : Sorted X.lt (rev l1 ++ x1 :: nil)
+  H0 : Sorted X.lt (rev l2 ++ x2 :: nil)
+  H1 : X.eq x x1
+  ============================
+   (InA X.eq x l1 /\ ~ InA X.eq x l2 \/ X.eq x x1 \/ InA X.eq x acc)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (1) > 
+Goal:
+  
+  x : X.t
+  x1 : X.t
+  l1 : list X.t
+  IH1 : forall (l2 : list X.t) (acc : list elt),
+        Sorted X.lt (rev l1) ->
+        Sorted X.lt (rev l2) ->
+        InA X.eq x (diff_list l1 l2 acc) <->
+        InA X.eq x l1 /\ ~ InA X.eq x l2 \/ InA X.eq x acc
+  acc : list elt
+  H : Sorted X.lt (rev l1 ++ x1

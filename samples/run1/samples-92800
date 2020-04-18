@@ -1,0 +1,102 @@
+======== SAMPLE 1 ========
+  H0 : X.lt x x'
+  H5 : Ok (Rd ll lx lr)
+  H6 : Ok r
+  H7 : lt_tree x' (Rd ll lx lr)
+  H8 : gt_tree x' r
+  H2 : X.eq y x -> False
+  H1 : I.t
+  H3 : X.eq y x
+  ============================
+   False
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  i : Color.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok (Rd ll lx lr) ->
+        InT y (del x (Rd ll lx lr)) <->
+        InT y (Rd ll lx lr) /\ (X.eq y x -> False)
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (del x r) <-> InT y (Rd ll lx lr) /\ (X.eq y x -> False)
+  x : X.t
+  y : elt
+  H0 : X.lt x x'
+  H5 : Ok (Rd ll lx lr)
+  H6 : Ok r
+  H7 : lt_tree x' (Rd ll lx lr)
+  H8 : gt_tree x' r
+  H2 : X.eq y x -> False
+  H1 : I.t
+  H3 : X.eq y x
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : Color.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok (Rd ll lx lr) ->
+        InT y (del x (Rd ll lx lr)) <->
+        InT y (Rd ll lx lr) /\ (X.eq y x -> False)
+  IHr : forall (x : X.t) (y : elt),
+        Ok r -> InT y (del x r) <-> InT y (Rd ll lx lr) /\ (X.eq y x -> False)
+  x : X.t
+  y : elt
+  H0 : X.lt x x'
+  H5 : Ok (Rd ll lx lr)
+  H6 : Ok r
+  H7 : lt_tree x' (Rd ll lx lr)
+  H8 : gt_tree x' r
+  H2 : X.eq y x -> False
+  H1 : I.t
+  H3 : X.eq y x
+  ============================
+   False
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  i : Color.t
+  ll : tree
+  lx : X.t
+  lr : tree
+  x' : X.t
+  r : tree
+  IHl : forall (x : X.t) (y : elt),
+        Ok (Rd ll lx lr) ->
+        InT y (del x (Rd ll lx lr)) <->
+        InT y (Rd ll lx lr)

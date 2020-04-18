@@ -1,0 +1,90 @@
+======== SAMPLE 1 ========
+ y : X.t
+  H2 : InT x rl -> InT x t
+  H1 : InT x t
+  h : InT x lr
+  H0 : X.eq x y
+  H1 : InT x t
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x t \/ X.eq x rx \/ InT x rr) \/ InT x rr <->
+    (InT x ll \/ X.eq x lx \/ InT x t \/ X.eq x rx \/ InT x rr) \/ InT x rr <->
+    (InT x ll \/ X.eq x lx \/ InT x t \/ X.eq x rx \/ InT x rr) / (X.eq x lx \/ InT x rr)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t : tree
+  Ht : notred t
+  H0 : InT x t -> InT x lr \/ InT x rl
+  H : InT x rl -> InT x t
+  H1 : InT x t
+  h : InT x lr
+  H0 : X.eq x y
+  H1 : InT x t
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x t \/ X.eq x rx \/ InT x rr) \/ InT x rr <->
+    (InT x ll \/ X.eq x lx \/ InT x t \/ X.eq x rx \/ InT x rr) \/ InT x rr <->
+    (InT x ll \/ X.eq x lx \/ InT x t \/ X.eq x rx \/ InT x rr) / (X.eq x lx \/ InT x t \/ X.eq x rx \/ InT x rr)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t : tree
+  Ht : notred t
+  H0 : InT x t -> InT x lr \/ InT x rl
+  H : InT x rl -> InT x t
+  H1 : InT x t
+  h : InT x lr
+  H0 : X.eq x y
+  H1 : InT x t
+  ============================
+   ((InT x ll \/ X.eq x lx \/ InT x t \/ X.eq x rx \/ InT x rr) \/ InT x rr <->
+    (InT x ll \/ X.eq x lx \/ InT x t \/ X.eq x rx \/ InT x rr) \/ InT x rr <->
+    (InT x ll \/ X.eq x lx \/ InT x t \/ X.eq x rx \/ InT x rr) / (X.eq x lx \/ InT x t \/ X.eq x rx \/ InT x rr)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  t : tree
+  Ht

@@ -1,0 +1,181 @@
+======== SAMPLE 1 ========
+  H0 : A
+  ============================
+   (R x y)
+
+
+Debug:
+Going to execute:
+match goal with
+| H:?A -> False |- _ => change_no_check (~ A) in H; P
+end
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec A eq
+  B : Type
+  equiv1 : Equivalence eq
+  H0 : A
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+change_no_check (~ A) in H
+
+
+TcDebug (2) > 
+Debug: Evaluated term: (A -> False)
+
+Debug: Level 2: Not convertible.
+
+Debug: Level 2: Not convertible.
+
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec A eq
+  B : Type
+  equiv1 : Equivalence eq
+  H0 : A
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+change_no_check (~ A) in H; P
+
+
+TcDebug (0) > 
+Debug:
+Evaluated term: (~ A -> False)
+
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec A eq
+  B : Type
+  equiv1 : Equivalence eq
+  H0 : A
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+change_no_check (~ A) in H
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (~ A -> False)
+
+Debug: Evaluated term: (~ A -> False)
+
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec A eq
+  B : Type
+  equiv1 : Equivalence eq
+  H0 : A
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+change_no_check (~ A) in H
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (~ A -> False)
+
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec A eq
+  B : Type
+  equiv1 : Equivalence eq
+  H0 : A
+  ============================
+   (R x y)
+
+
+Debug: Going to execute:
+FSetDecideAuxiliary.change_no_check (~ A) in H
+
+
+TcDebug (0) > 
+Debug: Evaluated term: (~ A -> False)
+
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec A eq
+  B : Type
+  equiv1 : Equivalence eq
+  H0 : A
+  ============================
+   (R x y)
+
+
+Debug:
+Going to execute:
+repeat
+ match goal with
+ | H:context [ ?P -> False ] |- _ => fold (~ P) in H
+ | |- context [ ?P -> False ] => fold (~ P)
+ end
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec A eq
+  B : Type
+  equiv1 : Equivalence eq
+  H0 : A
+  ============================
+   (R x y)
+
+
+Debug:
+Going to execute:
+match goal with
+| H:context [ ?P -> False ] |- _ => fold (~ P) in H
+| |- context [ ?P -> False ] => fold (~ P)
+end
+
+
+TcDebug (1) > 
+Debug: Level 1: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  A : Type
+  equiv0 : Equivalence eq
+  H : EqDec A eq
+  B : Type
+  equiv1 : Equivalence eq
+  H0 : A
+  ============================
+   (R x y)

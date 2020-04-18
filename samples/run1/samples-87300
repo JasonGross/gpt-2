@@ -1,0 +1,122 @@
+======== SAMPLE 1 ========
+t
+  y : elt
+  n'' : bool
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  LT : (rh + 2 <? lh) = false
+  LT' : (rh + 2 <? rh) = true
+  y : elt
+  n'' : bool
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  LT : (rh + 2 <? lh) = false
+  LT' : (rh + 2 <? rh) = true
+  y : elt
+  n'' : bool
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  LT : (rh + 2 <? lh) = false
+  LT' : (rh + 2 <? rh) = true
+  y : elt
+  n'' : bool
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  LT : (rh + 2 <? lh) = false
+  LT' : (rh + 2 <? rh) = true
+  y : elt
+  n'' : bool
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  LT : (rh + 2 <? lh) = false
+  LT' : (rh + 2 <? rh) = true
+  y : elt
+  n'' : bool
+  ============================
+   ((let (l, r) := a in a -> l := a; split l;
+       match a with
+      | nil => false
+      | a :: l' => mem y l' cst m'
+       | a :: l' => mem y l' l'
+       end) l)
+
+
+Debug:
+Going to execute:
+repeat match goal with
+ | x:=_ |- _ => x
+ | _ => x
+ end
+
+
+TcDebug (11) > 
+Goal:
+  
+  elt : Type
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  lh : I.t
+  Hlr : forall (x : X.t) (d : elt) (r : t elt),
+        bst lr ->
+        bst r ->
+        lt_tree x lr ->
+        gt_tree x r -> find y (join lr x d r) = true
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  LT : (rh + 2 <? lh) = false
+  LT' : (rh + 2 <? rh) = true
+  y : elt
+  n'' : bool
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  LT : (rh + 2 <? lh) = false
+  LT' : (rh + 2 <? rh) = true
+  y : elt
+  n'' : bool
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  LT : (rh + 2 <? lh) = false
+  LT' : (rh + 2 <? rh) = true
+  y : elt
+  n'' : bool
+  x : X.t
+  d : elt
+  rl : t elt
+  rx : key
+  rd : elt
+  rr : t elt
+  LT : (rh + 2 <? lh)

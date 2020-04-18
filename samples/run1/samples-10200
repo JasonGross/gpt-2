@@ -1,0 +1,63 @@
+======== SAMPLE 1 ========
+plugin : id; t_tauto_intuit <-> t_tauto_intuit <> morphg; morphg;
+                  m1 m2 f a = f a || g a;
+                  m2 f b = f b || g b
+  mapl_f1 : forall m2 : list (X.t * Mon * Mon),
+                 m2 cmp m1 m2 : list X.t
+  mapl_f2 : forall m3 : list (X.t * Mon * Mon),
+                 m3 m1 f b = f b || g b
+  mapr_f1 : forall m2 : list (X.t * Mon * Mon),
+                mapr m2 m2 : list X.t
+  mapl_1 : forall m1 : list (X.t * Mon * Mon),
+                m1 m2 : list X.t
+  mapr_1 : forall m2 : list (X.t * Mon * Mon),
+                OrderTac.order_rewr m1 m2
+  mapl_test : forall t : t,
+                 m1 t = Some d ->
+                 forall (x : t) (m1 : t) (comp : option elt) =
+                 forall x : t,
+                  e m1
+  display_list_or_fold_right : forall x : t,
+                  m1 x = y ->
+                   forall x : t,
+                    m2 y = x ->
+                    find y (map2_opt l1 l2') = f0 y (find y l1) (find y l2')
+  display_list_or_fold_right m2 : list (X.t * Mon * Mon)
+  list_hyp := nil : list (X.t * Mon)
+  list_hyp_norm := nil : list (X.t * Mon)
+  cl' : tbody
+  H1 : X.eq x m2
+  H5 : m2 x
+  H4 : True
+  H0 : eq_plugin::term_fold_right x m2
+  H2 : In a l2'
+  H : In a m2
+  ============================
+   (f 0) (find_at y m2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro; clear id
+
+
+TcDebug (1) > 
+Goal:
+  
+  eqr := Equivalence_Reflexive : Expr Cst Q
+  eqr := Equivalence_Reflexive Q : Expr Cst Q
+  eqmul := Equivalence_Reflexive : Expr Cst Q
+  eqmod := Equivalence_Reflexive : Expr Cst Q
+  eqnd := lt_mon * eqnd_mon : Mon * Mon
+  l : list (X.t * Q)
+  e2 : of_lu (Q * l) = 0
+  e1 : PExpr Cst Q
+  p1 : positive
+  e2 : PExpr Cst Q
+  p0 : positive
+  e : (Q * elt)%Q
+  IHp1 : forall y : key,
+         bst l ->
+          bst r ->
+          lhs d r <->
+     

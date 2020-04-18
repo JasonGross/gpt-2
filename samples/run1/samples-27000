@@ -1,0 +1,119 @@
+======== SAMPLE 1 ========
+le eqb k m1 -> eqb k m2 \/ In k m1
+  k' : key
+  e' : elt
+  H0 : E.eq k k'
+  H6 : false = true -> In k' m1
+  H7 : In k' m1 -> Prop
+  H2 : E.eq k k' -> In k' m1
+  H : In k' m1 -> False
+  H4 : true = true
+  H8 : In k' m1 -> In k' m1 \/ In k' m1
+  ============================
+   (In k' m1 \/ In k' m2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (2) > 
+Goal:
+  
+  m1 : t
+  m2 : t
+  k : key
+  e : elt
+  m2' : t
+  H1 : (E.eq k k') -> (E.eq k k' /\ e = e')
+  H2 : E.eq k k' -> In k' m1
+  H : In k' m1 -> False
+  H4 : true = true
+  H8 : In k' m1 -> In k' m1 \/ In k' m1
+  ============================
+   (In k' m1 \/ In k' m2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  m1 : t
+  m2 : t
+  k : key
+  e : elt
+  m2' : t
+  H1 : (E.eq k k') -> (E.eq k k' /\ e = e')
+  H2 : E.eq k k' -> In k' m1
+  H : In k' m1 -> False
+  H4 : true = true
+  H8 : In k' m1 -> In k' m1 \/ In k' m1
+  ============================
+   (In k' m1 \/ In k' m2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (2) > 
+Goal:
+  
+  m1 : t
+  m2 : t
+  k : key
+  e : elt
+  m2' : t
+  H1 : (E.eq k k') -> (E.eq k k' /\ e = e')
+  H2 : E.eq k k' -> In k' m1
+  H : In k' m1 -> False
+  H4 : true = true
+  H8 : In k' m1 -> In k' m1 \/ In k' m1
+  ============================
+   (In k' m1 \/ In k' m2)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  m1 : t
+  m2 : t
+  k : key
+  e : elt
+  m2' : t
+  H1 : (E.eq k k') -> (E.eq k k' /\ e = e')
+  H2 : E.eq k k' -> In k' m1
+  H : In k' m1 -> False
+  H4 : true = true
+  H8 : In k' m1 -> In k' m1 \/ In k' m1
+  ============================
+   (In k' m1 \/ In k' m2)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  m1 : t
+  m2 : t
+  k : key
+  e : elt
+  m2' : t
+  H1 : (E.eq k k') -> (E.eq k k' /\ e = e')
+  H2 : E.eq k k' -> In k' m1
+  H : In k' m1 ->

@@ -1,0 +1,118 @@
+======== SAMPLE 1 ========
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  i : A
+  f : elt -> A -> A
+  H : Proper (E.eq ==> eqA ==> eqA) f
+  H0 : transpose eqA f
+  H1 : In x s -> False
+  H2 : Add x s s'
+  l : list elt
+  Hl : NoDup l
+  Hl1 : forall x : elt, In x s <-> InA x l
+  l' : list elt
+  Hl' : NoDup l'
+  Hl'1 : forall x : elt, In x s' <-> InA x l'
+  a : E.t
+  H4 : In a s
+  ============================
+   (E.eq a x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  i : A
+  f : elt -> A -> A
+  H : Proper (E.eq ==> eqA ==> eqA) f
+  H0 : transpose eqA f
+  H1 : In x s -> False
+  H2 : Add x s s'
+  l : list elt
+  Hl : NoDup l
+  Hl1 : forall x : elt, In x s <-> InA x l
+  l' : list elt
+  Hl' : NoDup l'
+  Hl'1 : forall x : elt, In x s' <-> InA x l'
+  a : E.t
+  H4 : In a s
+  ============================
+   (E.eq a x)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  i : A
+  f : elt -> A -> A
+  H : Proper (E.eq ==> eqA ==> eqA) f
+  H0 : transpose eqA f
+  H1 : In x s -> False
+  H2 : Add x s s'
+  l : list elt
+  Hl : NoDup l
+  Hl1 : forall x : elt, In x s <-> InA x l
+  l' : list elt
+  Hl' : NoDup l'
+  Hl'1 : forall x : elt, In x s' <-> InA x l'
+  a : E.t
+  H4 : In a s
+  ============================
+   (E.eq a x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  s : t
+  s' : t
+  x : elt
+  A : Type
+  eqA : A -> A -> Prop
+  st : Equivalence eqA
+  i : A
+  f : elt -> A -> A
+  H : Proper (E.eq ==> eqA ==> eqA) f
+  H0 : transpose eqA f
+  H1 : In x s -> False
+  H2 : Add x s s'
+  l : list elt
+  Hl : NoDup l
+  Hl1 : forall x : elt, In x s <-> InA x l
+  l' : list elt
+  Hl' : NoDup l'
+  Hl'1 : forall x : elt, In x s' <-> InA x l'
+  a : E.t
+  H4 : In a s
+  ============================
+   (E.eq a x)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags

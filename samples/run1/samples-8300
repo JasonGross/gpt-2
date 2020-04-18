@@ -1,0 +1,102 @@
+======== SAMPLE 1 ========
+:
+  
+  t : tree
+  p : positive
+  H : X.eq p p
+  m : t
+  H0 : InT y (remove x (Node _x0 p))
+  x : X.t
+  H1 : InT y (remove x (Node _x0 p))
+  ============================
+   (InT y (remove x (Node _x0 p)) <-> InT y (remove x (Node _x0 p)))
+
+
+Debug:
+Going to execute:
+(InT y s2) || (InT y (remove x (Node _x0 p)) /\ X.lt x y))
+
+
+TcDebug (15) > 
+Debug: Level 15: evaluation returns
+(InT y (remove x (Node _x0 p))) || (InT y (remove x (Node _x0 p)) /\ X.lt x y))
+
+
+Debug:
+Going to execute:
+(InT y s2)
+
+
+TcDebug (14) > 
+Debug: Evaluated term: (InT y s2)
+
+Goal:
+  
+  p : positive
+  H : X.eq p p
+  m : t
+  H0 : InT y (remove x (Node _x0 p))
+  x : X.t
+  H1 : InT y (remove x (Node _x0 p))
+  x : X.t
+  H1 : InT y (remove x (Node _x0 p))
+  ============================
+   (InT y (remove x (Node _x0 p)) <-> InT y (remove x (Node _x0 p)))
+
+
+Debug:
+Going to execute:
+(InT y s2) || (InT y (remove x (Node _x0 p)) /\ X.lt x y))
+
+
+TcDebug (14) > 
+Debug: Level 14: evaluation returns
+(InT y (remove x (Node _x0 p)) /\ X.lt x y))
+
+
+Debug:
+Going to execute:
+(InT y s2) || (InT y (remove x (Node _x0 p)) /\ X.lt x y))
+
+
+TcDebug (13) > 
+Debug: Level 13: evaluation returns
+(InT y (remove x (Node _x0 p)) /\ X.lt x y))
+
+
+Debug: Going to execute:
+(InT y s2) || (InT y (remove x (Node _x0 p)) /\ X.lt x y))
+
+
+TcDebug (13) > 
+Debug: Level 12: evaluation returns
+(InT y s2/2) || (InT y (remove x (Node _x0 p)) /\ X.lt x y))
+
+
+Debug: Going to execute:
+InT y (remove x (Node _x0 p)) /\ X.lt x y
+
+
+TcDebug (12) > 
+Debug: Level 11: evaluation returns
+(InT y (remove x (Node _x0 p)) /\ X.lt x y))
+
+
+Debug: Going to execute:
+fun eqn =>
+  match trm with
+  | (forall x y : X.t)%list =>
+       match trm with
+       | Nil =>
+           let acc := mkCR_polynom.PEadd in
+           let acc := find (elt:=ARmin ARth); (let acc := mkCR_polynom.pow a l)%list in
+              Cpow
+             (let ARth := fresh "hyp_list" in
+               fold acc in
+               [0] =>
+             let acc := mkCR_polynom.PEadd in
+            match acc with
+            | Nil =>
+             let reals :=
+              let acc := mkCR_polynom.PEopp in
+              [

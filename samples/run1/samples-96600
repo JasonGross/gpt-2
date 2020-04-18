@@ -1,0 +1,162 @@
+======== SAMPLE 1 ========
+ H0 : 0 < 1
+  H1 : 1 < 2
+  H2 : 2 <= 1
+  H3 : 1 < 2
+  H4 : 1 < 2
+  H5 : 2 <= 2
+  H6 : 2 < 2
+  H7 : 2 < 2
+  ============================
+   (1 < 2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : t
+  x' : t
+  a : E.t
+  H : In x x'
+  H0 : 0 < 1
+  H1 : 1 < 2
+  H2 : 2 <= 1
+  H3 : 1 < 2
+  H4 : 1 < 2
+  H5 : 2 <= 2
+  H6 : 2 < 2
+  H7 : 2 < 2
+  ============================
+   (1 < 2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : t
+  x' : t
+  a : E.t
+  H : In x x'
+  H0 : 0 < 1
+  H1 : 1 < 2
+  H2 : 2 <= 1
+  H3 : 1 < 2
+  H4 : 1 < 2
+  H5 : 2 <= 2
+  H6 : 2 < 2
+  H7 : 2 < 2
+  ============================
+   (1 < 2)
+
+
+Debug: Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Goal:
+  
+  x : t
+  x' : t
+  a : E.t
+  H : In x x'
+  H0 : 0 < 1
+  H1 : 1 < 2
+  H2 : 2 <= 1
+  H3 : 1 < 2
+  H4 : 1 < 2
+  H5 : 2 <= 2
+  H6 : 2 < 2
+  H7 : 2 < 2
+  ============================
+   (1 < 2)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_empty@0>
+
+
+TcDebug (4) > 
+Debug: Level 4: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : t
+  x' : t
+  a : E.t
+  H : In x x'
+  H0 : 0 < 1
+  H1 : 1 < 2
+  H2 : 2 <= 1
+  H3 : 1 < 2
+  H4 : 1 < 2
+  H5 : 2 <= 2
+  H6 : 2 < 2
+  H7 : 2 < 2
+  ============================
+   (1 < 2)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : t
+  x' : t
+  a : E.t
+  H : In x x'
+  H0 : 0 < 1
+  H1 : 1 < 2
+  H2 : 2 <= 1
+  H3 : 1 < 2
+  H4 : 1 < 2
+  H5 : 2 <= 2
+  H6 : 2 < 2
+  H7 : 2 < 2
+  ============================
+   (1 < 2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1; elimtype X1
+
+
+TcDebug (3) > 
+Goal:
+  
+  x : t
+  x' : t
+  a : E.t
+  H : In x x'
+  H0 : 0 < 1
+  H1 : 1 < 2
+  H2 : 2 <= 1
+  H3 : 1 < 2
+  H4 : 1 < 2
+  H5 : 2 <= 2
+  H6 : 2 < 2
+  H7 : 2 < 2
+  ============================
+   (1 < 2)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_empty> flags X1
+
+
+TcDebug (3) > 
+Goal

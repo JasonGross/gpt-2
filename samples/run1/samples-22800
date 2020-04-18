@@ -1,0 +1,90 @@
+======== SAMPLE 1 ========
+ R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  rdiv : R -> R -> R
+  roppu : R -> R
+  req : R -> R -> Prop
+  Rsth Reqe : ring_eq_ext radd rmul ropp req
+  rpow : R -> R -> R
+  rpow_th : power_theory 1 rmul req
+  rpow_spec : power_theory 1 rmul rpow
+  rpow_assoc : if R then R by ropp req
+  rpow_assoc_e req rpow
+           : forall (r : R) (e : R),
+              bst e ->
+              find e r =
+                 forall x : R, x == x
+               x == r
+  x : R
+  H0 : bst m
+  H' : In x l
+  ============================
+   (R' req (R:=R)) (R' req (R:=R))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id; intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  rdiv : R -> R -> R
+  roppu : R -> R
+  req : R -> R -> Prop
+  Rsth Reqe : ring_eq_ext radd rmul ropp req
+  rpow : R -> R -> R
+  rpow_th : power_theory 1 rmul req
+  rpow_spec : power_theory 1 rmul rpow
+  rpow_assoc : if R then R by ropp req
+  rpow_assoc_e req rpow
+            : forall (r : R) (e : R),
+               bst e ->
+               find e r =
+                forall x : R, x == x
+               x == r
+  x : R
+  H0 : bst m
+  H' : In x l
+  ============================
+   (R' req (R:=R)) (R' req (R:=R))
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_disj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  R : Type
+  rO : R
+  rI : R
+  radd : R -> R -> R
+  rmul : R -> R -> R
+  rsub : R -> R -> R
+  ropp : R -> R
+  rdiv : R -> R -> R
+  roppu : R -> R
+  req : R -> R -> Prop
+  Rsth Reqe : ring_eq_ext radd rmul ropp req
+  rpow : R -> R -> R
+  rpow_th : power_theory 1 rmul req
+  rpow_spec : power_theory 1 rmul rpow
+  rpow_assoc : if R then R by ropp req
+  rpow_assoc_e req rpow
+            : forall (r : R) (e : R),
+               bst e ->
+               find e r =
+                forall x : R, x == x
+               x == r
+  x : R
+  H0

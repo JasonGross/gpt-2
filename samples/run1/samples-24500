@@ -1,0 +1,106 @@
+======== SAMPLE 1 ========
+T
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H5 : InT x lr
+  H0 : InT x a
+  H : InT x lr
+  ============================
+   (X.eq x lx)
+
+
+Debug: Going to execute:
+exact (id0 id1)
+
+
+TcDebug (4) > 
+Debug: Evaluated term: (t {| this := t; sorted := t0 |} x =>
+       match t with
+       | InT x lr -> InT x a -> X.lt x \/ InT x rl
+       | InT x b -> X.lt x -> InT x b
+       | InT x rl -> InT x a -> X.lt x \/ InT x rl
+       | InT x b -> X.lt x -> InT x b
+       end)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.axioms> flags
+
+
+TcDebug (2) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H5 : InT x lr
+  H0 : InT x a
+  H : InT x lr
+  ============================
+   (t {| this := t; sorted := t0 |} x =>
+      match t with
+      | InT x lr -> InT x a -> X.lt x \/ InT x rl
+      | InT x b -> X.lt x -> InT x b
+      end)
+
+
+Debug:
+Going to execute:
+fun flags =>
+  match reverse goal with
+  | |- ?X1 => <Coq.Init.Tauto.is_unit_or_eq> flags X1; constructor 1
+  | _:?X1 |- _ => <Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+  | _:?X1 |- ?X1 => assumption
+  end
+
+
+TcDebug (3) > 
+Goal:
+  
+  ll : tree
+  lx : X.t
+  lr : tree
+  x : elt
+  rl : tree
+  rx : X.t
+  rr : tree
+  a : tree
+  y : X.t
+  b : tree
+  H1 : X.eq x y -> InT x lr \/ InT x rl
+  H4 : InT x b -> InT x lr \/ InT x rl
+  H5 : InT x lr
+  H0 : InT x a
+  H : InT x lr
+  ============================
+   (t {| this := t; sorted := t0 |} x =>
+      match t with
+      | InT x lr -> InT x a -> X.lt x \/ InT x rl
+      | InT x b -> X.lt x -> InT x b
+      end)
+
+
+Debug:
+Going to execute:
+match reverse goal with
+| |- ?X1 => <Coq.Init.Tauto.is_unit_or_eq> flags X1; constructor 1
+| _:?X1 |- _ => <Coq.Init.Tauto.is_empty> flags X1; elimtype X1; assumption
+| _:?X1 |- ?X1 => assumption
+

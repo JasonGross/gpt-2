@@ -1,0 +1,159 @@
+======== SAMPLE 1 ========
+ (c | gc)) (0 <= G) - (1 < x) - (1 = gc) - (1 = x))
+
+
+Debug: Going to execute:
+t
+
+
+TcDebug (11) > 
+Debug: Level 10: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : positive
+  c : positive
+  H : x <> 0
+  x0 : positive
+  H0 : mem x0 = true
+  H1 : 0 <= G
+  H2 : gc = gc
+  ============================
+   (gcd c = true /\ x = positive)
+
+
+Debug:
+Going to execute:
+match R with
+| mem x0 = true
+| (y = ?t, r = ?t)%list => R
+end
+
+
+TcDebug (9) > 
+Goal:
+  
+  x : positive
+  c : positive
+  H : x <> 0
+  x0 : positive
+  H0 : mem x0 = true
+  H1 : 0 <= G
+  H2 : gc = gc
+  ============================
+   (gcd c = true /\ x = positive)
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (10) > 
+Debug: Level 9: R
+ has value 
+y
+
+
+Goal:
+  
+  x : positive
+  c : positive
+  H : x <> 0
+  x0 : positive
+  H0 : mem x0 = true
+  H1 : 0 <= G
+  H2 : gc = gc
+  ============================
+   (gcd c = true /\ x = positive)
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (9) > 
+Goal:
+  
+  x : positive
+  c : positive
+  H : x <> 0
+  x0 : positive
+  H0 : mem x0 = true
+  H1 : 0 <= G
+  H2 : gc = gc
+  ============================
+   (gcd c = true /\ x = positive)
+
+
+Debug:
+Going to execute:
+match R with
+| mem x0 = true
+| (y = ?t, r = ?t)%list => R
+end
+
+
+TcDebug (9) > 
+Goal:
+  
+  x : positive
+  c : positive
+  H : x <> 0
+  x0 : positive
+  H0 : mem x0 = true
+  H1 : 0 <= G
+  H2 : gc = gc
+  ============================
+   (gcd c = true /\ x = positive)
+
+
+Debug: Going to execute:
+R
+
+
+TcDebug (10) > 
+Debug: Level 10: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  x : positive
+  c : positive
+  H : x <> 0
+  x0 : positive
+  H0 : mem x0 = true
+  H1 : 0 <= G
+  H2 : gc = gc
+  ============================
+   (gcd c = true /\ x = positive)
+
+
+Debug: Going to execute:
+fail 1
+
+
+TcDebug (9) > 
+Goal:
+  
+  x : positive
+  c : positive
+  H : x <> 0
+  x0 : positive
+  H0 : mem x0 = true
+  H1 : 0 <= G
+  H2 : gc = gc
+  ============================
+   (gcd c = true /\ x = positive)
+
+
+Debug:
+Going to execute:
+tryif prop FSetDecideAuxiliary.prop_eq lprime fv ->
+                  tryif prop FSetDecideAuxiliary.fsetdec_flags fv_equiv 
+                   tryif prop FSetDecideAuxiliary.fsetdec_flags lpow fv_th r
+                   tryif prop FSetDecideAuxiliary.gsub 
+                    tryif prop FSetDecideAuxiliary.gsub_0 1
+    

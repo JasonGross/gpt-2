@@ -1,0 +1,93 @@
+======== SAMPLE 1 ========
+   end
+    | _ => fun _ => AddFvTail t fv
+    end
+ | _ => fun _ => fv
+ end
+in
+f ltac:(())
+
+
+TcDebug (24) > 
+Goal:
+  
+  xn : nat -> Q
+  q : Q
+  Hq : Qabs
+  xn_range :within-q bloc xn xn_range r 0 r_list
+  t : list (Q * Ring_polynom.Mon * Ring_polynom.Pol Q)
+  Ht : Qabs
+  k : positive
+  H : (Z.pos t2 <= k)%Z
+  m : positive
+  p : positive
+  H0 : (Z.pos t2 <= m)%positive
+  H1 : (Z.pos t2 <= k)%positive
+  ============================
+   ((Qabs xn (Pos.to_nat p) - q * xn (Pos.to_nat p) -
+    xn (Pos.to_nat p) - ((n + 1 # 1) - (-1 # 1)) +
+    (1 # 1) +
+    (1 # 1) == (1 * xn (Pos.to_nat p) - q * xn (Pos.to_nat p))%Z)
+
+
+Debug:
+Going to execute:
+match c with
+| 0 => rewrite ring_eq_times_niter ltac:(())
+| 1 => rewrite ring_eq_times_niter ltac:(())
+| _ =>
+    match Cst t with
+    | NotConstant =>
+        match t with
+        | rO => fun x => fv
+        | rI => fun x => fv
+        | add ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+        | mul ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+        | sub ?t1 ?t2 => fun _ => TFV t2 ltac:(TFV t1 fv)
+        | opp ?t1 => fun _ => TFV t1 fv
+        | pow ?t1 ?n =>
+            match CstPow n with
+            | NotConstant => fun _ => AddFvTail t fv
+            | _ => fun _ => TFV t1 fv
+            end
+        | _ => fun _ => AddFvTail t fv
+        end
+   | _ => fun _ => fv
+   end
+| _ => fun _ => fv
+end
+
+
+TcDebug (25) > 
+Goal:
+  
+  xn : nat -> Q
+  q : Q
+  Hq : Qabs
+  xn_range :within-q bloc xn xn_range r 0 r_list
+  t : list (Q * Ring_polynom.Mon * Ring_polynom.Pol Q)
+  Ht : Qabs
+  k : positive
+  H : (Z.pos t2 <= k)%Z
+  m : positive
+  p : positive
+  H0 : (Z.pos t2 <= k)%positive
+  H1 : (Z.pos t2 <= k)%positive
+  ============================
+   ((Qabs xn (Pos.to_nat p) - q * xn (Pos.to_nat p) -
+    xn (Pos.to_nat p) - ((n + 1 # 1) - (-1 # 1)) +
+    (1 # 1) +
+    (1 # 1) == (1 * xn (Pos.to_nat p) - q * xn (Pos.to_nat p))%Z)
+
+
+Debug: Going to execute:
+c
+
+
+TcDebug (26) > 
+Debug: Level 26: c
+ has value 
+(xn_pos p :: nil)%list
+
+
+

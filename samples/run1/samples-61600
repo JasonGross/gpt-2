@@ -1,0 +1,134 @@
+======== SAMPLE 1 ========
+  r : (height r + 2 <? height (bal s1 r)) = false
+  e2 : (height (bal s1 r) <=? height s2) = false
+  s1 : t
+  s2 : t
+  H : s1 [<=] s2
+  H0 : s2 [<=] s1
+  ============================
+   (s1 [<=] s2 -> s2 [<=] s1)
+
+
+Debug: Going to execute:
+solve [ inversion H ]
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.lt x y
+  e1 : X.compare x y = LT _x
+  H1 : In y l -> In x l
+  H3 : In x s -> In x (add x e l)
+  H0 : In x s
+  H4 : In x (add x e l)
+  H1 : In y l -> In x (add x e l)
+  H3 : In x s -> In x (add x e l)
+  H4 : In x l -> In x (add x e l)
+  ============================
+   (s1 [<=] s2 -> s2 [<=] s1)
+
+
+Debug: Going to execute:
+inversion H
+
+
+TcDebug (1) > 
+Debug: Level 1: Proof is not complete.
+
+Debug: Level 1: Proof is not complete.
+
+Debug: Level 1: Proof is not complete.
+
+Debug: Level 1: Proof is not complete.
+
+Debug: Level 1: Proof is not complete.
+
+Debug: Level 3: Proof is not complete.
+
+Debug: Level 1: Proof is not complete.
+
+Debug: Level 1: Proof is not complete.
+
+Debug: Level 3: Proof is not complete.
+
+Debug: Level 1: Proof is not complete.
+
+Debug: Level 1: Proof is not complete.
+
+Debug: Level 1: Proof is not complete.
+
+Debug: Level 1: Proof is not complete.
+
+Debug: Level 2: Proof is not complete.
+
+Debug: Level 2: Proof is not complete.
+
+Debug: Level 1: Proof is not complete.
+
+Debug: Level 1: Proof is not complete.
+
+Debug: Level 1: Proof is not complete.
+
+Debug: Level 1: Proof is not complete.
+
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.lt x y
+  e1 : X.compare x y = LT _x
+  H1 : In y l -> In x l
+  H3 : In x s -> In x (add x e l)
+  H0 : In x s
+  H4 : In x (add x e l)
+  H1 : In y l -> In x (add x e l)
+  H3 : In x s -> In x (add x e l)
+  H4 : In x l -> In x (add x e l)
+  ============================
+   (s1 [<=] s2 -> s2 [<=] s1)
+
+
+Debug: Going to execute:
+simpl
+
+
+TcDebug (0) > 
+Goal:
+  
+  elt : Type
+  x : key
+  e : elt
+  l : t elt
+  y : key
+  d' : elt
+  r : t elt
+  h : I.t
+  _x : X.lt x y
+  e1 : X.compare x y = LT _x
+  H1 : In y l -> In x l
+  H3 : In x s -> In x (add x e l)
+  H0 : In x s
+  H4 : In x (add x e l)
+  H1 : In y l -> In x (add x e l)
+  H3 : In x s -> In x (add x e l)
+  H4 : In x l -> In x (add x e l)
+  ============================
+   (InT x (add x e0 e1 e2))
+
+
+

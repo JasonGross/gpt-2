@@ -1,0 +1,116 @@
+======== SAMPLE 1 ========
+' s)
+  H1 : ~ (split x s)#b = true
+  H2 : ~ (split x s)#b) = true
+  ============================
+   ((E.eq (fun y : elt => E.eq (fun x : elt => {y : elt -> bool t; t})) x y)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  s : t elt
+  y : key
+  s' : t elt
+  H : In y l -> false = true
+  H4 : false = true -> In y l
+  H5 : In y r -> In y (remove x s) <-> In y l
+  H1 : ~ (split x s)#b = true
+  H2 : ~ (split x s)#b) = true
+  ============================
+   ((E.eq (fun y : elt => E.eq (fun x : elt => {y : elt -> bool t; t})) x y)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_conj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  s : t elt
+  y : key
+  s' : t elt
+  H : In y l -> false = true
+  H4 : false = true -> In y l
+  H5 : In y r -> In y (remove x s) <-> In y l
+  H1 : ~ (split x s)#b = true
+  H2 : ~ (split x s)#b) = true
+  ============================
+   ((E.eq (fun y : elt => E.eq (fun x : elt => {y : elt -> bool t; t})) x y)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.flatten_contravariant_disj> flags X1 X2 id
+
+
+TcDebug (1) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  s : t elt
+  y : key
+  s' : t elt
+  H : In y l -> false = true
+  H4 : false = true -> In y l
+  H5 : In y r -> In y (remove x s) <-> In y l
+  H1 : ~ (split x s)#b = true
+  H2 : ~ (split x s)#b) = true
+  ============================
+   ((E.eq (fun y : elt => E.eq (fun x : elt => {y : elt -> bool t; t})) x y)
+
+
+Debug:
+Going to execute:
+fun tauto_flags X1 X2 id => <tauto_plugin::flatten_contravariant_disj@0>
+
+
+TcDebug (2) > 
+Goal:
+  
+  elt : Type
+  l : t elt
+  x : key
+  d : elt
+  r : t elt
+  s : t elt
+  y : key
+  s' : t elt
+  H : In y l -> false = true
+  H4 : false = true -> In y l
+  H5 : In y r -> In y (remove x s) <-> In y l
+  H1 : ~ (split x s)#b = true
+  H2 : ~ (split x s)#b) = true
+  ============================
+   ((E.eq (fun y : elt => E.eq (fun x : elt => {y : elt -> bool t; t})) x y)
+
+
+Debug: Going to execute:
+<tauto_plugin::flatten_contravariant_disj@0>
+
+
+Tc

@@ -1,0 +1,68 @@
+======== SAMPLE 1 ========
+2 l1 ++ x1 :: nil)
+  IHo : forall l2 acc : list clause,
+        InA X.eq x (union_list l1 l2 acc) <->
+        InA X.eq x l1 \/ InA X.eq x l2 \/ InA X.eq x acc
+  x2 : X.t
+  l2 : list X.t
+  IHo : forall (x : X.t) (a : A) (l1 : list X.t),
+        InA X.eq x (a :: l1) -> InA X.eq x (x :: l1) -> InA X.eq x l2 \/ InA X.eq x acc
+  x3 : X.t
+  x4 : X.t
+  a0 : A
+  H1 : X.eq x a \/ InA X.eq x l1 \/ X.eq x a0 \/ InA X.eq x acc
+  ============================
+   ((X.eq x a \/ InA X.eq x l1) \/
+    (X.eq x a \/ X.eq x l1) \/ InA X.eq x acc)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : t -> Type
+  P : t -> A -> Type
+  X : forall s s' : t, equal s s' = true -> P s -> P s' [=] s
+  x : X.t
+  s : list X.t
+  IHo : forall (x : X.t) (a : A) (l1 : list X.t),
+        InA X.eq x (a :: l1) -> InA X.eq x (x :: l1) -> InA X.eq x l2 \/ InA X.eq x acc
+  x2 : X.t
+  l2 : list X.t
+  IHo : forall (x : X.t) (a : A) (l1 : list X.t),
+        InA X.eq x (a :: l1) -> InA X.eq x (x :: l1) -> InA X.eq x l2 \/ InA X.eq x acc
+  x3 : X.t
+  x4 : X.t
+  a0 : A
+  H1 : X.eq x a \/ InA X.eq x l1 \/ X.eq x a0 \/ InA X.eq x acc
+  ============================
+   ((X.eq x a \/ InA X.eq x l1) \/
+    (X.eq x a \/ X.eq x l1) \/ InA X.eq x acc)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (1) > 
+Goal:
+  
+  A : t -> Type
+  P : t -> A -> Type
+  X : forall s s' : t, equal s s' = true -> P s -> P s' [=] s
+  x : X.t
+  s : list X.t
+  IHo : forall (x : X.t) (a : A) (l1 : list X.t),
+        InA X.eq x (a :: l1) -> InA X.eq x (x :: l1) -> InA X.eq x l2 \/ InA X.eq x acc
+  x2 : X.t
+  l2 : list X.t
+  IHo : forall (x : X.t) (a : A) (l1 : list X.t),
+        InA X.eq x (a :: l1) -> InA X.eq x (x :: l1) -> InA X.eq x l2 \/ InA X.eq x acc
+  x2 : X.t
+  l2 : list X.t
+  IHo : forall (x : X.t) (a : A) (l1 : list X.t),
+ 

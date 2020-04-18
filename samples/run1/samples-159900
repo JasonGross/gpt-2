@@ -1,0 +1,138 @@
+======== SAMPLE 1 ========
+ex Z)
+  h := max_elt_aux (pred_right (Node ll lx ld lr h) ll) = nil
+  IHp : forall h : positive,
+        gcd (z0 + 1) = (zn (Pos.pred_right (Node ll lx ld lr h) :: yn (Pos.pred_left (Node lx ld lr h) :: nil)%list
+  h0 : positive
+  z1 : Z
+  Heqz1 : z1 = i2z (height lr)
+  z2 : Z
+  Heqz2 : z2 = i2z (height r)
+  z4 : Z
+  Heqz4 : z4 = i2z l
+  z5 : Z
+  z6 : Z
+  Heqz5 : z5 = i2z l
+  z7 : Z
+  Heqz6 : z7 = i2z rh
+  z8 : Z
+  Heqz9 : z8 = Z.max z9 z + 1
+  z10 : Z
+  H : z9 <= z
+  H0 : z11 > z
+  z12 : Z
+  z13 : Z
+  z14 : Z
+  z15 : Z
+  z16 : Z
+  z17 : Z
+  z18 : Z
+  z19 : Z
+  H3 : z1 <= z2
+  H1 : z2 < z
+  H2 : z <= z2
+  H3 : z <= z14
+  z0 : Z
+  H4 : z < z0
+  z1 : Z
+  z2 : Z
+  z3 : Z
+  z4 : Z
+  z5 : Z
+  z6 : Z
+  Heqz0 : z1 = (z1 + 1)%Z
+  z2 : Z
+  z4 : Z
+  z5 : Z
+  z7 : Z
+  z8 : Z
+  z9 : Z
+  Heqz : z0 = (z5 + 1)%Z
+  z : Z
+  z5 : Z
+  z8 : Z
+  z10 : Z
+  z11 : Z
+  z12 : Z
+  z13 : Z
+  z14 : Z
+  z16 : Z
+  z17 : Z
+  z18 : Z
+  z21 : Z
+  z22 : Z
+  z23 : Z
+  z24 : Z
+  z2 : Z
+  z5 : Z
+  z7 : Z
+  z11 : Z
+  z13 : Z
+  z14 : Z
+  z16 : Z
+  z17 : Z
+  z18 : Z
+  z21 : Z
+  z22 : Z
+  z23 : Z
+  z24 : Z
+  z2 : Z
+  z5 : Z
+  z7 : Z
+  z11 : Z
+  z13 : Z
+  z14 : Z
+  z16 : Z
+  z18 : Z
+  z19 : Z
+  H4 : z <= z2
+  H1 : z <= z0
+  H2 : z <= z2
+  H3 : z <= z0
+  H4 : z0 < z
+  z1 : Z
+  z2 : Z
+  z5 : Z
+  z8 : Z
+  z9 : Z
+  Heqz : z0 = (z1 + 1)%Z
+  z : Z
+  z5 : Z
+  z8 : Z
+  z9 : Z
+  z10 : Z
+  z11 : Z
+  z12 : Z
+  z13 : Z
+  z14 : Z
+  z16 : Z
+  z17 : Z
+  z18 : Z
+  z21 : Z
+  z22 : Z
+  z23 : Z
+  z24 : Z
+  z2 : Z
+  z5 : Z
+  z7 : Z
+  z11 : Z
+  z13 : Z
+  z14 : Z
+  z16 : Z
+  z17 : Z
+  z18 : Z
+  z21 : Z
+  z22 : Z
+  z23 : Z
+  z24 : Z
+  z2 : Z
+  z5 : Z
+  z7 : Z
+  z11 : Z
+  z12 : Z
+  z13 : Z
+  z14 : Z
+  z16 : Z
+  z17 : Z
+  z18 : Z
+ 

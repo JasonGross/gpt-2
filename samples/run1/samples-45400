@@ -1,0 +1,153 @@
+======== SAMPLE 1 ========
+ Going to execute:
+fun tauto_flags X1 => <tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Goal:
+  
+  w : E.t
+  x : E.t
+  y : E.t
+  z : E.t
+  r : t
+  s : t
+  H0 : In x r -> False
+  H1 : In y r
+  H3 : In y s
+  H4 : In x s
+  H6 : E.eq z y
+  H5 : False
+  H7 : In y r
+  H5 : E.eq z y -> False
+  H : E.eq z x
+  H8 : In x s
+  H9 : In y r
+  ============================
+   (In y r)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_conj@0>
+
+
+TcDebug (3) > 
+Debug: Level 3: evaluation returns
+<tactic closure>
+
+
+Goal:
+  
+  w : E.t
+  x : E.t
+  y : E.t
+  z : E.t
+  r : t
+  s : t
+  H0 : In x r -> False
+  H1 : In y r
+  H3 : In y s
+  H4 : In x s
+  H6 : E.eq z y
+  H5 : False
+  H7 : In y r
+  H5 : E.eq z y -> False
+  H : E.eq z x
+  H8 : In x s
+  H9 : In y r
+  ============================
+   (In y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro; clear id
+
+
+TcDebug (2) > 
+Goal:
+  
+  w : E.t
+  x : E.t
+  y : E.t
+  z : E.t
+  r : t
+  s : t
+  H0 : In x r -> False
+  H1 : In y r
+  H3 : In y s
+  H4 : In x s
+  H6 : E.eq z y
+  H5 : False
+  H7 : In y r
+  H5 : E.eq z y -> False
+  H : E.eq z x
+  H8 : In x s
+  H9 : In y r
+  ============================
+   (In y r)
+
+
+Debug:
+Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  w : E.t
+  x : E.t
+  y : E.t
+  z : E.t
+  r : t
+  s : t
+  H0 : In x r -> False
+  H1 : In y r
+  H3 : In y s
+  H4 : In x s
+  H6 : E.eq z y
+  H5 : False
+  H7 : In y r
+  H5 : E.eq z y -> False
+  H : E.eq z x
+  H8 : In x s
+  H9 : In y r
+  ============================
+   (In y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  w : E.t
+  x : E.t
+  y : E.t
+  z : E.t
+  r : t
+  s : t
+  H0 : In x r -> False
+  H1 : In y r
+  H3 : In y s
+  H4 : In x s
+  H6 : E.eq z y
+  H5 : False
+  H7 : In y r
+  H5 : E.eq z y -> False
+  H : E.eq z x
+  H8 : In x s
+  H9 : In y r
+  ============================
+   (In y r)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1
+
+
+TcDebug (2) > 
+Goal:

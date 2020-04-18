@@ -1,0 +1,126 @@
+======== SAMPLE 1 ========
+x : V (int x) = In n l2 l : int l x
+  o : X.t
+  O : Some n
+  l2 : int l x
+  d : V
+  r2 = ~ O.O
+  H : V.O.O
+  H0 : In x d
+  H1 : In n
+  l1 : elt l l2 is_empty
+  H2 : In g (Node l l l2)
+  ============================
+   (In y l)
+
+
+Debug: Going to execute:
+<tauto_plugin::is_disj@0>
+
+
+TcDebug (2) > 
+Debug: Level 2: evaluation for tauto_plugin::is_disj@0> has no flags.
+
+Goal:
+   nil : X.t
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0 : In x l2
+  H1 : In n
+  l1 : elt l2 is_empty
+  l2 : int l x
+  x : X.t
+  y : X.t
+  H0

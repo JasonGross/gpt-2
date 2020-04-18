@@ -1,0 +1,133 @@
+======== SAMPLE 1 ========
+ (add x s))
+
+
+Debug: Going to execute:
+<ltac_plugin::auto@0> $1 $2 $3
+
+
+TcDebug (17) > 
+Goal:
+    x : elt  s : t  H1 : In x s  H2 : In y s  H3 : In x s
+  ============================
+   (X.eq y x \/ False)
+
+
+Debug: Going to execute:
+destruct $1; simpl; [ add x s ]
+
+
+TcDebug (17) > 
+Goal:
+    x : elt  s : t  H1 : In x s  H2 : In y s  H3 : In x s
+  ============================
+   (X.eq y x \/ False)
+
+
+Debug: Going to execute:
+destruct $1; simpl; [ add x s ]
+
+
+TcDebug (17) > 
+Goal:
+    x : elt  s : t  H1 : In x s  H2 : In y s  H1 : X.eq y x \/ False
+  ============================
+   (In y s -> X.eq y x \/ False)
+
+
+Debug: Going to execute:
+destruct $1; simpl
+
+
+TcDebug (17) > 
+Goal:
+    x : elt  s : t  H1 : In x s  H2 : In y s  H1 : X.eq y x \/ False
+  ============================
+   (In y s -> X.eq y x \/ False)
+
+
+Debug: Going to execute:
+destruct $1
+
+
+TcDebug (17) > 
+Goal:
+  
+  ============================
+   (X.eq y x \/ In y s -> X.eq y x)
+
+
+Goal:
+    y : elt
+  ============================
+   (X.eq y x \/ In y s \/ In y s')
+
+
+Debug: Going to execute:
+simpl
+
+
+TcDebug (17) > 
+Goal:
+    x : elt  s : t  H1 : In x s  H2 : In y s  H1 : X.eq y x \/ False
+  ============================
+   (X.eq y x \/ In y s)
+
+
+Debug: Going to execute:
+unfold X.eq in ?X5
+
+
+TcDebug (17) > 
+Goal:
+    x : elt  s : t  H1 : In x s  H2 : In y s
+  ============================
+   (X.eq y x \/ In y s \/ In y s')
+
+
+Debug: Going to execute:
+repeat destruct_all in ?X5
+
+
+TcDebug (17) > 
+Goal:
+    x : elt  s : t  H1 : In x s  H2 : In y s  H1 : X.eq y x \/ False
+  ============================
+   (X.eq y x \/ In y s \/ In y s')
+
+
+Debug: Going to execute:
+destruct_all_impl in ?X5
+
+
+TcDebug (17) > 
+Goal:
+    x : elt  s : t  H1 : In x s  H2 : In y s  H1 : X.eq y x \/ False
+  ============================
+   (X.eq y x \/ In y s \/ In y s')
+
+
+Debug: Going to execute:
+simpl
+
+
+TcDebug (17) > 
+Goal:
+    x : elt  s : t  H1 : In x s  H2 : In y s  H1 : X.eq y x \/ False
+  ============================
+   (X.eq y x \/ In y s -> X.eq y x -> In y s')
+
+
+Debug: Going to execute:
+rewrite X.eq_neq in ?X5
+
+
+TcDebug (17) > 
+Debug: Evaluated term: X.eq_neq
+
+Debug: Evaluated term: X.eq_neq
+
+Debug: Evaluated term: X.eq_neq
+
+Goal:
+    x : elt  s : t  H1 : In x s  H2 : In y s  H1 : X.eq

@@ -1,0 +1,116 @@
+======== SAMPLE 1 ========
+  f : key -> elt -> bool
+  H : Proper (RA ==> RA ==> eq ==> eq) f
+  H0 : RA ==> RA ==> eq ==> f
+  l : t elt
+  y : key
+  H2 : bst l
+  H3 : bst r
+  H4 : lt_tree y l
+  H5 : gt_tree y r
+  ============================
+   (RA ==> RA ==> eq ==> f)
+
+
+Debug: Going to execute:
+type of lemma
+
+
+TcDebug (4) > 
+Debug: Evaluated term: (Eq_eq Eq)
+
+Debug: Evaluated term: (Eq_eq Eq ==> eq_eq)
+
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall (h : int) (y : key) (e' : elt),
+        MapsTo y e' (Node ll lx ld lr h) <->
+        X.eq y m#1 /\ e' = m#2 \/ MapsTo y e' l'
+  h : int
+  y : key
+  H0 : RA ==> RA ==> eq ==> eq
+  ============================
+   (RA ==> RA ==> eq ==> f)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall (h : int) (y : key) (e' : elt),
+        MapsTo y e' (Node ll lx ld lr h) <->
+        X.eq y m#1 /\ e' = m#2 \/ MapsTo y e' l'
+  h : int
+  y : key
+  H0 : RA ==> RA ==> eq ==> eq
+  ============================
+   (RA ==> RA ==> eq ==> f)
+
+
+Debug: Going to execute:
+<ltac_plugin::clear@0> $1
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+  x : key
+  d : elt
+  r : t elt
+  ll : t elt
+  lx : key
+  ld : elt
+  lr : t elt
+  _x : int
+  l' : t elt
+  m : (key * elt)%type
+  e0 : remove_min ll lx ld lr = (l', m)
+  IHp : forall (h : int) (y : key) (e' : elt),
+       MapsTo y e' (Node ll lx ld lr h) <->
+       X.eq y m#1 /\ e' = m#2 \/ MapsTo y e' l'
+  h : int
+  y : key
+  H0 : RA ==> RA ==> eq ==> eq
+  ============================
+   (Node ll lx ld lr h) <->
+    (X.eq y m#1 /\ e' = m#2 \/
+    (X.eq y m#1 /\ e' = m#2 \/ MapsTo y e' r)
+
+
+Debug: Going to execute:
+clear
+
+
+TcDebug (4) > 
+Goal:
+  
+  elt : Type
+

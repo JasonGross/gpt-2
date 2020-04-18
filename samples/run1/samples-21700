@@ -1,0 +1,69 @@
+======== SAMPLE 1 ========
+                  let e1 := mkP t1 in
+                Ring_polynom.PEpow e1 fv
+  IHt1 : forall y : Z,
+        Ring_polynom.PEadd z1 z2 = (e1, z1) ->
+         FFv z1 <= z2 ->
+        Ring_polynom.PEadd z1 z2 = (Z.max (Z.max (Z.max (Z.max (Z.max (Z.min (B x1 #2))))1))) 1 + (Z.min y z1) + 1)
+  z2 : Z
+  H1 : FFv z1 <= z2
+  H2 : z1 <= z2
+  ============================
+   (e1 == e2)
+
+
+Debug:
+Going to execute:
+fun t fv =>
+  let f :=
+   match Cst t with
+   | NotConstant =>
+       match t with
+       | rO => fun _ => Ring_polynom.PEO
+       | rI => fun _ => Ring_polynom.PEI
+       | radd ?t1 ?t2 =>
+           fun _ =>
+             let e1 := mkP t1 in
+             Ring_polynom.PEadd e1 e2
+       | rmul ?t1 ?t2 =>
+           fun _ =>
+             let e1 := mkP t1 in
+            Ring_polynom.PEmul e1 e2
+       | rsub ?t1 ?t2 =>
+           fun _ =>
+             let e1 := mkP t1 in
+             Ring_polynom.PEsub e1 e2
+       | ropp ?t1 =>
+           fun _ => let e1 := mkP t1 in
+                     Ring_polynom.PEopp e1
+       | rpow ?t1 ?n =>
+           match CstPow n with
+           | NotConstant =>
+               fun _ => let p := Find_at t fv in
+                             Ring_polynom.PEX C p
+            | ?c => fun _ => let e1 := mkP t1 in
+                             Ring_polynom.PEpow e1 c
+            end
+       | _ => fun _ => let p := Find_at t fv in
+                        Ring_polynom.PEX C p
+       end
+| ?c => fun _ => Ring_polynom.PEc c
+end
+
+
+TcDebug (11) > 
+Goal:
+  
+  elt : Type
+  elt' : Type
+  e' : Eq
+  f' : f
+  a : 1 == 0
+  H : b = 0 -> False
+  H0 : e = (b * e')%poly
+  e1 : b = e'%poly
+  H1 : e' = (b * e')%poly
+  lpow : H
+  lpow' : list (X.t * Eq)
+  m : t elt
+  m' : t el

@@ -1,0 +1,70 @@
+======== SAMPLE 1 ========
+   (A x0 /\ B x2) <->
+    ~ (exists y0 : A, B x0 y0 = A)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id; do 2 intro
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  B : Type
+  SetoidFunChoice : SetoidFunctionalChoice_on A B
+  Pstep' : Pstep x (Padd Hex)
+  x : A
+  H : ~ A
+  H0 : (x <->~ A)%type
+  H1 : (exists y : A, B x y = A)
+  H2 : (exists y : A, B x2 y = A)
+  H3 : (exists y : A, B x3 y = A)
+  H4 : (exists y : A, B x4 x = A)
+  H5 : forall x1 y0 : A,
+       InA x1 (Padd (B x2) (Pc c)) ->
+       InA x1 (Padd (B x1) (B c))
+         (x1
+           (x2
+              (S
+                 (Pc c)
+                  (x1, y2)
+                   (Pc c) :: x1 :: y1 :: c :: x2 :: y2 :: nil)
+               (Pc c) :: x1 :: y1 :: c :: x2 :: y2 :: nil) :: acc
+              (Pc c) :: x1 :: y1 :: c :: x2 :: y2 :: nil)
+              (Pc c) :: x2 :: x1 :: x1 :: y1 :: c :: x2 :: y2 :: nil)
+              (FEX x1 f)
+  ============================
+   (A x0 /\ B x2) <->
+    ~ (exists y0: A, B x0 y0 = A)
+
+
+Debug: Going to execute:
+<Coq.Init.Tauto.is_conj> flags X1; elim id
+
+
+TcDebug (2) > 
+Goal:
+  
+  A : Type
+  B : Type
+  SetoidFunChoice : SetoidFunctionalChoice_on A B
+  Pstep' : Pstep x (Padd Hex)
+  x : A
+  H : ~ A
+  H0 : (x <->~ A)%type
+  H1 : (exists y : A, B x y = A)
+  H2 : (exists y : A, B x2 y = A)
+  H3 : (exists y : A, B x3 y = A)
+  H4 : (exists y : A, B x4 x = A)
+  H5 : forall x1 y0 : A,
+       InA x1 (Padd (B x2) (Pc c)) ->
+       InA x1 (Padd (B x1) (B c))
+         (x1
+           (x2
+             (S
+                (Pc c)
+                 (x1, y2)
+                 (Pc c) :: x1 :: y1 :: c :: x2 :: y2 :: nil)
+              (Pc c) :: x1 :: y1 :: c :: x2 :: y2 :: nil) :: acc
+             (P
